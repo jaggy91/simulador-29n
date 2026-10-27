@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-10-27T04:34:42.506Z",
+ "fetched": "2026-10-27T05:31:10.736Z",
  "latestPoll": "2026-10-25",
  "sources": {
   "media": {
@@ -21,6 +21,293 @@
     "Hamalgama Métrica/Vozpópuli (2026-10-08)",
     "InvyMark/laSexta (2026-10-08)",
     "DYM/Henneo (2026-10-07)"
+   ],
+   "items": [
+    {
+     "id": "encuesta:SocioMétrica/El Español|2026-10-25",
+     "firm": "SocioMétrica/El Español",
+     "date": "2026-10-25",
+     "sample": 3223,
+     "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
+     "weight": 0.1925,
+     "values": {
+      "PP": 32.4,
+      "PSOE": 27,
+      "VOX": 18.6,
+      "FA": 5.2,
+      "FV": 0.9,
+      "ERC": 2.6,
+      "JUNTS": 1.7,
+      "BILDU": 1.3,
+      "PNV": 0.8,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1.2,
+      "PODEMOS": 1.8,
+      "SALF": 2.4
+     }
+    },
+    {
+     "id": "encuesta:NC Report/La Razón|2026-10-24",
+     "firm": "NC Report/La Razón",
+     "date": "2026-10-24",
+     "sample": 1000,
+     "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
+     "weight": 0.1007,
+     "values": {
+      "PP": 33.1,
+      "PSOE": 25.8,
+      "VOX": 19,
+      "ERC": 2,
+      "JUNTS": 1.8,
+      "BILDU": 1.4,
+      "PNV": 0.9,
+      "BNG": 0.8,
+      "CC": 0.4,
+      "AA": 1.3,
+      "PODEMOS": 2.6,
+      "FA": 5.65,
+      "FV": 0.95
+     }
+    },
+    {
+     "id": "encuesta:Winston/Artículo14|2026-10-23",
+     "firm": "Winston/Artículo14",
+     "date": "2026-10-23",
+     "sample": 1200,
+     "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
+     "weight": 0.0999,
+     "values": {
+      "PP": 29.4,
+      "PSOE": 27.1,
+      "VOX": 19.2,
+      "FA": 5.6
+     }
+    },
+    {
+     "id": "encuesta:EM-Analytics/Electomanía|2026-10-23",
+     "firm": "EM-Analytics/Electomanía",
+     "date": "2026-10-23",
+     "sample": 4309,
+     "url": "https://electomania.es/electopanel-25-octubre-el-pp-baja-de-nuevo-frente-amplio-crece/",
+     "weight": 0.1579,
+     "values": {
+      "PP": 30.9,
+      "PSOE": 26.7,
+      "VOX": 19,
+      "FA": 5.8,
+      "FV": 1.2,
+      "ERC": 2.2,
+      "JUNTS": 1.3,
+      "BILDU": 1.4,
+      "PNV": 1,
+      "BNG": 1,
+      "CC": 0.3,
+      "AA": 1.1,
+      "PODEMOS": 1.7,
+      "SALF": 1.7
+     }
+    },
+    {
+     "id": "encuesta:Ateneo del Dato/elDiario.es|2026-10-22",
+     "firm": "Ateneo del Dato/elDiario.es",
+     "date": "2026-10-22",
+     "sample": 2000,
+     "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
+     "weight": 0.1168,
+     "values": {
+      "PP": 31.1,
+      "PSOE": 27.6,
+      "VOX": 19.8,
+      "PODEMOS": 2.7,
+      "FA": 5.83,
+      "FV": 0.97
+     }
+    },
+    {
+     "id": "encuesta:Sigma Dos/El Mundo|2026-10-22",
+     "firm": "Sigma Dos/El Mundo",
+     "date": "2026-10-22",
+     "sample": 3122,
+     "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
+     "weight": 0.1431,
+     "values": {
+      "PP": 30.6,
+      "PSOE": 26.1,
+      "VOX": 19.9,
+      "FA": 7.4,
+      "FV": 0.8,
+      "ERC": 2.5,
+      "JUNTS": 1.2,
+      "BILDU": 1.2,
+      "PNV": 0.9,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1,
+      "PODEMOS": 2.8
+     }
+    },
+    {
+     "id": "encuesta:IMOP/El Confidencial|2026-10-16",
+     "firm": "IMOP/El Confidencial",
+     "date": "2026-10-16",
+     "sample": 1000,
+     "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
+     "weight": 0.0456,
+     "values": {
+      "PP": 28.5,
+      "PSOE": 27.1,
+      "VOX": 20,
+      "ERC": 2.2,
+      "JUNTS": 1.2,
+      "BILDU": 1.3,
+      "PNV": 1,
+      "BNG": 1.1,
+      "CC": 0.6,
+      "PODEMOS": 1.9,
+      "SALF": 1.2,
+      "FA": 7.63,
+      "FV": 1.28
+     }
+    },
+    {
+     "id": "encuesta:Target Point/El Debate|2026-10-09",
+     "firm": "Target Point/El Debate",
+     "date": "2026-10-09",
+     "sample": 1002,
+     "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
+     "weight": 0.0228,
+     "values": {
+      "PP": 32,
+      "PSOE": 25.9,
+      "VOX": 18.7,
+      "PODEMOS": 3.4,
+      "SALF": 1.3,
+      "FA": 5.91,
+      "FV": 0.99
+     }
+    },
+    {
+     "id": "encuesta:40dB/Prisa|2026-10-08",
+     "firm": "40dB/Prisa",
+     "date": "2026-10-08",
+     "sample": 800,
+     "url": "https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html",
+     "weight": 0.0185,
+     "values": {
+      "PP": 31.9,
+      "PSOE": 28.1,
+      "VOX": 18.9,
+      "PODEMOS": 2.3,
+      "SALF": 1.8,
+      "FA": 4.54,
+      "FV": 0.76
+     }
+    },
+    {
+     "id": "encuesta:GESOP/Prensa Ibérica|2026-10-08",
+     "firm": "GESOP/Prensa Ibérica",
+     "date": "2026-10-08",
+     "sample": 1000,
+     "url": "https://www.elperiodico.com/es/politica/20261012/encuesta-elecciones-generales-espana-2026-29n-135212729",
+     "weight": 0.0206,
+     "values": {
+      "PP": 28.7,
+      "PSOE": 26.1,
+      "VOX": 18.9,
+      "ERC": 2.5,
+      "JUNTS": 1.9,
+      "PODEMOS": 2.6,
+      "SALF": 2,
+      "FA": 6.85,
+      "FV": 1.15
+     }
+    },
+    {
+     "id": "encuesta:GAD3/Vocento|2026-10-08",
+     "firm": "GAD3/Vocento",
+     "date": "2026-10-08",
+     "sample": 1077,
+     "url": "https://www.abc.es/espana/derecha-mantiene-mayoria-absoluta-pese-agitacion-callejera-20261012015025-nt.html",
+     "weight": 0.0214,
+     "values": {
+      "PP": 31.5,
+      "PSOE": 26.4,
+      "VOX": 18.2,
+      "ERC": 2.6,
+      "JUNTS": 1.5,
+      "BILDU": 1.5,
+      "PNV": 1,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1,
+      "PODEMOS": 2.3,
+      "SALF": 1.8,
+      "FA": 6.34,
+      "FV": 1.06
+     }
+    },
+    {
+     "id": "encuesta:Hamalgama Métrica/Vozpópuli|2026-10-08",
+     "firm": "Hamalgama Métrica/Vozpópuli",
+     "date": "2026-10-08",
+     "sample": 1000,
+     "url": "https://www.vozpopuli.com/espana/politica/debacle-de-la-izquierda-pp-y-vox-suman-ya-212-escanos-y-el-53-de-los-votos.html",
+     "weight": 0.0206,
+     "values": {
+      "PP": 33.6,
+      "PSOE": 25.3,
+      "VOX": 19.6,
+      "ERC": 1.9,
+      "JUNTS": 1.7,
+      "BILDU": 1.3,
+      "PNV": 0.9,
+      "BNG": 0.8,
+      "CC": 0.5,
+      "PODEMOS": 3.3,
+      "SALF": 1.8,
+      "FA": 4.63,
+      "FV": 0.77
+     }
+    },
+    {
+     "id": "encuesta:InvyMark/laSexta|2026-10-08",
+     "firm": "InvyMark/laSexta",
+     "date": "2026-10-08",
+     "sample": null,
+     "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-protestas-vivienda-impactan-encuestas-que-hunden-bloque-izquierda-disparan-vox_202610096ac8ae9bb79b18452fc08907.html",
+     "weight": 0.0206,
+     "values": {
+      "PP": 32.8,
+      "PSOE": 28,
+      "VOX": 18.8,
+      "ERC": 1.9,
+      "JUNTS": 1.2,
+      "BILDU": 1.5,
+      "PNV": 1.1,
+      "PODEMOS": 3.2,
+      "SALF": 1.8,
+      "FA": 5.4,
+      "FV": 0.9
+     }
+    },
+    {
+     "id": "encuesta:DYM/Henneo|2026-10-07",
+     "firm": "DYM/Henneo",
+     "date": "2026-10-07",
+     "sample": 1011,
+     "url": "https://www.20minutos.es/nacional/psoe-absorbe-intencion-votos-sumar-podemos-mientras-pp-vox-consolidan-su-mayoria_7046598_0.html",
+     "weight": 0.0188,
+     "values": {
+      "PP": 34,
+      "PSOE": 28.2,
+      "VOX": 18.2,
+      "PODEMOS": 3.6,
+      "SALF": 0.5,
+      "FA": 3.08,
+      "FV": 0.52
+     }
+    }
    ],
    "values": {
     "PP": 31.3,
@@ -46,6 +333,42 @@
     "CIS (Opina 360)",
     "CIS (Ateneo del Dato)"
    ],
+   "items": [
+    {
+     "id": "cis:CIS (Opina 360)|2026-10-06",
+     "firm": "CIS (Opina 360)",
+     "date": "2026-10-06",
+     "sample": 5025,
+     "url": "https://opina360.com/wp-content/uploads/2026/10/BMP-CIS-octubre.pdf",
+     "weight": 0.5,
+     "values": {
+      "PP": 28,
+      "PSOE": 28,
+      "VOX": 17.8,
+      "PODEMOS": 3.5,
+      "SALF": 1.6,
+      "FA": 6.25,
+      "FV": 1.05
+     }
+    },
+    {
+     "id": "cis:CIS (Ateneo del Dato)|2026-10-06",
+     "firm": "CIS (Ateneo del Dato)",
+     "date": "2026-10-06",
+     "sample": 5025,
+     "url": "https://x.com/Ateneodeldato/status/2110338816569401583",
+     "weight": 0.5,
+     "values": {
+      "PP": 28.3,
+      "PSOE": 28.6,
+      "VOX": 17.5,
+      "PODEMOS": 3,
+      "SALF": 2.4,
+      "FA": 6.77,
+      "FV": 1.13
+     }
+    }
+   ],
    "values": {
     "ERC": 2.34,
     "JUNTS": 1.48,
@@ -69,6 +392,7 @@
    "firm": "PSOE",
    "date": "2026-10-25",
    "sample": null,
+   "url": "https://www.eldiario.es/politica/sanchez-saca-psoe-pesimismo-errores-feijoo-miedo-vox_1_13607713.html",
    "values": {
     "PP": 29,
     "PSOE": 30,
@@ -81,6 +405,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-25",
    "sample": 3223,
+   "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
    "values": {
     "PP": 32.4,
     "PSOE": 27,
@@ -104,6 +429,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-10-24",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
    "values": {
     "PP": 33.1,
     "PSOE": 25.8,
@@ -132,6 +458,7 @@
    "firm": "Winston/Artículo14",
    "date": "2026-10-23",
    "sample": 1200,
+   "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
    "values": {
     "PP": 29.4,
     "PSOE": 27.1,
@@ -145,6 +472,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-10-23",
    "sample": 4309,
+   "url": "https://electomania.es/electopanel-25-octubre-el-pp-baja-de-nuevo-frente-amplio-crece/",
    "values": {
     "PP": 30.9,
     "PSOE": 26.7,
@@ -168,6 +496,7 @@
    "firm": "Ateneo del Dato/elDiario.es",
    "date": "2026-10-22",
    "sample": 2000,
+   "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
    "values": {
     "PP": 31.1,
     "PSOE": 27.6,
@@ -189,6 +518,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-10-22",
    "sample": 3122,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
    "values": {
     "PP": 30.6,
     "PSOE": 26.1,
@@ -211,6 +541,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-10-17",
    "sample": 3141,
+   "url": "https://electomania.es/electopanel-18-oct-erc-y-frente-amplio-ceden-ante-el-psoe-podemos-en-el-limite-de-ser-extraparlamentario/",
    "values": {
     "PP": 31.8,
     "PSOE": 27.1,
@@ -234,6 +565,7 @@
    "firm": "IMOP/El Confidencial",
    "date": "2026-10-16",
    "sample": 1000,
+   "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
    "values": {
     "PP": 28.5,
     "PSOE": 27.1,
@@ -262,6 +594,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-10-14",
    "sample": 3007,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/10/19/6ad4f168e9cf4a2c7a8b458b.html",
    "values": {
     "PP": 31.5,
     "PSOE": 25.3,
@@ -284,6 +617,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-11",
    "sample": 1000,
+   "url": "https://www.elespanol.com/espana/politica/20261011/sanchez-no-funciona-apropiarse-maricarmen-huelga-oposicion-cae-sondeo-noche/1003744416762_0.html",
    "values": {
     "PP": 32.8,
     "PSOE": 26.2,
@@ -313,6 +647,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-10-09",
    "sample": 1002,
+   "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
    "values": {
     "PP": 32,
     "PSOE": 25.9,
@@ -335,6 +670,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-10-09",
    "sample": 4125,
+   "url": "https://electomania.es/electopanel-11-oct-sumar-se-descalabra-a-la-espera-del-frente-amplio/",
    "values": {
     "PP": 31.7,
     "PSOE": 26.9,
@@ -364,6 +700,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-10-08",
    "sample": 800,
+   "url": "https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html",
    "values": {
     "PP": 31.9,
     "PSOE": 28.1,
@@ -386,6 +723,7 @@
    "firm": "GESOP/Prensa Ibérica",
    "date": "2026-10-08",
    "sample": 1000,
+   "url": "https://www.elperiodico.com/es/politica/20261012/encuesta-elecciones-generales-espana-2026-29n-135212729",
    "values": {
     "PP": 28.7,
     "PSOE": 26.1,
@@ -410,6 +748,7 @@
    "firm": "GAD3/Vocento",
    "date": "2026-10-08",
    "sample": 1077,
+   "url": "https://www.abc.es/espana/derecha-mantiene-mayoria-absoluta-pese-agitacion-callejera-20261012015025-nt.html",
    "values": {
     "PP": 31.5,
     "PSOE": 26.4,
@@ -439,6 +778,7 @@
    "firm": "Hamalgama Métrica/Vozpópuli",
    "date": "2026-10-08",
    "sample": 1000,
+   "url": "https://www.vozpopuli.com/espana/politica/debacle-de-la-izquierda-pp-y-vox-suman-ya-212-escanos-y-el-53-de-los-votos.html",
    "values": {
     "PP": 33.6,
     "PSOE": 25.3,
@@ -467,6 +807,7 @@
    "firm": "InvyMark/laSexta",
    "date": "2026-10-08",
    "sample": null,
+   "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-protestas-vivienda-impactan-encuestas-que-hunden-bloque-izquierda-disparan-vox_202610096ac8ae9bb79b18452fc08907.html",
    "values": {
     "PP": 32.8,
     "PSOE": 28,
@@ -493,6 +834,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-10-08",
    "sample": 2017,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/10/11/6acba028e85ece77088b4580.html",
    "values": {
     "PP": 32.1,
     "PSOE": 25.3,
@@ -521,6 +863,7 @@
    "firm": "IMOP/El Confidencial",
    "date": "2026-10-07",
    "sample": 900,
+   "url": "https://www.elconfidencial.com/espana/2026-10-09/derecha-pp-gana-vox-dispara-sanchez-baja-sumar_4441291/",
    "values": {
     "PP": 30.6,
     "PSOE": 26.5,
@@ -550,6 +893,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-10-07",
    "sample": 1011,
+   "url": "https://www.20minutos.es/nacional/psoe-absorbe-intencion-votos-sumar-podemos-mientras-pp-vox-consolidan-su-mayoria_7046598_0.html",
    "values": {
     "PP": 34,
     "PSOE": 28.2,
@@ -572,6 +916,7 @@
    "firm": "CIS (Opina 360)",
    "date": "2026-10-06",
    "sample": 5025,
+   "url": "https://opina360.com/wp-content/uploads/2026/10/BMP-CIS-octubre.pdf",
    "values": {
     "PP": 28,
     "PSOE": 28,
@@ -594,6 +939,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-10-06",
    "sample": 5025,
+   "url": "https://x.com/Ateneodeldato/status/2110338816569401583",
    "values": {
     "PP": 28.3,
     "PSOE": 28.6,
@@ -616,6 +962,7 @@
    "firm": "CIS",
    "date": "2026-10-06",
    "sample": 5025,
+   "url": "https://www.cis.es/documents/d/cis/es3582mar_a-pdf",
    "values": {
     "PP": 22.3,
     "PSOE": 34,
@@ -644,6 +991,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-10-06",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/adelanto-electoral-refuerza-bloque-vox-junts_202610086ac69166b0108820e09b13b5.html",
    "values": {
     "PP": 34.3,
     "PSOE": 25,
@@ -671,6 +1019,7 @@
    "firm": "SocioMétrica/PP",
    "date": "2026-10-05",
    "sample": null,
+   "url": "https://www.elmundo.es/espana/2026/10/06/6ac4d9a1fc6c83560c8b4586.html",
    "values": {},
    "joint": [],
    "table": "2026 (before Broad Front)"
@@ -679,6 +1028,7 @@
    "firm": "PSOE",
    "date": "2026-10-05",
    "sample": 7000,
+   "url": "https://www.articulo14.es/politica/sanchez-decidio-convocar-con-sondeos-que-le-dan-ganador-y-dicen-que-el-53-ve-una-persecucion-judicial-al-psoe-20261006.html",
    "values": {},
    "joint": [],
    "table": "2026 (before Broad Front)"
@@ -687,6 +1037,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-10-03",
    "sample": 8171,
+   "url": "https://electomania.es/electopanel-4-oct-adelanto-la-vivienda-agita-el-panorama-politico/",
    "values": {
     "PP": 31.5,
     "PSOE": 26.9,
@@ -716,6 +1067,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-03",
    "sample": 1000,
+   "url": "https://www.elespanol.com/espana/politica/20261004/sondeo-expres-sanchez-disuelve-congreso-pp-hoy-diputados-psoe-vox-sumar/1003744408026_0.html",
    "values": {
     "PP": 33.6,
     "PSOE": 26.5,
@@ -744,6 +1096,7 @@
    "firm": "Data10/Okdiario",
    "date": "2026-10-02",
    "sample": 1000,
+   "url": "https://okdiario.com/espana/efecto-maricarmen-resucita-sanchez-hasta-110-escanos-pero-ni-todos-sus-socios-alcanzan-pp-vox-que-suman-203-20469916",
    "values": {
     "PP": 34.2,
     "PSOE": 26.1,
@@ -773,6 +1126,7 @@
    "firm": "Winston/Artículo14",
    "date": "2026-10-01",
    "sample": 1201,
+   "url": "https://www.articulo14.es/politica/pp-y-vox-ya-suman-204-escanos-y-supera-en-casi-15-puntos-a-la-izquierda-20261004.html",
    "values": {
     "PP": 31.3,
     "PSOE": 24.9,
@@ -794,6 +1148,7 @@
    "firm": "Ateneo del Dato/elDiario.es",
    "date": "2026-10-01",
    "sample": 1500,
+   "url": "https://www.eldiario.es/politica/suma-pp-vox-supera-holgura-mayoria-absoluta-aventaja-izquierda-15-puntos_1_13559749.html",
    "values": {
     "PP": 33.2,
     "PSOE": 27.5,
@@ -815,6 +1170,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-10-01",
    "sample": 2116,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/10/04/6ac25e4dfc6c83bb588b458d.html",
    "values": {
     "PP": 32.8,
     "PSOE": 25.6,
@@ -844,6 +1200,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-09-28",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-10-05/el-tiron-de-vox-mantiene-al-bloque-de-la-derecha-en-el-50-en-plena-conmocion-por-maricarmen.html",
    "values": {
     "PP": 31.6,
     "PSOE": 27.4,
@@ -866,6 +1223,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-09-26",
    "sample": 1200,
+   "url": "https://www.elespanol.com/espana/politica/20260927/sanchez-devora-socios-pide-ayuda-decreto-maricarmen-sumar-junts-pnv-bajarian-escanos/1003744398872_0.html",
    "values": {
     "PP": 34.1,
     "PSOE": 25.7,
@@ -895,6 +1253,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-09-25",
    "sample": 1104,
+   "url": "https://electomania.es/electopanel-27-sep-adelanto-la-crisis-de-la-vivienda-sacude-la-izquierda/",
    "values": {
     "PP": 32.5,
     "PSOE": 25.3,
@@ -924,6 +1283,7 @@
    "firm": "Celeste-Tel/Onda Cero",
    "date": "2026-09-21",
    "sample": 1100,
+   "url": "https://www.ondacero.es/noticias/espana/gestion-crisis-ceuta-casos-corrupcion-siguen-desgastando-gobierno-sanchez_202609246ab530d7a520494aafd5d597.html",
    "values": {
     "PP": 34.1,
     "PSOE": 25.4,
@@ -952,6 +1312,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-09-21",
    "sample": 1017,
+   "url": "https://www.20minutos.es/nacional/crisis-ceuta-pasa-factura-psoe-mientras-vox-capitaliza-descontento_7040042_0.html",
    "values": {
     "PP": 34.7,
     "PSOE": 26.3,
@@ -974,6 +1335,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-09-18",
    "sample": 1399,
+   "url": "https://electomania.es/electopanel-20-sep-adelanto-movimientos-en-el-gobierno-y-sus-socios/",
    "values": {
     "PP": 32.3,
     "PSOE": 25.6,
@@ -1003,6 +1365,7 @@
    "firm": "InvyMark/laSexta",
    "date": "2026-09-11",
    "sample": 1200,
+   "url": "https://www.lasexta.com/noticias/nacional/barometro-lasexta-intencion-voto-situa-como-primera-fuerza-feijoo-como-politico-mejor-valorado_202609136aa6943d7486a40f2c9c4e90.html",
    "values": {
     "PP": 33.7,
     "PSOE": 26.8,
@@ -1025,6 +1388,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-09-10",
    "sample": 1012,
+   "url": "https://www.eldebate.com/espana/20260913/sanchez-paga-errores-ceuta-cayendo-otro-medio-punto-abascal-sube-fuerza-costa-pp_457920.html",
    "values": {
     "PP": 31.5,
     "PSOE": 25.6,
@@ -1047,6 +1411,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-09-10",
    "sample": 1190,
+   "url": "https://electomania.es/electopanel-13-sep-adelanto-pp-y-vox-alcanzarian-los-200-diputados/",
    "values": {
     "PP": 32.4,
     "PSOE": 25.4,
@@ -1076,6 +1441,7 @@
    "firm": "Hamalgama Métrica/Vozpópuli",
    "date": "2026-09-08",
    "sample": 1000,
+   "url": "https://www.vozpopuli.com/espana/politica/ceuta-descalabra-a-la-izquierda-pp-y-vox-sumarian-ya-212-escanos-en-las-elecciones.html",
    "values": {
     "PP": 33.8,
     "PSOE": 25.1,
@@ -1104,6 +1470,7 @@
    "firm": "CIS (Target Point)",
    "date": "2026-09-04",
    "sample": 4042,
+   "url": "https://www.eldebate.com/espana/20260915/cis-tezanos-otorga-cuatro-puntos-27-escanos-psoe-segun-reestimacion-target-point_458641.html",
    "values": {
     "PP": 31.9,
     "PSOE": 26.8,
@@ -1126,6 +1493,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-09-04",
    "sample": 4042,
+   "url": "https://x.com/Ateneodeldato/status/2099566095224955252",
    "values": {
     "PP": 29.5,
     "PSOE": 27.6,
@@ -1148,6 +1516,7 @@
    "firm": "CIS",
    "date": "2026-09-04",
    "sample": 4042,
+   "url": "https://www.cis.es/documents/d/cis/es3577mar_a-pdf",
    "values": {
     "PP": 25.6,
     "PSOE": 31,
@@ -1176,6 +1545,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-09-03",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/sanchez-lleva-psoe-suelo-electoral-vox-podrian-reformar-constitucion_202609076a9d3ff03bfe5d1eff4557b2.html",
    "values": {
     "PP": 34.7,
     "PSOE": 24.9,
@@ -1203,6 +1573,7 @@
    "firm": "GAD3/ABC",
    "date": "2026-09-03",
    "sample": 1010,
+   "url": "https://www.abc.es/espana/pp-vox-disparan-202-escanos-sanchez-aguanta-20260907215840-nt.html",
    "values": {
     "PP": 31.3,
     "PSOE": 26.1,
@@ -1232,6 +1603,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-09-03",
    "sample": 1284,
+   "url": "https://electomania.es/electopanel-6-sep-adelanto-los-bloques-se-reconfiguran/",
    "values": {
     "PP": 32.2,
     "PSOE": 25.6,
@@ -1261,6 +1633,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-09-02",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-09-07/el-pp-y-vox-superan-por-primera-vez-el-50-del-voto-en-plena-crisis-de-ceuta.html",
    "values": {
     "PP": 32.4,
     "PSOE": 27.6,
@@ -1283,6 +1656,7 @@
    "firm": "More in Common",
    "date": "2026-08-28",
    "sample": 2144,
+   "url": "https://moreincommones.substack.com/p/la-inmigracion-se-convierte-en-el",
    "values": {
     "PP": 28.7,
     "PSOE": 27,
@@ -1305,6 +1679,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-08-28",
    "sample": 1197,
+   "url": "https://electomania.es/electopanel-30-agosto-el-psoe-comienza-el-curso-politico-con-un-nuevo-descenso/",
    "values": {
     "PP": 32.5,
     "PSOE": 25.7,
@@ -1334,6 +1709,7 @@
    "firm": "Data10/Okdiario",
    "date": "2026-08-27",
    "sample": 1500,
+   "url": "https://okdiario.com/espana/ceuta-sepulta-sanchez-que-cae-100-escanos-dispara-pp-vox-hasta-mayoria-absoluta-historica-208-20193314",
    "values": {
     "PP": 34.5,
     "PSOE": 25.4,
@@ -1362,6 +1738,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-08-26",
    "sample": 2173,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/08/30/6a93133afc6c831b228b458d.html",
    "values": {
     "PP": 33.3,
     "PSOE": 25.4,
@@ -1391,6 +1768,7 @@
    "firm": "Cluster17/Agenda Pública",
    "date": "2026-08-25",
    "sample": 1637,
+   "url": "https://agendapublica.es/noticia/21388/espanoles-ante-inminente-ciclo-electoral-pp-lideraria-con-mas-30-apoyos-psoe-resistiria-con-mas-28-alianca-catalana-optaria-al-congreso-si-se-presentara",
    "values": {
     "PP": 30.1,
     "PSOE": 28.1,
@@ -1418,6 +1796,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-08-21",
    "sample": 1211,
+   "url": "https://electomania.es/electopanel-23ago-adelanto-la-izquierda-no-logra-remontar/",
    "values": {
     "PP": 32.2,
     "PSOE": 26.1,
@@ -1447,6 +1826,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-08-12",
    "sample": 1428,
+   "url": "https://electomania.es/electopanel-16ago-adelanto-leve-retroceso-del-pp-mientras-vox-aguanta-subida-de-sumar/",
    "values": {
     "PP": 32,
     "PSOE": 26.2,
@@ -1476,6 +1856,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-08-07",
    "sample": 1227,
+   "url": "https://electomania.es/electopanel-adelanto-9ago-el-psoe-se-desploma-mientras-el-pp-cede-y-vox-se-acerca-al-20/",
    "values": {
     "PP": 32.3,
     "PSOE": 26.2,
@@ -1505,6 +1886,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-08-06",
    "sample": 1690,
+   "url": "https://www.elespanol.com/espana/politica/20260809/ceuta-hunde-sanchez-pp-sube-suma-escanos-gobierno-baja-sondeo-espanol-invasion/1003744347988_0.html",
    "values": {
     "PP": 34,
     "PSOE": 26,
@@ -1534,6 +1916,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-08-04",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/izquierda-hunde-psoe-sumar-podemos-llegan-35-votos_202608106a789283a046ad6ebca7bf9c.html",
    "values": {
     "PP": 34.4,
     "PSOE": 25.2,
@@ -1561,6 +1944,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-08-01",
    "sample": 910,
+   "url": "https://electomania.es/electopanel-2-ago-adelanto-espana-crece-por-los-polos/",
    "values": {
     "PP": 32.7,
     "PSOE": 27.2,
@@ -1590,6 +1974,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-07-24",
    "sample": 1099,
+   "url": "https://electomania.es/electopanel-26jul-adelanto-psoe-y-junts-agravan-su-desgaste/",
    "values": {
     "PP": 32.7,
     "PSOE": 27,
@@ -1619,6 +2004,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-07-20",
    "sample": 1014,
+   "url": "https://www.20minutos.es/nacional/pp-vox-suben-tras-caso-zapatero-amplian-brecha-con-psoe-sus-socios_7017602_0.html",
    "values": {
     "PP": 34.9,
     "PSOE": 27,
@@ -1641,6 +2027,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-07-20",
    "sample": 3690,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/07/26/6a6629dde4d4d8c4278b459c.html",
    "values": {
     "PP": 33,
     "PSOE": 26.1,
@@ -1670,6 +2057,7 @@
    "firm": "KeyData/Público",
    "date": "2026-07-17",
    "sample": null,
+   "url": "https://www.publico.es/politica/partidos/psoe-retrocede-encuestas-pp-termina-despegar-vox-nuevo-auge.html",
    "values": {
     "PP": 32.5,
     "PSOE": 26.3,
@@ -1697,6 +2085,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-07-17",
    "sample": 1004,
+   "url": "https://www.eldebate.com/espana/20260719/pp-vox-abonan-200-escanos-sanchez-contiene-hemorragia-costa-sumar_440835.html",
    "values": {
     "PP": 32.1,
     "PSOE": 26.1,
@@ -1719,6 +2108,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-07-17",
    "sample": 1401,
+   "url": "https://electomania.es/electopanel-19jul-adelanto-pp-junts-y-podemos-se-resienten/",
    "values": {
     "PP": 32.7,
     "PSOE": 27.5,
@@ -1748,6 +2138,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-07-10",
    "sample": 1304,
+   "url": "https://electomania.es/electopanel-12-jul-adelanto-el-pp-rompe-su-tendencia-alcista/",
    "values": {
     "PP": 33,
     "PSOE": 27.1,
@@ -1777,6 +2168,7 @@
    "firm": "ODEC/Mediaflows–UV",
    "date": "2026-07-09",
    "sample": 2005,
+   "url": "https://valenciaplaza.com/valenciaplaza/comunitat-valenciana1/encuesta-el-psoe-ya-perdia-la-moncloa-antes-del-estallido-del-caso-zp-y-de-la-condena-a-abalos",
    "values": {
     "PP": 29.7,
     "PSOE": 27,
@@ -1805,6 +2197,7 @@
    "firm": "GESOP/Prensa Ibérica",
    "date": "2026-07-09",
    "sample": 1001,
+   "url": "https://www.elperiodico.com/es/politica/20260714/encuesta-elecciones-generales-espana-132382672",
    "values": {
     "PP": 29.4,
     "PSOE": 26.5,
@@ -1829,6 +2222,7 @@
    "firm": "CIS (Sondaxe)",
    "date": "2026-07-06",
    "sample": 4020,
+   "url": "https://www.lavozdegalicia.es/noticia/espana/2026/07/16/estimacion-sondaxe-datos-cis-situa-pp-delante-psoe/00031784232181615222417.htm",
    "values": {
     "PP": 28.8,
     "PSOE": 27.2,
@@ -1857,6 +2251,7 @@
    "firm": "CIS (Target Point)",
    "date": "2026-07-06",
    "sample": 4020,
+   "url": "https://www.eldebate.com/espana/20260717/revision-independiente-cis-quita-34-escanos-psoe-anticipa-problemas-pnv_440404.html",
    "values": {
     "PP": 32.3,
     "PSOE": 26.6,
@@ -1884,6 +2279,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-07-06",
    "sample": 4020,
+   "url": "https://x.com/Ateneodeldato/status/2078049116286755273",
    "values": {
     "PP": 30.5,
     "PSOE": 27.9,
@@ -1906,6 +2302,7 @@
    "firm": "CIS",
    "date": "2026-07-06",
    "sample": 4020,
+   "url": "https://www.cis.es/documents/d/cis/es3571mar_a-pdf",
    "values": {
     "PP": 25.3,
     "PSOE": 33,
@@ -1934,6 +2331,7 @@
    "firm": "Hamalgama Métrica/Vozpópuli",
    "date": "2026-07-06",
    "sample": 1000,
+   "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-amplian-su-ventaja-hasta-los-209-escanos-y-la-izquierda-se-hunde-por-la-corrupcion.html",
    "values": {
     "PP": 34,
     "PSOE": 25.9,
@@ -1962,6 +2360,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-07-04",
    "sample": 1416,
+   "url": "https://www.elespanol.com/espana/politica/20260705/demoledor-sondeo-ola-corrupcion-psoe-arrastra-izquierda-no-separatista-peor-dato-anos/1003744310813_0.html",
    "values": {
     "PP": 33.8,
     "PSOE": 25.7,
@@ -1991,6 +2390,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-07-03",
    "sample": 2237,
+   "url": "https://electomania.es/electopanel-5jul-adelanto-ligera-subida-de-psoe-y-vox/",
    "values": {
     "PP": 33.2,
     "PSOE": 27.1,
@@ -2020,6 +2420,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-07-01",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/sanchez-arrastra-psoe-cae-debajo-100-diputados_202607066a48e6bcdcb2092ca8c56943.html",
    "values": {
     "PP": 34.7,
     "PSOE": 25,
@@ -2047,6 +2448,7 @@
    "firm": "CIS (Demócrata)",
    "date": "2026-06-30",
    "sample": 6019,
+   "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-recalculo-cis-situa-psoe-19-puntos-pp-da-194-escanos-pp-vox/",
    "values": {
     "PP": 32.3,
     "PSOE": 30.4,
@@ -2068,6 +2470,7 @@
    "firm": "CIS (Demócrata)",
    "date": "2026-06-30",
    "sample": 6019,
+   "url": "https://www.democrata.es/encuestas/elecciones-generales/encuesta-elecciones-generales-recalculo-cis-situa-psoe-19-puntos-pp-da-194-escanos-pp-vox/",
    "values": {
     "PP": 32.5,
     "PSOE": 30,
@@ -2089,6 +2492,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-06-29",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-07-06/pp-y-vox-aventajan-en-mas-de-12-puntos-a-psoe-sumar-y-podemos-en-estimacion-de-voto.html",
    "values": {
     "PP": 32,
     "PSOE": 28,
@@ -2111,6 +2515,7 @@
    "firm": "Ipsos/La Vanguardia",
    "date": "2026-06-29",
    "sample": 1306,
+   "url": "https://www.lavanguardia.com/politica/20260705/11584509/psoe-retrocede-lentamente-populares-vox-rozan-200-escanos.html",
    "values": {
     "PP": 31.2,
     "PSOE": 27.1,
@@ -2140,6 +2545,7 @@
    "firm": "More in Common",
    "date": "2026-06-28",
    "sample": 2277,
+   "url": "https://moreincommones.substack.com/p/el-psoe-pierde-mas-de-dos-puntos",
    "values": {
     "PP": 31.3,
     "PSOE": 25.7,
@@ -2162,6 +2568,7 @@
    "firm": "InvyMark/laSexta",
    "date": "2026-06-26",
    "sample": null,
+   "url": "https://www.lasexta.com/noticias/nacional/barometro-lasexta-seria-fuerza-mas-votada-mas-medio-punto-respecto-anteriores-elecciones_202606276a3fc0a495cc61359ce002d3.html",
    "values": {
     "PP": 33.5,
     "PSOE": 27.3,
@@ -2184,6 +2591,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-06-26",
    "sample": 1844,
+   "url": "https://electomania.es/electopanel-28jun-adelanto-el-psoe-no-logra-frenar-su-desgaste/",
    "values": {
     "PP": 33.2,
     "PSOE": 26.8,
@@ -2213,6 +2621,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-06-19",
    "sample": 1472,
+   "url": "https://electomania.es/electopanel-21jun-adelanto-el-psoe-acentua-su-caida-mientras-junts-y-pnv-se-resienten/",
    "values": {
     "PP": 33.2,
     "PSOE": 27.1,
@@ -2242,6 +2651,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-06-18",
    "sample": 1022,
+   "url": "https://www.eldebate.com/espana/20260622/sanchez-llega-fin-curso-desmovilizacion-record-electorado-pp-vox-204-escanos_430683.html",
    "values": {
     "PP": 32,
     "PSOE": 25.6,
@@ -2264,6 +2674,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-06-12",
    "sample": 1297,
+   "url": "https://electomania.es/electopanel-14jun-adelanto-caida-socialista-subida-de-la-izq-alternativa-podemos-sin-grupo-propio/",
    "values": {
     "PP": 33,
     "PSOE": 27.7,
@@ -2293,6 +2704,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-06-11",
    "sample": 1994,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/06/14/6a2e8f5d21efa02b288b456f.html",
    "values": {
     "PP": 32.8,
     "PSOE": 26.4,
@@ -2322,6 +2734,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-06-05",
    "sample": 1691,
+   "url": "https://electomania.es/electopanel-7-jun-adelanto-retroceso-del-psoe-que-se-deja-medio-punto-y-varios-diputados/",
    "values": {
     "PP": 32.6,
     "PSOE": 28.2,
@@ -2351,6 +2764,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-06-04",
    "sample": 4024,
+   "url": "https://x.com/Ateneodeldato/status/2065114294648184866",
    "values": {
     "PP": 31.2,
     "PSOE": 28.1,
@@ -2373,6 +2787,7 @@
    "firm": "CIS",
    "date": "2026-06-04",
    "sample": 4024,
+   "url": "https://www.cis.es/documents/d/cis/es3567mar_a-pdf",
    "values": {
     "PP": 27.2,
     "PSOE": 31.3,
@@ -2401,6 +2816,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-06-01",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-06-07/el-pp-amplia-a-casi-cinco-puntos-su-ventaja-sobre-el-psoe-tras-los-ultimos-escandalos-de-corrupcion.html",
    "values": {
     "PP": 32.4,
     "PSOE": 27.7,
@@ -2423,6 +2839,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-05-30",
    "sample": 1200,
+   "url": "https://www.elespanol.com/espana/politica/20260531/corrupcion-pasa-factura-psoe-socios-oposicion-saca-escanos-sondeo-publicara-hoy-espanol/1003744267342_0.html",
    "values": {
     "PP": 34.1,
     "PSOE": 25.9,
@@ -2452,6 +2869,7 @@
    "firm": "InvyMark/laSexta",
    "date": "2026-05-29",
    "sample": 1200,
+   "url": "https://www.lasexta.com/noticias/nacional/barometro-lasexta-548-encuestados-prefiere-que-proximo-presidente-gobierno-sea-feijoo_202605316a1c255d7d8b1d3812630bbf.html",
    "values": {
     "PP": 33.1,
     "PSOE": 27.8,
@@ -2474,6 +2892,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-05-29",
    "sample": 1160,
+   "url": "https://electomania.es/electopanel-31-may-adelanto-ligera-desmovilizacion-de-la-izquierda-el-psoe-resiste/",
    "values": {
     "PP": 32.4,
     "PSOE": 28.8,
@@ -2503,6 +2922,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-05-28",
    "sample": 1007,
+   "url": "https://www.eldebate.com/espana/20260601/sanchez-arrastra-sumar-podemos-mayor-caida-curso-vox-recupera-terreno-pp-derecha_423008.html",
    "values": {
     "PP": 31.2,
     "PSOE": 25.4,
@@ -2525,6 +2945,7 @@
    "firm": "GAD3/ABC",
    "date": "2026-05-28",
    "sample": 1011,
+   "url": "https://www.abc.es/espana/pp-vox-superan-200-escanos-ante-psoe-20260601220125-nt.html",
    "values": {
     "PP": 33.2,
     "PSOE": 26.8,
@@ -2554,6 +2975,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-05-27",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/psoe-pierde-dos-millones-votos-desplomaria-100-escanos_202606016a1acc6acb17881aa262af8d.html",
    "values": {
     "PP": 34.9,
     "PSOE": 25.1,
@@ -2581,6 +3003,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-05-22",
    "sample": 1009,
+   "url": "https://www.20minutos.es/nacional/pp-amplia-solo-ligeramente-brecha-con-psoe-tras-caso-zapatero-mientras-sumar-capitaliza-desgaste-socialista_6975308_0.html",
    "values": {
     "PP": 34.8,
     "PSOE": 27.7,
@@ -2603,6 +3026,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-05-22",
    "sample": 1291,
+   "url": "https://electomania.es/electopanel-24-may-adelanto-psoe-y-vox-se-refuerzan-adelante-irrumpiria-en-el-congreso/",
    "values": {
     "PP": 32.2,
     "PSOE": 29.1,
@@ -2632,6 +3056,7 @@
    "firm": "CIS (Target Point)",
    "date": "2026-05-18",
    "sample": 4016,
+   "url": "https://www.eldebate.com/espana/20260530/revision-cis-situa-pp-vox-encima-200-escanos-antes-imputacion-zapatero-registros-ferraz_423154.html",
    "values": {
     "PP": 31,
     "PSOE": 27.4,
@@ -2659,6 +3084,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-05-18",
    "sample": 4016,
+   "url": "https://x.com/Ateneodeldato/status/2060330718874497292",
    "values": {
     "PP": 30.7,
     "PSOE": 30.3,
@@ -2681,6 +3107,7 @@
    "firm": "CIS",
    "date": "2026-05-18",
    "sample": 4016,
+   "url": "https://www.cis.es/documents/d/cis/es3562marmt_a-pdf",
    "values": {
     "PP": 25,
     "PSOE": 36.2,
@@ -2709,6 +3136,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-05-15",
    "sample": 1026,
+   "url": "https://electomania.es/electopanel-17-may-adelanto-ligero-retroceso-del-psoe-que-aprovecha-sumar/",
    "values": {
     "PP": 32.2,
     "PSOE": 28.7,
@@ -2738,6 +3166,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-05-08",
    "sample": 1377,
+   "url": "https://electomania.es/electopanel-10-may-adelanto-subida-del-psoe-vox-rompe-la-tendencia-a-la-baja/",
    "values": {
     "PP": 32.2,
     "PSOE": 29,
@@ -2767,6 +3196,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-05-01",
    "sample": 1542,
+   "url": "https://electomania.es/electopanel-3-mayo-adelanto-el-pp-alcanza-el-32-y-vox-baja-del-18/",
    "values": {
     "PP": 32.2,
     "PSOE": 28.3,
@@ -2796,6 +3226,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-04-29",
    "sample": 1205,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/05/03/69f7890fe85ecefc7a8b4582.html",
    "values": {
     "PP": 32.5,
     "PSOE": 28.4,
@@ -2824,6 +3255,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-04-27",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-05-04/vox-confirma-su-tendencia-a-la-baja-y-pierde-casi-un-punto-de-estimacion-de-voto-en-un-mes.html",
    "values": {
     "PP": 31.3,
     "PSOE": 28.4,
@@ -2846,6 +3278,7 @@
    "firm": "Ateneo del Dato",
    "date": "2026-04-26",
    "sample": 2000,
+   "url": "https://x.com/Ateneodeldato/status/2049912681931452614",
    "values": {
     "PP": 31.7,
     "PSOE": 27.5,
@@ -2868,6 +3301,7 @@
    "firm": "More in Common",
    "date": "2026-04-25",
    "sample": 2547,
+   "url": "https://moreincommones.substack.com/p/lanzamos-nuestro-propio-modelo-de",
    "values": {
     "PP": 31.1,
     "PSOE": 28,
@@ -2890,6 +3324,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-04-24",
    "sample": 1844,
+   "url": "https://electomania.es/electopanel-26-abr-adelanto-continuan-las-tendencias-con-pp-y-psoe-peleando-la-victoria/",
    "values": {
     "PP": 32.1,
     "PSOE": 28.5,
@@ -2919,6 +3354,7 @@
    "firm": "KeyData/Público",
    "date": "2026-04-23",
    "sample": null,
+   "url": "https://www.publico.es/politica/partidos/pp-mantiene-estable-vox-frena-ascenso-pero-tendrian-amplia-mayoria-absoluta.html",
    "values": {
     "PP": 32.4,
     "PSOE": 27.5,
@@ -2946,6 +3382,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-04-18",
    "sample": 1712,
+   "url": "https://www.elespanol.com/espana/politica/20260419/efecto-trump-altera-mapa-electoral-sondeo-noche-sanchez-rebota-vox-cae-feijoo-afianza/1003744212983_0.html",
    "values": {
     "PP": 32,
     "PSOE": 27,
@@ -2974,6 +3411,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-04-17",
    "sample": 1301,
+   "url": "https://electomania.es/electopanel-19-abr-adelanto-la-derecha-suma-con-vox-perdiendo-la-cuota-de-los-60-escanos/",
    "values": {
     "PP": 31.7,
     "PSOE": 28.7,
@@ -3003,6 +3441,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-04-10",
    "sample": 4020,
+   "url": "https://ateneodeldato.com/nuestra-reestimacion-del-cis-de-abril/",
    "values": {
     "PP": 30.9,
     "PSOE": 28.9,
@@ -3025,6 +3464,7 @@
    "firm": "CIS (Logoslab)",
    "date": "2026-04-10",
    "sample": 4020,
+   "url": "https://www.infolibre.es/politica/bipartidismo-refuerza-costa-socios_1_2180657.html",
    "values": {
     "PP": 30.1,
     "PSOE": 30.1,
@@ -3047,6 +3487,7 @@
    "firm": "CIS",
    "date": "2026-04-10",
    "sample": 4020,
+   "url": "https://www.cis.es/documents/d/cis/es3557marmt_a-pdf",
    "values": {
     "PP": 23.7,
     "PSOE": 36.4,
@@ -3075,6 +3516,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-04-10",
    "sample": 1597,
+   "url": "https://electomania.es/electopanel-12-abr-adelanto-vox-sigue-a-la-baja-y-se-deja-mas-diputados/",
    "values": {
     "PP": 31.4,
     "PSOE": 29.1,
@@ -3104,6 +3546,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-04-09",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/sanchez-suma-voto-util-izquierda-vox-sintomas-haber-tocado-techo_2026041369dbd08a097ebe16ad761de1.html",
    "values": {
     "PP": 33,
     "PSOE": 26.9,
@@ -3131,6 +3574,7 @@
    "firm": "Ipsos/La Vanguardia",
    "date": "2026-04-08",
    "sample": 1058,
+   "url": "https://www.lavanguardia.com/politica/20260412/11511129/pp-vox-afianzan-mayoria-psoe-baja-izquierda-hundida.html",
    "values": {
     "PP": 31,
     "PSOE": 28.4,
@@ -3160,6 +3604,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-04-03",
    "sample": 1107,
+   "url": "https://electomania.es/electopanel-5-abril-adelanto-la-bajada-de-vox-impulsa-la-recuperacion-de-la-izquierda/",
    "values": {
     "PP": 31,
     "PSOE": 29.3,
@@ -3189,6 +3634,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-03-31",
    "sample": 1958,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/04/05/69d289e3fc6c83b84d8b4575.html",
    "values": {
     "PP": 32.7,
     "PSOE": 27.7,
@@ -3217,6 +3663,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-03-27",
    "sample": 1228,
+   "url": "https://electomania.es/electopanel-29-mar-adelanto-vox-acentua-su-caida-y-baja-de-los-70-escanos/",
    "values": {
     "PP": 31.8,
     "PSOE": 28.8,
@@ -3246,6 +3693,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-03-26",
    "sample": 1114,
+   "url": "https://www.eldebate.com/espana/20260329/vox-pierde-medio-millon-votos-mitad-tormenta-perfecta-pp-sube-psoe-recorta_401045.html",
    "values": {
     "PP": 31.7,
     "PSOE": 27.6,
@@ -3268,6 +3716,7 @@
    "firm": "Sumar",
    "date": "2026-03-25",
    "sample": 1000,
+   "url": "https://theobjective.com/actualidad/2026-03-25/sondeo-interno-sumar-desplome-mitad-votos/",
    "values": {
     "PP": 30,
     "PSOE": 30,
@@ -3289,6 +3738,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-03-25",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-04-06/pp-y-psoe-se-recuperan-mientras-vox-se-estanca.html",
    "values": {
     "PP": 31.1,
     "PSOE": 28.6,
@@ -3311,6 +3761,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-03-23",
    "sample": 1002,
+   "url": "https://www.diariodeleon.es/nacional/260326/2079929/desea-mayoria-vox-gobierne-pp-psoe-abstenga.html",
    "values": {
     "PP": 34.6,
     "PSOE": 27.9,
@@ -3333,6 +3784,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-03-21",
    "sample": 1100,
+   "url": "https://www.elespanol.com/espana/politica/20260322/guerra-invierte-tendencia-psoe-rebota-vox-cae-solo-pp-resiste-sondeo-publica-noche-espanol/1003744179444_0.html",
    "values": {
     "PP": 32.1,
     "PSOE": 26.5,
@@ -3361,6 +3813,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-03-20",
    "sample": 1086,
+   "url": "https://electomania.es/electopanel-22-mar-adelanto-el-bipartidismo-coge-aire-con-vox-a-la-baja/",
    "values": {
     "PP": 31.3,
     "PSOE": 29,
@@ -3390,6 +3843,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-03-13",
    "sample": 2541,
+   "url": "https://electomania.es/electopanel-15-mar-adelanto-rebote-de-vox-el-psoe-acecha-al-pp/",
    "values": {
     "PP": 30.9,
     "PSOE": 28.9,
@@ -3419,6 +3873,7 @@
    "firm": "CIS (Target Point)",
    "date": "2026-03-06",
    "sample": 4016,
+   "url": "https://www.eldebate.com/espana/20260326/revision-independiente-cis-situa-pp-2-puntos-encima-psoe-recorta-algo-distancia_400725.html",
    "values": {
     "PP": 30.4,
     "PSOE": 28.4,
@@ -3446,6 +3901,7 @@
    "firm": "CIS (Ateneo del Dato)",
    "date": "2026-03-06",
    "sample": 4016,
+   "url": "https://x.com/Ateneodeldato/status/2034725876298825812",
    "values": {
     "PP": 29.1,
     "PSOE": 25.5,
@@ -3468,6 +3924,7 @@
    "firm": "CIS (Logoslab)",
    "date": "2026-03-06",
    "sample": 4016,
+   "url": "https://www.infolibre.es/politica/barometro-cis-marzo-suben-psoe-pp-baja-vox_1_2164282.html",
    "values": {
     "PP": 28.8,
     "PSOE": 28.4,
@@ -3490,6 +3947,7 @@
    "firm": "CIS",
    "date": "2026-03-06",
    "sample": 4016,
+   "url": "https://www.cis.es/documents/d/cis/es3546marmt_a-pdf",
    "values": {
     "PP": 23.3,
     "PSOE": 31.8,
@@ -3518,6 +3976,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-03-06",
    "sample": 1741,
+   "url": "https://electomania.es/electopanel-8-mar-adelanto-la-izquierda-se-moviliza-mientras-vox-cambia-su-tendencia/",
    "values": {
     "PP": 31.2,
     "PSOE": 28.4,
@@ -3547,6 +4006,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-03-04",
    "sample": 1428,
+   "url": "https://electomania.es/ep-especial-4-mar-bocado-del-psoe-a-su-izquierda-que-le-acerca-al-pp/",
    "values": {
     "PP": 30.7,
     "PSOE": 28.3,
@@ -3576,6 +4036,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-02-27",
    "sample": 1969,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/03/02/69a481e7e85ece2f038b4576.html",
    "values": {
     "PP": 32.1,
     "PSOE": 26.4,
@@ -3604,6 +4065,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-02-27",
    "sample": 2307,
+   "url": "https://electomania.es/electopanel-1mar-adelanto-sumar-rebota-tras-el-anuncio-de-yolanda-diaz/",
    "values": {
     "PP": 32.2,
     "PSOE": 26.5,
@@ -3633,6 +4095,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-02-23",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-03-04/el-pp-cae-al-minimo-de-voto-de-la-legislatura-mientras-vox-alcanza-su-cuarto-record-seguido.html",
    "values": {
     "PP": 30.2,
     "PSOE": 27.7,
@@ -3655,6 +4118,7 @@
    "firm": "Ateneo del Dato/elDiario.es",
    "date": "2026-02-22",
    "sample": 2000,
+   "url": "https://www.eldiario.es/politica/propuesta-rufian-frente-comun-izquierda-amenaza-mayoria-absoluta-pp-vox_1_13017322.html",
    "values": {
     "PP": 29.4,
     "PSOE": 27,
@@ -3676,6 +4140,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-02-20",
    "sample": 1841,
+   "url": "https://electomania.es/electopanel-22-feb-sumar-se-desinfla-y-vox-acaricia-los-75-escanos/",
    "values": {
     "PP": 32.1,
     "PSOE": 26.5,
@@ -3705,6 +4170,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-02-19",
    "sample": 1005,
+   "url": "https://www.eldebate.com/espana/20260222/sanchez-cae-nuevo-minimo-ante-derecha-imparable-tiene-vox-solo-55-puntos_387521.html",
    "values": {
     "PP": 30.5,
     "PSOE": 25.8,
@@ -3727,6 +4193,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-02-13",
    "sample": 1200,
+   "url": "https://www.elespanol.com/espana/politica/20260215/cataclismo-electoral-sanchez-llevaria-hoy-izquierda-peor-resultado-anos-elecciones-generales/1003744131212_0.html",
    "values": {
     "PP": 32.1,
     "PSOE": 25,
@@ -3749,6 +4216,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-02-13",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/vox-nutre-caida-sanchez-amenaza-duplicar-escanos_20260216699215891817b41eb649c991.html",
    "values": {
     "PP": 33.3,
     "PSOE": 25.9,
@@ -3776,6 +4244,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-02-12",
    "sample": 1635,
+   "url": "https://electomania.es/electopanel-15-feb-adelanto-repunte-de-vox-que-se-situa-a-menos-de-7p-del-psoe/",
    "values": {
     "PP": 32.2,
     "PSOE": 26.7,
@@ -3805,6 +4274,7 @@
    "firm": "Data10/Okdiario",
    "date": "2026-02-10",
    "sample": null,
+   "url": "https://okdiario.com/espana/ohio-aragon-anticipa-mayoria-absolutisima-pp-vox-205-escanos-proximas-generales-16212819",
    "values": {
     "PP": 31.8,
     "PSOE": 26,
@@ -3833,6 +4303,7 @@
    "firm": "CIS (Logoslab)",
    "date": "2026-02-06",
    "sample": 4027,
+   "url": "https://www.infolibre.es/politica/primer-barometro-cis-accidente-adamuz-confirma-activacion-derecha_1_2146879.html",
    "values": {
     "PP": 27.8,
     "PSOE": 27.4,
@@ -3855,6 +4326,7 @@
    "firm": "CIS (Target Point)",
    "date": "2026-02-06",
    "sample": 4027,
+   "url": "https://www.eldebate.com/espana/20260217/datos-cis-analizados-sociologo-independiente-pp-sacaria-24-puntos-psoe-vox-superaria-20_385845.html",
    "values": {
     "PP": 29.1,
     "PSOE": 26.7,
@@ -3882,6 +4354,7 @@
    "firm": "CIS",
    "date": "2026-02-06",
    "sample": 4027,
+   "url": "https://www.cis.es/documents/d/cis/es3544marmt_a-pdf",
    "values": {
     "PP": 23,
     "PSOE": 32.6,
@@ -3910,6 +4383,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-02-06",
    "sample": 2012,
+   "url": "https://electomania.es/electopanel-8feb-adelanto-impulso-de-la-izquierda-aunque-la-derecha-suma/",
    "values": {
     "PP": 32,
     "PSOE": 27,
@@ -3939,6 +4413,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-02-02",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-02-10/vox-acumula-cuatro-meses-de-subida-en-la-estimacion-de-voto-para-las-generales.html",
    "values": {
     "PP": 31.2,
     "PSOE": 27.7,
@@ -3961,6 +4436,7 @@
    "firm": "Sigma Dos/El Mundo",
    "date": "2026-01-30",
    "sample": 1819,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/01/31/697e20ffe85ece64578b459a.html",
    "values": {
     "PP": 32.6,
     "PSOE": 26.1,
@@ -3989,6 +4465,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-01-30",
    "sample": 1289,
+   "url": "https://electomania.es/electopanel-1-feb-adelanto-vox-alcanza-el-20/",
    "values": {
     "PP": 32.3,
     "PSOE": 26.1,
@@ -4018,6 +4495,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-01-25",
    "sample": 1003,
+   "url": "https://www.diariodeleon.es/nacional/260128/2073770/accidente-adamuz-podria-haber-evitado-cree-65-3-espanoles.html",
    "values": {
     "PP": 34.4,
     "PSOE": 27,
@@ -4040,6 +4518,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-01-23",
    "sample": 1594,
+   "url": "https://electomania.es/electopanel-25-ene-adelanto-castigo-a-pp-y-psoe-vox-roza-el-20/",
    "values": {
     "PP": 32.3,
     "PSOE": 26,
@@ -4069,6 +4548,7 @@
    "firm": "KeyData/Público",
    "date": "2026-01-22",
    "sample": null,
+   "url": "https://www.publico.es/politica/partidos/encuestas-consolidan-ascenso-vox-freno-pp-desgaste-psoe-inicio-2026.html",
    "values": {
     "PP": 32.2,
     "PSOE": 26.5,
@@ -4096,6 +4576,7 @@
    "firm": "DYM/Henneo",
    "date": "2026-01-18",
    "sample": 1000,
+   "url": null,
    "values": {
     "PP": 33.7,
     "PSOE": 27.1,
@@ -4118,6 +4599,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-01-16",
    "sample": 1001,
+   "url": "https://electomania.es/electopanel-18-ene-adelanto-el-pp-amplia-su-distancia-con-el-psoe/",
    "values": {
     "PP": 32.8,
     "PSOE": 26.5,
@@ -4147,6 +4629,7 @@
    "firm": "Target Point/El Debate",
    "date": "2026-01-15",
    "sample": 1000,
+   "url": "https://www.eldebate.com/espana/20260118/psoe-cae-medio-millon-votos-entrada-prision-abalos-pp-vox-escalan-198-escanos_375287.html",
    "values": {
     "PP": 30,
     "PSOE": 26.1,
@@ -4169,6 +4652,7 @@
    "firm": "GESOP/Prensa Ibérica",
    "date": "2026-01-15",
    "sample": 1002,
+   "url": "https://www.elperiodico.com/es/politica/20260118/encuesta-elecciones-generales-espana-125793337",
    "values": {
     "PP": 30,
     "PSOE": 26.5,
@@ -4193,6 +4677,7 @@
    "firm": "SocioMétrica/El Español",
    "date": "2026-01-10",
    "sample": 1300,
+   "url": "https://www.elespanol.com/espana/politica/20260111/psoe_-partido_socialista_obrero_espanol-partido_popular_-pp-podemos-encuestas-vox-sociometrica-sumar-alberto_nunez_feijoo-santiago_abascal-pedro_sanchez-politica/1003744085342_0.html",
    "values": {
     "PP": 32.7,
     "PSOE": 25.7,
@@ -4221,6 +4706,7 @@
    "firm": "CIS (Logoslab)",
    "date": "2026-01-10",
    "sample": 4006,
+   "url": "https://www.infolibre.es/politica/cis-confirma-giro-estructural-tablero-politico_1_2129222.html",
    "values": {
     "PP": 28,
     "PSOE": 27.5,
@@ -4243,6 +4729,7 @@
    "firm": "CIS",
    "date": "2026-01-10",
    "sample": 4006,
+   "url": "https://www.cis.es/documents/d/cis/es3540mar_a-pdf",
    "values": {
     "PP": 23.1,
     "PSOE": 31.7,
@@ -4271,6 +4758,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-01-10",
    "sample": 1083,
+   "url": "https://electomania.es/electopanel-11-ene-adelanto-rebote-de-psoe-y-sumar-a-costa-de-podemos/",
    "values": {
     "PP": 32.5,
     "PSOE": 26.9,
@@ -4300,6 +4788,7 @@
    "firm": "NC Report/La Razón",
    "date": "2026-01-09",
    "sample": 1000,
+   "url": "https://www.larazon.es/espana/vox-94-escanos-encima-psoe-sumar_202601126964081b22f0db7daf0bf44e.html",
    "values": {
     "PP": 33.7,
     "PSOE": 26.3,
@@ -4327,6 +4816,7 @@
    "firm": "40dB/Prisa",
    "date": "2026-01-05",
    "sample": 2000,
+   "url": "https://elpais.com/espana/2026-01-12/vox-se-dispara-al-18-y-eleva-a-13-puntos-la-ventaja-del-bloque-de-la-derecha-sobre-la-izquierda.html",
    "values": {
     "PP": 31.5,
     "PSOE": 27.1,
@@ -4349,6 +4839,7 @@
    "firm": "EM-Analytics/Electomanía",
    "date": "2026-01-03",
    "sample": 1316,
+   "url": "https://electomania.es/electopanel-4ene-adelanto-psoe-y-sumar-comparten-el-desgaste/",
    "values": {
     "PP": 32.4,
     "PSOE": 26.8,

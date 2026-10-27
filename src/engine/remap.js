@@ -5,6 +5,7 @@
 //  - Cataluña: la parte Podemos pasa a ERC (Podemos apoya a ERC) y el resto a FA (Comuns).
 //  - C. Valenciana: Compromís–Front Valencià (FV) = Compromís + Podemos. FV recibe la
 //    parte Podemos y una fracción `compromisShare` del resto; FA, lo que queda.
+//  - Canarias: FA y Podemos van juntos al Congreso → todo a FA.
 //  - Resto de España: parte Podemos → PODEMOS, resto → FA.
 //  - SALF y Adelante Andalucía no tienen voto en 2023: se siembran con su % por
 //    provincia en las europeas de 2024 (SALF) y en las andaluzas de 2026 (AA). Solo
@@ -27,6 +28,9 @@ export function remap2023to2026(base, { europeas, andaluzas, seats }, opts = DEF
     if (p.ccaa === 'CAT') {
       add('ERC', pod);
       add('FA', rest);
+    } else if (p.ccaa === 'CAN') {
+      // Canarias: el FA y Podemos van juntos al Congreso (Infobae, 17-oct-2026).
+      add('FA', pod + rest);
     } else if (p.ccaa === 'VAL') {
       add('FV', pod + rest * opts.compromisShare);
       add('FA', rest * (1 - opts.compromisShare));

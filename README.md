@@ -9,9 +9,9 @@ Plan y estado: [plan-v2.md](plan-v2.md). **Metodología auditable, validación y
 ```sh
 npm ci
 npm run dev        # web en local (lee ./data)
-npm test           # 35 tests: reproduce 2023, las simulaciones del vídeo, el modelo 2026 y el espectro
+npm test           # 44 tests: reproduce 2023, las simulaciones del vídeo, el modelo 2026, el espectro y las fuentes
 npm run polls      # descarga y promedia encuestas (Wikipedia)
-npm run simulate   # proyección + Monte Carlo → data/state.json y data/history.json
+npm run simulate   # resultado con las fuentes activas + efecto de cada tarjeta → data/state.json, data/sources.json, data/history.json
 npm run data       # regenera los datos base (2023, europeas, andaluzas, BOE, designados, INE)
 npm run backtest   # aplica el método a 2023 desde la base de 2019 → data/backtest-2023.json
 npm run spectrum   # laboratorio izquierda ↔ derecha (11 niveles) → data/spectrum.json

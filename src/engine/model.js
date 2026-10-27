@@ -132,6 +132,9 @@ export function projectSenate(prep, projected, active) {
       const p = m.params;
       if (p.where === 'provincial4' && c.seats !== 4) continue;
       if (p.except?.includes(c.prov)) continue;
+      // Exclusiones por comunidad o por circunscripción (p. ej. Senado de Progreso:
+      // ni Cataluña ni Canarias salvo La Gomera).
+      if (p.excludeCcaa?.includes(c.ccaa) && !p.includeIds?.includes(c.id)) continue;
       for (const f of p.from) {
         if (!votes[f]) continue;
         votes[p.into] = (votes[p.into] || 0) + votes[f] * (p.share ?? 1);

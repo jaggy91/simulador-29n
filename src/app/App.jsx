@@ -7,6 +7,8 @@ import { Timeline } from './components/Timeline.jsx';
 import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
 import { Spectrum, tippingSummary } from './components/Spectrum.jsx';
+import { Sources } from './components/Sources.jsx';
+import { modelInputs } from '../engine/evidence.js';
 import { swingPoll } from '../engine/spectrum.js';
 
 // Porcentaje en formato español. Nunca muestra 0 % o 100 % si no es exacto: cerca de
@@ -47,6 +49,8 @@ export default function App() {
   const [specLevel, setSpecLevel] = useState(0);
   const whatIf = view === 'whatif';
   const [overrides, setOverrides] = useState({});
+  // Tarjetas de fuentes activas (por defecto, todas salvo las superadas).
+  const [active, setActiveSet] = useState(null);
   const [swing, setSwing] = useState(0);
   const [custom, setCustom] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -82,18 +86,34 @@ export default function App() {
   }, [view, specLevel]);
 
   useEffect(() => {
-    Promise.all(['state', 'polls', 'scenarios', 'history', 'congreso-2023'].map((n) => loadJSON(n)))
-      .then(([state, polls, scenarios, history, congreso]) => setD({ state, polls, scenarios: scenarios.scenarios, history, provinces: congreso.provinces }))
+    Promise.all(['state', 'polls', 'scenarios', 'history', 'congreso-2023', 'sources'].map((n) => loadJSON(n)))
+      .then(([state, polls, scenarios, history, congreso, sources]) => {
+        const cards = sources.cards;
+        setD({
+          state, polls, catalog: scenarios.scenarios, history, provinces: congreso.provinces, cards,
+          news: cards.filter((c) => !['encuesta', 'cis'].includes(c.type)),
+          pollItems: { media: { items: cards.filter((c) => c.type === 'encuesta') }, cis: { items: cards.filter((c) => c.type === 'cis') } },
+          defaults: new Set(cards.filter((c) => c.defaultActive && c.toggleable).map((c) => c.id)),
+        });
+        setActiveSet(new Set(cards.filter((c) => c.defaultActive && c.toggleable).map((c) => c.id)));
+      })
       .then(() => loadJSON('spectrum').then((spectrum) => setD((x) => ({ ...x, spectrum }))).catch(() => {}))
       .catch((e) => setError(e.message));
   }, []);
 
-  const effective = useMemo(() => d?.scenarios.map((s) => {
-    const o = overrides[s.id] || {};
+  // Entradas del modelo según las tarjetas activas: escenarios resueltos y medias.
+  const fromSources = useMemo(() => d && active && modelInputs(d.catalog, d.news, d.pollItems, active), [d, active]);
+  const sourcesChanged = useMemo(() => d && active && (active.size !== d.defaults.size || [...active].some((id) => !d.defaults.has(id))), [d, active]);
+  // Sobre lo que dicen las fuentes, los ajustes de "qué pasaría si".
+  const effective = useMemo(() => fromSources?.scenarios.map((s) => {
+    const o = (whatIf && overrides[s.id]) || {};
     const prob = o.mode === 'si' ? 1 : o.mode === 'no' ? 0 : s.prob;
-    return { ...s, prob, params: { ...s.params, ...o.params } };
-  }), [d, overrides]);
-  const customized = whatIf && (swing !== 0 || Object.values(overrides).some((o) => (o.mode && o.mode !== 'oficial') || o.params));
+    return { ...s, prob, ...(s.params && { params: { ...s.params, ...o.params } }) };
+  }), [fromSources, overrides, whatIf]);
+  const whatIfChanged = whatIf && (swing !== 0 || Object.values(overrides).some((o) => (o.mode && o.mode !== 'oficial') || o.params));
+  const customized = Boolean(sourcesChanged || whatIfChanged);
+  // Memorizada: un objeto nuevo en cada render relanzaría el cálculo del worker en bucle.
+  const inputPoll = useMemo(() => fromSources && swingPoll(fromSources.polls[source], whatIf ? swing : 0), [fromSources, source, whatIf, swing]);
 
   useEffect(() => {
     if (!customized || !d) { setCustom(null); setBusy(false); return; }
@@ -105,15 +125,15 @@ export default function App() {
         if (data.id !== reqId.current) return;
         setBusy(false);
         if (data.error) setError(data.error);
-        else setCustom({ ...data.result, poll: swingPoll(d.polls.sources[source].values, swing) });
+        else setCustom({ ...data.result, poll: inputPoll });
       };
-      worker.current.postMessage({ id, root: dataRoot(), poll: swingPoll(d.polls.sources[source].values, swing), scenarios: effective, n: WHATIF_N });
+      worker.current.postMessage({ id, root: dataRoot(), poll: inputPoll, scenarios: effective, n: WHATIF_N });
     }, 350);
     return () => clearTimeout(t);
-  }, [customized, effective, swing, source, d]);
+  }, [customized, effective, inputPoll, d]);
 
   if (error) return <div className="wrap"><p style={{ marginTop: 24 }}>Error: {error}</p></div>;
-  if (!d) return <div className="wrap"><p className="muted" style={{ marginTop: 24 }}>Cargando…</p></div>;
+  if (!d || !active) return <div className="wrap"><p className="muted" style={{ marginTop: 24 }}>Cargando…</p></div>;
 
   const official = d.state.results[source];
   const r = customized && custom ? custom : official;
@@ -124,6 +144,11 @@ export default function App() {
   const sBlocs = blocsOf(senate.total);
   const setOverride = (id, patch) => setOverrides((o) => ({ ...o, [id]: { ...o[id], ...patch } }));
   const reset = () => { setOverrides({}); setSwing(0); };
+  const resetSources = () => setActiveSet(new Set(d.defaults));
+  const setActive = (id, on) => setActiveSet((s) => { const n = new Set(s); if (on) n.add(id); else n.delete(id); return n; });
+  const off = [...d.defaults].filter((id) => !active.has(id)).length;
+  const added = [...active].filter((id) => !d.defaults.has(id)).length;
+  const cardTitle = Object.fromEntries(d.cards.map((c) => [c.id, c.title || c.firm]));
 
   return (
     <>
@@ -164,20 +189,29 @@ export default function App() {
         </main>
       ) : (
       <main className="wrap">
+        {sourcesChanged && (
+          <div className="banner" role="status">
+            <span>
+              {busy ? 'Recalculando…' : `Resultado con tu selección de fuentes: ${off ? `${off} desactivada${off === 1 ? '' : 's'}` : ''}${off && added ? ' y ' : ''}${added ? `${added} activada${added === 1 ? '' : 's'} a mano` : ''}. No es el resultado por defecto.`}
+            </span>
+            <button className="btn" onClick={resetSources}>Restablecer fuentes</button>
+          </div>
+        )}
         {whatIf && (
           <div className="banner" role="status">
             <span>
-              {customized
-                ? busy ? 'Calculando tu simulación…' : `Simulación personalizada (${WHATIF_N.toLocaleString('es-ES')} iteraciones). No es la proyección oficial.`
+              {whatIfChanged
+                ? busy ? 'Calculando tu simulación…' : `Simulación personalizada (${WHATIF_N.toLocaleString('es-ES')} iteraciones) sobre las fuentes activas.`
                 : 'Modo "qué pasaría si": fuerza escenarios o mueve la encuesta más abajo; la web recalcula al momento.'}
             </span>
-            {customized && <button className="btn" onClick={reset}>Volver a la oficial</button>}
+            {whatIfChanged && <button className="btn" onClick={reset}>Quitar ajustes</button>}
           </div>
         )}
 
         <div className={busy ? 'busy' : ''}>
           <section className="hero" aria-label="Resumen">
             <div className="card hero-figure">
+              <p className="small ink-2" style={{ marginBottom: 4 }}>Resultado con las fuentes activas ({active.size}) · no es una predicción</p>
               <h2>¿Mayoría absoluta de PP + Vox + UPN?</h2>
               <div className="value">{pct(mc.prob.mayoriaDerecha)}</div>
               <p className="small ink-2">
@@ -198,7 +232,7 @@ export default function App() {
           <section className="grid cols-2">
             <div className="card">
               <h2>Congreso</h2>
-              <p className="sub">Proyección central ({inText(d.polls.sources[source].label)} y escenarios confirmados). 350 escaños.</p>
+              <p className="sub">Resultado central con las fuentes activas ({inText(d.polls.sources[source].label)}). 350 escaños.</p>
               <Hemicycle seats={congress} majority={MAJORITY} title="Congreso de los Diputados" ariaLabel="Hemiciclo del Congreso por partidos" />
               <BlocBar blocs={r.central.blocs} total={350} markers={[{ at: MAJORITY, label: `Mayoría ${MAJORITY}` }]} interval={mc.blocs} />
             </div>
@@ -210,9 +244,18 @@ export default function App() {
             </div>
           </section>
 
+          <section className="card" style={{ marginTop: 16 }} id="fuentes">
+            <h2>Fuentes que alimentan el resultado</h2>
+            <p className="sub">
+              Cada noticia, dato oficial y encuesta es una tarjeta. Por defecto todas cuentan (salvo las superadas por otra más reciente u oficial);
+              desactiva las que no te convenzan y el resultado se recalcula. El efecto indicado es el de cada tarjeta con el resto por defecto.
+            </p>
+            <Sources cards={d.cards} active={active} setActive={setActive} source={source} catalog={d.catalog} overriddenBy={fromSources.overriddenBy} />
+          </section>
+
           <section className="card" style={{ marginTop: 16 }}>
             <h2>Escenarios</h2>
-            <p className="sub">Movimientos de candidaturas que cambian escaños con los mismos votos. La proyección oficial los pondera por su probabilidad.</p>
+            <p className="sub">Movimientos de candidaturas que cambian escaños con los mismos votos. Su estado y su probabilidad los fijan las fuentes activas.</p>
             {whatIf && (
               <div className="scn" style={{ marginBottom: 12 }}>
                 <h3>¿Y si se mueve la encuesta?</h3>
@@ -222,7 +265,7 @@ export default function App() {
                 </label>
               </div>
             )}
-            <Scenarios scenarios={d.scenarios} overrides={overrides} setOverride={setOverride} whatIf={whatIf} />
+            <Scenarios scenarios={fromSources.scenarios} overrides={overrides} setOverride={setOverride} whatIf={whatIf} cardTitle={cardTitle} />
           </section>
 
           {d.spectrum?.sources[source] && (
@@ -250,7 +293,7 @@ export default function App() {
 
           <section className="grid cols-2">
             <div className="card">
-              <h2>Encuesta usada</h2>
+              <h2>Media resultante</h2>
               <p className="sub">{d.polls.sources[source].method}.</p>
               <PollTable poll={poll} />
               <details>

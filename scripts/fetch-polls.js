@@ -27,13 +27,15 @@ const latest = rows.reduce((d, r) => (r.date > d ? r.date : d), '');
 
 // --- Media de encuestas -----------------------------------------------------
 const hasLeft = (r) => r.values.FA != null || r.joint.some((j) => j.parties.includes('FA'));
-const { used, values: media } = pollAverage(rows, { asOf: latest, windowDays: WINDOW_DAYS, halfLife: HALF_LIFE_DAYS, include: hasLeft });
+const { used, items: mediaItems, values: media } = pollAverage(rows, { asOf: latest, windowDays: WINDOW_DAYS, halfLife: HALF_LIFE_DAYS, include: hasLeft });
 
 // --- CIS (reestimaciones de datos brutos) ------------------------------------
 const alt = rows.filter((r) => /^CIS \(/.test(r.firm));
 const lastCIS = alt.reduce((d, r) => (r.date > d ? r.date : d), '');
 const cisRows = alt.filter((r) => r.date === lastCIS);
-const cisAvg = average(cisRows.map((r) => resolveJoint(r, rows)), cisRows.map(() => 1));
+const cisResolved = cisRows.map((r) => resolveJoint(r, rows));
+const cisAvg = average(cisResolved, cisRows.map(() => 1));
+const cisItems = cisRows.map((r, i) => ({ id: `cis:${r.firm}|${r.date}`, firm: r.firm, date: r.date, sample: r.sample, url: r.url, weight: Math.round(1e4 / cisRows.length) / 1e4, values: cisResolved[i] }));
 // Las reestimaciones no suelen dar partidos regionales: se completan con la media.
 const cis = { ...Object.fromEntries(Object.entries(media).filter(([p]) => !(p in cisAvg))), ...cisAvg };
 
@@ -46,12 +48,14 @@ const out = {
       label: 'Media de encuestas',
       method: `última encuesta por empresa, ${WINDOW_DAYS} días, peso recencia (vida media ${HALF_LIFE_DAYS} d) × √muestra; sin CIS ni encuestas de partido`,
       polls: used.map((r) => `${r.firm} (${r.date})`),
+      items: mediaItems,
       values: media,
     },
     cis: {
       label: 'CIS (datos brutos reestimados)',
       method: `media de reestimaciones independientes del barómetro con campo hasta ${lastCIS}; partidos que no dan, de la media`,
       polls: cisRows.map((r) => r.firm),
+      items: cisItems,
       values: cis,
     },
   },

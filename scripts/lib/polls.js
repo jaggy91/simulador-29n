@@ -56,7 +56,9 @@ export function parseTable(table, title, { year, jointColumns = {} }) {
       delete values.UPN;
     }
     const sample = Number(clean(grid[2].value).replace(/,/g, '')) || null;
-    rows.push({ firm, date: date.toISOString().slice(0, 10), sample, values, joint, table: title.replace(/=/g, '') });
+    // Enlace a la encuesta: la primera referencia de la celda de la empresa.
+    const url = grid[0].value.match(/url=\s*([^\s|}]+)/)?.[1] || null;
+    rows.push({ firm, date: date.toISOString().slice(0, 10), sample, url, values, joint, table: title.replace(/=/g, '') });
   }
   return rows;
 }
@@ -98,5 +100,9 @@ export function pollAverage(rows, { asOf, windowDays = 21, halfLife = 7, include
   }
   const used = [...byFirm.values()];
   const weights = used.map((r) => Math.pow(0.5, days(r.date, asOf) / halfLife) * Math.sqrt(Math.min(r.sample || 1000, 3000)));
-  return { used, values: average(used.map((r) => resolveJoint(r, rows)), weights) };
+  const resolved = used.map((r) => resolveJoint(r, rows));
+  const W = weights.reduce((a, b) => a + b, 0);
+  // items: una tarjeta por encuesta, con su peso normalizado y sus cifras resueltas.
+  const items = used.map((r, i) => ({ id: `encuesta:${r.firm}|${r.date}`, firm: r.firm, date: r.date, sample: r.sample, url: r.url, weight: Math.round((1e4 * weights[i]) / W) / 1e4, values: resolved[i] }));
+  return { used, items, values: average(resolved, weights) };
 }

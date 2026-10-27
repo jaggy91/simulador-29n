@@ -1,13 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import { loadModelData } from '../scripts/lib/load-data.js';
+import { loadInputs } from '../scripts/lib/inputs.js';
 import { prepare, run } from '../src/engine/model.js';
 import { LEVERS, levelInputs, activeLevers, swingPoll } from '../src/engine/spectrum.js';
 import { transfer } from '../src/engine/scenarios.js';
 
 const prep = prepare(loadModelData());
 const polls = JSON.parse(fs.readFileSync('data/polls.json', 'utf8')).sources;
-const { scenarios } = JSON.parse(fs.readFileSync('data/scenarios.json', 'utf8'));
+// Escenarios resueltos por las tarjetas de fuentes activas por defecto (como la web).
+const scenarios = loadInputs().inputs().scenarios;
 const total = (o) => Object.values(o).reduce((a, b) => a + b, 0);
 const certain = (sc) => sc.filter((s) => s.prob >= 1 && s.kind !== 'base');
 

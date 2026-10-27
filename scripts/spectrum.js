@@ -1,21 +1,25 @@
 // Precalcula el espectro izquierda ↔ derecha (niveles −5…+5) para cada fuente de
 // encuesta y lo escribe en data/spectrum.json. Separado de la proyección oficial:
 // no toca state.json ni history.json. Uso: node scripts/spectrum.js [--n 2000]
-import { loadModelData, readJSON, writeJSON } from './lib/load-data.js';
+import { loadModelData, writeJSON } from './lib/load-data.js';
+import { loadInputs } from './lib/inputs.js';
 import { prepare, run } from '../src/engine/model.js';
 import { simulate } from '../src/engine/montecarlo.js';
 import { LEVERS, levelInputs, tippingPoints } from '../src/engine/spectrum.js';
 
 const n = Number(process.argv[process.argv.indexOf('--n') + 1]) || 2000;
 const prep = prepare(loadModelData());
-const polls = readJSON('polls');
-const { scenarios } = readJSON('scenarios');
+// Parte del resultado con las fuentes activas por defecto.
+const { polls, inputs } = loadInputs();
+const base = inputs();
+const scenarios = base.scenarios;
 
 const sources = {};
 for (const [key, src] of Object.entries(polls.sources)) {
+  const poll = base.polls[key];
   const levels = [];
   for (let level = -5; level <= 5; level++) {
-    const input = levelInputs(level, src.values, scenarios);
+    const input = levelInputs(level, poll, scenarios);
     const certain = input.scenarios.filter((s) => s.prob >= 1 && s.kind !== 'base');
     const c = run(prep, input.poll, certain);
     const mc = simulate(prep, input.poll, input.scenarios, { n });

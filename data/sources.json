@@ -1,0 +1,924 @@
+{
+ "updated": "2026-10-27T05:33:33.399Z",
+ "impactN": 1000,
+ "cards": [
+  {
+   "id": "video-fa-pequenas",
+   "type": "analisis",
+   "date": "2026-10-25",
+   "title": "El PSOE habría ofrecido al Frente Amplio no presentar listas al Congreso en una decena larga de provincias pequeñas",
+   "detail": "Según algunos medios citados en el vídeo de referencia; el PSOE lo negaba.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "FA_retira_pequenas",
+     "prob": 0.15,
+     "status": "rumor"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false,
+   "overriddenBy": "fa-51-de-52",
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "abascal-senado",
+   "type": "analisis",
+   "date": "2026-10-19",
+   "title": "Abascal ofrece un entendimiento para que la izquierda no se quede con el Senado",
+   "detail": "El vídeo de referencia plantea que Vox se retire del Senado en casi toda España. Génova no lo había confirmado.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "VOX_retira_senado",
+     "prob": 0.5,
+     "status": "negociación"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false,
+   "overriddenBy": "pacto-pp-vox-senado",
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "senado-progreso",
+   "type": "noticia",
+   "date": "2026-10-17",
+   "title": "PSOE y Frente Amplio registran «Senado de Progreso»: lista única al Senado en 47 circunscripciones",
+   "detail": "Con IU, Movimiento Sumar, Más Madrid, Compromís, CHA, Batzarre, Més y Ceuta Ya. No se aplica en Cataluña ni en Canarias (salvo La Gomera).",
+   "outlet": "Infobae",
+   "sources": [
+    "https://www.infobae.com/espana/2026/10/17/acuerdo-historico-para-las-elecciones-del-29-n-en-el-senado-psoe-y-frente-amplio-se-presentaran-juntos-para-tratar-de-impedir-otra-mayoria-absoluta-del-pp/",
+    "https://www.democrata.es/politica/psoe-frente-amplio-y-aliados-de-izquierda-sellan-una-candidatura-conjunta-al-senado-en-47-circunscripciones/",
+    "https://www.cmmedia.es/noticias/espana/psoe-frente-amplio-acuerdan-presentarse-senado-lista-unica.amp.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "SENADO_PROGRESO",
+     "prob": 1,
+     "status": "confirmado"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": -4
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": -23
+    }
+   }
+  },
+  {
+   "id": "teruel-cha-fa",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "CHA y el Frente Amplio no se presentan al Congreso por Teruel",
+   "detail": "Para «evitar la dispersión del voto». IU Aragón rechazó la decisión. En el Senado sí concurren.",
+   "outlet": "elDiario.es",
+   "sources": [
+    "https://www.eldiario.es/aragon/politica/cha-frente-amplio-renuncian-presentarse-congreso-teruel-evitar-dispersion-voto_1_13604566.html",
+    "https://www.publico.es/politica/cha-frente-amplio-aragon-anuncia-presentara-congreso-teruel.html",
+    "https://www.deia.eus/politica/2026/10/26/frente-amplio-concurrira-congreso-provincias-teruel-11689365.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "TERUEL_sin_FA_CHA",
+     "prob": 1,
+     "status": "confirmado"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": -0.001,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "fa-51-de-52",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "El Frente Amplio presenta listas al Congreso en 51 de las 52 circunscripciones: solo renuncia a Teruel",
+   "detail": "No hay retirada en las provincias pequeñas; el FA y el PSOE negaron cualquier pacto de listas.",
+   "outlet": "Deia / Europa Press",
+   "sources": [
+    "https://www.deia.eus/politica/2026/10/26/frente-amplio-concurrira-congreso-provincias-teruel-11689365.html",
+    "https://www.pressdigital.es/articulo/politica/2026-10-26/6066632-frente-amplio-tendra-candidatos-todas-circunscripciones-congreso-solo-renuncia-teruel",
+    "https://www.eldiario.es/politica/frente-amplio-cierra-puerta-pacto-psoe-retirar-listas-congreso-provincias-pequenas_1_13602712.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "FA_retira_pequenas",
+     "prob": 0,
+     "status": "descartado"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "pacto-pp-vox-senado",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "PP y Vox pactan las listas del Senado: Vox se retira en seis provincias, el PP en tres y Vox va con candidato único en catorce",
+   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox. Objetivo declarado: frenar a «Senado de Progreso».",
+   "outlet": "El Español",
+   "sources": [
+    "https://www.elespanol.com/espana/politica/20261026/pp-vox-llegan-acuerdo-listas-senado-abascal-retiran-provincias-feijoo/1003744434759_0.html",
+    "https://theobjective.com/espana/politica/2026-10-26/acuerdo-derecha-senado-vox-pp/",
+    "https://www.infobae.com/espana/agencias/2026/10/26/vox-y-pp-anuncian-un-acuerdo-para-sus-listas-al-senado-en-las-elecciones-del-29n/",
+    "https://www.cope.es/actualidad/espana/noticias/pp-vox-llegan-acuerdo-presentar-candidaturas-senado-20261026_3462782.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "PACTO_PP_VOX_SENADO",
+     "prob": 1,
+     "status": "confirmado"
+    },
+    {
+     "scenario": "VOX_retira_senado",
+     "prob": 0,
+     "status": "superado"
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 18
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 25
+    }
+   }
+  },
+  {
+   "id": "supremo-ley-nietos",
+   "type": "contexto",
+   "date": "2026-10-23",
+   "title": "El Supremo mantiene suspendido el voto de 163.020 nacionalizados por la Ley de Nietos; solo 91 de 31.390 expedientes revisados tienen certificado",
+   "detail": "El voto exterior extra no entra en el resultado por defecto: solo en «qué pasaría si» y en el espectro.",
+   "outlet": "The Objective",
+   "sources": [
+    "https://theobjective.com/espana/tribunales/2026-10-23/91-expedientes-ley-nietos-cumplen-requisitos-votar/"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "base-compromis-fv",
+   "type": "base",
+   "date": "2026-10-16",
+   "title": "Compromís y Podemos concurren juntos en la Comunidad Valenciana (Compromís–Front Valencià)",
+   "detail": "Incluido en la base de partidos: FV recibe el voto de Podemos y el 85 % del resto de Sumar 2023 en la C. Valenciana.",
+   "outlet": "Cadena SER",
+   "sources": [
+    "https://cadenaser.com/comunitat-valenciana/2026/10/16/compromis-se-integrara-en-el-frente-de-izquierdas-bajo-el-nombre-compromis-front-valencia-radio-castellon/",
+    "https://www.lavanguardia.com/local/valencia/20261016/11660399/pacto-compromis-morados-quedan-1-alicante-siglas-aparecen.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "base-fa-podemos-canarias",
+   "type": "base",
+   "date": "2026-10-17",
+   "title": "Frente Amplio y Podemos concurren juntos al Congreso en Canarias",
+   "detail": "Incluido en la base de partidos: en Canarias todo el voto de Sumar 2023 pasa al Frente Amplio.",
+   "outlet": "Infobae",
+   "sources": [
+    "https://www.infobae.com/espana/2026/10/17/acuerdo-historico-para-las-elecciones-del-29-n-en-el-senado-psoe-y-frente-amplio-se-presentaran-juntos-para-tratar-de-impedir-otra-mayoria-absoluta-del-pp/"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "base-podemos-erc",
+   "type": "base",
+   "date": "2026-10-25",
+   "title": "Podemos no se presenta en Cataluña y apoya a ERC",
+   "detail": "Incluido en la base de partidos: en Cataluña la parte de Podemos del voto de Sumar 2023 pasa a ERC.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "boe-convocatoria",
+   "type": "oficial",
+   "date": "2026-10-06",
+   "title": "BOE: Real Decreto 806/2026 de convocatoria — escaños por provincia y Senado con Formentera",
+   "detail": "Madrid pasa de 37 a 38 diputados y Cádiz de 9 a 8. Formentera elige su propio senador (209 electos).",
+   "outlet": "BOE",
+   "sources": [
+    "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "ine-cera",
+   "type": "oficial",
+   "date": "2026-10-09",
+   "title": "INE: censo de españoles residentes en el extranjero para el 29-N (2.769.645 electores)",
+   "detail": "Base del modo realista del voto exterior: crecimiento por provincia y país desde 2023.",
+   "outlet": "INE",
+   "sources": [
+    "https://ine.es/dyngs/CEL/index.htm?cid=1703"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "encuesta:SocioMétrica/El Español|2026-10-25",
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-10-25",
+   "sample": 3223,
+   "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
+   "weight": 0.1925,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 27,
+    "VOX": 18.6,
+    "FA": 5.2,
+    "FV": 0.9,
+    "ERC": 2.6,
+    "JUNTS": 1.7,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.2,
+    "PODEMOS": 1.8,
+    "SALF": 2.4
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.7,
+     "pMayoria": 0.008,
+     "senado": 1
+    },
+    "cis": {
+     "derecha": -0.2,
+     "pMayoria": -0.002,
+     "senado": 2
+    }
+   }
+  },
+  {
+   "id": "encuesta:NC Report/La Razón|2026-10-24",
+   "firm": "NC Report/La Razón",
+   "date": "2026-10-24",
+   "sample": 1000,
+   "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
+   "weight": 0.1007,
+   "values": {
+    "PP": 33.1,
+    "PSOE": 25.8,
+    "VOX": 19,
+    "ERC": 2,
+    "JUNTS": 1.8,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 1.3,
+    "PODEMOS": 2.6,
+    "FA": 5.65,
+    "FV": 0.95
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.8,
+     "pMayoria": 0.006,
+     "senado": 1
+    },
+    "cis": {
+     "derecha": 0.1,
+     "pMayoria": 0.001,
+     "senado": -1
+    }
+   }
+  },
+  {
+   "id": "encuesta:Winston/Artículo14|2026-10-23",
+   "firm": "Winston/Artículo14",
+   "date": "2026-10-23",
+   "sample": 1200,
+   "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
+   "weight": 0.0999,
+   "values": {
+    "PP": 29.4,
+    "PSOE": 27.1,
+    "VOX": 19.2,
+    "FA": 5.6
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.5,
+     "pMayoria": -0.002,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:EM-Analytics/Electomanía|2026-10-23",
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-10-23",
+   "sample": 4309,
+   "url": "https://electomania.es/electopanel-25-octubre-el-pp-baja-de-nuevo-frente-amplio-crece/",
+   "weight": 0.1579,
+   "values": {
+    "PP": 30.9,
+    "PSOE": 26.7,
+    "VOX": 19,
+    "FA": 5.8,
+    "FV": 1.2,
+    "ERC": 2.2,
+    "JUNTS": 1.3,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 1.1,
+    "PODEMOS": 1.7,
+    "SALF": 1.7
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.2,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.1,
+     "pMayoria": 0.001,
+     "senado": -1
+    }
+   }
+  },
+  {
+   "id": "encuesta:Ateneo del Dato/elDiario.es|2026-10-22",
+   "firm": "Ateneo del Dato/elDiario.es",
+   "date": "2026-10-22",
+   "sample": 2000,
+   "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
+   "weight": 0.1168,
+   "values": {
+    "PP": 31.1,
+    "PSOE": 27.6,
+    "VOX": 19.8,
+    "PODEMOS": 2.7,
+    "FA": 5.83,
+    "FV": 0.97
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:Sigma Dos/El Mundo|2026-10-22",
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-22",
+   "sample": 3122,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
+   "weight": 0.1431,
+   "values": {
+    "PP": 30.6,
+    "PSOE": 26.1,
+    "VOX": 19.9,
+    "FA": 7.4,
+    "FV": 0.8,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1.2,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 2.8
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.2,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.2,
+     "pMayoria": 0.002,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:IMOP/El Confidencial|2026-10-16",
+   "firm": "IMOP/El Confidencial",
+   "date": "2026-10-16",
+   "sample": 1000,
+   "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
+   "weight": 0.0456,
+   "values": {
+    "PP": 28.5,
+    "PSOE": 27.1,
+    "VOX": 20,
+    "ERC": 2.2,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 1.1,
+    "CC": 0.6,
+    "PODEMOS": 1.9,
+    "SALF": 1.2,
+    "FA": 7.63,
+    "FV": 1.28
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.4,
+     "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": -0.001,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:Target Point/El Debate|2026-10-09",
+   "firm": "Target Point/El Debate",
+   "date": "2026-10-09",
+   "sample": 1002,
+   "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
+   "weight": 0.0228,
+   "values": {
+    "PP": 32,
+    "PSOE": 25.9,
+    "VOX": 18.7,
+    "PODEMOS": 3.4,
+    "SALF": 1.3,
+    "FA": 5.91,
+    "FV": 0.99
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.1,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:40dB/Prisa|2026-10-08",
+   "firm": "40dB/Prisa",
+   "date": "2026-10-08",
+   "sample": 800,
+   "url": "https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html",
+   "weight": 0.0185,
+   "values": {
+    "PP": 31.9,
+    "PSOE": 28.1,
+    "VOX": 18.9,
+    "PODEMOS": 2.3,
+    "SALF": 1.8,
+    "FA": 4.54,
+    "FV": 0.76
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.1,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:GESOP/Prensa Ibérica|2026-10-08",
+   "firm": "GESOP/Prensa Ibérica",
+   "date": "2026-10-08",
+   "sample": 1000,
+   "url": "https://www.elperiodico.com/es/politica/20261012/encuesta-elecciones-generales-espana-2026-29n-135212729",
+   "weight": 0.0206,
+   "values": {
+    "PP": 28.7,
+    "PSOE": 26.1,
+    "VOX": 18.9,
+    "ERC": 2.5,
+    "JUNTS": 1.9,
+    "PODEMOS": 2.6,
+    "SALF": 2,
+    "FA": 6.85,
+    "FV": 1.15
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.1,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": -0.003,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:GAD3/Vocento|2026-10-08",
+   "firm": "GAD3/Vocento",
+   "date": "2026-10-08",
+   "sample": 1077,
+   "url": "https://www.abc.es/espana/derecha-mantiene-mayoria-absoluta-pese-agitacion-callejera-20261012015025-nt.html",
+   "weight": 0.0214,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 26.4,
+    "VOX": 18.2,
+    "ERC": 2.6,
+    "JUNTS": 1.5,
+    "BILDU": 1.5,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 2.3,
+    "SALF": 1.8,
+    "FA": 6.34,
+    "FV": 1.06
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": -0.004,
+     "senado": -1
+    }
+   }
+  },
+  {
+   "id": "encuesta:Hamalgama Métrica/Vozpópuli|2026-10-08",
+   "firm": "Hamalgama Métrica/Vozpópuli",
+   "date": "2026-10-08",
+   "sample": 1000,
+   "url": "https://www.vozpopuli.com/espana/politica/debacle-de-la-izquierda-pp-y-vox-suman-ya-212-escanos-y-el-53-de-los-votos.html",
+   "weight": 0.0206,
+   "values": {
+    "PP": 33.6,
+    "PSOE": 25.3,
+    "VOX": 19.6,
+    "ERC": 1.9,
+    "JUNTS": 1.7,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 3.3,
+    "SALF": 1.8,
+    "FA": 4.63,
+    "FV": 0.77
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.3,
+     "pMayoria": 0.002,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.1,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:InvyMark/laSexta|2026-10-08",
+   "firm": "InvyMark/laSexta",
+   "date": "2026-10-08",
+   "sample": null,
+   "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-protestas-vivienda-impactan-encuestas-que-hunden-bloque-izquierda-disparan-vox_202610096ac8ae9bb79b18452fc08907.html",
+   "weight": 0.0206,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 28,
+    "VOX": 18.8,
+    "ERC": 1.9,
+    "JUNTS": 1.2,
+    "BILDU": 1.5,
+    "PNV": 1.1,
+    "PODEMOS": 3.2,
+    "SALF": 1.8,
+    "FA": 5.4,
+    "FV": 0.9
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.1,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.1,
+     "pMayoria": -0.001,
+     "senado": -1
+    }
+   }
+  },
+  {
+   "id": "encuesta:DYM/Henneo|2026-10-07",
+   "firm": "DYM/Henneo",
+   "date": "2026-10-07",
+   "sample": 1011,
+   "url": "https://www.20minutos.es/nacional/psoe-absorbe-intencion-votos-sumar-podemos-mientras-pp-vox-consolidan-su-mayoria_7046598_0.html",
+   "weight": 0.0188,
+   "values": {
+    "PP": 34,
+    "PSOE": 28.2,
+    "VOX": 18.2,
+    "PODEMOS": 3.6,
+    "SALF": 0.5,
+    "FA": 3.08,
+    "FV": 0.52
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.2,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "cis:CIS (Opina 360)|2026-10-06",
+   "firm": "CIS (Opina 360)",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "url": "https://opina360.com/wp-content/uploads/2026/10/BMP-CIS-octubre.pdf",
+   "weight": 0.5,
+   "values": {
+    "PP": 28,
+    "PSOE": 28,
+    "VOX": 17.8,
+    "PODEMOS": 3.5,
+    "SALF": 1.6,
+    "FA": 6.25,
+    "FV": 1.05
+   },
+   "type": "cis",
+   "source": "cis",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.8,
+     "pMayoria": 0.023,
+     "senado": 1
+    }
+   }
+  },
+  {
+   "id": "cis:CIS (Ateneo del Dato)|2026-10-06",
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "url": "https://x.com/Ateneodeldato/status/2110338816569401583",
+   "weight": 0.5,
+   "values": {
+    "PP": 28.3,
+    "PSOE": 28.6,
+    "VOX": 17.5,
+    "PODEMOS": 3,
+    "SALF": 2.4,
+    "FA": 6.77,
+    "FV": 1.13
+   },
+   "type": "cis",
+   "source": "cis",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": -0.5,
+     "pMayoria": -0.012,
+     "senado": 2
+    }
+   }
+  }
+ ]
+}

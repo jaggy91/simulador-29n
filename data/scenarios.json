@@ -1,11 +1,10 @@
 {
- "updated": "2026-10-27",
- "note": "Probabilidades a 27-oct, tras el cierre de candidaturas (26-oct). Pendiente de la proclamación en el BOE. El pipeline de noticias y el BOE las actualizan.",
+ "note": "Catálogo de mecanismos. El estado y la probabilidad de cada escenario NO se fijan aquí: los fijan las tarjetas de fuentes (data/news.json). Sin ninguna fuente activa, cada escenario está en 'sin datos' con probabilidad 0.",
  "scenarios": [
   {
    "id": "PODEMOS_SEPARADO",
    "label": "Podemos se presenta por separado",
-   "detail": "Podemos va solo en casi toda España; en Cataluña apoya a ERC y en la C. Valenciana va con Compromís (Front Valencià).",
+   "detail": "Podemos va solo en casi toda España; en Cataluña apoya a ERC, en la C. Valenciana va con Compromís (Front Valencià) y en Canarias con el Frente Amplio.",
    "status": "confirmado",
    "prob": 1,
    "kind": "base"
@@ -13,137 +12,67 @@
   {
    "id": "SENADO_PROGRESO",
    "label": "Senado de Progreso (PSOE + Frente Amplio)",
-   "detail": "Lista conjunta al Senado en 47 circunscripciones. Supuesto hasta la proclamación en el BOE: las 47 provincias de 4 senadores.",
-   "status": "confirmado",
-   "prob": 1,
+   "detail": "Lista única al Senado en 47 circunscripciones; no se aplica en Cataluña ni en Canarias (salvo La Gomera). Las 3 circunscripciones restantes sin coalición, pendientes de la proclamación en el BOE.",
+   "status": "sin datos",
+   "prob": 0,
    "kind": "senate-merge",
-   "params": {
-    "into": "PSOE",
-    "from": [
-     "FA",
-     "FV"
-    ],
-    "where": "provincial4",
-    "share": 1
-   }
+   "params": { "into": "PSOE", "from": ["FA", "FV"], "where": "all", "excludeCcaa": ["CAT", "CAN"], "includeIds": ["GOMERA"], "share": 1 }
   },
   {
    "id": "TERUEL_sin_FA_CHA",
    "label": "Teruel: FA y CHA no se presentan al Congreso",
-   "detail": "Su voto pasa al PSOE en la proporción indicada; el resto se abstiene.",
-   "status": "confirmado",
-   "prob": 1,
+   "detail": "Su voto pasa al PSOE en la proporción indicada; el resto se abstiene. En el Senado sí se presentan (dentro de Senado de Progreso).",
+   "status": "sin datos",
+   "prob": 0,
    "kind": "withdraw",
-   "params": {
-    "from": "FA",
-    "to": "PSOE",
-    "where": [
-     "44"
-    ],
-    "share": 0.7
-   }
+   "params": { "from": "FA", "to": "PSOE", "where": ["44"], "share": 0.7 }
   },
   {
    "id": "FA_retira_pequenas",
    "label": "El Frente Amplio se retira de provincias pequeñas",
-   "detail": "El Frente Amplio se presenta en 51 de las 52 circunscripciones (todas salvo Teruel). El FA y el PSOE negaron cualquier pacto. Se mantiene como \"qué pasaría si\".",
-   "status": "descartado",
+   "detail": "No presentaría listas al Congreso en provincias de 5 diputados o menos; sus candidatos irían en listas del PSOE.",
+   "status": "sin datos",
    "prob": 0,
    "kind": "withdraw",
-   "params": {
-    "from": "FA",
-    "to": "PSOE",
-    "where": "decena",
-    "share": 0.7
-   },
+   "params": { "from": "FA", "to": "PSOE", "where": "decena", "share": 0.7 },
    "options": {
     "where": {
      "decena": "Una decena larga: provincias de ≤5 escaños de Castilla y León, Extremadura y Castilla-La Mancha (15)",
      "small5": "Las 29 provincias de ≤5 escaños"
     }
-   },
-   "sources": [
-    "https://www.eldiario.es/politica/frente-amplio-cierra-puerta-pacto-psoe-retirar-listas-congreso-provincias-pequenas_1_13602712.html",
-    "https://mundiario.com/articulo/politica/voto-inquilino-frente-amplio-presenta-casi-toda-espana-bandera-vivienda/20261027031423449210.html"
-   ]
+   }
   },
   {
    "id": "PACTO_PP_VOX_SENADO",
    "label": "Pacto PP–Vox para el Senado",
-   "detail": "Anunciado el 26-oct. Vox se retira en 6 provincias (el PP incluye un independiente propuesto por Vox), el PP se retira en 3, y Vox presenta un solo candidato en 14 para que sus votantes den los otros dos votos al PP. Pendiente de la proclamación de candidaturas en el BOE.",
-   "status": "confirmado",
-   "prob": 1,
+   "detail": "Vox se retira en 6 provincias (el PP incluye un independiente propuesto por Vox), el PP se retira en 3, y Vox presenta un solo candidato en 14 para que sus votantes den los otros dos votos al PP.",
+   "status": "sin datos",
+   "prob": 0,
    "kind": "senate-pact",
    "params": {
     "share": 0.85,
-    "voxWithdraws": [
-     "35",
-     "38",
-     "11",
-     "46",
-     "12",
-     "07"
-    ],
-    "ppWithdraws": [
-     "20",
-     "17",
-     "43"
-    ],
-    "voxSingle": [
-     "41",
-     "21",
-     "33",
-     "06",
-     "01",
-     "31",
-     "10",
-     "22",
-     "50",
-     "03",
-     "18",
-     "16",
-     "36",
-     "23"
-    ]
-   },
-   "sources": [
-    "https://www.elespanol.com/espana/politica/20261026/pp-vox-llegan-acuerdo-listas-senado-abascal-retiran-provincias-feijoo/1003744434759_0.html",
-    "https://theobjective.com/espana/politica/2026-10-26/acuerdo-derecha-senado-vox-pp/",
-    "https://www.infobae.com/espana/agencias/2026/10/26/vox-y-pp-anuncian-un-acuerdo-para-sus-listas-al-senado-en-las-elecciones-del-29n/"
-   ]
+    "voxWithdraws": ["35", "38", "11", "46", "12", "07"],
+    "ppWithdraws": ["20", "17", "43"],
+    "voxSingle": ["41", "21", "33", "06", "01", "31", "10", "22", "50", "03", "18", "16", "36", "23"]
+   }
   },
   {
    "id": "VOX_retira_senado",
    "label": "Vox se retira del Senado en casi toda España (hipótesis del vídeo)",
-   "detail": "La hipótesis del vídeo (Vox fuera salvo en Almería y Murcia). Lo pactado el 26-oct es más limitado: ver PACTO_PP_VOX_SENADO. Se mantiene como \"qué pasaría si\".",
-   "status": "superado",
+   "detail": "Vox no se presentaría al Senado salvo en Almería y Murcia y pediría el voto para el PP.",
+   "status": "sin datos",
    "prob": 0,
    "kind": "senate-merge",
-   "params": {
-    "into": "PP",
-    "from": [
-     "VOX"
-    ],
-    "where": "all",
-    "except": [
-     "04",
-     "30"
-    ],
-    "share": 0.85
-   }
+   "params": { "into": "PP", "from": ["VOX"], "where": "all", "except": ["04", "30"], "share": 0.85 }
   },
   {
    "id": "VOTO_EXTERIOR",
    "label": "Votos exteriores extra al PSOE (Ley de Nietos)",
-   "detail": "Hipotético: solo para 'qué pasaría si'. El Supremo mantiene suspendido el voto de 163.020 nacionalizados; a 21-oct solo 91 de 31.390 expedientes revisados tenían certificado.",
+   "detail": "Hipotético: solo para 'qué pasaría si' y el espectro. Nunca entra en el resultado por defecto.",
    "status": "hipotético",
    "prob": 0,
    "kind": "extra-votes",
-   "params": {
-    "mode": "techo",
-    "party": "PSOE",
-    "budget": 14000
-   }
+   "params": { "mode": "techo", "party": "PSOE", "budget": 14000 }
   }
  ]
 }

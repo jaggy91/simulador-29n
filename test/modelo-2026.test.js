@@ -1,13 +1,15 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'node:fs';
 import { loadModelData } from '../scripts/lib/load-data.js';
+import { loadInputs } from '../scripts/lib/inputs.js';
 import { prepare, run, projectSenate } from '../src/engine/model.js';
 import { project, nationalShares } from '../src/engine/projection.js';
 import { simulate } from '../src/engine/montecarlo.js';
 
 const prep = prepare(loadModelData());
 const polls = JSON.parse(fs.readFileSync('data/polls.json', 'utf8')).sources;
-const scenarios = JSON.parse(fs.readFileSync('data/scenarios.json', 'utf8')).scenarios;
+// Escenarios resueltos por las tarjetas de fuentes activas por defecto (como la web).
+const scenarios = loadInputs().inputs().scenarios;
 const byId = Object.fromEntries(scenarios.map((s) => [s.id, s]));
 const total = (o) => Object.values(o).reduce((a, b) => a + b, 0);
 
@@ -83,7 +85,8 @@ describe('Monte Carlo', () => {
     const sep = simulate(prep, polls.media.values, only, { n: 400 });
     const coord = simulate(prep, polls.media.values, [...only, { ...byId.VOX_retira_senado, prob: 1 }], { n: 400 });
     expect(sep.prob.senado35Derecha).toBeLessThan(0.2);
-    expect(coord.prob.senado35Derecha).toBeGreaterThan(0.85);
+    // 95 % en el vídeo con su incertidumbre (VIDEO_NOISE); con la histórica por defecto, algo menos.
+    expect(coord.prob.senado35Derecha).toBeGreaterThan(0.8);
     // (hipótesis del vídeo: retirada casi total de Vox)
   });
 });

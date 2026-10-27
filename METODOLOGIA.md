@@ -4,6 +4,7 @@
 > **Corte de datos:** 27-oct-2026, 04:37 UTC.
 > - Última encuesta: trabajo de campo hasta el **25-oct-2026**.
 > - Escenarios: actualizados tras el cierre de candidaturas del 26-oct.
+> - Las cifras de §0 y §6 son de ese corte. Al incorporar las tarjetas de fuentes (Senado de Progreso sin Cataluña ni Canarias), varían en décimas: las vigentes están siempre en `data/state.json`.
 
 ---
 
@@ -61,7 +62,9 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 | `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos | `build-designados.js` | Suma 58 |
 | `data/cera.json` | Electores CERA por provincia y por país, 2023 y 2026 | **INE**, Oficina del Censo Electoral, tablas 3 y 8 | `build-cera.js` | Los países suman el total de cada provincia. 2.325.310 → 2.769.645 |
 | `data/polls.json` | Encuestas 2026 (168 filas) y medias | en.wikipedia, "Opinion polling for the 2026 Spanish general election" | `fetch-polls.js` | — |
-| `data/scenarios.json` | Escenarios, estado, probabilidad, parámetros y fuentes | Transcripción de referencia + prensa (enlazada en cada escenario) | manual | — |
+| `data/scenarios.json` | Catálogo de mecanismos de escenario (sin estados) | — | manual | — |
+| `data/news.json` | Tarjetas de noticias, análisis y datos oficiales, con enlaces y efectos | Prensa, BOE, INE y transcripción de referencia | manual (F4: automática) | Tests de resolución |
+| `data/sources.json` | Todas las tarjetas (incluidas las encuestas) con su estado por defecto y su efecto | Generado | `simulate.js` | Cada tarjeta con efecto tiene su impacto |
 
 **Incidencias detectadas en las fuentes**
 - **Wikipedia, Cáceres 2023:** los votos válidos tienen +40.000 de errata.
@@ -179,7 +182,7 @@ Resultado: las cuotas nacionales coinciden con la encuesta (test: error < 0,05 p
 | Escenario | Estado (27-oct) | Prob. | Mecanismo |
 |---|---|---|---|
 | Podemos separado | confirmado | 1 | Incluido en la reasignación (§3) |
-| Senado de Progreso (PSOE + FA + FV) | confirmado | 1 | Lista conjunta, que suma votos. **Supuesto:** las 47 provincias de 4 senadores, hasta que lo confirme el BOE |
+| Senado de Progreso (PSOE + FA + FV) | confirmado | 1 | Lista conjunta, que suma votos, en todas las circunscripciones salvo Cataluña y Canarias (excepto La Gomera). Son 50; las 3 que faltan para llegar a 47 quedan pendientes del BOE |
 | Teruel sin FA/CHA | confirmado | 1 | El FA no se presenta en Teruel; el 70 % de su voto pasa al PSOE y el resto se abstiene |
 | FA se retira de provincias pequeñas | **descartado** | 0 | Solo como "qué pasaría si": 15 o 29 provincias, trasvase ajustable |
 | **Pacto PP–Vox al Senado** (26-oct) | confirmado | 1 | Ver detalle abajo |
@@ -255,6 +258,42 @@ Dos modos:
 - `VIDEO_NOISE` (σ_b 1,5 · σ_p 0,75 · σ_prov 0,06): reproduce la dispersión implícita en el vídeo y sus cifras del Senado (P(3/5) ≈ 6 % con la media y 0 % con el CIS).
 - **`HISTORICAL_NOISE`** (por defecto desde el 27-oct): elegido con el backtest (§5.3). Es más honesto: con `VIDEO_NOISE`, el resultado real de 2023 quedaba en el borde del intervalo.
 
+### 4.10 Fuentes como tarjetas
+
+**Archivos:** `src/engine/evidence.js`, `data/news.json` y `data/sources.json`.
+
+**Objetivo:** el resultado no es una predicción, sino lo que dicen las fuentes de hoy. Por eso todo lo que lo alimenta es una tarjeta con origen, enlace y efecto:
+- **Noticias, análisis y datos oficiales** (`data/news.json`): modifican escenarios del catálogo (`data/scenarios.json`). El catálogo solo define los mecanismos; sin fuentes, cada escenario queda en "sin datos" con probabilidad 0.
+- **Encuestas:** cada una entra en la media con su peso. Desactivarla recalcula la media.
+- **Base del modelo y contexto** (BOE, INE, alianzas incluidas en la reasignación): son fijos y no se pueden desactivar.
+
+**Resolución:** cuando varias tarjetas tocan el mismo escenario, se aplican de menor a mayor prioridad y manda la última:
+1. rango del tipo: oficial > noticia > análisis;
+2. a igualdad de rango, la verificada sobre la sin verificar;
+3. a igualdad, la más reciente.
+
+**Por defecto:**
+- Están activas todas las tarjetas con efecto, salvo las superadas. Por ejemplo, el rumor del FA queda superado por la noticia de que el FA se presenta en 51 de 52 provincias.
+- Las superadas siguen visibles y se pueden reactivar. Si la que las supera sigue activa, no tienen efecto, y la web lo indica.
+
+**Efecto de cada tarjeta:** `scripts/simulate.js` compara el resultado con todas las tarjetas por defecto y el resultado cambiando solo esa (Monte Carlo de 1.000 iteraciones con la misma semilla en los dos cálculos). Se muestra el efecto sobre:
+- los escaños medios de la derecha en el Congreso;
+- la derecha del Senado (proyección central);
+- P(mayoría).
+
+Efectos a 27-oct, con la media de encuestas:
+- Pacto PP–Vox: Senado +18.
+- Senado de Progreso: Senado −4.
+- Cada encuesta: entre −0,5 y +0,8 escaños de la derecha.
+
+**En la web:**
+- Al cambiar tarjetas, el resultado se recalcula en el navegador con el mismo motor, y un aviso indica que no es el resultado por defecto.
+- "Qué pasaría si" aplica sus ajustes **sobre** las fuentes activas.
+
+**Captura automática (F4):** los titulares nuevos entrarán en `data/news.json` con `captured: 'auto'` y `verified: false`.
+- Estarán activos por defecto y llevarán la etiqueta "sin verificar".
+- Una fuente oficial o una noticia verificada posterior los supera.
+
 ### 4.9 Espectro izquierda ↔ derecha (laboratorio)
 
 `src/engine/spectrum.js` y `scripts/spectrum.js`, que genera `data/spectrum.json`.
@@ -296,7 +335,7 @@ Se usan probabilidades y no la proyección central porque, con D'Hondt, **la cen
 
 ## 5. Validación
 
-### 5.1 Reproducción exacta de 2023 (`npm test`, 35 tests en total)
+### 5.1 Reproducción exacta de 2023 (`npm test`, 44 tests en total)
 
 | # | Caso (votos de 2023) | Esperado (oficial o vídeo) | Modelo |
 |---|---|---|---|
@@ -423,7 +462,7 @@ Efecto sobre la proyección central (derecha en el Congreso / en el Senado):
 ```sh
 npm ci
 npm run data          # regenera la base (Wikipedia, BOE, INE)
-npm test              # 35 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro
+npm test              # 44 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
@@ -467,3 +506,5 @@ npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 | 27-oct | Formentera como circunscripción propia; Senado de 267 | BOE y Wikipedia ("Constituencies established in 2026") |
 | 27-oct | FA fuera de provincias pequeñas → descartado; pacto PP–Vox → confirmado | Cierre de candidaturas del 26-oct (prensa enlazada en `scenarios.json`) |
 | 27-oct | Ruido por defecto: `HISTORICAL_NOISE` en lugar de `VIDEO_NOISE` | Backtest 2019→2023: la calibración del vídeo era demasiado estrecha |
+| 27-oct | Fuentes como tarjetas: el estado de los escenarios lo fijan las tarjetas activas, no un valor manual | El resultado no es una predicción: debe verse de dónde sale cada efecto y poder quitarse |
+| 27-oct | Senado de Progreso sin Cataluña ni Canarias (salvo La Gomera); FA y Podemos juntos en Canarias | Infobae y Demócrata (17-oct). Sustituye al supuesto anterior de "las 47 provincias de 4 senadores" |

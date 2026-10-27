@@ -1,7 +1,7 @@
 // Tarjetas de escenario: estado, probabilidad, fuentes y, en modo "qué pasaría si",
 // controles para forzarlo (sí/no) y ajustar sus parámetros.
 const pct = (x) => `${Math.round(x * 100)} %`;
-const STATUS = { confirmado: 'Confirmado', rumor: 'Rumor', negociación: 'En negociación', hipotético: 'Hipotético', descartado: 'Descartado', superado: 'Superado' };
+const STATUS = { confirmado: 'Confirmado', rumor: 'Rumor', negociación: 'En negociación', hipotético: 'Hipotético', descartado: 'Descartado', superado: 'Superado', 'sin datos': 'Sin datos' };
 
 const SPLITS = {
   neutral: { label: 'Como vota cada provincia (neutral)', split: null },
@@ -67,7 +67,7 @@ function Params({ s, params, set }) {
   }
 }
 
-export function Scenarios({ scenarios, overrides, setOverride, whatIf }) {
+export function Scenarios({ scenarios, overrides, setOverride, whatIf, cardTitle = {} }) {
   return (
     <div className="scenarios">
       {scenarios.map((s) => {
@@ -82,9 +82,11 @@ export function Scenarios({ scenarios, overrides, setOverride, whatIf }) {
             </div>
             <p className="small ink-2">{s.detail}</p>
             <p className="small">
-              Probabilidad en la proyección oficial: <strong className="num">{pct(s.prob)}</strong>
+              Probabilidad según las fuentes activas: <strong className="num">{pct(s.prob)}</strong>
               {s.kind === 'base' && <span className="muted"> · incluido en la base de partidos</span>}
             </p>
+            {s.appliedBy && <p className="applied">Según: <a href="#fuentes">«{cardTitle[s.appliedBy]}»</a></p>}
+            {!s.appliedBy && s.kind !== 'base' && s.kind !== 'extra-votes' && <p className="applied">Ninguna fuente activa lo menciona.</p>}
             {s.sources?.length > 0 && (
               <p className="small muted">
                 Fuentes:{' '}
@@ -96,7 +98,7 @@ export function Scenarios({ scenarios, overrides, setOverride, whatIf }) {
             {whatIf && s.kind !== 'base' && (
               <>
                 <div className="seg" role="group" aria-label={`Forzar ${s.label}`}>
-                  {[['oficial', `Oficial (${pct(s.prob)})`], ['si', 'Sí'], ['no', 'No']].map(([k, l]) => (
+                  {[['oficial', `Según fuentes (${pct(s.prob)})`], ['si', 'Sí'], ['no', 'No']].map(([k, l]) => (
                     <button key={k} aria-pressed={mode === k} onClick={() => setOverride(s.id, { mode: k })}>{l}</button>
                   ))}
                 </div>

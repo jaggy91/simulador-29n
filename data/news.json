@@ -1,0 +1,172 @@
+{
+ "note": "Registro de fuentes no encuestas: noticias, análisis y datos oficiales. Cada tarjeta modifica escenarios del catálogo (data/scenarios.json). Si varias tocan el mismo escenario, manda la de mayor rango (oficial > noticia > análisis; verificada > sin verificar) y, a igualdad, la más reciente; las demás quedan como 'superadas'. La captura automática (F4) añade tarjetas con captured: 'auto' y verified: false.",
+ "cards": [
+  {
+   "id": "video-fa-pequenas",
+   "type": "analisis",
+   "date": "2026-10-25",
+   "title": "El PSOE habría ofrecido al Frente Amplio no presentar listas al Congreso en una decena larga de provincias pequeñas",
+   "detail": "Según algunos medios citados en el vídeo de referencia; el PSOE lo negaba.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": [{ "scenario": "FA_retira_pequenas", "prob": 0.15, "status": "rumor" }]
+  },
+  {
+   "id": "abascal-senado",
+   "type": "analisis",
+   "date": "2026-10-19",
+   "title": "Abascal ofrece un entendimiento para que la izquierda no se quede con el Senado",
+   "detail": "El vídeo de referencia plantea que Vox se retire del Senado en casi toda España. Génova no lo había confirmado.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": [{ "scenario": "VOX_retira_senado", "prob": 0.5, "status": "negociación" }]
+  },
+  {
+   "id": "senado-progreso",
+   "type": "noticia",
+   "date": "2026-10-17",
+   "title": "PSOE y Frente Amplio registran «Senado de Progreso»: lista única al Senado en 47 circunscripciones",
+   "detail": "Con IU, Movimiento Sumar, Más Madrid, Compromís, CHA, Batzarre, Més y Ceuta Ya. No se aplica en Cataluña ni en Canarias (salvo La Gomera).",
+   "outlet": "Infobae",
+   "sources": [
+    "https://www.infobae.com/espana/2026/10/17/acuerdo-historico-para-las-elecciones-del-29-n-en-el-senado-psoe-y-frente-amplio-se-presentaran-juntos-para-tratar-de-impedir-otra-mayoria-absoluta-del-pp/",
+    "https://www.democrata.es/politica/psoe-frente-amplio-y-aliados-de-izquierda-sellan-una-candidatura-conjunta-al-senado-en-47-circunscripciones/",
+    "https://www.cmmedia.es/noticias/espana/psoe-frente-amplio-acuerdan-presentarse-senado-lista-unica.amp.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [{ "scenario": "SENADO_PROGRESO", "prob": 1, "status": "confirmado" }]
+  },
+  {
+   "id": "teruel-cha-fa",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "CHA y el Frente Amplio no se presentan al Congreso por Teruel",
+   "detail": "Para «evitar la dispersión del voto». IU Aragón rechazó la decisión. En el Senado sí concurren.",
+   "outlet": "elDiario.es",
+   "sources": [
+    "https://www.eldiario.es/aragon/politica/cha-frente-amplio-renuncian-presentarse-congreso-teruel-evitar-dispersion-voto_1_13604566.html",
+    "https://www.publico.es/politica/cha-frente-amplio-aragon-anuncia-presentara-congreso-teruel.html",
+    "https://www.deia.eus/politica/2026/10/26/frente-amplio-concurrira-congreso-provincias-teruel-11689365.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [{ "scenario": "TERUEL_sin_FA_CHA", "prob": 1, "status": "confirmado" }]
+  },
+  {
+   "id": "fa-51-de-52",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "El Frente Amplio presenta listas al Congreso en 51 de las 52 circunscripciones: solo renuncia a Teruel",
+   "detail": "No hay retirada en las provincias pequeñas; el FA y el PSOE negaron cualquier pacto de listas.",
+   "outlet": "Deia / Europa Press",
+   "sources": [
+    "https://www.deia.eus/politica/2026/10/26/frente-amplio-concurrira-congreso-provincias-teruel-11689365.html",
+    "https://www.pressdigital.es/articulo/politica/2026-10-26/6066632-frente-amplio-tendra-candidatos-todas-circunscripciones-congreso-solo-renuncia-teruel",
+    "https://www.eldiario.es/politica/frente-amplio-cierra-puerta-pacto-psoe-retirar-listas-congreso-provincias-pequenas_1_13602712.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [{ "scenario": "FA_retira_pequenas", "prob": 0, "status": "descartado" }]
+  },
+  {
+   "id": "pacto-pp-vox-senado",
+   "type": "noticia",
+   "date": "2026-10-26",
+   "title": "PP y Vox pactan las listas del Senado: Vox se retira en seis provincias, el PP en tres y Vox va con candidato único en catorce",
+   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox. Objetivo declarado: frenar a «Senado de Progreso».",
+   "outlet": "El Español",
+   "sources": [
+    "https://www.elespanol.com/espana/politica/20261026/pp-vox-llegan-acuerdo-listas-senado-abascal-retiran-provincias-feijoo/1003744434759_0.html",
+    "https://theobjective.com/espana/politica/2026-10-26/acuerdo-derecha-senado-vox-pp/",
+    "https://www.infobae.com/espana/agencias/2026/10/26/vox-y-pp-anuncian-un-acuerdo-para-sus-listas-al-senado-en-las-elecciones-del-29n/",
+    "https://www.cope.es/actualidad/espana/noticias/pp-vox-llegan-acuerdo-presentar-candidaturas-senado-20261026_3462782.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [
+    { "scenario": "PACTO_PP_VOX_SENADO", "prob": 1, "status": "confirmado" },
+    { "scenario": "VOX_retira_senado", "prob": 0, "status": "superado" }
+   ]
+  },
+  {
+   "id": "supremo-ley-nietos",
+   "type": "contexto",
+   "date": "2026-10-23",
+   "title": "El Supremo mantiene suspendido el voto de 163.020 nacionalizados por la Ley de Nietos; solo 91 de 31.390 expedientes revisados tienen certificado",
+   "detail": "El voto exterior extra no entra en el resultado por defecto: solo en «qué pasaría si» y en el espectro.",
+   "outlet": "The Objective",
+   "sources": ["https://theobjective.com/espana/tribunales/2026-10-23/91-expedientes-ley-nietos-cumplen-requisitos-votar/"],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "base-compromis-fv",
+   "type": "base",
+   "date": "2026-10-16",
+   "title": "Compromís y Podemos concurren juntos en la Comunidad Valenciana (Compromís–Front Valencià)",
+   "detail": "Incluido en la base de partidos: FV recibe el voto de Podemos y el 85 % del resto de Sumar 2023 en la C. Valenciana.",
+   "outlet": "Cadena SER",
+   "sources": [
+    "https://cadenaser.com/comunitat-valenciana/2026/10/16/compromis-se-integrara-en-el-frente-de-izquierdas-bajo-el-nombre-compromis-front-valencia-radio-castellon/",
+    "https://www.lavanguardia.com/local/valencia/20261016/11660399/pacto-compromis-morados-quedan-1-alicante-siglas-aparecen.html"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "base-fa-podemos-canarias",
+   "type": "base",
+   "date": "2026-10-17",
+   "title": "Frente Amplio y Podemos concurren juntos al Congreso en Canarias",
+   "detail": "Incluido en la base de partidos: en Canarias todo el voto de Sumar 2023 pasa al Frente Amplio.",
+   "outlet": "Infobae",
+   "sources": ["https://www.infobae.com/espana/2026/10/17/acuerdo-historico-para-las-elecciones-del-29-n-en-el-senado-psoe-y-frente-amplio-se-presentaran-juntos-para-tratar-de-impedir-otra-mayoria-absoluta-del-pp/"],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "base-podemos-erc",
+   "type": "base",
+   "date": "2026-10-25",
+   "title": "Podemos no se presenta en Cataluña y apoya a ERC",
+   "detail": "Incluido en la base de partidos: en Cataluña la parte de Podemos del voto de Sumar 2023 pasa a ERC.",
+   "outlet": "Vídeo de referencia (transcripción)",
+   "sources": [],
+   "verified": false,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "boe-convocatoria",
+   "type": "oficial",
+   "date": "2026-10-06",
+   "title": "BOE: Real Decreto 806/2026 de convocatoria — escaños por provincia y Senado con Formentera",
+   "detail": "Madrid pasa de 37 a 38 diputados y Cádiz de 9 a 8. Formentera elige su propio senador (209 electos).",
+   "outlet": "BOE",
+   "sources": ["https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742"],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "ine-cera",
+   "type": "oficial",
+   "date": "2026-10-09",
+   "title": "INE: censo de españoles residentes en el extranjero para el 29-N (2.769.645 electores)",
+   "detail": "Base del modo realista del voto exterior: crecimiento por provincia y país desde 2023.",
+   "outlet": "INE",
+   "sources": ["https://ine.es/dyngs/CEL/index.htm?cid=1703"],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  }
+ ]
+}
