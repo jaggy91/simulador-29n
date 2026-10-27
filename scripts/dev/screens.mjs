@@ -59,6 +59,7 @@ await shot('espectro-izq5', {
     await page.evaluate(() => [...document.querySelectorAll('header nav button')].find((b) => b.textContent === 'Espectro').click());
     await page.waitForSelector('.spec-track');
     await page.evaluate(() => document.querySelectorAll('.spec-stop')[0].click());
+    await new Promise((r) => setTimeout(r, 700)); // fin de la transición del tinte
     console.log('  espectro nivel −5: fondo', await page.evaluate(() => getComputedStyle(document.body).backgroundColor));
   },
 });
