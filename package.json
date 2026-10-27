@@ -17,7 +17,8 @@
     "data:designados": "node scripts/build-designados.js",
     "data:cera": "node scripts/build-cera.js",
     "polls": "node scripts/fetch-polls.js",
-    "simulate": "node scripts/simulate.js"
+    "simulate": "node scripts/simulate.js",
+    "backtest": "node scripts/backtest-2023.js"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

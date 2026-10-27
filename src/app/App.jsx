@@ -99,7 +99,7 @@ export default function App() {
         <div className="wrap">
           <div>
             <h1>Simulador 29-N</h1>
-            <p className="small muted">Actualizado {fmtDate(d.state.updated)} · última encuesta {new Date(d.state.latestPoll).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })}</p>
+            <p className="small muted">Actualizado {fmtDate(d.state.updated)} · última encuesta {new Date(d.state.latestPoll).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' })}</p>
           </div>
           <div className="filters">
             <div className="seg" role="group" aria-label="Fuente de la encuesta">

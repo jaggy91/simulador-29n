@@ -51,5 +51,32 @@
    "VOX_retira_senado": 0,
    "VOTO_EXTERIOR": 0
   }
+ },
+ {
+  "t": "2026-10-27T04:37:46.774Z",
+  "latestPoll": "2026-10-25",
+  "media": {
+   "derecha": 198.5,
+   "investidura": 141.9,
+   "pMayoriaDerecha": 0.9768,
+   "pJunts": 0.0076,
+   "pSenado35": 0.356
+  },
+  "cis": {
+   "derecha": 181.5,
+   "investidura": 157.4,
+   "pMayoriaDerecha": 0.6984,
+   "pJunts": 0.0792,
+   "pSenado35": 0.0404
+  },
+  "scenarios": {
+   "PODEMOS_SEPARADO": 1,
+   "SENADO_PROGRESO": 1,
+   "TERUEL_sin_FA_CHA": 1,
+   "FA_retira_pequenas": 0,
+   "PACTO_PP_VOX_SENADO": 1,
+   "VOX_retira_senado": 0,
+   "VOTO_EXTERIOR": 0
+  }
  }
 ]

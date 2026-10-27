@@ -9,13 +9,16 @@ import { BLOCS, MAJORITY } from './blocs.js';
 // σ en puntos porcentuales. sigmaBloc: error común que traslada voto entre derecha e
 // izquierda (el error típico de las encuestas). sigmaParty: error propio de cada
 // partido, escalado por √(cuota/10). sigmaProv: error relativo provincia × partido.
-// Calibrado para una dispersión de ±9 escaños (1σ) en la derecha, la que implica el
-// vídeo de referencia (CIS: ~188 escaños y 92 % de mayoría). Con esa dispersión el
-// modelo reproduce sus cifras del Senado (media de encuestas: P(3/5) ≈ 6 %; CIS: 0 %).
-// El error real de las encuestas en 2023 (≈2,5 pp en el bloque de derecha) sugiere
-// algo más de incertidumbre: ver HISTORICAL_NOISE.
-export const DEFAULT_NOISE = { sigmaBloc: 1.5, sigmaParty: 0.75, sigmaProv: 0.06 };
+// VIDEO_NOISE: dispersión de ±9 escaños (1σ) en la derecha, la que implica el vídeo de
+// referencia; reproduce sus cifras del Senado (media: P(3/5) ≈ 6 %; CIS: 0 %).
+// HISTORICAL_NOISE (por defecto): validado con el backtest 2019→2023
+// (scripts/backtest-2023.js): con él, el resultado real de la derecha en 2023 cae
+// dentro del intervalo del 90 % a 33 días, en la última semana y con encuesta
+// perfecta; con VIDEO_NOISE queda en el borde. Ninguno cubre el fallo de las
+// encuestas con el PSOE a 33 días (−5,3 pp), un evento de cola.
+export const VIDEO_NOISE = { sigmaBloc: 1.5, sigmaParty: 0.75, sigmaProv: 0.06 };
 export const HISTORICAL_NOISE = { sigmaBloc: 2.0, sigmaParty: 1.0, sigmaProv: 0.08 };
+export const DEFAULT_NOISE = HISTORICAL_NOISE;
 
 export function mulberry32(seed) {
   let a = seed >>> 0;
@@ -68,6 +71,7 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
 
   const provNoise = new Float64Array(noiseSize(prep.congressBase));
   const seatSum = {};
+  const partyHist = {};
   const seatHist = { derecha: [], investidura: [], senadoDerecha: [] };
   let rightMaj = 0, juntsKey = 0, senateMaj = 0, senate35 = 0;
   const activeCount = Object.fromEntries(fixed.map((s) => [s.id, 0]));
@@ -82,6 +86,7 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
     // base limpia, antes de las retiradas de listas, que son solo del Congreso.
     const s = projectSenate(prep, projected, active);
     for (const [k, v] of Object.entries(c.national)) seatSum[k] = (seatSum[k] || 0) + v;
+    for (const k of Object.keys(seatSum)) (partyHist[k] ||= new Array(i).fill(0)).push(c.national[k] || 0);
     seatHist.derecha.push(c.blocs.derecha);
     seatHist.investidura.push(c.blocs.investidura);
     seatHist.senadoDerecha.push(s.right);
@@ -95,6 +100,7 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
   return {
     n,
     seats: mean,
+    seatIntervals: Object.fromEntries(Object.entries(partyHist).filter(([k]) => seatSum[k] / n >= 0.5).map(([k, xs]) => [k, summary(xs)])),
     blocs: { derecha: summary(seatHist.derecha), investidura: summary(seatHist.investidura), senadoDerecha: summary(seatHist.senadoDerecha) },
     prob: { mayoriaDerecha: rightMaj / n, juntsDecisivo: juntsKey / n, senadoMayoriaDerecha: senateMaj / n, senado35Derecha: senate35 / n },
     scenarioFrequency: Object.fromEntries(Object.entries(activeCount).map(([k, v]) => [k, v / n])),

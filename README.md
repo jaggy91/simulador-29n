@@ -2,7 +2,7 @@
 
 Simulador del reparto de escaños (Congreso y Senado) de las elecciones generales del 29 de noviembre de 2026. Proyecta las encuestas provincia a provincia, aplica los escenarios de candidaturas (retiradas, listas conjuntas, pacto PP–Vox al Senado, voto exterior) y calcula probabilidades con Monte Carlo. Se actualiza solo cada hora con GitHub Actions y se publica en GitHub Pages.
 
-Plan y estado: [plan-v2.md](plan-v2.md).
+Plan y estado: [plan-v2.md](plan-v2.md). **Metodología auditable, validación y margen de error: [METODOLOGIA.md](METODOLOGIA.md).**
 
 ## Uso
 
@@ -13,6 +13,7 @@ npm test           # 28 tests: reproduce 2023 y las simulaciones del vídeo de r
 npm run polls      # descarga y promedia encuestas (Wikipedia)
 npm run simulate   # proyección + Monte Carlo → data/state.json y data/history.json
 npm run data       # regenera los datos base (2023, europeas, andaluzas, BOE, designados, INE)
+npm run backtest   # aplica el método a 2023 desde la base de 2019 → data/backtest-2023.json
 npm run build      # web estática en dist/
 ```
 
