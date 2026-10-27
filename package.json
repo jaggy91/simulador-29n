@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "data": "npm run data:congreso && npm run data:senado && npm run data:europeas && npm run data:andaluzas && npm run data:seats && npm run data:designados && npm run data:cera",
     "data:congreso": "node scripts/build-base.js",
     "data:senado": "node scripts/build-senate.js",
@@ -17,7 +20,14 @@
     "simulate": "node scripts/simulate.js"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "puppeteer-core": "^23.11.1",
+    "vite": "^5.4.11",
     "vitest": "^2.1.9",
     "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
