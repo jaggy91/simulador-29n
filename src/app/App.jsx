@@ -8,6 +8,7 @@ import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
 import { Spectrum, tippingSummary } from './components/Spectrum.jsx';
 import { Sources } from './components/Sources.jsx';
+import { openNotice } from './components/Notice.jsx';
 import { modelInputs } from '../engine/evidence.js';
 import { swingPoll } from '../engine/spectrum.js';
 
@@ -188,6 +189,7 @@ export default function App() {
           </section>
           <footer>
             <p>Los niveles se recalculan con cada actualización de las encuestas. Detalle de cada escenario y del cálculo en la metodología (§4.9).</p>
+            <p><button className="linkish" onClick={openNotice}>Aviso: objetivo, método y fuentes</button></p>
           </footer>
         </main>
       ) : (
@@ -327,6 +329,7 @@ export default function App() {
 
         <footer>
           <p>Simulador 29-N · código y datos abiertos. Las probabilidades se recalculan cada vez que cambian las encuestas o los escenarios.</p>
+          <p><button className="linkish" onClick={openNotice}>Aviso: objetivo, método y fuentes</button></p>
         </footer>
       </main>
       )}

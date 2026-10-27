@@ -13,13 +13,15 @@ const CANDIDATES = [
 const executablePath = CANDIDATES.find((p) => fs.existsSync(p));
 const browser = await puppeteer.launch({ executablePath, headless: true, args: ['--no-first-run'] });
 
-async function shot(name, { width, height, scheme, action }) {
+async function shot(name, { width, height, scheme, action, notice = false }) {
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
   await page.setViewport({ width, height, deviceScaleFactor: 1 });
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: scheme }]);
+  // Aviso inicial ya aceptado, salvo en las capturas del propio aviso.
+  if (!notice) await page.evaluateOnNewDocument(() => localStorage.setItem('aviso', '1'));
   await page.goto(url, { waitUntil: 'networkidle0' });
   await page.waitForSelector('header nav');
   if (action) await action(page);
@@ -31,11 +33,30 @@ async function shot(name, { width, height, scheme, action }) {
       .map((el) => `${el.tagName.toLowerCase()}.${el.className} → ${Math.round(el.getBoundingClientRect().right)}px`);
     return { scrollWidth: document.documentElement.scrollWidth, clientWidth: W, bad };
   });
-  await page.screenshot({ path: `${out}/${name}.png`, fullPage: true });
+  await page.screenshot({ path: `${out}/${name}.png`, fullPage: !notice });
   console.log(name, JSON.stringify(overflow), errors.length ? `ERRORES: ${errors.join(' | ')}` : 'sin errores');
   await page.close();
 }
 
+// Aviso: abierto al entrar, botón desactivado hasta marcar la casilla; al aceptar se
+// cierra y no vuelve a aparecer al recargar.
+const noticeState = (page) => page.evaluate(() => ({
+  open: !!document.querySelector('dialog.notice')?.open,
+  disabled: document.querySelector('.notice-accept .btn')?.disabled,
+}));
+await shot('aviso-desk', { width: 1280, height: 900, scheme: 'light', notice: true,
+  action: async (page) => console.log('  aviso al entrar:', JSON.stringify(await noticeState(page))) });
+await shot('aviso-dark-mobile', { width: 390, height: 844, scheme: 'dark', notice: true,
+  action: async (page) => {
+    await page.click('.notice-accept input');
+    console.log('  tras marcar la casilla:', JSON.stringify(await noticeState(page)));
+    await page.screenshot({ path: `${out}/aviso-dark-mobile-check.png` });
+    await page.click('.notice-accept .btn');
+    console.log('  tras aceptar:', JSON.stringify(await noticeState(page)));
+    await page.reload({ waitUntil: 'networkidle0' });
+    await page.waitForSelector('header nav');
+    console.log('  tras recargar:', JSON.stringify(await noticeState(page)));
+  } });
 await shot('desk-dark', { width: 1280, height: 900, scheme: 'dark' });
 await shot('desk-light', { width: 1280, height: 900, scheme: 'light' });
 await shot('mobile', { width: 390, height: 844, scheme: 'light' });
