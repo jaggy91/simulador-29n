@@ -1,0 +1,413 @@
+{
+ "method": "D'Hondt sobre escaños del parlamento autonómico vigente",
+ "ccaa": [
+  {
+   "ccaa": "Andalucía",
+   "count": 9,
+   "election": "2026 Andalusian regional election",
+   "parliament": {
+    "PP": 53,
+    "PSOE": 28,
+    "VOX": 15,
+    "AA": 8,
+    "FA": 5
+   },
+   "designated": {
+    "PP": 5,
+    "PSOE": 3,
+    "VOX": 1
+   },
+   "source": "estimación D'Hondt",
+   "dhondt": {
+    "PP": 5,
+    "PSOE": 3,
+    "VOX": 1
+   },
+   "dhondtMatchesReal": null
+  },
+  {
+   "ccaa": "Aragón",
+   "count": 2,
+   "election": "2026 Aragonese regional election",
+   "parliament": {
+    "PP": 26,
+    "PSOE": 18,
+    "VOX": 14,
+    "x:CHA": 6,
+    "EXISTE": 2,
+    "x:IU–MS": 1
+   },
+   "designated": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "source": "estimación D'Hondt",
+   "dhondt": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": null
+  },
+  {
+   "ccaa": "Asturias",
+   "count": 2,
+   "election": "2023 Asturian regional election",
+   "parliament": {
+    "PSOE": 19,
+    "PP": 17,
+    "VOX": 4,
+    "x:IU–MP–IAS": 3,
+    "x:Podemos Asturies": 1,
+    "x:Foro": 1
+   },
+   "designated": {
+    "PSOE": 1,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PSOE": 1,
+    "PP": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Baleares",
+   "count": 2,
+   "election": "2023 Balearic regional election",
+   "parliament": {
+    "PP": 25,
+    "PSOE": 18,
+    "VOX": 8,
+    "x:Més": 4,
+    "x:United We Can (EUIB–Podemos)": 1,
+    "x:MxMe": 2,
+    "x:Sa Unió": 1
+   },
+   "designated": {
+    "PSOE": 1,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "País Vasco",
+   "count": 3,
+   "election": "2024 Basque regional election",
+   "parliament": {
+    "PNV": 27,
+    "BILDU": 27,
+    "PSOE": 12,
+    "PP": 7,
+    "SUMAR": 1,
+    "VOX": 1
+   },
+   "designated": {
+    "BILDU": 1,
+    "PSOE": 1,
+    "PNV": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PNV": 2,
+    "BILDU": 1
+   },
+   "dhondtMatchesReal": false
+  },
+  {
+   "ccaa": "Canarias",
+   "count": 3,
+   "election": "2023 Canarian regional election",
+   "parliament": {
+    "PSOE": 295969,
+    "CC": 175198,
+    "PP": 183761,
+    "NC": 65028,
+    "VOX": 71887,
+    "x:United Yes We Can (Podemos–IUC–SSP)": 29556,
+    "x:DVC": 30392,
+    "x:UxGC": 13760,
+    "PACMA": 11803,
+    "x:CS": 3548,
+    "x:AMF": 3108,
+    "x:PNC": 2417,
+    "x:Reunir": 1998,
+    "x:ANC–UP–PCPC": 2156,
+    "x:+C": 2354
+   },
+   "designated": {
+    "PSOE": 1,
+    "CC": 1,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PSOE": 1,
+    "PP": 1,
+    "CC": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Cantabria",
+   "count": 1,
+   "election": "2023 Cantabrian regional election",
+   "parliament": {
+    "PP": 15,
+    "x:PRC": 8,
+    "PSOE": 8,
+    "VOX": 4
+   },
+   "designated": {
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Castilla y León",
+   "count": 3,
+   "election": "2026 Castilian-Leonese regional election",
+   "parliament": {
+    "PP": 33,
+    "PSOE": 30,
+    "VOX": 14,
+    "UPL": 3,
+    "XAV": 1,
+    "SY": 1
+   },
+   "designated": {
+    "PP": 2,
+    "PSOE": 1
+   },
+   "source": "estimación D'Hondt",
+   "dhondt": {
+    "PP": 2,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": null
+  },
+  {
+   "ccaa": "Castilla-La Mancha",
+   "count": 3,
+   "election": "2023 Castilian-Manchegan regional election",
+   "parliament": {
+    "PSOE": 17,
+    "PP": 12,
+    "VOX": 4
+   },
+   "designated": {
+    "PSOE": 2,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PSOE": 2,
+    "PP": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Cataluña",
+   "count": 8,
+   "election": "2024 Catalan regional election",
+   "parliament": {
+    "PSOE": 42,
+    "JUNTS": 35,
+    "ERC": 20,
+    "PP": 15,
+    "VOX": 11,
+    "FA": 6,
+    "CUP": 4,
+    "AC": 2
+   },
+   "designated": {
+    "ERC": 1,
+    "PSOE": 3,
+    "JUNTS": 3,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PSOE": 3,
+    "JUNTS": 3,
+    "ERC": 1,
+    "PP": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Extremadura",
+   "count": 2,
+   "election": "2025 Extremaduran regional election",
+   "parliament": {
+    "PP": 29,
+    "PSOE": 18,
+    "VOX": 11,
+    "x:United for Extremadura We Can–United Left–Green Alliance (Podemos–IU–AV)": 7
+   },
+   "designated": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "source": "estimación D'Hondt",
+   "dhondt": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": null
+  },
+  {
+   "ccaa": "Galicia",
+   "count": 3,
+   "election": "2024 Galician regional election",
+   "parliament": {
+    "PP": 40,
+    "BNG": 25,
+    "PSOE": 9,
+    "x:DO": 1
+   },
+   "designated": {
+    "BNG": 1,
+    "PP": 2
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 2,
+    "BNG": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "La Rioja",
+   "count": 1,
+   "election": "2023 Riojan regional election",
+   "parliament": {
+    "PP": 17,
+    "PSOE": 12,
+    "VOX": 2,
+    "x:We Can–United Left (Podemos–IU)": 2
+   },
+   "designated": {
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Madrid",
+   "count": 7,
+   "election": "2023 Madrilenian regional election",
+   "parliament": {
+    "PP": 70,
+    "FA": 27,
+    "PSOE": 27,
+    "VOX": 11
+   },
+   "designated": {
+    "FA": 1,
+    "PSOE": 1,
+    "PP": 5
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 5,
+    "FA": 1,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Murcia",
+   "count": 2,
+   "election": "2023 Murcian regional election",
+   "parliament": {
+    "PP": 21,
+    "PSOE": 13,
+    "VOX": 9,
+    "x:We Can–United Left Greens–Green Alliance (Podemos–IU–AV)": 2
+   },
+   "designated": {
+    "PSOE": 1,
+    "PP": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 1,
+    "PSOE": 1
+   },
+   "dhondtMatchesReal": true
+  },
+  {
+   "ccaa": "Navarra",
+   "count": 1,
+   "election": "2023 Navarrese regional election",
+   "parliament": {
+    "UPN": 15,
+    "PSOE": 11,
+    "BILDU": 9,
+    "GBAI": 7,
+    "PP": 3,
+    "x:Contigo/Zurekin": 3,
+    "VOX": 2
+   },
+   "designated": {
+    "GBAI": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "UPN": 1
+   },
+   "dhondtMatchesReal": false
+  },
+  {
+   "ccaa": "Comunidad Valenciana",
+   "count": 6,
+   "election": "2023 Valencian regional election",
+   "parliament": {
+    "PP": 40,
+    "PSOE": 31,
+    "FV": 15,
+    "VOX": 13
+   },
+   "designated": {
+    "FV": 1,
+    "PSOE": 2,
+    "PP": 2,
+    "VOX": 1
+   },
+   "source": "real",
+   "dhondt": {
+    "PP": 3,
+    "PSOE": 2,
+    "FV": 1
+   },
+   "dhondtMatchesReal": false
+  }
+ ],
+ "total": {
+  "PP": 26,
+  "PSOE": 19,
+  "VOX": 2,
+  "BILDU": 1,
+  "PNV": 1,
+  "CC": 1,
+  "ERC": 1,
+  "JUNTS": 3,
+  "BNG": 1,
+  "FA": 1,
+  "GBAI": 1,
+  "FV": 1
+ }
+}

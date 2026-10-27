@@ -1,0 +1,23 @@
+{
+  "name": "simulador-29n",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "data": "npm run data:congreso && npm run data:senado && npm run data:europeas && npm run data:andaluzas && npm run data:seats && npm run data:designados && npm run data:cera",
+    "data:congreso": "node scripts/build-base.js",
+    "data:senado": "node scripts/build-senate.js",
+    "data:europeas": "node scripts/build-europeas.js",
+    "data:seats": "node scripts/build-seats.js",
+    "test": "vitest run",
+    "data:andaluzas": "node scripts/build-andaluzas.js",
+    "data:designados": "node scripts/build-designados.js",
+    "data:cera": "node scripts/build-cera.js",
+    "polls": "node scripts/fetch-polls.js",
+    "simulate": "node scripts/simulate.js"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.9",
+    "xlsx": "^0.18.5"
+  }
+}

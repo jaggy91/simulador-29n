@@ -1,0 +1,3237 @@
+{
+ "source": "en.wikipedia (Senate constituency articles)",
+ "constituencies": [
+  {
+   "id": "01",
+   "name": "Álava",
+   "prov": "01",
+   "ccaa": "PV",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 43585,
+    "BILDU": 33708,
+    "PNV": 29540,
+    "PP": 29045,
+    "SUMAR": 17392,
+    "VOX": 5635,
+    "x:EB": 927,
+    "PACMA": 590,
+    "x:Recortes Cero": 199,
+    "x:PCTE/ELAK": 179,
+    "x:PUM+J": 103
+   },
+   "elected": {
+    "PSOE": 3,
+    "BILDU": 1
+   }
+  },
+  {
+   "id": "02",
+   "name": "Albacete",
+   "prov": "02",
+   "ccaa": "CLM",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 89390,
+    "PSOE": 74911,
+    "VOX": 29687,
+    "SUMAR": 14478,
+    "PACMA": 966,
+    "x:PUM+J": 373,
+    "x:Recortes Cero": 247
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "03",
+   "name": "Alicante",
+   "prov": "03",
+   "ccaa": "VAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 329096,
+    "PSOE": 284285,
+    "VOX": 117058,
+    "SUMAR": 98514,
+    "PACMA": 10305,
+    "x:CJ": 1516,
+    "x:Recortes Cero": 1027
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "04",
+   "name": "Almería",
+   "prov": "04",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 126619,
+    "PSOE": 89339,
+    "VOX": 62749,
+    "SUMAR": 19775,
+    "PACMA": 2591,
+    "x:ALM": 883,
+    "x:PUM+J": 328,
+    "x:Recortes Cero": 302,
+    "x:LB": 185
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "05",
+   "name": "Ávila",
+   "prov": "05",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 41713,
+    "PSOE": 24969,
+    "VOX": 11127,
+    "XAV": 9384,
+    "SUMAR": 4792,
+    "PACMA": 232,
+    "x:FE de las JONS": 111,
+    "x:PCTE": 89,
+    "x:PUM+J": 84,
+    "x:Recortes Cero": 44
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "06",
+   "name": "Badajoz",
+   "prov": "06",
+   "ccaa": "EXT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 149421,
+    "PP": 146630,
+    "VOX": 42724,
+    "SUMAR": 24078,
+    "x:BQEx": 5503,
+    "PACMA": 1569,
+    "x:PUM+J": 410,
+    "x:Recortes Cero": 201
+   },
+   "elected": {
+    "PSOE": 2,
+    "PP": 2
+   }
+  },
+  {
+   "id": "08",
+   "name": "Barcelona",
+   "prov": "08",
+   "ccaa": "CAT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 819169,
+    "ERC": 444614,
+    "PP": 352480,
+    "SUMAR": 339663,
+    "JUNTS": 271652,
+    "VOX": 154803,
+    "PACMA": 46655,
+    "x:PDeCAT–E–CiU": 12244,
+    "x:PCTC": 6246,
+    "x:Recortes Cero": 5884
+   },
+   "elected": {
+    "PSOE": 3,
+    "ERC": 1
+   }
+  },
+  {
+   "id": "09",
+   "name": "Burgos",
+   "prov": "09",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 80050,
+    "PSOE": 66926,
+    "VOX": 21078,
+    "SUMAR": 16110,
+    "x:EV–PCAS–TC": 2298,
+    "x:VB": 1837,
+    "PACMA": 783,
+    "x:PUM+J": 413,
+    "x:PCTE": 324,
+    "x:Recortes Cero": 252
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "10",
+   "name": "Cáceres",
+   "prov": "10",
+   "ccaa": "EXT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 88338,
+    "PSOE": 87958,
+    "VOX": 25903,
+    "SUMAR": 15123,
+    "x:BQEx": 2758,
+    "x:Somos Cc": 1591,
+    "PACMA": 631,
+    "x:PUM+J": 203,
+    "x:Recortes Cero": 127
+   },
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "prov": "11",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 216095,
+    "PSOE": 198547,
+    "VOX": 78212,
+    "SUMAR": 73466,
+    "AA": 11014,
+    "PACMA": 7788,
+    "x:PUM+J": 731,
+    "x:CJ": 464,
+    "x:Recortes Cero": 371
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "12",
+   "name": "Castellón",
+   "prov": "12",
+   "ccaa": "VAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 108907,
+    "PSOE": 101030,
+    "VOX": 38758,
+    "SUMAR": 36864,
+    "PACMA": 2862,
+    "x:Recortes Cero": 562,
+    "x:FE de las JONS": 245
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "13",
+   "name": "Ciudad Real",
+   "prov": "13",
+   "ccaa": "CLM",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 116011,
+    "PSOE": 98524,
+    "VOX": 36117,
+    "SUMAR": 15802,
+    "PACMA": 1520,
+    "x:PUM+J": 321,
+    "x:Recortes Cero": 305
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "prov": "14",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 170527,
+    "PSOE": 141645,
+    "SUMAR": 53217,
+    "VOX": 49018,
+    "PACMA": 3673,
+    "x:EB": 1447,
+    "x:PUM+J": 427,
+    "x:PCTE": 419,
+    "x:Recortes Cero": 315
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "15",
+   "name": "A Coruña",
+   "prov": "15",
+   "ccaa": "GAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 276283,
+    "PSOE": 180205,
+    "BNG": 77082,
+    "SUMAR": 65879,
+    "VOX": 26086,
+    "PACMA": 5241,
+    "x:Recortes Cero": 613
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "16",
+   "name": "Cuenca",
+   "prov": "16",
+   "ccaa": "CLM",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 45800,
+    "PSOE": 41143,
+    "VOX": 13963,
+    "SUMAR": 6522,
+    "PACMA": 330,
+    "x:EB": 274,
+    "x:PUM+J": 113,
+    "x:PCTE": 101,
+    "x:Recortes Cero": 80
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "17",
+   "name": "Girona",
+   "prov": "17",
+   "ccaa": "CAT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 78181,
+    "JUNTS": 67470,
+    "ERC": 61960,
+    "PP": 29421,
+    "SUMAR": 28241,
+    "VOX": 16993,
+    "PACMA": 6713,
+    "x:PDeCAT–E–CiU": 1825,
+    "x:PCTC": 866,
+    "x:Recortes Cero": 381
+   },
+   "elected": {
+    "PSOE": 3,
+    "JUNTS": 1
+   }
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "prov": "18",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 185200,
+    "PSOE": 163515,
+    "VOX": 64710,
+    "SUMAR": 49077,
+    "PACMA": 3634,
+    "x:JxG": 2835,
+    "x:PUM+J": 722,
+    "x:PCTE": 569,
+    "x:Recortes Cero": 478,
+    "x:CJ": 319
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "19",
+   "name": "Guadalajara",
+   "prov": "19",
+   "ccaa": "CLM",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 51606,
+    "PSOE": 45365,
+    "VOX": 22882,
+    "SUMAR": 11790,
+    "PACMA": 754,
+    "x:PUM+J": 245,
+    "x:PCTE": 202,
+    "x:Recortes Cero": 173,
+    "x:FE de las JONS": 131
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "20",
+   "name": "Gipuzkoa",
+   "prov": "20",
+   "ccaa": "PV",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "BILDU": 116181,
+    "PNV": 87512,
+    "PSOE": 81919,
+    "SUMAR": 32555,
+    "PP": 31293,
+    "VOX": 6406,
+    "PACMA": 2016,
+    "x:EB": 1347,
+    "x:PCTE/ELAK": 263,
+    "x:Recortes Cero": 205,
+    "x:PUM+J": 107
+   },
+   "elected": {
+    "BILDU": 3,
+    "PNV": 1
+   }
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "prov": "21",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 90300,
+    "PSOE": 88328,
+    "VOX": 29788,
+    "SUMAR": 23380,
+    "x:XH": 3256,
+    "PACMA": 2277,
+    "x:PUM+J": 258,
+    "x:Recortes Cero": 209
+   },
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "22",
+   "name": "Huesca",
+   "prov": "22",
+   "ccaa": "ARA",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 44857,
+    "PSOE": 39371,
+    "VOX": 11823,
+    "SUMAR": 11656,
+    "EXISTE": 2084,
+    "x:PAR": 1145,
+    "x:EB": 818,
+    "PACMA": 439,
+    "x:FIA": 188,
+    "x:PCTE": 167,
+    "x:PUM+J": 109,
+    "x:Recortes Cero": 86
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "prov": "23",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 137713,
+    "PSOE": 130564,
+    "VOX": 42933,
+    "SUMAR": 26805,
+    "x:JM+": 4781,
+    "PACMA": 1392,
+    "x:PUM+J": 501,
+    "x:Recortes Cero": 412
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "24",
+   "name": "León",
+   "prov": "24",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 99357,
+    "PSOE": 87723,
+    "UPL": 29326,
+    "VOX": 26552,
+    "SUMAR": 16035,
+    "PACMA": 1241,
+    "x:España Vaciada": 802,
+    "x:PREPAL": 560,
+    "x:PCTE": 291,
+    "x:PUM+J": 162,
+    "x:Recortes Cero": 94
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "25",
+   "name": "Lleida",
+   "prov": "25",
+   "ccaa": "CAT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 46195,
+    "ERC": 39485,
+    "JUNTS": 34626,
+    "PP": 22514,
+    "SUMAR": 11814,
+    "VOX": 9893,
+    "PACMA": 2400,
+    "x:PDeCAT–E–CiU": 1014,
+    "x:EB": 934,
+    "x:PCTC": 370,
+    "x:Recortes Cero": 158
+   },
+   "elected": {
+    "PSOE": 3,
+    "ERC": 1
+   }
+  },
+  {
+   "id": "26",
+   "name": "La Rioja",
+   "prov": "26",
+   "ccaa": "RIO",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 78617,
+    "PSOE": 60210,
+    "VOX": 14086,
+    "SUMAR": 11045,
+    "PACMA": 1054,
+    "x:EB": 965,
+    "x:PUM+J": 237,
+    "x:PCTE": 203,
+    "x:Recortes Cero": 139
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "27",
+   "name": "Lugo",
+   "prov": "27",
+   "ccaa": "GAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 94168,
+    "PSOE": 56148,
+    "BNG": 17527,
+    "SUMAR": 8587,
+    "VOX": 6632,
+    "PACMA": 597,
+    "x:PCTG": 165,
+    "x:PUM+J": 159,
+    "x:Recortes Cero": 131
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "28",
+   "name": "Madrid",
+   "prov": "28",
+   "ccaa": "MAD",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 1475894,
+    "PSOE": 1017314,
+    "SUMAR": 481401,
+    "VOX": 413731,
+    "PACMA": 30101,
+    "x:PUM+J": 5911,
+    "x:PH": 4995,
+    "x:Recortes Cero": 4979,
+    "x:PCTE": 4327,
+    "x:FE de las JONS": 2439
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "prov": "29",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 290949,
+    "PSOE": 227251,
+    "VOX": 102240,
+    "SUMAR": 83019,
+    "PACMA": 10985,
+    "x:PUM+J": 4649,
+    "x:Recortes Cero": 2888,
+    "x:CJ": 1959
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "José Alberto Armijo Navas",
+     "party": "PP",
+     "votes": 300592,
+     "elected": true
+    },
+    {
+     "candidate": "Ángel Luis González Muñoz",
+     "party": "PP",
+     "votes": 287977,
+     "elected": true
+    },
+    {
+     "candidate": "Lucía Yeves Leal",
+     "party": "PP",
+     "votes": 284278,
+     "elected": true
+    },
+    {
+     "candidate": "Rafael Granados Ruiz",
+     "party": "PSOE",
+     "votes": 235312,
+     "elected": true
+    },
+    {
+     "candidate": "María Dolores Narváez Bandera",
+     "party": "PSOE",
+     "votes": 230786,
+     "elected": false
+    },
+    {
+     "candidate": "Salvador Javier Rojas Merino",
+     "party": "PSOE",
+     "votes": 215656,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Jesús Ruiz Ballesteros",
+     "party": "VOX",
+     "votes": 110154,
+     "elected": false
+    },
+    {
+     "candidate": "Gemma María Palomo Ferrer",
+     "party": "VOX",
+     "votes": 101031,
+     "elected": false
+    },
+    {
+     "candidate": "Patricia García Leiva",
+     "party": "SUMAR",
+     "votes": 96557,
+     "elected": false
+    },
+    {
+     "candidate": "Alejandro Reyes Rabell",
+     "party": "VOX",
+     "votes": 95534,
+     "elected": false
+    },
+    {
+     "candidate": "Ángel Rodríguez Ramírez",
+     "party": "SUMAR",
+     "votes": 77198,
+     "elected": false
+    },
+    {
+     "candidate": "Noemí Vinuesa Calleja",
+     "party": "SUMAR",
+     "votes": 75303,
+     "elected": false
+    },
+    {
+     "candidate": "Carmen Inmaculada Sánchez Carmona",
+     "party": "PACMA",
+     "votes": 15065,
+     "elected": false
+    },
+    {
+     "candidate": "Eva Ramos Taillefer",
+     "party": "PACMA",
+     "votes": 8951,
+     "elected": false
+    },
+    {
+     "candidate": "Federico José Cuesta Torres",
+     "party": "PACMA",
+     "votes": 8939,
+     "elected": false
+    },
+    {
+     "candidate": "María Carmen Mestanza Garrido",
+     "party": "x:PUM+J",
+     "votes": 4649,
+     "elected": false
+    },
+    {
+     "candidate": "Francisco José Rodríguez Marín",
+     "party": "x:Recortes Cero",
+     "votes": 2888,
+     "elected": false
+    },
+    {
+     "candidate": "Alfonso González Extremera",
+     "party": "x:CJ",
+     "votes": 1959,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "30",
+   "name": "Murcia",
+   "prov": "30",
+   "ccaa": "MUR",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 297337,
+    "PSOE": 190124,
+    "VOX": 152506,
+    "SUMAR": 59337,
+    "PACMA": 6686,
+    "x:Por Mi Región": 2636,
+    "x:EB": 2084,
+    "x:Recortes Cero": 561,
+    "x:CJ": 374,
+    "x:FE de las JONS": 288
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "31",
+   "name": "Navarra",
+   "prov": "31",
+   "ccaa": "NAV",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 88663,
+    "UPN": 62859,
+    "BILDU": 59922,
+    "PP": 58683,
+    "SUMAR": 34694,
+    "GBAI": 12458,
+    "PACMA": 1421,
+    "x:PUM+J": 803,
+    "x:PCTE": 452,
+    "x:Recortes Cero": 391
+   },
+   "elected": {
+    "PSOE": 3,
+    "UPN": 1
+   }
+  },
+  {
+   "id": "32",
+   "name": "Ourense",
+   "prov": "32",
+   "ccaa": "GAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 83304,
+    "PSOE": 48210,
+    "BNG": 16618,
+    "SUMAR": 8512,
+    "VOX": 6301,
+    "PACMA": 1793,
+    "x:PUM+J": 457,
+    "x:PCTG": 387,
+    "x:Recortes Cero": 312,
+    "x:CCD": 111
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "María del Carmen Leyte Coello",
+     "party": "PP",
+     "votes": 84654,
+     "elected": true
+    },
+    {
+     "candidate": "Luis Menor Pérez",
+     "party": "PP",
+     "votes": 83530,
+     "elected": true
+    },
+    {
+     "candidate": "Rosa María Sánchez Gándara",
+     "party": "PP",
+     "votes": 81727,
+     "elected": true
+    },
+    {
+     "candidate": "Rafael Rodríguez Villarino",
+     "party": "PSOE",
+     "votes": 50579,
+     "elected": true
+    },
+    {
+     "candidate": "Miguel Bautista Carballo",
+     "party": "PSOE",
+     "votes": 47648,
+     "elected": false
+    },
+    {
+     "candidate": "María Alida Iglesias Gil",
+     "party": "PSOE",
+     "votes": 46404,
+     "elected": false
+    },
+    {
+     "candidate": "María Cristina Cid Fernández",
+     "party": "BNG",
+     "votes": 19813,
+     "elected": false
+    },
+    {
+     "candidate": "Xurxo Rodríguez Méndez",
+     "party": "BNG",
+     "votes": 15720,
+     "elected": false
+    },
+    {
+     "candidate": "Xosé Carballido Presas",
+     "party": "BNG",
+     "votes": 14321,
+     "elected": false
+    },
+    {
+     "candidate": "Manuel Nogueira Pérez",
+     "party": "SUMAR",
+     "votes": 10482,
+     "elected": false
+    },
+    {
+     "candidate": "Lidia López Arteaga",
+     "party": "SUMAR",
+     "votes": 8569,
+     "elected": false
+    },
+    {
+     "candidate": "Lilian Cerdeira Mosquera",
+     "party": "VOX",
+     "votes": 6848,
+     "elected": false
+    },
+    {
+     "candidate": "Carlos Alberto Garrido López",
+     "party": "SUMAR",
+     "votes": 6485,
+     "elected": false
+    },
+    {
+     "candidate": "Domingo Benito Otero Besteiro",
+     "party": "VOX",
+     "votes": 6175,
+     "elected": false
+    },
+    {
+     "candidate": "Miguel Ángel Rojas Silva",
+     "party": "VOX",
+     "votes": 5881,
+     "elected": false
+    },
+    {
+     "candidate": "Margarita Pascal Misiti",
+     "party": "PACMA",
+     "votes": 1793,
+     "elected": false
+    },
+    {
+     "candidate": "Quique Rodríguez Portabales",
+     "party": "x:PUM+J",
+     "votes": 457,
+     "elected": false
+    },
+    {
+     "candidate": "Adrián Nido García",
+     "party": "x:PCTG",
+     "votes": 387,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Diego Conde Eguileta",
+     "party": "x:Recortes Cero",
+     "votes": 312,
+     "elected": false
+    },
+    {
+     "candidate": "María del Mar Fernández Dibuja",
+     "party": "x:CCD",
+     "votes": 169,
+     "elected": false
+    },
+    {
+     "candidate": "Manuel Álvarez Fernández",
+     "party": "x:CCD",
+     "votes": 97,
+     "elected": false
+    },
+    {
+     "candidate": "Bruno Blanco Tourón",
+     "party": "x:CCD",
+     "votes": 68,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "33",
+   "name": "Asturias",
+   "prov": "33",
+   "ccaa": "AST",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 213281,
+    "PSOE": 207815,
+    "SUMAR": 74344,
+    "VOX": 59253,
+    "PACMA": 4335,
+    "x:Asturias Existe EV": 3974,
+    "x:PCTE": 1231,
+    "x:Recortes Cero": 692,
+    "x:PUM+J": 639,
+    "x:PUEDE": 173
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "34",
+   "name": "Palencia",
+   "prov": "34",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 39232,
+    "PSOE": 32066,
+    "VOX": 9699,
+    "SUMAR": 5871,
+    "x:VP": 3158,
+    "x:EV": 903,
+    "PACMA": 795,
+    "x:PCTE": 365,
+    "x:PUM+J": 346,
+    "x:FE de las JONS": 243,
+    "x:Recortes Cero": 147,
+    "x:CJ": 88
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Jorge Domingo Martínez Antolín",
+     "party": "PP",
+     "votes": 40209,
+     "elected": true
+    },
+    {
+     "candidate": "Carlos Alfonso Polanco Rebolleda",
+     "party": "PP",
+     "votes": 38797,
+     "elected": true
+    },
+    {
+     "candidate": "María José Ortega Gómez",
+     "party": "PP",
+     "votes": 38690,
+     "elected": true
+    },
+    {
+     "candidate": "Rosa María Aldea Gómez",
+     "party": "PSOE",
+     "votes": 34272,
+     "elected": true
+    },
+    {
+     "candidate": "Jesús Manuel López Infante",
+     "party": "PSOE",
+     "votes": 31633,
+     "elected": false
+    },
+    {
+     "candidate": "Fernando Eulogio Hernández Portela",
+     "party": "PSOE",
+     "votes": 30294,
+     "elected": false
+    },
+    {
+     "candidate": "Ricardo Carrancio Sangrador",
+     "party": "VOX",
+     "votes": 10441,
+     "elected": false
+    },
+    {
+     "candidate": "Yenifer Fernández Calleja",
+     "party": "VOX",
+     "votes": 9482,
+     "elected": false
+    },
+    {
+     "candidate": "Carolina González Camino",
+     "party": "VOX",
+     "votes": 9173,
+     "elected": false
+    },
+    {
+     "candidate": "Ester Becerril Fernández",
+     "party": "SUMAR",
+     "votes": 6672,
+     "elected": false
+    },
+    {
+     "candidate": "Alberto Riol de Prado",
+     "party": "SUMAR",
+     "votes": 5070,
+     "elected": false
+    },
+    {
+     "candidate": "Manuel Fidel Ramos Ibáñez",
+     "party": "x:VP",
+     "votes": 3158,
+     "elected": false
+    },
+    {
+     "candidate": "María Victoria Díaz Arranz",
+     "party": "x:EV",
+     "votes": 1125,
+     "elected": false
+    },
+    {
+     "candidate": "Natalia Martínez Antolín",
+     "party": "PACMA",
+     "votes": 795,
+     "elected": false
+    },
+    {
+     "candidate": "Alejandro Rojo Trigueros",
+     "party": "x:EV",
+     "votes": 680,
+     "elected": false
+    },
+    {
+     "candidate": "Rubén Cabezón Milla",
+     "party": "x:PCTE",
+     "votes": 365,
+     "elected": false
+    },
+    {
+     "candidate": "Marta Fernández Calvo",
+     "party": "x:PUM+J",
+     "votes": 346,
+     "elected": false
+    },
+    {
+     "candidate": "Julio César de Alaíz Martínez",
+     "party": "x:FE de las JONS",
+     "votes": 243,
+     "elected": false
+    },
+    {
+     "candidate": "David Caballero Merino",
+     "party": "x:Recortes Cero",
+     "votes": 147,
+     "elected": false
+    },
+    {
+     "candidate": "María Montserrat González Martín",
+     "party": "x:CJ",
+     "votes": 122,
+     "elected": false
+    },
+    {
+     "candidate": "Óscar Córdova Molina",
+     "party": "x:CJ",
+     "votes": 54,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "36",
+   "name": "Pontevedra",
+   "prov": "36",
+   "ccaa": "GAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 209794,
+    "PSOE": 169687,
+    "BNG": 58659,
+    "SUMAR": 57663,
+    "VOX": 20813,
+    "PACMA": 4500,
+    "x:PCTG": 1967,
+    "x:Recortes Cero": 1366
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "María José Pardo Pumar «Pepa»",
+     "party": "PP",
+     "votes": 213843,
+     "elected": true
+    },
+    {
+     "candidate": "José Crespo Iglesias",
+     "party": "PP",
+     "votes": 209135,
+     "elected": true
+    },
+    {
+     "candidate": "Nidia María Arévalo Gómez",
+     "party": "PP",
+     "votes": 206404,
+     "elected": true
+    },
+    {
+     "candidate": "María del Carmen Silva Rego «Carmela»",
+     "party": "PSOE",
+     "votes": 182043,
+     "elected": true
+    },
+    {
+     "candidate": "Luis López Bueno",
+     "party": "PSOE",
+     "votes": 166211,
+     "elected": false
+    },
+    {
+     "candidate": "Verónica Pichel Guisande",
+     "party": "PSOE",
+     "votes": 160807,
+     "elected": false
+    },
+    {
+     "candidate": "Duarte Correa Piñeiro",
+     "party": "BNG",
+     "votes": 67177,
+     "elected": false
+    },
+    {
+     "candidate": "Roberto Alonso Ucha",
+     "party": "SUMAR",
+     "votes": 66799,
+     "elected": false
+    },
+    {
+     "candidate": "María José García Gómez",
+     "party": "BNG",
+     "votes": 58671,
+     "elected": false
+    },
+    {
+     "candidate": "Gloria Alonso Domínguez",
+     "party": "SUMAR",
+     "votes": 55840,
+     "elected": false
+    },
+    {
+     "candidate": "Ana Isabel Pérez Simal",
+     "party": "SUMAR",
+     "votes": 50351,
+     "elected": false
+    },
+    {
+     "candidate": "Ramón Nicolás Rodríguez",
+     "party": "BNG",
+     "votes": 50130,
+     "elected": false
+    },
+    {
+     "candidate": "José Manuel Torres Corredoira",
+     "party": "VOX",
+     "votes": 22668,
+     "elected": false
+    },
+    {
+     "candidate": "Antonio Ramón Quintana Jato",
+     "party": "VOX",
+     "votes": 20143,
+     "elected": false
+    },
+    {
+     "candidate": "Elisa María López Moldes",
+     "party": "VOX",
+     "votes": 19629,
+     "elected": false
+    },
+    {
+     "candidate": "Alberto De Salazar Viñas",
+     "party": "PACMA",
+     "votes": 5559,
+     "elected": false
+    },
+    {
+     "candidate": "Iria Montenegro García",
+     "party": "PACMA",
+     "votes": 4740,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Ramón Soliño Álvarez",
+     "party": "PACMA",
+     "votes": 3202,
+     "elected": false
+    },
+    {
+     "candidate": "Martín Mascato Galiñanes",
+     "party": "x:PCTG",
+     "votes": 1967,
+     "elected": false
+    },
+    {
+     "candidate": "José Carlos Vázquez González",
+     "party": "x:Recortes Cero",
+     "votes": 1366,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "37",
+   "name": "Salamanca",
+   "prov": "37",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 91361,
+    "PSOE": 56392,
+    "VOX": 22354,
+    "SUMAR": 10191,
+    "x:EV": 1780,
+    "UPL": 1283,
+    "PACMA": 1463,
+    "x:PREPAL": 460,
+    "x:PCTE": 493,
+    "x:PUM+J": 493,
+    "x:CJ": 178,
+    "x:Recortes Cero": 233
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Bienvenido De Arriba Sánchez",
+     "party": "PP",
+     "votes": 92931,
+     "elected": true
+    },
+    {
+     "candidate": "Gonzalo Jesús Robles Orozco",
+     "party": "PP",
+     "votes": 90878,
+     "elected": true
+    },
+    {
+     "candidate": "Esther Basilia Del Brío González",
+     "party": "PP",
+     "votes": 90273,
+     "elected": true
+    },
+    {
+     "candidate": "Elena Diego Castellanos",
+     "party": "PSOE",
+     "votes": 58864,
+     "elected": true
+    },
+    {
+     "candidate": "Aquiles Magide Bizarro",
+     "party": "PSOE",
+     "votes": 56092,
+     "elected": false
+    },
+    {
+     "candidate": "María Soledad Álvarez Cascón",
+     "party": "PSOE",
+     "votes": 54219,
+     "elected": false
+    },
+    {
+     "candidate": "María de los Ángeles Carpio Pérez",
+     "party": "VOX",
+     "votes": 23782,
+     "elected": false
+    },
+    {
+     "candidate": "Javier Bernardo Teira Lafuente",
+     "party": "VOX",
+     "votes": 22118,
+     "elected": false
+    },
+    {
+     "candidate": "José Luis Rodríguez Martín",
+     "party": "VOX",
+     "votes": 21163,
+     "elected": false
+    },
+    {
+     "candidate": "Nuria María Del Álamo Gómez",
+     "party": "SUMAR",
+     "votes": 12770,
+     "elected": false
+    },
+    {
+     "candidate": "Alejandro Álvarez García",
+     "party": "SUMAR",
+     "votes": 9248,
+     "elected": false
+    },
+    {
+     "candidate": "María del Carmen Díez Sierra",
+     "party": "SUMAR",
+     "votes": 8554,
+     "elected": false
+    },
+    {
+     "candidate": "Ángel Manuel Montoiro Sánchez",
+     "party": "x:EV",
+     "votes": 2229,
+     "elected": false
+    },
+    {
+     "candidate": "Francisco Javier Recio Hernández",
+     "party": "UPL",
+     "votes": 1957,
+     "elected": false
+    },
+    {
+     "candidate": "Alexandra Mangas García",
+     "party": "x:EV",
+     "votes": 1758,
+     "elected": false
+    },
+    {
+     "candidate": "Julio Alberto Ceballo Sánchez",
+     "party": "PACMA",
+     "votes": 1463,
+     "elected": false
+    },
+    {
+     "candidate": "Ángel Tomás Domínguez Domínguez",
+     "party": "x:EV",
+     "votes": 1354,
+     "elected": false
+    },
+    {
+     "candidate": "Patricia Santamaría Hernández",
+     "party": "UPL",
+     "votes": 1067,
+     "elected": false
+    },
+    {
+     "candidate": "Raúl Rodríguez Martín",
+     "party": "UPL",
+     "votes": 825,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Manuel Andrés López",
+     "party": "x:PREPAL",
+     "votes": 564,
+     "elected": false
+    },
+    {
+     "candidate": "Antonio Bautista Nieto",
+     "party": "x:PCTE",
+     "votes": 493,
+     "elected": false
+    },
+    {
+     "candidate": "Antonio Arturo Sieira Mucientes",
+     "party": "x:PUM+J",
+     "votes": 493,
+     "elected": false
+    },
+    {
+     "candidate": "Manuela Iglesias Carreño",
+     "party": "x:PREPAL",
+     "votes": 356,
+     "elected": false
+    },
+    {
+     "candidate": "Hipólito Nicolás Cuesta Sánchez",
+     "party": "x:CJ",
+     "votes": 267,
+     "elected": false
+    },
+    {
+     "candidate": "Ernesto Miguel Nungesser Luengo",
+     "party": "x:Recortes Cero",
+     "votes": 233,
+     "elected": false
+    },
+    {
+     "candidate": "María Luz Martín Mateo",
+     "party": "x:CJ",
+     "votes": 157,
+     "elected": false
+    },
+    {
+     "candidate": "Víctor Manuel Zarza Gómez",
+     "party": "x:CJ",
+     "votes": 111,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "39",
+   "name": "Cantabria",
+   "prov": "39",
+   "ccaa": "CANT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 148095,
+    "PSOE": 114201,
+    "VOX": 38057,
+    "SUMAR": 25923,
+    "PACMA": 1433,
+    "x:PCTE": 603,
+    "x:Recortes Cero": 472
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "40",
+   "name": "Segovia",
+   "prov": "40",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 39161,
+    "PSOE": 26186,
+    "VOX": 10064,
+    "SUMAR": 6363,
+    "PACMA": 808,
+    "x:3e en acción": 627,
+    "x:PUM+J": 429,
+    "x:PCTE": 328,
+    "x:Recortes Cero": 289,
+    "x:CJ": 159
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Paloma Inés Sanz Jerónimo",
+     "party": "PP",
+     "votes": 40025,
+     "elected": true
+    },
+    {
+     "candidate": "Juan José Sanz Vitorio",
+     "party": "PP",
+     "votes": 39036,
+     "elected": true
+    },
+    {
+     "candidate": "María Angeles García Herrero",
+     "party": "PP",
+     "votes": 38421,
+     "elected": true
+    },
+    {
+     "candidate": "María del Lirio Martín García",
+     "party": "PSOE",
+     "votes": 27693,
+     "elected": true
+    },
+    {
+     "candidate": "Juan José Maroto Sáez",
+     "party": "PSOE",
+     "votes": 26118,
+     "elected": false
+    },
+    {
+     "candidate": "Lourdes Alvarez Callejo",
+     "party": "PSOE",
+     "votes": 24746,
+     "elected": false
+    },
+    {
+     "candidate": "Fuencisla Arévalo Galván",
+     "party": "VOX",
+     "votes": 10809,
+     "elected": false
+    },
+    {
+     "candidate": "Enrique Jiménez Vaquerizo",
+     "party": "VOX",
+     "votes": 9908,
+     "elected": false
+    },
+    {
+     "candidate": "Daniel Luis Labrador Cruz",
+     "party": "VOX",
+     "votes": 9476,
+     "elected": false
+    },
+    {
+     "candidate": "César Martín de Bernardo Paniagua",
+     "party": "SUMAR",
+     "votes": 7594,
+     "elected": false
+    },
+    {
+     "candidate": "Carlos Serrano Hermo",
+     "party": "SUMAR",
+     "votes": 5957,
+     "elected": false
+    },
+    {
+     "candidate": "María Dolores Casado San Inocencio",
+     "party": "SUMAR",
+     "votes": 5538,
+     "elected": false
+    },
+    {
+     "candidate": "Nuria Serrenes Cachorro",
+     "party": "PACMA",
+     "votes": 808,
+     "elected": false
+    },
+    {
+     "candidate": "Joaquín Luis Mastache De La Peña",
+     "party": "x:3e en acción",
+     "votes": 627,
+     "elected": false
+    },
+    {
+     "candidate": "Pilar Barral Heredero",
+     "party": "x:PUM+J",
+     "votes": 429,
+     "elected": false
+    },
+    {
+     "candidate": "Marc Izquierdo Lucas",
+     "party": "x:PCTE",
+     "votes": 328,
+     "elected": false
+    },
+    {
+     "candidate": "Borja Barroco Cámara",
+     "party": "x:Recortes Cero",
+     "votes": 289,
+     "elected": false
+    },
+    {
+     "candidate": "María Jesús Martín Arribas",
+     "party": "x:CJ",
+     "votes": 220,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Luis Figueredo Alonso",
+     "party": "x:CJ",
+     "votes": 148,
+     "elected": false
+    },
+    {
+     "candidate": "Myriam Del Pozo Ramos",
+     "party": "x:CJ",
+     "votes": 108,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "prov": "41",
+   "ccaa": "AND",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 370888,
+    "PP": 345927,
+    "SUMAR": 133006,
+    "VOX": 112946,
+    "PACMA": 12785,
+    "x:PUM+J": 1458,
+    "x:PCTE": 1120,
+    "x:Recortes Cero": 1061,
+    "x:CJ": 796,
+    "x:FE–JONS": 680
+   },
+   "elected": {
+    "PSOE": 3,
+    "PP": 1
+   }
+  },
+  {
+   "id": "42",
+   "name": "Soria",
+   "prov": "42",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 17549,
+    "PSOE": 13596,
+    "SY": 10275,
+    "VOX": 4041,
+    "SUMAR": 1726,
+    "PACMA": 232,
+    "x:PCTE": 124,
+    "x:PUM+J": 75,
+    "x:Recortes Cero": 60
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "José Manuel Hernando García",
+     "party": "PP",
+     "votes": 18144,
+     "elected": true
+    },
+    {
+     "candidate": "Javier Jiménez Santamaría",
+     "party": "PP",
+     "votes": 17510,
+     "elected": true
+    },
+    {
+     "candidate": "María Cristina Rubio Blasco",
+     "party": "PP",
+     "votes": 16993,
+     "elected": true
+    },
+    {
+     "candidate": "Javier Antón Cacho",
+     "party": "PSOE",
+     "votes": 14368,
+     "elected": true
+    },
+    {
+     "candidate": "Ana María Romero Rupérez",
+     "party": "PSOE",
+     "votes": 13572,
+     "elected": false
+    },
+    {
+     "candidate": "Jesús María Cedazo Mínguez",
+     "party": "PSOE",
+     "votes": 12847,
+     "elected": false
+    },
+    {
+     "candidate": "Carlos Vallejo Muñoz",
+     "party": "SY",
+     "votes": 11226,
+     "elected": false
+    },
+    {
+     "candidate": "Fernando Arévalo Jiménez",
+     "party": "SY",
+     "votes": 10016,
+     "elected": false
+    },
+    {
+     "candidate": "Silvia Largo Del Barrio",
+     "party": "SY",
+     "votes": 9583,
+     "elected": false
+    },
+    {
+     "candidate": "Alberto Enrique Peñuelas Felipe",
+     "party": "VOX",
+     "votes": 4486,
+     "elected": false
+    },
+    {
+     "candidate": "María Montserrat Rubio Blázquez",
+     "party": "VOX",
+     "votes": 3932,
+     "elected": false
+    },
+    {
+     "candidate": "Carlos Alonso Omeñaca",
+     "party": "VOX",
+     "votes": 3706,
+     "elected": false
+    },
+    {
+     "candidate": "Nicasio Martínez Gracia",
+     "party": "SUMAR",
+     "votes": 2320,
+     "elected": false
+    },
+    {
+     "candidate": "María Milagros Solano Rodrigo",
+     "party": "SUMAR",
+     "votes": 1552,
+     "elected": false
+    },
+    {
+     "candidate": "Mario Calonge Calvo",
+     "party": "SUMAR",
+     "votes": 1306,
+     "elected": false
+    },
+    {
+     "candidate": "Ana María Carrión de la Llana",
+     "party": "PACMA",
+     "votes": 232,
+     "elected": false
+    },
+    {
+     "candidate": "Cesar Dominguez Baños",
+     "party": "x:PCTE",
+     "votes": 124,
+     "elected": false
+    },
+    {
+     "candidate": "Álvaro Galera Arias",
+     "party": "x:PUM+J",
+     "votes": 75,
+     "elected": false
+    },
+    {
+     "candidate": "Lua Buera Ayllón",
+     "party": "x:Recortes Cero",
+     "votes": 60,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "43",
+   "name": "Tarragona",
+   "prov": "43",
+   "ccaa": "CAT",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PSOE": 102877,
+    "ERC": 65043,
+    "PP": 47906,
+    "JUNTS": 42626,
+    "SUMAR": 31269,
+    "VOX": 27560,
+    "PACMA": 5966,
+    "x:PDeCAT": 3909,
+    "x:PCTC": 2183,
+    "x:Recortes Cero": 920,
+    "x:EVC": 554
+   },
+   "elected": {
+    "PSOE": 3,
+    "ERC": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Manel de la Vega Carrera",
+     "party": "PSOE",
+     "votes": 106923,
+     "elected": true
+    },
+    {
+     "candidate": "Núria Rovira Costas",
+     "party": "PSOE",
+     "votes": 104351,
+     "elected": true
+    },
+    {
+     "candidate": "Mario Soler Santos",
+     "party": "PSOE",
+     "votes": 97356,
+     "elected": true
+    },
+    {
+     "candidate": "Jordi Gaseni Blanch",
+     "party": "ERC",
+     "votes": 70175,
+     "elected": true
+    },
+    {
+     "candidate": "Laura Castel Fort",
+     "party": "ERC",
+     "votes": 65250,
+     "elected": false
+    },
+    {
+     "candidate": "Josep Rufà Gràcia",
+     "party": "ERC",
+     "votes": 59705,
+     "elected": false
+    },
+    {
+     "candidate": "Rafael Luna Vivas",
+     "party": "PP",
+     "votes": 49398,
+     "elected": false
+    },
+    {
+     "candidate": "Montserrat Duch Cartañá",
+     "party": "PP",
+     "votes": 48019,
+     "elected": false
+    },
+    {
+     "candidate": "Miguel Ángel Cilleruelo Andrés",
+     "party": "PP",
+     "votes": 46302,
+     "elected": false
+    },
+    {
+     "candidate": "Josep Andreu Domingo",
+     "party": "JUNTS",
+     "votes": 46301,
+     "elected": false
+    },
+    {
+     "candidate": "María Elena Queral Castellà",
+     "party": "JUNTS",
+     "votes": 42563,
+     "elected": false
+    },
+    {
+     "candidate": "Eugeni Sedano Monasterio",
+     "party": "JUNTS",
+     "votes": 39014,
+     "elected": false
+    },
+    {
+     "candidate": "Nazaret Troya Cala",
+     "party": "SUMAR",
+     "votes": 37274,
+     "elected": false
+    },
+    {
+     "candidate": "Tibor Rius Gerecz",
+     "party": "VOX",
+     "votes": 28592,
+     "elected": false
+    },
+    {
+     "candidate": "Francisco Pizarro Fernández",
+     "party": "SUMAR",
+     "votes": 28346,
+     "elected": false
+    },
+    {
+     "candidate": "Antònia García Bascuñana",
+     "party": "SUMAR",
+     "votes": 28188,
+     "elected": false
+    },
+    {
+     "candidate": "Isabel María Lorenzo Medina",
+     "party": "VOX",
+     "votes": 27671,
+     "elected": false
+    },
+    {
+     "candidate": "David Gracia Martínez",
+     "party": "VOX",
+     "votes": 26417,
+     "elected": false
+    },
+    {
+     "candidate": "Iñigo Manrique Romero",
+     "party": "PACMA",
+     "votes": 7254,
+     "elected": false
+    },
+    {
+     "candidate": "Debora Sebastian Marquez",
+     "party": "PACMA",
+     "votes": 6118,
+     "elected": false
+    },
+    {
+     "candidate": "Xavier Lopez Roure",
+     "party": "PACMA",
+     "votes": 4527,
+     "elected": false
+    },
+    {
+     "candidate": "Josepa Loos Maynou",
+     "party": "x:PDeCAT",
+     "votes": 3909,
+     "elected": false
+    },
+    {
+     "candidate": "Albert Sabate Altisent",
+     "party": "x:PCTC",
+     "votes": 2183,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Francisco Martínez Ten",
+     "party": "x:Recortes Cero",
+     "votes": 920,
+     "elected": false
+    },
+    {
+     "candidate": "Valentín Rodríguez Bonillo",
+     "party": "x:EVC",
+     "votes": 752,
+     "elected": false
+    },
+    {
+     "candidate": "Esperanza Torrijos González",
+     "party": "x:EVC",
+     "votes": 546,
+     "elected": false
+    },
+    {
+     "candidate": "Antonio Raya Ruiz",
+     "party": "x:EVC",
+     "votes": 364,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "44",
+   "name": "Teruel",
+   "prov": "44",
+   "ccaa": "ARA",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 26005,
+    "PSOE": 20393,
+    "EXISTE": 12503,
+    "VOX": 7610,
+    "SUMAR": 3791,
+    "x:PAR": 810,
+    "PACMA": 406,
+    "x:PCTE": 193,
+    "x:PUM+J": 106,
+    "x:Recortes Cero": 88
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Emma Buj Sánchez",
+     "party": "PP",
+     "votes": 27021,
+     "elected": true
+    },
+    {
+     "candidate": "Carmen Pobo Sánchez",
+     "party": "PP",
+     "votes": 25687,
+     "elected": true
+    },
+    {
+     "candidate": "Manuel Blasco Marqués",
+     "party": "PP",
+     "votes": 25306,
+     "elected": true
+    },
+    {
+     "candidate": "María José Villalba Chavarría",
+     "party": "PSOE",
+     "votes": 21450,
+     "elected": true
+    },
+    {
+     "candidate": "Antonio Tomás Vivas",
+     "party": "PSOE",
+     "votes": 20210,
+     "elected": false
+    },
+    {
+     "candidate": "Vanesa Pellicena Pellicena",
+     "party": "PSOE",
+     "votes": 19519,
+     "elected": false
+    },
+    {
+     "candidate": "Beatriz Martín Larred",
+     "party": "EXISTE",
+     "votes": 13904,
+     "elected": false
+    },
+    {
+     "candidate": "Joaquín Egea Serrano",
+     "party": "EXISTE",
+     "votes": 12249,
+     "elected": false
+    },
+    {
+     "candidate": "Raúl Blasco Aznar",
+     "party": "EXISTE",
+     "votes": 11355,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Vicente Férriz Hernández",
+     "party": "VOX",
+     "votes": 8339,
+     "elected": false
+    },
+    {
+     "candidate": "Manuel Lozano Polo",
+     "party": "VOX",
+     "votes": 7447,
+     "elected": false
+    },
+    {
+     "candidate": "Bárbara Alastuey Rivas",
+     "party": "VOX",
+     "votes": 7045,
+     "elected": false
+    },
+    {
+     "candidate": "Sandra González Albalad",
+     "party": "SUMAR",
+     "votes": 4720,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Carlos Blasco Nuño",
+     "party": "SUMAR",
+     "votes": 3458,
+     "elected": false
+    },
+    {
+     "candidate": "Sheyla Luna Marín",
+     "party": "SUMAR",
+     "votes": 3196,
+     "elected": false
+    },
+    {
+     "candidate": "Ramón José Fuertes Ortiz",
+     "party": "x:PAR",
+     "votes": 1014,
+     "elected": false
+    },
+    {
+     "candidate": "Pilar Romero Villalba",
+     "party": "x:PAR",
+     "votes": 784,
+     "elected": false
+    },
+    {
+     "candidate": "Alfonso Palmero Quintanilla",
+     "party": "x:PAR",
+     "votes": 631,
+     "elected": false
+    },
+    {
+     "candidate": "Tasio Peña Jiménez",
+     "party": "PACMA",
+     "votes": 406,
+     "elected": false
+    },
+    {
+     "candidate": "Guillermo Castellá Aguilar",
+     "party": "x:PCTE",
+     "votes": 193,
+     "elected": false
+    },
+    {
+     "candidate": "María del Mar Pérez Torralva",
+     "party": "x:PUM+J",
+     "votes": 106,
+     "elected": false
+    },
+    {
+     "candidate": "Enrique Altemir Guijarro",
+     "party": "x:Recortes Cero",
+     "votes": 88,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "45",
+   "name": "Toledo",
+   "prov": "45",
+   "ccaa": "CLM",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 149062,
+    "PSOE": 125931,
+    "VOX": 61270,
+    "SUMAR": 27164,
+    "PACMA": 2865,
+    "x:PUM+J": 1141,
+    "x:FE de las JONS": 1021,
+    "x:Recortes Cero": 840
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Vicente Tirado Ochoa",
+     "party": "PP",
+     "votes": 151883,
+     "elected": true
+    },
+    {
+     "candidate": "Israel Roberto Pérez Jiménez",
+     "party": "PP",
+     "votes": 148264,
+     "elected": true
+    },
+    {
+     "candidate": "Carmen Riolobos Regadera",
+     "party": "PP",
+     "votes": 147039,
+     "elected": true
+    },
+    {
+     "candidate": "José Manuel Tofiño Pérez",
+     "party": "PSOE",
+     "votes": 129407,
+     "elected": true
+    },
+    {
+     "candidate": "María Montserrat Muro Martín",
+     "party": "PSOE",
+     "votes": 126022,
+     "elected": false
+    },
+    {
+     "candidate": "María Luisa Rodríguez García",
+     "party": "PSOE",
+     "votes": 122363,
+     "elected": false
+    },
+    {
+     "candidate": "Josefina Blázquez Sánchez",
+     "party": "VOX",
+     "votes": 63875,
+     "elected": false
+    },
+    {
+     "candidate": "Raúl Corvera Córdoba",
+     "party": "VOX",
+     "votes": 60910,
+     "elected": false
+    },
+    {
+     "candidate": "Laura Félix Sánchez-Vallejo",
+     "party": "VOX",
+     "votes": 59024,
+     "elected": false
+    },
+    {
+     "candidate": "Irene Arcalá Tarriño",
+     "party": "SUMAR",
+     "votes": 31273,
+     "elected": false
+    },
+    {
+     "candidate": "Verónica Mora Laguna",
+     "party": "SUMAR",
+     "votes": 26199,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Antonio Muñoz Gutiérrez",
+     "party": "SUMAR",
+     "votes": 24020,
+     "elected": false
+    },
+    {
+     "candidate": "Alicia Aguilera Campos",
+     "party": "PACMA",
+     "votes": 3924,
+     "elected": false
+    },
+    {
+     "candidate": "José Javier Alonso Gómez",
+     "party": "PACMA",
+     "votes": 2417,
+     "elected": false
+    },
+    {
+     "candidate": "Ana María García Marcos",
+     "party": "PACMA",
+     "votes": 2254,
+     "elected": false
+    },
+    {
+     "candidate": "Nacol Rosario Antigua",
+     "party": "x:PUM+J",
+     "votes": 1141,
+     "elected": false
+    },
+    {
+     "candidate": "José Alejandro García Sancho",
+     "party": "x:FE de las JONS",
+     "votes": 1021,
+     "elected": false
+    },
+    {
+     "candidate": "Florián Muñoz Del Moral",
+     "party": "x:Recortes Cero",
+     "votes": 840,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "46",
+   "name": "Valencia",
+   "prov": "46",
+   "ccaa": "VAL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 479277,
+    "PSOE": 464592,
+    "SUMAR": 198086,
+    "VOX": 172331,
+    "PACMA": 14485,
+    "x:PUM+J": 4357,
+    "x:EVB": 3902,
+    "x:Recortes Cero": 2168,
+    "x:FE de las JONS": 1717,
+    "x:CJ": 1163
+   },
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   },
+   "candidates": [
+    {
+     "candidate": "Estela Del Carmen Darocas Marin",
+     "party": "PP",
+     "votes": 493999,
+     "elected": true
+    },
+    {
+     "candidate": "Juan Antonio Sagredo Marco",
+     "party": "PSOE",
+     "votes": 487351,
+     "elected": true
+    },
+    {
+     "candidate": "Luis Javier Santamaría Ruiz",
+     "party": "PP",
+     "votes": 477173,
+     "elected": true
+    },
+    {
+     "candidate": "Cristina Moreno Fernández",
+     "party": "PSOE",
+     "votes": 473050,
+     "elected": true
+    },
+    {
+     "candidate": "Rubén Moreno Palanques",
+     "party": "PP",
+     "votes": 466658,
+     "elected": false
+    },
+    {
+     "candidate": "Mario Sánchez González",
+     "party": "PSOE",
+     "votes": 433375,
+     "elected": false
+    },
+    {
+     "candidate": "Ignacio Blanco Giner",
+     "party": "SUMAR",
+     "votes": 219787,
+     "elected": false
+    },
+    {
+     "candidate": "Mariam Varea Grau",
+     "party": "SUMAR",
+     "votes": 197267,
+     "elected": false
+    },
+    {
+     "candidate": "Marina Dabán Alonso",
+     "party": "VOX",
+     "votes": 182794,
+     "elected": false
+    },
+    {
+     "candidate": "Lola Seres García",
+     "party": "SUMAR",
+     "votes": 177204,
+     "elected": false
+    },
+    {
+     "candidate": "María del Carmen Valero Fauli",
+     "party": "VOX",
+     "votes": 169453,
+     "elected": false
+    },
+    {
+     "candidate": "Eduardo Rafael Tellez Ruiz",
+     "party": "VOX",
+     "votes": 164746,
+     "elected": false
+    },
+    {
+     "candidate": "María Elena García Pelló",
+     "party": "PACMA",
+     "votes": 21141,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Cruz Rodenas",
+     "party": "PACMA",
+     "votes": 11574,
+     "elected": false
+    },
+    {
+     "candidate": "Sarita Jaramillo Duque",
+     "party": "PACMA",
+     "votes": 10741,
+     "elected": false
+    },
+    {
+     "candidate": "Luis María de Mazarredo Aznar",
+     "party": "x:PUM+J",
+     "votes": 4357,
+     "elected": false
+    },
+    {
+     "candidate": "Ximo Cunyà i Alcover",
+     "party": "x:EVB",
+     "votes": 3902,
+     "elected": false
+    },
+    {
+     "candidate": "Ricardo Puchades Pérez",
+     "party": "x:Recortes Cero",
+     "votes": 3153,
+     "elected": false
+    },
+    {
+     "candidate": "Eva Yolanda Del Amo Davó",
+     "party": "x:Recortes Cero",
+     "votes": 2053,
+     "elected": false
+    },
+    {
+     "candidate": "José Portales Talavera",
+     "party": "x:FE de las JONS",
+     "votes": 1717,
+     "elected": false
+    },
+    {
+     "candidate": "Jorge Molina Salazar",
+     "party": "x:CJ",
+     "votes": 1619,
+     "elected": false
+    },
+    {
+     "candidate": "José Francisco Crespo Albiach",
+     "party": "x:Recortes Cero",
+     "votes": 1297,
+     "elected": false
+    },
+    {
+     "candidate": "María Desamparados Escriba Blasco",
+     "party": "x:CJ",
+     "votes": 1134,
+     "elected": false
+    },
+    {
+     "candidate": "José Manuel Jordán Cervera",
+     "party": "x:CJ",
+     "votes": 735,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "47",
+   "name": "Valladolid",
+   "prov": "47",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 127902,
+    "PSOE": 101242,
+    "VOX": 37885,
+    "SUMAR": 23487,
+    "x:EV": 2274,
+    "PACMA": 1662,
+    "x:None of the Above": 1027,
+    "x:UdCa": 874,
+    "x:PCTE": 890,
+    "x:PUM+J": 838,
+    "x:FE de las JONS": 645,
+    "x:Recortes Cero": 415
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Jesús Julio Carnero García",
+     "party": "PP",
+     "votes": 129458,
+     "elected": true
+    },
+    {
+     "candidate": "José Ángel Alonso Pérez",
+     "party": "PP",
+     "votes": 128009,
+     "elected": true
+    },
+    {
+     "candidate": "María Arenales Serrano Argüello",
+     "party": "PP",
+     "votes": 126238,
+     "elected": true
+    },
+    {
+     "candidate": "José Javier Izquierdo Roncero",
+     "party": "PSOE",
+     "votes": 104749,
+     "elected": true
+    },
+    {
+     "candidate": "Sara María Galván Lobato",
+     "party": "PSOE",
+     "votes": 102798,
+     "elected": false
+    },
+    {
+     "candidate": "Marcial Barba González",
+     "party": "PSOE",
+     "votes": 96180,
+     "elected": false
+    },
+    {
+     "candidate": "Luis Alberto Matarranz Herreras",
+     "party": "VOX",
+     "votes": 40450,
+     "elected": false
+    },
+    {
+     "candidate": "Víctor Miguel Menéndez Quintana",
+     "party": "VOX",
+     "votes": 37029,
+     "elected": false
+    },
+    {
+     "candidate": "Marina Fernández Salvador",
+     "party": "VOX",
+     "votes": 36175,
+     "elected": false
+    },
+    {
+     "candidate": "Marina Echebarria Sáenz",
+     "party": "SUMAR",
+     "votes": 28097,
+     "elected": false
+    },
+    {
+     "candidate": "José Ángel García De La Parte",
+     "party": "SUMAR",
+     "votes": 21541,
+     "elected": false
+    },
+    {
+     "candidate": "Rosana De Castro Blanco",
+     "party": "SUMAR",
+     "votes": 20824,
+     "elected": false
+    },
+    {
+     "candidate": "María José Vían Del Pozo",
+     "party": "x:EV",
+     "votes": 3318,
+     "elected": false
+    },
+    {
+     "candidate": "Juan Carlos Viña Muñoz",
+     "party": "PACMA",
+     "votes": 2074,
+     "elected": false
+    },
+    {
+     "candidate": "David San José Lobato",
+     "party": "x:EV",
+     "votes": 1942,
+     "elected": false
+    },
+    {
+     "candidate": "María Aránzazu López Escudero",
+     "party": "PACMA",
+     "votes": 1740,
+     "elected": false
+    },
+    {
+     "candidate": "Arturo González Sanz",
+     "party": "x:EV",
+     "votes": 1562,
+     "elected": false
+    },
+    {
+     "candidate": "Leticia Fernández Fernández",
+     "party": "x:None of the Above",
+     "votes": 1367,
+     "elected": false
+    },
+    {
+     "candidate": "José María Viña Muñoz",
+     "party": "PACMA",
+     "votes": 1171,
+     "elected": false
+    },
+    {
+     "candidate": "Lorena Moratinos Delgado",
+     "party": "x:UdCa",
+     "votes": 1148,
+     "elected": false
+    },
+    {
+     "candidate": "José Merida de la Fuente",
+     "party": "x:None of the Above",
+     "votes": 904,
+     "elected": false
+    },
+    {
+     "candidate": "David Núñez Muñoz",
+     "party": "x:PCTE",
+     "votes": 890,
+     "elected": false
+    },
+    {
+     "candidate": "José Ignacio Miguel Pampliega",
+     "party": "x:PUM+J",
+     "votes": 838,
+     "elected": false
+    },
+    {
+     "candidate": "Eva Molledo Gaite",
+     "party": "x:None of the Above",
+     "votes": 811,
+     "elected": false
+    },
+    {
+     "candidate": "Óscar Sánchez Rico",
+     "party": "x:FE de las JONS",
+     "votes": 645,
+     "elected": false
+    },
+    {
+     "candidate": "Jovino Noval Ordoñez",
+     "party": "x:UdCa",
+     "votes": 599,
+     "elected": false
+    },
+    {
+     "candidate": "Isaías Frías Cousillas",
+     "party": "x:Recortes Cero",
+     "votes": 415,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "48",
+   "name": "Bizkaia",
+   "prov": "48",
+   "ccaa": "PV",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PNV": 169604,
+    "PSOE": 147913,
+    "BILDU": 126554,
+    "PP": 68060,
+    "SUMAR": 54878,
+    "VOX": 13008,
+    "PACMA": 3450,
+    "x:PUM+J": 748,
+    "x:PCTE/ELAK": 570,
+    "x:Recortes Cero": 486
+   },
+   "elected": {
+    "PNV": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "49",
+   "name": "Zamora",
+   "prov": "49",
+   "ccaa": "CYL",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 44067,
+    "PSOE": 31849,
+    "VOX": 10345,
+    "SUMAR": 4844,
+    "x:ZSí": 2480,
+    "UPL": 880,
+    "PACMA": 681,
+    "x:PREPAL": 328,
+    "x:PCTE": 257,
+    "x:PUM+J": 221,
+    "x:Recortes Cero": 160
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "José María Barrios Tejero",
+     "party": "PP",
+     "votes": 44858,
+     "elected": true
+    },
+    {
+     "candidate": "Natalia Ucero Pérez",
+     "party": "PP",
+     "votes": 43771,
+     "elected": true
+    },
+    {
+     "candidate": "Fernando Martínez-Maíllo Toribio",
+     "party": "PP",
+     "votes": 43573,
+     "elected": true
+    },
+    {
+     "candidate": "José Fernández Blanco",
+     "party": "PSOE",
+     "votes": 32966,
+     "elected": true
+    },
+    {
+     "candidate": "María Ángeles Martínez Blanco",
+     "party": "PSOE",
+     "votes": 31971,
+     "elected": false
+    },
+    {
+     "candidate": "Ángel Calleja Gómez",
+     "party": "PSOE",
+     "votes": 30609,
+     "elected": false
+    },
+    {
+     "candidate": "Andrea Flores Ferrero",
+     "party": "VOX",
+     "votes": 11308,
+     "elected": false
+    },
+    {
+     "candidate": "Francisco Javier Gutiérrez Rodríguez",
+     "party": "VOX",
+     "votes": 10202,
+     "elected": false
+    },
+    {
+     "candidate": "Daniel López Torrero",
+     "party": "VOX",
+     "votes": 9525,
+     "elected": false
+    },
+    {
+     "candidate": "Fernando Díaz Carrasco",
+     "party": "SUMAR",
+     "votes": 5764,
+     "elected": false
+    },
+    {
+     "candidate": "María Dolores Carreras Luis",
+     "party": "SUMAR",
+     "votes": 4696,
+     "elected": false
+    },
+    {
+     "candidate": "Ainhoa Santander Gutiérrez",
+     "party": "SUMAR",
+     "votes": 4072,
+     "elected": false
+    },
+    {
+     "candidate": "Rocío Ferrero Prieto",
+     "party": "x:ZSí",
+     "votes": 3344,
+     "elected": false
+    },
+    {
+     "candidate": "José María Ramos Pérez",
+     "party": "x:ZSí",
+     "votes": 2174,
+     "elected": false
+    },
+    {
+     "candidate": "Verónica Calvo Carro",
+     "party": "x:ZSí",
+     "votes": 1923,
+     "elected": false
+    },
+    {
+     "candidate": "Daniel de Mena Bartolomé",
+     "party": "UPL",
+     "votes": 1217,
+     "elected": false
+    },
+    {
+     "candidate": "María José González Pablos",
+     "party": "UPL",
+     "votes": 782,
+     "elected": false
+    },
+    {
+     "candidate": "María del Carmen Serrano López",
+     "party": "PACMA",
+     "votes": 681,
+     "elected": false
+    },
+    {
+     "candidate": "Ángel Casaseca Martín",
+     "party": "UPL",
+     "votes": 641,
+     "elected": false
+    },
+    {
+     "candidate": "Teresita Loreto Álvarez Pérez",
+     "party": "x:PREPAL",
+     "votes": 514,
+     "elected": false
+    },
+    {
+     "candidate": "Miguel Ángel López Valle",
+     "party": "x:PREPAL",
+     "votes": 260,
+     "elected": false
+    },
+    {
+     "candidate": "Pablo Prieto Redondo",
+     "party": "x:PCTE",
+     "votes": 257,
+     "elected": false
+    },
+    {
+     "candidate": "Santiago Aguado de la Obra",
+     "party": "x:PUM+J",
+     "votes": 221,
+     "elected": false
+    },
+    {
+     "candidate": "José Miguel Trufero Barrios",
+     "party": "x:PREPAL",
+     "votes": 211,
+     "elected": false
+    },
+    {
+     "candidate": "Rosa María Navarrete Sehnert",
+     "party": "x:Recortes Cero",
+     "votes": 160,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "50",
+   "name": "Zaragoza",
+   "prov": "50",
+   "ccaa": "ARA",
+   "seats": 4,
+   "maxVotes": 3,
+   "votes": {
+    "PP": 182082,
+    "PSOE": 156003,
+    "VOX": 63169,
+    "EXISTE": 10255,
+    "PACMA": 5749,
+    "x:PAR": 4059,
+    "x:PCTE": 1574,
+    "x:PUM+J": 1160,
+    "x:Recortes Cero": 1124
+   },
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   },
+   "candidates": [
+    {
+     "candidate": "Luisa Fernanda Rudi Úbeda",
+     "party": "PP",
+     "votes": 187631,
+     "elected": true
+    },
+    {
+     "candidate": "María del Rocío Dívar Conde",
+     "party": "PP",
+     "votes": 180882,
+     "elected": true
+    },
+    {
+     "candidate": "José Manuel Aranda Lassa",
+     "party": "PP",
+     "votes": 177734,
+     "elected": true
+    },
+    {
+     "candidate": "Miguel Carmelo Dalmau Blanco",
+     "party": "PSOE",
+     "votes": 163158,
+     "elected": true
+    },
+    {
+     "candidate": "María José Navarro Lafita",
+     "party": "PSOE",
+     "votes": 158581,
+     "elected": false
+    },
+    {
+     "candidate": "Álvaro Blasco Martín",
+     "party": "PSOE",
+     "votes": 146270,
+     "elected": false
+    },
+    {
+     "candidate": "María Pilar Real Díaz",
+     "party": "VOX",
+     "votes": 67779,
+     "elected": false
+    },
+    {
+     "candidate": "Jesús Gómez Ulecia",
+     "party": "VOX",
+     "votes": 62569,
+     "elected": false
+    },
+    {
+     "candidate": "Luis Javier Lorén Torres",
+     "party": "VOX",
+     "votes": 59158,
+     "elected": false
+    },
+    {
+     "candidate": "José Manuel Cazorla Pérez",
+     "party": "EXISTE",
+     "votes": 12912,
+     "elected": false
+    },
+    {
+     "candidate": "Mireya Zueco Izquierdo",
+     "party": "EXISTE",
+     "votes": 9981,
+     "elected": false
+    },
+    {
+     "candidate": "Rafael Abadía Garralda",
+     "party": "EXISTE",
+     "votes": 7873,
+     "elected": false
+    },
+    {
+     "candidate": "María del Mar Buisán Letosa",
+     "party": "PACMA",
+     "votes": 5749,
+     "elected": false
+    },
+    {
+     "candidate": "Clemente Sánchez Garnica Gómez",
+     "party": "x:PAR",
+     "votes": 5628,
+     "elected": false
+    },
+    {
+     "candidate": "María Lina Hernando Peinado",
+     "party": "x:PAR",
+     "votes": 3836,
+     "elected": false
+    },
+    {
+     "candidate": "Jesús Martín Pérez",
+     "party": "x:PAR",
+     "votes": 2714,
+     "elected": false
+    },
+    {
+     "candidate": "Miguel Tello Bernad",
+     "party": "x:PCTE",
+     "votes": 1574,
+     "elected": false
+    },
+    {
+     "candidate": "Guillermo González Balmaseda",
+     "party": "x:PUM+J",
+     "votes": 1160,
+     "elected": false
+    },
+    {
+     "candidate": "José María Palleja Piñol",
+     "party": "x:Recortes Cero",
+     "votes": 1124,
+     "elected": false
+    }
+   ]
+  },
+  {
+   "id": "51",
+   "name": "Ceuta",
+   "prov": "51",
+   "ccaa": "CEU",
+   "seats": 2,
+   "maxVotes": 2,
+   "votes": {
+    "PP": 11967,
+    "PSOE": 10470,
+    "VOX": 7738,
+    "SUMAR": 902,
+    "x:PUM+J": 44,
+    "x:LB": 38,
+    "x:Recortes Cero": 19
+   },
+   "elected": {
+    "PP": 2
+   }
+  },
+  {
+   "id": "52",
+   "name": "Melilla",
+   "prov": "52",
+   "ccaa": "MEL",
+   "seats": 2,
+   "maxVotes": 2,
+   "votes": {
+    "PP": 13231,
+    "PSOE": 6058,
+    "VOX": 4025,
+    "x:CpM": 1336,
+    "SUMAR": 777,
+    "PACMA": 146,
+    "x:PUM+J": 34,
+    "x:Recortes Cero": 20
+   },
+   "elected": {
+    "PP": 2
+   }
+  },
+  {
+   "id": "MALLORCA",
+   "name": "Mallorca",
+   "prov": "07",
+   "ccaa": "BAL",
+   "seats": 3,
+   "maxVotes": 2,
+   "votes": {
+    "PP": 139605,
+    "PSOE": 116983,
+    "SUMAR": 57931,
+    "VOX": 53489,
+    "PACMA": 4568,
+    "x:Recortes Cero": 657,
+    "x:PCTE": 576
+   },
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "MENORCA",
+   "name": "Menorca",
+   "prov": "07",
+   "ccaa": "BAL",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "PP": 16222,
+    "PSOE": 15156,
+    "SUMAR": 8870,
+    "VOX": 3577,
+    "x:Recortes Cero": 249
+   },
+   "elected": {
+    "PP": 1
+   }
+  },
+  {
+   "id": "IBIZA",
+   "name": "Ibiza-Formentera",
+   "prov": "07",
+   "ccaa": "BAL",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "PSOE": 26389,
+    "PP": 23472,
+    "VOX": 6607,
+    "x:Recortes Cero": 577
+   },
+   "elected": {
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "GCANARIA",
+   "name": "Gran Canaria",
+   "prov": "35",
+   "ccaa": "CAN",
+   "seats": 3,
+   "maxVotes": 2,
+   "votes": {
+    "PSOE": 146416,
+    "PP": 119665,
+    "SUMAR": 30692,
+    "NC": 28023,
+    "CC": 27326,
+    "VOX": 25559,
+    "PACMA": 3311,
+    "x:ANC–UP–PCPC": 801,
+    "x:PUM+J": 433,
+    "x:Recortes Cero": 265
+   },
+   "elected": {
+    "PSOE": 2,
+    "PP": 1
+   }
+  },
+  {
+   "id": "FUERTEV",
+   "name": "Fuerteventura",
+   "prov": "35",
+   "ccaa": "CAN",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "PSOE": 10878,
+    "PP": 8924,
+    "CC": 8,
+    "VOX": 4390,
+    "SUMAR": 3397,
+    "NC": 2650,
+    "PACMA": 289,
+    "x:ANC–UP–PCPC": 79,
+    "x:Recortes Cero": 22
+   },
+   "elected": {
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "LANZAROTE",
+   "name": "Lanzarote",
+   "prov": "35",
+   "ccaa": "CAN",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "PSOE": 21618,
+    "PP": 13822,
+    "CC": 7449,
+    "VOX": 5663,
+    "SUMAR": 5505,
+    "NC": 1332,
+    "x:Recortes Cero": 118
+   },
+   "elected": {
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "TENERIFE",
+   "name": "Tenerife",
+   "prov": "38",
+   "ccaa": "CAN",
+   "seats": 3,
+   "maxVotes": 2,
+   "votes": {
+    "PSOE": 142840,
+    "PP": 119994,
+    "CC": 61642,
+    "VOX": 40731,
+    "SUMAR": 36244,
+    "PACMA": 5302,
+    "NC": 3016,
+    "x:ANC–UP–PCPC": 761,
+    "x:Recortes Cero": 305
+   },
+   "elected": {
+    "PSOE": 2,
+    "PP": 1
+   }
+  },
+  {
+   "id": "LAPALMA",
+   "name": "La Palma",
+   "prov": "38",
+   "ccaa": "CAN",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "PSOE": 12912,
+    "PP": 12685,
+    "CC": 11090,
+    "SUMAR": 2282,
+    "VOX": 2254,
+    "PACMA": 282,
+    "NC": 269,
+    "x:ANC–UP–PCPC": 52,
+    "x:Recortes Cero": 32
+   },
+   "elected": {
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "GOMERA",
+   "name": "La Gomera",
+   "prov": "38",
+   "ccaa": "CAN",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "ASG": 3996,
+    "PSOE": 3096,
+    "PP": 1747,
+    "CC": 766,
+    "VOX": 572,
+    "x:ANC–UP–PCPC": 139,
+    "x:Recortes Cero": 54
+   },
+   "elected": {
+    "ASG": 1
+   }
+  },
+  {
+   "id": "HIERRO",
+   "name": "El Hierro",
+   "prov": "38",
+   "ccaa": "CAN",
+   "seats": 1,
+   "maxVotes": 1,
+   "votes": {
+    "AHI": 2189,
+    "PSOE": 1759,
+    "PP": 1173,
+    "x:AH": 360,
+    "VOX": 262,
+    "x:ANC–UP–PCPC": 68,
+    "x:Recortes Cero": 24
+   },
+   "elected": {
+    "AHI": 1
+   }
+  }
+ ]
+}

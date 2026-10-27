@@ -1,0 +1,654 @@
+{
+ "source": "en.wikipedia (Results of the 2024 European Parliament election in Spain)",
+ "unit": "% sobre válidos, 1 decimal",
+ "provinces": [
+  {
+   "id": "15",
+   "name": "A Coruña",
+   "pct": {
+    "PP": 43.2,
+    "PSOE": 26,
+    "VOX": 4.5,
+    "SUMAR": 2.2,
+    "SALF": 2,
+    "PODEMOS": 2.2,
+    "BNG": 17.1
+   }
+  },
+  {
+   "id": "01",
+   "name": "Álava",
+   "pct": {
+    "PP": 17.6,
+    "PSOE": 28.8,
+    "VOX": 3.9,
+    "SUMAR": 3.8,
+    "SALF": 2.3,
+    "PODEMOS": 3.6,
+    "BILDU": 21.4,
+    "PNV": 15.2
+   }
+  },
+  {
+   "id": "02",
+   "name": "Albacete",
+   "pct": {
+    "PP": 42.6,
+    "PSOE": 31.1,
+    "VOX": 11.4,
+    "SUMAR": 3.2,
+    "SALF": 5.7,
+    "PODEMOS": 2.3
+   }
+  },
+  {
+   "id": "03",
+   "name": "Alicante",
+   "pct": {
+    "PP": 38.2,
+    "PSOE": 31.3,
+    "VOX": 11.7,
+    "SUMAR": 5.6,
+    "SALF": 6,
+    "PODEMOS": 2.6,
+    "ERC": 0.3
+   }
+  },
+  {
+   "id": "04",
+   "name": "Almería",
+   "pct": {
+    "PP": 42.8,
+    "PSOE": 26.8,
+    "VOX": 15.2,
+    "SUMAR": 2.8,
+    "SALF": 7,
+    "PODEMOS": 1.8
+   }
+  },
+  {
+   "id": "33",
+   "name": "Asturias",
+   "pct": {
+    "PP": 36.9,
+    "PSOE": 35.1,
+    "VOX": 10,
+    "SUMAR": 5.9,
+    "SALF": 3.3,
+    "PODEMOS": 3.8
+   }
+  },
+  {
+   "id": "05",
+   "name": "Ávila",
+   "pct": {
+    "PP": 49.3,
+    "PSOE": 26.2,
+    "VOX": 11.5,
+    "SUMAR": 2.5,
+    "SALF": 4.2,
+    "PODEMOS": 2.1
+   }
+  },
+  {
+   "id": "06",
+   "name": "Badajoz",
+   "pct": {
+    "PP": 41.5,
+    "PSOE": 36.7,
+    "VOX": 9.9,
+    "SUMAR": 2.5,
+    "SALF": 3.6,
+    "PODEMOS": 2.1
+   }
+  },
+  {
+   "id": "07",
+   "name": "Baleares",
+   "pct": {
+    "PP": 35.8,
+    "PSOE": 28.9,
+    "VOX": 11.2,
+    "SUMAR": 4.4,
+    "SALF": 5.3,
+    "PODEMOS": 3.1
+   }
+  },
+  {
+   "id": "08",
+   "name": "Barcelona",
+   "pct": {
+    "PP": 14.3,
+    "PSOE": 32.1,
+    "VOX": 6,
+    "SUMAR": 4.8,
+    "SALF": 2.8,
+    "PODEMOS": 5.1,
+    "JUNTS": 15.8,
+    "ERC": 14.1
+   }
+  },
+  {
+   "id": "48",
+   "name": "Bizkaia",
+   "pct": {
+    "PP": 11.7,
+    "PSOE": 26.5,
+    "VOX": 2.7,
+    "SUMAR": 3.3,
+    "SALF": 1.8,
+    "PODEMOS": 3.2,
+    "BILDU": 22.7,
+    "PNV": 25.5
+   }
+  },
+  {
+   "id": "09",
+   "name": "Burgos",
+   "pct": {
+    "PP": 42.7,
+    "PSOE": 31.3,
+    "VOX": 10,
+    "SUMAR": 3.4,
+    "SALF": 4,
+    "PODEMOS": 2.6
+   }
+  },
+  {
+   "id": "10",
+   "name": "Cáceres",
+   "pct": {
+    "PP": 41.2,
+    "PSOE": 36.4,
+    "VOX": 10.1,
+    "SUMAR": 2.5,
+    "SALF": 3.2,
+    "PODEMOS": 2.5
+   }
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "pct": {
+    "PP": 36.8,
+    "PSOE": 31.8,
+    "VOX": 10.8,
+    "SUMAR": 5.6,
+    "SALF": 6.5,
+    "PODEMOS": 2.9
+   }
+  },
+  {
+   "id": "39",
+   "name": "Cantabria",
+   "pct": {
+    "PP": 42.8,
+    "PSOE": 31,
+    "VOX": 9.9,
+    "SUMAR": 3.2,
+    "SALF": 5.7,
+    "PODEMOS": 2.7
+   }
+  },
+  {
+   "id": "12",
+   "name": "Castellón",
+   "pct": {
+    "PP": 36.1,
+    "PSOE": 31.9,
+    "VOX": 11.8,
+    "SUMAR": 7.3,
+    "SALF": 5.1,
+    "PODEMOS": 2.7,
+    "ERC": 0.6
+   }
+  },
+  {
+   "id": "51",
+   "name": "Ceuta",
+   "pct": {
+    "PP": 36.5,
+    "PSOE": 32.2,
+    "VOX": 16.7,
+    "SUMAR": 1.6,
+    "SALF": 7.8,
+    "PODEMOS": 2
+   }
+  },
+  {
+   "id": "13",
+   "name": "Ciudad Real",
+   "pct": {
+    "PP": 43.7,
+    "PSOE": 32.9,
+    "VOX": 11.7,
+    "SUMAR": 2.6,
+    "SALF": 4.1,
+    "PODEMOS": 1.8
+   }
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "pct": {
+    "PP": 39.7,
+    "PSOE": 31.4,
+    "VOX": 10.2,
+    "SUMAR": 6.5,
+    "SALF": 5.3,
+    "PODEMOS": 2.6
+   }
+  },
+  {
+   "id": "16",
+   "name": "Cuenca",
+   "pct": {
+    "PP": 41.7,
+    "PSOE": 33.9,
+    "VOX": 12.2,
+    "SUMAR": 2.6,
+    "SALF": 3.9,
+    "PODEMOS": 1.9
+   }
+  },
+  {
+   "id": "20",
+   "name": "Gipuzkoa",
+   "pct": {
+    "PP": 8.7,
+    "PSOE": 24,
+    "VOX": 2.1,
+    "SUMAR": 3,
+    "SALF": 1.4,
+    "PODEMOS": 3,
+    "BILDU": 34.4,
+    "PNV": 20.6
+   }
+  },
+  {
+   "id": "17",
+   "name": "Girona",
+   "pct": {
+    "PP": 9.5,
+    "PSOE": 23.3,
+    "VOX": 5.7,
+    "SUMAR": 3,
+    "SALF": 2.2,
+    "PODEMOS": 3.2,
+    "JUNTS": 32.1,
+    "ERC": 16.2
+   }
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "pct": {
+    "PP": 38.3,
+    "PSOE": 32,
+    "VOX": 11.6,
+    "SUMAR": 4.8,
+    "SALF": 6,
+    "PODEMOS": 3
+   }
+  },
+  {
+   "id": "19",
+   "name": "Guadalajara",
+   "pct": {
+    "PP": 37.2,
+    "PSOE": 29.7,
+    "VOX": 14.5,
+    "SUMAR": 4.2,
+    "SALF": 6.5,
+    "PODEMOS": 3.1
+   }
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "pct": {
+    "PP": 38.4,
+    "PSOE": 35.3,
+    "VOX": 10.2,
+    "SUMAR": 4.2,
+    "SALF": 4.9,
+    "PODEMOS": 2.4
+   }
+  },
+  {
+   "id": "22",
+   "name": "Huesca",
+   "pct": {
+    "PP": 37.6,
+    "PSOE": 31.8,
+    "VOX": 11.3,
+    "SUMAR": 4.8,
+    "SALF": 4.7,
+    "PODEMOS": 2.8
+   }
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "pct": {
+    "PP": 39.7,
+    "PSOE": 35.4,
+    "VOX": 10.9,
+    "SUMAR": 3.5,
+    "SALF": 4.4,
+    "PODEMOS": 1.9
+   }
+  },
+  {
+   "id": "26",
+   "name": "La Rioja",
+   "pct": {
+    "PP": 44.6,
+    "PSOE": 32.6,
+    "VOX": 8.8,
+    "SUMAR": 3.3,
+    "SALF": 3.7,
+    "PODEMOS": 2.4
+   }
+  },
+  {
+   "id": "35",
+   "name": "Las Palmas",
+   "pct": {
+    "PP": 30.2,
+    "PSOE": 31.6,
+    "VOX": 12.9,
+    "SUMAR": 4.6,
+    "SALF": 6.8,
+    "PODEMOS": 3.4,
+    "CC": 6.5
+   }
+  },
+  {
+   "id": "24",
+   "name": "León",
+   "pct": {
+    "PP": 41.7,
+    "PSOE": 33.8,
+    "VOX": 10.3,
+    "SUMAR": 2.8,
+    "SALF": 4,
+    "PODEMOS": 2.5
+   }
+  },
+  {
+   "id": "25",
+   "name": "Lleida",
+   "pct": {
+    "PP": 12.3,
+    "PSOE": 23.9,
+    "VOX": 6.1,
+    "SUMAR": 2.2,
+    "SALF": 2.3,
+    "PODEMOS": 2.2,
+    "JUNTS": 27.4,
+    "ERC": 19.3
+   }
+  },
+  {
+   "id": "27",
+   "name": "Lugo",
+   "pct": {
+    "PP": 49.8,
+    "PSOE": 25.8,
+    "VOX": 4.5,
+    "SUMAR": 1.2,
+    "SALF": 1.7,
+    "PODEMOS": 1.3,
+    "BNG": 12.9
+   }
+  },
+  {
+   "id": "28",
+   "name": "Madrid",
+   "pct": {
+    "PP": 40.7,
+    "PSOE": 28.2,
+    "VOX": 10.7,
+    "SUMAR": 5.8,
+    "SALF": 5.1,
+    "PODEMOS": 4.5
+   }
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "pct": {
+    "PP": 38.7,
+    "PSOE": 29.5,
+    "VOX": 11.4,
+    "SUMAR": 5,
+    "SALF": 7.4,
+    "PODEMOS": 2.8
+   }
+  },
+  {
+   "id": "52",
+   "name": "Melilla",
+   "pct": {
+    "PP": 40,
+    "PSOE": 33.7,
+    "VOX": 14.1,
+    "SUMAR": 1.7,
+    "SALF": 5.9,
+    "PODEMOS": 1.6
+   }
+  },
+  {
+   "id": "30",
+   "name": "Murcia",
+   "pct": {
+    "PP": 42.9,
+    "PSOE": 25.1,
+    "VOX": 15.9,
+    "SUMAR": 3.3,
+    "SALF": 6.6,
+    "PODEMOS": 2.4
+   }
+  },
+  {
+   "id": "31",
+   "name": "Navarra",
+   "pct": {
+    "PP": 28,
+    "PSOE": 28.8,
+    "VOX": 6.7,
+    "SUMAR": 3.9,
+    "SALF": 3.1,
+    "PODEMOS": 3.2,
+    "BILDU": 18.7
+   }
+  },
+  {
+   "id": "32",
+   "name": "Ourense",
+   "pct": {
+    "PP": 51,
+    "PSOE": 25.8,
+    "VOX": 4.5,
+    "SUMAR": 1.2,
+    "SALF": 1.8,
+    "PODEMOS": 1.2,
+    "BNG": 11.7
+   }
+  },
+  {
+   "id": "34",
+   "name": "Palencia",
+   "pct": {
+    "PP": 44.4,
+    "PSOE": 32.2,
+    "VOX": 10.6,
+    "SUMAR": 2.6,
+    "SALF": 4,
+    "PODEMOS": 1.9
+   }
+  },
+  {
+   "id": "36",
+   "name": "Pontevedra",
+   "pct": {
+    "PP": 39.5,
+    "PSOE": 28.9,
+    "VOX": 4.2,
+    "SUMAR": 2.6,
+    "SALF": 2.3,
+    "PODEMOS": 2.2,
+    "BNG": 17.4
+   }
+  },
+  {
+   "id": "37",
+   "name": "Salamanca",
+   "pct": {
+    "PP": 49.7,
+    "PSOE": 27.6,
+    "VOX": 10.2,
+    "SUMAR": 2.3,
+    "SALF": 3.7,
+    "PODEMOS": 2.2
+   }
+  },
+  {
+   "id": "38",
+   "name": "Santa Cruz de Tenerife",
+   "pct": {
+    "PP": 28.4,
+    "PSOE": 29.3,
+    "VOX": 11,
+    "SUMAR": 3.4,
+    "SALF": 5.9,
+    "PODEMOS": 3.5,
+    "CC": 14.2
+   }
+  },
+  {
+   "id": "40",
+   "name": "Segovia",
+   "pct": {
+    "PP": 45.5,
+    "PSOE": 28.8,
+    "VOX": 10.5,
+    "SUMAR": 3.4,
+    "SALF": 4.4,
+    "PODEMOS": 2.5
+   }
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "pct": {
+    "PP": 34.7,
+    "PSOE": 34.4,
+    "VOX": 9.6,
+    "SUMAR": 6,
+    "SALF": 6.3,
+    "PODEMOS": 3.5
+   }
+  },
+  {
+   "id": "42",
+   "name": "Soria",
+   "pct": {
+    "PP": 42.3,
+    "PSOE": 28.8,
+    "VOX": 9.6,
+    "SUMAR": 2.1,
+    "SALF": 3.1,
+    "PODEMOS": 2
+   }
+  },
+  {
+   "id": "43",
+   "name": "Tarragona",
+   "pct": {
+    "PP": 14.8,
+    "PSOE": 28.9,
+    "VOX": 7.9,
+    "SUMAR": 2.9,
+    "SALF": 3.4,
+    "PODEMOS": 3,
+    "JUNTS": 17.7,
+    "ERC": 16.8
+   }
+  },
+  {
+   "id": "44",
+   "name": "Teruel",
+   "pct": {
+    "PP": 37,
+    "PSOE": 28.6,
+    "VOX": 11.2,
+    "SUMAR": 3,
+    "SALF": 4.6,
+    "PODEMOS": 1.8
+   }
+  },
+  {
+   "id": "45",
+   "name": "Toledo",
+   "pct": {
+    "PP": 40.8,
+    "PSOE": 31.3,
+    "VOX": 14.4,
+    "SUMAR": 3,
+    "SALF": 4.9,
+    "PODEMOS": 2.2
+   }
+  },
+  {
+   "id": "46",
+   "name": "Valencia",
+   "pct": {
+    "PP": 34.4,
+    "PSOE": 31.5,
+    "VOX": 11.3,
+    "SUMAR": 8.9,
+    "SALF": 5.8,
+    "PODEMOS": 3.4,
+    "ERC": 0.5
+   }
+  },
+  {
+   "id": "47",
+   "name": "Valladolid",
+   "pct": {
+    "PP": 42.6,
+    "PSOE": 30.5,
+    "VOX": 11.2,
+    "SUMAR": 3.6,
+    "SALF": 4.5,
+    "PODEMOS": 2.7
+   }
+  },
+  {
+   "id": "49",
+   "name": "Zamora",
+   "pct": {
+    "PP": 46.9,
+    "PSOE": 30.4,
+    "VOX": 10.3,
+    "SUMAR": 1.9,
+    "SALF": 3.3,
+    "PODEMOS": 1.8
+   }
+  },
+  {
+   "id": "50",
+   "name": "Zaragoza",
+   "pct": {
+    "PP": 37,
+    "PSOE": 30.2,
+    "VOX": 11.6,
+    "SUMAR": 5.5,
+    "SALF": 5.2,
+    "PODEMOS": 3.3
+   }
+  }
+ ]
+}

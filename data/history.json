@@ -1,0 +1,55 @@
+[
+ {
+  "t": "2026-10-27T04:01:47.088Z",
+  "latestPoll": "2026-10-25",
+  "media": {
+   "derecha": 198.1,
+   "investidura": 142.7,
+   "pMayoriaDerecha": 0.9962,
+   "pJunts": 0.001,
+   "pSenado35": 0.5116
+  },
+  "cis": {
+   "derecha": 181.7,
+   "investidura": 157.3,
+   "pMayoriaDerecha": 0.7626,
+   "pJunts": 0.0658,
+   "pSenado35": 0.2586
+  },
+  "scenarios": {
+   "PODEMOS_SEPARADO": 1,
+   "SENADO_PROGRESO": 1,
+   "TERUEL_sin_FA_CHA": 1,
+   "FA_retira_pequenas": 0.15,
+   "VOX_retira_senado": 0.5,
+   "VOTO_EXTERIOR": 0
+  }
+ },
+ {
+  "t": "2026-10-27T04:07:54.355Z",
+  "latestPoll": "2026-10-25",
+  "media": {
+   "derecha": 198.5,
+   "investidura": 142.3,
+   "pMayoriaDerecha": 0.995,
+   "pJunts": 0.001,
+   "pSenado35": 0.3968
+  },
+  "cis": {
+   "derecha": 182,
+   "investidura": 157.1,
+   "pMayoriaDerecha": 0.7718,
+   "pJunts": 0.0662,
+   "pSenado35": 0.0178
+  },
+  "scenarios": {
+   "PODEMOS_SEPARADO": 1,
+   "SENADO_PROGRESO": 1,
+   "TERUEL_sin_FA_CHA": 1,
+   "FA_retira_pequenas": 0,
+   "PACTO_PP_VOX_SENADO": 1,
+   "VOX_retira_senado": 0,
+   "VOTO_EXTERIOR": 0
+  }
+ }
+]

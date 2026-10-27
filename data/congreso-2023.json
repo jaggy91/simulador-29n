@@ -1,0 +1,1339 @@
+{
+ "source": "en.wikipedia (constituency articles)",
+ "provinces": [
+  {
+   "id": "01",
+   "name": "Álava",
+   "ccaa": "PV",
+   "seats": 4,
+   "votes": {
+    "PSOE": 46775,
+    "BILDU": 32987,
+    "PP": 30212,
+    "PNV": 28075,
+    "SUMAR": 21561,
+    "VOX": 6573,
+    "PACMA": 773,
+    "x:EB": 619,
+    "x:FO": 354,
+    "x:Recortes Cero": 185,
+    "x:PCTE/ELAK": 165,
+    "x:PUM+J": 106
+   },
+   "blank": 722,
+   "valid": 169107,
+   "elected": {
+    "PSOE": 1,
+    "BILDU": 1,
+    "PP": 1,
+    "PNV": 1
+   }
+  },
+  {
+   "id": "02",
+   "name": "Albacete",
+   "ccaa": "CLM",
+   "seats": 4,
+   "votes": {
+    "PP": 88299,
+    "PSOE": 76322,
+    "VOX": 36750,
+    "SUMAR": 15834,
+    "PACMA": 1261,
+    "x:FO": 381,
+    "x:PUM+J": 325,
+    "x:Recortes Cero": 185
+   },
+   "blank": 1834,
+   "valid": 221191,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "03",
+   "name": "Alicante",
+   "ccaa": "VAL",
+   "seats": 12,
+   "votes": {
+    "PP": 330293,
+    "PSOE": 287737,
+    "VOX": 146133,
+    "SUMAR": 115787,
+    "PACMA": 7335,
+    "x:FO": 1724,
+    "x:Partido Autónomos": 1446,
+    "x:Recortes Cero": 1135,
+    "x:CJ": 1027
+   },
+   "blank": 6575,
+   "valid": 899192,
+   "elected": {
+    "PP": 5,
+    "PSOE": 4,
+    "VOX": 2,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "04",
+   "name": "Almería",
+   "ccaa": "AND",
+   "seats": 6,
+   "votes": {
+    "PP": 131524,
+    "PSOE": 93282,
+    "VOX": 68364,
+    "SUMAR": 21485,
+    "PACMA": 1962,
+    "x:ALM": 874,
+    "x:FO": 500,
+    "x:PUM+J": 371,
+    "x:LB": 210,
+    "x:Recortes Cero": 206
+   },
+   "blank": 2464,
+   "valid": 321242,
+   "elected": {
+    "PP": 3,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "05",
+   "name": "Ávila",
+   "ccaa": "CYL",
+   "seats": 3,
+   "votes": {
+    "PP": 42369,
+    "PSOE": 26828,
+    "VOX": 15068,
+    "XAV": 7362,
+    "SUMAR": 5027,
+    "PACMA": 275,
+    "x:FO": 100,
+    "x:PUM+J": 91,
+    "x:PCTE": 85,
+    "x:FE de las JONS": 77,
+    "x:Recortes Cero": 42
+   },
+   "blank": 632,
+   "valid": 97956,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "06",
+   "name": "Badajoz",
+   "ccaa": "EXT",
+   "seats": 5,
+   "votes": {
+    "PSOE": 153473,
+    "PP": 148068,
+    "VOX": 53492,
+    "SUMAR": 26778,
+    "x:BQEx": 3885,
+    "PACMA": 1395,
+    "x:FO": 477,
+    "x:PUM+J": 464,
+    "x:Recortes Cero": 204
+   },
+   "blank": 3225,
+   "valid": 391461,
+   "elected": {
+    "PSOE": 2,
+    "PP": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "07",
+   "name": "Baleares",
+   "ccaa": "BAL",
+   "seats": 8,
+   "votes": {
+    "PP": 179303,
+    "PSOE": 151786,
+    "SUMAR": 83487,
+    "VOX": 76547,
+    "PACMA": 4969,
+    "x:FO": 1039,
+    "x:Recortes Cero": 726,
+    "x:PCTE": 719
+   },
+   "blank": 4704,
+   "valid": 503280,
+   "elected": {
+    "PP": 3,
+    "PSOE": 3,
+    "SUMAR": 1,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "08",
+   "name": "Barcelona",
+   "ccaa": "CAT",
+   "seats": 32,
+   "votes": {
+    "PSOE": 952347,
+    "SUMAR": 405993,
+    "PP": 367519,
+    "ERC": 328697,
+    "JUNTS": 258159,
+    "VOX": 201775,
+    "CUP": 67266,
+    "PACMA": 28201,
+    "x:PDeCAT–E–CiU": 24452,
+    "x:FO": 6048,
+    "x:Recortes Cero": 3104,
+    "x:PCTC": 2858
+   },
+   "blank": 21059,
+   "valid": 2667478,
+   "elected": {
+    "PSOE": 13,
+    "SUMAR": 5,
+    "PP": 5,
+    "ERC": 4,
+    "JUNTS": 3,
+    "VOX": 2
+   }
+  },
+  {
+   "id": "09",
+   "name": "Burgos",
+   "ccaa": "CYL",
+   "seats": 4,
+   "votes": {
+    "PP": 82329,
+    "PSOE": 69775,
+    "VOX": 25858,
+    "SUMAR": 17508,
+    "x:VB": 1774,
+    "x:EV–PCAS–TC": 1184,
+    "PACMA": 943,
+    "x:FO": 490,
+    "x:PUM+J": 354,
+    "x:PCTE": 349,
+    "x:Recortes Cero": 154
+   },
+   "blank": 1851,
+   "valid": 202569,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "10",
+   "name": "Cáceres",
+   "ccaa": "EXT",
+   "seats": 4,
+   "votes": {
+    "PSOE": 91692,
+    "PP": 89633,
+    "VOX": 32076,
+    "SUMAR": 16354,
+    "x:BQEx": 1922,
+    "x:Somos Cc": 963,
+    "PACMA": 814,
+    "x:FO": 316,
+    "x:PUM+J": 249,
+    "x:Recortes Cero": 111
+   },
+   "blank": 1721,
+   "valid": 235851,
+   "elected": {
+    "PSOE": 2,
+    "PP": 2
+   }
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "ccaa": "AND",
+   "seats": 9,
+   "votes": {
+    "PP": 221703,
+    "PSOE": 211200,
+    "VOX": 96720,
+    "SUMAR": 82115,
+    "AA": 9191,
+    "PACMA": 5937,
+    "x:FO": 1225,
+    "x:CJ": 745,
+    "x:PUM+J": 673,
+    "x:Recortes Cero": 486
+   },
+   "blank": 7103,
+   "valid": 637098,
+   "elected": {
+    "PP": 4,
+    "PSOE": 3,
+    "VOX": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "12",
+   "name": "Castellón",
+   "ccaa": "VAL",
+   "seats": 5,
+   "votes": {
+    "PP": 108302,
+    "PSOE": 100530,
+    "VOX": 48913,
+    "SUMAR": 44187,
+    "PACMA": 1968,
+    "x:FO": 721,
+    "x:Recortes Cero": 493,
+    "x:FE de las JONS": 161
+   },
+   "blank": 2655,
+   "valid": 307930,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "13",
+   "name": "Ciudad Real",
+   "ccaa": "CLM",
+   "seats": 5,
+   "votes": {
+    "PP": 114709,
+    "PSOE": 100102,
+    "VOX": 46046,
+    "SUMAR": 17405,
+    "PACMA": 1319,
+    "x:FO": 447,
+    "x:PUM+J": 365,
+    "x:Recortes Cero": 233
+   },
+   "blank": 2353,
+   "valid": 282979,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "ccaa": "AND",
+   "seats": 6,
+   "votes": {
+    "PP": 169976,
+    "PSOE": 144080,
+    "VOX": 62526,
+    "SUMAR": 61594,
+    "PACMA": 2699,
+    "x:EB": 942,
+    "x:PCTE": 746,
+    "x:FO": 701,
+    "x:PUM+J": 598,
+    "x:Recortes Cero": 392
+   },
+   "blank": 4348,
+   "valid": 448602,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "15",
+   "name": "A Coruña",
+   "ccaa": "GAL",
+   "seats": 8,
+   "votes": {
+    "PP": 292272,
+    "PSOE": 190897,
+    "SUMAR": 82618,
+    "BNG": 67653,
+    "VOX": 34410,
+    "PACMA": 3096,
+    "x:FO": 1011,
+    "x:Recortes Cero": 548
+   },
+   "blank": 5197,
+   "valid": 677702,
+   "elected": {
+    "PP": 4,
+    "PSOE": 2,
+    "SUMAR": 1,
+    "BNG": 1
+   }
+  },
+  {
+   "id": "16",
+   "name": "Cuenca",
+   "ccaa": "CLM",
+   "seats": 3,
+   "votes": {
+    "PP": 45255,
+    "PSOE": 42528,
+    "VOX": 17700,
+    "SUMAR": 6325,
+    "PACMA": 387,
+    "x:FO": 207,
+    "x:EB": 168,
+    "x:PUM+J": 111,
+    "x:PCTE": 100,
+    "x:Recortes Cero": 58
+   },
+   "blank": 969,
+   "valid": 113808,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "17",
+   "name": "Girona",
+   "ccaa": "CAT",
+   "seats": 6,
+   "votes": {
+    "PSOE": 93448,
+    "JUNTS": 63251,
+    "ERC": 47531,
+    "SUMAR": 35344,
+    "PP": 31341,
+    "VOX": 22706,
+    "CUP": 18229,
+    "PACMA": 3531,
+    "x:PDeCAT–E–CiU": 3388,
+    "x:FO": 570,
+    "x:PCTC": 420,
+    "x:Recortes Cero": 248
+   },
+   "blank": 2981,
+   "valid": 322988,
+   "elected": {
+    "PSOE": 2,
+    "JUNTS": 2,
+    "ERC": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "ccaa": "AND",
+   "seats": 7,
+   "votes": {
+    "PP": 185996,
+    "PSOE": 165862,
+    "VOX": 81080,
+    "SUMAR": 58567,
+    "PACMA": 3143,
+    "x:JxG": 1218,
+    "x:PUM+J": 765,
+    "x:PCTE": 695,
+    "x:FO": 658,
+    "x:CJ": 461,
+    "x:Recortes Cero": 343
+   },
+   "blank": 4057,
+   "valid": 502845,
+   "elected": {
+    "PP": 3,
+    "PSOE": 2,
+    "VOX": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "19",
+   "name": "Guadalajara",
+   "ccaa": "CLM",
+   "seats": 3,
+   "votes": {
+    "PP": 51195,
+    "PSOE": 46479,
+    "VOX": 27126,
+    "SUMAR": 12907,
+    "PACMA": 1039,
+    "x:FO": 304,
+    "x:PUM+J": 249,
+    "x:PCTE": 191,
+    "x:Recortes Cero": 162,
+    "x:FE de las JONS": 118
+   },
+   "blank": 1143,
+   "valid": 140913,
+   "elected": {
+    "PP": 1,
+    "PSOE": 1,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "20",
+   "name": "Gipuzkoa",
+   "ccaa": "PV",
+   "seats": 6,
+   "votes": {
+    "BILDU": 117321,
+    "PSOE": 87709,
+    "PNV": 85026,
+    "SUMAR": 40081,
+    "PP": 32721,
+    "VOX": 7877,
+    "PACMA": 1568,
+    "x:EB": 933,
+    "x:FO": 530,
+    "x:Recortes Cero": 442,
+    "x:PCTE/ELAK": 259,
+    "x:PUM+J": 149
+   },
+   "blank": 2005,
+   "valid": 376621,
+   "elected": {
+    "BILDU": 2,
+    "PSOE": 2,
+    "PNV": 2
+   }
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "ccaa": "AND",
+   "seats": 5,
+   "votes": {
+    "PP": 93565,
+    "PSOE": 92326,
+    "VOX": 37572,
+    "SUMAR": 26752,
+    "x:XH": 1931,
+    "PACMA": 1663,
+    "x:PUM+J": 368,
+    "x:Recortes Cero": 217
+   },
+   "blank": 2410,
+   "valid": 256804,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "22",
+   "name": "Huesca",
+   "ccaa": "ARA",
+   "seats": 3,
+   "votes": {
+    "PP": 45783,
+    "PSOE": 40307,
+    "VOX": 15155,
+    "SUMAR": 13774,
+    "EXISTE": 1312,
+    "x:PAR": 717,
+    "PACMA": 498,
+    "x:EB": 475,
+    "x:FO": 258,
+    "x:PCTE": 137,
+    "x:PUM+J": 114,
+    "x:FIA": 84,
+    "x:Recortes Cero": 64
+   },
+   "blank": 1217,
+   "valid": 119895,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "ccaa": "AND",
+   "seats": 5,
+   "votes": {
+    "PP": 137617,
+    "PSOE": 133819,
+    "VOX": 54400,
+    "SUMAR": 29461,
+    "x:JM+": 8293,
+    "PACMA": 1671,
+    "x:FO": 410,
+    "x:PUM+J": 360,
+    "x:Recortes Cero": 203
+   },
+   "blank": 2497,
+   "valid": 368731,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "24",
+   "name": "León",
+   "ccaa": "CYL",
+   "seats": 4,
+   "votes": {
+    "PP": 101605,
+    "PSOE": 92578,
+    "VOX": 35451,
+    "UPL": 22675,
+    "SUMAR": 18577,
+    "PACMA": 895,
+    "x:FO": 541,
+    "x:España Vaciada": 486,
+    "x:PCTE": 319,
+    "x:PREPAL": 309,
+    "x:PUM+J": 155,
+    "x:Recortes Cero": 72
+   },
+   "blank": 1577,
+   "valid": 275240,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "25",
+   "name": "Lleida",
+   "ccaa": "CAT",
+   "seats": 4,
+   "votes": {
+    "PSOE": 54414,
+    "ERC": 34331,
+    "JUNTS": 33228,
+    "PP": 23699,
+    "SUMAR": 14561,
+    "VOX": 12560,
+    "CUP": 5449,
+    "x:PDeCAT–E–CiU": 1865,
+    "PACMA": 1352,
+    "x:EB": 462,
+    "x:FO": 247,
+    "x:PCTC": 192,
+    "x:Recortes Cero": 120
+   },
+   "blank": 2059,
+   "valid": 184539,
+   "elected": {
+    "PSOE": 2,
+    "ERC": 1,
+    "JUNTS": 1
+   }
+  },
+  {
+   "id": "26",
+   "name": "La Rioja",
+   "ccaa": "RIO",
+   "seats": 4,
+   "votes": {
+    "PP": 79715,
+    "PSOE": 62322,
+    "VOX": 17056,
+    "SUMAR": 11470,
+    "PACMA": 723,
+    "x:EB": 608,
+    "x:FO": 295,
+    "x:3e": 286,
+    "x:PUM+J": 232,
+    "x:PCTE": 224,
+    "x:Recortes Cero": 124
+   },
+   "blank": 1608,
+   "valid": 174663,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2
+   }
+  },
+  {
+   "id": "27",
+   "name": "Lugo",
+   "ccaa": "GAL",
+   "seats": 4,
+   "votes": {
+    "PP": 99769,
+    "PSOE": 60163,
+    "BNG": 17197,
+    "SUMAR": 10287,
+    "VOX": 8643,
+    "PACMA": 645,
+    "x:FO": 233,
+    "x:PUM+J": 149,
+    "x:PCTG": 116,
+    "x:Recortes Cero": 113
+   },
+   "blank": 1251,
+   "valid": 198566,
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "28",
+   "name": "Madrid",
+   "ccaa": "MAD",
+   "seats": 37,
+   "votes": {
+    "PP": 1463183,
+    "PSOE": 1004599,
+    "SUMAR": 557780,
+    "VOX": 506164,
+    "PACMA": 21742,
+    "x:FO": 7652,
+    "x:PUM+J": 6749,
+    "x:Recortes Cero": 3784,
+    "x:PCTE": 3407,
+    "x:PH": 2902,
+    "x:FE de las JONS": 1751
+   },
+   "blank": 28960,
+   "valid": 3608673,
+   "elected": {
+    "PP": 16,
+    "PSOE": 10,
+    "SUMAR": 6,
+    "VOX": 5
+   }
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "ccaa": "AND",
+   "seats": 11,
+   "votes": {
+    "PP": 302000,
+    "PSOE": 239172,
+    "VOX": 129758,
+    "SUMAR": 96652,
+    "PACMA": 8487,
+    "x:FO": 1662,
+    "x:PUM+J": 1519,
+    "x:Recortes Cero": 888,
+    "x:CJ": 691
+   },
+   "blank": 7509,
+   "valid": 788338,
+   "elected": {
+    "PP": 5,
+    "PSOE": 3,
+    "VOX": 2,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "30",
+   "name": "Murcia",
+   "ccaa": "MUR",
+   "seats": 10,
+   "votes": {
+    "PP": 307972,
+    "PSOE": 189210,
+    "VOX": 163124,
+    "SUMAR": 71578,
+    "PACMA": 5063,
+    "x:Por Mi Región": 1698,
+    "x:EB": 1377,
+    "x:FO": 1201,
+    "x:Recortes Cero": 546,
+    "x:CJ": 453,
+    "x:FE de las JONS": 376,
+    "x:+RDS+": 165
+   },
+   "blank": 5034,
+   "valid": 747797,
+   "elected": {
+    "PP": 4,
+    "PSOE": 3,
+    "VOX": 2,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "31",
+   "name": "Navarra",
+   "ccaa": "NAV",
+   "seats": 5,
+   "votes": {
+    "PSOE": 93553,
+    "BILDU": 58954,
+    "PP": 57134,
+    "UPN": 52188,
+    "SUMAR": 43922,
+    "VOX": 19491,
+    "GBAI": 9938,
+    "PACMA": 1530,
+    "x:PUM+J": 1002,
+    "x:FO": 679,
+    "x:PCTE": 311,
+    "x:Recortes Cero": 252
+   },
+   "blank": 2890,
+   "valid": 341844,
+   "elected": {
+    "PSOE": 2,
+    "BILDU": 1,
+    "PP": 1,
+    "UPN": 1
+   }
+  },
+  {
+   "id": "32",
+   "name": "Ourense",
+   "ccaa": "GAL",
+   "seats": 4,
+   "votes": {
+    "PP": 93182,
+    "PSOE": 56035,
+    "BNG": 15317,
+    "SUMAR": 10171,
+    "VOX": 9080,
+    "PACMA": 700,
+    "x:FO": 182,
+    "x:CCD": 153,
+    "x:PUM+J": 144,
+    "x:PCTG": 101,
+    "x:Recortes Cero": 97
+   },
+   "blank": 1109,
+   "valid": 186271,
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "33",
+   "name": "Asturias",
+   "ccaa": "AST",
+   "seats": 7,
+   "votes": {
+    "PP": 212816,
+    "PSOE": 205049,
+    "SUMAR": 88630,
+    "VOX": 74571,
+    "PACMA": 3167,
+    "x:Asturias Existe EV": 2314,
+    "x:PCTE": 1598,
+    "x:FO": 1176,
+    "x:PUM+J": 773,
+    "x:Recortes Cero": 590,
+    "x:PUEDE": 269
+   },
+   "blank": 6079,
+   "valid": 597032,
+   "elected": {
+    "PP": 3,
+    "PSOE": 2,
+    "SUMAR": 1,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "34",
+   "name": "Palencia",
+   "ccaa": "CYL",
+   "seats": 3,
+   "votes": {
+    "PP": 40709,
+    "PSOE": 33613,
+    "VOX": 12504,
+    "SUMAR": 5877,
+    "x:VP": 1917,
+    "x:España Vaciada": 384,
+    "x:GIPTV": 366,
+    "PACMA": 295,
+    "x:FO": 139,
+    "x:PUM+J": 99,
+    "x:PCTE": 80,
+    "x:FE de las JONS": 71,
+    "x:Recortes Cero": 42,
+    "x:CJ": 33
+   },
+   "blank": 833,
+   "valid": 96962,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "35",
+   "name": "Las Palmas",
+   "ccaa": "CAN",
+   "seats": 8,
+   "votes": {
+    "PSOE": 175671,
+    "PP": 136857,
+    "VOX": 77343,
+    "SUMAR": 54369,
+    "NC": 42430,
+    "CC": 33558,
+    "PACMA": 3570,
+    "x:ANC–UP–PCPC": 883,
+    "x:FO": 635,
+    "x:PUM+J": 563,
+    "x:Recortes Cero": 396
+   },
+   "blank": 3062,
+   "valid": 529337,
+   "elected": {
+    "PSOE": 3,
+    "PP": 3,
+    "VOX": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "36",
+   "name": "Pontevedra",
+   "ccaa": "GAL",
+   "seats": 7,
+   "votes": {
+    "PP": 227658,
+    "PSOE": 179737,
+    "SUMAR": 75615,
+    "BNG": 53828,
+    "VOX": 27539,
+    "PACMA": 3003,
+    "x:FO": 884,
+    "x:Recortes Cero": 510,
+    "x:PCTG": 485
+   },
+   "blank": 3865,
+   "valid": 573124,
+   "elected": {
+    "PP": 3,
+    "PSOE": 3,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "37",
+   "name": "Salamanca",
+   "ccaa": "CYL",
+   "seats": 4,
+   "votes": {
+    "PP": 93318,
+    "PSOE": 60718,
+    "VOX": 29203,
+    "SUMAR": 11012,
+    "x:España Vaciada": 1062,
+    "PACMA": 631,
+    "x:PREPAL": 489,
+    "x:PCTE": 325,
+    "x:FO": 278,
+    "x:PUM+J": 205,
+    "x:CJ": 140,
+    "x:Recortes Cero": 80
+   },
+   "blank": 1649,
+   "valid": 199110,
+   "elected": {
+    "PP": 3,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "38",
+   "name": "Santa Cruz de Tenerife",
+   "ccaa": "CAN",
+   "seats": 7,
+   "votes": {
+    "PP": 174770,
+    "PSOE": 165590,
+    "CC": 82805,
+    "SUMAR": 53632,
+    "PACMA": 6147,
+    "NC": 3165,
+    "x:FO": 1619,
+    "x:ANC–UP–PCPC": 791,
+    "x:Recortes Cero": 766
+   },
+   "blank": 5088,
+   "valid": 494373,
+   "elected": {
+    "PP": 3,
+    "PSOE": 3,
+    "CC": 1
+   }
+  },
+  {
+   "id": "39",
+   "name": "Cantabria",
+   "ccaa": "CANT",
+   "seats": 5,
+   "votes": {
+    "PP": 147326,
+    "PSOE": 116596,
+    "VOX": 49243,
+    "SUMAR": 29713,
+    "PACMA": 2089,
+    "x:FO": 790,
+    "x:PCTE": 598,
+    "x:Recortes Cero": 533
+   },
+   "blank": 3262,
+   "valid": 350150,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "40",
+   "name": "Segovia",
+   "ccaa": "CYL",
+   "seats": 3,
+   "votes": {
+    "PP": 39894,
+    "PSOE": 27113,
+    "VOX": 12510,
+    "SUMAR": 7137,
+    "PACMA": 307,
+    "x:3e": 198,
+    "x:FO": 183,
+    "x:PUM+J": 136,
+    "x:CJ": 102,
+    "x:PCTE": 94,
+    "x:Recortes Cero": 64
+   },
+   "blank": 875,
+   "valid": 88613,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "ccaa": "AND",
+   "seats": 12,
+   "votes": {
+    "PSOE": 387760,
+    "PP": 353663,
+    "SUMAR": 148745,
+    "VOX": 141087,
+    "PACMA": 9288,
+    "x:FO": 1950,
+    "x:PUM+J": 1765,
+    "x:PCTE": 1522,
+    "x:Recortes Cero": 1034,
+    "x:CJ": 912,
+    "x:FE de las JONS": 681
+   },
+   "blank": 10951,
+   "valid": 1059358,
+   "elected": {
+    "PSOE": 5,
+    "PP": 4,
+    "SUMAR": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "42",
+   "name": "Soria",
+   "ccaa": "CYL",
+   "seats": 2,
+   "votes": {
+    "PP": 18895,
+    "PSOE": 14966,
+    "SY": 9697,
+    "VOX": 4978,
+    "SUMAR": 1711,
+    "PACMA": 94,
+    "x:FO": 68,
+    "x:PCTE": 43,
+    "x:PUM+J": 23,
+    "x:Recortes Cero": 9
+   },
+   "blank": 285,
+   "valid": 50769,
+   "elected": {
+    "PP": 1,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "43",
+   "name": "Tarragona",
+   "ccaa": "CAT",
+   "seats": 6,
+   "votes": {
+    "PSOE": 121126,
+    "ERC": 55461,
+    "PP": 51061,
+    "SUMAR": 41719,
+    "JUNTS": 40791,
+    "VOX": 38039,
+    "CUP": 8700,
+    "PACMA": 3797,
+    "x:PDeCAT–E–CiU": 2311,
+    "x:FO": 661,
+    "x:PCTC": 405,
+    "x:Recortes Cero": 267,
+    "x:EVR": 265,
+    "x:Unidos SI": 253
+   },
+   "blank": 3168,
+   "valid": 368024,
+   "elected": {
+    "PSOE": 2,
+    "ERC": 1,
+    "PP": 1,
+    "SUMAR": 1,
+    "JUNTS": 1
+   }
+  },
+  {
+   "id": "44",
+   "name": "Teruel",
+   "ccaa": "ARA",
+   "seats": 3,
+   "votes": {
+    "PP": 26586,
+    "PSOE": 22226,
+    "EXISTE": 11348,
+    "VOX": 9932,
+    "SUMAR": 4126,
+    "x:PAR": 711,
+    "PACMA": 172,
+    "x:EB": 135,
+    "x:FO": 94,
+    "x:PCTE": 60,
+    "x:Recortes Cero": 49,
+    "x:PUM+J": 36,
+    "x:FIA": 28
+   },
+   "blank": 410,
+   "valid": 75913,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "45",
+   "name": "Toledo",
+   "ccaa": "CLM",
+   "seats": 6,
+   "votes": {
+    "PP": 146533,
+    "PSOE": 126072,
+    "VOX": 76044,
+    "SUMAR": 31876,
+    "PACMA": 2024,
+    "x:FO": 985,
+    "x:PUM+J": 499,
+    "x:FE de las JONS": 281,
+    "x:Recortes Cero": 275
+   },
+   "blank": 2611,
+   "valid": 387200,
+   "elected": {
+    "PP": 3,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "46",
+   "name": "Valencia",
+   "ccaa": "VAL",
+   "seats": 16,
+   "votes": {
+    "PP": 483469,
+    "PSOE": 461353,
+    "SUMAR": 242839,
+    "VOX": 218657,
+    "PACMA": 10334,
+    "x:FO": 2919,
+    "x:PUM+J": 1778,
+    "x:Recortes Cero": 1773,
+    "x:EVB": 1442,
+    "x:CJ": 1056,
+    "x:FE de las JONS": 731
+   },
+   "blank": 10810,
+   "valid": 1437161,
+   "elected": {
+    "PP": 6,
+    "PSOE": 5,
+    "SUMAR": 3,
+    "VOX": 2
+   }
+  },
+  {
+   "id": "47",
+   "name": "Valladolid",
+   "ccaa": "CYL",
+   "seats": 5,
+   "votes": {
+    "PP": 129170,
+    "PSOE": 103596,
+    "VOX": 47948,
+    "SUMAR": 28049,
+    "x:España Vaciada": 1226,
+    "PACMA": 1105,
+    "x:FO": 601,
+    "x:EB": 583,
+    "x:UdCa": 463,
+    "x:PUM+J": 376,
+    "x:PCTE": 335,
+    "x:FE de las JONS": 164,
+    "x:Recortes Cero": 159,
+    "x:Fuerza Cívica": 115
+   },
+   "blank": 2419,
+   "valid": 316309,
+   "elected": {
+    "PP": 2,
+    "PSOE": 2,
+    "VOX": 1
+   }
+  },
+  {
+   "id": "48",
+   "name": "Bizkaia",
+   "ccaa": "PV",
+   "seats": 8,
+   "votes": {
+    "PNV": 164188,
+    "PSOE": 157448,
+    "BILDU": 125867,
+    "PP": 70533,
+    "SUMAR": 66592,
+    "VOX": 16069,
+    "PACMA": 2729,
+    "x:FO": 929,
+    "x:PUM+J": 804,
+    "x:PCTE/ELAK": 618,
+    "x:Recortes Cero": 525
+   },
+   "blank": 3391,
+   "valid": 609693,
+   "elected": {
+    "PNV": 2,
+    "PSOE": 2,
+    "BILDU": 2,
+    "PP": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "49",
+   "name": "Zamora",
+   "ccaa": "CYL",
+   "seats": 3,
+   "votes": {
+    "PP": 46196,
+    "PSOE": 33601,
+    "VOX": 13652,
+    "SUMAR": 5839,
+    "x:ZSí": 1843,
+    "UPL": 526,
+    "PACMA": 313,
+    "x:PREPAL": 166,
+    "x:FO": 121,
+    "x:PCTE": 100,
+    "x:PUM+J": 81,
+    "x:Recortes Cero": 50
+   },
+   "blank": 922,
+   "valid": 103410,
+   "elected": {
+    "PP": 2,
+    "PSOE": 1
+   }
+  },
+  {
+   "id": "50",
+   "name": "Zaragoza",
+   "ccaa": "ARA",
+   "seats": 7,
+   "votes": {
+    "PP": 186776,
+    "PSOE": 159858,
+    "VOX": 79376,
+    "SUMAR": 69925,
+    "EXISTE": 7780,
+    "x:PAR": 2745,
+    "PACMA": 2428,
+    "x:EB": 2146,
+    "x:FO": 1026,
+    "x:PCTE": 561,
+    "x:PUM+J": 419,
+    "x:FIA": 394,
+    "x:Recortes Cero": 306,
+    "x:FE de las JONS": 272
+   },
+   "blank": 4693,
+   "valid": 518705,
+   "elected": {
+    "PP": 3,
+    "PSOE": 2,
+    "VOX": 1,
+    "SUMAR": 1
+   }
+  },
+  {
+   "id": "51",
+   "name": "Ceuta",
+   "ccaa": "CEU",
+   "seats": 1,
+   "votes": {
+    "PP": 12918,
+    "PSOE": 11332,
+    "VOX": 7752,
+    "SUMAR": 821,
+    "x:FO": 53,
+    "x:LB": 53,
+    "x:Recortes Cero": 33,
+    "x:PUM+J": 31
+   },
+   "blank": 328,
+   "valid": 33321,
+   "elected": {
+    "PP": 1
+   }
+  },
+  {
+   "id": "52",
+   "name": "Melilla",
+   "ccaa": "MEL",
+   "seats": 1,
+   "votes": {
+    "PP": 13446,
+    "PSOE": 6943,
+    "VOX": 4359,
+    "x:CpM": 1298,
+    "SUMAR": 827,
+    "PACMA": 160,
+    "x:PUM+J": 40,
+    "x:Recortes Cero": 23
+   },
+   "blank": 253,
+   "valid": 27349,
+   "elected": {
+    "PP": 1
+   }
+  }
+ ]
+}

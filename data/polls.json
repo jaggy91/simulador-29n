@@ -1,0 +1,4378 @@
+{
+ "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
+ "fetched": "2026-10-27T03:52:47.894Z",
+ "latestPoll": "2026-10-25",
+ "sources": {
+  "media": {
+   "label": "Media de encuestas",
+   "method": "última encuesta por empresa, 21 días, peso recencia (vida media 7 d) × √muestra; sin CIS ni encuestas de partido",
+   "polls": [
+    "SocioMétrica/El Español (2026-10-25)",
+    "NC Report/La Razón (2026-10-24)",
+    "Winston/Artículo14 (2026-10-23)",
+    "EM-Analytics/Electomanía (2026-10-23)",
+    "Ateneo del Dato/elDiario.es (2026-10-22)",
+    "Sigma Dos/El Mundo (2026-10-22)",
+    "IMOP/El Confidencial (2026-10-16)",
+    "Target Point/El Debate (2026-10-09)",
+    "40dB/Prisa (2026-10-08)",
+    "GESOP/Prensa Ibérica (2026-10-08)",
+    "GAD3/Vocento (2026-10-08)",
+    "Hamalgama Métrica/Vozpópuli (2026-10-08)",
+    "InvyMark/laSexta (2026-10-08)",
+    "DYM/Henneo (2026-10-07)"
+   ],
+   "values": {
+    "PP": 31.3,
+    "PSOE": 26.76,
+    "VOX": 19.18,
+    "FA": 5.89,
+    "FV": 0.97,
+    "ERC": 2.34,
+    "JUNTS": 1.48,
+    "BILDU": 1.33,
+    "PNV": 0.91,
+    "BNG": 0.92,
+    "CC": 0.39,
+    "AA": 1.14,
+    "PODEMOS": 2.34,
+    "SALF": 1.88
+   }
+  },
+  "cis": {
+   "label": "CIS (datos brutos reestimados)",
+   "method": "media de reestimaciones independientes del barómetro con campo hasta 2026-10-06; partidos que no dan, de la media",
+   "polls": [
+    "CIS (Opina 360)",
+    "CIS (Ateneo del Dato)"
+   ],
+   "values": {
+    "ERC": 2.34,
+    "JUNTS": 1.48,
+    "BILDU": 1.33,
+    "PNV": 0.91,
+    "BNG": 0.92,
+    "CC": 0.39,
+    "AA": 1.14,
+    "PP": 28.15,
+    "PSOE": 28.3,
+    "VOX": 17.65,
+    "PODEMOS": 3.25,
+    "SALF": 2,
+    "FA": 6.51,
+    "FV": 1.09
+   }
+  }
+ },
+ "rows": [
+  {
+   "firm": "PSOE",
+   "date": "2026-10-25",
+   "sample": null,
+   "values": {
+    "PP": 29,
+    "PSOE": 30,
+    "VOX": 20
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-10-25",
+   "sample": 3223,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 27,
+    "VOX": 18.6,
+    "FA": 5.2,
+    "FV": 0.9,
+    "ERC": 2.6,
+    "JUNTS": 1.7,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.2,
+    "PODEMOS": 1.8,
+    "SALF": 2.4
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-10-24",
+   "sample": 1000,
+   "values": {
+    "PP": 33.1,
+    "PSOE": 25.8,
+    "VOX": 19,
+    "ERC": 2,
+    "JUNTS": 1.8,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 1.3,
+    "PODEMOS": 2.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "Winston/Artículo14",
+   "date": "2026-10-23",
+   "sample": 1200,
+   "values": {
+    "PP": 29.4,
+    "PSOE": 27.1,
+    "VOX": 19.2,
+    "FA": 5.6
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-10-23",
+   "sample": 4309,
+   "values": {
+    "PP": 30.9,
+    "PSOE": 26.7,
+    "VOX": 19,
+    "FA": 5.8,
+    "FV": 1.2,
+    "ERC": 2.2,
+    "JUNTS": 1.3,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 1.1,
+    "PODEMOS": 1.7,
+    "SALF": 1.7
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "Ateneo del Dato/elDiario.es",
+   "date": "2026-10-22",
+   "sample": 2000,
+   "values": {
+    "PP": 31.1,
+    "PSOE": 27.6,
+    "VOX": 19.8,
+    "PODEMOS": 2.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.8
+    }
+   ],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-22",
+   "sample": 3122,
+   "values": {
+    "PP": 30.6,
+    "PSOE": 26.1,
+    "VOX": 19.9,
+    "FA": 7.4,
+    "FV": 0.8,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1.2,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 2.8
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-10-17",
+   "sample": 3141,
+   "values": {
+    "PP": 31.8,
+    "PSOE": 27.1,
+    "VOX": 18.9,
+    "FA": 4.9,
+    "FV": 1.3,
+    "ERC": 2.1,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 1.1,
+    "PODEMOS": 2,
+    "SALF": 1.7
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "IMOP/El Confidencial",
+   "date": "2026-10-16",
+   "sample": 1000,
+   "values": {
+    "PP": 28.5,
+    "PSOE": 27.1,
+    "VOX": 20,
+    "ERC": 2.2,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 1.1,
+    "CC": 0.6,
+    "PODEMOS": 1.9,
+    "SALF": 1.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8.9
+    }
+   ],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-14",
+   "sample": 3007,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 25.3,
+    "VOX": 19.5,
+    "FA": 7.2,
+    "FV": 0.9,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1.2,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 0.8,
+    "PODEMOS": 2.8
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-10-11",
+   "sample": 1000,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 26.2,
+    "VOX": 18.8,
+    "ERC": 2,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 0.9,
+    "PODEMOS": 2.8,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-10-09",
+   "sample": 1002,
+   "values": {
+    "PP": 32,
+    "PSOE": 25.9,
+    "VOX": 18.7,
+    "PODEMOS": 3.4,
+    "SALF": 1.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-10-09",
+   "sample": 4125,
+   "values": {
+    "PP": 31.7,
+    "PSOE": 26.9,
+    "VOX": 19.1,
+    "ERC": 2,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 1.1,
+    "PODEMOS": 3.4,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-10-08",
+   "sample": 800,
+   "values": {
+    "PP": 31.9,
+    "PSOE": 28.1,
+    "VOX": 18.9,
+    "PODEMOS": 2.3,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GESOP/Prensa Ibérica",
+   "date": "2026-10-08",
+   "sample": 1000,
+   "values": {
+    "PP": 28.7,
+    "PSOE": 26.1,
+    "VOX": 18.9,
+    "ERC": 2.5,
+    "JUNTS": 1.9,
+    "PODEMOS": 2.6,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GAD3/Vocento",
+   "date": "2026-10-08",
+   "sample": 1077,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 26.4,
+    "VOX": 18.2,
+    "ERC": 2.6,
+    "JUNTS": 1.5,
+    "BILDU": 1.5,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 2.3,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Hamalgama Métrica/Vozpópuli",
+   "date": "2026-10-08",
+   "sample": 1000,
+   "values": {
+    "PP": 33.6,
+    "PSOE": 25.3,
+    "VOX": 19.6,
+    "ERC": 1.9,
+    "JUNTS": 1.7,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 3.3,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "InvyMark/laSexta",
+   "date": "2026-10-08",
+   "sample": null,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 28,
+    "VOX": 18.8,
+    "ERC": 1.9,
+    "JUNTS": 1.2,
+    "BILDU": 1.5,
+    "PNV": 1.1,
+    "PODEMOS": 3.2,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-08",
+   "sample": 2017,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 25.3,
+    "VOX": 19.1,
+    "ERC": 2.6,
+    "JUNTS": 1.2,
+    "BILDU": 1.1,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 0.8,
+    "PODEMOS": 3.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "IMOP/El Confidencial",
+   "date": "2026-10-07",
+   "sample": 900,
+   "values": {
+    "PP": 30.6,
+    "PSOE": 26.5,
+    "VOX": 19,
+    "ERC": 2.2,
+    "JUNTS": 1.1,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 1.1,
+    "CC": 0.6,
+    "AA": 1,
+    "PODEMOS": 2.3,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-10-07",
+   "sample": 1011,
+   "values": {
+    "PP": 34,
+    "PSOE": 28.2,
+    "VOX": 18.2,
+    "PODEMOS": 3.6,
+    "SALF": 0.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 3.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Opina 360)",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "values": {
+    "PP": 28,
+    "PSOE": 28,
+    "VOX": 17.8,
+    "PODEMOS": 3.5,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "values": {
+    "PP": 28.3,
+    "PSOE": 28.6,
+    "VOX": 17.5,
+    "PODEMOS": 3,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "values": {
+    "PP": 22.3,
+    "PSOE": 34,
+    "VOX": 17.1,
+    "ERC": 3,
+    "JUNTS": 1.1,
+    "BILDU": 1.6,
+    "PNV": 0.6,
+    "BNG": 0.9,
+    "CC": 0.2,
+    "PODEMOS": 3.1,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-10-06",
+   "sample": 1000,
+   "values": {
+    "PP": 34.3,
+    "PSOE": 25,
+    "VOX": 18.2,
+    "ERC": 1.8,
+    "JUNTS": 2.9,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.7,
+    "CC": 0.4,
+    "PODEMOS": 3.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/PP",
+   "date": "2026-10-05",
+   "sample": null,
+   "values": {},
+   "joint": [],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "PSOE",
+   "date": "2026-10-05",
+   "sample": 7000,
+   "values": {},
+   "joint": [],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-10-03",
+   "sample": 8171,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 26.9,
+    "VOX": 19.4,
+    "ERC": 2,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 1.1,
+    "PODEMOS": 3.4,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-10-03",
+   "sample": 1000,
+   "values": {
+    "PP": 33.6,
+    "PSOE": 26.5,
+    "VOX": 18.1,
+    "ERC": 2.2,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.6,
+    "PODEMOS": 3.1,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Data10/Okdiario",
+   "date": "2026-10-02",
+   "sample": 1000,
+   "values": {
+    "PP": 34.2,
+    "PSOE": 26.1,
+    "VOX": 18.6,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 0.8,
+    "BNG": 1,
+    "CC": 0.3,
+    "AA": 0.5,
+    "PODEMOS": 4.3,
+    "SALF": 1.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Winston/Artículo14",
+   "date": "2026-10-01",
+   "sample": 1201,
+   "values": {
+    "PP": 31.3,
+    "PSOE": 24.9,
+    "VOX": 19.1,
+    "PODEMOS": 3.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Ateneo del Dato/elDiario.es",
+   "date": "2026-10-01",
+   "sample": 1500,
+   "values": {
+    "PP": 33.2,
+    "PSOE": 27.5,
+    "VOX": 19.2,
+    "PODEMOS": 3.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-01",
+   "sample": 2116,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 25.6,
+    "VOX": 18.3,
+    "ERC": 2.5,
+    "JUNTS": 1.1,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 0.8,
+    "PODEMOS": 3.3,
+    "AC": 1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-09-28",
+   "sample": 2000,
+   "values": {
+    "PP": 31.6,
+    "PSOE": 27.4,
+    "VOX": 18.4,
+    "PODEMOS": 2.7,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-09-26",
+   "sample": 1200,
+   "values": {
+    "PP": 34.1,
+    "PSOE": 25.7,
+    "VOX": 18,
+    "ERC": 2,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 1,
+    "CC": 0.6,
+    "AA": 1,
+    "PODEMOS": 3.3,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-09-25",
+   "sample": 1104,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 25.3,
+    "VOX": 18.8,
+    "ERC": 2,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.9,
+    "PODEMOS": 3.8,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Celeste-Tel/Onda Cero",
+   "date": "2026-09-21",
+   "sample": 1100,
+   "values": {
+    "PP": 34.1,
+    "PSOE": 25.4,
+    "VOX": 17.8,
+    "ERC": 2,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 3.3,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-09-21",
+   "sample": 1017,
+   "values": {
+    "PP": 34.7,
+    "PSOE": 26.3,
+    "VOX": 17.3,
+    "PODEMOS": 3.7,
+    "SALF": 1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 4.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-09-18",
+   "sample": 1399,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 25.6,
+    "VOX": 19.1,
+    "ERC": 1.9,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.9,
+    "PODEMOS": 3.3,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "InvyMark/laSexta",
+   "date": "2026-09-11",
+   "sample": 1200,
+   "values": {
+    "PP": 33.7,
+    "PSOE": 26.8,
+    "VOX": 18.6,
+    "PODEMOS": 3.3,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-09-10",
+   "sample": 1012,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 25.6,
+    "VOX": 18.9,
+    "PODEMOS": 2.8,
+    "SALF": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-09-10",
+   "sample": 1190,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 25.4,
+    "VOX": 19.2,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.9,
+    "PODEMOS": 3.4,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Hamalgama Métrica/Vozpópuli",
+   "date": "2026-09-08",
+   "sample": 1000,
+   "values": {
+    "PP": 33.8,
+    "PSOE": 25.1,
+    "VOX": 19.3,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 3.8,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Target Point)",
+   "date": "2026-09-04",
+   "sample": 4042,
+   "values": {
+    "PP": 31.9,
+    "PSOE": 26.8,
+    "VOX": 17.8,
+    "ERC": 1.7,
+    "PODEMOS": 3.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-09-04",
+   "sample": 4042,
+   "values": {
+    "PP": 29.5,
+    "PSOE": 27.6,
+    "VOX": 17.6,
+    "PODEMOS": 3.9,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-09-04",
+   "sample": 4042,
+   "values": {
+    "PP": 25.6,
+    "PSOE": 31,
+    "VOX": 16.6,
+    "ERC": 2.5,
+    "JUNTS": 0.7,
+    "BILDU": 1.3,
+    "PNV": 0.7,
+    "BNG": 0.7,
+    "CC": 0.2,
+    "PODEMOS": 3.7,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-09-03",
+   "sample": 1000,
+   "values": {
+    "PP": 34.7,
+    "PSOE": 24.9,
+    "VOX": 18.3,
+    "ERC": 2,
+    "JUNTS": 1.6,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GAD3/ABC",
+   "date": "2026-09-03",
+   "sample": 1010,
+   "values": {
+    "PP": 31.3,
+    "PSOE": 26.1,
+    "VOX": 19.2,
+    "ERC": 2.3,
+    "JUNTS": 1.2,
+    "BILDU": 1.5,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.3,
+    "AA": 1,
+    "PODEMOS": 3.1,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-09-03",
+   "sample": 1284,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 25.6,
+    "VOX": 19.2,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-09-02",
+   "sample": 2000,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 27.6,
+    "VOX": 17.8,
+    "PODEMOS": 2.8,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "More in Common",
+   "date": "2026-08-28",
+   "sample": 2144,
+   "values": {
+    "PP": 28.7,
+    "PSOE": 27,
+    "VOX": 20.3,
+    "PODEMOS": 3.6,
+    "SALF": 2.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-08-28",
+   "sample": 1197,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 25.7,
+    "VOX": 19,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Data10/Okdiario",
+   "date": "2026-08-27",
+   "sample": 1500,
+   "values": {
+    "PP": 34.5,
+    "PSOE": 25.4,
+    "VOX": 18.1,
+    "ERC": 2,
+    "JUNTS": 1.4,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 0.7,
+    "PODEMOS": 3.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-08-26",
+   "sample": 2173,
+   "values": {
+    "PP": 33.3,
+    "PSOE": 25.4,
+    "VOX": 17.9,
+    "ERC": 2.4,
+    "JUNTS": 1.1,
+    "BILDU": 1.2,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 0.8,
+    "PODEMOS": 2.8,
+    "AC": 1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Cluster17/Agenda Pública",
+   "date": "2026-08-25",
+   "sample": 1637,
+   "values": {
+    "PP": 30.1,
+    "PSOE": 28.1,
+    "VOX": 16.1,
+    "ERC": 2,
+    "JUNTS": 1.6,
+    "BILDU": 1.3,
+    "PNV": 1.1,
+    "PODEMOS": 3.6,
+    "SALF": 1.7,
+    "AC": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-08-21",
+   "sample": 1211,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 26.1,
+    "VOX": 19,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.4,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.5,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-08-12",
+   "sample": 1428,
+   "values": {
+    "PP": 32,
+    "PSOE": 26.2,
+    "VOX": 19.2,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.7,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-08-07",
+   "sample": 1227,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 26.2,
+    "VOX": 19.1,
+    "ERC": 2,
+    "JUNTS": 1,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.9,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-08-06",
+   "sample": 1690,
+   "values": {
+    "PP": 34,
+    "PSOE": 26,
+    "VOX": 17,
+    "ERC": 2.1,
+    "JUNTS": 1.5,
+    "BILDU": 1.5,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 1,
+    "PODEMOS": 2.7,
+    "SALF": 2.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-08-04",
+   "sample": 1000,
+   "values": {
+    "PP": 34.4,
+    "PSOE": 25.2,
+    "VOX": 18,
+    "ERC": 2,
+    "JUNTS": 1.6,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-08-01",
+   "sample": 910,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 27.2,
+    "VOX": 18.6,
+    "ERC": 2,
+    "JUNTS": 1,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.7,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-07-24",
+   "sample": 1099,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 27,
+    "VOX": 18.3,
+    "ERC": 2,
+    "JUNTS": 1,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.5,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-07-20",
+   "sample": 1014,
+   "values": {
+    "PP": 34.9,
+    "PSOE": 27,
+    "VOX": 16.5,
+    "PODEMOS": 4.1,
+    "SALF": 1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 3.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-07-20",
+   "sample": 3690,
+   "values": {
+    "PP": 33,
+    "PSOE": 26.1,
+    "VOX": 17.3,
+    "ERC": 2.3,
+    "JUNTS": 1.1,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 1,
+    "PODEMOS": 3,
+    "AC": 1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "KeyData/Público",
+   "date": "2026-07-17",
+   "sample": null,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 26.3,
+    "VOX": 17.8,
+    "ERC": 2,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 1,
+    "BNG": 0.8,
+    "PODEMOS": 3.6,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-07-17",
+   "sample": 1004,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 26.1,
+    "VOX": 17.6,
+    "PODEMOS": 2.7,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-07-17",
+   "sample": 1401,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 27.5,
+    "VOX": 18.3,
+    "ERC": 2,
+    "JUNTS": 1.1,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.3,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-07-10",
+   "sample": 1304,
+   "values": {
+    "PP": 33,
+    "PSOE": 27.1,
+    "VOX": 18.5,
+    "ERC": 1.9,
+    "JUNTS": 1.3,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.5,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "ODEC/Mediaflows–UV",
+   "date": "2026-07-09",
+   "sample": 2005,
+   "values": {
+    "PP": 29.7,
+    "PSOE": 27,
+    "VOX": 19.2,
+    "ERC": 2.6,
+    "JUNTS": 1.5,
+    "BILDU": 1.9,
+    "PNV": 1,
+    "BNG": 0.7,
+    "CC": 0.9,
+    "PODEMOS": 3.7,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GESOP/Prensa Ibérica",
+   "date": "2026-07-09",
+   "sample": 1001,
+   "values": {
+    "PP": 29.4,
+    "PSOE": 26.5,
+    "VOX": 17.8,
+    "ERC": 2.3,
+    "JUNTS": 1,
+    "PODEMOS": 4,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Sondaxe)",
+   "date": "2026-07-06",
+   "sample": 4020,
+   "values": {
+    "PP": 28.8,
+    "PSOE": 27.2,
+    "VOX": 17.2,
+    "ERC": 1.8,
+    "JUNTS": 0.9,
+    "BILDU": 1,
+    "PNV": 0.7,
+    "BNG": 0.5,
+    "CC": 0.2,
+    "PODEMOS": 2.3,
+    "SALF": 2.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Target Point)",
+   "date": "2026-07-06",
+   "sample": 4020,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 26.6,
+    "VOX": 16.3,
+    "ERC": 1.8,
+    "JUNTS": 1.2,
+    "BILDU": 1.2,
+    "PNV": 0.9,
+    "BNG": 0.5,
+    "PODEMOS": 2.7,
+    "SALF": 2.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-07-06",
+   "sample": 4020,
+   "values": {
+    "PP": 30.5,
+    "PSOE": 27.9,
+    "VOX": 16.2,
+    "PODEMOS": 2.9,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-07-06",
+   "sample": 4020,
+   "values": {
+    "PP": 25.3,
+    "PSOE": 33,
+    "VOX": 15.3,
+    "ERC": 2.7,
+    "JUNTS": 0.7,
+    "BILDU": 0.8,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.2,
+    "PODEMOS": 2.5,
+    "SALF": 2.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Hamalgama Métrica/Vozpópuli",
+   "date": "2026-07-06",
+   "sample": 1000,
+   "values": {
+    "PP": 34,
+    "PSOE": 25.9,
+    "VOX": 18.8,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 3.8,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-07-04",
+   "sample": 1416,
+   "values": {
+    "PP": 33.8,
+    "PSOE": 25.7,
+    "VOX": 16.9,
+    "ERC": 2.3,
+    "JUNTS": 1.4,
+    "BILDU": 1.5,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 1,
+    "PODEMOS": 2.8,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-07-03",
+   "sample": 2237,
+   "values": {
+    "PP": 33.2,
+    "PSOE": 27.1,
+    "VOX": 18.3,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-07-01",
+   "sample": 1000,
+   "values": {
+    "PP": 34.7,
+    "PSOE": 25,
+    "VOX": 17.8,
+    "ERC": 2,
+    "JUNTS": 1.6,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Demócrata)",
+   "date": "2026-06-30",
+   "sample": 6019,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 30.4,
+    "VOX": 18.1,
+    "PODEMOS": 2.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Demócrata)",
+   "date": "2026-06-30",
+   "sample": 6019,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 30,
+    "VOX": 18.5,
+    "PODEMOS": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-06-29",
+   "sample": 2000,
+   "values": {
+    "PP": 32,
+    "PSOE": 28,
+    "VOX": 17.2,
+    "PODEMOS": 3.1,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Ipsos/La Vanguardia",
+   "date": "2026-06-29",
+   "sample": 1306,
+   "values": {
+    "PP": 31.2,
+    "PSOE": 27.1,
+    "VOX": 18.5,
+    "ERC": 2,
+    "JUNTS": 0.9,
+    "BILDU": 1.8,
+    "PNV": 1.3,
+    "BNG": 0.6,
+    "CC": 0.5,
+    "PODEMOS": 1.8,
+    "SALF": 1.9,
+    "AC": 0.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "More in Common",
+   "date": "2026-06-28",
+   "sample": 2277,
+   "values": {
+    "PP": 31.3,
+    "PSOE": 25.7,
+    "VOX": 17.1,
+    "PODEMOS": 3.3,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "InvyMark/laSexta",
+   "date": "2026-06-26",
+   "sample": null,
+   "values": {
+    "PP": 33.5,
+    "PSOE": 27.3,
+    "VOX": 17.5,
+    "PODEMOS": 3.5,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-06-26",
+   "sample": 1844,
+   "values": {
+    "PP": 33.2,
+    "PSOE": 26.8,
+    "VOX": 18.2,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-06-19",
+   "sample": 1472,
+   "values": {
+    "PP": 33.2,
+    "PSOE": 27.1,
+    "VOX": 18.1,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.5,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-06-18",
+   "sample": 1022,
+   "values": {
+    "PP": 32,
+    "PSOE": 25.6,
+    "VOX": 18.1,
+    "PODEMOS": 3.2,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-06-12",
+   "sample": 1297,
+   "values": {
+    "PP": 33,
+    "PSOE": 27.7,
+    "VOX": 18.2,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.1,
+    "PODEMOS": 3.6,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-06-11",
+   "sample": 1994,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 26.4,
+    "VOX": 17.2,
+    "ERC": 2,
+    "JUNTS": 0.8,
+    "BILDU": 1,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 0.7,
+    "PODEMOS": 3.4,
+    "AC": 0.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-06-05",
+   "sample": 1691,
+   "values": {
+    "PP": 32.6,
+    "PSOE": 28.2,
+    "VOX": 18.3,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.6,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-06-04",
+   "sample": 4024,
+   "values": {
+    "PP": 31.2,
+    "PSOE": 28.1,
+    "VOX": 16.3,
+    "PODEMOS": 2.8,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-06-04",
+   "sample": 4024,
+   "values": {
+    "PP": 27.2,
+    "PSOE": 31.3,
+    "VOX": 15.8,
+    "ERC": 1.9,
+    "JUNTS": 1,
+    "BILDU": 1.2,
+    "PNV": 0.6,
+    "BNG": 1,
+    "CC": 0.2,
+    "PODEMOS": 2.8,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-06-01",
+   "sample": 2000,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 27.7,
+    "VOX": 17.4,
+    "PODEMOS": 2.3,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-05-30",
+   "sample": 1200,
+   "values": {
+    "PP": 34.1,
+    "PSOE": 25.9,
+    "VOX": 17.4,
+    "ERC": 2.1,
+    "JUNTS": 1.2,
+    "BILDU": 1.5,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 1.1,
+    "PODEMOS": 2.2,
+    "SALF": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "InvyMark/laSexta",
+   "date": "2026-05-29",
+   "sample": 1200,
+   "values": {
+    "PP": 33.1,
+    "PSOE": 27.8,
+    "VOX": 17.6,
+    "PODEMOS": 3.6,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-05-29",
+   "sample": 1160,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 28.8,
+    "VOX": 18.5,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1,
+    "PODEMOS": 3.8,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-05-28",
+   "sample": 1007,
+   "values": {
+    "PP": 31.2,
+    "PSOE": 25.4,
+    "VOX": 18.9,
+    "PODEMOS": 3.1,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GAD3/ABC",
+   "date": "2026-05-28",
+   "sample": 1011,
+   "values": {
+    "PP": 33.2,
+    "PSOE": 26.8,
+    "VOX": 17.1,
+    "ERC": 2,
+    "JUNTS": 1.6,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "AA": 1.2,
+    "PODEMOS": 3.1,
+    "SALF": 1.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-05-27",
+   "sample": 1000,
+   "values": {
+    "PP": 34.9,
+    "PSOE": 25.1,
+    "VOX": 17.9,
+    "ERC": 1.9,
+    "JUNTS": 1.6,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-05-22",
+   "sample": 1009,
+   "values": {
+    "PP": 34.8,
+    "PSOE": 27.7,
+    "VOX": 16,
+    "PODEMOS": 3.5,
+    "SALF": 1.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-05-22",
+   "sample": 1291,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 29.1,
+    "VOX": 18.5,
+    "ERC": 1.8,
+    "JUNTS": 1.6,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.3,
+    "AA": 1,
+    "PODEMOS": 3.8,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Target Point)",
+   "date": "2026-05-18",
+   "sample": 4016,
+   "values": {
+    "PP": 31,
+    "PSOE": 27.4,
+    "VOX": 19,
+    "ERC": 1.8,
+    "JUNTS": 0.9,
+    "BILDU": 1.2,
+    "PNV": 0.8,
+    "BNG": 0.4,
+    "PODEMOS": 2.3,
+    "SALF": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-05-18",
+   "sample": 4016,
+   "values": {
+    "PP": 30.7,
+    "PSOE": 30.3,
+    "VOX": 17.4,
+    "PODEMOS": 2.1,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-05-18",
+   "sample": 4016,
+   "values": {
+    "PP": 25,
+    "PSOE": 36.2,
+    "VOX": 16.2,
+    "ERC": 2.6,
+    "JUNTS": 0.8,
+    "BILDU": 0.9,
+    "PNV": 0.5,
+    "BNG": 0.7,
+    "CC": 0.1,
+    "PODEMOS": 2.5,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-05-15",
+   "sample": 1026,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 28.7,
+    "VOX": 18.3,
+    "ERC": 1.8,
+    "JUNTS": 1.6,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-05-08",
+   "sample": 1377,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 29,
+    "VOX": 18.2,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-05-01",
+   "sample": 1542,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 28.3,
+    "VOX": 17.9,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-04-29",
+   "sample": 1205,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 28.4,
+    "VOX": 17.2,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.2,
+    "PNV": 1.2,
+    "BNG": 0.7,
+    "CC": 0.5,
+    "PODEMOS": 3.5,
+    "AC": 0.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-04-27",
+   "sample": 2000,
+   "values": {
+    "PP": 31.3,
+    "PSOE": 28.4,
+    "VOX": 17.9,
+    "PODEMOS": 2.5,
+    "SALF": 2.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Ateneo del Dato",
+   "date": "2026-04-26",
+   "sample": 2000,
+   "values": {
+    "PP": 31.7,
+    "PSOE": 27.5,
+    "VOX": 18.4,
+    "PODEMOS": 3.8,
+    "SALF": 2.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "More in Common",
+   "date": "2026-04-25",
+   "sample": 2547,
+   "values": {
+    "PP": 31.1,
+    "PSOE": 28,
+    "VOX": 17.1,
+    "PODEMOS": 2.9,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-04-24",
+   "sample": 1844,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 28.5,
+    "VOX": 18,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "KeyData/Público",
+   "date": "2026-04-23",
+   "sample": null,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 27.5,
+    "VOX": 17.7,
+    "ERC": 1.9,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "PODEMOS": 3.5,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-04-18",
+   "sample": 1712,
+   "values": {
+    "PP": 32,
+    "PSOE": 27,
+    "VOX": 16.9,
+    "ERC": 1.8,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.4,
+    "SALF": 2.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-04-17",
+   "sample": 1301,
+   "values": {
+    "PP": 31.7,
+    "PSOE": 28.7,
+    "VOX": 18.1,
+    "ERC": 1.8,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.7,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-04-10",
+   "sample": 4020,
+   "values": {
+    "PP": 30.9,
+    "PSOE": 28.9,
+    "VOX": 17.6,
+    "PODEMOS": 2.1,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Logoslab)",
+   "date": "2026-04-10",
+   "sample": 4020,
+   "values": {
+    "PP": 30.1,
+    "PSOE": 30.1,
+    "VOX": 16.9,
+    "PODEMOS": 2.1,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-04-10",
+   "sample": 4020,
+   "values": {
+    "PP": 23.7,
+    "PSOE": 36.4,
+    "VOX": 14.7,
+    "ERC": 2.9,
+    "JUNTS": 0.8,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.8,
+    "CC": 0.2,
+    "PODEMOS": 2.2,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-04-10",
+   "sample": 1597,
+   "values": {
+    "PP": 31.4,
+    "PSOE": 29.1,
+    "VOX": 18.4,
+    "ERC": 1.7,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.7,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-04-09",
+   "sample": 1000,
+   "values": {
+    "PP": 33,
+    "PSOE": 26.9,
+    "VOX": 18.3,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Ipsos/La Vanguardia",
+   "date": "2026-04-08",
+   "sample": 1058,
+   "values": {
+    "PP": 31,
+    "PSOE": 28.4,
+    "VOX": 18.3,
+    "ERC": 2.2,
+    "JUNTS": 1.4,
+    "BILDU": 1.9,
+    "PNV": 1.2,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 1.8,
+    "SALF": 2.2,
+    "AC": 0.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-04-03",
+   "sample": 1107,
+   "values": {
+    "PP": 31,
+    "PSOE": 29.3,
+    "VOX": 18.7,
+    "ERC": 1.7,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.7,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-03-31",
+   "sample": 1958,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 27.7,
+    "VOX": 17.1,
+    "ERC": 1.8,
+    "JUNTS": 1,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.6,
+    "CC": 0.5,
+    "PODEMOS": 3.5,
+    "AC": 0.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-03-27",
+   "sample": 1228,
+   "values": {
+    "PP": 31.8,
+    "PSOE": 28.8,
+    "VOX": 19.3,
+    "ERC": 1.7,
+    "JUNTS": 1.3,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.9,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-03-26",
+   "sample": 1114,
+   "values": {
+    "PP": 31.7,
+    "PSOE": 27.6,
+    "VOX": 18.3,
+    "PODEMOS": 3.3,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sumar",
+   "date": "2026-03-25",
+   "sample": 1000,
+   "values": {
+    "PP": 30,
+    "PSOE": 30,
+    "VOX": 18,
+    "PODEMOS": 3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-03-25",
+   "sample": 2000,
+   "values": {
+    "PP": 31.1,
+    "PSOE": 28.6,
+    "VOX": 18.7,
+    "PODEMOS": 2.7,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-03-23",
+   "sample": 1002,
+   "values": {
+    "PP": 34.6,
+    "PSOE": 27.9,
+    "VOX": 15.8,
+    "PODEMOS": 3.8,
+    "SALF": 0.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 4.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-03-21",
+   "sample": 1100,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 26.5,
+    "VOX": 18,
+    "ERC": 1.9,
+    "JUNTS": 1.1,
+    "BILDU": 1.2,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 3.6,
+    "SALF": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-03-20",
+   "sample": 1086,
+   "values": {
+    "PP": 31.3,
+    "PSOE": 29,
+    "VOX": 19.8,
+    "ERC": 1.7,
+    "JUNTS": 1.3,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-03-13",
+   "sample": 2541,
+   "values": {
+    "PP": 30.9,
+    "PSOE": 28.9,
+    "VOX": 20.3,
+    "ERC": 1.7,
+    "JUNTS": 1.3,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Target Point)",
+   "date": "2026-03-06",
+   "sample": 4016,
+   "values": {
+    "PP": 30.4,
+    "PSOE": 28.4,
+    "VOX": 18.7,
+    "ERC": 1.9,
+    "JUNTS": 0.8,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.6,
+    "PODEMOS": 3.2,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Ateneo del Dato)",
+   "date": "2026-03-06",
+   "sample": 4016,
+   "values": {
+    "PP": 29.1,
+    "PSOE": 25.5,
+    "VOX": 19.3,
+    "PODEMOS": 2.9,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Logoslab)",
+   "date": "2026-03-06",
+   "sample": 4016,
+   "values": {
+    "PP": 28.8,
+    "PSOE": 28.4,
+    "VOX": 18.1,
+    "PODEMOS": 2.9,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-03-06",
+   "sample": 4016,
+   "values": {
+    "PP": 23.3,
+    "PSOE": 31.8,
+    "VOX": 16.6,
+    "ERC": 2.4,
+    "JUNTS": 0.6,
+    "BILDU": 1.1,
+    "PNV": 0.5,
+    "BNG": 1.7,
+    "CC": 0,
+    "PODEMOS": 2.9,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-03-06",
+   "sample": 1741,
+   "values": {
+    "PP": 31.2,
+    "PSOE": 28.4,
+    "VOX": 19.2,
+    "ERC": 1.5,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.6,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-03-04",
+   "sample": 1428,
+   "values": {
+    "PP": 30.7,
+    "PSOE": 28.3,
+    "VOX": 19.5,
+    "ERC": 1.5,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.2,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.3,
+    "SALF": 1.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-02-27",
+   "sample": 1969,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 26.4,
+    "VOX": 18.3,
+    "ERC": 1.9,
+    "JUNTS": 1,
+    "BILDU": 1.1,
+    "PNV": 1.1,
+    "BNG": 0.7,
+    "CC": 0.4,
+    "PODEMOS": 4.1,
+    "AC": 0.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-02-27",
+   "sample": 2307,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 26.5,
+    "VOX": 20.1,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-02-23",
+   "sample": 2000,
+   "values": {
+    "PP": 30.2,
+    "PSOE": 27.7,
+    "VOX": 18.8,
+    "PODEMOS": 3.3,
+    "SALF": 2.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Ateneo del Dato/elDiario.es",
+   "date": "2026-02-22",
+   "sample": 2000,
+   "values": {
+    "PP": 29.4,
+    "PSOE": 27,
+    "VOX": 20.3,
+    "PODEMOS": 3.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-02-20",
+   "sample": 1841,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 26.5,
+    "VOX": 20.3,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.8,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-02-19",
+   "sample": 1005,
+   "values": {
+    "PP": 30.5,
+    "PSOE": 25.8,
+    "VOX": 20.3,
+    "PODEMOS": 3.7,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-02-13",
+   "sample": 1200,
+   "values": {
+    "PP": 32.1,
+    "PSOE": 25,
+    "VOX": 18.4,
+    "PODEMOS": 4.2,
+    "SALF": 2.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-02-13",
+   "sample": 1000,
+   "values": {
+    "PP": 33.3,
+    "PSOE": 25.9,
+    "VOX": 18.1,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 4.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-02-12",
+   "sample": 1635,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 26.7,
+    "VOX": 20.1,
+    "ERC": 1.9,
+    "JUNTS": 1.4,
+    "BILDU": 1.3,
+    "PNV": 1.1,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Data10/Okdiario",
+   "date": "2026-02-10",
+   "sample": null,
+   "values": {
+    "PP": 31.8,
+    "PSOE": 26,
+    "VOX": 19.5,
+    "ERC": 2,
+    "JUNTS": 1.1,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.5,
+    "PODEMOS": 2.2,
+    "SALF": 2.9
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Logoslab)",
+   "date": "2026-02-06",
+   "sample": 4027,
+   "values": {
+    "PP": 27.8,
+    "PSOE": 27.4,
+    "VOX": 20,
+    "PODEMOS": 3.8,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Target Point)",
+   "date": "2026-02-06",
+   "sample": 4027,
+   "values": {
+    "PP": 29.1,
+    "PSOE": 26.7,
+    "VOX": 20.6,
+    "ERC": 2.1,
+    "JUNTS": 1.3,
+    "BILDU": 1.1,
+    "PNV": 1.2,
+    "BNG": 0.5,
+    "PODEMOS": 4,
+    "SALF": 2.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-02-06",
+   "sample": 4027,
+   "values": {
+    "PP": 23,
+    "PSOE": 32.6,
+    "VOX": 18.9,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1,
+    "PNV": 0.8,
+    "BNG": 0.8,
+    "CC": 0.1,
+    "PODEMOS": 3.9,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-02-06",
+   "sample": 2012,
+   "values": {
+    "PP": 32,
+    "PSOE": 27,
+    "VOX": 19.6,
+    "ERC": 2,
+    "JUNTS": 1.3,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 3.9,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-02-02",
+   "sample": 2000,
+   "values": {
+    "PP": 31.2,
+    "PSOE": 27.7,
+    "VOX": 18,
+    "PODEMOS": 3.7,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.4
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-01-30",
+   "sample": 1819,
+   "values": {
+    "PP": 32.6,
+    "PSOE": 26.1,
+    "VOX": 17.8,
+    "ERC": 1.8,
+    "JUNTS": 0.9,
+    "BILDU": 1.2,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 4.6,
+    "AC": 0.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-01-30",
+   "sample": 1289,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 26.1,
+    "VOX": 20,
+    "ERC": 1.9,
+    "JUNTS": 1.2,
+    "BILDU": 1.5,
+    "PNV": 1.1,
+    "BNG": 1.2,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4.1,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-01-25",
+   "sample": 1003,
+   "values": {
+    "PP": 34.4,
+    "PSOE": 27,
+    "VOX": 16.6,
+    "PODEMOS": 5.1,
+    "SALF": 0.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-01-23",
+   "sample": 1594,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 26,
+    "VOX": 19.9,
+    "ERC": 1.9,
+    "JUNTS": 1.3,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1.1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4.2,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.6
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "KeyData/Público",
+   "date": "2026-01-22",
+   "sample": null,
+   "values": {
+    "PP": 32.2,
+    "PSOE": 26.5,
+    "VOX": 17.9,
+    "ERC": 2,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 0.8,
+    "PODEMOS": 4.2,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "DYM/Henneo",
+   "date": "2026-01-18",
+   "sample": 1000,
+   "values": {
+    "PP": 33.7,
+    "PSOE": 27.1,
+    "VOX": 16.9,
+    "PODEMOS": 4.9,
+    "SALF": 0.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-01-16",
+   "sample": 1001,
+   "values": {
+    "PP": 32.8,
+    "PSOE": 26.5,
+    "VOX": 19.4,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4.1,
+    "SALF": 1.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "Target Point/El Debate",
+   "date": "2026-01-15",
+   "sample": 1000,
+   "values": {
+    "PP": 30,
+    "PSOE": 26.1,
+    "VOX": 19.2,
+    "PODEMOS": 3.2,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "GESOP/Prensa Ibérica",
+   "date": "2026-01-15",
+   "sample": 1002,
+   "values": {
+    "PP": 30,
+    "PSOE": 26.5,
+    "VOX": 17.8,
+    "ERC": 2.2,
+    "JUNTS": 1,
+    "PODEMOS": 4.3,
+    "SALF": 1.7
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 8.3
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-01-10",
+   "sample": 1300,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 25.7,
+    "VOX": 17.9,
+    "ERC": 2.1,
+    "JUNTS": 1.3,
+    "BILDU": 1.5,
+    "PNV": 0.9,
+    "BNG": 1.1,
+    "CC": 0.5,
+    "PODEMOS": 3.8,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS (Logoslab)",
+   "date": "2026-01-10",
+   "sample": 4006,
+   "values": {
+    "PP": 28,
+    "PSOE": 27.5,
+    "VOX": 20,
+    "PODEMOS": 3.2,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "CIS",
+   "date": "2026-01-10",
+   "sample": 4006,
+   "values": {
+    "PP": 23.1,
+    "PSOE": 31.7,
+    "VOX": 17.7,
+    "ERC": 2.6,
+    "JUNTS": 1,
+    "BILDU": 1.5,
+    "PNV": 1,
+    "BNG": 0.9,
+    "CC": 0.3,
+    "PODEMOS": 3.5,
+    "SALF": 1.8
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.2
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-01-10",
+   "sample": 1083,
+   "values": {
+    "PP": 32.5,
+    "PSOE": 26.9,
+    "VOX": 19.7,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-01-09",
+   "sample": 1000,
+   "values": {
+    "PP": 33.7,
+    "PSOE": 26.3,
+    "VOX": 17.6,
+    "ERC": 1.8,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "PODEMOS": 4.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.1
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-01-05",
+   "sample": 2000,
+   "values": {
+    "PP": 31.5,
+    "PSOE": 27.1,
+    "VOX": 17.9,
+    "PODEMOS": 3.5,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5.9
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  },
+  {
+   "firm": "EM-Analytics/Electomanía",
+   "date": "2026-01-03",
+   "sample": 1316,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 26.8,
+    "VOX": 19.8,
+    "ERC": 1.9,
+    "JUNTS": 1.5,
+    "BILDU": 1.4,
+    "PNV": 1.1,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 0.1,
+    "PODEMOS": 4.5,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 4.7
+    }
+   ],
+   "table": "2026 (before Broad Front)"
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "source": "en.wikipedia (2026 Andalusian regional election)",
+ "unit": "% sobre válidos, 1 decimal",
+ "provinces": [
+  {
+   "id": "04",
+   "name": "Almería",
+   "pct": {
+    "PP": 42.7,
+    "PSOE": 21.7,
+    "VOX": 23.2,
+    "AA": 3.1,
+    "FA": 3.8
+   }
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "pct": {
+    "PP": 38.9,
+    "PSOE": 20.2,
+    "VOX": 13,
+    "AA": 14.3,
+    "FA": 5.3
+   }
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "pct": {
+    "PP": 43.2,
+    "PSOE": 22.3,
+    "VOX": 12.6,
+    "AA": 8.3,
+    "FA": 8.8
+   }
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "pct": {
+    "PP": 42.4,
+    "PSOE": 24.3,
+    "VOX": 15.1,
+    "AA": 6.8,
+    "FA": 6.5
+   }
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "pct": {
+    "PP": 40.8,
+    "PSOE": 25.2,
+    "VOX": 14.9,
+    "AA": 8,
+    "FA": 5.6
+   }
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "pct": {
+    "PP": 43.7,
+    "PSOE": 27.3,
+    "VOX": 13.6,
+    "AA": 4.4,
+    "FA": 5.1
+   }
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "pct": {
+    "PP": 44,
+    "PSOE": 20,
+    "VOX": 14.6,
+    "AA": 9.3,
+    "FA": 6
+   }
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "pct": {
+    "PP": 39.4,
+    "PSOE": 24,
+    "VOX": 10.8,
+    "AA": 12.9,
+    "FA": 7.5
+   }
+  }
+ ]
+}

@@ -1,0 +1,533 @@
+{
+ "source": "INE, Oficina del Censo Electoral: censo de consulta, generales 2023 y 2026 (tablas 3 y 8)",
+ "totals": {
+  "cera2023": 2325310,
+  "cera2026": 2769645,
+  "latam2023": 1260466,
+  "latam2026": 1522650,
+  "growth": 444335,
+  "latamGrowth": 262184
+ },
+ "provinces": [
+  {
+   "id": "01",
+   "name": "Araba/Álava",
+   "cera2023": 8143,
+   "cera2026": 10330,
+   "latam2023": 3835,
+   "latam2026": 4758,
+   "growth": 2187,
+   "latamGrowth": 923
+  },
+  {
+   "id": "02",
+   "name": "Albacete",
+   "cera2023": 8055,
+   "cera2026": 8961,
+   "latam2023": 2189,
+   "latam2026": 2512,
+   "growth": 906,
+   "latamGrowth": 323
+  },
+  {
+   "id": "03",
+   "name": "Alicante / Alacant",
+   "cera2023": 45214,
+   "cera2026": 55464,
+   "latam2023": 14041,
+   "latam2026": 17909,
+   "growth": 10250,
+   "latamGrowth": 3868
+  },
+  {
+   "id": "04",
+   "name": "Almería",
+   "cera2023": 44659,
+   "cera2026": 53278,
+   "latam2023": 29974,
+   "latam2026": 36345,
+   "growth": 8619,
+   "latamGrowth": 6371
+  },
+  {
+   "id": "05",
+   "name": "Ávila",
+   "cera2023": 8362,
+   "cera2026": 9602,
+   "latam2023": 3723,
+   "latam2026": 4509,
+   "growth": 1240,
+   "latamGrowth": 786
+  },
+  {
+   "id": "06",
+   "name": "Badajoz",
+   "cera2023": 12103,
+   "cera2026": 13090,
+   "latam2023": 2466,
+   "latam2026": 2880,
+   "growth": 987,
+   "latamGrowth": 414
+  },
+  {
+   "id": "07",
+   "name": "Balears, Illes",
+   "cera2023": 32791,
+   "cera2026": 42115,
+   "latam2023": 17566,
+   "latam2026": 21939,
+   "growth": 9324,
+   "latamGrowth": 4373
+  },
+  {
+   "id": "08",
+   "name": "Barcelona",
+   "cera2023": 217355,
+   "cera2026": 265687,
+   "latam2023": 90810,
+   "latam2026": 110957,
+   "growth": 48332,
+   "latamGrowth": 20147
+  },
+  {
+   "id": "09",
+   "name": "Burgos",
+   "cera2023": 18843,
+   "cera2026": 22373,
+   "latam2023": 11939,
+   "latam2026": 14408,
+   "growth": 3530,
+   "latamGrowth": 2469
+  },
+  {
+   "id": "10",
+   "name": "Cáceres",
+   "cera2023": 16721,
+   "cera2026": 18535,
+   "latam2023": 5692,
+   "latam2026": 7022,
+   "growth": 1814,
+   "latamGrowth": 1330
+  },
+  {
+   "id": "11",
+   "name": "Cádiz",
+   "cera2023": 31048,
+   "cera2026": 35052,
+   "latam2023": 7837,
+   "latam2026": 9684,
+   "growth": 4004,
+   "latamGrowth": 1847
+  },
+  {
+   "id": "12",
+   "name": "Castellón / Castelló",
+   "cera2023": 10910,
+   "cera2026": 13116,
+   "latam2023": 2288,
+   "latam2026": 2822,
+   "growth": 2206,
+   "latamGrowth": 534
+  },
+  {
+   "id": "13",
+   "name": "Ciudad Real",
+   "cera2023": 7002,
+   "cera2026": 7808,
+   "latam2023": 2003,
+   "latam2026": 2337,
+   "growth": 806,
+   "latamGrowth": 334
+  },
+  {
+   "id": "14",
+   "name": "Córdoba",
+   "cera2023": 19134,
+   "cera2026": 20911,
+   "latam2023": 4423,
+   "latam2026": 5316,
+   "growth": 1777,
+   "latamGrowth": 893
+  },
+  {
+   "id": "15",
+   "name": "Coruña, A",
+   "cera2023": 163306,
+   "cera2026": 178478,
+   "latam2023": 113324,
+   "latam2026": 124572,
+   "growth": 15172,
+   "latamGrowth": 11248
+  },
+  {
+   "id": "16",
+   "name": "Cuenca",
+   "cera2023": 3251,
+   "cera2026": 3703,
+   "latam2023": 1092,
+   "latam2026": 1310,
+   "growth": 452,
+   "latamGrowth": 218
+  },
+  {
+   "id": "17",
+   "name": "Girona",
+   "cera2023": 23993,
+   "cera2026": 30162,
+   "latam2023": 5552,
+   "latam2026": 7065,
+   "growth": 6169,
+   "latamGrowth": 1513
+  },
+  {
+   "id": "18",
+   "name": "Granada",
+   "cera2023": 53242,
+   "cera2026": 62425,
+   "latam2023": 30712,
+   "latam2026": 37917,
+   "growth": 9183,
+   "latamGrowth": 7205
+  },
+  {
+   "id": "19",
+   "name": "Guadalajara",
+   "cera2023": 5169,
+   "cera2026": 6227,
+   "latam2023": 1888,
+   "latam2026": 2210,
+   "growth": 1058,
+   "latamGrowth": 322
+  },
+  {
+   "id": "20",
+   "name": "Gipuzkoa",
+   "cera2023": 29766,
+   "cera2026": 35927,
+   "latam2023": 12556,
+   "latam2026": 15968,
+   "growth": 6161,
+   "latamGrowth": 3412
+  },
+  {
+   "id": "21",
+   "name": "Huelva",
+   "cera2023": 8186,
+   "cera2026": 9245,
+   "latam2023": 1707,
+   "latam2026": 2036,
+   "growth": 1059,
+   "latamGrowth": 329
+  },
+  {
+   "id": "22",
+   "name": "Huesca",
+   "cera2023": 8131,
+   "cera2026": 9675,
+   "latam2023": 3296,
+   "latam2026": 3935,
+   "growth": 1544,
+   "latamGrowth": 639
+  },
+  {
+   "id": "23",
+   "name": "Jaén",
+   "cera2023": 13520,
+   "cera2026": 14964,
+   "latam2023": 4578,
+   "latam2026": 5439,
+   "growth": 1444,
+   "latamGrowth": 861
+  },
+  {
+   "id": "24",
+   "name": "León",
+   "cera2023": 48610,
+   "cera2026": 55080,
+   "latam2023": 30821,
+   "latam2026": 36164,
+   "growth": 6470,
+   "latamGrowth": 5343
+  },
+  {
+   "id": "25",
+   "name": "Lleida",
+   "cera2023": 18260,
+   "cera2026": 21909,
+   "latam2023": 5888,
+   "latam2026": 7910,
+   "growth": 3649,
+   "latamGrowth": 2022
+  },
+  {
+   "id": "26",
+   "name": "Rioja, La",
+   "cera2023": 17688,
+   "cera2026": 21307,
+   "latam2023": 12888,
+   "latam2026": 15246,
+   "growth": 3619,
+   "latamGrowth": 2358
+  },
+  {
+   "id": "27",
+   "name": "Lugo",
+   "cera2023": 69086,
+   "cera2026": 76919,
+   "latam2023": 56926,
+   "latam2026": 62891,
+   "growth": 7833,
+   "latamGrowth": 5965
+  },
+  {
+   "id": "28",
+   "name": "Madrid",
+   "cera2023": 375602,
+   "cera2026": 498874,
+   "latam2023": 172387,
+   "latam2026": 252090,
+   "growth": 123272,
+   "latamGrowth": 79703
+  },
+  {
+   "id": "29",
+   "name": "Málaga",
+   "cera2023": 60756,
+   "cera2026": 74033,
+   "latam2023": 23826,
+   "latam2026": 30798,
+   "growth": 13277,
+   "latamGrowth": 6972
+  },
+  {
+   "id": "30",
+   "name": "Murcia",
+   "cera2023": 37709,
+   "cera2026": 44626,
+   "latam2023": 15055,
+   "latam2026": 17858,
+   "growth": 6917,
+   "latamGrowth": 2803
+  },
+  {
+   "id": "31",
+   "name": "Navarra",
+   "cera2023": 29902,
+   "cera2026": 36781,
+   "latam2023": 18042,
+   "latam2026": 22358,
+   "growth": 6879,
+   "latamGrowth": 4316
+  },
+  {
+   "id": "32",
+   "name": "Ourense",
+   "cera2023": 102927,
+   "cera2026": 111124,
+   "latam2023": 76180,
+   "latam2026": 82486,
+   "growth": 8197,
+   "latamGrowth": 6306
+  },
+  {
+   "id": "33",
+   "name": "Asturias",
+   "cera2023": 123355,
+   "cera2026": 143588,
+   "latam2023": 88501,
+   "latam2026": 103054,
+   "growth": 20233,
+   "latamGrowth": 14553
+  },
+  {
+   "id": "34",
+   "name": "Palencia",
+   "cera2023": 7510,
+   "cera2026": 8737,
+   "latam2023": 4243,
+   "latam2026": 5226,
+   "growth": 1227,
+   "latamGrowth": 983
+  },
+  {
+   "id": "35",
+   "name": "Palmas, Las",
+   "cera2023": 55605,
+   "cera2026": 66235,
+   "latam2023": 38200,
+   "latam2026": 43233,
+   "growth": 10630,
+   "latamGrowth": 5033
+  },
+  {
+   "id": "36",
+   "name": "Pontevedra",
+   "cera2023": 136688,
+   "cera2026": 150148,
+   "latam2023": 101460,
+   "latam2026": 111617,
+   "growth": 13460,
+   "latamGrowth": 10157
+  },
+  {
+   "id": "37",
+   "name": "Salamanca",
+   "cera2023": 31607,
+   "cera2026": 36586,
+   "latam2023": 16567,
+   "latam2026": 20629,
+   "growth": 4979,
+   "latamGrowth": 4062
+  },
+  {
+   "id": "38",
+   "name": "Santa Cruz de Tenerife",
+   "cera2023": 107173,
+   "cera2026": 125100,
+   "latam2023": 88192,
+   "latam2026": 99976,
+   "growth": 17927,
+   "latamGrowth": 11784
+  },
+  {
+   "id": "39",
+   "name": "Cantabria",
+   "cera2023": 41182,
+   "cera2026": 49873,
+   "latam2023": 27798,
+   "latam2026": 34297,
+   "growth": 8691,
+   "latamGrowth": 6499
+  },
+  {
+   "id": "40",
+   "name": "Segovia",
+   "cera2023": 3641,
+   "cera2026": 4178,
+   "latam2023": 1276,
+   "latam2026": 1489,
+   "growth": 537,
+   "latamGrowth": 213
+  },
+  {
+   "id": "41",
+   "name": "Sevilla",
+   "cera2023": 38437,
+   "cera2026": 43565,
+   "latam2023": 11054,
+   "latam2026": 13234,
+   "growth": 5128,
+   "latamGrowth": 2180
+  },
+  {
+   "id": "42",
+   "name": "Soria",
+   "cera2023": 7303,
+   "cera2026": 9060,
+   "latam2023": 5680,
+   "latam2026": 7137,
+   "growth": 1757,
+   "latamGrowth": 1457
+  },
+  {
+   "id": "43",
+   "name": "Tarragona",
+   "cera2023": 21547,
+   "cera2026": 26598,
+   "latam2023": 5780,
+   "latam2026": 7134,
+   "growth": 5051,
+   "latamGrowth": 1354
+  },
+  {
+   "id": "44",
+   "name": "Teruel",
+   "cera2023": 5096,
+   "cera2026": 5891,
+   "latam2023": 2446,
+   "latam2026": 2973,
+   "growth": 795,
+   "latamGrowth": 527
+  },
+  {
+   "id": "45",
+   "name": "Toledo",
+   "cera2023": 13225,
+   "cera2026": 15686,
+   "latam2023": 4214,
+   "latam2026": 5186,
+   "growth": 2461,
+   "latamGrowth": 972
+  },
+  {
+   "id": "46",
+   "name": "Valencia / València",
+   "cera2023": 70189,
+   "cera2026": 83234,
+   "latam2023": 23292,
+   "latam2026": 28354,
+   "growth": 13045,
+   "latamGrowth": 5062
+  },
+  {
+   "id": "47",
+   "name": "Valladolid",
+   "cera2023": 14692,
+   "cera2026": 17741,
+   "latam2023": 6440,
+   "latam2026": 8254,
+   "growth": 3049,
+   "latamGrowth": 1814
+  },
+  {
+   "id": "48",
+   "name": "Bizkaia",
+   "cera2023": 42368,
+   "cera2026": 50401,
+   "latam2023": 23475,
+   "latam2026": 28427,
+   "growth": 8033,
+   "latamGrowth": 4952
+  },
+  {
+   "id": "49",
+   "name": "Zamora",
+   "cera2023": 20831,
+   "cera2026": 24104,
+   "latam2023": 14562,
+   "latam2026": 17331,
+   "growth": 3273,
+   "latamGrowth": 2769
+  },
+  {
+   "id": "50",
+   "name": "Zaragoza",
+   "cera2023": 26482,
+   "cera2026": 30903,
+   "latam2023": 10281,
+   "latam2026": 11916,
+   "growth": 4421,
+   "latamGrowth": 1635
+  },
+  {
+   "id": "51",
+   "name": "Ceuta",
+   "cera2023": 2971,
+   "cera2026": 3357,
+   "latam2023": 390,
+   "latam2026": 410,
+   "growth": 386,
+   "latamGrowth": 20
+  },
+  {
+   "id": "52",
+   "name": "Melilla",
+   "cera2023": 5964,
+   "cera2026": 6879,
+   "latam2023": 1111,
+   "latam2026": 1122,
+   "growth": 915,
+   "latamGrowth": 11
+  }
+ ]
+}
