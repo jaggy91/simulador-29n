@@ -17,6 +17,17 @@ export function withdraw(provinces, { from, to, ids, share = 1 }) {
   });
 }
 
+// Voto útil: `fraction` del voto de `from` pasa a `to` en `ids`; `from` sigue presentándose.
+export function transfer(provinces, { from, to, ids, fraction }) {
+  return clone(provinces).map((p) => {
+    if (!ids.includes(p.id) || !p.votes[from]) return p;
+    const moved = Math.round(p.votes[from] * fraction);
+    p.votes[from] -= moved;
+    p.votes[to] = (p.votes[to] || 0) + moved;
+    return p;
+  });
+}
+
 // Divide el voto de `from` entre varios partidos según pesos por provincia:
 // weights = {provId: {partido: peso}}. Sin pesos para una provincia, no cambia.
 export function split(provinces, { from, weights }) {

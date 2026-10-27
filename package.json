@@ -18,7 +18,8 @@
     "data:cera": "node scripts/build-cera.js",
     "polls": "node scripts/fetch-polls.js",
     "simulate": "node scripts/simulate.js",
-    "backtest": "node scripts/backtest-2023.js"
+    "backtest": "node scripts/backtest-2023.js",
+    "spectrum": "node scripts/spectrum.js"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

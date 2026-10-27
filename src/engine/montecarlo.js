@@ -73,7 +73,7 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
   const seatSum = {};
   const partyHist = {};
   const seatHist = { derecha: [], investidura: [], senadoDerecha: [] };
-  let rightMaj = 0, juntsKey = 0, senateMaj = 0, senate35 = 0;
+  let rightMaj = 0, juntsKey = 0, senateMaj = 0, senate35 = 0, invAlone = 0, invJunts = 0;
   const activeCount = Object.fromEntries(fixed.map((s) => [s.id, 0]));
   for (let i = 0; i < n; i++) {
     const active = fixed.filter((s) => s.prob >= 1 || rng() < s.prob);
@@ -93,6 +93,8 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
     if (c.blocs.derecha >= MAJORITY) rightMaj++;
     // Junts decisivo: ni la derecha ni la investidura suman 176 solas, pero sí con Junts.
     else if (c.blocs.investidura < MAJORITY && c.blocs.investidura + c.blocs.junts >= MAJORITY) juntsKey++;
+    if (c.blocs.investidura >= MAJORITY) invAlone++;
+    if (c.blocs.investidura + c.blocs.junts >= MAJORITY) invJunts++;
     if (s.right >= s.majority) senateMaj++;
     if (s.right >= s.threeFifths) senate35++;
   }
@@ -102,7 +104,14 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
     seats: mean,
     seatIntervals: Object.fromEntries(Object.entries(partyHist).filter(([k]) => seatSum[k] / n >= 0.5).map(([k, xs]) => [k, summary(xs)])),
     blocs: { derecha: summary(seatHist.derecha), investidura: summary(seatHist.investidura), senadoDerecha: summary(seatHist.senadoDerecha) },
-    prob: { mayoriaDerecha: rightMaj / n, juntsDecisivo: juntsKey / n, senadoMayoriaDerecha: senateMaj / n, senado35Derecha: senate35 / n },
+    prob: {
+      mayoriaDerecha: rightMaj / n,
+      juntsDecisivo: juntsKey / n,
+      investiduraSola: invAlone / n,
+      investiduraConJunts: invJunts / n,
+      senadoMayoriaDerecha: senateMaj / n,
+      senado35Derecha: senate35 / n,
+    },
     scenarioFrequency: Object.fromEntries(Object.entries(activeCount).map(([k, v]) => [k, v / n])),
   };
 }

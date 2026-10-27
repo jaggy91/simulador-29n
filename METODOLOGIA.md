@@ -249,16 +249,53 @@ Dos modos:
 **Proyección central y media del Monte Carlo**
 - La proyección central es la del Congreso sin ruido (con el CIS: derecha 186).
 - La media del Monte Carlo es algo menor (181,5). D'Hondt no es lineal: el ruido provincial reduce de media la prima del partido que lidera en provincias muy igualadas.
+- **Para leer probabilidades y tendencias, la media o la mediana del Monte Carlo es más fiable que la central**, que salta a escalones (ver §4.9).
 
 **Calibración** (dos opciones)
 - `VIDEO_NOISE` (σ_b 1,5 · σ_p 0,75 · σ_prov 0,06): reproduce la dispersión implícita en el vídeo y sus cifras del Senado (P(3/5) ≈ 6 % con la media y 0 % con el CIS).
 - **`HISTORICAL_NOISE`** (por defecto desde el 27-oct): elegido con el backtest (§5.3). Es más honesto: con `VIDEO_NOISE`, el resultado real de 2023 quedaba en el borde del intervalo.
 
+### 4.9 Espectro izquierda ↔ derecha (laboratorio)
+
+`src/engine/spectrum.js` y `scripts/spectrum.js`, que genera `data/spectrum.json`.
+- **No forma parte de la proyección oficial:** no escribe `state.json` ni `history.json`.
+- **Niveles:** 11, de −5 a +5. El nivel 0 es la proyección oficial.
+- **Cómo se acumulan:** cada nivel hacia un lado añade un escenario favorable a ese bloque, del más plausible al menos plausible. Cuando un nivel intensifica uno anterior (marcado como "sustituye"), el anterior se descarta.
+- **Retiradas de listas:** ya no son posibles tras el cierre de candidaturas. Se emulan con "voto útil": el partido sigue presentándose, pero una fracción de su voto pasa a otro.
+
+| Nivel | A favor de la izquierda | A favor de la derecha |
+|---|---|---|
+| 1 | Encuestas: 40 % del fallo de 2023 (PSOE +2,1) | Encuestas: +2 pts de la investidura a PP + Vox |
+| 2 | Voto útil: 30 % del FA → PSOE en las 29 provincias de ≤5 escaños | Voto útil: 30 % de Vox → PP en las 29 provincias de ≤5 escaños |
+| 3 | Pacto PP–Vox del Senado al 60 % | Pacto al 100 % y SALF se hunde (50 % a Vox, 30 % al PP) |
+| 4 | Fallo completo de las encuestas de 2023 (sustituye al nivel 1) | Desmovilización: FA, FV y Podemos −25 % |
+| 5 | *Hipotético:* 37.000 votos exteriores al PSOE en modo techo | Encuestas: +4 pts a la derecha (sustituye al nivel 1) |
+
+**Cálculo por nivel**
+- Proyección central más Monte Carlo de 2.000 iteraciones.
+- **Modificaciones de la encuesta:** conservan la suma de la encuesta, de modo que la abstención sube a todos los partidos en proporción.
+  - El "error de 2023" usa el vector real − encuesta del backtest a 33 días.
+  - Lo que falta para cuadrar lo ceden el resto de partidos en proporción a su voto.
+
+**Puntos de vuelco:** primer nivel, desde el centro, en que un resultado pasa a ser más probable que su contrario (P ≥ 50 % en el Monte Carlo).
+- La derecha pierde la mayoría.
+- Investidura + Junts suman 176.
+- La investidura suma 176 sola.
+- La derecha logra la mayoría.
+
+Se usan probabilidades y no la proyección central porque, con D'Hondt, **la central salta a escalones**. Con el CIS de hoy, la central da 186 a la derecha y la media del Monte Carlo 181,6: varios escaños se ganan por muy pocos votos. Por eso, al trasladar 2 puntos, la central solo sube 1 escaño mientras la media sube 9.
+
+**Resultado a 27-oct**
+- **Media de encuestas:** ni en el nivel −5 pierde la derecha la mayoría en más de la mitad de las simulaciones (P = 57 %).
+- **CIS reestimado:**
+  - En el nivel −4, la derecha pierde la mayoría y la investidura + Junts suman 176.
+  - En el nivel −5, la investidura suma 176 sola.
+
 ---
 
 ## 5. Validación
 
-### 5.1 Reproducción exacta de 2023 (`npm test`, 28 tests)
+### 5.1 Reproducción exacta de 2023 (`npm test`, 35 tests en total)
 
 | # | Caso (votos de 2023) | Esperado (oficial o vídeo) | Modelo |
 |---|---|---|---|
@@ -385,10 +422,11 @@ Efecto sobre la proyección central (derecha en el Congreso / en el Senado):
 ```sh
 npm ci
 npm run data          # regenera la base (Wikipedia, BOE, INE)
-npm test              # 28 tests: reproducción de 2023, escenarios, proyección, Monte Carlo
+npm test              # 35 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
+npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 ```
 
 **Lista de comprobación**

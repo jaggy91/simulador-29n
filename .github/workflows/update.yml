@@ -40,6 +40,11 @@ jobs:
         if: github.event_name != 'push'
         run: node scripts/simulate.js --n 5000
 
+      # Laboratorio izquierda ↔ derecha: aparte de la proyección oficial.
+      - name: Espectro
+        if: github.event_name != 'push'
+        run: node scripts/spectrum.js --n 2000
+
       - name: Guardar datos si han cambiado
         if: github.event_name != 'push'
         run: |

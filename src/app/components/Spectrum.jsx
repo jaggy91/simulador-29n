@@ -1,0 +1,144 @@
+import { useState } from 'react';
+import { Hemicycle } from './Hemicycle.jsx';
+import { BlocBar } from './BlocBar.jsx';
+import { MAJORITY } from '../../engine/blocs.js';
+
+// Espectro izquierda ↔ derecha: 11 posiciones (−5…+5) precalculadas en spectrum.json.
+// Cada paso hacia un lado activa un escenario más favorable a ese bloque.
+const pct = (x) => {
+  const v = 100 * x;
+  if (v > 0 && v < 100 && (v < 1 || v > 99)) return `${(v > 99 ? Math.min(99.9, Math.floor(v * 10) / 10) : Math.max(0.1, Math.ceil(v * 10) / 10)).toLocaleString('es-ES')} %`;
+  return `${Math.round(v)} %`;
+};
+const signed = (x) => `${x > 0 ? '+' : x < 0 ? '−' : '±'}${Math.abs(x).toLocaleString('es-ES', { maximumFractionDigits: 1 })}`;
+const LEVELS = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
+
+function tipText(t) {
+  const out = [];
+  if (t.derechaPierde != null && t.derechaPierde !== 0) out.push({ at: t.derechaPierde, text: 'La derecha pierde la mayoría' });
+  if (t.investiduraConJunts != null) out.push({ at: t.investiduraConJunts, text: 'Investidura + Junts suman 176' });
+  if (t.investiduraSola != null) out.push({ at: t.investiduraSola, text: 'La investidura suma 176 sola' });
+  if (t.derechaGana != null && t.derechaGana !== 0) out.push({ at: t.derechaGana, text: 'La derecha logra la mayoría' });
+  return out;
+}
+
+export function Spectrum({ spectrum, source }) {
+  const [level, setLevel] = useState(0);
+  const src = spectrum.sources[source];
+  if (!src) return null;
+  const byLevel = Object.fromEntries(src.levels.map((l) => [l.level, l]));
+  const cur = byLevel[level];
+  const mc = cur.montecarlo;
+  const tips = tipText(src.tipping);
+  const meanR = (l) => byLevel[l].montecarlo.blocs.derecha.mean;
+
+  const onKey = (e) => {
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); setLevel((l) => Math.max(-5, l - 1)); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); setLevel((l) => Math.min(5, l + 1)); }
+    if (e.key === 'Home') setLevel(-5);
+    if (e.key === 'End') setLevel(5);
+  };
+
+  const Side = ({ side, dir }) => (
+    <div className="spec-side">
+      <h3>{dir < 0 ? 'A favor de la izquierda' : 'A favor de la derecha'}</h3>
+      <ol>
+        {spectrum.levers[side].map((l) => {
+          const lv = dir * l.level;
+          const on = Math.sign(level) === dir && Math.abs(level) >= l.level;
+          const replacedBy = spectrum.levers[side].find((x) => x.replaces === l.id);
+          const superseded = on && replacedBy && Math.abs(level) >= replacedBy.level;
+          const delta = meanR(lv) - meanR(lv - dir);
+          return (
+            <li key={l.id} className={`lever${on ? ' on' : ''}${superseded ? ' superseded' : ''}`}>
+              <button className="lever-btn" onClick={() => setLevel(lv)} aria-label={`Ir al nivel ${l.level} ${dir < 0 ? 'izquierda' : 'derecha'}`}>
+                <span className="check" aria-hidden="true">{on ? (superseded ? '↻' : '✓') : ''}</span>
+                <span>
+                  <span className="lv">Nivel {l.level}</span>
+                  {l.hypothetical && <span className="badge hipotético" style={{ marginLeft: 6 }}>Hipotético</span>}
+                  <span className="lbl">{l.label}</span>
+                  <span className="det">{superseded ? `Sustituido por el nivel ${replacedBy.level}. ` : ''}{l.detail}</span>
+                  <span className="eff">Derecha {signed(Math.round(delta * 10) / 10)} escaños de media</span>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+
+  return (
+    <>
+      <div className="spec">
+        <div className="spec-ends small">
+          <span>◀ <span className="long">Todo a favor de la izquierda</span><span className="short">Izquierda</span></span>
+          <span><span className="long">Todo a favor de la derecha</span><span className="short">Derecha</span> ▶</span>
+        </div>
+        <div className="spec-track" role="radiogroup" aria-label="Posición en el espectro" onKeyDown={onKey}>
+          <div className="spec-gradient" aria-hidden="true" />
+          {LEVELS.map((l) => {
+            const p = byLevel[l].montecarlo.prob.mayoriaDerecha;
+            return (
+              <button
+                key={l}
+                role="radio"
+                aria-checked={level === l}
+                tabIndex={level === l ? 0 : -1}
+                className={`spec-stop${level === l ? ' sel' : ''}${l === 0 ? ' zero' : ''}`}
+                style={{ left: `${((l + 5) / 10) * 100}%` }}
+                onClick={() => setLevel(l)}
+                title={`Nivel ${l}: P(mayoría derecha) ${pct(p)}`}
+              >
+                <span className="sr">{l === 0 ? 'Proyección oficial' : `Nivel ${Math.abs(l)} ${l < 0 ? 'izquierda' : 'derecha'}`}</span>
+              </button>
+            );
+          })}
+          {[...new Set(tips.map((t) => t.at))].map((at) => (
+            <span key={at} className="spec-mark" style={{ left: `${((at + 5) / 10) * 100}%` }} aria-hidden="true" />
+          ))}
+        </div>
+        <div className="spec-scale small muted" aria-hidden="true">
+          {LEVELS.map((l) => <span key={l} style={{ left: `${((l + 5) / 10) * 100}%` }}>{l === 0 ? 'Hoy' : Math.abs(l)}</span>)}
+        </div>
+        {tips.length > 0 && (
+          <ul className="spec-milestones small">
+            {[...new Set(tips.map((t) => t.at))].sort((a, b) => Math.abs(a) - Math.abs(b)).map((at) => (
+              <li key={at}>
+                <button className="btn" onClick={() => setLevel(at)}>
+                  <span className="spec-mark inline" aria-hidden="true" />
+                  Nivel {Math.abs(at)} {at < 0 ? 'a la izquierda' : 'a la derecha'}: {tips.filter((t) => t.at === at).map((t) => t.text).join(' · ')}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+        {src.tipping.derechaPierde == null && (
+          <p className="small ink-2" style={{ marginTop: 8 }}>
+            Ni con los cinco escenarios a favor de la izquierda pierde la derecha la mayoría en más de la mitad de las simulaciones
+            (en el extremo: {pct(byLevel[-5].montecarlo.prob.mayoriaDerecha)} de mayoría de la derecha).
+          </p>
+        )}
+      </div>
+
+      <div className="tiles" style={{ marginTop: 16 }}>
+        <div className="tile"><div className="label">PP + Vox + UPN</div><div className="value">{mc.blocs.derecha.p50}</div><div className="note">90 %: {mc.blocs.derecha.p05}–{mc.blocs.derecha.p95} · mayoría {pct(mc.prob.mayoriaDerecha)}</div></div>
+        <div className="tile"><div className="label">Investidura sin Junts</div><div className="value">{mc.blocs.investidura.p50}</div><div className="note">suma 176 sola: {pct(mc.prob.investiduraSola)}</div></div>
+        <div className="tile"><div className="label">Investidura + Junts</div><div className="value">{pct(mc.prob.investiduraConJunts)}</div><div className="note">probabilidad de llegar a 176</div></div>
+        <div className="tile"><div className="label">Senado: derecha</div><div className="value">{cur.central.senate.right}</div><div className="note">mayoría {pct(mc.prob.senadoMayoriaDerecha)} · 3/5 {pct(mc.prob.senado35Derecha)}</div></div>
+      </div>
+
+      <div className="grid cols-2" style={{ marginTop: 16 }}>
+        <div>
+          <p className="small ink-2" style={{ marginBottom: 8 }}>Congreso, proyección central del nivel {level === 0 ? 'oficial' : `${Math.abs(level)} ${level < 0 ? 'izquierda' : 'derecha'}`}.</p>
+          <Hemicycle seats={cur.central.congress} majority={MAJORITY} title="Congreso en este nivel" ariaLabel="Hemiciclo del Congreso en el nivel elegido" />
+          <BlocBar blocs={cur.central.blocs} total={350} markers={[{ at: MAJORITY, label: `Mayoría ${MAJORITY}` }]} interval={mc.blocs} />
+        </div>
+        <div className="spec-levers">
+          <Side side="izquierda" dir={-1} />
+          <Side side="derecha" dir={1} />
+        </div>
+      </div>
+    </>
+  );
+}

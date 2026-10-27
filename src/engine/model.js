@@ -5,7 +5,7 @@ import { remap2023to2026 } from './remap.js';
 import { project } from './projection.js';
 import { congress } from './congress.js';
 import { senateSeats, senateSeatsByCandidate } from './senate.js';
-import { withdraw, smallProvinces, optimizeExtraVotes } from './scenarios.js';
+import { withdraw, transfer, smallProvinces, optimizeExtraVotes } from './scenarios.js';
 import { BLOCS } from './blocs.js';
 
 export const RIGHT = ['PP', 'VOX', 'UPN'];
@@ -49,12 +49,15 @@ function splitFormentera(list) {
 
 const whereIds = (where, prep) => (Array.isArray(where) ? where : prep[where] || []);
 
-// Aplica a la proyección del Congreso los escenarios activos de tipo withdraw / extra-votes.
+// Aplica a la proyección del Congreso los escenarios activos de tipo withdraw /
+// transfer (voto útil) / extra-votes.
 export function applyCongressScenarios(provinces, active, prep) {
   let out = provinces;
   for (const s of active) {
     if (s.kind === 'withdraw') {
       out = withdraw(out, { from: s.params.from, to: s.params.to, ids: whereIds(s.params.where, prep), share: s.params.share });
+    } else if (s.kind === 'transfer') {
+      out = transfer(out, { from: s.params.from, to: s.params.to, ids: whereIds(s.params.where, prep), fraction: s.params.fraction });
     } else if (s.kind === 'extra-votes' && s.params.mode === 'techo') {
       out = optimizeExtraVotes(out, { party: s.params.party, budget: s.params.budget, allies: BLOCS.investidura, unit: s.params.unit ?? 10 }).provinces;
     } else if (s.kind === 'extra-votes' && s.params.mode === 'realista') {

@@ -6,6 +6,8 @@ import { BlocBar } from './components/BlocBar.jsx';
 import { Timeline } from './components/Timeline.jsx';
 import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
+import { Spectrum } from './components/Spectrum.jsx';
+import { swingPoll } from '../engine/spectrum.js';
 
 // Porcentaje en formato español. Nunca muestra 0 % o 100 % si no es exacto: cerca de
 // los extremos usa un decimal y lo acota (99,9 % / 0,1 %).
@@ -27,14 +29,6 @@ const store = {
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* sin almacenamiento */ } },
 };
 
-// Traslada `pts` puntos de la investidura a la derecha, en proporción al peso de cada partido.
-function swingPoll(poll, pts) {
-  if (!pts) return poll;
-  const tr = sumOf(poll, BLOCS.derecha);
-  const tl = sumOf(poll, BLOCS.investidura);
-  return Object.fromEntries(Object.entries(poll).map(([p, v]) => [p,
-    BLOCS.derecha.includes(p) ? v + (pts * v) / tr : BLOCS.investidura.includes(p) ? Math.max(0.05, v - (pts * v) / tl) : v]));
-}
 
 export default function App() {
   const [d, setD] = useState(null);
@@ -53,6 +47,7 @@ export default function App() {
   useEffect(() => {
     Promise.all(['state', 'polls', 'scenarios', 'history', 'congreso-2023'].map((n) => loadJSON(n)))
       .then(([state, polls, scenarios, history, congreso]) => setD({ state, polls, scenarios: scenarios.scenarios, history, provinces: congreso.provinces }))
+      .then(() => loadJSON('spectrum').then((spectrum) => setD((x) => ({ ...x, spectrum }))).catch(() => {}))
       .catch((e) => setError(e.message));
   }, []);
 
@@ -176,6 +171,17 @@ export default function App() {
             )}
             <Scenarios scenarios={d.scenarios} overrides={overrides} setOverride={setOverride} whatIf={whatIf} />
           </section>
+
+          {d.spectrum && (
+            <section className="card" style={{ marginTop: 16 }}>
+              <h2>¿Qué tiene que pasar para que gane cada bloque?</h2>
+              <p className="sub">
+                Laboratorio, aparte de la proyección oficial. Cada paso hacia un lado activa un escenario más favorable a ese bloque,
+                de más a menos plausible. Calculado con {d.polls.sources[source].label.toLowerCase()} del {new Date(d.spectrum.latestPoll).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' })}.
+              </p>
+              <Spectrum spectrum={d.spectrum} source={source} />
+            </section>
+          )}
 
           <section className="grid cols-2">
             <div className="card">
