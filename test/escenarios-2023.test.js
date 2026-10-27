@@ -8,7 +8,9 @@ import { BLOCS } from '../src/engine/blocs.js';
 
 const near = (x, target, tol = 2) => expect(Math.abs(x - target), `${x} vs ${target}`).toBeLessThanOrEqual(tol);
 
-describe('Escenarios sobre votos de 2023', () => {
+// Contraste con un análisis externo: reproduce sus simulaciones sobre los votos
+// oficiales de 2023. No alimenta el modelo; comprueba el motor contra un cálculo externo.
+describe('Contraste con un análisis externo (votos oficiales de 2023)', () => {
   const small = smallProvinces(base);
 
   it('hay 29 provincias de ≤5 escaños y Sumar no sacó escaño en ninguna', () => {
@@ -44,7 +46,7 @@ describe('Escenarios sobre votos de 2023', () => {
     const r = congress(provinces);
     expect(r.national.PSOE - 121).toBe(7);
     expect(r.blocs).toEqual({ derecha: 166, investidura: 179, junts: 5 });
-    // El vídeo menciona Cuenca, Málaga, Ceuta y Salamanca.
+    // El análisis externo menciona Cuenca, Málaga, Ceuta y Salamanca.
     expect(Object.keys(extra)).toEqual(expect.arrayContaining(['16', '29', '51', '37']));
   });
 });

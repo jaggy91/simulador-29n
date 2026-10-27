@@ -1,4 +1,4 @@
-// Bloques tal como los define el vídeo de referencia.
+// Bloques según la votación de investidura del 16-nov-2023 (179 sí, 171 no).
 export const BLOCS = {
   derecha: ['PP', 'VOX', 'UPN'],
   // Partidos que invistieron a Sánchez en 2023 (sin Junts). FA, FV y Podemos vienen de Sumar.

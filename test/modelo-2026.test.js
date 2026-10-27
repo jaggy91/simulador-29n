@@ -56,18 +56,20 @@ describe('Proyección', () => {
     expect(r.senate.threeFifths).toBe(161);
   });
 
-  it('Teruel sin FA: el FA no tiene votos en Teruel y el PSOE gana el 70 %', () => {
+  it('Teruel sin FA: el FA no tiene votos en Teruel y el PSOE gana la fracción del supuesto', () => {
+    const share = byId.TERUEL_sin_FA_CHA.params.share;
     const plain = run(prep, polls.media.values, []).provinces.find((p) => p.id === '44');
     const r = run(prep, polls.media.values, [byId.TERUEL_sin_FA_CHA]).provinces.find((p) => p.id === '44');
     expect(r.votes.FA).toBeUndefined();
-    expect(Math.abs(r.votes.PSOE - plain.votes.PSOE - 0.7 * plain.votes.FA)).toBeLessThanOrEqual(1);
+    expect(Math.abs(r.votes.PSOE - plain.votes.PSOE - share * plain.votes.FA)).toBeLessThanOrEqual(1);
   });
 
-  it('Vox fuera del Senado sube a la derecha en el Senado y no toca el Congreso', () => {
-    const a = run(prep, polls.media.values, [byId.SENADO_PROGRESO]);
-    const b = run(prep, polls.media.values, [byId.SENADO_PROGRESO, { ...byId.VOX_retira_senado, prob: 1 }]);
-    expect(b.senate.right).toBeGreaterThan(a.senate.right);
-    expect(b.congress.national).toEqual(a.congress.national);
+  it('las listas conjuntas aplican el seguimiento de la encuesta (menos seguimiento, menos escaños)', () => {
+    const pleno = { ...byId.PACTO_PP_VOX_SENADO, params: { ...byId.PACTO_PP_VOX_SENADO.params, sharePP: 1, shareVox: 1 } };
+    const real = run(prep, polls.media.values, [byId.SENADO_PROGRESO, byId.PACTO_PP_VOX_SENADO]);
+    const total = run(prep, polls.media.values, [byId.SENADO_PROGRESO, pleno]);
+    expect(byId.PACTO_PP_VOX_SENADO.params).toMatchObject({ sharePP: 0.94, shareVox: 0.86 });
+    expect(total.senate.right).toBeGreaterThanOrEqual(real.senate.right);
   });
 });
 
@@ -78,16 +80,14 @@ describe('Monte Carlo', () => {
     expect(a).toEqual(b);
   });
 
-  // Contraste con las cifras del vídeo (media de encuestas): Senado de Progreso con PP y
-  // Vox por separado → la derecha llega a 3/5 en ~6 % de los casos; con Vox retirado, ~95 %.
-  it('Senado (media): P(3/5) baja sin coordinación y alta con Vox retirado', () => {
+  // Media de encuestas: con Senado de Progreso y sin pacto PP–Vox, la derecha rara vez
+  // llega a 3/5 del Senado; el pacto real (con el seguimiento de Data 10) lo cambia.
+  it('Senado (media): P(3/5) baja sin pacto y sube claramente con el pacto PP–Vox', () => {
     const only = scenarios.filter((s) => ['SENADO_PROGRESO', 'TERUEL_sin_FA_CHA'].includes(s.id));
     const sep = simulate(prep, polls.media.values, only, { n: 400 });
-    const coord = simulate(prep, polls.media.values, [...only, { ...byId.VOX_retira_senado, prob: 1 }], { n: 400 });
+    const pacto = simulate(prep, polls.media.values, [...only, byId.PACTO_PP_VOX_SENADO], { n: 400 });
     expect(sep.prob.senado35Derecha).toBeLessThan(0.2);
-    // 95 % en el vídeo con su incertidumbre (VIDEO_NOISE); con la histórica por defecto, algo menos.
-    expect(coord.prob.senado35Derecha).toBeGreaterThan(0.8);
-    // (hipótesis del vídeo: retirada casi total de Vox)
+    expect(pacto.prob.senado35Derecha - sep.prob.senado35Derecha).toBeGreaterThan(0.15);
   });
 });
 
@@ -101,7 +101,7 @@ describe('Voto exterior', () => {
   });
 
   // Los mismos 37.000 votos al PSOE: repartidos según dónde creció el censo apenas
-  // mueven escaños; colocados de forma óptima (supuesto del vídeo) mueven ~7.
+  // mueven escaños; colocados de forma óptima (cota teórica) mueven ~7.
   it('modo realista ≪ techo estratégico con el mismo volumen de votos', () => {
     const base = simulate(prep, polls.cis.values, only, { n: 300 });
     const real = simulate(prep, polls.cis.values, [...only, ext({ mode: 'realista', split: { PSOE: 1 }, turnout: 0.227 })], { n: 300 });

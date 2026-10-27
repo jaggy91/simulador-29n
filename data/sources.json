@@ -1,16 +1,20 @@
 {
- "updated": "2026-10-27T17:56:42.586Z",
+ "updated": "2026-10-27T18:40:26.311Z",
  "impactN": 1000,
  "cards": [
   {
-   "id": "video-fa-pequenas",
-   "type": "analisis",
-   "date": "2026-10-25",
-   "title": "El PSOE habría ofrecido al Frente Amplio no presentar listas al Congreso en una decena larga de provincias pequeñas",
-   "detail": "Según algunos medios citados en el vídeo de referencia; el PSOE lo negaba.",
-   "outlet": "Vídeo de referencia (transcripción)",
-   "sources": [],
-   "verified": false,
+   "id": "delgado-optimizar",
+   "type": "noticia",
+   "date": "2026-10-20",
+   "title": "Emilio Delgado (FA) habla en TVE de contactos con el PSOE para «optimizar» los resultados; el FA y Maíllo lo desmienten al día siguiente",
+   "detail": "El 21-oct el FA aclara que no negocia la retirada de listas al Congreso y Maíllo (IU) dice que «el debate no se ha abierto en el Congreso». Ninguna fuente concreta provincias.",
+   "outlet": "The Objective",
+   "sources": [
+    "https://theobjective.com/espana/politica/2026-10-21/frente-amplio-negociaciones-psoe-congreso/",
+    "https://www.libertaddigital.com/espana/politica/2026-10-21/frente-amplio-recula-y-niega-listas-conjuntas-con-el-psoe-al-congreso-7479906/",
+    "https://www.moncloa.com/2026/10/22/frente-amplio-psoe-listas-congreso-3453307/"
+   ],
+   "verified": true,
    "captured": "manual",
    "effects": [
     {
@@ -28,6 +32,11 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
@@ -37,17 +46,21 @@
   },
   {
    "id": "abascal-senado",
-   "type": "analisis",
+   "type": "noticia",
    "date": "2026-10-19",
-   "title": "Abascal ofrece un entendimiento para que la izquierda no se quede con el Senado",
-   "detail": "El vídeo de referencia plantea que Vox se retire del Senado en casi toda España. Génova no lo había confirmado.",
-   "outlet": "Vídeo de referencia (transcripción)",
-   "sources": [],
-   "verified": false,
+   "title": "Abascal tiende la mano al PP para negociar «algún entendimiento» para el Senado; Génova no confirma",
+   "detail": "Tras el Comité Ejecutivo Nacional de Vox. No concreta fórmulas; el PP responde con el calendario (cierre de listas el 26-oct).",
+   "outlet": "Infobae / EFE",
+   "sources": [
+    "https://www.infobae.com/espana/agencias/2026/10/19/abascal-tiende-la-mano-al-pp-para-negociar-algun-entendimiento-para-el-senado/",
+    "https://www.libertaddigital.com/espana/politica/2026-10-19/abascal-propone-al-pp-un-acuerdo-en-el-senado-para-frenar-el-pacto-de-sanchez-con-la-extrema-izquierda-7478373/",
+    "https://www.moncloa.com/2026/10/19/pacto-pp-vox-senado-listas-26o-3451726/"
+   ],
+   "verified": true,
    "captured": "manual",
    "effects": [
     {
-     "scenario": "VOX_retira_senado",
+     "scenario": "PACTO_PP_VOX_SENADO",
      "prob": 0.5,
      "status": "negociación"
     }
@@ -57,6 +70,11 @@
    "overriddenBy": "pacto-pp-vox-senado",
    "impact": {
     "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
      "derecha": 0,
      "pMayoria": 0,
      "senado": 0
@@ -96,12 +114,17 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -4
+     "senado": -2
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": -9
     },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -23
+     "senado": -12
     }
    }
   },
@@ -135,9 +158,14 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.002,
+     "pMayoria": -0.001,
      "senado": 0
     }
    }
@@ -172,6 +200,11 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
@@ -199,11 +232,6 @@
      "scenario": "PACTO_PP_VOX_SENADO",
      "prob": 1,
      "status": "confirmado"
-    },
-    {
-     "scenario": "VOX_retira_senado",
-     "prob": 0,
-     "status": "superado"
     }
    ],
    "toggleable": true,
@@ -213,12 +241,66 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 18
+     "senado": 12
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 5
     },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 25
+     "senado": 22
+    }
+   }
+  },
+  {
+   "id": "data10-seguimiento-listas",
+   "type": "noticia",
+   "date": "2026-10-21",
+   "title": "Encuesta Data 10: apoyarían la lista conjunta el 94 % de los votantes del PP y el 86 % de los de Vox; en la izquierda, el 92 % del PSOE y el 95 % del FA",
+   "detail": "Publicada por OKDiario (trabajo de campo la semana del 21-oct; no se publica el tamaño de la muestra). Fija el seguimiento del pacto PP–Vox y de Senado de Progreso.",
+   "outlet": "OKDiario / Libertad Digital",
+   "sources": [
+    "https://www.libertaddigital.com/espana/politica/2026-10-21/una-encuesta-cifra-en-24-las-circunscripciones-en-las-que-pp-y-vox-tendrian-que-ir-juntos-para-dominar-el-senado-7479540/"
+   ],
+   "verified": false,
+   "captured": "manual",
+   "effects": [
+    {
+     "scenario": "PACTO_PP_VOX_SENADO",
+     "params": {
+      "sharePP": 0.94,
+      "shareVox": 0.86
+     }
+    },
+    {
+     "scenario": "SENADO_PROGRESO",
+     "params": {
+      "intoShare": 0.92,
+      "share": 0.95
+     }
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 5
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 5
     }
    }
   },
@@ -227,7 +309,7 @@
    "type": "contexto",
    "date": "2026-10-23",
    "title": "El Supremo mantiene suspendido el voto de 163.020 nacionalizados por la Ley de Nietos; solo 91 de 31.390 expedientes revisados tienen certificado",
-   "detail": "El voto exterior extra no entra en el resultado por defecto: solo en «qué pasaría si» y en el espectro.",
+   "detail": "El voto exterior extra no entra en el resultado por defecto: solo en «qué pasaría si». Con la participación y el reparto reales del exterior en 2023 no movería ningún escaño.",
    "outlet": "The Objective",
    "sources": [
     "https://theobjective.com/espana/tribunales/2026-10-23/91-expedientes-ley-nietos-cumplen-requisitos-votar/"
@@ -280,12 +362,15 @@
   {
    "id": "base-podemos-erc",
    "type": "base",
-   "date": "2026-10-25",
-   "title": "Podemos no se presenta en Cataluña y apoya a ERC",
+   "date": "2026-10-12",
+   "title": "Podemos no se presenta en Cataluña: aporta candidatos a las listas de ERC (acuerdo Montero–Rufián)",
    "detail": "Incluido en la base de partidos: en Cataluña la parte de Podemos del voto de Sumar 2023 pasa a ERC.",
-   "outlet": "Vídeo de referencia (transcripción)",
-   "sources": [],
-   "verified": false,
+   "outlet": "El Español",
+   "sources": [
+    "https://www.elespanol.com/espana/politica/20261012/montero-rufian-pactan-podemos-no-presentara-cataluna-erc-pedira-voto-resto-espana/1003744417179_0.html",
+    "https://www.infobae.com/espana/2026/10/17/asi-quedan-los-acuerdos-de-la-izquierda-para-las-elecciones-generales-del-29-n-estas-son-las-listas-a-la-izquierda-del-psoe-en-cada-comunidad-autonoma/"
+   ],
+   "verified": true,
    "captured": "manual",
    "effects": [],
    "toggleable": false,
@@ -367,6 +452,24 @@
    "impact": null
   },
   {
+   "id": "investidura-2023",
+   "type": "base",
+   "date": "2023-11-16",
+   "title": "Investidura de Sánchez (16-nov-2023): 179 a favor (PSOE, Sumar, ERC, Junts, EH Bildu, PNV, BNG, CC) y 171 en contra (PP, Vox, UPN)",
+   "detail": "Define los bloques: derecha = PP + Vox + UPN; investidura sin Junts = el resto de los que votaron sí, con los herederos de Sumar (FA, FV, Podemos).",
+   "outlet": "La Vanguardia / EFE",
+   "sources": [
+    "https://www.vanguardia.com/mundo/2023/11/16/congreso-espanol-reelige-a-pedro-sanchez-como-presidente-del-gobierno/"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
    "id": "encuesta:SocioMétrica/El Español|2026-10-25",
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-25",
@@ -400,10 +503,15 @@
      "pMayoria": 0.003,
      "senado": 1
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": -0.2,
-     "pMayoria": -0.004,
-     "senado": 2
+     "pMayoria": -0.003,
+     "senado": 0
     }
    }
   },
@@ -436,12 +544,17 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.8,
+     "derecha": 0.7,
      "pMayoria": 0.004,
      "senado": 1
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
-     "derecha": 0.1,
+     "derecha": 0,
      "pMayoria": -0.001,
      "senado": -1
     }
@@ -467,8 +580,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.6,
+     "derecha": -0.7,
      "pMayoria": -0.003,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -512,6 +630,11 @@
      "pMayoria": -0.001,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0.1,
      "pMayoria": 0,
@@ -543,6 +666,11 @@
     "media": {
      "derecha": -0.1,
      "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -585,6 +713,11 @@
      "pMayoria": 0.002,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": -1
+    },
     "cis": {
      "derecha": 0.2,
      "pMayoria": 0.004,
@@ -625,10 +758,15 @@
      "pMayoria": -0.002,
      "senado": 0
     },
-    "cis": {
+    "cisOficial": {
      "derecha": 0,
      "pMayoria": 0,
      "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0.001,
+     "senado": -1
     }
    }
   },
@@ -657,6 +795,11 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0.001,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -693,6 +836,11 @@
      "pMayoria": -0.001,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
@@ -727,6 +875,11 @@
     "media": {
      "derecha": -0.2,
      "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -770,9 +923,14 @@
      "pMayoria": 0.001,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": -1
     }
    }
@@ -808,6 +966,11 @@
     "media": {
      "derecha": 0.2,
      "pMayoria": 0.002,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -848,6 +1011,11 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0,
      "pMayoria": 0.002,
@@ -881,6 +1049,56 @@
      "derecha": 0.1,
      "pMayoria": 0.001,
      "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "cis-oficial:3582",
+   "firm": "CIS · estimación oficial (estudio 3582)",
+   "date": "2026-10-06",
+   "sample": 5025,
+   "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
+   "weight": 1,
+   "values": {
+    "PSOE": 34,
+    "PP": 22.3,
+    "VOX": 17.1,
+    "PODEMOS": 3.1,
+    "ERC": 3,
+    "SALF": 1.8,
+    "BILDU": 1.6,
+    "JUNTS": 1.1,
+    "BNG": 0.9,
+    "PNV": 0.6,
+    "CC": 0.2,
+    "FA": 5.23,
+    "FV": 0.87
+   },
+   "type": "cis-oficial",
+   "source": "cisOficial",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": -47.8,
+     "pMayoria": -0.949,
+     "senado": -83
     },
     "cis": {
      "derecha": 0,
@@ -916,10 +1134,15 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": 0.7,
-     "pMayoria": 0.02,
-     "senado": 1
+     "pMayoria": 0.021,
+     "senado": -1
     }
    }
   },
@@ -950,10 +1173,15 @@
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
     "cis": {
      "derecha": -0.6,
-     "pMayoria": -0.019,
-     "senado": 2
+     "pMayoria": -0.018,
+     "senado": -3
     }
    }
   }

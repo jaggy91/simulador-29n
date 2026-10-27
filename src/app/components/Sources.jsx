@@ -2,7 +2,7 @@
 // como tarjeta con su origen, lo que modifica, su efecto y un interruptor.
 const TYPE = {
   noticia: 'Noticia', analisis: 'Análisis', oficial: 'Oficial', contexto: 'Contexto',
-  base: 'Base del modelo', encuesta: 'Encuesta', cis: 'Reestimación CIS',
+  base: 'Base del modelo', encuesta: 'Encuesta', cis: 'Reestimación CIS', 'cis-oficial': 'CIS oficial',
 };
 const fmtDate = (d) => new Date(d).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
@@ -34,7 +34,7 @@ function Card({ c, on, setOn, source, scenarioLabel, byId, overriddenBy, lockLas
     <article className={`src${on ? ' on' : ''}${overriddenBy ? ' over' : ''}`}>
       <div className="src-head">
         <span className={`chip ${c.type}`}>{TYPE[c.type] || c.type}</span>
-        {c.type !== 'encuesta' && c.type !== 'cis' && (
+        {!c.source && (
           <span className={`ver ${c.verified ? 'yes' : 'no'}`}>{c.verified ? '✓ verificada' : 'sin verificar'}</span>
         )}
         {c.captured === 'auto' && <span className="ver auto">captura automática</span>}
@@ -42,10 +42,10 @@ function Card({ c, on, setOn, source, scenarioLabel, byId, overriddenBy, lockLas
       </div>
       <h3>{c.title || c.firm}</h3>
       {c.detail && <p className="src-det">{c.detail}</p>}
-      {(c.type === 'encuesta' || c.type === 'cis') && (
+      {c.source && (
         <p className="src-det num">
           PP+UPN {num(c.values.PP)} · PSOE {num(c.values.PSOE)} · Vox {num(c.values.VOX)}{c.values.FA != null ? ` · FA ${num(c.values.FA)}` : ''}
-          {c.sample ? ` · ${c.sample.toLocaleString('es-ES')} entrevistas` : ''} · peso {num(100 * c.weight, 1)} %
+          {c.sample ? ` · ${c.sample.toLocaleString('es-ES')} entrevistas` : ''}{c.weight < 1 ? ` · peso ${num(100 * c.weight, 1)} %` : ''}
         </p>
       )}
       {c.effects?.length > 0 && (
@@ -71,10 +71,9 @@ export function Sources({ cards, active, setActive, source, catalog, overriddenB
   const set = (id) => (on) => setActive(id, on);
   // Primero las que mandan (más recientes arriba); las superadas, al final.
   const superseded = (c) => Boolean(overriddenBy[c.id] || (!active.has(c.id) && c.overriddenBy));
-  const news = cards.filter((c) => c.toggleable && !['encuesta', 'cis'].includes(c.type))
+  const news = cards.filter((c) => c.toggleable && !c.source)
     .sort((a, b) => superseded(a) - superseded(b) || b.date.localeCompare(a.date));
-  const pollType = source === 'cis' ? 'cis' : 'encuesta';
-  const polls = cards.filter((c) => c.type === pollType);
+  const polls = cards.filter((c) => c.source === source);
   const activePolls = polls.filter((c) => active.has(c.id)).length;
   const fixed = cards.filter((c) => !c.toggleable).sort((a, b) => b.date.localeCompare(a.date));
   const common = { source, scenarioLabel: label, byId };
@@ -87,9 +86,9 @@ export function Sources({ cards, active, setActive, source, catalog, overriddenB
       </div>
 
       <h3 className="src-group">
-        {source === 'cis' ? 'Reestimaciones del último barómetro del CIS' : 'Encuestas de la media'} ({activePolls} de {polls.length} activas)
+        {{ media: 'Encuestas de la media', cisOficial: 'Estimación oficial del CIS', cis: 'Reestimaciones independientes del último barómetro del CIS' }[source] || 'Encuestas'} ({activePolls} de {polls.length} activas)
       </h3>
-      {source === 'cis' && <p className="small ink-2" style={{ margin: '0 0 8px' }}>Los partidos que no dan estas reestimaciones se toman de la media de encuestas activa.</p>}
+      {source !== 'media' && <p className="small ink-2" style={{ margin: '0 0 8px' }}>Los partidos que esta fuente no da se toman de la media de encuestas activa.</p>}
       <div className="src-grid polls">
         {polls.map((c) => <Card key={c.id} c={c} on={active.has(c.id)} setOn={set(c.id)} lockLast={activePolls <= 1} {...common} />)}
       </div>

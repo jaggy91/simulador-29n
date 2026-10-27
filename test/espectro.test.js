@@ -14,9 +14,9 @@ const total = (o) => Object.values(o).reduce((a, b) => a + b, 0);
 const certain = (sc) => sc.filter((s) => s.prob >= 1 && s.kind !== 'base');
 
 describe('Espectro izquierda ↔ derecha', () => {
-  it('5 escenarios por lado y el nivel 0 es la proyección oficial', () => {
-    expect(LEVERS.izquierda).toHaveLength(5);
-    expect(LEVERS.derecha).toHaveLength(5);
+  it('4 escenarios por lado y el nivel 0 es el resultado por defecto', () => {
+    expect(LEVERS.izquierda).toHaveLength(4);
+    expect(LEVERS.derecha).toHaveLength(4);
     const zero = levelInputs(0, polls.media.values, scenarios);
     expect(zero.poll).toEqual(polls.media.values);
     expect(zero.scenarios).toEqual(scenarios);
@@ -26,11 +26,11 @@ describe('Espectro izquierda ↔ derecha', () => {
   it('los niveles son acumulativos y los sustituidos se descartan', () => {
     expect(activeLevers(-3).map((l) => l.id)).toEqual(['ENC_PSOE_40', 'UTIL_FA_PSOE', 'PACTO_FLOJO']);
     expect(activeLevers(-4).map((l) => l.id)).toEqual(['UTIL_FA_PSOE', 'PACTO_FLOJO', 'ENC_PSOE_100']);
-    expect(activeLevers(5).map((l) => l.id)).toEqual(['UTIL_VOX_PP', 'PACTO_PLENO_SALF', 'DESMOV_IZQ', 'ENC_DCHA_4']);
+    expect(activeLevers(4).map((l) => l.id)).toEqual(['ENC_DCHA_2', 'UTIL_VOX_PP', 'PACTO_PLENO_SALF', 'DESMOV_IZQ']);
   });
 
   it('las modificaciones de encuesta conservan la suma', () => {
-    for (let l = -5; l <= 5; l++) {
+    for (let l = -4; l <= 4; l++) {
       const { poll } = levelInputs(l, polls.media.values, scenarios);
       expect(Math.abs(total(poll) - total(polls.media.values)), `nivel ${l}`).toBeLessThan(0.05);
     }
@@ -46,8 +46,8 @@ describe('Espectro izquierda ↔ derecha', () => {
       const i = levelInputs(l, polls.media.values, scenarios);
       return run(prep, i.poll, certain(i.scenarios)).congress.blocs.derecha;
     };
-    expect(right(-5)).toBeLessThan(right(0));
-    expect(right(5)).toBeGreaterThan(right(0));
+    expect(right(-4)).toBeLessThan(right(0));
+    expect(right(4)).toBeGreaterThan(right(0));
   });
 
   it('voto útil: traslada la fracción sin retirar al partido', () => {

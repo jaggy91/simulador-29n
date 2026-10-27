@@ -1,8 +1,9 @@
-// Fuentes como tarjetas: cada noticia, análisis o dato oficial modifica escenarios del
-// catálogo; cada encuesta entra en la media. Por defecto todas las tarjetas están
-// activas salvo las superadas; el usuario puede activar o desactivar cualquiera.
+// Fuentes como tarjetas: cada noticia, encuesta o dato oficial modifica escenarios del
+// catálogo (su estado, su probabilidad o sus parámetros); cada encuesta de intención
+// de voto entra en la media de su fuente. Por defecto todas las tarjetas están activas
+// salvo las superadas; el usuario puede activar o desactivar cualquiera.
 
-// Rango de cada tipo de fuente: cuando varias tocan el mismo escenario manda la de mayor
+// Rango de cada tipo de fuente: cuando varias fijan el mismo dato manda la de mayor
 // rango; a igualdad, la verificada; a igualdad, la más reciente.
 export const RANK = { oficial: 3, noticia: 2, analisis: 1 };
 export const hasEffect = (c) => (c.effects || []).length > 0;
@@ -12,11 +13,19 @@ const order = (a, b) =>
   || a.date.localeCompare(b.date)
   || a.id.localeCompare(b.id);
 
+// Campos que fija un efecto: estado/probabilidad y cada parámetro por separado. Así una
+// encuesta que solo aporta un parámetro (p. ej. el % que sigue un pacto) no queda
+// superada por la noticia que confirma el pacto.
+const fieldsOf = (e) => [
+  ...(e.prob != null || e.status ? [`${e.scenario}:estado`] : []),
+  ...Object.keys(e.params || {}).map((k) => `${e.scenario}:${k}`),
+];
+
 // Aplica las tarjetas activas, de menor a mayor prioridad, sobre el catálogo.
-// Devuelve los escenarios resueltos, qué tarjeta fija cada escenario y qué tarjetas
-// activas quedan sin efecto porque otra de más prioridad toca lo mismo.
+// Devuelve los escenarios resueltos, qué tarjeta fija el estado de cada escenario y
+// qué tarjetas activas quedan sin efecto porque otras de más prioridad fijan todo lo suyo.
 export function resolveEvidence(catalog, cards, active) {
-  const state = Object.fromEntries(catalog.map((s) => [s.id, { ...s, ...(s.params && { params: { ...s.params } }), appliedBy: null }]));
+  const state = Object.fromEntries(catalog.map((s) => [s.id, { ...s, ...(s.params && { params: { ...s.params } }), appliedBy: null, paramsBy: {} }]));
   const winner = {};
   const applied = cards.filter((c) => hasEffect(c) && active.has(c.id)).sort(order);
   for (const c of applied) {
@@ -25,15 +34,19 @@ export function resolveEvidence(catalog, cards, active) {
       if (!s) continue;
       if (e.prob != null) s.prob = e.prob;
       if (e.status) s.status = e.status;
-      if (e.params) s.params = { ...s.params, ...e.params };
-      s.appliedBy = c.id;
-      winner[e.scenario] = c.id;
+      if (e.prob != null || e.status) s.appliedBy = c.id;
+      if (e.params) {
+        s.params = { ...s.params, ...e.params };
+        for (const k of Object.keys(e.params)) s.paramsBy[k] = c.id;
+      }
+      for (const f of fieldsOf(e)) winner[f] = c.id;
     }
   }
   const overriddenBy = {};
   for (const c of applied) {
-    const lost = c.effects.filter((e) => winner[e.scenario] && winner[e.scenario] !== c.id);
-    if (lost.length === c.effects.length) overriddenBy[c.id] = winner[lost[0].scenario];
+    const fields = c.effects.flatMap(fieldsOf);
+    const lost = fields.filter((f) => winner[f] !== c.id);
+    if (fields.length && lost.length === fields.length) overriddenBy[c.id] = winner[lost[0]];
   }
   return { scenarios: catalog.map((s) => state[s.id]), winner, overriddenBy };
 }
@@ -61,17 +74,21 @@ export function pollFromCards(items, active) {
   return Object.fromEntries(Object.keys(acc).map((p) => [p, Math.round((100 * acc[p]) / wsum[p]) / 100]));
 }
 
-// Fuente CIS: media de las reestimaciones activas; los partidos que no dan, de la media.
+// Fuentes del CIS: media de sus tarjetas activas; los partidos que no dan, de la media.
 export function cisFromCards(items, active, media) {
   const own = pollFromCards(items, active);
   return { ...Object.fromEntries(Object.entries(media).filter(([p]) => !(p in own))), ...own };
 }
 
 // Todas las entradas del modelo para un conjunto de tarjetas activas.
-// polls: {media: {items}, cis: {items}} (data/polls.json → sources).
+// polls: {media: {items}, <otras fuentes>: {items}} (data/polls.json → sources).
 export function modelInputs(catalog, cards, polls, active) {
   const { scenarios, winner, overriddenBy } = resolveEvidence(catalog, cards, active);
   const media = pollFromCards(polls.media.items, active);
-  const cis = polls.cis.items.some((it) => active.has(it.id)) ? cisFromCards(polls.cis.items, active, media) : media;
-  return { scenarios, winner, overriddenBy, polls: { media, cis } };
+  const out = { media };
+  for (const [key, src] of Object.entries(polls)) {
+    if (key === 'media') continue;
+    out[key] = src.items.some((it) => active.has(it.id)) ? cisFromCards(src.items, active, media) : media;
+  }
+  return { scenarios, winner, overriddenBy, polls: out };
 }

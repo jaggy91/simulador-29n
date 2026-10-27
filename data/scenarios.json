@@ -1,10 +1,10 @@
 {
- "note": "Catálogo de mecanismos. El estado y la probabilidad de cada escenario NO se fijan aquí: los fijan las tarjetas de fuentes (data/news.json). Sin ninguna fuente activa, cada escenario está en 'sin datos' con probabilidad 0.",
+ "note": "Catálogo de mecanismos. El estado, la probabilidad y los parámetros con dato los fijan las tarjetas de fuentes (data/news.json). Sin fuentes, cada escenario queda en 'sin datos' con probabilidad 0 y parámetros mecánicos (seguimiento del 100 % de una lista conjunta). Los parámetros sin dato real llevan su explicación en 'assumptions'.",
  "scenarios": [
   {
    "id": "PODEMOS_SEPARADO",
    "label": "Podemos se presenta por separado",
-   "detail": "Podemos va solo en casi toda España; en Cataluña apoya a ERC, en la C. Valenciana va con Compromís (Front Valencià) y en Canarias con el Frente Amplio.",
+   "detail": "Podemos va solo en casi toda España; en Cataluña aporta candidatos a ERC, en la C. Valenciana va con Compromís (Front Valencià) y en Canarias con el Frente Amplio.",
    "status": "confirmado",
    "prob": 1,
    "kind": "base"
@@ -16,30 +16,58 @@
    "status": "sin datos",
    "prob": 0,
    "kind": "senate-merge",
-   "params": { "into": "PSOE", "from": ["FA", "FV"], "where": "all", "excludeCcaa": ["CAT", "CAN"], "includeIds": ["GOMERA"], "share": 1 }
+   "params": {
+    "into": "PSOE",
+    "from": [
+     "FA",
+     "FV"
+    ],
+    "where": "all",
+    "excludeCcaa": [
+     "CAT",
+     "CAN"
+    ],
+    "includeIds": [
+     "GOMERA"
+    ],
+    "share": 1,
+    "intoShare": 1
+   }
   },
   {
    "id": "TERUEL_sin_FA_CHA",
    "label": "Teruel: FA y CHA no se presentan al Congreso",
-   "detail": "Su voto pasa al PSOE en la proporción indicada; el resto se abstiene. En el Senado sí se presentan (dentro de Senado de Progreso).",
+   "detail": "El voto del FA en Teruel pasa al PSOE en la proporción indicada; el resto se abstiene. En el Senado sí se presentan (dentro de Senado de Progreso).",
    "status": "sin datos",
    "prob": 0,
    "kind": "withdraw",
-   "params": { "from": "FA", "to": "PSOE", "where": ["44"], "share": 0.7 }
+   "params": {
+    "from": "FA",
+    "to": "PSOE",
+    "where": [
+     "44"
+    ],
+    "share": 0.5
+   },
+   "assumptions": {
+    "share": "Sin dato publicado (ni el CIS ni las encuestas preguntan la segunda opción del votante del FA). 50 % neutro: entre 0 % y 100 % no cambia ningún escaño."
+   }
   },
   {
    "id": "FA_retira_pequenas",
    "label": "El Frente Amplio se retira de provincias pequeñas",
-   "detail": "No presentaría listas al Congreso en provincias de 5 diputados o menos; sus candidatos irían en listas del PSOE.",
+   "detail": "No presentaría listas al Congreso en las provincias de 5 diputados o menos (29, según los escaños del BOE) y su voto iría en parte al PSOE.",
    "status": "sin datos",
    "prob": 0,
    "kind": "withdraw",
-   "params": { "from": "FA", "to": "PSOE", "where": "decena", "share": 0.7 },
-   "options": {
-    "where": {
-     "decena": "Una decena larga: provincias de ≤5 escaños de Castilla y León, Extremadura y Castilla-La Mancha (15)",
-     "small5": "Las 29 provincias de ≤5 escaños"
-    }
+   "params": {
+    "from": "FA",
+    "to": "PSOE",
+    "where": "small5",
+    "share": 0.5
+   },
+   "assumptions": {
+    "share": "Sin dato publicado sobre la segunda opción del votante del FA. 50 % neutro, ajustable."
    }
   },
   {
@@ -50,29 +78,57 @@
    "prob": 0,
    "kind": "senate-pact",
    "params": {
-    "share": 0.85,
-    "voxWithdraws": ["35", "38", "11", "46", "12", "07"],
-    "ppWithdraws": ["20", "17", "43"],
-    "voxSingle": ["41", "21", "33", "06", "01", "31", "10", "22", "50", "03", "18", "16", "36", "23"]
+    "sharePP": 1,
+    "shareVox": 1,
+    "voxWithdraws": [
+     "35",
+     "38",
+     "11",
+     "46",
+     "12",
+     "07"
+    ],
+    "ppWithdraws": [
+     "20",
+     "17",
+     "43"
+    ],
+    "voxSingle": [
+     "41",
+     "21",
+     "33",
+     "06",
+     "01",
+     "31",
+     "10",
+     "22",
+     "50",
+     "03",
+     "18",
+     "16",
+     "36",
+     "23"
+    ]
    }
   },
   {
-   "id": "VOX_retira_senado",
-   "label": "Vox se retira del Senado en casi toda España (hipótesis del vídeo)",
-   "detail": "Vox no se presentaría al Senado salvo en Almería y Murcia y pediría el voto para el PP.",
-   "status": "sin datos",
-   "prob": 0,
-   "kind": "senate-merge",
-   "params": { "into": "PP", "from": ["VOX"], "where": "all", "except": ["04", "30"], "share": 0.85 }
-  },
-  {
    "id": "VOTO_EXTERIOR",
-   "label": "Votos exteriores extra al PSOE (Ley de Nietos)",
-   "detail": "Hipotético: solo para 'qué pasaría si' y el espectro. Nunca entra en el resultado por defecto.",
+   "label": "Voto de los nacionalizados por la Ley de Nietos",
+   "detail": "Hipotético mientras el Supremo mantenga la suspensión: solo para «qué pasaría si». Nunca entra en el resultado por defecto. Con la participación y el reparto reales del exterior en 2023 no mueve ningún escaño; el modo «techo» (votos colocados donde más escaños mueven) es una cota teórica.",
    "status": "hipotético",
    "prob": 0,
    "kind": "extra-votes",
-   "params": { "mode": "techo", "party": "PSOE", "budget": 14000 }
+   "params": {
+    "mode": "realista",
+    "party": "PSOE",
+    "budget": 14000,
+    "turnout": 0.0887,
+    "split": "cera2023"
+   },
+   "data": {
+    "turnout": "Participación escrutada del voto exterior en 2023 (Junta Electoral Central): 8,87 %.",
+    "split": "Reparto: como votó el exterior en 2023 en cada provincia (Junta Electoral Central)."
+   }
   }
  ]
 }

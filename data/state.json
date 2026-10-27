@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T17:56:42.591Z",
+ "updated": "2026-10-27T18:40:26.317Z",
  "latestPoll": "2026-10-25",
  "scenarios": [
   {
@@ -38,15 +38,8 @@
    "appliedBy": "pacto-pp-vox-senado"
   },
   {
-   "id": "VOX_retira_senado",
-   "label": "Vox se retira del Senado en casi toda España (hipótesis del vídeo)",
-   "status": "superado",
-   "prob": 0,
-   "appliedBy": "pacto-pp-vox-senado"
-  },
-  {
    "id": "VOTO_EXTERIOR",
-   "label": "Votos exteriores extra al PSOE (Ley de Nietos)",
+   "label": "Voto de los nacionalizados por la Ley de Nietos",
    "status": "hipotético",
    "prob": 0,
    "appliedBy": null
@@ -95,23 +88,25 @@
     },
     "senate": {
      "elected": {
-      "PSOE": 66,
-      "PP": 130,
+      "PSOE": 63,
+      "PP": 132,
       "VOX": 5,
       "ERC": 2,
       "JUNTS": 1,
       "BILDU": 3,
       "PNV": 1,
+      "ASG": 1,
       "AHI": 1
      },
      "total": {
-      "PSOE": 85,
-      "PP": 156,
+      "PSOE": 82,
+      "PP": 158,
       "VOX": 7,
       "ERC": 3,
       "JUNTS": 4,
       "BILDU": 4,
       "PNV": 2,
+      "ASG": 1,
       "AHI": 1,
       "CC": 1,
       "BNG": 1,
@@ -119,7 +114,7 @@
       "GBAI": 1,
       "FV": 1
      },
-     "right": 163,
+     "right": 165,
      "size": 267,
      "majority": 134,
      "threeFifths": 161
@@ -536,13 +531,13 @@
       "mean": 142.6,
       "p05": 123,
       "p50": 143,
-      "p95": 162
+      "p95": 161
      },
      "senadoDerecha": {
-      "mean": 154.4,
-      "p05": 128,
-      "p50": 158,
-      "p95": 170
+      "mean": 159.5,
+      "p05": 139,
+      "p50": 162,
+      "p95": 172
      }
     },
     "prob": {
@@ -550,8 +545,8 @@
      "juntsDecisivo": 0.0082,
      "investiduraSola": 0.0018,
      "investiduraConJunts": 0.01,
-     "senadoMayoriaDerecha": 0.9158,
-     "senado35Derecha": 0.3962
+     "senadoMayoriaDerecha": 0.971,
+     "senado35Derecha": 0.555
     },
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
@@ -702,7 +697,7 @@
      "gains": "EXISTE",
      "loses": "VOX",
      "need": 4612,
-     "pctOfValid": 5.862165391361822
+     "pctOfValid": 5.898754252679508
     },
     {
      "id": "20",
@@ -787,8 +782,749 @@
     }
    ]
   },
+  "cisOficial": {
+   "label": "CIS · estimación oficial",
+   "poll": {
+    "AA": 1.14,
+    "PSOE": 34,
+    "PP": 22.3,
+    "VOX": 17.1,
+    "PODEMOS": 3.1,
+    "ERC": 3,
+    "SALF": 1.8,
+    "BILDU": 1.6,
+    "JUNTS": 1.1,
+    "BNG": 0.9,
+    "PNV": 0.6,
+    "CC": 0.2,
+    "FA": 5.23,
+    "FV": 0.87
+   },
+   "central": {
+    "congress": {
+     "PP": 89,
+     "PSOE": 151,
+     "VOX": 60,
+     "AA": 2,
+     "BNG": 2,
+     "ERC": 13,
+     "JUNTS": 4,
+     "CUP": 2,
+     "BILDU": 8,
+     "PNV": 2,
+     "UPL": 1,
+     "PODEMOS": 2,
+     "FA": 7,
+     "UPN": 1,
+     "NC": 2,
+     "SY": 1,
+     "EXISTE": 1,
+     "FV": 2
+    },
+    "blocs": {
+     "derecha": 150,
+     "investidura": 187,
+     "junts": 4
+    },
+    "senate": {
+     "elected": {
+      "PSOE": 134,
+      "BILDU": 6,
+      "PP": 52,
+      "VOX": 2,
+      "ERC": 8,
+      "UPL": 1,
+      "SY": 3,
+      "EXISTE": 3
+     },
+     "total": {
+      "PSOE": 153,
+      "BILDU": 7,
+      "PP": 78,
+      "VOX": 4,
+      "ERC": 9,
+      "UPL": 1,
+      "SY": 3,
+      "EXISTE": 3,
+      "PNV": 1,
+      "CC": 1,
+      "JUNTS": 3,
+      "BNG": 1,
+      "FA": 1,
+      "GBAI": 1,
+      "FV": 1
+     },
+     "right": 82,
+     "size": 267,
+     "majority": 134,
+     "threeFifths": 161
+    },
+    "byProvince": {
+     "10": {
+      "PP": 1,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "11": {
+      "PP": 2,
+      "PSOE": 3,
+      "VOX": 2,
+      "AA": 1
+     },
+     "12": {
+      "PP": 1,
+      "PSOE": 3,
+      "VOX": 1
+     },
+     "13": {
+      "PP": 2,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "14": {
+      "PP": 2,
+      "PSOE": 3,
+      "VOX": 1
+     },
+     "15": {
+      "PP": 3,
+      "PSOE": 4,
+      "BNG": 1
+     },
+     "16": {
+      "PP": 1,
+      "PSOE": 1,
+      "VOX": 1
+     },
+     "17": {
+      "PSOE": 2,
+      "ERC": 2,
+      "JUNTS": 1,
+      "CUP": 1
+     },
+     "18": {
+      "PP": 2,
+      "PSOE": 3,
+      "VOX": 2
+     },
+     "19": {
+      "PP": 1,
+      "PSOE": 1,
+      "VOX": 1
+     },
+     "20": {
+      "PSOE": 2,
+      "BILDU": 3,
+      "PNV": 1
+     },
+     "21": {
+      "PP": 1,
+      "PSOE": 3,
+      "VOX": 1
+     },
+     "22": {
+      "PP": 1,
+      "PSOE": 2
+     },
+     "23": {
+      "PP": 1,
+      "PSOE": 3,
+      "VOX": 1
+     },
+     "24": {
+      "PP": 1,
+      "PSOE": 2,
+      "UPL": 1
+     },
+     "25": {
+      "PSOE": 2,
+      "ERC": 1,
+      "JUNTS": 1
+     },
+     "26": {
+      "PP": 2,
+      "PSOE": 2
+     },
+     "27": {
+      "PP": 2,
+      "PSOE": 2
+     },
+     "28": {
+      "PP": 12,
+      "PSOE": 13,
+      "VOX": 8,
+      "PODEMOS": 2,
+      "FA": 3
+     },
+     "29": {
+      "PP": 3,
+      "PSOE": 5,
+      "VOX": 3
+     },
+     "30": {
+      "PP": 3,
+      "PSOE": 3,
+      "VOX": 4
+     },
+     "31": {
+      "PP": 1,
+      "PSOE": 2,
+      "BILDU": 1,
+      "UPN": 1
+     },
+     "32": {
+      "PP": 2,
+      "PSOE": 2
+     },
+     "33": {
+      "PP": 2,
+      "PSOE": 4,
+      "VOX": 1
+     },
+     "34": {
+      "PP": 1,
+      "PSOE": 2
+     },
+     "35": {
+      "PP": 1,
+      "PSOE": 3,
+      "VOX": 2,
+      "NC": 2
+     },
+     "36": {
+      "PP": 3,
+      "PSOE": 3,
+      "BNG": 1
+     },
+     "37": {
+      "PP": 1,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "38": {
+      "PP": 2,
+      "PSOE": 4,
+      "FA": 1
+     },
+     "39": {
+      "PP": 2,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "40": {
+      "PP": 1,
+      "PSOE": 1,
+      "VOX": 1
+     },
+     "41": {
+      "PP": 3,
+      "PSOE": 5,
+      "VOX": 2,
+      "FA": 1,
+      "AA": 1
+     },
+     "42": {
+      "PSOE": 1,
+      "SY": 1
+     },
+     "43": {
+      "PSOE": 3,
+      "VOX": 1,
+      "ERC": 2
+     },
+     "44": {
+      "PP": 1,
+      "PSOE": 1,
+      "EXISTE": 1
+     },
+     "45": {
+      "PP": 2,
+      "PSOE": 2,
+      "VOX": 2
+     },
+     "46": {
+      "PP": 4,
+      "PSOE": 7,
+      "VOX": 4,
+      "FV": 1
+     },
+     "47": {
+      "PP": 2,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "48": {
+      "PP": 1,
+      "PSOE": 3,
+      "BILDU": 3,
+      "PNV": 1
+     },
+     "49": {
+      "PP": 1,
+      "PSOE": 1,
+      "VOX": 1
+     },
+     "50": {
+      "PP": 2,
+      "PSOE": 3,
+      "VOX": 2
+     },
+     "51": {
+      "PSOE": 1
+     },
+     "52": {
+      "PP": 1
+     },
+     "01": {
+      "PP": 1,
+      "PSOE": 2,
+      "BILDU": 1
+     },
+     "02": {
+      "PP": 1,
+      "PSOE": 2,
+      "VOX": 1
+     },
+     "03": {
+      "PP": 3,
+      "PSOE": 5,
+      "VOX": 3,
+      "FV": 1
+     },
+     "04": {
+      "PP": 2,
+      "PSOE": 2,
+      "VOX": 2
+     },
+     "05": {
+      "PP": 1,
+      "PSOE": 1,
+      "VOX": 1
+     },
+     "06": {
+      "PP": 1,
+      "PSOE": 3,
+      "VOX": 1
+     },
+     "07": {
+      "PP": 2,
+      "PSOE": 4,
+      "VOX": 2
+     },
+     "08": {
+      "PP": 3,
+      "PSOE": 13,
+      "VOX": 3,
+      "FA": 2,
+      "ERC": 8,
+      "JUNTS": 2,
+      "CUP": 1
+     },
+     "09": {
+      "PP": 1,
+      "PSOE": 2,
+      "VOX": 1
+     }
+    }
+   },
+   "montecarlo": {
+    "n": 5000,
+    "seats": {
+     "PP": 88.6,
+     "PSOE": 149.5,
+     "VOX": 61.1,
+     "AA": 1.7,
+     "BNG": 2.9,
+     "ERC": 12.6,
+     "JUNTS": 3.8,
+     "CUP": 2.2,
+     "BILDU": 8.7,
+     "PNV": 2.3,
+     "UPL": 0.6,
+     "PODEMOS": 2.3,
+     "FA": 6.7,
+     "NC": 1.4,
+     "SY": 1,
+     "EXISTE": 1.1,
+     "FV": 1.9,
+     "UPN": 0.4,
+     "XAV": 0.3,
+     "CC": 0.4,
+     "GBAI": 0.1,
+     "PACMA": 0.2,
+     "x:PDeCAT-E-CiU": 0.1,
+     "SALF": 0,
+     "x:JM+": 0,
+     "x:CpM": 0
+    },
+    "seatIntervals": {
+     "PP": {
+      "mean": 88.6,
+      "p05": 74,
+      "p50": 89,
+      "p95": 104
+     },
+     "PSOE": {
+      "mean": 149.5,
+      "p05": 131,
+      "p50": 149,
+      "p95": 169
+     },
+     "VOX": {
+      "mean": 61.1,
+      "p05": 49,
+      "p50": 61,
+      "p95": 73
+     },
+     "AA": {
+      "mean": 1.7,
+      "p05": 0,
+      "p50": 2,
+      "p95": 3
+     },
+     "BNG": {
+      "mean": 2.9,
+      "p05": 0,
+      "p50": 2,
+      "p95": 6
+     },
+     "ERC": {
+      "mean": 12.6,
+      "p05": 8,
+      "p50": 13,
+      "p95": 17
+     },
+     "JUNTS": {
+      "mean": 3.8,
+      "p05": 1,
+      "p50": 4,
+      "p95": 7
+     },
+     "CUP": {
+      "mean": 2.2,
+      "p05": 0,
+      "p50": 2,
+      "p95": 5
+     },
+     "BILDU": {
+      "mean": 8.7,
+      "p05": 5,
+      "p50": 8,
+      "p95": 13
+     },
+     "PNV": {
+      "mean": 2.3,
+      "p05": 0,
+      "p50": 2,
+      "p95": 5
+     },
+     "UPL": {
+      "mean": 0.6,
+      "p05": 0,
+      "p50": 1,
+      "p95": 1
+     },
+     "PODEMOS": {
+      "mean": 2.3,
+      "p05": 1,
+      "p50": 2,
+      "p95": 4
+     },
+     "FA": {
+      "mean": 6.7,
+      "p05": 3,
+      "p50": 7,
+      "p95": 11
+     },
+     "NC": {
+      "mean": 1.4,
+      "p05": 0,
+      "p50": 1,
+      "p95": 3
+     },
+     "SY": {
+      "mean": 1,
+      "p05": 0,
+      "p50": 1,
+      "p95": 2
+     },
+     "EXISTE": {
+      "mean": 1.1,
+      "p05": 0,
+      "p50": 1,
+      "p95": 2
+     },
+     "FV": {
+      "mean": 1.9,
+      "p05": 0,
+      "p50": 2,
+      "p95": 4
+     }
+    },
+    "blocs": {
+     "derecha": {
+      "mean": 150.1,
+      "p05": 127,
+      "p50": 151,
+      "p95": 172
+     },
+     "investidura": {
+      "mean": 187.3,
+      "p05": 165,
+      "p50": 187,
+      "p95": 210
+     },
+     "senadoDerecha": {
+      "mean": 89.1,
+      "p05": 70,
+      "p50": 86,
+      "p95": 118
+     }
+    },
+    "prob": {
+     "mayoriaDerecha": 0.025,
+     "juntsDecisivo": 0.0692,
+     "investiduraSola": 0.8036,
+     "investiduraConJunts": 0.8728,
+     "senadoMayoriaDerecha": 0.0084,
+     "senado35Derecha": 0
+    },
+    "scenarioFrequency": {
+     "SENADO_PROGRESO": 1,
+     "TERUEL_sin_FA_CHA": 1,
+     "PACTO_PP_VOX_SENADO": 1
+    }
+   },
+   "seatsInPlay": [
+    {
+     "id": "12",
+     "name": "Castellón",
+     "seats": 5,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 281,
+     "pctOfValid": 0.08682620853739552
+    },
+    {
+     "id": "07",
+     "name": "Baleares",
+     "seats": 8,
+     "gains": "FA",
+     "loses": "PSOE",
+     "need": 777,
+     "pctOfValid": 0.14661649879046107
+    },
+    {
+     "id": "29",
+     "name": "Málaga",
+     "seats": 11,
+     "gains": "FA",
+     "loses": "PSOE",
+     "need": 816,
+     "pctOfValid": 0.08869651985725947
+    },
+    {
+     "id": "22",
+     "name": "Huesca",
+     "seats": 3,
+     "gains": "VOX",
+     "loses": "PSOE",
+     "need": 846,
+     "pctOfValid": 0.673937115134907
+    },
+    {
+     "id": "34",
+     "name": "Palencia",
+     "seats": 3,
+     "gains": "VOX",
+     "loses": "PSOE",
+     "need": 894,
+     "pctOfValid": 0.886561746943147
+    },
+    {
+     "id": "24",
+     "name": "León",
+     "seats": 4,
+     "gains": "VOX",
+     "loses": "PSOE",
+     "need": 927,
+     "pctOfValid": 0.3238427947598253
+    },
+    {
+     "id": "31",
+     "name": "Navarra",
+     "seats": 5,
+     "gains": "BILDU",
+     "loses": "UPN",
+     "need": 1433,
+     "pctOfValid": 0.4065928765382007
+    },
+    {
+     "id": "52",
+     "name": "Melilla",
+     "seats": 1,
+     "gains": "PSOE",
+     "loses": "PP",
+     "need": 1517,
+     "pctOfValid": 5.237717087318303
+    },
+    {
+     "id": "49",
+     "name": "Zamora",
+     "seats": 3,
+     "gains": "PSOE",
+     "loses": "VOX",
+     "need": 1549,
+     "pctOfValid": 1.4500622525111633
+    },
+    {
+     "id": "51",
+     "name": "Ceuta",
+     "seats": 1,
+     "gains": "VOX",
+     "loses": "PSOE",
+     "need": 1586,
+     "pctOfValid": 4.415613341500084
+    },
+    {
+     "id": "01",
+     "name": "Álava",
+     "seats": 4,
+     "gains": "BILDU",
+     "loses": "PP",
+     "need": 2330,
+     "pctOfValid": 1.3468519503341119
+    },
+    {
+     "id": "35",
+     "name": "Las Palmas",
+     "seats": 8,
+     "gains": "PSOE",
+     "loses": "NC",
+     "need": 2339,
+     "pctOfValid": 0.41373918334713056
+    },
+    {
+     "id": "42",
+     "name": "Soria",
+     "seats": 2,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 3081,
+     "pctOfValid": 5.886286347483856
+    },
+    {
+     "id": "16",
+     "name": "Cuenca",
+     "seats": 3,
+     "gains": "PSOE",
+     "loses": "VOX",
+     "need": 3192,
+     "pctOfValid": 2.699479893441583
+    },
+    {
+     "id": "26",
+     "name": "La Rioja",
+     "seats": 4,
+     "gains": "VOX",
+     "loses": "PP",
+     "need": 3236,
+     "pctOfValid": 1.7866015922617404
+    },
+    {
+     "id": "25",
+     "name": "Lleida",
+     "seats": 4,
+     "gains": "ERC",
+     "loses": "JUNTS",
+     "need": 3250,
+     "pctOfValid": 1.7215441986609035
+    },
+    {
+     "id": "44",
+     "name": "Teruel",
+     "seats": 3,
+     "gains": "VOX",
+     "loses": "PP",
+     "need": 3511,
+     "pctOfValid": 4.474492461799228
+    },
+    {
+     "id": "37",
+     "name": "Salamanca",
+     "seats": 4,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 3699,
+     "pctOfValid": 1.791491505065964
+    },
+    {
+     "id": "08",
+     "name": "Barcelona",
+     "seats": 32,
+     "gains": "CUP",
+     "loses": "ERC",
+     "need": 3808,
+     "pctOfValid": 0.13886822397460696
+    },
+    {
+     "id": "05",
+     "name": "Ávila",
+     "seats": 3,
+     "gains": "XAV",
+     "loses": "VOX",
+     "need": 4115,
+     "pctOfValid": 4.03150748008739
+    },
+    {
+     "id": "15",
+     "name": "A Coruña",
+     "seats": 8,
+     "gains": "VOX",
+     "loses": "PSOE",
+     "need": 4253,
+     "pctOfValid": 0.6152586458812535
+    },
+    {
+     "id": "21",
+     "name": "Huelva",
+     "seats": 5,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 4473,
+     "pctOfValid": 1.542780868551483
+    },
+    {
+     "id": "23",
+     "name": "Jaén",
+     "seats": 5,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 4915,
+     "pctOfValid": 1.2251389030831623
+    },
+    {
+     "id": "40",
+     "name": "Segovia",
+     "seats": 3,
+     "gains": "PSOE",
+     "loses": "VOX",
+     "need": 5780,
+     "pctOfValid": 6.247838118298167
+    },
+    {
+     "id": "17",
+     "name": "Girona",
+     "seats": 6,
+     "gains": "VOX",
+     "loses": "ERC",
+     "need": 6226,
+     "pctOfValid": 1.8861236916645208
+    }
+   ]
+  },
   "cis": {
-   "label": "CIS (datos brutos reestimados)",
+   "label": "CIS · reestimaciones independientes",
    "poll": {
     "ERC": 2.34,
     "JUNTS": 1.48,
@@ -833,23 +1569,23 @@
     },
     "senate": {
      "elected": {
-      "PSOE": 91,
+      "PSOE": 81,
       "BILDU": 4,
-      "PP": 104,
+      "PP": 113,
+      "VOX": 5,
       "ERC": 2,
       "JUNTS": 1,
-      "VOX": 4,
       "SY": 1,
       "PNV": 1,
       "AHI": 1
      },
      "total": {
-      "PSOE": 110,
+      "PSOE": 100,
       "BILDU": 5,
-      "PP": 130,
+      "PP": 139,
+      "VOX": 7,
       "ERC": 3,
       "JUNTS": 4,
-      "VOX": 6,
       "SY": 1,
       "PNV": 2,
       "AHI": 1,
@@ -859,7 +1595,7 @@
       "GBAI": 1,
       "FV": 1
      },
-     "right": 136,
+     "right": 146,
      "size": 267,
      "majority": 134,
      "threeFifths": 161
@@ -1291,19 +2027,19 @@
       "p95": 178
      },
      "senadoDerecha": {
-      "mean": 131.3,
-      "p05": 96,
-      "p50": 133,
-      "p95": 160
+      "mean": 140.4,
+      "p05": 108,
+      "p50": 143,
+      "p95": 164
      }
     },
     "prob": {
-     "mayoriaDerecha": 0.6772,
-     "juntsDecisivo": 0.0902,
-     "investiduraSola": 0.0712,
+     "mayoriaDerecha": 0.6774,
+     "juntsDecisivo": 0.0904,
+     "investiduraSola": 0.071,
      "investiduraConJunts": 0.1614,
-     "senadoMayoriaDerecha": 0.4904,
-     "senado35Derecha": 0.0486
+     "senadoMayoriaDerecha": 0.679,
+     "senado35Derecha": 0.1084
     },
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
@@ -1373,7 +2109,7 @@
      "gains": "VOX",
      "loses": "EXISTE",
      "need": 1772,
-     "pctOfValid": 2.253621437383154
+     "pctOfValid": 2.2685374846374438
     },
     {
      "id": "40",

@@ -9,8 +9,8 @@ import { BLOCS, MAJORITY } from './blocs.js';
 // σ en puntos porcentuales. sigmaBloc: error común que traslada voto entre derecha e
 // izquierda (el error típico de las encuestas). sigmaParty: error propio de cada
 // partido, escalado por √(cuota/10). sigmaProv: error relativo provincia × partido.
-// VIDEO_NOISE: dispersión de ±9 escaños (1σ) en la derecha, la que implica el vídeo de
-// referencia; reproduce sus cifras del Senado (media: P(3/5) ≈ 6 %; CIS: 0 %).
+// VIDEO_NOISE: dispersión de ±9 escaños (1σ) en la derecha, la que implicaba el análisis
+// de referencia; solo como alternativa de sensibilidad.
 // HISTORICAL_NOISE (por defecto): validado con el backtest 2019→2023
 // (scripts/backtest-2023.js): con él, el resultado real de la derecha en 2023 cae
 // dentro del intervalo del 90 % a 33 días, en la última semana y con encuesta
@@ -56,7 +56,7 @@ export function noisyPoll(poll, rng, { sigmaBloc, sigmaParty }) {
 
 // scenarios: [{...escenario, prob}] (prob 1 = siempre; 0 = nunca).
 // exterior: 'techo' = los votos extra se recolocan de forma óptima en cada iteración
-// (información perfecta, el supuesto del vídeo); 'fijo' = se colocan una vez sobre la
+// (información perfecta: cota teórica); 'fijo' = se colocan una vez sobre la
 // proyección central, como haría alguien antes de conocer el resultado.
 export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noise = DEFAULT_NOISE, iterations = 10, exterior = 'techo' } = {}) {
   const rng = mulberry32(seed);

@@ -1,10 +1,12 @@
 # Simulador 29-N · Metodología
 
 > **Para qué sirve este documento:** auditar el modelo paso a paso. Cada cifra que publica la web se puede reproducir con los comandos de la §9.
-> **Corte de datos:** 27-oct-2026, 04:37 UTC.
+> **Corte de datos:** 27-oct-2026, 18:24 UTC.
 > - Última encuesta: trabajo de campo hasta el **25-oct-2026**.
 > - Escenarios: actualizados tras el cierre de candidaturas del 26-oct.
-> - Las cifras de §0 y §6 son de ese corte. Al incorporar las tarjetas de fuentes (Senado de Progreso sin Cataluña ni Canarias), varían en décimas: las vigentes están siempre en `data/state.json`.
+> - Las cifras de §0 y §6 son de ese corte; las vigentes están siempre en `data/state.json`.
+>
+> **Solo datos reales.** El modelo nació contrastándose con un análisis en vídeo de referencia. Desde el 27-oct ninguna entrada sale de él: cada estado, probabilidad y parámetro procede de una tarjeta con su fuente original (BOE, Junta Electoral Central, INE, CIS o prensa enlazada). Los parámetros sin dato publicado se declaran como **supuestos** (§7), con su efecto medido. Las cifras de aquel análisis solo se conservan como contraste del motor (§5.2) y no alimentan nada.
 
 ---
 
@@ -13,8 +15,9 @@
 **¿Está actualizado?**
 - Sí, a fecha del corte:
   - Las 14 encuestas más recientes de cada empresa.
+  - La estimación oficial del último barómetro del CIS (estudio 3582), leída del PDF de cis.es.
   - Los escaños oficiales de 2026 (BOE).
-  - El pacto PP–Vox del Senado (26-oct).
+  - El pacto PP–Vox del Senado (26-oct), con el seguimiento medido por la encuesta de Data 10 (21-oct).
   - La permanencia del Frente Amplio en 51 de 52 provincias.
   - El censo exterior del INE para el 29-N.
 - Contraste externo: el agregador de Demócrata (15 institutos) da PP 31,4 · PSOE 26,9 · Vox 18,8; nuestra media da 31,3 · 26,8 · 19,2.
@@ -33,12 +36,16 @@ Con la incertidumbre por defecto, validada con el backtest de 2023, el intervalo
 
 | Fuente | Central | Media MC | Intervalo 90 % | P(≥ 176) |
 |---|---|---|---|---|
-| Media de encuestas | 200 | 198,5 | **180–218** | **97,7 %** |
-| CIS reestimado | 186 | 181,5 | **161–201** | **69,8 %** |
+| Media de encuestas | 200 | 197,9 | **179–218** | **97,2 %** |
+| CIS · estimación oficial | 150 | 150,1 | **127–172** | **2,5 %** |
+| CIS · reestimaciones independientes | 186 | 181,0 | **160–201** | **67,7 %** |
 
-**Prueba de estrés:** si hoy se repitiera el fallo de las encuestas de 2023 a 33 días:
-- Media de encuestas: la derecha bajaría a **188** y conservaría la mayoría.
-- CIS reestimado: bajaría a **169**, sin mayoría, y la investidura sin Junts subiría a 175. Junts volvería a decidir.
+Las tres fuentes no coinciden. La estimación oficial del CIS da al PSOE 34 % y al PP 22,3 %, 12 puntos de diferencia que ninguna empresa privada recoge; las reestimaciones independientes de los mismos datos brutos dejan PP y PSOE empatados. Por eso se muestran por separado y no se promedian.
+
+**Prueba de estrés:** si hoy se repitiera el fallo de la media de encuestas de 2023 a 33 días:
+- Media de encuestas: la derecha bajaría a **190** y conservaría la mayoría.
+- CIS reestimado: bajaría a **170**, sin mayoría, y la investidura sin Junts subiría a 172. Junts volvería a decidir.
+- CIS oficial: el fallo de 2023 se midió sobre las empresas privadas; aplicarlo a la estimación del CIS es solo ilustrativo (derecha 150 → 136).
 
 ---
 
@@ -62,9 +69,9 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 | `data/seats-2026.json` | Diputados por provincia | **BOE-A-2026-20742** (RD 806/2026), anexo | `build-seats.js` | 52 circ., 350. Cambios frente a 2023: Madrid 37→38, Cádiz 9→8 |
 | `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos | `build-designados.js` | Suma 58 |
 | `data/cera.json` | Electores CERA por provincia y por país, 2023 y 2026 | **INE**, Oficina del Censo Electoral, tablas 3 y 8 | `build-cera.js` | Los países suman el total de cada provincia. 2.325.310 → 2.769.645 |
-| `data/polls.json` | Encuestas 2026 (168 filas) y medias | en.wikipedia, "Opinion polling for the 2026 Spanish general election" | `fetch-polls.js` | — |
-| `data/scenarios.json` | Catálogo de mecanismos de escenario (sin estados) | — | manual | — |
-| `data/news.json` | Tarjetas de noticias, análisis y datos oficiales, con enlaces y efectos | Prensa, BOE, INE y transcripción de referencia | manual (F4: automática) | Tests de resolución |
+| `data/polls.json` | Encuestas 2026 y las tres fuentes de intención de voto (§4.1), cada encuesta con su enlace original | Índice: en.wikipedia, "Opinion polling for the 2026 Spanish general election". Estimación oficial: **PDF del CIS** (cis.es, estudio 3582) | `fetch-polls.js`, `lib/cis.js` | El PDF del CIS se lee por columnas; PP incluye UPN |
+| `data/scenarios.json` | Catálogo de mecanismos de escenario (sin estados). Los parámetros sin dato llevan su explicación en `assumptions`; los que tienen dato oficial, en `data` | — | manual | — |
+| `data/news.json` | Tarjetas de noticias y datos oficiales, cada una con enlaces a sus fuentes originales y sus efectos | Prensa enlazada, BOE, Junta Electoral Central, INE | manual (F4: automática) | Tests: cada tarjeta con efecto tiene fuentes |
 | `data/sources.json` | Todas las tarjetas (incluidas las encuestas) con su estado por defecto y su efecto | Generado | `simulate.js` | Cada tarjeta con efecto tiene su impacto |
 
 **Incidencias detectadas en las fuentes**
@@ -126,16 +133,23 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 - Peso: `w = 0,5^(días/7) × √min(muestra, 3000)`; si la muestra no consta, se toma 1.000.
 - **Cifras conjuntas** (FA+FV, o "Sumar" en encuestas anteriores): se reparten con la proporción media de las encuestas que dan ambos por separado.
 
-**"CIS (datos brutos reestimados)"**
-- Media de las reestimaciones independientes de los datos brutos del **último barómetro del CIS**: hoy Opina 360 y Ateneo del Dato, con trabajo de campo del 1 al 6-oct.
+**CIS · estimación oficial**
+- La estimación de voto que publica el propio CIS para su último barómetro (hoy, estudio 3582). Se localiza el estudio en el índice de encuestas y se lee la tabla de estimación del PDF de cis.es por posición de columnas (`scripts/lib/cis.js`).
+- "Sumar" en el PDF es la cifra conjunta de FA + FV: se reparte con la proporción media de las encuestas que los dan por separado. UPN se suma al PP.
+- Los partidos que el CIS no estima (AA) se completan con la media de encuestas.
+
+**CIS · reestimaciones independientes**
+- Media de las reestimaciones de terceros sobre los datos brutos del mismo barómetro: hoy Opina 360 y Ateneo del Dato, con trabajo de campo del 1 al 6-oct.
 - Los partidos que no dan esas reestimaciones se completan con la media de encuestas.
-- No es la estimación oficial del CIS ni su intención directa de voto. La intención directa pone al PSOE 10 puntos por delante y no reproduce las cifras del vídeo de referencia.
+
+Las tres fuentes son tarjetas (§4.10): cada encuesta o estimación puede desactivarse y la fuente se recalcula sin ella.
 
 **Entradas actuales** (% sobre voto válido)
 
 | | PP+UPN | PSOE | Vox | FA | FV | Podemos | SALF | ERC | Junts | Bildu | PNV | BNG | CC | AA |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Media | 31,30 | 26,76 | 19,18 | 5,89 | 0,97 | 2,34 | 1,88 | 2,34 | 1,48 | 1,33 | 0,91 | 0,92 | 0,39 | 1,14 |
+| CIS oficial | 22,30 | 34,00 | 17,10 | 5,23 | 0,87 | 3,10 | 1,80 | 3,00 | 1,10 | 1,60 | 0,60 | 0,90 | 0,20 | (media) |
 | CIS reest. | 28,15 | 28,30 | 17,65 | 6,51 | 1,09 | 3,25 | 2,00 | (de la media) | | | | | | |
 
 ### 4.2 Proyección provincial (swing proporcional con IPF)
@@ -190,20 +204,27 @@ Resultado: las cuotas nacionales coinciden con la encuesta (test: error < 0,05 p
 
 `data/scenarios.json`, `scenarios.js`, `model.js`.
 
-| Escenario | Estado (27-oct) | Prob. | Mecanismo |
-|---|---|---|---|
-| Podemos separado | confirmado | 1 | Incluido en la reasignación (§3) |
-| Senado de Progreso (PSOE + FA + FV) | confirmado | 1 | Lista conjunta, que suma votos, en todas las circunscripciones salvo Cataluña y Canarias (excepto La Gomera). Son 50; las 3 que faltan para llegar a 47 quedan pendientes del BOE |
-| Teruel sin FA/CHA | confirmado | 1 | El FA no se presenta en Teruel; el 70 % de su voto pasa al PSOE y el resto se abstiene |
-| FA se retira de provincias pequeñas | **descartado** | 0 | Solo como "qué pasaría si": 15 o 29 provincias, trasvase ajustable |
-| **Pacto PP–Vox al Senado** (26-oct) | confirmado | 1 | Ver detalle abajo |
-| Vox se retira casi en toda España (hipótesis del vídeo) | superado | 0 | Solo como "qué pasaría si" |
-| Voto exterior extra | hipotético | 0 | Solo como "qué pasaría si" (§4.7) |
+El estado y la probabilidad de cada escenario los fija la tarjeta que manda (§4.10); los parámetros con dato, la tarjeta que los aporta.
+
+| Escenario | Estado (27-oct) | Prob. | Según | Mecanismo y parámetros |
+|---|---|---|---|---|
+| Podemos separado | confirmado | 1 | El Español (12-oct), Cadena SER y La Vanguardia (16-oct), Infobae (17-oct) | Incluido en la reasignación (§3) |
+| Senado de Progreso (PSOE + FA + FV) | confirmado | 1 | Infobae, Demócrata y CMM (17-oct) | Lista conjunta en todas las circunscripciones salvo Cataluña y Canarias (excepto La Gomera); las 3 que faltan para llegar a 47 quedan pendientes del BOE. **Seguimiento: 92 % de los votantes del PSOE y 95 % de los del socio** (Data 10) |
+| Teruel sin FA/CHA | confirmado | 1 | Prensa del 26-oct | El FA no se presenta al Congreso en Teruel. Fracción de su voto que va al PSOE: **50 %, supuesto** (no hay dato); el resto se abstiene |
+| FA se retira de provincias pequeñas | **descartado** | 0 | Prensa del 26-oct (listas en 51 de 52) | Supera al rumor del 20-oct (prob. 15 %). Solo como "qué pasaría si"; trasvase **50 %, supuesto** |
+| **Pacto PP–Vox al Senado** | confirmado | 1 | Prensa del 26-oct | Ver detalle abajo. **Seguimiento: 94 % de los votantes del PP y 86 % de los de Vox** (Data 10) |
+| Voto exterior extra | hipotético | 0 | Supremo (23-oct): voto suspendido | Solo como "qué pasaría si" (§4.7) |
+
+**Seguimiento de las listas conjuntas.** Encuesta de Data 10 publicada por OKDiario el 21-oct y recogida por Libertad Digital (no se publica la muestra; tarjeta marcada "sin verificar"). Es el único dato publicado sobre cuántos votantes de cada partido apoyarían una lista conjunta al Senado. Si se desactiva, el seguimiento vuelve al 100 % mecánico.
 
 **Detalle del pacto PP–Vox.** Se modela a nivel de candidato:
-- **Vox se retira en 6 provincias** (Las Palmas, S. C. de Tenerife, Cádiz, Valencia, Castellón y Baleares): el PP recibe el 85 % del voto de Vox.
-- **El PP se retira en 3** (Gipuzkoa, Girona y Tarragona): Vox recibe el 85 % del voto del PP.
-- **Vox presenta un único candidato en 14 provincias:** sus votantes dan sus otras 2 marcas (85 %) a los dos primeros candidatos del PP.
+- **Vox se retira en 6 provincias** (Las Palmas, S. C. de Tenerife, Cádiz, Valencia, Castellón y Baleares): la lista del PP recibe el 94 % del voto del PP y el 86 % del de Vox.
+- **El PP se retira en 3** (Gipuzkoa, Girona y Tarragona): la lista de Vox recibe el 86 % del voto de Vox y el 94 % del del PP.
+- **Vox presenta un único candidato en 14 provincias:** el 86 % de sus votantes da sus otras 2 marcas a los dos primeros candidatos del PP.
+
+**Descartado por falta de base real**
+- *"Vox se retira casi en toda España"*: era una hipótesis de análisis; el pacto real del 26-oct la supera.
+- *Una "decena larga" de provincias sin lista del FA*: ninguna fuente lo sostiene; el FA y Maíllo lo desmintieron el 21-oct.
 
 ### 4.6 Senadores designados (58)
 
@@ -219,21 +240,24 @@ Resultado: las cuotas nacionales coinciden con la encuesta (test: error < 0,05 p
 
 ### 4.7 Voto exterior (Ley de Nietos)
 
-Dos modos:
+El Supremo mantiene suspendido el voto de los 163.020 nacionalizados (23-oct), así que el escenario tiene probabilidad 0 y solo aparece en "qué pasaría si". No está en el espectro (§4.9): con datos reales no mueve ningún escaño.
 
-**Techo estratégico** (supuesto del vídeo)
-- *N* votos extra al PSOE colocados de forma óptima.
-- Es una mochila exacta: maximiza los escaños quitados a partidos de fuera del bloque de investidura.
-- En el Monte Carlo se recoloca en cada iteración, es decir, con información perfecta. Es una **cota máxima**.
+**Realista** (modo por defecto, todo con datos oficiales)
+- Votos de una provincia = `163.020 × (crecimiento del CERA en Latinoamérica 2023→2026 de la provincia / total) × fracción que puede votar × participación` (censo: INE).
+- **Participación: 8,87 %**, la escrutada del voto exterior en 2023 (Junta Electoral Central). Da ≈ 14.460 votos.
+- **Reparto por partido:** no hay encuestas de este electorado, así que se usa **cómo votó el exterior en 2023 en esa provincia** (Junta Electoral Central, pasado a la oferta de 2026): nacionalmente, PP 33 %, PSOE 29 %, Vox 11 %, FA 8 %, Podemos 5 %. En "qué pasaría si" se puede cambiar.
 
-**Realista**
-- Votos de una provincia = `163.020 × (crecimiento del CERA en Latinoamérica 2023→2026 de la provincia / total) × fracción que puede votar × participación`.
-- El reparto por partido es un parámetro, porque **no hay encuestas de este electorado**. Por defecto, **como votó el exterior en 2023 en esa provincia** (dato oficial de la Junta Electoral Central, pasado a la oferta de 2026): nacionalmente, PP 33 %, PSOE 29 %, Vox 11 %, FA 8 %, Podemos 5 %.
-- Participación de referencia: 10,04 % (todo el CERA en 2023).
+**Techo** (cota teórica, no un escenario)
+- Los mismos votos, todos al PSOE y colocados de forma óptima: una mochila exacta que maximiza los escaños quitados a partidos de fuera del bloque de investidura.
+- En el Monte Carlo se recoloca en cada iteración, es decir, con información perfecta. Ningún electorado real se reparte así.
 
-**Resultado:**
-- Los mismos 37.000 votos, todos al PSOE, repartidos según dónde creció el censo mueven **~0 escaños**.
-- Colocados de forma óptima mueven ~7.
+**Resultado** (proyección central, derecha en el Congreso)
+
+| Fuente | Sin voto extra | Realista | Techo |
+|---|---|---|---|
+| Media de encuestas | 200 | 200 | 196 |
+| CIS oficial | 150 | 150 | 146 |
+| CIS reestimado | 186 | 186 | 182 |
 
 ### 4.8 Monte Carlo
 
@@ -255,37 +279,41 @@ Dos modos:
 - `P(Junts decisivo) = P(derecha < 176, investidura < 176 y investidura + Junts ≥ 176)`.
 - Senado: P(derecha ≥ 134) y P(derecha ≥ 161), contando los designados.
 
-**Bloques** (definición del vídeo)
-- Derecha = PP + Vox + UPN.
-- Investidura sin Junts = PSOE + FA + FV + Podemos + ERC + Bildu + PNV + BNG + CC.
+**Bloques** (según la votación de investidura del 16-nov-2023: 179 sí, 171 no)
+- Derecha = PP + Vox + UPN (votaron no).
+- Investidura sin Junts = PSOE + FA + FV + Podemos + ERC + Bildu + PNV + BNG + CC: los que votaron sí, con los herederos de Sumar.
+- Junts, aparte: votó sí, pero es el socio que decide.
 - "Otros": AA, SALF, CUP, NC, Existe…
 
 **Proyección central y media del Monte Carlo**
-- La proyección central es la del Congreso sin ruido (con el CIS: derecha 186).
-- La media del Monte Carlo es algo menor (181,5). D'Hondt no es lineal: el ruido provincial reduce de media la prima del partido que lidera en provincias muy igualadas.
+- La proyección central es la del Congreso sin ruido (con el CIS reestimado: derecha 186).
+- La media del Monte Carlo es algo menor (181,0). D'Hondt no es lineal: el ruido provincial reduce de media la prima del partido que lidera en provincias muy igualadas.
 - **Para leer probabilidades y tendencias, la media o la mediana del Monte Carlo es más fiable que la central**, que salta a escalones (ver §4.9).
 
-**Calibración** (dos opciones)
-- `VIDEO_NOISE` (σ_b 1,5 · σ_p 0,75 · σ_prov 0,06): reproduce la dispersión implícita en el vídeo y sus cifras del Senado (P(3/5) ≈ 6 % con la media y 0 % con el CIS).
-- **`HISTORICAL_NOISE`** (por defecto desde el 27-oct): elegido con el backtest (§5.3). Es más honesto: con `VIDEO_NOISE`, el resultado real de 2023 quedaba en el borde del intervalo.
+**Calibración**
+- **`HISTORICAL_NOISE`** (por defecto): elegido con el backtest 2019→2023 (§5.3), es decir, con el error real de una elección.
+- `VIDEO_NOISE` (σ_b 1,5 · σ_p 0,75 · σ_prov 0,06) se conserva solo como alternativa de sensibilidad: era la dispersión implícita en el análisis de referencia, y con ella el resultado real de 2023 quedaba en el borde del intervalo.
 
 ### 4.10 Fuentes como tarjetas
 
 **Archivos:** `src/engine/evidence.js`, `data/news.json` y `data/sources.json`.
 
 **Objetivo:** el resultado no es una predicción, sino lo que dicen las fuentes de hoy. Por eso todo lo que lo alimenta es una tarjeta con origen, enlace y efecto:
-- **Noticias, análisis y datos oficiales** (`data/news.json`): modifican escenarios del catálogo (`data/scenarios.json`). El catálogo solo define los mecanismos; sin fuentes, cada escenario queda en "sin datos" con probabilidad 0.
-- **Encuestas:** cada una entra en la media con su peso. Desactivarla recalcula la media.
-- **Base del modelo y contexto** (BOE, INE, alianzas incluidas en la reasignación): son fijos y no se pueden desactivar.
+- **Noticias y datos oficiales** (`data/news.json`): modifican escenarios del catálogo (`data/scenarios.json`). Cada tarjeta enlaza a sus publicaciones originales. El catálogo solo define los mecanismos; sin fuentes, cada escenario queda en "sin datos" con probabilidad 0 y parámetros mecánicos (seguimiento del 100 %).
+- **Encuestas**, en tres grupos (media, CIS oficial, CIS reestimado): cada una entra en su fuente con su peso. Desactivarla recalcula esa fuente.
+- **Base del modelo y contexto** (BOE, Junta Electoral Central, INE, alianzas incluidas en la reasignación, votación de investidura de 2023): son fijos y no se pueden desactivar.
 
-**Resolución:** cuando varias tarjetas tocan el mismo escenario, se aplican de menor a mayor prioridad y manda la última:
+**Del estado de una noticia a una probabilidad** (convención fija, no un juicio caso a caso): rumor 15 % · negociación 50 % · confirmado 100 % · descartado 0 %.
+
+**Resolución, campo a campo:** el estado (estado + probabilidad) y cada parámetro de un escenario se resuelven por separado. Así, una tarjeta que solo aporta un dato (el seguimiento de Data 10) no queda superada por otra que solo fija el estado (el pacto confirmado). Para cada campo, las tarjetas se aplican de menor a mayor prioridad y manda la última:
 1. rango del tipo: oficial > noticia > análisis;
 2. a igualdad de rango, la verificada sobre la sin verificar;
 3. a igualdad, la más reciente.
 
 **Por defecto:**
-- Están activas todas las tarjetas con efecto, salvo las superadas. Por ejemplo, el rumor del FA queda superado por la noticia de que el FA se presenta en 51 de 52 provincias.
+- Están activas todas las tarjetas con efecto, salvo las superadas en todos sus campos. Por ejemplo, el rumor del FA (20-oct) queda superado por la noticia de que el FA se presenta en 51 de 52 provincias (26-oct).
 - Las superadas siguen visibles y se pueden reactivar. Si la que las supera sigue activa, no tienen efecto, y la web lo indica.
+- En cada escenario, la web muestra qué tarjeta fija el estado ("Según"), cuál los parámetros ("Parámetros según"), los supuestos sin dato ("Supuesto") y los datos oficiales usados ("Dato").
 
 **Efecto de cada tarjeta:** `scripts/simulate.js` compara el resultado con todas las tarjetas por defecto y el resultado cambiando solo esa (Monte Carlo de 1.000 iteraciones con la misma semilla en los dos cálculos). Se muestra el efecto sobre:
 - los escaños medios de la derecha en el Congreso;
@@ -293,9 +321,11 @@ Dos modos:
 - P(mayoría).
 
 Efectos a 27-oct, con la media de encuestas:
-- Pacto PP–Vox: Senado +18.
-- Senado de Progreso: Senado −4.
-- Cada encuesta: entre −0,5 y +0,8 escaños de la derecha.
+- Pacto PP–Vox: Senado +12.
+- Senado de Progreso: Senado −2.
+- Teruel sin FA: Congreso −0,1.
+- Seguimiento de Data 10: Senado 0 con la media; **+5** con el CIS oficial y con el CIS reestimado. La lista de la izquierda pierde más apoyo (8 % del PSOE y 5 % del socio) que la del pacto.
+- Cada encuesta: entre −0,7 y +0,7 escaños de la derecha.
 
 **En la web:**
 - Al cambiar tarjetas, el resultado se recalcula en el navegador con el mismo motor, y un aviso indica que no es el resultado por defecto.
@@ -310,17 +340,17 @@ Efectos a 27-oct, con la media de encuestas:
 `src/engine/spectrum.js` y `scripts/spectrum.js`, que genera `data/spectrum.json`.
 - **No forma parte de la proyección oficial:** no escribe `state.json` ni `history.json`.
 - **En la web:** tiene pestaña propia (`#espectro`). El fondo se tiñe del color del bloque hacia el que se avanza, hasta un 30 % en el extremo. La posición se indica también con texto, así que el color no es la única pista.
-- **Niveles:** 11, de −5 a +5. El nivel 0 es la proyección oficial.
+- **Niveles:** 9, de −4 a +4. El nivel 0 es la proyección oficial.
 - **Cómo se acumulan:** cada nivel hacia un lado añade un escenario favorable a ese bloque, del más plausible al menos plausible. Cuando un nivel intensifica uno anterior (marcado como "sustituye"), el anterior se descarta.
 - **Retiradas de listas:** ya no son posibles tras el cierre de candidaturas. Se emulan con "voto útil": el partido sigue presentándose, pero una fracción de su voto pasa a otro.
+- **Por qué no hay nivel 5:** más allá del fallo completo de las encuestas de 2023, que es un dato real, no queda ningún escenario con base real que mueva más el resultado. El voto de los nacionalizados, con su participación y su reparto reales, no mueve ningún escaño (§4.7), y el modo techo es una cota teórica, no un escenario. Los niveles de intensidad son hipótesis de laboratorio; se apoyan en datos reales cuando existen (el error de 2023, el seguimiento de Data 10).
 
 | Nivel | A favor de la izquierda | A favor de la derecha |
 |---|---|---|
 | 1 | Encuestas: 40 % del fallo de 2023 (PSOE +2,1) | Encuestas: +2 pts de la investidura a PP + Vox |
 | 2 | Voto útil: 30 % del FA → PSOE en las 29 provincias de ≤5 escaños | Voto útil: 30 % de Vox → PP en las 29 provincias de ≤5 escaños |
-| 3 | Pacto PP–Vox del Senado al 60 % | Pacto al 100 % y SALF se hunde (50 % a Vox, 30 % al PP) |
+| 3 | Pacto PP–Vox del Senado al 60 % (por defecto: 94 % PP y 86 % Vox, Data 10) | Pacto al 100 % y SALF se hunde (50 % a Vox, 30 % al PP) |
 | 4 | Fallo completo de las encuestas de 2023 (sustituye al nivel 1) | Desmovilización: FA, FV y Podemos −25 % |
-| 5 | *Hipotético:* 37.000 votos exteriores al PSOE en modo techo | Encuestas: +4 pts a la derecha (sustituye al nivel 1) |
 
 **Cálculo por nivel**
 - Proyección central más Monte Carlo de 2.000 iteraciones.
@@ -334,21 +364,24 @@ Efectos a 27-oct, con la media de encuestas:
 - La investidura suma 176 sola.
 - La derecha logra la mayoría.
 
-Se usan probabilidades y no la proyección central porque, con D'Hondt, **la central salta a escalones**. Con el CIS de hoy, la central da 186 a la derecha y la media del Monte Carlo 181,6: varios escaños se ganan por muy pocos votos. Por eso, al trasladar 2 puntos, la central solo sube 1 escaño mientras la media sube 9.
+Se usan probabilidades y no la proyección central porque, con D'Hondt, **la central salta a escalones**. Con el CIS reestimado, la central da 186 a la derecha y la media del Monte Carlo 181,0: varios escaños se ganan por muy pocos votos. Por eso, al trasladar 2 puntos (nivel +1), la central solo sube 1 escaño mientras P(mayoría) pasa del 67 % al 89 %.
 
 **Resultado a 27-oct**
-- **Media de encuestas:** ni en el nivel −5 pierde la derecha la mayoría en más de la mitad de las simulaciones (P = 57 %).
+- **Media de encuestas:** ni en el nivel −4 pierde la derecha la mayoría (P = 78 %; central 190).
+- **CIS oficial:** la derecha ya no tiene mayoría en el nivel 0 (P = 2,7 %) y la investidura suma 176 sola (P = 80 %). Ni en el nivel +4 la recupera (P = 23 %).
 - **CIS reestimado:**
-  - En el nivel −4, la derecha pierde la mayoría y la investidura + Junts suman 176.
-  - En el nivel −5, la investidura suma 176 sola.
+  - En el nivel −2, la derecha pierde la mayoría (P = 48 %).
+  - En el nivel −4, la investidura + Junts suman 176 (P = 60 %); la investidura sola no llega (P = 45 %).
 
 ---
 
 ## 5. Validación
 
-### 5.1 Reproducción exacta de 2023 (`npm test`, 44 tests en total)
+### 5.1 Reproducción exacta de 2023 (`npm test`, 45 tests en total)
 
-| # | Caso (votos de 2023) | Esperado (oficial o vídeo) | Modelo |
+T1, T5 y T6 se comparan con el resultado oficial. T2–T4, T7 y T8 reproducen simulaciones de un análisis externo sobre los votos oficiales de 2023: comprueban que el motor calcula igual que un cálculo independiente, pero no alimentan el modelo.
+
+| # | Caso (votos de 2023) | Esperado (oficial o análisis externo) | Modelo |
 |---|---|---|---|
 | T1 | Congreso real | PP 137 · PSOE 121 · Vox 33 · Sumar 31… | **Exacto en las 52 provincias** |
 | T2 | Sumar y Podemos separados (europeas) | extrema izquierda 17 · PSOE 129 · PP 142 · derecha 176 | **Exacto** |
@@ -359,9 +392,11 @@ Se usan probabilidades y no la proyección central porque, con D'Hondt, **la cen
 | T7 | Senado con ambas listas conjuntas | derecha 126 · izquierda 75 | 124 · 76 (±2) |
 | T8 | +14.000 votos al PSOE, colocación óptima | PSOE +7 · investidura 179 · derecha 166 | **Exacto** (con 12.256 votos) |
 
-### 5.2 Contraste con las cifras de 2026 del vídeo (proyección central)
+### 5.2 Contraste con un análisis externo (no es fuente)
 
-| Caso | Vídeo | Modelo |
+Registro histórico, 26-oct: el modelo, ejecutado **con los supuestos de aquel análisis** (seguimiento del 85 %, trasvases del 70 %, 37.000 votos exteriores), reproducía sus cifras de 2026. Solo comprueba que el motor es coherente con un cálculo independiente. Esos supuestos ya no se usan: las cifras vigentes, con datos reales, están en §0 y §6.
+
+| Caso | Análisis externo | Modelo (26-oct) |
 |---|---|---|
 | Media: derecha / investidura | ~205 / 140 | 200 / 140 |
 | CIS: derecha | ~188 | 186 |
@@ -401,60 +436,69 @@ Se usan probabilidades y no la proyección central porque, con D'Hondt, **la cen
 
 **Congreso**, Monte Carlo (5.000 simulaciones, `HISTORICAL_NOISE`). Mediana [percentil 5–95]:
 
-| Partido | Media de encuestas | CIS reestimado |
-|---|---|---|
-| PP | 129 [114–145] | 118 [101–133] |
-| PSOE | 107 [91–122] | 118 [102–134] |
-| Vox | 68 [56–80] | 64 [51–74] |
-| FA | 7 [4–12] | 10 [6–16] |
-| ERC | 9 [5–13] | 9 [6–13] |
-| EH Bildu | 7 [2–11] | 7 [2–11] |
-| Junts | 6 [2–9] | 6 [2–9] |
-| PNV | 4 [1–7] | 4 [1–7] |
-| **Derecha** | **198 [180–218] · P(≥176) 97,7 %** | **182 [161–201] · P(≥176) 69,8 %** |
-| Investidura sin Junts | 142 [123–160] | 157 [138–178] |
-| P(Junts decisivo) | 0,8 % | 7,9 % |
+| Partido | Media de encuestas | CIS oficial | CIS reestimado |
+|---|---|---|---|
+| PP | 129 [114–145] | 89 [74–104] | 117 [100–133] |
+| PSOE | 107 [91–123] | 149 [131–169] | 117 [102–134] |
+| Vox | 68 [56–80] | 61 [49–73] | 63 [51–74] |
+| FA | 8 [4–13] | 7 [3–11] | 11 [6–17] |
+| ERC | 9 [5–13] | 13 [8–17] | 9 [6–13] |
+| EH Bildu | 7 [2–11] | 8 [5–13] | 7 [2–11] |
+| Junts | 6 [2–9] | 4 [1–7] | 6 [2–9] |
+| PNV | 4 [1–7] | 2 [0–5] | 4 [1–7] |
+| **Derecha** | **198 [179–218] · P(≥176) 97,2 %** | **151 [127–172] · P(≥176) 2,5 %** | **181 [160–201] · P(≥176) 67,7 %** |
+| Investidura sin Junts | 143 [123–161] | 187 [165–210] · P(≥176) 80,4 % | 158 [138–178] |
+| P(Junts decisivo) | 0,8 % | 6,9 % | 9,0 % |
 
 **Senado** (267 miembros)
 
-| | Media de encuestas | CIS reestimado |
-|---|---|---|
-| Derecha, central | 163 | 139 |
-| Derecha, mediana [90 %] | 157 [130–169] | 134 [97–159] |
-| P(mayoría absoluta, ≥134) | 92,7 % | 51,1 % |
-| P(3/5, ≥161) | 35,6 % | 4,0 % |
+| | Media de encuestas | CIS oficial | CIS reestimado |
+|---|---|---|---|
+| Derecha, central | 165 | 82 | 146 |
+| Derecha, mediana [90 %] | 162 [139–172] | 86 [70–118] | 143 [108–164] |
+| P(mayoría absoluta, ≥134) | 97,1 % | 0,8 % | 67,9 % |
+| P(3/5, ≥161) | 55,5 % | 0 % | 10,8 % |
 
-**Prueba de estrés** (proyección central con el error de las encuestas de 2023 a 33 días aplicado a hoy)
+**Prueba de estrés** (proyección central con el error de la media de encuestas de 2023 a 33 días aplicado a hoy)
 
 | Fuente | Derecha (Congreso) | Investidura | Senado, derecha |
 |---|---|---|---|
-| Media de encuestas | 200 → **188** | 142 → 156 | 163 → 144 |
-| CIS reestimado | 186 → **169** | 152 → 175 | 139 → 105 |
+| Media de encuestas | 200 → **190** | 142 → 155 | 165 → 155 |
+| CIS reestimado | 186 → **170** | 152 → 172 | 146 → 118 |
+| CIS oficial (ilustrativo) | 150 → 136 | 187 → 202 | 82 → 70 |
 
 ---
 
 ## 7. Supuestos y su sensibilidad
 
-Efecto sobre la proyección central (derecha en el Congreso / en el Senado):
+**Supuestos sin dato publicado.** Son los únicos parámetros que no salen de una fuente. Cada uno se declara en `scenarios.json` → `assumptions` (o en el código, si es de la reasignación) y la web lo muestra como "Supuesto". Efecto sobre la proyección central, derecha en el Congreso / en el Senado:
 
-| Supuesto | Valor usado | Alternativa probada | Media de encuestas | CIS reestimado | Cómo se verifica |
-|---|---|---|---|---|---|
-| Fracción de Compromís en FV | 0,85 | 0,5 / 1 | 0 / ±1 | ±1 / ±2 | Resultados del 29-N |
-| Seguidores de la consigna del pacto PP–Vox | 85 % | 70 % / 100 % | 0 / 0 | Senado 136 / 141 | — |
-| Circunscripciones de Senado de Progreso | 47 de 4 escaños | las 60 | Senado −1 | Senado −6 (133 < 134) | **BOE, candidaturas proclamadas** |
-| Trasvase FA→PSOE en Teruel | 70 % | 100 % | 0 | 0 | — |
-| Ruido del Monte Carlo | histórico | vídeo | P(mayoría) 97,7 % → 99,5 % | 69,8 % → 77 % | Backtest (§5.3) |
+| Supuesto | Valor usado | Alternativa probada | Media de encuestas | CIS oficial | CIS reestimado | Cómo se verifica |
+|---|---|---|---|---|---|---|
+| Fracción del resto de Sumar 2023 que va a Compromís–FV | 0,85 | 0,5 / 1 | 200/165 → 200/165 / 199/165 | 150/82 → 150/85 / 150/82 | 186/146 → 185/152 / 186/146 | Resultados del 29-N |
+| Voto del FA en Teruel que va al PSOE | 50 % (neutro) | 0 % / 100 % | 0 | 0 | 0 | — |
+| Voto del FA que va al PSOE si se retirara de las pequeñas | 50 % (neutro) | ajustable | solo "qué pasaría si" | | | — |
+
+**Parámetros con dato y su sensibilidad**
+
+| Parámetro | Valor (fuente) | Alternativa | Media de encuestas | CIS oficial | CIS reestimado | Cómo se verifica |
+|---|---|---|---|---|---|---|
+| Seguimiento de las listas conjuntas | Data 10: PP 94 %, Vox 86 %; PSOE 92 %, socio 95 % | 100 % (sin la tarjeta) | Senado 165 → 165 | 82 → 77 | 146 → 141 | Resultados del 29-N |
+| Circunscripciones de Senado de Progreso | Todas salvo Cataluña y Canarias (excepto La Gomera) (prensa del 17-oct) | las 60 | Senado 165 → 163 | 82 → 82 | 146 → 145 | **BOE, candidaturas proclamadas** |
+| Ruido del Monte Carlo | histórico (backtest, §5.3) | estrecho (`VIDEO_NOISE`) | P(mayoría, 2.000 sim.) 97,2 % → 99,4 % | 2,7 % → 0,7 % | 67,2 % → 74,8 % | Backtest (§5.3) |
 
 **Supuestos estructurales no cuantificados**
 - **Swing proporcional uniforme:** cada partido varía lo mismo, en proporción, en todas las provincias. No capta dinámicas regionales propias (Cataluña, País Vasco, Galicia, Canarias) salvo por la base de 2023. Es la causa principal del error de +3 de §5.3 A.
 - **Participación de 2023 constante** por provincia.
 - **Semillas de SALF (europeas 2024) y AA (andaluzas 2026):** su reparto territorial puede diferir en unas generales.
+- **Las tres fuentes de voto discrepan mucho:** entre la estimación oficial del CIS y la media de encuestas hay 50 escaños de diferencia en el bloque de derecha. Es la mayor incertidumbre del modelo, mayor que la del Monte Carlo de cada fuente.
 - **"CIS reestimado":** se basa en dos reestimaciones de terceros de un barómetro con trabajo de campo de hace 3 semanas.
-- **Fuente de las encuestas:** Wikipedia, que es secundaria. Se contrasta con el agregador de Demócrata.
+- **Índice de las encuestas:** Wikipedia, que es secundaria; cada encuesta enlaza a su publicación original. Se contrasta con el agregador de Demócrata. La estimación oficial del CIS se lee directamente de cis.es.
+- **Seguimiento de Data 10:** una sola encuesta sin muestra publicada. Por eso su tarjeta va marcada "sin verificar" y se puede desactivar.
 - **Senado con voto de partido:** no capta el voto personal cruzado; en 2023 falló en 4 provincias muy igualadas.
 - **Formentera:** base estimada, 1 escaño.
 - **Designados:** 4 de las 17 comunidades son estimación. Andalucía, con AA en 8 escaños, podría dar 1 designado a AA en lugar de al PP.
-- **Probabilidades de los escenarios:** se fijan a mano en `scenarios.json` hasta que entre el pipeline de noticias (F4).
+- **Probabilidades de los escenarios:** salen del estado que da la noticia más fuerte (rumor 15 %, negociación 50 %, confirmado 100 %, descartado 0 %). Es una convención, no una estimación. Hoy todos los escenarios activos están confirmados o descartados, así que no influye en el resultado por defecto.
 - **Voto exterior realista:** el crecimiento del CERA latinoamericano se usa como aproximación del lugar de inscripción de los 163.020 afectados.
 
 ---
@@ -473,7 +517,7 @@ Efecto sobre la proyección central (derecha en el Congreso / en el Senado):
 ```sh
 npm ci
 npm run data          # regenera la base (BOE, Junta Electoral Central, INE y, para europeas, andaluzas y designados, Wikipedia)
-npm test              # 44 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes
+npm test              # 45 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
@@ -486,7 +530,9 @@ npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 - [ ] **Escaños de 2026:** coinciden con el anexo del BOE-A-2026-20742 (Madrid 38, Cádiz 8).
 - [ ] **Senado 2023:** 208 electos y PP 120 (T5). **Senado 2026:** 60 circunscripciones y 209 electos (test).
 - [ ] **Designados:** 58. Revisar a mano las 4 comunidades estimadas (§4.6).
-- [ ] **Encuestas:** las 14 de la media, en `polls.json` → `sources.media.polls`, coinciden con las filas de Wikipedia. Fechas y cifras.
+- [ ] **Encuestas:** las 14 de la media, en `polls.json` → `sources.media.items`, coinciden con sus publicaciones originales (cada una lleva su enlace). Fechas y cifras.
+- [ ] **CIS oficial:** `polls.json` → `sources.cisOficial.values` coincide con la tabla de estimación del PDF del estudio (enlace en `items[0].url`).
+- [ ] **Tarjetas:** cada tarjeta con efecto de `data/news.json` enlaza a una publicación que dice lo que la tarjeta afirma (test: ninguna tarjeta con efecto sin fuentes).
 - [ ] **Proyección:** las cuotas nacionales proyectadas reproducen la encuesta con error < 0,05 pp (test).
 - [ ] **Escenarios:** cada uno con estado y fuente. Contrastar el pacto PP–Vox y las listas del FA con el **BOE de candidaturas proclamadas**.
 - [ ] **Monte Carlo:** reproducible con la semilla. El test de reproducibilidad compara dos ejecuciones.
@@ -520,3 +566,10 @@ npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 | 27-oct | Fuentes como tarjetas: el estado de los escenarios lo fijan las tarjetas activas, no un valor manual | El resultado no es una predicción: debe verse de dónde sale cada efecto y poder quitarse |
 | 27-oct | Resultados de 2023 (Congreso y Senado) y de 2019 (backtest) desde el BOE en lugar de Wikipedia; voto exterior 2023 de la Junta Electoral Central | Fuente oficial. Congreso idéntico; Senado con el escrutinio definitivo |
 | 27-oct | Senado de Progreso sin Cataluña ni Canarias (salvo La Gomera); FA y Podemos juntos en Canarias | Infobae y Demócrata (17-oct). Sustituye al supuesto anterior de "las 47 provincias de 4 senadores" |
+| 27-oct | **Solo datos reales:** ninguna entrada sale ya del análisis en vídeo de referencia. Estado, probabilidad y parámetros de cada escenario vienen de tarjetas con su fuente original; lo que no tiene dato se declara como supuesto | El análisis sirvió para validar el motor (§5.1–5.2); el modelo debe apoyarse en fuentes comprobables |
+| 27-oct | Seguimiento de las listas conjuntas: Data 10 (PP 94 %, Vox 86 %; PSOE 92 %, socio 95 %) en lugar del 85 % supuesto | Único dato publicado. Resolución campo a campo para que no lo anule la tarjeta del pacto |
+| 27-oct | Estimación oficial del CIS como tercera fuente, leída del PDF de cis.es | Sustituye el criterio anterior de elegir la variante del CIS que reproducía las cifras del análisis de referencia. Se muestran las tres fuentes por separado |
+| 27-oct | Trasvases FA → PSOE (Teruel y retirada hipotética): del 70 % al 50 % neutro, declarado como supuesto | No hay dato publicado; entre 0 % y 100 % no cambia ningún escaño en Teruel |
+| 27-oct | Voto exterior: participación (8,87 %) y reparto (exterior 2023) de la Junta Electoral Central. Sale del espectro, que pasa de 5 a 4 niveles | Con datos reales no mueve ningún escaño; el modo techo queda como cota teórica |
+| 27-oct | Se eliminan "Vox se retira casi en toda España" y la "decena larga" de retiradas del FA | Sin base real: el pacto del 26-oct supera la primera; la segunda la desmintieron el FA y Maíllo (21-oct) |
+| 27-oct | Bloques definidos por la votación de investidura del 16-nov-2023 | Dato oficial (179 sí, 171 no) en lugar de una definición tomada del análisis |

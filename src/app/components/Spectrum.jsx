@@ -2,7 +2,7 @@ import { Hemicycle } from './Hemicycle.jsx';
 import { BlocBar } from './BlocBar.jsx';
 import { MAJORITY } from '../../engine/blocs.js';
 
-// Espectro izquierda ↔ derecha: 11 posiciones (−5…+5) precalculadas en spectrum.json.
+// Espectro izquierda ↔ derecha: 2·N+1 posiciones (−N…+N) precalculadas en spectrum.json.
 // Cada paso hacia un lado activa un escenario más favorable a ese bloque.
 const pct = (x) => {
   const v = 100 * x;
@@ -10,7 +10,6 @@ const pct = (x) => {
   return `${Math.round(v)} %`;
 };
 const signed = (x) => `${x > 0 ? '+' : x < 0 ? '−' : '±'}${Math.abs(x).toLocaleString('es-ES', { maximumFractionDigits: 1 })}`;
-const LEVELS = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5];
 
 function tipText(t) {
   const out = [];
@@ -24,7 +23,7 @@ function tipText(t) {
 // Resumen de los puntos de vuelco de una fuente, para la tarjeta de la portada.
 export function tippingSummary(src) {
   const t = src.tipping;
-  if (t.derechaPierde == null) return 'ni con los cinco escenarios a favor de la izquierda pierde la derecha la mayoría.';
+  if (t.derechaPierde == null) return 'ni con todos los escenarios a favor de la izquierda pierde la derecha la mayoría.';
   if (t.derechaPierde === 0) return 'la derecha no tiene hoy la mayoría en más de la mitad de las simulaciones.';
   const steps = (n) => `${Math.abs(n)} ${Math.abs(n) === 1 ? 'paso' : 'pasos'} hacia la izquierda`;
   const junts = t.investiduraConJunts != null ? `; la investidura + Junts suma 176 a ${steps(t.investiduraConJunts)}` : '';
@@ -34,6 +33,9 @@ export function tippingSummary(src) {
 // level (−5…+5) lo controla la página, que tiñe el fondo según la posición.
 export function Spectrum({ spectrum, source, level, onLevel }) {
   const setLevel = (v) => onLevel(typeof v === 'function' ? v(level) : v);
+  const N = spectrum.maxLevel ?? 5;
+  const LEVELS = Array.from({ length: 2 * N + 1 }, (_, i) => i - N);
+  const pos = (l) => `${((l + N) / (2 * N)) * 100}%`;
   const src = spectrum.sources[source];
   if (!src) return null;
   const byLevel = Object.fromEntries(src.levels.map((l) => [l.level, l]));
@@ -43,10 +45,10 @@ export function Spectrum({ spectrum, source, level, onLevel }) {
   const meanR = (l) => byLevel[l].montecarlo.blocs.derecha.mean;
 
   const onKey = (e) => {
-    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); setLevel((l) => Math.max(-5, l - 1)); }
-    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); setLevel((l) => Math.min(5, l + 1)); }
-    if (e.key === 'Home') setLevel(-5);
-    if (e.key === 'End') setLevel(5);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); setLevel((l) => Math.max(-N, l - 1)); }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); setLevel((l) => Math.min(N, l + 1)); }
+    if (e.key === 'Home') setLevel(-N);
+    if (e.key === 'End') setLevel(N);
   };
 
   const Side = ({ side, dir }) => (
@@ -96,7 +98,7 @@ export function Spectrum({ spectrum, source, level, onLevel }) {
                 aria-checked={level === l}
                 tabIndex={level === l ? 0 : -1}
                 className={`spec-stop${level === l ? ' sel' : ''}${l === 0 ? ' zero' : ''}`}
-                style={{ left: `${((l + 5) / 10) * 100}%` }}
+                style={{ left: pos(l) }}
                 onClick={() => setLevel(l)}
                 title={`Nivel ${l}: P(mayoría derecha) ${pct(p)}`}
               >
@@ -105,11 +107,11 @@ export function Spectrum({ spectrum, source, level, onLevel }) {
             );
           })}
           {[...new Set(tips.map((t) => t.at))].map((at) => (
-            <span key={at} className="spec-mark" style={{ left: `${((at + 5) / 10) * 100}%` }} aria-hidden="true" />
+            <span key={at} className="spec-mark" style={{ left: pos(at) }} aria-hidden="true" />
           ))}
         </div>
         <div className="spec-scale small muted" aria-hidden="true">
-          {LEVELS.map((l) => <span key={l} style={{ left: `${((l + 5) / 10) * 100}%` }}>{l === 0 ? 'Hoy' : Math.abs(l)}</span>)}
+          {LEVELS.map((l) => <span key={l} style={{ left: pos(l) }}>{l === 0 ? 'Hoy' : Math.abs(l)}</span>)}
         </div>
         {tips.length > 0 && (
           <ul className="spec-milestones small">
@@ -125,8 +127,8 @@ export function Spectrum({ spectrum, source, level, onLevel }) {
         )}
         {src.tipping.derechaPierde == null && (
           <p className="small ink-2" style={{ marginTop: 8 }}>
-            Ni con los cinco escenarios a favor de la izquierda pierde la derecha la mayoría en más de la mitad de las simulaciones
-            (en el extremo: {pct(byLevel[-5].montecarlo.prob.mayoriaDerecha)} de mayoría de la derecha).
+            Ni con todos los escenarios a favor de la izquierda pierde la derecha la mayoría en más de la mitad de las simulaciones
+            (en el extremo: {pct(byLevel[-N].montecarlo.prob.mayoriaDerecha)} de mayoría de la derecha).
           </p>
         )}
       </div>

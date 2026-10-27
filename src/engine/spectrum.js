@@ -1,6 +1,11 @@
-// Espectro izquierda ↔ derecha: 5 niveles por lado. Cada nivel añade un escenario
-// favorable a ese bloque, de más plausible a menos (acumulativo). El nivel 0 es la
-// proyección oficial. Es un laboratorio: no entra en la proyección ni en el historial.
+// Espectro izquierda ↔ derecha: 4 niveles por lado. Cada nivel añade un escenario
+// favorable a ese bloque, de más plausible a menos (acumulativo). El nivel 0 es el
+// resultado con las fuentes por defecto. Es un laboratorio: no entra en el resultado
+// ni en el historial. No hay nivel 5: más allá del fallo de encuestas de 2023 (dato
+// real) no hay escenario con base real que mueva más el resultado; el voto de los
+// nacionalizados con datos reales (participación y reparto del exterior en 2023) no
+// mueve ningún escaño.
+export const MAX_LEVEL = 4;
 import { BLOCS } from './blocs.js';
 
 // Error de las encuestas de 2023 a 33 días de la votación (real − encuesta, pp):
@@ -24,7 +29,7 @@ export const LEVERS = {
     {
       id: 'PACTO_FLOJO', level: 3,
       label: 'El pacto PP–Vox del Senado funciona mal: solo el 60 % de sus votantes sigue la consigna',
-      detail: 'Afecta solo al Senado (85 % en la proyección oficial).',
+      detail: 'Afecta solo al Senado. Por defecto, 94 % de los votantes del PP y 86 % de los de Vox (encuesta Data 10).',
       ops: [{ op: 'pact-share', share: 0.6 }],
     },
     {
@@ -32,12 +37,6 @@ export const LEVERS = {
       label: 'Se repite el fallo completo de las encuestas de 2023',
       detail: 'PSOE +5,3 pts; Vox −1,9; FA −0,9; PP −0,3 (sustituye al nivel 1).',
       ops: [{ op: 'poll-error', vector: ERROR_2023, scale: 1 }],
-    },
-    {
-      id: 'EXTERIOR_TECHO', level: 5, hypothetical: true,
-      label: 'Hipotético: 37.000 votos exteriores extra al PSOE colocados donde más escaños mueven',
-      detail: 'Supuesto del vídeo ("tormenta perfecta"). Con el reparto real del censo exterior, ese volumen apenas mueve escaños; el Supremo mantiene suspendido el voto de 163.020 nacionalizados.',
-      ops: [{ op: 'scenario', scenario: { id: 'VOTO_EXTERIOR', kind: 'extra-votes', prob: 1, params: { mode: 'techo', party: 'PSOE', budget: 37000 } } }],
     },
   ],
   derecha: [
@@ -56,7 +55,7 @@ export const LEVERS = {
     {
       id: 'PACTO_PLENO_SALF', level: 3,
       label: 'El pacto PP–Vox funciona al 100 % y SALF se hunde a favor de Vox y PP',
-      detail: 'Consigna seguida por todos (Senado); el 50 % del voto de SALF va a Vox, el 30 % al PP y el resto se abstiene.',
+      detail: 'Consigna seguida por todos (Senado; por defecto 94 % y 86 %, Data 10). Hipótesis: el 50 % del voto de SALF va a Vox, el 30 % al PP y el resto se abstiene.',
       ops: [{ op: 'pact-share', share: 1 }, { op: 'move', from: 'SALF', to: { VOX: 0.5, PP: 0.3 } }],
     },
     {
@@ -64,12 +63,6 @@ export const LEVERS = {
       label: 'Desmovilización a la izquierda del PSOE: FA, FV y Podemos pierden un 25 % de su voto',
       detail: 'Ese voto se va a la abstención.',
       ops: [{ op: 'scale', parties: ['FA', 'FV', 'PODEMOS'], factor: 0.75 }],
-    },
-    {
-      id: 'ENC_DCHA_4', level: 5, replaces: 'ENC_DCHA_2',
-      label: 'Error grande de las encuestas a favor de la derecha: +4 pts',
-      detail: 'Sustituye al nivel 1.',
-      ops: [{ op: 'bloc-swing', pts: 4 }],
     },
   ],
 };
@@ -124,7 +117,7 @@ function applyPollOp(poll, op) {
   return poll;
 }
 
-// Escenarios activos en un nivel (−5…+5), con los sustituidos ya descartados.
+// Escenarios activos en un nivel (−MAX_LEVEL…+MAX_LEVEL), con los sustituidos ya descartados.
 export function activeLevers(level) {
   if (!level) return [];
   const side = level < 0 ? 'izquierda' : 'derecha';
@@ -143,7 +136,7 @@ export function levelInputs(level, poll, scenarios) {
       if (op.op === 'scenario') {
         sc = sc.filter((s) => s.id !== op.scenario.id).concat({ ...op.scenario, params: { ...op.scenario.params } });
       } else if (op.op === 'pact-share') {
-        sc = sc.map((s) => (s.kind === 'senate-pact' ? { ...s, params: { ...s.params, share: op.share } } : s));
+        sc = sc.map((s) => (s.kind === 'senate-pact' ? { ...s, params: { ...s.params, sharePP: op.share, shareVox: op.share } } : s));
       } else {
         p = applyPollOp(p, op);
       }
@@ -156,11 +149,11 @@ export function levelInputs(level, poll, scenarios) {
 // probable que su contrario (probabilidad del Monte Carlo ≥ 50 %). Se usan
 // probabilidades y no la proyección central porque D'Hondt hace que la central salte a
 // escalones: un escaño ganado por pocos votos en varias provincias la aleja de la media.
-// levels: [{level, montecarlo: {prob}}] de −5 a +5. null = no ocurre ni en el extremo.
+// levels: [{level, montecarlo: {prob}}] de −MAX_LEVEL a +MAX_LEVEL. null = no ocurre ni en el extremo.
 export function tippingPoints(levels) {
   const prob = (l) => levels.find((x) => x.level === l)?.montecarlo.prob;
   const first = (dir, test) => {
-    for (let i = 0; i <= 5; i++) if (test(prob(dir * i))) return dir * i;
+    for (let i = 0; i <= MAX_LEVEL; i++) if (test(prob(dir * i))) return dir * i;
     return null;
   };
   return {

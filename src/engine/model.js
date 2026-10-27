@@ -84,7 +84,7 @@ export function applyCongressScenarios(provinces, active, prep) {
 // 'cera2023' (por defecto) = como votó el exterior en 2023 en esa provincia (dato
 // oficial de la Junta Electoral Central); null = como la proyección de la provincia;
 // o un objeto {partido: peso}.
-export const EXTERIOR_DEFAULTS = { universe: 163020, canVote: 1, turnout: 0.10, split: 'cera2023' };
+export const EXTERIOR_DEFAULTS = { universe: 163020, canVote: 1, turnout: 0.0887, split: 'cera2023' };
 function applyRealisticExterior(provinces, params, prep) {
   const { universe, canVote, turnout, split } = { ...EXTERIOR_DEFAULTS, ...params };
   const growth = prep.cera ? Object.fromEntries(prep.cera.provinces.map((p) => [p.id, Math.max(0, p.latamGrowth)])) : {};
@@ -145,9 +145,13 @@ export function projectSenate(prep, projected, active) {
       // Exclusiones por comunidad o por circunscripción (p. ej. Senado de Progreso:
       // ni Cataluña ni Canarias salvo La Gomera).
       if (p.excludeCcaa?.includes(c.ccaa) && !p.includeIds?.includes(c.id)) continue;
+      // Lista conjunta: `intoShare` de los votantes del partido que la encabeza y `share`
+      // de los de cada socio la apoyan (Senado de Progreso, Data 10: 92 % y 95 %).
+      if (!p.from.some((f) => votes[f])) continue;
+      votes[p.into] = (votes[p.into] || 0) * (p.intoShare ?? 1);
       for (const f of p.from) {
         if (!votes[f]) continue;
-        votes[p.into] = (votes[p.into] || 0) + votes[f] * (p.share ?? 1);
+        votes[p.into] += votes[f] * (p.share ?? 1);
         delete votes[f];
       }
     }
@@ -166,23 +170,26 @@ export function projectSenate(prep, projected, active) {
   };
 }
 
-// Pacto PP–Vox al Senado (26-oct-2026), por provincia:
-//  - voxWithdraws: Vox no se presenta; el PP lleva un independiente de Vox y recibe
-//    `share` del voto de Vox (lista conjunta de facto).
-//  - ppWithdraws: el PP no se presenta; Vox recibe `share` del voto del PP.
-//  - voxSingle: Vox presenta un solo candidato; sus votantes pueden dar sus otros
-//    maxVotes−1 votos a candidatos del PP (fracción `share`), que suman a los primeros.
+// Pacto PP–Vox al Senado (26-oct-2026), por provincia. `sharePP` y `shareVox` son la
+// fracción de votantes de cada partido que apoya la lista resultante (encuesta Data 10:
+// 94 % y 86 %; sin esa fuente, 1):
+//  - voxWithdraws: Vox no se presenta; el PP lleva un independiente de Vox:
+//    lista = PP × sharePP + Vox × shareVox.
+//  - ppWithdraws: el PP no se presenta: lista de Vox = Vox × shareVox + PP × sharePP.
+//  - voxSingle: Vox presenta un solo candidato; sus votantes (shareVox) dan sus otros
+//    maxVotes−1 votos a los primeros candidatos del PP.
 // Las islas siguen a su provincia (Las Palmas, S. C. de Tenerife, Baleares).
 function pactSeats(votes, c, p) {
-  const share = p.share ?? 0.85;
+  const sharePP = p.sharePP ?? p.share ?? 1;
+  const shareVox = p.shareVox ?? p.share ?? 1;
   const v = { ...votes };
-  if (p.voxWithdraws?.includes(c.prov) && v.VOX) { v.PP = (v.PP || 0) + v.VOX * share; delete v.VOX; }
-  if (p.ppWithdraws?.includes(c.prov) && v.PP) { v.VOX = (v.VOX || 0) + v.PP * share; delete v.PP; }
+  if (p.voxWithdraws?.includes(c.prov) && v.VOX) { v.PP = (v.PP || 0) * sharePP + v.VOX * shareVox; delete v.VOX; }
+  if (p.ppWithdraws?.includes(c.prov) && v.PP) { v.VOX = (v.VOX || 0) * shareVox + v.PP * sharePP; delete v.PP; }
   if (!(p.voxSingle?.includes(c.prov) && v.VOX && v.PP)) return senateSeats(v, c.seats, c.maxVotes);
   const lists = {};
   for (const [k, x] of Object.entries(v)) lists[k] = new Array(c.maxVotes).fill(x);
   lists.VOX = [v.VOX];
-  for (let i = 0; i < c.maxVotes - 1; i++) lists.PP[i] += v.VOX * share;
+  for (let i = 0; i < c.maxVotes - 1; i++) lists.PP[i] += v.VOX * shareVox;
   return senateSeatsByCandidate(lists, c.seats);
 }
 

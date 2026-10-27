@@ -1,11 +1,11 @@
-// Precalcula el espectro izquierda ↔ derecha (niveles −5…+5) para cada fuente de
+// Precalcula el espectro izquierda ↔ derecha (niveles −4…+4) para cada fuente de
 // encuesta y lo escribe en data/spectrum.json. Separado de la proyección oficial:
 // no toca state.json ni history.json. Uso: node scripts/spectrum.js [--n 2000]
 import { loadModelData, writeJSON } from './lib/load-data.js';
 import { loadInputs } from './lib/inputs.js';
 import { prepare, run } from '../src/engine/model.js';
 import { simulate } from '../src/engine/montecarlo.js';
-import { LEVERS, levelInputs, tippingPoints } from '../src/engine/spectrum.js';
+import { LEVERS, MAX_LEVEL, levelInputs, tippingPoints } from '../src/engine/spectrum.js';
 
 const n = Number(process.argv[process.argv.indexOf('--n') + 1]) || 2000;
 const prep = prepare(loadModelData());
@@ -18,7 +18,7 @@ const sources = {};
 for (const [key, src] of Object.entries(polls.sources)) {
   const poll = base.polls[key];
   const levels = [];
-  for (let level = -5; level <= 5; level++) {
+  for (let level = -MAX_LEVEL; level <= MAX_LEVEL; level++) {
     const input = levelInputs(level, poll, scenarios);
     const certain = input.scenarios.filter((s) => s.prob >= 1 && s.kind !== 'base');
     const c = run(prep, input.poll, certain);
@@ -45,6 +45,7 @@ writeJSON('spectrum', {
   updated: new Date().toISOString(),
   latestPoll: polls.latestPoll,
   note: 'Laboratorio: escenarios acumulativos favorables a cada bloque. No forma parte de la proyección oficial.',
+  maxLevel: MAX_LEVEL,
   levers: LEVERS,
   sources,
 });

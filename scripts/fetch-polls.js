@@ -1,14 +1,17 @@
-// Lee las encuestas de en.wikipedia ("Opinion polling for the 2026 Spanish general
-// election") y calcula dos fuentes:
+// Calcula tres fuentes de intención de voto:
 //  - media: media ponderada (recencia y muestra) de la última encuesta de cada empresa
-//    en los últimos 21 días, sin CIS ni encuestas encargadas por partidos.
-//  - cis: media de las reestimaciones independientes de los datos brutos del último
-//    barómetro del CIS (Opina 360, Ateneo del Dato, Target Point…), que es lo que el
-//    vídeo de referencia llama "datos brutos del CIS".
+//    en los últimos 21 días, sin CIS ni encuestas encargadas por partidos. Índice: la
+//    tabla de en.wikipedia "Opinion polling for the 2026 Spanish general election";
+//    cada encuesta enlaza a su publicación original.
+//  - cisOficial: estimación de voto oficial del último barómetro del CIS, leída del
+//    PDF que publica el CIS (cis.es).
+//  - cis: media de las reestimaciones independientes de los datos brutos de ese mismo
+//    barómetro (Opina 360, Ateneo del Dato, Target Point…).
 // Uso: node scripts/fetch-polls.js [--cache]
 import fs from 'node:fs';
 import { fetchWikitext, extractTable } from './lib/wiki.js';
 import { parseTable, pollAverage, resolveJoint, average } from './lib/polls.js';
+import { cisEstimate } from './lib/cis.js';
 
 const WINDOW_DAYS = 21;
 const HALF_LIFE_DAYS = 7;
@@ -39,6 +42,16 @@ const cisItems = cisRows.map((r, i) => ({ id: `cis:${r.firm}|${r.date}`, firm: r
 // Las reestimaciones no suelen dar partidos regionales: se completan con la media.
 const cis = { ...Object.fromEntries(Object.entries(media).filter(([p]) => !(p in cisAvg))), ...cisAvg };
 
+// --- CIS oficial (PDF de cis.es) ------------------------------------------------
+const official = rows.filter((r) => r.firm === 'CIS').sort((a, b) => b.date.localeCompare(a.date))[0];
+// El enlace del barómetro lleva el número de estudio: …/es3582mar_a-pdf → 3582.
+const study = official?.url?.match(/es(\d{4})/)?.[1];
+if (!study) throw new Error('No encuentro el último barómetro del CIS');
+const est = await cisEstimate(study);
+const estValues = resolveJoint({ values: est.values, joint: est.joint }, rows);
+const cisOficial = { ...Object.fromEntries(Object.entries(media).filter(([p]) => !(p in estValues))), ...estValues };
+const cisOficialItems = [{ id: `cis-oficial:${study}`, firm: `CIS · estimación oficial (estudio ${study})`, date: official.date, sample: official.sample, url: est.url, weight: 1, values: estValues }];
+
 const out = {
   source: 'en.wikipedia: Opinion polling for the 2026 Spanish general election',
   fetched: new Date().toISOString(),
@@ -51,8 +64,15 @@ const out = {
       items: mediaItems,
       values: media,
     },
+    cisOficial: {
+      label: 'CIS · estimación oficial',
+      method: `estimación de voto del CIS (estudio ${study}, campo hasta ${official.date}), leída de cis.es; partidos que no da, de la media`,
+      polls: [`CIS, estudio ${study}`],
+      items: cisOficialItems,
+      values: cisOficial,
+    },
     cis: {
-      label: 'CIS (datos brutos reestimados)',
+      label: 'CIS · reestimaciones independientes',
       method: `media de reestimaciones independientes del barómetro con campo hasta ${lastCIS}; partidos que no dan, de la media`,
       polls: cisRows.map((r) => r.firm),
       items: cisItems,

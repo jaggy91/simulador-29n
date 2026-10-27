@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-10-27T05:31:10.736Z",
+ "fetched": "2026-10-27T18:19:31.787Z",
  "latestPoll": "2026-10-25",
  "sources": {
   "media": {
@@ -326,8 +326,56 @@
     "SALF": 1.88
    }
   },
+  "cisOficial": {
+   "label": "CIS · estimación oficial",
+   "method": "estimación de voto del CIS (estudio 3582, campo hasta 2026-10-06), leída de cis.es; partidos que no da, de la media",
+   "polls": [
+    "CIS, estudio 3582"
+   ],
+   "items": [
+    {
+     "id": "cis-oficial:3582",
+     "firm": "CIS · estimación oficial (estudio 3582)",
+     "date": "2026-10-06",
+     "sample": 5025,
+     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
+     "weight": 1,
+     "values": {
+      "PSOE": 34,
+      "PP": 22.3,
+      "VOX": 17.1,
+      "PODEMOS": 3.1,
+      "ERC": 3,
+      "SALF": 1.8,
+      "BILDU": 1.6,
+      "JUNTS": 1.1,
+      "BNG": 0.9,
+      "PNV": 0.6,
+      "CC": 0.2,
+      "FA": 5.23,
+      "FV": 0.87
+     }
+    }
+   ],
+   "values": {
+    "AA": 1.14,
+    "PSOE": 34,
+    "PP": 22.3,
+    "VOX": 17.1,
+    "PODEMOS": 3.1,
+    "ERC": 3,
+    "SALF": 1.8,
+    "BILDU": 1.6,
+    "JUNTS": 1.1,
+    "BNG": 0.9,
+    "PNV": 0.6,
+    "CC": 0.2,
+    "FA": 5.23,
+    "FV": 0.87
+   }
+  },
   "cis": {
-   "label": "CIS (datos brutos reestimados)",
+   "label": "CIS · reestimaciones independientes",
    "method": "media de reestimaciones independientes del barómetro con campo hasta 2026-10-06; partidos que no dan, de la media",
    "polls": [
     "CIS (Opina 360)",

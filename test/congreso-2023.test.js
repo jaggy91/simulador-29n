@@ -18,7 +18,7 @@ describe('T1 · Congreso 2023 real', () => {
     for (const p of base) expect(r.byProvince[p.id], p.name).toEqual(p.elected);
   });
 
-  it('bloques del vídeo: derecha 171, investidura sin Junts 172', () => {
+  it('bloques de la investidura de 2023: derecha 171, investidura sin Junts 172', () => {
     expect(r.blocs).toEqual({ derecha: 171, investidura: 172, junts: 7 });
   });
 });

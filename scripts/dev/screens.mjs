@@ -45,12 +45,12 @@ await shot('whatif', {
     await page.evaluate(() => [...document.querySelectorAll('button')].find((b) => b.textContent === 'Qué pasaría si').click());
     // Fuerza "Sí" en el voto exterior y espera al worker.
     await page.evaluate(() => {
-      const card = [...document.querySelectorAll('.scn')].find((c) => c.textContent.includes('Votos exteriores'));
+      const card = [...document.querySelectorAll('.scn')].find((c) => c.textContent.includes('Ley de Nietos'));
       [...card.querySelectorAll('button')].find((b) => b.textContent === 'Sí').click();
     });
     await page.waitForFunction(() => document.querySelector('.banner')?.textContent.includes('Simulación personalizada'), { timeout: 60000 });
     const hero = await page.$eval('.hero-figure .value', (e) => e.textContent);
-    console.log('  qué pasaría si (exterior 14.000 techo): P(mayoría) =', hero);
+    console.log('  qué pasaría si (voto de los nacionalizados): P(mayoría) =', hero);
   },
 });
 await shot('espectro-izq5', {
@@ -60,7 +60,7 @@ await shot('espectro-izq5', {
     await page.waitForSelector('.spec-track');
     await page.evaluate(() => document.querySelectorAll('.spec-stop')[0].click());
     await new Promise((r) => setTimeout(r, 700)); // fin de la transición del tinte
-    console.log('  espectro nivel −5: fondo', await page.evaluate(() => getComputedStyle(document.body).backgroundColor));
+    console.log('  espectro, nivel extremo izquierdo: fondo', await page.evaluate(() => getComputedStyle(document.body).backgroundColor));
   },
 });
 await browser.close();

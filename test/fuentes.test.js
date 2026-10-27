@@ -56,13 +56,22 @@ describe('Fuentes reales (data/news.json, data/polls.json)', () => {
     expect(sc.PACTO_PP_VOX_SENADO).toMatchObject({ status: 'confirmado', prob: 1, appliedBy: 'pacto-pp-vox-senado' });
     expect(sc.SENADO_PROGRESO).toMatchObject({ status: 'confirmado', prob: 1 });
     expect(sc.FA_retira_pequenas).toMatchObject({ status: 'descartado', prob: 0, appliedBy: 'fa-51-de-52' });
-    expect(sc.VOX_retira_senado).toMatchObject({ status: 'superado', prob: 0 });
-    expect(active.has('video-fa-pequenas')).toBe(false);
+    // La oferta de Abascal (negociación) y la frase de Delgado (rumor) quedan superadas.
     expect(active.has('abascal-senado')).toBe(false);
+    expect(active.has('delgado-optimizar')).toBe(false);
+    // La encuesta Data 10 fija el seguimiento de ambas listas conjuntas y no queda superada.
+    expect(active.has('data10-seguimiento-listas')).toBe(true);
+    expect(sc.PACTO_PP_VOX_SENADO.params).toMatchObject({ sharePP: 0.94, shareVox: 0.86 });
+    expect(sc.SENADO_PROGRESO.params).toMatchObject({ intoShare: 0.92, share: 0.95 });
+  });
+
+  it('ninguna fuente remite al vídeo de referencia y todas las que modifican el resultado tienen enlace', () => {
+    expect(JSON.stringify(news)).not.toMatch(/Vídeo de referencia|transcripción/i);
+    for (const c of news.filter((c) => c.effects?.length)) expect(c.sources.length, c.id).toBeGreaterThan(0);
   });
 
   it('con todas las encuestas activas, la media coincide con la de fetch-polls', () => {
-    for (const k of ['media', 'cis']) {
+    for (const k of Object.keys(polls.sources)) {
       for (const [p, v] of Object.entries(polls.sources[k].values)) expect(Math.abs(base.polls[k][p] - v), `${k} ${p}`).toBeLessThan(0.02);
     }
   });

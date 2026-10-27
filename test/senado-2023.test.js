@@ -29,7 +29,7 @@ describe('Senado 2023', () => {
   });
 
   // Con los votos oficiales del BOE (escrutinio general), T6 sale exacto; con los de
-  // Wikipedia daba 82/114. T7 depende de supuestos del vídeo que no conocemos: ±2.
+  // Wikipedia daba 82/114. T7 depende de supuestos del análisis externo que no conocemos: ±2.
   it('T6 · PSOE+Sumar en lista conjunta: PP 80, izquierda 116 (exacto)', () => {
     const r = senate(base, [{ into: 'PSOE', from: ['SUMAR'] }]);
     expect(r.national.PP).toBe(80);

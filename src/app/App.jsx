@@ -25,6 +25,8 @@ const fmtDate = (t) => new Date(t).toLocaleString('es-ES', { day: 'numeric', mon
 const sumOf = (seats, ps) => ps.reduce((a, p) => a + (seats[p] || 0), 0);
 const blocsOf = (seats) => ({ derecha: sumOf(seats, BLOCS.derecha), investidura: sumOf(seats, BLOCS.investidura), junts: sumOf(seats, BLOCS.junts) });
 const WHATIF_N = 1500;
+// Etiquetas cortas de las fuentes para el selector (la larga va en el título).
+const SHORT = { media: 'Media de encuestas', cisOficial: 'CIS oficial', cis: 'CIS reestimado' };
 // Nombre de la fuente dentro de una frase: "media de encuestas", pero "CIS (…)" en mayúsculas.
 const inText = (label) => (label.startsWith('CIS') ? label : label.charAt(0).toLowerCase() + label.slice(1));
 
@@ -76,7 +78,7 @@ export default function App() {
   useEffect(() => {
     const root = document.documentElement.style;
     if (view === 'espectro' && specLevel !== 0) {
-      const f = Math.abs(specLevel) / 5;
+      const f = Math.abs(specLevel) / (d?.spectrum?.maxLevel ?? 5);
       root.setProperty('--tint-color', specLevel < 0 ? 'var(--b-investidura)' : 'var(--b-derecha)');
       root.setProperty('--tint', `${(f * TINT_PAGE).toFixed(1)}%`);
       root.setProperty('--tint-soft', `${(f * TINT_SURFACE).toFixed(1)}%`);
@@ -91,8 +93,9 @@ export default function App() {
         const cards = sources.cards;
         setD({
           state, polls, catalog: scenarios.scenarios, history, provinces: congreso.provinces, cards,
-          news: cards.filter((c) => !['encuesta', 'cis'].includes(c.type)),
-          pollItems: { media: { items: cards.filter((c) => c.type === 'encuesta') }, cis: { items: cards.filter((c) => c.type === 'cis') } },
+          news: cards.filter((c) => !c.source),
+          // Tarjetas de encuesta agrupadas por fuente (media, CIS oficial, reestimaciones del CIS).
+          pollItems: Object.fromEntries(Object.keys(polls.sources).map((k) => [k, { items: cards.filter((c) => c.source === k) }])),
           defaults: new Set(cards.filter((c) => c.defaultActive && c.toggleable).map((c) => c.id)),
         });
         setActiveSet(new Set(cards.filter((c) => c.defaultActive && c.toggleable).map((c) => c.id)));
@@ -161,7 +164,7 @@ export default function App() {
           <div className="filters">
             <div className="seg" role="group" aria-label="Fuente de la encuesta">
               {Object.entries(d.state.results).map(([k, v]) => (
-                <button key={k} aria-pressed={source === k} onClick={() => setSource(k)}>{v.label}</button>
+                <button key={k} aria-pressed={source === k} onClick={() => setSource(k)} title={v.label}>{SHORT[k] || v.label}</button>
               ))}
             </div>
             <nav className="seg" aria-label="Secciones">
@@ -316,7 +319,7 @@ export default function App() {
             <div className="small ink-2" style={{ display: 'grid', gap: 8, marginTop: 8 }}>
               <p>Se parte de los votos de 2023 en cada provincia (Congreso y Senado), se reasignan a la oferta de partidos de 2026 y se escalan hasta que el total nacional coincide con la encuesta elegida. Los escaños salen de la ley electoral: D'Hondt con umbral del 3 % en el Congreso y voto limitado en el Senado.</p>
               <p>La incertidumbre se mide con {official.montecarlo.n.toLocaleString('es-ES')} simulaciones que mueven la encuesta (error de bloque, de partido y de provincia) y activan cada escenario según su probabilidad.</p>
-              <p>El motor reproduce exactamente el reparto de 2023 y las simulaciones del vídeo de referencia sobre esos votos. Fuentes: Wikipedia (resultados y encuestas), BOE (escaños 2026), INE (censo exterior).</p>
+              <p>El motor reproduce exactamente el reparto oficial de 2023. Fuentes: BOE y Junta Electoral Central (resultados de 2023, escaños de 2026, voto exterior), CIS (estimación oficial), encuestas publicadas (cada una con su enlace), INE (censo exterior) y la prensa enlazada en cada tarjeta. Lo que no tiene dato publicado aparece como «Supuesto».</p>
               <p>Es un modelo, no una predicción: depende de las encuestas y de supuestos documentados. El voto exterior extra es una hipótesis para "qué pasaría si", nunca un hecho.</p>
             </div>
           </section>
