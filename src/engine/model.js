@@ -30,7 +30,15 @@ export function prepare(data) {
   });
   const senateBase = splitFormentera(senateRemapped);
   const designated = data.designados.total;
-  return { congressBase, senateBase, designated, cera: data.cera || null, small5: smallProvinces(congressBase), decena: congressBase.filter((p) => p.seats <= 5 && DECENA_CCAA.includes(p.ccaa)).map((p) => p.id) };
+  // Cómo votó el exterior en 2023 en cada provincia (Junta Electoral Central), pasado a
+  // la oferta de 2026 con las mismas reglas; sin semillas de partidos nuevos.
+  const ceraSplit = data.ceraVoto
+    ? Object.fromEntries(remap2023to2026(
+      data.ceraVoto.provinces.map((p) => ({ id: p.id, name: p.id, ccaa: ccaaOf[p.id], votes: p.votes, blank: p.blanco || 0 })),
+      { europeas: data.europeas.provinces, andaluzas: [] },
+    ).map((p) => { const { SALF, ...votes } = p.votes; return [p.id, votes]; }))
+    : null;
+  return { congressBase, senateBase, designated, cera: data.cera || null, ceraSplit, small5: smallProvinces(congressBase), decena: congressBase.filter((p) => p.seats <= 5 && DECENA_CCAA.includes(p.ccaa)).map((p) => p.id) };
 }
 
 // Formentera (≈7 % del voto de Pitiusas) elige su propio senador desde 2026. Sin
@@ -72,9 +80,11 @@ export function applyCongressScenarios(provinces, active, prep) {
 // Voto exterior realista: `universe` nacionalizados (por defecto los 163.020 con el voto
 // suspendido por el Supremo) repartidos por provincia según el crecimiento del censo
 // CERA en Latinoamérica 2023→2026, × fracción que puede votar × participación. El
-// reparto por partido `split` es un parámetro (no hay encuestas de este electorado);
-// sin él, cada provincia los reparte como su propia proyección (efecto neutro).
-export const EXTERIOR_DEFAULTS = { universe: 163020, canVote: 1, turnout: 0.10, split: null };
+// reparto por partido `split` es un parámetro (no hay encuestas de este electorado):
+// 'cera2023' (por defecto) = como votó el exterior en 2023 en esa provincia (dato
+// oficial de la Junta Electoral Central); null = como la proyección de la provincia;
+// o un objeto {partido: peso}.
+export const EXTERIOR_DEFAULTS = { universe: 163020, canVote: 1, turnout: 0.10, split: 'cera2023' };
 function applyRealisticExterior(provinces, params, prep) {
   const { universe, canVote, turnout, split } = { ...EXTERIOR_DEFAULTS, ...params };
   const growth = prep.cera ? Object.fromEntries(prep.cera.provinces.map((p) => [p.id, Math.max(0, p.latamGrowth)])) : {};
@@ -83,7 +93,7 @@ function applyRealisticExterior(provinces, params, prep) {
   return provinces.map((p) => {
     const n = (universe * (growth[p.id] || 0) / totalGrowth) * canVote * turnout;
     if (n < 1) return p;
-    const weights = split || p.votes;
+    const weights = split === 'cera2023' ? (prep.ceraSplit?.[p.id] || p.votes) : split || p.votes;
     const w = Object.values(weights).reduce((a, b) => a + b, 0);
     const votes = { ...p.votes };
     for (const [k, x] of Object.entries(weights)) votes[k] = (votes[k] || 0) + Math.round((n * x) / w);

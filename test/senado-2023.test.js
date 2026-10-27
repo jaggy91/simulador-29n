@@ -28,16 +28,15 @@ describe('Senado 2023', () => {
     }
   });
 
-  // T6 y T7 dependen de supuestos del vídeo que no conocemos: margen ±2 (plan §5).
-  // Resultado actual del modelo: T6 → PP 82 / izq 114; T7 → dcha 124 / izq 76.
-  // El vídeo cuadra exacto en T6 si Ceuta y Melilla se reparten 1+1, pero los
-  // votos de 2023 muestran que allí cada elector marca 2 candidatos (2+0).
-  it('T6 · PSOE+Sumar en lista conjunta: PP 80, izquierda 116 (±2)', () => {
+  // Con los votos oficiales del BOE (escrutinio general), T6 sale exacto; con los de
+  // Wikipedia daba 82/114. T7 depende de supuestos del vídeo que no conocemos: ±2.
+  it('T6 · PSOE+Sumar en lista conjunta: PP 80, izquierda 116 (exacto)', () => {
     const r = senate(base, [{ into: 'PSOE', from: ['SUMAR'] }]);
-    expect(Math.abs(r.national.PP - 80)).toBeLessThanOrEqual(2);
-    expect(Math.abs(sum(r.national, LEFT) - 116)).toBeLessThanOrEqual(2);
+    expect(r.national.PP).toBe(80);
+    expect(sum(r.national, LEFT)).toBe(116);
   });
 
+  // Resultado actual del modelo: derecha 124 / izquierda 76.
   it('T7 · ambas listas conjuntas: derecha 126, izquierda 75 (±2)', () => {
     const r = senate(base, [
       { into: 'PSOE', from: ['SUMAR'] },

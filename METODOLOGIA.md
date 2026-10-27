@@ -54,8 +54,9 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 
 | Archivo | Contenido | Fuente | Script | Comprobación automática |
 |---|---|---|---|---|
-| `data/congreso-2023.json` | Votos por partido y provincia, blancos y electos (52 circ.) | en.wikipedia, artículos "<Provincia> (Congress of Deputies constituency)" | `build-base.js` | Totales nacionales = oficiales (24.688.087 válidos; PP 8.160.837…). Electos = 350 y reparto oficial |
-| `data/senado-2023.json` | Votos por candidato o por partido y electos (59 circ.) | en.wikipedia, "<X> (Senate constituency)" | `build-senate.js` | 208 electos; PP 120 |
+| `data/congreso-2023.json` | Votos de cada candidatura por provincia, blancos, válidos y electos (52 circ.) | **BOE-A-2023-18907** (Junta Electoral Central, escrutinio general): tablas HTML de los Cuadros II y III y Cuadro I del PDF | `build-oficial-2023.js` | En cada provincia, suma de candidaturas = Cuadro I; candidaturas + blanco = válidos; escaños = total. Idéntico voto a voto a la versión anterior (Wikipedia) |
+| `data/senado-2023.json` | Votos de cada candidato y electos (59 circ.) | **BOE-A-2023-18907** (relación de candidatos electos y no electos, PDF), con la corrección **BOE-A-2023-19537** | `build-oficial-2023.js` | En cada circunscripción, electos = escaños; 208 en total; PP 120 |
+| `data/cera-voto-2023.json` | Voto de los residentes en el extranjero en 2023, por provincia y partido | **Junta Electoral Central** (resolución de 24-oct-2023, PDF de resultados por provincias) | `build-cera-voto-2023.js` | Se anotan en el propio archivo los descuadres del PDF oficial |
 | `data/europeas-2024.json` | % por provincia (1 decimal) | en.wikipedia, "Results of the 2024 European Parliament election in Spain" | `build-europeas.js` | 52 provincias, sin celdas vacías |
 | `data/andaluzas-2026.json` | % por provincia, autonómicas del 17-may-2026 | en.wikipedia | `build-andaluzas.js` | 8 provincias |
 | `data/seats-2026.json` | Diputados por provincia | **BOE-A-2026-20742** (RD 806/2026), anexo | `build-seats.js` | 52 circ., 350. Cambios frente a 2023: Madrid 37→38, Cádiz 9→8 |
@@ -68,9 +69,19 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 
 **Incidencias detectadas en las fuentes**
 - **Wikipedia, Cáceres 2023:** los votos válidos tienen +40.000 de errata.
-  - Los válidos se calculan siempre como candidaturas + blanco.
-- **infoelectoral.interior.gob.es:** no responde desde la red local.
-  - Los resultados se toman de Wikipedia y se verifican contra los totales oficiales.
+  - Ya no se usa Wikipedia para 2023: el BOE da los válidos oficiales.
+- **Wikipedia, Senado 2023:** mezclaba el escrutinio provisional con sumas aproximadas por partido; en 49 casos el voto de partido difería más de un 1 % del oficial.
+  - Con los votos oficiales, T6 pasa de 82/114 a **exacto** (80/116).
+- **Junta Electoral Central, voto exterior 2023 (PDF):**
+  - La fila "PAÍS VASCO" incluye La Rioja y la fila "C. VALENCIANA" incluye Ceuta y Melilla.
+  - El "TOTAL ESTATAL" no cuadra con la suma de provincias.
+  - Albacete aparece con 862 electores y 860 votantes; el INE da 8.055 electores.
+  - Solución: se usan las filas provinciales y los electores del INE, y cada descuadre queda anotado en `data/cera-voto-2023.json` → `notes`.
+- **infoelectoral.interior.gob.es, senado.es y BOJA:** no responden desde la red local. Se descargarán desde GitHub Actions (paso 2).
+- **Datos que siguen saliendo de Wikipedia:**
+  - europeas 2024 y andaluzas 2026 (base territorial de Podemos, SALF y AA);
+  - composición de los designados;
+  - el índice de encuestas (cada encuesta enlaza a su publicación original).
 - **Tabla de designados de Wikipedia:** desfasada en 4 comunidades (§4.6).
 
 ---
@@ -217,7 +228,7 @@ Dos modos:
 
 **Realista**
 - Votos de una provincia = `163.020 × (crecimiento del CERA en Latinoamérica 2023→2026 de la provincia / total) × fracción que puede votar × participación`.
-- El reparto por partido es un parámetro, porque **no hay encuestas de este electorado**.
+- El reparto por partido es un parámetro, porque **no hay encuestas de este electorado**. Por defecto, **como votó el exterior en 2023 en esa provincia** (dato oficial de la Junta Electoral Central, pasado a la oferta de 2026): nacionalmente, PP 33 %, PSOE 29 %, Vox 11 %, FA 8 %, Podemos 5 %.
 - Participación de referencia: 10,04 % (todo el CERA en 2023).
 
 **Resultado:**
@@ -344,7 +355,7 @@ Se usan probabilidades y no la proyección central porque, con D'Hondt, **la cen
 | T3 | Sumar fuera de las 29 provincias de ≤5 escaños (100 %) | PSOE 131 · PP 132 · investidura 181 · derecha 162 | **Exacto** |
 | T4 | Ídem con trasvase del 70 % | investidura 179 | **Exacto** |
 | T5 | Senado real | PP 120 | Datos exactos. El modelo por partido falla en 4 carreras igualadas (<3,5 %) con voto cruzado 2+2: Badajoz, Cáceres, Huelva y Valencia |
-| T6 | Senado PSOE+Sumar | PP 80 · izquierda 116 | 82 · 114 (±2) |
+| T6 | Senado PSOE+Sumar | PP 80 · izquierda 116 | **Exacto** (con los votos oficiales del BOE) |
 | T7 | Senado con ambas listas conjuntas | derecha 126 · izquierda 75 | 124 · 76 (±2) |
 | T8 | +14.000 votos al PSOE, colocación óptima | PSOE +7 · investidura 179 · derecha 166 | **Exacto** (con 12.256 votos) |
 
@@ -362,7 +373,7 @@ Se usan probabilidades y no la proyección central porque, con D'Hondt, **la cen
 
 `scripts/backtest-2023.js` → `data/backtest-2023.json`.
 
-**Planteamiento:** el mismo método con base de **noviembre de 2019**, los escaños de 2023 y la oferta de 2023. Reasignación:
+**Planteamiento:** el mismo método con base de **noviembre de 2019** (**BOE-A-2019-17344**, Junta Electoral Central, leído del PDF y comprobado contra el Cuadro I en las 52 provincias), los escaños de 2023 y la oferta de 2023. Reasignación:
 - UP + Más País + Compromís → Sumar.
 - Ciudadanos desaparece.
 - NA+ → UPN.
@@ -461,7 +472,7 @@ Efecto sobre la proyección central (derecha en el Congreso / en el Senado):
 
 ```sh
 npm ci
-npm run data          # regenera la base (Wikipedia, BOE, INE)
+npm run data          # regenera la base (BOE, Junta Electoral Central, INE y, para europeas, andaluzas y designados, Wikipedia)
 npm test              # 44 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
@@ -507,4 +518,5 @@ npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 | 27-oct | FA fuera de provincias pequeñas → descartado; pacto PP–Vox → confirmado | Cierre de candidaturas del 26-oct (prensa enlazada en `scenarios.json`) |
 | 27-oct | Ruido por defecto: `HISTORICAL_NOISE` en lugar de `VIDEO_NOISE` | Backtest 2019→2023: la calibración del vídeo era demasiado estrecha |
 | 27-oct | Fuentes como tarjetas: el estado de los escenarios lo fijan las tarjetas activas, no un valor manual | El resultado no es una predicción: debe verse de dónde sale cada efecto y poder quitarse |
+| 27-oct | Resultados de 2023 (Congreso y Senado) y de 2019 (backtest) desde el BOE en lugar de Wikipedia; voto exterior 2023 de la Junta Electoral Central | Fuente oficial. Congreso idéntico; Senado con el escrutinio definitivo |
 | 27-oct | Senado de Progreso sin Cataluña ni Canarias (salvo La Gomera); FA y Podemos juntos en Canarias | Infobae y Demócrata (17-oct). Sustituye al supuesto anterior de "las 47 provincias de 4 senadores" |

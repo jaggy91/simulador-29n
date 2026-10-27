@@ -157,6 +157,33 @@
    "effects": []
   },
   {
+   "id": "boe-resultados-2023",
+   "type": "oficial",
+   "date": "2023-09-01",
+   "title": "BOE: resultados oficiales de las generales de 2023 por circunscripción (Junta Electoral Central)",
+   "detail": "Base del modelo: votos de cada candidatura al Congreso por provincia y de cada candidato al Senado (escrutinio general). Incluye la corrección de errores de 14-sep-2023.",
+   "outlet": "BOE",
+   "sources": [
+    "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907",
+    "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-19537"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
+   "id": "jec-voto-exterior-2023",
+   "type": "oficial",
+   "date": "2023-10-24",
+   "title": "Junta Electoral Central: voto de los residentes en el extranjero en 2023, por provincia y partido",
+   "detail": "Reparto por defecto del modo realista del voto exterior (PP 33 %, PSOE 29 %, Sumar 15 %, Vox 11 %). El PDF oficial tiene errores de agregación en algunos subtotales; se usan las filas provinciales.",
+   "outlet": "Junta Electoral Central",
+   "sources": ["https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_2023_ResultadosVotoCERAcongreso.pdf"],
+   "verified": true,
+   "captured": "manual",
+   "effects": []
+  },
+  {
    "id": "ine-cera",
    "type": "oficial",
    "date": "2026-10-09",

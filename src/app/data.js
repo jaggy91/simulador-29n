@@ -8,7 +8,7 @@ export async function loadJSON(name, root = dataRoot()) {
   return res.json();
 }
 
-export const MODEL_FILES = ['congreso-2023', 'senado-2023', 'europeas-2024', 'andaluzas-2026', 'seats-2026', 'senado-designados', 'cera'];
+export const MODEL_FILES = ['congreso-2023', 'senado-2023', 'europeas-2024', 'andaluzas-2026', 'seats-2026', 'senado-designados', 'cera', 'cera-voto-2023'];
 export const MODEL_KEYS = {
   'congreso-2023': 'congreso',
   'senado-2023': 'senado',
@@ -17,4 +17,5 @@ export const MODEL_KEYS = {
   'seats-2026': 'seats',
   'senado-designados': 'designados',
   cera: 'cera',
+  'cera-voto-2023': 'ceraVoto',
 };

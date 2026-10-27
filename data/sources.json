@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T05:33:33.399Z",
+ "updated": "2026-10-27T17:56:42.586Z",
  "impactN": 1000,
  "cards": [
   {
@@ -131,13 +131,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": -0.002,
      "senado": 0
     }
    }
@@ -312,6 +312,43 @@
    "impact": null
   },
   {
+   "id": "boe-resultados-2023",
+   "type": "oficial",
+   "date": "2023-09-01",
+   "title": "BOE: resultados oficiales de las generales de 2023 por circunscripción (Junta Electoral Central)",
+   "detail": "Base del modelo: votos de cada candidatura al Congreso por provincia y de cada candidato al Senado (escrutinio general). Incluye la corrección de errores de 14-sep-2023.",
+   "outlet": "BOE",
+   "sources": [
+    "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907",
+    "https://www.boe.es/buscar/doc.php?id=BOE-A-2023-19537"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
+   "id": "jec-voto-exterior-2023",
+   "type": "oficial",
+   "date": "2023-10-24",
+   "title": "Junta Electoral Central: voto de los residentes en el extranjero en 2023, por provincia y partido",
+   "detail": "Reparto por defecto del modo realista del voto exterior (PP 33 %, PSOE 29 %, Sumar 15 %, Vox 11 %). El PDF oficial tiene errores de agregación en algunos subtotales; se usan las filas provinciales.",
+   "outlet": "Junta Electoral Central",
+   "sources": [
+    "https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_2023_ResultadosVotoCERAcongreso.pdf"
+   ],
+   "verified": true,
+   "captured": "manual",
+   "effects": [],
+   "toggleable": false,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": null
+  },
+  {
    "id": "ine-cera",
    "type": "oficial",
    "date": "2026-10-09",
@@ -359,13 +396,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.7,
-     "pMayoria": 0.008,
+     "derecha": 0.3,
+     "pMayoria": 0.003,
      "senado": 1
     },
     "cis": {
      "derecha": -0.2,
-     "pMayoria": -0.002,
+     "pMayoria": -0.004,
      "senado": 2
     }
    }
@@ -400,12 +437,12 @@
    "impact": {
     "media": {
      "derecha": 0.8,
-     "pMayoria": 0.006,
+     "pMayoria": 0.004,
      "senado": 1
     },
     "cis": {
      "derecha": 0.1,
-     "pMayoria": 0.001,
+     "pMayoria": -0.001,
      "senado": -1
     }
    }
@@ -430,8 +467,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.5,
-     "pMayoria": -0.002,
+     "derecha": -0.6,
+     "pMayoria": -0.003,
      "senado": 0
     },
     "cis": {
@@ -471,13 +508,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.2,
-     "pMayoria": 0.001,
+     "derecha": -0.3,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
      "derecha": 0.1,
-     "pMayoria": 0.001,
+     "pMayoria": 0,
      "senado": -1
     }
    }
@@ -504,8 +541,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
-     "pMayoria": 0,
+     "derecha": -0.1,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
@@ -544,13 +581,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.2,
-     "pMayoria": 0.001,
+     "derecha": 0,
+     "pMayoria": 0.002,
      "senado": 0
     },
     "cis": {
      "derecha": 0.2,
-     "pMayoria": 0.002,
+     "pMayoria": 0.004,
      "senado": 0
     }
    }
@@ -584,13 +621,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.4,
-     "pMayoria": -0.001,
+     "derecha": -0.5,
+     "pMayoria": -0.002,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": 0
     }
    }
@@ -618,7 +655,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
+     "derecha": 0,
      "pMayoria": 0.001,
      "senado": 0
     },
@@ -652,8 +689,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
-     "pMayoria": 0,
+     "derecha": 0,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
@@ -688,13 +725,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
-     "pMayoria": 0,
+     "derecha": -0.2,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.003,
+     "pMayoria": 0,
      "senado": 0
     }
    }
@@ -729,13 +766,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0.001,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.004,
+     "pMayoria": -0.001,
      "senado": -1
     }
    }
@@ -769,13 +806,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.3,
+     "derecha": 0.2,
      "pMayoria": 0.002,
      "senado": 0
     },
     "cis": {
-     "derecha": 0.1,
-     "pMayoria": 0,
+     "derecha": 0,
+     "pMayoria": 0.001,
      "senado": 0
     }
    }
@@ -807,13 +844,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
-     "pMayoria": 0.001,
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
-     "derecha": 0.1,
-     "pMayoria": -0.001,
+     "derecha": 0,
+     "pMayoria": 0.002,
      "senado": -1
     }
    }
@@ -841,7 +878,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.2,
+     "derecha": 0.1,
      "pMayoria": 0.001,
      "senado": 0
     },
@@ -880,8 +917,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0.8,
-     "pMayoria": 0.023,
+     "derecha": 0.7,
+     "pMayoria": 0.02,
      "senado": 1
     }
    }
@@ -914,8 +951,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.5,
-     "pMayoria": -0.012,
+     "derecha": -0.6,
+     "pMayoria": -0.019,
      "senado": 2
     }
    }

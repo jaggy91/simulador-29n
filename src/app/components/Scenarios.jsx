@@ -4,7 +4,8 @@ const pct = (x) => `${Math.round(x * 100)} %`;
 const STATUS = { confirmado: 'Confirmado', rumor: 'Rumor', negociación: 'En negociación', hipotético: 'Hipotético', descartado: 'Descartado', superado: 'Superado', 'sin datos': 'Sin datos' };
 
 const SPLITS = {
-  neutral: { label: 'Como vota cada provincia (neutral)', split: null },
+  cera2023: { label: 'Como votó el exterior en 2023 en cada provincia (dato oficial)', split: 'cera2023' },
+  neutral: { label: 'Como vota cada provincia en la proyección', split: null },
   psoe: { label: 'Todo al PSOE (techo)', split: { PSOE: 1 } },
   mix: { label: 'Hipótesis: 45 % PSOE, 30 % PP, 10 % Vox, 10 % FA, 5 % Podemos', split: { PSOE: 45, PP: 30, VOX: 10, FA: 10, PODEMOS: 5 } },
 };
@@ -54,7 +55,7 @@ function Params({ s, params, set }) {
               <Slider label="Participación" value={p.turnout ?? 0.1} min={0} max={0.5} step={0.01} fmt={pct} onChange={(v) => set({ turnout: v })} />
               <label className="control">
                 <span>Reparto por partido (no hay encuestas de este electorado)</span>
-                <select value={p.splitKey ?? 'neutral'} onChange={(e) => set({ splitKey: e.target.value, split: SPLITS[e.target.value].split })}>
+                <select value={p.splitKey ?? 'cera2023'} onChange={(e) => set({ splitKey: e.target.value, split: SPLITS[e.target.value].split })}>
                   {Object.entries(SPLITS).map(([k, v]) => <option key={k} value={k}>{v.label}</option>)}
                 </select>
               </label>

@@ -12,7 +12,7 @@ npm run dev        # web en local (lee ./data)
 npm test           # 44 tests: reproduce 2023, las simulaciones del vídeo, el modelo 2026, el espectro y las fuentes
 npm run polls      # descarga y promedia encuestas (Wikipedia)
 npm run simulate   # resultado con las fuentes activas + efecto de cada tarjeta → data/state.json, data/sources.json, data/history.json
-npm run data       # regenera los datos base (2023, europeas, andaluzas, BOE, designados, INE)
+npm run data       # regenera los datos base: 2023 del BOE, voto exterior de la JEC, escaños del BOE, censo del INE; europeas, andaluzas y designados (Wikipedia, de momento)
 npm run backtest   # aplica el método a 2023 desde la base de 2019 → data/backtest-2023.json
 npm run spectrum   # laboratorio izquierda ↔ derecha (11 niveles) → data/spectrum.json
 npm run build      # web estática en dist/
@@ -28,6 +28,6 @@ npm run build      # web estática en dist/
 
 ## Fuentes
 
-Wikipedia (resultados 2023, europeas 2024, andaluzas 2026, encuestas), BOE (Real Decreto 806/2026: escaños), INE (censo electoral de residentes en el extranjero) y prensa enlazada en cada escenario.
+Oficiales: BOE (resultados de 2019 y 2023 de la Junta Electoral Central; Real Decreto 806/2026, escaños), Junta Electoral Central (voto exterior de 2023) e INE (censo de residentes en el extranjero). Wikipedia, de momento, para europeas 2024, andaluzas 2026, designados y como índice de encuestas (cada una enlaza a su publicación). Prensa enlazada en cada tarjeta de fuente.
 
 Es un modelo, no una predicción. El voto exterior extra es solo una hipótesis para "qué pasaría si".

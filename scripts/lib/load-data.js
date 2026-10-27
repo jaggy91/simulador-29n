@@ -12,6 +12,7 @@ export function loadModelData() {
     seats: J('seats-2026'),
     designados: J('senado-designados'),
     cera: fs.existsSync('data/cera.json') ? J('cera') : null,
+    ceraVoto: fs.existsSync('data/cera-voto-2023.json') ? J('cera-voto-2023') : null,
   };
 }
 

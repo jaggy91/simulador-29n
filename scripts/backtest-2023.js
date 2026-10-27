@@ -7,8 +7,9 @@
 // Escribe data/backtest-2023.json. Uso: node scripts/backtest-2023.js [--n 2000]
 import fs from 'node:fs';
 import { PROVINCES } from './lib/provinces.js';
-import { fetchWikitext, extractTable, parseResultsTable } from './lib/wiki.js';
-import { normalizeParty } from './lib/parties-map.js';
+import { fetchWikitext, extractTable } from './lib/wiki.js';
+import { boePdf, pdfRows } from './lib/boe.js';
+import { cuadroI, cuadrosVotos } from './lib/jec.js';
 import { parseTable, pollAverage, round } from './lib/polls.js';
 import { project, noiseSize } from '../src/engine/projection.js';
 import { congress } from '../src/engine/congress.js';
@@ -21,33 +22,44 @@ const N = Number(process.argv[process.argv.indexOf('--n') + 1]) || 2000;
 const ELECTION = '2023-07-23';
 const CUTOFFS = { B: '2023-06-20', C: '2023-07-17' };
 
-// Oferta de 2019 → 2023.
+// Oferta de 2019 → 2023, por el nombre completo de la candidatura en el BOE (sin tildes
+// ni espacios). Unidas Podemos, En Comú, Más País y Compromís → Sumar.
 const MAP_2019 = [
-  [/^(Unidas Podemos|En Comú Podem|En Común|Elkarrekin Podemos|Más País|Més Compromís)/, 'SUMAR'],
-  [/^Republican Left of Catalonia/, 'ERC'],
-  [/^Together for Catalonia/, 'JUNTS'],
-  [/^EH Bildu/, 'BILDU'],
-  [/^Citizens \(Spanish political party\)/, 'CS'],
-  [/^Navarra Suma/, 'UPN'],
-  [/^Canarian Coalition/, 'CC'],
-  [/^Regionalist Party of Cantabria/, 'PRC'],
+  [/PODEMOS|ENCOMU|MASPAIS|MPAIS|COMPROMIS|ELKARREKIN/, 'SUMAR'],
+  [/PARTIDOSOCIALISTA|SOCIALISTES|PSOE/, 'PSOE'],
+  [/PARTIDOPOPULAR/, 'PP'],
+  [/^VOX/, 'VOX'],
+  [/CIUDADANOS/, 'CS'],
+  [/ESQUERRAREPUBLICANA/, 'ERC'],
+  [/JUNTSPERCATALUNYA|JXCAT/, 'JUNTS'],
+  [/BILDU/, 'BILDU'],
+  [/EUZKOALDERDI/, 'PNV'],
+  [/BLOQUENACIONALISTAGALEGO/, 'BNG'],
+  [/COALICIONCANARIA/, 'CC'],
+  [/NAVARRASUMA/, 'UPN'],
+  [/REGIONALISTADECANTABRIA/, 'PRC'],
+  [/TERUELEXISTE/, 'EXISTE'],
+  [/UNITATPOPULAR/, 'CUP'],
+  [/MALTRATOANIMAL|ANIMALISTA/, 'PACMA'],
 ];
-const map2019 = (x) => {
-  for (const [re, id] of MAP_2019) if (x.key && re.test(x.key)) return id;
-  const id = normalizeParty(x);
-  return id === 'FV' ? 'SUMAR' : id;
-};
+const squash = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const map2019 = (name) => MAP_2019.find(([re]) => re.test(squash(name)))?.[1] || `x:${name}`;
 
-// --- Base: noviembre de 2019 con los escaños de 2023 -------------------------
+// --- Base: noviembre de 2019 (BOE-A-2019-17344, Junta Electoral Central) con los
+// escaños de 2023 ------------------------------------------------------------------
+const BOE_2019 = 'BOE-A-2019-17344';
 const actual = JSON.parse(fs.readFileSync('data/congreso-2023.json', 'utf8')).provinces;
 const seats23 = Object.fromEntries(actual.map((p) => [p.id, p.seats]));
+const rows2019 = await pdfRows(await boePdf(BOE_2019));
+const resumen = cuadroI(rows2019);
+const cuadros = cuadrosVotos(rows2019);
 const base = [];
 for (const p of PROVINCES) {
-  const text = await fetchWikitext(`${p.wiki} (Congress of Deputies constituency)`);
-  const r = parseResultsTable(extractTable(text, text.search(/\n===\s*November 2019\s*===/)));
   const votes = {};
-  for (const x of r.parties) { const id = map2019(x); votes[id] = (votes[id] || 0) + x.votes; }
-  base.push({ id: p.id, name: p.name, ccaa: p.ccaa, seats: seats23[p.id], votes, blank: r.blank });
+  for (const [name, v] of Object.entries(cuadros[p.id].votes)) { const id = map2019(name); votes[id] = (votes[id] || 0) + v; }
+  const sum = Object.values(votes).reduce((a, b) => a + b, 0);
+  if (sum !== resumen[p.id].candidaturas) throw new Error(`2019 ${p.name}: candidaturas ${sum} ≠ Cuadro I ${resumen[p.id].candidaturas}`);
+  base.push({ id: p.id, name: p.name, ccaa: p.ccaa, seats: seats23[p.id], votes, blank: resumen[p.id].blank });
 }
 
 // --- Resultado real de 2023 --------------------------------------------------
@@ -136,6 +148,7 @@ function evaluate(label, poll) {
 }
 
 const result = {
+  source: 'Base nov-2019: BOE-A-2019-17344 (Junta Electoral Central); resultado 2023: BOE-A-2023-18907; encuestas 2023: en.wikipedia (índice de publicaciones)',
   method: 'Base nov-2019 por provincia → oferta 2023 (UP+Más País+Compromís = Sumar; Cs desaparece; NA+ = UPN) → swing proporcional IPF a la encuesta → D\'Hondt con escaños de 2023.',
   election: ELECTION,
   real: { seats: Object.fromEntries(KEYS.map((k) => [k, realSeats[k] || 0])), derecha: right(realSeats), poll: Object.fromEntries(Object.entries(realPoll).map(([k, v]) => [k, round(v)])) },
