@@ -14,28 +14,30 @@ const executablePath = CANDIDATES.find((p) => fs.existsSync(p));
 const browser = await puppeteer.launch({ executablePath, headless: true, args: ['--no-first-run'] });
 
 async function shot(name, { width, height, scheme, action, notice = false }) {
-  const page = await browser.newPage();
+  // Contexto propio por captura: almacenamiento del navegador limpio.
+  const context = await browser.createBrowserContext();
+  const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
   await page.setViewport({ width, height, deviceScaleFactor: 1 });
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: scheme }]);
   // Aviso inicial ya aceptado, salvo en las capturas del propio aviso.
-  if (!notice) await page.evaluateOnNewDocument(() => localStorage.setItem('aviso', '1'));
+  if (!notice) await page.evaluateOnNewDocument(() => localStorage.setItem('aviso', '2'));
   await page.goto(url, { waitUntil: 'networkidle0' });
   await page.waitForSelector('header nav');
   if (action) await action(page);
   const overflow = await page.evaluate(() => {
     const W = document.documentElement.clientWidth;
     const bad = [...document.querySelectorAll('body *')]
-      .filter((el) => el.getBoundingClientRect().right > W + 1 && !el.closest('.table-wrap'))
+      .filter((el) => el.getBoundingClientRect().right > W + 1 && !el.closest('.table-wrap, .md table'))
       .slice(0, 8)
       .map((el) => `${el.tagName.toLowerCase()}.${el.className} → ${Math.round(el.getBoundingClientRect().right)}px`);
     return { scrollWidth: document.documentElement.scrollWidth, clientWidth: W, bad };
   });
   await page.screenshot({ path: `${out}/${name}.png`, fullPage: !notice });
   console.log(name, JSON.stringify(overflow), errors.length ? `ERRORES: ${errors.join(' | ')}` : 'sin errores');
-  await page.close();
+  await context.close();
 }
 
 // Aviso: abierto al entrar, botón desactivado hasta marcar la casilla; al aceptar se
@@ -56,6 +58,19 @@ await shot('aviso-dark-mobile', { width: 390, height: 844, scheme: 'dark', notic
     await page.reload({ waitUntil: 'networkidle0' });
     await page.waitForSelector('header nav');
     console.log('  tras recargar:', JSON.stringify(await noticeState(page)));
+  } });
+// La metodología se puede leer antes de aceptar; al volver a otra sección, el aviso vuelve.
+await shot('metodologia-mobile', { width: 390, height: 844, scheme: 'light', notice: true,
+  action: async (page) => {
+    await page.$eval('dialog.notice a[href="#metodologia"]', (a) => a.click());
+    await page.waitForSelector('.md h1');
+    console.log('  metodología sin aceptar:', JSON.stringify(await noticeState(page)), '·', await page.$eval('.md h1', (e) => e.textContent));
+    await page.evaluate(() => [...document.querySelectorAll('header nav button')].find((b) => b.textContent === 'Proyección').click());
+    console.log('  de vuelta a la proyección:', JSON.stringify(await noticeState(page)));
+    await page.click('.notice-accept input');
+    await page.click('.notice-accept .btn');
+    await page.evaluate(() => [...document.querySelectorAll('header nav button')].find((b) => b.textContent === 'Metodología').click());
+    await page.waitForSelector('.md h1');
   } });
 await shot('desk-dark', { width: 1280, height: 900, scheme: 'dark' });
 await shot('desk-light', { width: 1280, height: 900, scheme: 'light' });

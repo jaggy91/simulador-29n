@@ -510,7 +510,10 @@ Registro histórico, 26-oct: el modelo, ejecutado **con los supuestos de aquel a
 - **No incluye el voto exterior extra en la proyección oficial** (probabilidad 0). Solo aparece en "qué pasaría si".
 - **Veda electoral (LOREG art. 69.7):** del 24 al 28-nov no se pueden difundir sondeos en España. Falta decidir cómo se comporta la web esos días.
 
-**Aviso inicial en la web** (`src/app/components/Notice.jsx`): antes de entrar, el visitante lee qué es el simulador, su objetivo, cómo se hizo y de qué fuentes sale, y lo acepta marcando una casilla. La aceptación se guarda solo en su navegador (`localStorage`, clave `aviso`). Si el texto cambia de forma sustancial, se sube su versión y se vuelve a pedir. Se puede releer desde el pie de página.
+**Aviso inicial en la web** (`src/app/components/Notice.jsx`): antes de entrar, el visitante lee qué es el simulador, su objetivo, cómo se hizo y de qué fuentes sale, y lo acepta marcando una casilla.
+- Indica que el proyecto se desarrolló con ayuda de inteligencia artificial (Claude, de Anthropic) para el código, la lectura de las fuentes oficiales y las comprobaciones.
+- Enlaza a este documento, que la web muestra en la sección **Metodología** (`#metodologia`). Se puede leer antes de aceptar el aviso.
+- La aceptación se guarda solo en el navegador del visitante (`localStorage`, clave `aviso`). Si el texto cambia de forma sustancial, se sube su versión y se vuelve a pedir (versión actual: 2). Se puede releer desde el pie de página.
 
 ---
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
 import { loadJSON, dataRoot } from './data.js';
 import { BLOCS, MAJORITY } from '../engine/blocs.js';
 import { Hemicycle } from './components/Hemicycle.jsx';
@@ -9,6 +9,7 @@ import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
 import { Spectrum, tippingSummary } from './components/Spectrum.jsx';
 import { Sources } from './components/Sources.jsx';
 import { openNotice } from './components/Notice.jsx';
+const Methodology = lazy(() => import('./components/Methodology.jsx'));
 import { modelInputs } from '../engine/evidence.js';
 import { swingPoll } from '../engine/spectrum.js';
 
@@ -32,7 +33,7 @@ const SHORT = { media: 'Media de encuestas', cisOficial: 'CIS oficial', cis: 'CI
 const inText = (label) => (label.startsWith('CIS') ? label : label.charAt(0).toLowerCase() + label.slice(1));
 
 // Pestañas con dirección propia: #que-pasaria-si y #espectro.
-const HASHES = { whatif: '#que-pasaria-si', espectro: '#espectro' };
+const HASHES = { whatif: '#que-pasaria-si', espectro: '#espectro', metodologia: '#metodologia' };
 const viewFromHash = () => Object.keys(HASHES).find((v) => HASHES[v] === window.location.hash) || 'proyeccion';
 // Tinte máximo del fondo en los extremos del espectro (página / tarjetas), en %.
 const TINT_PAGE = 30;
@@ -64,6 +65,8 @@ export default function App() {
   const setView = (v) => {
     if (v === view) return;
     window.history.pushState(null, '', HASHES[v] || window.location.pathname + window.location.search);
+    // pushState no avisa a nadie: el aviso inicial necesita saber en qué sección estamos.
+    window.dispatchEvent(new PopStateEvent('popstate'));
     setViewState(v);
     window.scrollTo(0, 0);
   };
@@ -172,12 +175,22 @@ export default function App() {
               <button aria-pressed={view === 'proyeccion'} onClick={() => setView('proyeccion')}>Proyección</button>
               <button aria-pressed={whatIf} onClick={() => setView('whatif')}>Qué pasaría si</button>
               {d.spectrum && <button aria-pressed={view === 'espectro'} onClick={() => setView('espectro')}>Espectro</button>}
+              <button aria-pressed={view === 'metodologia'} onClick={() => setView('metodologia')}>Metodología</button>
             </nav>
           </div>
         </div>
       </header>
 
-      {view === 'espectro' && d.spectrum ? (
+      {view === 'metodologia' ? (
+        <main className="wrap">
+          <Suspense fallback={<p className="muted" style={{ marginTop: 24 }}>Cargando la metodología…</p>}>
+            <Methodology />
+          </Suspense>
+          <footer>
+            <p><button className="linkish" onClick={openNotice}>Aviso: objetivo, método y fuentes</button></p>
+          </footer>
+        </main>
+      ) : view === 'espectro' && d.spectrum ? (
         <main className="wrap">
           <section className="card" style={{ marginTop: 16 }}>
             <h2>¿Qué tiene que pasar para que gane cada bloque?</h2>

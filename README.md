@@ -2,7 +2,9 @@
 
 Simulador del reparto de escaños (Congreso y Senado) de las elecciones generales del 29 de noviembre de 2026. Proyecta las encuestas provincia a provincia, aplica los escenarios de candidaturas (retiradas, listas conjuntas, pacto PP–Vox al Senado, voto exterior) y calcula probabilidades con Monte Carlo. Se actualiza solo cada hora con GitHub Actions y se publica en GitHub Pages.
 
-Plan y estado: [plan-v2.md](plan-v2.md). **Metodología auditable, validación y margen de error: [METODOLOGIA.md](METODOLOGIA.md).**
+Plan y estado: [plan-v2.md](plan-v2.md). **Metodología auditable, validación y margen de error: [METODOLOGIA.md](METODOLOGIA.md)**, también legible en la propia web (sección «Metodología»).
+
+Desarrollado con ayuda de inteligencia artificial (Claude, de Anthropic). Al entrar en la web hay que aceptar un aviso que explica el objetivo, el método y las fuentes.
 
 ## Uso
 

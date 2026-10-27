@@ -1,11 +1,13 @@
 // Aviso inicial: qué es el simulador, cómo se hizo, con qué objetivo y de qué fuentes
 // sale. Hay que aceptarlo para entrar; la aceptación se guarda en el navegador. Si el
-// texto cambia de forma sustancial, se sube VERSION y se vuelve a pedir.
+// texto cambia de forma sustancial, se sube VERSION y se vuelve a pedir. La metodología
+// se puede leer antes de aceptar: en esa sección el aviso no bloquea.
 import { useEffect, useRef, useState } from 'react';
 
 const KEY = 'aviso';
-const VERSION = '1';
+const VERSION = '2';
 const EVENT = 'abrir-aviso';
+const FREE = '#metodologia';
 
 const accepted = () => { try { return localStorage.getItem(KEY) === VERSION; } catch { return false; } };
 const remember = () => { try { localStorage.setItem(KEY, VERSION); } catch { /* sin almacenamiento */ } };
@@ -15,13 +17,22 @@ export const openNotice = () => window.dispatchEvent(new Event(EVENT));
 export function Notice() {
   const ref = useRef(null);
   const [done, setDone] = useState(accepted);
-  const [open, setOpen] = useState(() => !done);
+  const [manual, setManual] = useState(false);
+  const [hash, setHash] = useState(() => window.location.hash);
   const [agree, setAgree] = useState(false);
+  const open = manual || (!done && hash !== FREE);
 
   useEffect(() => {
-    const show = () => setOpen(true);
+    const show = () => setManual(true);
+    const sync = () => setHash(window.location.hash);
     window.addEventListener(EVENT, show);
-    return () => window.removeEventListener(EVENT, show);
+    window.addEventListener('popstate', sync);
+    window.addEventListener('hashchange', sync);
+    return () => {
+      window.removeEventListener(EVENT, show);
+      window.removeEventListener('popstate', sync);
+      window.removeEventListener('hashchange', sync);
+    };
   }, []);
 
   useEffect(() => {
@@ -31,7 +42,8 @@ export function Notice() {
   }, [open]);
 
   const mustAccept = !done;
-  const accept = () => { remember(); setDone(true); setOpen(false); };
+  const accept = () => { remember(); setDone(true); setManual(false); };
+  const setOpen = (v) => setManual(v);
 
   return (
     <dialog
@@ -58,6 +70,11 @@ export function Notice() {
           ajusta hasta que el total nacional coincide con la encuesta elegida. Los escaños salen de la ley electoral (D'Hondt
           en el Congreso, voto limitado en el Senado) y 5.000 simulaciones miden el margen de error. Con los votos reales de
           2023, el motor reproduce exactamente el reparto oficial. Se actualiza solo cada hora.
+        </p>
+        <p>
+          Se desarrolló con ayuda de inteligencia artificial (Claude, de Anthropic) para el código, la lectura de las fuentes
+          oficiales y las comprobaciones. Todo el método está documentado y se puede reproducir paso a paso:{' '}
+          <a href={FREE} onClick={() => setManual(false)}>leer la metodología completa</a>.
         </p>
 
         <h3>Fuentes</h3>
