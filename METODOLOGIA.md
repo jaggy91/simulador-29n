@@ -259,6 +259,7 @@ Dos modos:
 
 `src/engine/spectrum.js` y `scripts/spectrum.js`, que genera `data/spectrum.json`.
 - **No forma parte de la proyección oficial:** no escribe `state.json` ni `history.json`.
+- **En la web:** tiene pestaña propia (`#espectro`). El fondo se tiñe del color del bloque hacia el que se avanza, hasta un 30 % en el extremo. La posición se indica también con texto, así que el color no es la única pista.
 - **Niveles:** 11, de −5 a +5. El nivel 0 es la proyección oficial.
 - **Cómo se acumulan:** cada nivel hacia un lado añade un escenario favorable a ese bloque, del más plausible al menos plausible. Cuando un nivel intensifica uno anterior (marcado como "sustituye"), el anterior se descarta.
 - **Retiradas de listas:** ya no son posibles tras el cierre de candidaturas. Se emulan con "voto útil": el partido sigue presentándose, pero una fracción de su voto pasa a otro.

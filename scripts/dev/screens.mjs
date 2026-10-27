@@ -21,7 +21,7 @@ async function shot(name, { width, height, scheme, action }) {
   await page.setViewport({ width, height, deviceScaleFactor: 1 });
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: scheme }]);
   await page.goto(url, { waitUntil: 'networkidle0' });
-  await page.waitForSelector('.hero-figure .value');
+  await page.waitForSelector('header nav');
   if (action) await action(page);
   const overflow = await page.evaluate(() => {
     const W = document.documentElement.clientWidth;
@@ -51,6 +51,15 @@ await shot('whatif', {
     await page.waitForFunction(() => document.querySelector('.banner')?.textContent.includes('Simulación personalizada'), { timeout: 60000 });
     const hero = await page.$eval('.hero-figure .value', (e) => e.textContent);
     console.log('  qué pasaría si (exterior 14.000 techo): P(mayoría) =', hero);
+  },
+});
+await shot('espectro-izq5', {
+  width: 1280, height: 900, scheme: 'light',
+  action: async (page) => {
+    await page.evaluate(() => [...document.querySelectorAll('header nav button')].find((b) => b.textContent === 'Espectro').click());
+    await page.waitForSelector('.spec-track');
+    await page.evaluate(() => document.querySelectorAll('.spec-stop')[0].click());
+    console.log('  espectro nivel −5: fondo', await page.evaluate(() => getComputedStyle(document.body).backgroundColor));
   },
 });
 await browser.close();

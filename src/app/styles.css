@@ -1,8 +1,14 @@
 /* Tokens: paleta validada (dataviz) con colores de partido asignados por identidad. */
 :root {
+  /* Tinte del espectro: el JS fija --tint-color (color del bloque) y la intensidad. */
+  --tint-color: transparent;
+  --tint: 0%;
+  --tint-soft: 0%;
+  --page: color-mix(in srgb, var(--tint-color) var(--tint), var(--page-base));
+  --surface: color-mix(in srgb, var(--tint-color) var(--tint-soft), var(--surface-base));
   color-scheme: light;
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
+  --page-base: #f9f9f7;
+  --surface-base: #fcfcfb;
   --surface-2: #f3f2ee;
   --ink: #0b0b0b;
   --ink-2: #52514e;
@@ -32,8 +38,8 @@
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme='light'])) {
     color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
+    --page-base: #0d0d0d;
+    --surface-base: #1a1a19;
     --surface-2: #232321;
     --ink: #f0efec;
     --ink-2: #c3c2b7;
@@ -57,8 +63,8 @@
 }
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --page: #0d0d0d;
-  --surface: #1a1a19;
+  --page-base: #0d0d0d;
+  --surface-base: #1a1a19;
   --surface-2: #232321;
   --ink: #f0efec;
   --ink-2: #c3c2b7;
@@ -83,7 +89,8 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  background: var(--page);
+  background-color: var(--page);
+  transition: background-color 0.5s ease;
   color: var(--ink);
   font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -234,3 +241,13 @@ footer p + p { margin-top: 6px; }
 .lever .eff { display: block; font-size: 12px; margin-top: 4px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .spec-ends .short { display: none; }
 @media (max-width: 520px) { .spec-ends .long { display: none; } .spec-ends .short { display: inline; } }
+
+/* Transición del tinte del espectro */
+.card, .tile, .scn, .lever-btn, .btn, .seg button[aria-pressed='true'] { transition: background-color 0.5s ease; }
+@media (prefers-reduced-motion: reduce) {
+  body, .card, .tile, .scn, .lever-btn, .btn, .seg button[aria-pressed='true'] { transition: none; }
+}
+.spec-now { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 18px; }
+.spec-now strong { font-size: 18px; }
+.teaser { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+@media (max-width: 640px) { header.top { position: static; } }

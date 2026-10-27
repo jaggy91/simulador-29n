@@ -6,7 +6,7 @@ import { BlocBar } from './components/BlocBar.jsx';
 import { Timeline } from './components/Timeline.jsx';
 import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
-import { Spectrum } from './components/Spectrum.jsx';
+import { Spectrum, tippingSummary } from './components/Spectrum.jsx';
 import { swingPoll } from '../engine/spectrum.js';
 
 // Porcentaje en formato español. Nunca muestra 0 % o 100 % si no es exacto: cerca de
@@ -23,6 +23,15 @@ const fmtDate = (t) => new Date(t).toLocaleString('es-ES', { day: 'numeric', mon
 const sumOf = (seats, ps) => ps.reduce((a, p) => a + (seats[p] || 0), 0);
 const blocsOf = (seats) => ({ derecha: sumOf(seats, BLOCS.derecha), investidura: sumOf(seats, BLOCS.investidura), junts: sumOf(seats, BLOCS.junts) });
 const WHATIF_N = 1500;
+// Nombre de la fuente dentro de una frase: "media de encuestas", pero "CIS (…)" en mayúsculas.
+const inText = (label) => (label.startsWith('CIS') ? label : label.charAt(0).toLowerCase() + label.slice(1));
+
+// Pestañas con dirección propia: #que-pasaria-si y #espectro.
+const HASHES = { whatif: '#que-pasaria-si', espectro: '#espectro' };
+const viewFromHash = () => Object.keys(HASHES).find((v) => HASHES[v] === window.location.hash) || 'proyeccion';
+// Tinte máximo del fondo en los extremos del espectro (página / tarjetas), en %.
+const TINT_PAGE = 30;
+const TINT_SURFACE = 9;
 
 const store = {
   get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
@@ -34,7 +43,9 @@ export default function App() {
   const [d, setD] = useState(null);
   const [error, setError] = useState(null);
   const [source, setSourceState] = useState(() => store.get('source', 'media'));
-  const [whatIf, setWhatIf] = useState(false);
+  const [view, setViewState] = useState(viewFromHash);
+  const [specLevel, setSpecLevel] = useState(0);
+  const whatIf = view === 'whatif';
   const [overrides, setOverrides] = useState({});
   const [swing, setSwing] = useState(0);
   const [custom, setCustom] = useState(null);
@@ -43,6 +54,32 @@ export default function App() {
   const reqId = useRef(0);
 
   const setSource = (s) => { setSourceState(s); store.set('source', s); };
+  const setView = (v) => {
+    if (v === view) return;
+    window.history.pushState(null, '', HASHES[v] || window.location.pathname + window.location.search);
+    setViewState(v);
+    window.scrollTo(0, 0);
+  };
+
+  useEffect(() => {
+    const sync = () => setViewState(viewFromHash());
+    window.addEventListener('popstate', sync);
+    window.addEventListener('hashchange', sync);
+    return () => { window.removeEventListener('popstate', sync); window.removeEventListener('hashchange', sync); };
+  }, []);
+
+  // En la pestaña del espectro, el fondo se tiñe del color del bloque hacia el que se avanza.
+  useEffect(() => {
+    const root = document.documentElement.style;
+    if (view === 'espectro' && specLevel !== 0) {
+      const f = Math.abs(specLevel) / 5;
+      root.setProperty('--tint-color', specLevel < 0 ? 'var(--b-investidura)' : 'var(--b-derecha)');
+      root.setProperty('--tint', `${(f * TINT_PAGE).toFixed(1)}%`);
+      root.setProperty('--tint-soft', `${(f * TINT_SURFACE).toFixed(1)}%`);
+    } else {
+      ['--tint-color', '--tint', '--tint-soft'].forEach((p) => root.removeProperty(p));
+    }
+  }, [view, specLevel]);
 
   useEffect(() => {
     Promise.all(['state', 'polls', 'scenarios', 'history', 'congreso-2023'].map((n) => loadJSON(n)))
@@ -102,14 +139,30 @@ export default function App() {
                 <button key={k} aria-pressed={source === k} onClick={() => setSource(k)}>{v.label}</button>
               ))}
             </div>
-            <div className="seg" role="group" aria-label="Modo">
-              <button aria-pressed={!whatIf} onClick={() => setWhatIf(false)}>Proyección</button>
-              <button aria-pressed={whatIf} onClick={() => setWhatIf(true)}>Qué pasaría si</button>
-            </div>
+            <nav className="seg" aria-label="Secciones">
+              <button aria-pressed={view === 'proyeccion'} onClick={() => setView('proyeccion')}>Proyección</button>
+              <button aria-pressed={whatIf} onClick={() => setView('whatif')}>Qué pasaría si</button>
+              {d.spectrum && <button aria-pressed={view === 'espectro'} onClick={() => setView('espectro')}>Espectro</button>}
+            </nav>
           </div>
         </div>
       </header>
 
+      {view === 'espectro' && d.spectrum ? (
+        <main className="wrap">
+          <section className="card" style={{ marginTop: 16 }}>
+            <h2>¿Qué tiene que pasar para que gane cada bloque?</h2>
+            <p className="sub">
+              Laboratorio, aparte de la proyección oficial. Cada paso hacia un lado activa un escenario más favorable a ese bloque,
+              de más a menos plausible, y la pantalla se tiñe de su color. Calculado con {inText(d.polls.sources[source].label)} del {new Date(d.spectrum.latestPoll).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' })}.
+            </p>
+            <Spectrum spectrum={d.spectrum} source={source} level={specLevel} onLevel={setSpecLevel} />
+          </section>
+          <footer>
+            <p>Los niveles se recalculan con cada actualización de las encuestas. Detalle de cada escenario y del cálculo en la metodología (§4.9).</p>
+          </footer>
+        </main>
+      ) : (
       <main className="wrap">
         {whatIf && (
           <div className="banner" role="status">
@@ -145,7 +198,7 @@ export default function App() {
           <section className="grid cols-2">
             <div className="card">
               <h2>Congreso</h2>
-              <p className="sub">Proyección central ({d.polls.sources[source].label.toLowerCase()} y escenarios confirmados). 350 escaños.</p>
+              <p className="sub">Proyección central ({inText(d.polls.sources[source].label)} y escenarios confirmados). 350 escaños.</p>
               <Hemicycle seats={congress} majority={MAJORITY} title="Congreso de los Diputados" ariaLabel="Hemiciclo del Congreso por partidos" />
               <BlocBar blocs={r.central.blocs} total={350} markers={[{ at: MAJORITY, label: `Mayoría ${MAJORITY}` }]} interval={mc.blocs} />
             </div>
@@ -172,14 +225,13 @@ export default function App() {
             <Scenarios scenarios={d.scenarios} overrides={overrides} setOverride={setOverride} whatIf={whatIf} />
           </section>
 
-          {d.spectrum && (
-            <section className="card" style={{ marginTop: 16 }}>
-              <h2>¿Qué tiene que pasar para que gane cada bloque?</h2>
-              <p className="sub">
-                Laboratorio, aparte de la proyección oficial. Cada paso hacia un lado activa un escenario más favorable a ese bloque,
-                de más a menos plausible. Calculado con {d.polls.sources[source].label.toLowerCase()} del {new Date(d.spectrum.latestPoll).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', timeZone: 'UTC' })}.
-              </p>
-              <Spectrum spectrum={d.spectrum} source={source} />
+          {d.spectrum?.sources[source] && (
+            <section className="card teaser" style={{ marginTop: 16 }}>
+              <div>
+                <h2>¿Qué tiene que pasar para que gane cada bloque?</h2>
+                <p className="sub" style={{ margin: '4px 0 0' }}>Con {inText(d.polls.sources[source].label)}, {tippingSummary(d.spectrum.sources[source])}</p>
+              </div>
+              <button className="btn" onClick={() => setView('espectro')}>Abrir el espectro →</button>
             </section>
           )}
 
@@ -191,7 +243,7 @@ export default function App() {
             </div>
             <div className="card">
               <h2>Evolución</h2>
-              <p className="sub">Proyección oficial, {d.polls.sources[source].label.toLowerCase()}. Un punto por cada cambio.</p>
+              <p className="sub">Proyección oficial, {inText(d.polls.sources[source].label)}. Un punto por cada cambio.</p>
               <Timeline history={d.history} source={source} />
             </div>
           </section>
@@ -231,6 +283,7 @@ export default function App() {
           <p>Simulador 29-N · código y datos abiertos. Las probabilidades se recalculan cada vez que cambian las encuestas o los escenarios.</p>
         </footer>
       </main>
+      )}
     </>
   );
 }

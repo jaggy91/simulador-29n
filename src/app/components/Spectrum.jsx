@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Hemicycle } from './Hemicycle.jsx';
 import { BlocBar } from './BlocBar.jsx';
 import { MAJORITY } from '../../engine/blocs.js';
@@ -22,8 +21,19 @@ function tipText(t) {
   return out;
 }
 
-export function Spectrum({ spectrum, source }) {
-  const [level, setLevel] = useState(0);
+// Resumen de los puntos de vuelco de una fuente, para la tarjeta de la portada.
+export function tippingSummary(src) {
+  const t = src.tipping;
+  if (t.derechaPierde == null) return 'ni con los cinco escenarios a favor de la izquierda pierde la derecha la mayoría.';
+  if (t.derechaPierde === 0) return 'la derecha no tiene hoy la mayoría en más de la mitad de las simulaciones.';
+  const steps = (n) => `${Math.abs(n)} ${Math.abs(n) === 1 ? 'paso' : 'pasos'} hacia la izquierda`;
+  const junts = t.investiduraConJunts != null ? `; la investidura + Junts suma 176 a ${steps(t.investiduraConJunts)}` : '';
+  return `la derecha pierde la mayoría a ${steps(t.derechaPierde)}${junts}.`;
+}
+
+// level (−5…+5) lo controla la página, que tiñe el fondo según la posición.
+export function Spectrum({ spectrum, source, level, onLevel }) {
+  const setLevel = (v) => onLevel(typeof v === 'function' ? v(level) : v);
   const src = spectrum.sources[source];
   if (!src) return null;
   const byLevel = Object.fromEntries(src.levels.map((l) => [l.level, l]));
@@ -121,7 +131,14 @@ export function Spectrum({ spectrum, source }) {
         )}
       </div>
 
-      <div className="tiles" style={{ marginTop: 16 }}>
+      <div className="spec-now" aria-live="polite">
+        <strong>{level === 0 ? 'Hoy: proyección oficial' : `${Math.abs(level)} ${Math.abs(level) === 1 ? 'paso' : 'pasos'} hacia la ${level < 0 ? 'izquierda' : 'derecha'}`}</strong>
+        <span className="small ink-2">
+          {level === 0 ? 'Sin escenarios añadidos.' : `${cur.active.length} ${cur.active.length === 1 ? 'escenario activo' : 'escenarios activos'} a favor de la ${level < 0 ? 'izquierda' : 'derecha'}.`}
+        </span>
+      </div>
+
+      <div className="tiles" style={{ marginTop: 12 }}>
         <div className="tile"><div className="label">PP + Vox + UPN</div><div className="value">{mc.blocs.derecha.p50}</div><div className="note">90 %: {mc.blocs.derecha.p05}–{mc.blocs.derecha.p95} · mayoría {pct(mc.prob.mayoriaDerecha)}</div></div>
         <div className="tile"><div className="label">Investidura sin Junts</div><div className="value">{mc.blocs.investidura.p50}</div><div className="note">suma 176 sola: {pct(mc.prob.investiduraSola)}</div></div>
         <div className="tile"><div className="label">Investidura + Junts</div><div className="value">{pct(mc.prob.investiduraConJunts)}</div><div className="note">probabilidad de llegar a 176</div></div>
@@ -135,8 +152,8 @@ export function Spectrum({ spectrum, source }) {
           <BlocBar blocs={cur.central.blocs} total={350} markers={[{ at: MAJORITY, label: `Mayoría ${MAJORITY}` }]} interval={mc.blocs} />
         </div>
         <div className="spec-levers">
-          <Side side="izquierda" dir={-1} />
-          <Side side="derecha" dir={1} />
+          {/* Primero, el lado hacia el que se avanza. */}
+          {level > 0 ? <><Side side="derecha" dir={1} /><Side side="izquierda" dir={-1} /></> : <><Side side="izquierda" dir={-1} /><Side side="derecha" dir={1} /></>}
         </div>
       </div>
     </>
