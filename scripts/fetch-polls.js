@@ -12,6 +12,7 @@ import fs from 'node:fs';
 import { fetchWikitext, extractTable } from './lib/wiki.js';
 import { parseTable, pollAverage, resolveJoint, average } from './lib/polls.js';
 import { cisEstimate } from './lib/cis.js';
+import { verifyPolls, publicCheck, checkKey } from './lib/verify-polls.js';
 
 const WINDOW_DAYS = 21;
 const HALF_LIFE_DAYS = 7;
@@ -51,6 +52,22 @@ const est = await cisEstimate(study);
 const estValues = resolveJoint({ values: est.values, joint: est.joint }, rows);
 const cisOficial = { ...Object.fromEntries(Object.entries(media).filter(([p]) => !(p in estValues))), ...estValues };
 const cisOficialItems = [{ id: `cis-oficial:${study}`, firm: `CIS · estimación oficial (estudio ${study})`, date: official.date, sample: official.sample, url: est.url, weight: 1, values: estValues }];
+
+// --- Verificación por otro canal ------------------------------------------------
+// El índice es Wikipedia; cada encuesta de las fuentes se intenta comprobar en su
+// publicación original (texto o gráficos Datawrapper) o en el RSS del medio.
+const INDEX = 'Wikipedia: Opinion polling for the 2026 Spanish general election';
+const cache = fs.existsSync('data/poll-checks.json') ? JSON.parse(fs.readFileSync('data/poll-checks.json', 'utf8')) : {};
+const checks = await verifyPolls([...used, ...cisRows], cache);
+fs.writeFileSync('data/poll-checks.json', JSON.stringify(checks, null, 1));
+const withCheck = (items, rowsFor) => items.forEach((it, i) => { it.index = INDEX; it.check = publicCheck(checks[checkKey(rowsFor[i])]); });
+withCheck(mediaItems, used);
+withCheck(cisItems, cisRows);
+// La estimación oficial del CIS se lee directamente de su PDF: es la fuente original.
+cisOficialItems[0].index = INDEX;
+cisOficialItems[0].check = { status: 'verificada', channel: 'PDF oficial del CIS (cis.es)', url: est.url, checked: new Date().toISOString() };
+const nv = Object.values(checks).filter((c) => c.status === 'verificada').length;
+console.log(`Verificación: ${nv} de ${Object.keys(checks).length} encuestas verificadas por otro canal`);
 
 const out = {
   source: 'en.wikipedia: Opinion polling for the 2026 Spanish general election',

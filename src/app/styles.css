@@ -272,7 +272,8 @@ footer p + p { margin-top: 6px; }
 .ver { font-size: 11px; color: var(--ink-2); }
 .ver.yes { color: var(--good); }
 .ver.no, .ver.auto { color: var(--warn-ink); background: var(--warn-bg); padding: 0 6px; border-radius: 4px; }
-.src-det, .src-mod, .src-eff, .src-over { font-size: 12px; color: var(--ink-2); margin: 0; }
+.src-det, .src-mod, .src-eff, .src-over, .src-check { font-size: 12px; color: var(--ink-2); margin: 0; }
+.src-check a { color: inherit; }
 .src-mod { color: var(--ink); }
 .src-eff { font-variant-numeric: tabular-nums; }
 .src-over { color: var(--warn-ink); }

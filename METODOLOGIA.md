@@ -75,6 +75,7 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 | `data/seats-2026.json` | Diputados por provincia | **BOE-A-2026-20742** (RD 806/2026), anexo | `build-seats.js` | 52 circ., 350. Cambios frente a 2023: Madrid 37→38, Cádiz 9→8 |
 | `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos | `build-designados.js` | Suma 58 |
 | `data/cera.json` | Electores CERA por provincia y por país, 2023 y 2026 | **INE**, Oficina del Censo Electoral, tablas 3 y 8 | `build-cera.js` | Los países suman el total de cada provincia. 2.325.310 → 2.769.645 |
+| `data/poll-checks.json` | Verificación de cada encuesta por otro canal (§4.1): estado, canal, cifras encontradas | Publicación original, gráficos, RSS | `fetch-polls.js`, `lib/verify-polls.js` | Test: cada tarjeta indica su índice y su comprobación |
 | `data/polls.json` | Encuestas 2026 y las tres fuentes de intención de voto (§4.1), cada encuesta con su enlace original | Índice: en.wikipedia, "Opinion polling for the 2026 Spanish general election". Estimación oficial: **PDF del CIS** (cis.es, estudio 3582) | `fetch-polls.js`, `lib/cis.js` | El PDF del CIS se lee por columnas; PP incluye UPN |
 | `data/scenarios.json` | Catálogo de mecanismos de escenario (sin estados). Los parámetros sin dato llevan su explicación en `assumptions`; los que tienen dato oficial, en `data` | — | manual | — |
 | `data/news.json` | Tarjetas de noticias y datos oficiales, cada una con enlaces a sus fuentes originales y sus efectos | Prensa enlazada, BOE, Junta Electoral Central, INE | manual (F4: automática) | Tests: cada tarjeta con efecto tiene fuentes |
@@ -151,6 +152,18 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 - Los partidos que no dan esas reestimaciones se completan con la media de encuestas.
 
 Las tres fuentes son tarjetas (§4.10): cada encuesta o estimación puede desactivarse y la fuente se recalcula sin ella.
+
+**De dónde sale cada cifra y cómo se verifica** (`scripts/lib/verify-polls.js`, `data/poll-checks.json`)
+- **Índice:** la tabla de encuestas de Wikipedia. Cada tarjeta lo indica.
+- **Verificación por otro canal:** en cada ejecución, el sistema intenta comprobar cada encuesta en un canal distinto del índice, por este orden:
+  1. el texto de la publicación original enlazada;
+  2. los datos que esa publicación incrusta para sus gráficos;
+  3. los gráficos Datawrapper de esa publicación (su tabla de datos);
+  4. el RSS del medio, si lo tiene.
+- **Regla:** queda **verificada** si las cifras de PP, PSOE y Vox aparecen en ese canal y, en total, al menos el 70 % de las cifras de la encuesta (partidos con 1 % o más). Los decimales se aceptan con coma o punto; un entero tiene que ir con "%" para no confundirse con fechas o escaños. El PP vale como PP+UPN (como da el índice) o como PP solo, si se conoce la cifra de UPN.
+- **Resultado:** la tarjeta muestra "verificada en <canal>" con su enlace o "sin verificar: cifra tomada del índice". La cifra que entra en el modelo es la misma en los dos casos; la marca solo dice si se pudo confirmar.
+- **Solo canales abiertos:** si una web bloquea la lectura automática (403, `robots.txt`) no se insiste, y X no se usa. Una encuesta verificada no se vuelve a comprobar mientras no cambien sus cifras; las no verificadas se reintentan cada 24 horas.
+- La estimación oficial del CIS se lee directamente de su PDF: está verificada por construcción.
 
 <!-- veda -->
 
@@ -439,7 +452,7 @@ Efectos a 27-oct (modelo del 28-oct), derecha del Senado con media de encuestas 
 
 ## 5. Validación
 
-### 5.1 Reproducción exacta de 2023 (`npm test`, 58 tests en total)
+### 5.1 Reproducción exacta de 2023 (`npm test`, 61 tests en total)
 
 T1 y T5 se comparan con el resultado oficial. T2–T4 y T6–T8 son contrafactuales (por ejemplo, T6: PSOE y Sumar en lista conjunta al Senado, que en 2023 no existió) y reproducen simulaciones de un análisis externo sobre los votos oficiales de 2023: comprueban que el motor calcula igual que un cálculo independiente, pero no alimentan el modelo.
 
@@ -592,7 +605,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 - **Semillas de SALF (europeas 2024) y AA (andaluzas 2026):** su reparto territorial puede diferir en unas generales.
 - **Las tres fuentes de voto discrepan mucho** en el bloque de derecha (§0 y §6). Es la mayor incertidumbre del modelo, mayor que la del Monte Carlo de cada fuente.
 - **"CIS reestimado":** se basa en dos reestimaciones de terceros, publicadas sobre los microdatos abiertos de un barómetro con trabajo de campo de hace 3 semanas. Se usa porque son estimaciones publicadas e independientes de los mismos datos, no por parecerse a ninguna cifra de referencia.
-- **Índice de las encuestas:** Wikipedia, que es secundaria; cada encuesta enlaza a su publicación original. Se contrasta con el agregador de Demócrata. La estimación oficial del CIS se lee directamente de cis.es.
+- **Índice de las encuestas:** Wikipedia, que es secundaria; cada encuesta enlaza a su publicación original y se verifica automáticamente por otro canal cuando es posible (§4.1). Las no verificadas entran igual, marcadas. Se contrasta con el agregador de Demócrata. La estimación oficial del CIS se lee directamente de cis.es.
 - **Seguimiento de las listas conjuntas:** la encuesta de seguimiento es una sola encuesta sin muestra publicada. Por eso su tarjeta va marcada "sin verificar" y se puede desactivar.
 - **Senado con voto de partido:** fuera de las listas conjuntas, cada partido presenta candidatos con el mismo voto. No capta el voto personal cruzado; en 2023 falló en 4 provincias muy igualadas.
 - **Error provincial independiente:** el Monte Carlo no tiene un error regional común (una comunidad entera desviada a la vez), así que puede infravalorar la incertidumbre en Cataluña, País Vasco o Canarias.
@@ -631,7 +644,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 ```sh
 npm ci
 npm run data          # regenera la base (BOE, Junta Electoral Central, INE y, para europeas, andaluzas y designados, Wikipedia)
-npm test              # 58 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes, veda
+npm test              # 61 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes, veda
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
@@ -645,7 +658,7 @@ npm run sensitivity   # prueba de estrés y §7 → data/sensitivity.json
 - [ ] **Escaños de 2026:** coinciden con el anexo del BOE-A-2026-20742 (Madrid 38, Cádiz 8).
 - [ ] **Senado 2023:** 208 electos y PP 120 (T5). **Senado 2026:** 60 circunscripciones y 209 electos (test).
 - [ ] **Designados:** 58. Revisar a mano las 4 comunidades estimadas (§4.6).
-- [ ] **Encuestas:** las 14 de la media, en `polls.json` → `sources.media.items`, coinciden con sus publicaciones originales (cada una lleva su enlace). Fechas y cifras.
+- [ ] **Encuestas:** las 14 de la media, en `polls.json` → `sources.media.items`, coinciden con sus publicaciones originales (cada una lleva su enlace). Fechas y cifras. `data/poll-checks.json` dice cuáles verificó el sistema y en qué canal; revisar a mano las no verificadas.
 - [ ] **CIS oficial:** `polls.json` → `sources.cisOficial.values` coincide con la tabla de estimación del PDF del estudio (enlace en `items[0].url`).
 - [ ] **Tarjetas:** cada tarjeta con efecto de `data/news.json` enlaza a una publicación que dice lo que la tarjeta afirma (test: ninguna tarjeta con efecto sin fuentes).
 - [ ] **Proyección:** las cuotas nacionales proyectadas reproducen la encuesta con error < 0,05 pp, y los partidos sin dato en la encuesta no superan su cuota de 2023 (tests).
@@ -705,3 +718,4 @@ npm run sensitivity   # prueba de estrés y §7 → data/sensitivity.json
 | 28-oct | `check-veda` revisa también la empresa y los medios de las tarjetas `sondeo`; la metodología ya no los nombra fuera de los bloques de veda | Punto ciego: solo revisaba las empresas del índice de encuestas |
 | 28-oct | Lista explícita de las 50 circunscripciones de Senado de Progreso; seguimiento del FV, Podemos en el bloque, `canVote`, σ_p y límites del backtest declarados como supuestos | Segunda auditoría |
 | 30-oct | Europeas 2024 desde los ficheros oficiales del Ministerio del Interior en lugar de Wikipedia | Fuente oficial. Mismas cifras con ±0,05 pp de redondeo; P(mayoría) varía una décima. infoelectoral solo responde desde España: la descarga es puntual y el ZIP queda en caché |
+| 30-oct | Wikipedia se mantiene como índice de encuestas, y cada encuesta se verifica automáticamente por otro canal (publicación original, sus gráficos o el RSS del medio); la tarjeta muestra el canal o "sin verificar" | Al sustituir Wikipedia por fuentes oficiales solo se hallaron errores en resultados ya cerrados (Congreso y Senado 2023) y desfase en los designados; en las encuestas comprobadas no hubo discrepancias. Así el sistema trabaja solo y se ve qué está confirmado |

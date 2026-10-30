@@ -96,3 +96,32 @@ describe('Captura automática (F4)', () => {
     expect(defaultActive(catalog, [{ ...auto, verified: true }]).has('auto')).toBe(true);
   });
 });
+
+describe('Verificación de encuestas por otro canal', async () => {
+  const { hasNumber, targets } = await import('../scripts/lib/verify-polls.js');
+  it('reconoce cifras con coma o punto y no confunde enteros con fechas', () => {
+    expect(hasNumber('El PP obtiene un 32,4 % de los votos', 32.4)).toBe(true);
+    expect(hasNumber('PP: 32.4', 32.4)).toBe(true);
+    expect(hasNumber('PP 132,4', 32.4)).toBe(false);
+    expect(hasNumber('publicada el 29 de octubre', 29)).toBe(false);
+    expect(hasNumber('el PSOE logra un 29 %', 29)).toBe(true);
+    // CSV de Datawrapper: la coma separa columnas y los decimales con coma van entre comillas.
+    const csv = 'Fecha,PP,PSOE\n"01/10/2026",29,"27,1"';
+    expect(hasNumber(csv, 29, { table: true })).toBe(true);
+    expect(hasNumber(csv, 27.1, { table: true })).toBe(true);
+  });
+  it('acepta el PP sin UPN cuando la fuente los da por separado', () => {
+    const t = targets({ values: { PP: 32.4, PSOE: 27 }, joint: [], upn: 0.4 });
+    expect(t.find((x) => x.k === 'PP').vs).toEqual([32.4, 32]);
+  });
+  it('cada tarjeta de encuesta dice de qué índice sale y su comprobación', () => {
+    const polls = JSON.parse(fs.readFileSync('data/polls.json', 'utf8')).sources;
+    for (const src of Object.values(polls)) {
+      for (const it of src.items) {
+        expect(it.index, it.id).toMatch(/Wikipedia/);
+        expect(['verificada', 'no verificada'], it.id).toContain(it.check?.status);
+        if (it.check.status === 'verificada') expect(it.check.channel, it.id).toBeTruthy();
+      }
+    }
+  });
+});

@@ -18,6 +18,25 @@ function Effect({ impact }) {
   return <p className="src-eff">{parts.length ? `Efecto: ${parts.join(' · ')}` : 'Efecto: sin cambio apreciable'}</p>;
 }
 
+// De dónde sale la cifra de una encuesta: el índice (Wikipedia) y, si se pudo, el canal
+// en el que el sistema la comprobó por su cuenta.
+function Check({ c }) {
+  const k = c.check;
+  if (k?.status === 'verificada') {
+    return (
+      <p className="src-check">
+        <span className="ver yes">✓ verificada</span> en {k.url ? <a href={k.url} target="_blank" rel="noreferrer">{k.channel}</a> : k.channel}
+        {c.index && !/^PDF oficial/.test(k.channel) ? <span className="muted"> · índice: {c.index.split(':')[0]}</span> : null}
+      </p>
+    );
+  }
+  return (
+    <p className="src-check">
+      <span className="ver no">sin verificar</span> cifra tomada del índice ({c.index?.split(':')[0] || 'Wikipedia'}); no se pudo comprobar por otro canal
+    </p>
+  );
+}
+
 function Switch({ on, disabled, onChange, label }) {
   return (
     <button role="switch" aria-checked={on} aria-label={label} className={`switch${on ? ' on' : ''}`} disabled={disabled} onClick={() => onChange(!on)}>
@@ -48,6 +67,7 @@ function Card({ c, on, setOn, source, scenarioLabel, byId, overriddenBy, lockLas
           {c.sample ? ` · ${c.sample.toLocaleString('es-ES')} entrevistas` : ''}{c.weight < 1 ? ` · peso ${num(100 * c.weight, 1)} %` : ''}
         </p>
       )}
+      {c.source && <Check c={c} />}
       {c.effects?.length > 0 && (
         <p className="src-mod">Modifica: {c.effects.map((e) => `${scenarioLabel(e.scenario)} → ${e.status}${e.prob != null ? ` (${Math.round(100 * e.prob)} %)` : ''}`).join(' · ')}</p>
       )}

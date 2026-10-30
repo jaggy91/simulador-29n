@@ -1,0 +1,249 @@
+{
+ "SocioMétrica/El Español|2026-10-25": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, FA, BILDU, AA, PODEMOS"
+  ],
+  "hash": "[{\"PP\":32.4,\"PSOE\":27,\"VOX\":18.6,\"FA\":5.2,\"FV\":0.9,\"ERC\":2.6,\"JUNTS\":1.7,\"BILDU\":1.3,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.4,\"AA\":1.2,\"PODEMOS\":1.8,\"SALF\":2.4},[]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "NC Report/La Razón|2026-10-24": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, ERC, JUNTS, BILDU"
+  ],
+  "hash": "[{\"PP\":33.1,\"PSOE\":25.8,\"VOX\":19,\"ERC\":2,\"JUNTS\":1.8,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.4,\"AA\":1.3,\"PODEMOS\":2.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.6}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "Winston/Artículo14|2026-10-23": {
+  "status": "verificada",
+  "channel": "publicación original (articulo14.es)",
+  "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "FA"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":29.4,\"PSOE\":27.1,\"VOX\":19.2,\"FA\":5.6},[]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "EM-Analytics/Electomanía|2026-10-23": {
+  "status": "verificada",
+  "channel": "publicación original (electomania.es)",
+  "url": "https://electomania.es/electopanel-25-octubre-el-pp-baja-de-nuevo-frente-amplio-crece/",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "FA",
+   "FV",
+   "ERC",
+   "JUNTS",
+   "BILDU",
+   "PNV",
+   "BNG",
+   "AA",
+   "PODEMOS",
+   "SALF"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":30.9,\"PSOE\":26.7,\"VOX\":19,\"FA\":5.8,\"FV\":1.2,\"ERC\":2.2,\"JUNTS\":1.3,\"BILDU\":1.4,\"PNV\":1,\"BNG\":1,\"CC\":0.3,\"AA\":1.1,\"PODEMOS\":1.7,\"SALF\":1.7},[]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "Ateneo del Dato/elDiario.es|2026-10-22": {
+  "status": "verificada",
+  "channel": "publicación original (eldiario.es)",
+  "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":31.1,\"PSOE\":27.6,\"VOX\":19.8,\"PODEMOS\":2.7},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.8}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "Sigma Dos/El Mundo|2026-10-22": {
+  "status": "verificada",
+  "channel": "datos de gráficos de la publicación original (elmundo.es)",
+  "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "ERC",
+   "JUNTS",
+   "BILDU",
+   "PODEMOS"
+  ],
+  "missing": [
+   "FA",
+   "AA"
+  ],
+  "hash": "[{\"PP\":30.6,\"PSOE\":26.1,\"VOX\":19.9,\"FA\":7.4,\"FV\":0.8,\"ERC\":2.5,\"JUNTS\":1.2,\"BILDU\":1.2,\"PNV\":0.9,\"BNG\":0.9,\"CC\":0.4,\"AA\":1,\"PODEMOS\":2.8},[]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "IMOP/El Confidencial|2026-10-16": {
+  "status": "verificada",
+  "channel": "publicación original (elconfidencial.com)",
+  "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "JUNTS",
+   "BILDU",
+   "PNV",
+   "BNG",
+   "PODEMOS",
+   "SALF",
+   "FA+FV"
+  ],
+  "missing": [
+   "ERC"
+  ],
+  "hash": "[{\"PP\":28.5,\"PSOE\":27.1,\"VOX\":20,\"ERC\":2.2,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":1,\"BNG\":1.1,\"CC\":0.6,\"PODEMOS\":1.9,\"SALF\":1.2},[{\"parties\":[\"FA\",\"FV\"],\"value\":8.9}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "Target Point/El Debate|2026-10-09": {
+  "status": "verificada",
+  "channel": "gráfico Datawrapper de la publicación original (eldebate.com)",
+  "url": "https://datawrapper.dwcdn.net/V2UFE/2/",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "SALF",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":32,\"PSOE\":25.9,\"VOX\":18.7,\"PODEMOS\":3.4,\"SALF\":1.3},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.9}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "40dB/Prisa|2026-10-08": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: 403",
+   "RSS de elpais.com: el artículo ya no está en el feed"
+  ],
+  "hash": "[{\"PP\":31.9,\"PSOE\":28.1,\"VOX\":18.9,\"PODEMOS\":2.3,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":5.3}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "GESOP/Prensa Ibérica|2026-10-08": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: 406"
+  ],
+  "hash": "[{\"PP\":28.7,\"PSOE\":26.1,\"VOX\":18.9,\"ERC\":2.5,\"JUNTS\":1.9,\"PODEMOS\":2.6,\"SALF\":2},[{\"parties\":[\"FA\",\"FV\"],\"value\":8}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "GAD3/Vocento|2026-10-08": {
+  "status": "verificada",
+  "channel": "datos de gráficos de la publicación original (abc.es)",
+  "url": "https://www.abc.es/espana/derecha-mantiene-mayoria-absoluta-pese-agitacion-callejera-20261012015025-nt.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "ERC",
+   "JUNTS",
+   "BILDU",
+   "PODEMOS",
+   "FA+FV"
+  ],
+  "missing": [
+   "PNV",
+   "AA",
+   "SALF"
+  ],
+  "hash": "[{\"PP\":31.5,\"PSOE\":26.4,\"VOX\":18.2,\"ERC\":2.6,\"JUNTS\":1.5,\"BILDU\":1.5,\"PNV\":1,\"BNG\":0.9,\"CC\":0.4,\"AA\":1,\"PODEMOS\":2.3,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.4}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "Hamalgama Métrica/Vozpópuli|2026-10-08": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan ERC, BILDU, PODEMOS, SALF, FA+FV"
+  ],
+  "hash": "[{\"PP\":33.6,\"PSOE\":25.3,\"VOX\":19.6,\"ERC\":1.9,\"JUNTS\":1.7,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.5,\"PODEMOS\":3.3,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":5.4}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "InvyMark/laSexta|2026-10-08": {
+  "status": "verificada",
+  "channel": "publicación original (lasexta.com)",
+  "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-protestas-vivienda-impactan-encuestas-que-hunden-bloque-izquierda-disparan-vox_202610096ac8ae9bb79b18452fc08907.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "ERC",
+   "JUNTS",
+   "BILDU",
+   "PNV",
+   "PODEMOS",
+   "SALF",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":32.8,\"PSOE\":28,\"VOX\":18.8,\"ERC\":1.9,\"JUNTS\":1.2,\"BILDU\":1.5,\"PNV\":1.1,\"PODEMOS\":3.2,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.3}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "DYM/Henneo|2026-10-07": {
+  "status": "verificada",
+  "channel": "publicación original (20minutos.es)",
+  "url": "https://www.20minutos.es/nacional/psoe-absorbe-intencion-votos-sumar-podemos-mientras-pp-vox-consolidan-su-mayoria_7046598_0.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":34,\"PSOE\":28.2,\"VOX\":18.2,\"PODEMOS\":3.6,\"SALF\":0.5},[{\"parties\":[\"FA\",\"FV\"],\"value\":3.6}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "CIS (Opina 360)|2026-10-06": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
+  ],
+  "hash": "[{\"PP\":28,\"PSOE\":28,\"VOX\":17.8,\"PODEMOS\":3.5,\"SALF\":1.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.3}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ },
+ "CIS (Ateneo del Dato)|2026-10-06": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "X no es un canal abierto"
+  ],
+  "hash": "[{\"PP\":28.3,\"PSOE\":28.6,\"VOX\":17.5,\"PODEMOS\":3,\"SALF\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.9}]]",
+  "checked": "2026-10-30T05:04:39.353Z"
+ }
+}

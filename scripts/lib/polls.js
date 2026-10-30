@@ -51,14 +51,17 @@ export function parseTable(table, title, { year, jointColumns = {} }) {
       else values[colors[c]] = v;
     }
     // Unas tablas dan PP+UPN juntos y otras por separado: se unifica como PP+UPN.
+    // `upn` se conserva para verificar la encuesta en su fuente, que los da por separado.
+    let upn = null;
     if (values.UPN != null) {
+      upn = values.UPN;
       values.PP = round((values.PP || 0) + values.UPN);
       delete values.UPN;
     }
     const sample = Number(clean(grid[2].value).replace(/,/g, '')) || null;
     // Enlace a la encuesta: la primera referencia de la celda de la empresa.
     const url = grid[0].value.match(/url=\s*([^\s|}]+)/)?.[1] || null;
-    rows.push({ firm, date: date.toISOString().slice(0, 10), sample, url, values, joint, table: title.replace(/=/g, '') });
+    rows.push({ firm, date: date.toISOString().slice(0, 10), sample, url, values, joint, ...(upn != null && { upn }), table: title.replace(/=/g, '') });
   }
   return rows;
 }
