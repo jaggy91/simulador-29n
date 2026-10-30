@@ -37,7 +37,12 @@ jobs:
           probe "Junta de Andalucía"         https://www.juntadeandalucia.es/
           probe "BOJA"                       https://www.juntadeandalucia.es/eboja.html
           probe "Parlamento de Andalucía"    https://www.parlamentodeandalucia.es/
-          probe "BOE: API sumario"           https://www.boe.es/datosabiertos/api/boe/sumario/20261027
+          code=$(curl -s -o /tmp/body -w '%{http_code}' -m 30 -H 'Accept: application/json' https://www.boe.es/datosabiertos/api/boe/sumario/20261027)
+          printf '%-28s %-4s %8s bytes  %s\n' "BOE: API sumario (JSON)" "$code" "$(wc -c </tmp/body)" "https://www.boe.es/datosabiertos/api/boe/sumario/20261027" | tee -a "$GITHUB_STEP_SUMMARY"
+          probe "RTVE: resultados nacional"  https://resultados-elecciones.rtve.es/datos/congreso/2023/7/resultados/2023-resultados.json
+          probe "RTVE: resultados Teruel"    https://resultados-elecciones.rtve.es/datos/congreso/2023/7/resultados/aragon/teruel/2023-resultados-aragon-teruel.json
+          probe "RTVE: Senado nacional"      https://resultados-elecciones.rtve.es/datos/senado/2023/7/resultados/2023-resultados.json
+          probe "Público: resultados 2023"   https://www.publico.es/resultados-elecciones/generales/2023/
           probe "Junta Electoral Central"    https://www.juntaelectoralcentral.es/
           probe "CIS: PDF estimación 3582"   https://www.cis.es/documents/d/cis/3582_estimacion-pdf
           probe "INE"                        https://www.ine.es/
