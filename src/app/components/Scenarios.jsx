@@ -54,7 +54,7 @@ function Params({ s, params, set }) {
       return (
         <>
           <div className="seg" role="group" aria-label="Modo del voto exterior">
-            {[['techo', 'Techo estratégico'], ['realista', 'Realista (censo INE)']].map(([k, l]) => (
+            {[['techo', 'Techo (cota teórica)'], ['realista', 'Realista (datos oficiales)']].map(([k, l]) => (
               <button key={k} aria-pressed={p.mode === k} onClick={() => set({ mode: k })}>{l}</button>
             ))}
           </div>

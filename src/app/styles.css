@@ -331,3 +331,21 @@ body:has(dialog.notice[open]) { overflow: hidden; }
 .md pre code { padding: 0; background: none; overflow-wrap: normal; }
 .md table { display: block; max-width: 100%; overflow-x: auto; margin: 0 0 12px; }
 .md td, .md th { white-space: normal; min-width: 72px; vertical-align: top; }
+
+/* Porcentajes propios */
+.pe-grid { display: grid; gap: 6px 16px; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.pe-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--ink); }
+.pe-name { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+.pe-field { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-2); flex: none; }
+.pe-field input {
+  width: 64px; font: inherit; font-size: 13px; text-align: right; font-variant-numeric: tabular-nums;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--grid); border-radius: 6px; padding: 3px 6px;
+}
+.pe-foot { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; margin-top: 10px; }
+.pe-error { color: var(--warn-ink); background: var(--warn-bg); padding: 2px 8px; border-radius: 6px; }
+
+/* Veda electoral */
+.banner.veda { border: 1px solid color-mix(in srgb, var(--warn-ink) 35%, transparent); }
+/* Los desplegables con opciones largas no deben ensanchar la tarjeta en el móvil. */
+.scn, .control { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+select { max-width: 100%; }

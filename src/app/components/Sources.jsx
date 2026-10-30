@@ -85,13 +85,18 @@ export function Sources({ cards, active, setActive, source, catalog, overriddenB
         {news.map((c) => <Card key={c.id} c={c} on={active.has(c.id)} setOn={set(c.id)} overriddenBy={overriddenBy[c.id] || (!active.has(c.id) && c.overriddenBy)} {...common} />)}
       </div>
 
-      <h3 className="src-group">
-        {{ media: 'Encuestas de la media', cisOficial: 'Estimación oficial del CIS', cis: 'Reestimaciones independientes del último barómetro del CIS' }[source] || 'Encuestas'} ({activePolls} de {polls.length} activas)
-      </h3>
-      {source !== 'media' && <p className="small ink-2" style={{ margin: '0 0 8px' }}>Los partidos que esta fuente no da se toman de la media de encuestas activa.</p>}
-      <div className="src-grid polls">
-        {polls.map((c) => <Card key={c.id} c={c} on={active.has(c.id)} setOn={set(c.id)} lockLast={activePolls <= 1} {...common} />)}
-      </div>
+      {/* Sin fuente de encuestas (veda electoral) no hay bloque de encuestas. */}
+      {source && (
+        <>
+          <h3 className="src-group">
+            {{ media: 'Encuestas de la media', cisOficial: 'Estimación oficial del CIS', cis: 'Reestimaciones independientes del último barómetro del CIS' }[source] || 'Encuestas'} ({activePolls} de {polls.length} activas)
+          </h3>
+          {source !== 'media' && <p className="small ink-2" style={{ margin: '0 0 8px' }}>Los partidos que esta fuente no da se toman de la media de encuestas activa.</p>}
+          <div className="src-grid polls">
+            {polls.map((c) => <Card key={c.id} c={c} on={active.has(c.id)} setOn={set(c.id)} lockLast={activePolls <= 1} {...common} />)}
+          </div>
+        </>
+      )}
 
       <details>
         <summary>Contexto y base del modelo ({fixed.length}): fijos, no se desactivan</summary>

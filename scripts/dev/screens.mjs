@@ -1,9 +1,10 @@
 // Capturas y comprobaciones de la web con Edge/Chrome instalado (puppeteer-core).
-// Uso: node scripts/dev/screens.mjs <url> <carpeta-salida>
+// Uso: node scripts/dev/screens.mjs <url> <carpeta-salida> [url de la versión de veda]
 import puppeteer from 'puppeteer-core';
 import fs from 'node:fs';
+import { VEDA_FILES } from '../../src/veda.js';
 
-const [url = 'http://localhost:4173/', out = '.'] = process.argv.slice(2);
+const [url = 'http://localhost:4173/', out = '.', vedaUrl] = process.argv.slice(2);
 const CANDIDATES = [
   'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
   'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
@@ -13,30 +14,37 @@ const CANDIDATES = [
 const executablePath = CANDIDATES.find((p) => fs.existsSync(p));
 const browser = await puppeteer.launch({ executablePath, headless: true, args: ['--no-first-run'] });
 
-async function shot(name, { width, height, scheme, action, notice = false }) {
+async function shot(name, { width, height, scheme, action, notice = false, at = url, veda = false }) {
   // Contexto propio por captura: almacenamiento del navegador limpio.
   const context = await browser.createBrowserContext();
   const page = await context.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+  // Datos que pide la página: en veda, solo los permitidos.
+  const data = new Set();
+  page.on('request', (r) => { const m = r.url().match(/\/data\/([^/?]+)\.json/); if (m) data.add(m[1]); });
   await page.setViewport({ width, height, deviceScaleFactor: 1 });
   await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: scheme }]);
   // Aviso inicial ya aceptado, salvo en las capturas del propio aviso.
   if (!notice) await page.evaluateOnNewDocument(() => localStorage.setItem('aviso', '2'));
-  await page.goto(url, { waitUntil: 'networkidle0' });
+  await page.goto(at, { waitUntil: 'networkidle0' });
   await page.waitForSelector('header nav');
   if (action) await action(page);
   const overflow = await page.evaluate(() => {
     const W = document.documentElement.clientWidth;
     const bad = [...document.querySelectorAll('body *')]
-      .filter((el) => el.getBoundingClientRect().right > W + 1 && !el.closest('.table-wrap, .md table'))
+      .filter((el) => el.getBoundingClientRect().right > W + 1 && !el.closest('.table-wrap, .md table, .md pre'))
       .slice(0, 8)
       .map((el) => `${el.tagName.toLowerCase()}.${el.className} → ${Math.round(el.getBoundingClientRect().right)}px`);
     return { scrollWidth: document.documentElement.scrollWidth, clientWidth: W, bad };
   });
   await page.screenshot({ path: `${out}/${name}.png`, fullPage: !notice });
   console.log(name, JSON.stringify(overflow), errors.length ? `ERRORES: ${errors.join(' | ')}` : 'sin errores');
+  if (veda) {
+    const bad = [...data].filter((d) => !VEDA_FILES.includes(d));
+    console.log(`  datos pedidos: ${[...data].join(', ')}`, bad.length ? `· NO PERMITIDOS: ${bad.join(', ')}` : '· todos permitidos');
+  }
   await context.close();
 }
 
@@ -99,4 +107,37 @@ await shot('espectro-izq5', {
     console.log('  espectro, nivel extremo izquierdo: fondo', await page.evaluate(() => getComputedStyle(document.body).backgroundColor));
   },
 });
+// Escenarios editables en el móvil (desplegables con opciones largas).
+await shot('whatif-mobile', { width: 390, height: 844, scheme: 'light', at: `${url}#que-pasaria-si` });
+// Veda: simulador con el resultado de 2023 de partida y porcentajes propios.
+const vedaAction = async (page) => {
+  await page.waitForSelector('.hero-figure .value', { timeout: 60000 });
+  console.log('  veda, resultado de 2023 de partida: P(mayoría) =', await page.$eval('.hero-figure .value', (e) => e.textContent));
+  const before = await page.$eval('.hero-figure .value', (e) => e.textContent);
+  // PSOE al 33 % (con el resto de 2023 suma 98 %): el resultado debe cambiar.
+  const input = (await page.$$('.pe-row input'))[1];
+  await input.click({ clickCount: 3 });
+  await input.type('33');
+  await page.waitForFunction((b) => document.querySelector('.hero-figure .value')?.textContent !== b && !document.querySelector('.busy'), { timeout: 60000 }, before);
+  console.log('  veda, PSOE al 33 %: P(mayoría) =', await page.$eval('.hero-figure .value', (e) => e.textContent), '·', await page.$eval('.pe-foot p', (e) => e.textContent));
+  // Suma imposible: aviso y sin recalcular.
+  await input.click({ clickCount: 3 });
+  await input.type('80');
+  console.log('  veda, suma > 100:', await page.$eval('.pe-foot p', (e) => e.textContent));
+  await input.click({ clickCount: 3 });
+  await input.type('33');
+};
+await shot('veda-forzada', { width: 1280, height: 900, scheme: 'light', at: `${url}?veda`, veda: true, action: vedaAction });
+await shot('veda-forzada-mobile', { width: 390, height: 844, scheme: 'dark', at: `${url}?veda`, veda: true,
+  action: async (page) => { await page.waitForSelector('.hero-figure .value', { timeout: 60000 }); } });
+if (vedaUrl) {
+  await shot('veda-publicada', { width: 1280, height: 900, scheme: 'light', at: vedaUrl, veda: true,
+    action: async (page) => {
+      await page.waitForSelector('.hero-figure .value', { timeout: 60000 });
+      await page.evaluate(() => [...document.querySelectorAll('header nav button')].find((b) => b.textContent === 'Metodología').click());
+      await page.waitForSelector('.md h1');
+      const notes = await page.$$eval('.md blockquote', (b) => b.filter((x) => x.textContent.includes('veda electoral')).length);
+      console.log('  versión publicada de veda: metodología con', notes, 'bloques sustituidos');
+    } });
+}
 await browser.close();

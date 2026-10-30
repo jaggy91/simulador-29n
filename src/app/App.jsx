@@ -1,8 +1,7 @@
 import { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
 import { loadJSON, dataRoot } from './data.js';
-import { BLOCS, MAJORITY } from '../engine/blocs.js';
-import { Hemicycle } from './components/Hemicycle.jsx';
-import { BlocBar } from './components/BlocBar.jsx';
+import { Hero, Chambers } from './components/Result.jsx';
+import { PollEditor, pollProblem } from './components/PollEditor.jsx';
 import { Timeline } from './components/Timeline.jsx';
 import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
@@ -13,19 +12,7 @@ const Methodology = lazy(() => import('./components/Methodology.jsx'));
 import { modelInputs } from '../engine/evidence.js';
 import { swingPoll } from '../engine/spectrum.js';
 
-// Porcentaje en formato español. Nunca muestra 0 % o 100 % si no es exacto: cerca de
-// los extremos usa un decimal y lo acota (99,9 % / 0,1 %).
-const pct = (x) => {
-  const v = 100 * x;
-  if (v > 0 && v < 100 && (v < 1 || v > 99)) {
-    const c = v > 99 ? Math.min(99.9, Math.floor(v * 10) / 10) : Math.max(0.1, Math.ceil(v * 10) / 10);
-    return `${c.toLocaleString('es-ES', { minimumFractionDigits: 1 })} %`;
-  }
-  return `${Math.round(v).toLocaleString('es-ES')} %`;
-};
 const fmtDate = (t) => new Date(t).toLocaleString('es-ES', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
-const sumOf = (seats, ps) => ps.reduce((a, p) => a + (seats[p] || 0), 0);
-const blocsOf = (seats) => ({ derecha: sumOf(seats, BLOCS.derecha), investidura: sumOf(seats, BLOCS.investidura), junts: sumOf(seats, BLOCS.junts) });
 const WHATIF_N = 1500;
 // Etiquetas cortas de las fuentes para el selector (la larga va en el título).
 const SHORT = { media: 'Media de encuestas', cisOficial: 'CIS oficial', cis: 'CIS reestimado' };
@@ -56,6 +43,8 @@ export default function App() {
   // Tarjetas de fuentes activas (por defecto, todas salvo las superadas).
   const [active, setActiveSet] = useState(null);
   const [swing, setSwing] = useState(0);
+  // Porcentajes escritos por el usuario en "qué pasaría si" (null = los de la fuente).
+  const [ownPoll, setOwnPoll] = useState(null);
   const [custom, setCustom] = useState(null);
   const [busy, setBusy] = useState(false);
   const worker = useRef(null);
@@ -117,13 +106,19 @@ export default function App() {
     const prob = o.mode === 'si' ? 1 : o.mode === 'no' ? 0 : s.prob;
     return { ...s, prob, ...(s.params && { params: { ...s.params, ...o.params } }) };
   }), [fromSources, overrides, whatIf]);
-  const whatIfChanged = whatIf && (swing !== 0 || Object.values(overrides).some((o) => (o.mode && o.mode !== 'oficial') || o.params));
+  const whatIfChanged = whatIf && (swing !== 0 || ownPoll || Object.values(overrides).some((o) => (o.mode && o.mode !== 'oficial') || o.params));
   const customized = Boolean(sourcesChanged || whatIfChanged);
   // Memorizada: un objeto nuevo en cada render relanzaría el cálculo del worker en bucle.
-  const inputPoll = useMemo(() => fromSources && swingPoll(fromSources.polls[source], whatIf ? swing : 0), [fromSources, source, whatIf, swing]);
+  // null si los porcentajes propios no son válidos (se conserva el último resultado).
+  const inputPoll = useMemo(() => {
+    if (!fromSources) return null;
+    const p = whatIf && ownPoll ? ownPoll : fromSources.polls[source];
+    return pollProblem(p) ? null : swingPoll(p, whatIf ? swing : 0);
+  }, [fromSources, source, whatIf, swing, ownPoll]);
 
   useEffect(() => {
     if (!customized || !d) { setCustom(null); setBusy(false); return; }
+    if (!inputPoll) { setBusy(false); return; }
     setBusy(true);
     const id = ++reqId.current;
     const t = setTimeout(() => {
@@ -145,12 +140,8 @@ export default function App() {
   const official = d.state.results[source];
   const r = customized && custom ? custom : official;
   const poll = customized && custom ? custom.poll : official.poll;
-  const mc = r.montecarlo;
-  const congress = r.central.congress;
-  const senate = r.central.senate;
-  const sBlocs = blocsOf(senate.total);
   const setOverride = (id, patch) => setOverrides((o) => ({ ...o, [id]: { ...o[id], ...patch } }));
-  const reset = () => { setOverrides({}); setSwing(0); };
+  const reset = () => { setOverrides({}); setSwing(0); setOwnPoll(null); };
   const resetSources = () => setActiveSet(new Set(d.defaults));
   const setActive = (id, on) => setActiveSet((s) => { const n = new Set(s); if (on) n.add(id); else n.delete(id); return n; });
   const off = [...d.defaults].filter((id) => !active.has(id)).length;
@@ -227,40 +218,8 @@ export default function App() {
         )}
 
         <div className={busy ? 'busy' : ''}>
-          <section className="hero" aria-label="Resumen">
-            <div className="card hero-figure">
-              <p className="small ink-2" style={{ marginBottom: 4 }}>Resultado con las fuentes activas ({active.size}) · no es una predicción</p>
-              <h2>¿Mayoría absoluta de PP + Vox + UPN?</h2>
-              <div className="value">{pct(mc.prob.mayoriaDerecha)}</div>
-              <p className="small ink-2">
-                Probabilidad de que la derecha sume 176 o más. Escaños: {mc.blocs.derecha.mean.toLocaleString('es-ES')} de media
-                (90 % de las simulaciones entre {mc.blocs.derecha.p05} y {mc.blocs.derecha.p95}).
-              </p>
-            </div>
-            <div className="tiles">
-              <div className="tile"><div className="label">Investidura sin Junts</div><div className="value">{Math.round(mc.blocs.investidura.mean)}</div><div className="note">{mc.blocs.investidura.p05}–{mc.blocs.investidura.p95} escaños</div></div>
-              <div className="tile"><div className="label">Junts decisivo</div><div className="value">{pct(mc.prob.juntsDecisivo)}</div><div className="note">ni derecha ni investidura llegan solas</div></div>
-              <div className="tile"><div className="label">Ningún bloque suma</div><div className="value">{pct(Math.max(0, 1 - mc.prob.mayoriaDerecha - mc.prob.juntsDecisivo))}</div><div className="note">sin mayoría clara de bloques</div></div>
-              <div className="tile"><div className="label">Senado: mayoría derecha</div><div className="value">{pct(mc.prob.senadoMayoriaDerecha)}</div><div className="note">{senate.majority} de {senate.size}</div></div>
-              <div className="tile"><div className="label">Senado: 3/5 derecha</div><div className="value">{pct(mc.prob.senado35Derecha)}</div><div className="note">{senate.threeFifths} de {senate.size}</div></div>
-              <div className="tile"><div className="label">Senado: derecha (central)</div><div className="value">{senate.right}</div><div className="note">electos + designados</div></div>
-            </div>
-          </section>
-
-          <section className="grid cols-2">
-            <div className="card">
-              <h2>Congreso</h2>
-              <p className="sub">Resultado central con las fuentes activas ({inText(d.polls.sources[source].label)}). 350 escaños.</p>
-              <Hemicycle seats={congress} majority={MAJORITY} title="Congreso de los Diputados" ariaLabel="Hemiciclo del Congreso por partidos" />
-              <BlocBar blocs={r.central.blocs} total={350} markers={[{ at: MAJORITY, label: `Mayoría ${MAJORITY}` }]} interval={mc.blocs} />
-            </div>
-            <div className="card">
-              <h2>Senado</h2>
-              <p className="sub">{senate.size - 58} electos + 58 designados por los parlamentos autonómicos.</p>
-              <Hemicycle seats={senate.total} majority={senate.majority} title="Senado" ariaLabel="Hemiciclo del Senado por partidos" />
-              <BlocBar blocs={sBlocs} total={senate.size} markers={[{ at: senate.majority, label: `Mayoría ${senate.majority}` }, { at: senate.threeFifths, label: `3/5: ${senate.threeFifths}` }]} />
-            </div>
-          </section>
+          <Hero r={r} caption={`Resultado con las fuentes activas (${active.size})${ownPoll ? ' y tus porcentajes' : ''} · no es una predicción`} />
+          <Chambers r={r} congressSub={`Resultado central con las fuentes activas (${ownPoll ? 'tus porcentajes' : inText(d.polls.sources[source].label)}). 350 escaños.`} />
 
           <section className="card" style={{ marginTop: 16 }} id="fuentes">
             <h2>Fuentes que alimentan el resultado</h2>
@@ -281,6 +240,12 @@ export default function App() {
                   <span className="row"><span>Puntos de la investidura a la derecha (negativo: al revés)</span><strong className="num" style={{ color: 'var(--ink)' }}>{swing > 0 ? '+' : ''}{swing.toFixed(1)}</strong></span>
                   <input type="range" min={-6} max={6} step={0.5} value={swing} onChange={(e) => setSwing(Number(e.target.value))} />
                 </label>
+                <details open={Boolean(ownPoll)}>
+                  <summary>O escribe tus propios porcentajes</summary>
+                  <div style={{ marginTop: 8 }}>
+                    <PollEditor value={ownPoll} base={fromSources.polls[source]} baseLabel={inText(d.polls.sources[source].label)} onChange={setOwnPoll} onReset={() => setOwnPoll(null)} />
+                  </div>
+                </details>
               </div>
             )}
             <Scenarios scenarios={fromSources.scenarios} overrides={overrides} setOverride={setOverride} whatIf={whatIf} cardTitle={cardTitle} />
@@ -311,8 +276,8 @@ export default function App() {
 
           <section className="grid cols-2">
             <div className="card">
-              <h2>Media resultante</h2>
-              <p className="sub">{d.polls.sources[source].method}.</p>
+              <h2>{whatIf && ownPoll ? 'Tus porcentajes' : 'Media resultante'}</h2>
+              <p className="sub">{whatIf && ownPoll ? 'Los que has escrito en "qué pasaría si", con el traslado entre bloques si lo has movido.' : `${d.polls.sources[source].method}.`}</p>
               <PollTable poll={poll} />
               <details>
                 <summary>Encuestas incluidas ({d.polls.sources[source].polls.length})</summary>

@@ -1,11 +1,13 @@
 // Metodología completa (METODOLOGIA.md) dentro de la web. Se carga aparte, solo al
-// abrir la sección, para no engordar la carga inicial.
+// abrir la sección, para no engordar la carga inicial. Durante la veda se quitan los
+// bloques con cifras de encuestas (en la versión de veda ya vienen quitados del código).
+import { useMemo } from 'react';
 import { marked } from 'marked';
 import text from '../../../METODOLOGIA.md?raw';
+import { stripVeda } from '../../veda.js';
 
-const html = marked.parse(text, { gfm: true });
-
-export default function Methodology() {
+export default function Methodology({ veda = false }) {
+  const html = useMemo(() => marked.parse(veda ? stripVeda(text) : text, { gfm: true }), [veda]);
   return (
     <section className="card md" style={{ marginTop: 16 }}>
       <p className="small muted" style={{ marginBottom: 12 }}>
