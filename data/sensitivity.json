@@ -1,0 +1,325 @@
+{
+ "updated": "2026-10-30T01:33:13.244Z",
+ "latestPoll": "2026-10-25",
+ "n": 2000,
+ "base": {
+  "media": {
+   "derecha": 200,
+   "investidura": 142,
+   "senado": 163
+  },
+  "cisOficial": {
+   "derecha": 155,
+   "investidura": 189,
+   "senado": 84
+  },
+  "cis": {
+   "derecha": 187,
+   "investidura": 155,
+   "senado": 140
+  }
+ },
+ "stress": {
+  "media": {
+   "base": {
+    "derecha": 200,
+    "investidura": 142,
+    "senado": 163
+   },
+   "error2023": {
+    "derecha": 190,
+    "investidura": 155,
+    "senado": 146
+   }
+  },
+  "cisOficial": {
+   "base": {
+    "derecha": 155,
+    "investidura": 189,
+    "senado": 84
+   },
+   "error2023": {
+    "derecha": 140,
+    "investidura": 206,
+    "senado": 73
+   }
+  },
+  "cis": {
+   "base": {
+    "derecha": 187,
+    "investidura": 155,
+    "senado": 140
+   },
+   "error2023": {
+    "derecha": 171,
+    "investidura": 173,
+    "senado": 116
+   }
+  }
+ },
+ "rows": [
+  {
+   "id": "compromisShare",
+   "label": "Fracción del resto de Sumar 2023 que va a Compromís–FV",
+   "value": 0.85,
+   "alternatives": [
+    {
+     "value": 0.5,
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 162
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 84
+      },
+      "cis": {
+       "derecha": 186,
+       "investidura": 156,
+       "senado": 143
+      }
+     }
+    },
+    {
+     "value": 1,
+     "result": {
+      "media": {
+       "derecha": 199,
+       "investidura": 143,
+       "senado": 163
+      },
+      "cisOficial": {
+       "derecha": 154,
+       "investidura": 190,
+       "senado": 82
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 140
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "teruelShare",
+   "label": "Voto del FA en Teruel que va al PSOE",
+   "value": 0.5,
+   "alternatives": [
+    {
+     "value": 0,
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 163
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 84
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 140
+      }
+     }
+    },
+    {
+     "value": 1,
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 163
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 84
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 140
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "othersCap",
+   "label": "Partidos sin dato en la encuesta: tope en su cuota de 2023",
+   "value": "tope",
+   "alternatives": [
+    {
+     "value": "proporcional",
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 163
+      },
+      "cisOficial": {
+       "derecha": 150,
+       "investidura": 187,
+       "senado": 78
+      },
+      "cis": {
+       "derecha": 186,
+       "investidura": 152,
+       "senado": 140
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "nonFollowers",
+   "label": "Quien no apoya una lista conjunta al Senado",
+   "value": "propios",
+   "alternatives": [
+    {
+     "value": "abstencion",
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 165
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 88
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 148
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "partnerCandidates",
+   "label": "Candidatos del socio en las listas de Senado de Progreso",
+   "value": 1,
+   "alternatives": [
+    {
+     "value": 0,
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 163
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 77
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 136
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "data10",
+   "label": "Seguimiento de las listas conjuntas (Data 10)",
+   "value": "Data 10",
+   "alternatives": [
+    {
+     "value": "100 %",
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 165
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 80
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 141
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "senadoProgreso60",
+   "label": "Circunscripciones de Senado de Progreso",
+   "value": "50 posibles",
+   "alternatives": [
+    {
+     "value": "las 60",
+     "result": {
+      "media": {
+       "derecha": 200,
+       "investidura": 142,
+       "senado": 162
+      },
+      "cisOficial": {
+       "derecha": 155,
+       "investidura": 189,
+       "senado": 84
+      },
+      "cis": {
+       "derecha": 187,
+       "investidura": 155,
+       "senado": 138
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "mergeRange": {
+  "media": {
+   "eligible": 50,
+   "min": 0,
+   "max": 3
+  },
+  "cisOficial": {
+   "eligible": 50,
+   "min": -2,
+   "max": 6
+  },
+  "cis": {
+   "eligible": 50,
+   "min": 0,
+   "max": 5
+  }
+ },
+ "noise": {
+  "media": {
+   "historico": 0.9805,
+   "video": 0.996,
+   "conCC": 0.983
+  },
+  "cisOficial": {
+   "historico": 0.048,
+   "video": 0.016,
+   "conCC": 0.054
+  },
+  "cis": {
+   "historico": 0.7305,
+   "video": 0.805,
+   "conCC": 0.7535
+  }
+ }
+}

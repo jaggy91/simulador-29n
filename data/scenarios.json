@@ -12,7 +12,7 @@
   {
    "id": "SENADO_PROGRESO",
    "label": "Senado de Progreso (PSOE + Frente Amplio)",
-   "detail": "Lista única al Senado en 47 circunscripciones; no se aplica en Cataluña ni en Canarias (salvo La Gomera). Las 3 circunscripciones restantes sin coalición, pendientes de la proclamación en el BOE.",
+   "detail": "Lista única al Senado; no se aplica en Cataluña ni en Canarias (salvo La Gomera). Las fuentes hablan de 47 circunscripciones sin decir cuáles faltan: el modelo la aplica en las 50 posibles (ver supuestos), pendiente de la proclamación en el BOE.",
    "status": "sin datos",
    "prob": 0,
    "kind": "senate-merge",
@@ -31,7 +31,14 @@
      "GOMERA"
     ],
     "share": 1,
-    "intoShare": 1
+    "intoShare": 1,
+    "partnerCandidates": 1,
+    "nonFollowers": "propios"
+   },
+   "assumptions": {
+    "where": "Las fuentes dan 47 circunscripciones y excluyen Cataluña y Canarias salvo La Gomera, lo que deja 50 posibles. No se sabe cuáles 3 faltan: el modelo la aplica en las 50 y el análisis de sensibilidad da el rango si faltan 3 cualesquiera.",
+    "partnerCandidates": "Sin dato publicado sobre la composición: 1 candidato del socio en las listas de 2 o 3 puestos y el resto del PSOE; en las de 1 puesto, solo el PSOE.",
+    "nonFollowers": "Quien no apoya la lista conjunta vota solo a los candidatos de su partido dentro de ella (el voto al Senado es por candidato). Alternativa: se abstiene."
    }
   },
   {
@@ -108,7 +115,15 @@
      "16",
      "36",
      "23"
-    ]
+    ],
+    "nonFollowers": "propios"
+   },
+   "data": {
+    "voxWithdraws": "Islas: «Vox no se presentará en ninguna de las circunscripciones de las dos provincias canarias, ni de Baleares, cuyos senadores se eligen por cada una de las islas» (COPE, 26-oct).",
+    "composicion": "El PP incluye un independiente propuesto por Vox «en la segunda o tercera posición» (El Español): cabe en las 6 listas de 2 o más puestos (Cádiz, Valencia, Castellón, Mallorca, Gran Canaria, Tenerife), los «seis candidatos independientes» (The Objective). El PP no pone independientes en las listas de Vox (El Español)."
+   },
+   "assumptions": {
+    "nonFollowers": "Quien no apoya la lista resultante vota solo a los candidatos de su partido en ella (si no tiene, se abstiene). Alternativa: se abstiene siempre."
    }
   },
   {

@@ -3,8 +3,13 @@
 // se renormaliza a sus votos válidos de 2023 (participación constante) y los factores
 // se corrigen hasta que el total nacional coincide con la encuesta.
 //
-// poll: {partido: % sobre válidos}. Los partidos sin dato en la encuesta (regionales
-// pequeños, blanco) forman "otros" y se escalan juntos para cubrir el resto hasta 100.
+// poll: {partido: % sobre válidos}. Lo que la encuesta no asigna (100 − suma) cubre a
+// los partidos sin dato en ella ("otros": regionales pequeños) y al voto en blanco.
+// Regla por defecto (`othersCap`): los "otros" no crecen por encima de su cuota de
+// 2023. Si la encuesta deja más, el excedente no tiene dueño conocido (el CIS, por
+// ejemplo, estima «otros partidos» sin repartirlos) y va con el blanco a un grupo sin
+// escaño; si deja menos, otros y blanco bajan en la misma proporción. Escalarlo todo
+// junto concentraría ese excedente en los regionalistas y les daría escaños sin dato.
 // groups: claves de encuesta que agrupan varios partidos con el mismo factor
 // (las encuestas dan PP+UPN juntos).
 export const POLL_GROUPS = { PP: ['PP', 'UPN'] };
@@ -24,37 +29,50 @@ function compile(base) {
     blank[i] = p.blank || 0;
     valid[i] = Object.values(p.votes).reduce((a, b) => a + b, 0) + blank[i];
   });
-  const c = { parties, K, votes, blank, valid, totalValid: valid.reduce((a, b) => a + b, 0) };
+  const present = new Set(parties.filter((p, k) => base.some((_, i) => votes[i * K + k] > 0)));
+  const c = { parties, present, K, votes, blank, valid, totalValid: valid.reduce((a, b) => a + b, 0) };
   compiled.set(base, c);
   return c;
 }
 
 // opts.noise: Float64Array opcional (provincia × partido) de multiplicadores aleatorios.
-export function project(base, poll, { groups = POLL_GROUPS, iterations = 30, noise = null } = {}) {
-  const { parties, K, votes, blank, valid, totalValid } = compile(base);
+export function project(base, poll, { groups = POLL_GROUPS, iterations = 30, noise = null, othersCap = true } = {}) {
+  const { parties, present, K, votes, blank, valid, totalValid } = compile(base);
   const N = base.length;
-  const keys = Object.keys(poll).filter((k) => poll[k] > 0);
-  const G = keys.length + 1; // último grupo = otros + blanco
-  const OTHERS = keys.length;
+  // Un partido al 0 % es un objetivo (queda sin votos), no parte de "otros". Una clave
+  // sin votos en la base (p. ej. una columna de encuesta sin mapear) no se puede
+  // alcanzar: su porcentaje pasa a lo no asignado.
+  const keys = Object.keys(poll).filter((k) => poll[k] >= 0 && (groups[k] || [k]).some((p) => present.has(p)));
+  const G = keys.length + 2;
+  const OTHERS = keys.length; // partidos sin dato en la encuesta
+  const BLANK = keys.length + 1; // voto en blanco (y, con othersCap, el excedente sin escaño)
   const groupOfKey = {};
   keys.forEach((k, g) => { for (const p of groups[k] || [k]) groupOfKey[p] = g; });
   const group = Int32Array.from(parties, (p) => groupOfKey[p] ?? OTHERS);
   const target = new Float64Array(G);
   keys.forEach((k, g) => { target[g] = poll[k] / 100; });
-  target[OTHERS] = Math.max(0.005, 1 - target.reduce((a, b) => a + b, 0));
 
   const v0 = noise ? votes.map((v, j) => v * noise[j]) : votes;
   const factor = new Float64Array(G);
   const share = new Float64Array(G);
-  // Factor inicial: objetivo / cuota base.
   groupShares(v0, blank, share);
+  const rest = Math.max(0.005, 1 - target.reduce((a, b) => a + b, 0));
+  const baseRest = share[OTHERS] + share[BLANK];
+  if (othersCap && rest >= baseRest) {
+    target[OTHERS] = share[OTHERS];
+    target[BLANK] = rest - share[OTHERS];
+  } else {
+    target[OTHERS] = baseRest > 0 ? (share[OTHERS] * rest) / baseRest : 0;
+    target[BLANK] = baseRest > 0 ? (share[BLANK] * rest) / baseRest : rest;
+  }
+  // Factor inicial: objetivo / cuota base.
   for (let g = 0; g < G; g++) factor[g] = share[g] > 0 ? target[g] / share[g] : 0;
 
   const cur = new Float64Array(N * K);
   const curBlank = new Float64Array(N);
   for (let it = 0; it < iterations; it++) {
     for (let i = 0; i < N; i++) {
-      let sum = blank[i] * factor[OTHERS];
+      let sum = blank[i] * factor[BLANK];
       for (let k = 0; k < K; k++) {
         const x = v0[i * K + k] * factor[group[k]];
         cur[i * K + k] = x;
@@ -62,7 +80,7 @@ export function project(base, poll, { groups = POLL_GROUPS, iterations = 30, noi
       }
       const s = sum > 0 ? valid[i] / sum : 0;
       for (let k = 0; k < K; k++) cur[i * K + k] *= s;
-      curBlank[i] = blank[i] * factor[OTHERS] * s;
+      curBlank[i] = blank[i] * factor[BLANK] * s;
     }
     groupShares(cur, curBlank, share);
     let maxErr = 0;
@@ -87,7 +105,7 @@ export function project(base, poll, { groups = POLL_GROUPS, iterations = 30, noi
     acc.fill(0);
     for (let i = 0; i < N; i++) {
       for (let k = 0; k < K; k++) acc[group[k]] += m[i * K + k];
-      acc[OTHERS] += b[i];
+      acc[BLANK] += b[i];
     }
     for (let g = 0; g < G; g++) acc[g] /= totalValid;
   }

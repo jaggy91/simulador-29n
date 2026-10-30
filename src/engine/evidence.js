@@ -52,9 +52,12 @@ export function resolveEvidence(catalog, cards, active) {
 }
 
 // Activas por defecto: todas las que tienen efecto, menos las superadas cuando todas
-// están activas (siguen visibles y se pueden reactivar).
+// están activas y las capturadas automáticamente sin verificar (F4): no cambian el
+// resultado por defecto hasta que alguien las revisa. Todas siguen visibles y se
+// pueden activar.
+export const pendingReview = (c) => c.captured === 'auto' && !c.verified;
 export function defaultActive(catalog, cards) {
-  const all = new Set(cards.filter(hasEffect).map((c) => c.id));
+  const all = new Set(cards.filter((c) => hasEffect(c) && !pendingReview(c)).map((c) => c.id));
   const { overriddenBy } = resolveEvidence(catalog, cards, all);
   return new Set([...all].filter((id) => !overriddenBy[id]));
 }

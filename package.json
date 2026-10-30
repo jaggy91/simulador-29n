@@ -19,7 +19,11 @@
     "polls": "node scripts/fetch-polls.js",
     "simulate": "node scripts/simulate.js",
     "backtest": "node scripts/backtest-2023.js",
-    "spectrum": "node scripts/spectrum.js"
+    "spectrum": "node scripts/spectrum.js",
+    "build:veda": "vite build --mode veda",
+    "veda": "node scripts/veda.js",
+    "check:veda": "vite build --mode veda --outDir dist-veda && node scripts/check-veda.js dist-veda",
+    "sensitivity": "node scripts/sensitivity.js"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

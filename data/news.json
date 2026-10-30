@@ -116,7 +116,7 @@
    "type": "noticia",
    "date": "2026-10-26",
    "title": "PP y Vox pactan las listas del Senado: Vox se retira en seis provincias, el PP en tres y Vox va con candidato único en catorce",
-   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox. Objetivo declarado: frenar a «Senado de Progreso».",
+   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox en segundo o tercer puesto; en Canarias y Baleares, Vox no se presenta en ninguna isla (COPE). Objetivo declarado: frenar a «Senado de Progreso».",
    "outlet": "El Español",
    "sources": [
     "https://www.elespanol.com/espana/politica/20261026/pp-vox-llegan-acuerdo-listas-senado-abascal-retiran-provincias-feijoo/1003744434759_0.html",
@@ -137,6 +137,8 @@
   {
    "id": "data10-seguimiento-listas",
    "type": "noticia",
+   "sondeo": true,
+   "firm": "Data 10",
    "date": "2026-10-21",
    "title": "Encuesta Data 10: apoyarían la lista conjunta el 94 % de los votantes del PP y el 86 % de los de Vox; en la izquierda, el 92 % del PSOE y el 95 % del FA",
    "detail": "Publicada por OKDiario (trabajo de campo la semana del 21-oct; no se publica el tamaño de la muestra). Fija el seguimiento del pacto PP–Vox y de Senado de Progreso.",

@@ -1,5 +1,5 @@
 // Reasigna los votos de 2023 (por provincia) a la oferta de partidos de 2026.
-// Supuestos (documentados en plan-v2.md §4.3):
+// Supuestos (documentados en METODOLOGIA.md §3):
 //  - Sumar 2023 se divide entre su parte Podemos y el resto según la proporción
 //    Sumar/Podemos de cada provincia en las europeas de 2024.
 //  - Cataluña: la parte Podemos pasa a ERC (Podemos apoya a ERC) y el resto a FA (Comuns).

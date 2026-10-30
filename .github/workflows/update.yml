@@ -1,8 +1,9 @@
 name: Actualizar y publicar
 
 on:
-  schedule:
-    - cron: '17 * * * *' # cada hora (minuto 17 para evitar la congestión de la hora en punto)
+  # Apagado hasta comprobar la primera publicación. Para activarlo, quitar el comentario.
+  # schedule:
+  #   - cron: '17 * * * *' # cada hora (minuto 17 para evitar la congestión de la hora en punto)
   push:
     branches: [main]
   workflow_dispatch:
@@ -28,25 +29,41 @@ jobs:
           cache: npm
       - run: npm ci
 
+      # Veda electoral (LOREG, art. 69.7; src/veda.js): desde 4 h antes del 24-nov y hasta
+      # el cierre de las urnas, ni se descargan ni se guardan encuestas, y se publica la
+      # versión sin encuestas.
+      - name: ¿Veda electoral?
+        id: veda
+        run: echo "activa=$(node scripts/veda.js --estado)" >> "$GITHUB_OUTPUT"
+
       # El motor debe seguir reproduciendo 2023 antes de publicar nada.
       - name: Tests del motor (2023)
         run: npx vitest run test/congreso-2023.test.js test/senado-2023.test.js test/escenarios-2023.test.js
 
       - name: Encuestas
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: node scripts/fetch-polls.js
 
       - name: Simulación
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: node scripts/simulate.js --n 5000
 
       # Laboratorio izquierda ↔ derecha: aparte de la proyección oficial.
       - name: Espectro
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: node scripts/spectrum.js --n 2000
 
+      # Prueba de estrés y sensibilidad de cada supuesto (METODOLOGIA.md §0, §6 y §7).
+      - name: Sensibilidad
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
+        run: node scripts/sensitivity.js --n 2000
+
+      # Datos de la versión de veda (resultado de 2023 y noticias sin sondeos).
+      - name: Datos para la veda
+        run: node scripts/veda.js
+
       - name: Guardar datos si han cambiado
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: |
           git config user.name "simulador-29n[bot]"
           git config user.email "simulador-29n@users.noreply.github.com"
@@ -58,7 +75,19 @@ jobs:
             git push
           fi
 
-      - run: npm run build
+      - name: Web
+        run: npx vite build ${{ steps.veda.outputs.activa == 'si' && '--mode veda' || '' }}
+
+      # La versión de veda se compila y se comprueba en cada ejecución, para detectar
+      # cualquier fallo semanas antes. Durante la veda se comprueba la que se publica.
+      - name: Comprobar la versión de veda
+        run: |
+          if [ "${{ steps.veda.outputs.activa }}" = "si" ]; then
+            node scripts/check-veda.js dist
+          else
+            npx vite build --mode veda --outDir dist-veda && node scripts/check-veda.js dist-veda
+          fi
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

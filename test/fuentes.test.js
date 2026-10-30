@@ -88,3 +88,11 @@ describe('Fuentes reales (data/news.json, data/polls.json)', () => {
     for (const c of cards.filter((c) => c.toggleable)) expect(c.impact?.media, c.id).toBeDefined();
   });
 });
+
+describe('Captura automática (F4)', () => {
+  it('una tarjeta capturada sin verificar no está activa por defecto', () => {
+    const auto = { id: 'auto', type: 'noticia', date: '2026-11-01', verified: false, captured: 'auto', effects: [{ scenario: 'A', prob: 0.15, status: 'rumor' }] };
+    expect(defaultActive(catalog, [auto]).has('auto')).toBe(false);
+    expect(defaultActive(catalog, [{ ...auto, verified: true }]).has('auto')).toBe(true);
+  });
+});

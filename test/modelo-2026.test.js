@@ -133,3 +133,55 @@ describe('Pacto PP–Vox al Senado (26-oct)', () => {
     });
   }
 });
+
+describe('Auditoría 28-oct', () => {
+  const NO_POLL = ['CUP', 'UPL', 'NC', 'SY', 'EXISTE'];
+  // El tope es del grupo: dentro de él cada partido se mueve un poco con la
+  // renormalización de su provincia.
+  it('los partidos sin dato en la encuesta no crecen por encima de su cuota de 2023', () => {
+    const base = nationalShares(prep.congressBase);
+    const polled = new Set([...Object.keys(polls.media.values), 'UPN']);
+    const others = (sh) => Object.entries(sh).filter(([k]) => !polled.has(k)).reduce((a, [, v]) => a + v, 0);
+    for (const src of ['media', 'cisOficial', 'cis']) {
+      const sh = nationalShares(project(prep.congressBase, polls[src].values));
+      expect(others(sh), src).toBeLessThanOrEqual(others(base) + 1e-3);
+      for (const k of NO_POLL) expect(sh[k] || 0, `${src} ${k}`).toBeLessThanOrEqual(1.1 * (base[k] || 0));
+    }
+  });
+
+  it('CIS oficial: ningún escaño para partidos que la encuesta no estima', () => {
+    const r = run(prep, polls.cisOficial.values, scenarios.filter((s) => s.prob >= 1 && s.kind !== 'base'));
+    for (const k of NO_POLL) expect(r.congress.national[k] || 0, k).toBe(0);
+  });
+
+  it('una clave de encuesta sin votos en la base no desplaza a las demás', () => {
+    const poll = { ...polls.media.values, 'x:Sin base': 2 };
+    const sh = nationalShares(project(prep.congressBase, poll));
+    expect(Math.abs(sh.PSOE - poll.PSOE)).toBeLessThan(0.05);
+  });
+
+  it('el ruido de encuesta conserva la suma', async () => {
+    const { noisyPoll, mulberry32, HISTORICAL_NOISE } = await import('../src/engine/montecarlo.js');
+    const rng = mulberry32(3);
+    const S = total(polls.media.values);
+    for (let i = 0; i < 50; i++) expect(Math.abs(total(noisyPoll(polls.media.values, rng, HISTORICAL_NOISE)) - S)).toBeLessThan(1e-9);
+  });
+
+  it('lista conjunta por candidatos: quien no la apoya vota a los de su partido', () => {
+    // 4 escaños, 3 marcas. PSOE 100 + FA 20 (92 % y 95 % la apoyan) frente a PP 105.
+    // Abstención: todos 92+19 = 111 > 105 → 3+1. Propios: PSOE 100+19 = 119, FA 92+20 = 112 → 3+1.
+    // Con PP 115: abstención 111 < 115 → PP 3 + izq 1; propios: 119, 119 > 115 > 112 → 2+2.
+    const c = { prov: 'X', seats: 4, maxVotes: 3 };
+    const merge = (nf) => ({ kind: 'senate-merge', params: { into: 'PSOE', from: ['FA'], where: 'all', intoShare: 0.92, share: 0.95, nonFollowers: nf } });
+    const prepX = { ...prep, congressBase: [{ id: 'X', votes: { PSOE: 1, PP: 1, FA: 1 }, blank: 0 }], senateBase: [{ ...c, id: 'X', votes: { PSOE: 100, FA: 20, PP: 115 } }], designated: {} };
+    expect(projectSenate(prepX, prepX.congressBase, [merge('abstencion')]).elected).toEqual({ PP: 3, PSOE: 1 });
+    expect(projectSenate(prepX, prepX.congressBase, [merge('propios')]).elected).toEqual({ PSOE: 2, PP: 2 });
+  });
+
+  it('con seguimiento del 100 % la lista conjunta equivale a sumar los votos', () => {
+    const full = scenarios.map((s) => (s.kind === 'senate-merge' || s.kind === 'senate-pact' ? { ...s, params: { ...s.params, intoShare: 1, share: 1, sharePP: 1, shareVox: 1 } } : s)).filter((s) => s.prob >= 1 && s.kind !== 'base');
+    const a = run(prep, polls.media.values, full).senate;
+    const b = run(prep, polls.media.values, full.map((s) => (s.params ? { ...s, params: { ...s.params, nonFollowers: 'abstencion' } } : s))).senate;
+    expect(a.right).toBe(b.right);
+  });
+});

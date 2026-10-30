@@ -38,18 +38,26 @@ function gaussian(rng) {
 
 const LEFT = BLOCS.investidura;
 
+// La encuesta con ruido suma lo mismo que la original: lo que gana un partido lo
+// pierden los demás en proporción a su voto. Sin esa restricción, lo no asignado
+// ("otros" y blanco) absorbería ±3 pp en cada simulación.
 export function noisyPoll(poll, rng, { sigmaBloc, sigmaParty }) {
   const out = {};
   const sum = (ps) => ps.reduce((a, p) => a + (poll[p] || 0), 0);
   const tr = sum(RIGHT);
   const tl = sum(LEFT);
   const swing = gaussian(rng) * sigmaBloc;
+  let before = 0;
+  let after = 0;
   for (const [p, v] of Object.entries(poll)) {
     let x = v + gaussian(rng) * sigmaParty * Math.sqrt(v / 10);
     if (RIGHT.includes(p) && tr) x += (swing * v) / tr;
     if (LEFT.includes(p) && tl) x -= (swing * v) / tl;
     out[p] = Math.max(0.05, x);
+    before += v;
+    after += out[p];
   }
+  if (after > 0) for (const p in out) out[p] *= before / after;
   return out;
 }
 
@@ -60,6 +68,10 @@ export function noisyPoll(poll, rng, { sigmaBloc, sigmaParty }) {
 // proyección central, como haría alguien antes de conocer el resultado.
 export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noise = DEFAULT_NOISE, iterations = 10, exterior = 'techo' } = {}) {
   const rng = mulberry32(seed);
+  // Generador aparte para sortear escenarios: así el ruido de encuesta de la iteración i
+  // es el mismo con y sin un escenario probable, y el efecto de una tarjeta (misma
+  // semilla en los dos cálculos) no se mezcla con ruido de Monte Carlo.
+  const scenarioRng = mulberry32(seed ^ 0x5bd1e995);
   const live = scenarios.filter((s) => s.prob > 0 && s.kind !== 'base');
   const central = exterior === 'fijo' ? project(prep.congressBase, poll) : null;
   const fixed = live.map((s) => {
@@ -73,10 +85,10 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
   const seatSum = {};
   const partyHist = {};
   const seatHist = { derecha: [], investidura: [], senadoDerecha: [] };
-  let rightMaj = 0, juntsKey = 0, senateMaj = 0, senate35 = 0, invAlone = 0, invJunts = 0;
+  let rightMaj = 0, rightCC = 0, juntsKey = 0, senateMaj = 0, senate35 = 0, invAlone = 0, invJunts = 0;
   const activeCount = Object.fromEntries(fixed.map((s) => [s.id, 0]));
   for (let i = 0; i < n; i++) {
-    const active = fixed.filter((s) => s.prob >= 1 || rng() < s.prob);
+    const active = fixed.filter((s) => s.prob >= 1 || scenarioRng() < s.prob);
     for (const s of active) activeCount[s.id]++;
     if (noise.sigmaProv) for (let j = 0; j < provNoise.length; j++) provNoise[j] = Math.exp(gaussian(rng) * noise.sigmaProv);
     const projected = project(prep.congressBase, noisyPoll(poll, rng, noise), { iterations, noise: noise.sigmaProv ? provNoise : null });
@@ -93,6 +105,9 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
     if (c.blocs.derecha >= MAJORITY) rightMaj++;
     // Junts decisivo: ni la derecha ni la investidura suman 176 solas, pero sí con Junts.
     else if (c.blocs.investidura < MAJORITY && c.blocs.investidura + c.blocs.junts >= MAJORITY) juntsKey++;
+    // CC votó sí a Feijóo (29-sep-2023) y a Sánchez (16-nov-2023): cuenta en la
+    // investidura, pero también puede sumar con la derecha.
+    if (c.blocs.derecha + (c.national.CC || 0) >= MAJORITY) rightCC++;
     if (c.blocs.investidura >= MAJORITY) invAlone++;
     if (c.blocs.investidura + c.blocs.junts >= MAJORITY) invJunts++;
     if (s.right >= s.majority) senateMaj++;
@@ -106,6 +121,7 @@ export function simulate(prep, poll, scenarios, { n = 5000, seed = 29112026, noi
     blocs: { derecha: summary(seatHist.derecha), investidura: summary(seatHist.investidura), senadoDerecha: summary(seatHist.senadoDerecha) },
     prob: {
       mayoriaDerecha: rightMaj / n,
+      mayoriaDerechaConCC: rightCC / n,
       juntsDecisivo: juntsKey / n,
       investiduraSola: invAlone / n,
       investiduraConJunts: invJunts / n,

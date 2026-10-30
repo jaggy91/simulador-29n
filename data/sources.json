@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T18:40:26.311Z",
+ "updated": "2026-10-30T02:01:48.917Z",
  "impactN": 1000,
  "cards": [
   {
@@ -114,17 +114,17 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -2
+     "senado": -4
     },
     "cisOficial": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -9
+     "senado": -10
     },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -12
+     "senado": -19
     }
    }
   },
@@ -154,18 +154,18 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
+     "derecha": -0.1,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": 0
     }
    }
@@ -217,7 +217,7 @@
    "type": "noticia",
    "date": "2026-10-26",
    "title": "PP y Vox pactan las listas del Senado: Vox se retira en seis provincias, el PP en tres y Vox va con candidato único en catorce",
-   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox. Objetivo declarado: frenar a «Senado de Progreso».",
+   "detail": "En las seis provincias sin Vox, el PP incluye un independiente propuesto por Vox en segundo o tercer puesto; en Canarias y Baleares, Vox no se presenta en ninguna isla (COPE). Objetivo declarado: frenar a «Senado de Progreso».",
    "outlet": "El Español",
    "sources": [
     "https://www.elespanol.com/espana/politica/20261026/pp-vox-llegan-acuerdo-listas-senado-abascal-retiran-provincias-feijoo/1003744434759_0.html",
@@ -241,23 +241,25 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 12
+     "senado": 16
     },
     "cisOficial": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 5
+     "senado": 6
     },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 22
+     "senado": 23
     }
    }
   },
   {
    "id": "data10-seguimiento-listas",
    "type": "noticia",
+   "sondeo": true,
+   "firm": "Data 10",
    "date": "2026-10-21",
    "title": "Encuesta Data 10: apoyarían la lista conjunta el 94 % de los votantes del PP y el 86 % de los de Vox; en la izquierda, el 92 % del PSOE y el 95 % del FA",
    "detail": "Publicada por OKDiario (trabajo de campo la semana del 21-oct; no se publica el tamaño de la muestra). Fija el seguimiento del pacto PP–Vox y de Senado de Progreso.",
@@ -290,17 +292,17 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 0
+     "senado": -2
     },
     "cisOficial": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 5
+     "senado": 4
     },
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 5
+     "senado": -1
     }
    }
   },
@@ -499,18 +501,18 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.3,
-     "pMayoria": 0.003,
-     "senado": 1
-    },
-    "cisOficial": {
-     "derecha": 0,
+     "derecha": 0.2,
      "pMayoria": 0,
      "senado": 0
     },
+    "cisOficial": {
+     "derecha": -0.1,
+     "pMayoria": 0.001,
+     "senado": 0
+    },
     "cis": {
-     "derecha": -0.2,
-     "pMayoria": -0.003,
+     "derecha": -0.3,
+     "pMayoria": -0.01,
      "senado": 0
     }
    }
@@ -544,18 +546,18 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.7,
+     "derecha": 0.8,
      "pMayoria": 0.004,
-     "senado": 1
+     "senado": 0
     },
     "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
+     "derecha": -0.1,
+     "pMayoria": 0.001,
      "senado": 0
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": -1
     }
    }
@@ -580,8 +582,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.7,
-     "pMayoria": -0.003,
+     "derecha": -0.5,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -626,8 +628,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.3,
-     "pMayoria": -0.001,
+     "derecha": -0.2,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -637,7 +639,7 @@
     },
     "cis": {
      "derecha": 0.1,
-     "pMayoria": 0,
+     "pMayoria": 0.004,
      "senado": -1
     }
    }
@@ -664,7 +666,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": -0.2,
      "pMayoria": -0.001,
      "senado": 0
     },
@@ -709,18 +711,18 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
-     "pMayoria": 0.002,
+     "derecha": 0.1,
+     "pMayoria": 0.004,
      "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
-     "pMayoria": 0,
-     "senado": -1
+     "pMayoria": 0.001,
+     "senado": 0
     },
     "cis": {
-     "derecha": 0.2,
-     "pMayoria": 0.004,
+     "derecha": 0.3,
+     "pMayoria": 0.006,
      "senado": 0
     }
    }
@@ -754,8 +756,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.5,
-     "pMayoria": -0.002,
+     "derecha": -0.4,
+     "pMayoria": 0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -765,7 +767,7 @@
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": 0.001,
+     "pMayoria": 0.004,
      "senado": -1
     }
    }
@@ -833,7 +835,7 @@
    "impact": {
     "media": {
      "derecha": 0,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -874,7 +876,7 @@
    "impact": {
     "media": {
      "derecha": -0.2,
-     "pMayoria": -0.001,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -884,7 +886,7 @@
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": 0,
+     "pMayoria": -0.001,
      "senado": 0
     }
    }
@@ -919,8 +921,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
-     "pMayoria": 0.001,
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -964,7 +966,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.2,
+     "derecha": 0.3,
      "pMayoria": 0.002,
      "senado": 0
     },
@@ -974,8 +976,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
-     "pMayoria": 0.001,
+     "derecha": 0.1,
+     "pMayoria": 0.002,
      "senado": 0
     }
    }
@@ -1046,7 +1048,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
+     "derecha": 0.2,
      "pMayoria": 0.001,
      "senado": 0
     },
@@ -1096,9 +1098,9 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -47.8,
-     "pMayoria": -0.949,
-     "senado": -83
+     "derecha": -45,
+     "pMayoria": -0.934,
+     "senado": -79
     },
     "cis": {
      "derecha": 0,
@@ -1140,8 +1142,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0.7,
-     "pMayoria": 0.021,
+     "derecha": 1.2,
+     "pMayoria": 0.039,
      "senado": -1
     }
    }
@@ -1179,9 +1181,9 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.6,
-     "pMayoria": -0.018,
-     "senado": -3
+     "derecha": -1.1,
+     "pMayoria": -0.022,
+     "senado": -4
     }
    }
   }

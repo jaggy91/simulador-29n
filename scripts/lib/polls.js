@@ -102,6 +102,10 @@ export function pollAverage(rows, { asOf, windowDays = 21, halfLife = 7, include
   const weights = used.map((r) => Math.pow(0.5, days(r.date, asOf) / halfLife) * Math.sqrt(Math.min(r.sample || 1000, 3000)));
   const resolved = used.map((r) => resolveJoint(r, rows));
   const W = weights.reduce((a, b) => a + b, 0);
+  // Una columna sin mapear (x:…) no se puede proyectar: el motor la pasa a lo no
+  // asignado. Se avisa para revisar parties-map.js.
+  const unmapped = [...new Set(resolved.flatMap((v) => Object.keys(v).filter((k) => k.startsWith('x:'))))];
+  if (unmapped.length) console.warn(`Aviso: columnas de encuesta sin mapear a la base (${asOf}): ${unmapped.join(', ')}`);
   // items: una tarjeta por encuesta, con su peso normalizado y sus cifras resueltas.
   const items = used.map((r, i) => ({ id: `encuesta:${r.firm}|${r.date}`, firm: r.firm, date: r.date, sample: r.sample, url: r.url, weight: Math.round((1e4 * weights[i]) / W) / 1e4, values: resolved[i] }));
   return { used, items, values: average(resolved, weights) };

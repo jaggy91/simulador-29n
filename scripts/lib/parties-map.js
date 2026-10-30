@@ -14,6 +14,10 @@ const BY_KEY = {
   'Sumem per Guanyar': 'SUMAR',
   'Sumar Més': 'SUMAR',
   'Republican Left of Catalonia': 'ERC',
+  // Nombres de coalición de ERC en 2019 que siguen en algunas tablas de encuestas de 2023.
+  'Republican Left of Catalonia–Sovereigntists': 'ERC',
+  'Republican Left of Catalonia-Sovereigntists': 'ERC',
+  'Republican Left of Catalonia–Catalonia Yes': 'ERC',
   'Together for Catalonia (2020)': 'JUNTS',
   'EH Bildu (2023)': 'BILDU',
   'Basque Nationalist Party': 'PNV',
