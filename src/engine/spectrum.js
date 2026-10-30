@@ -27,7 +27,7 @@ export const LEVERS = {
       ops: [{ op: 'scenario', scenario: { id: 'VOTO_UTIL_IZQ', kind: 'transfer', prob: 1, params: { from: 'FA', to: 'PSOE', where: 'small5', fraction: 0.3 } } }],
     },
     {
-      id: 'PACTO_FLOJO', level: 3,
+      id: 'PACTO_FLOJO', level: 3, requires: 'senate-pact',
       label: 'El pacto PP–Vox del Senado funciona mal: solo el 60 % de sus votantes sigue la consigna',
       detail: 'Afecta solo al Senado. Por defecto, 94 % de los votantes del PP y 86 % de los de Vox (encuesta Data 10).',
       ops: [{ op: 'pact-share', share: 0.6 }],
@@ -53,7 +53,7 @@ export const LEVERS = {
       ops: [{ op: 'scenario', scenario: { id: 'VOTO_UTIL_DCHA', kind: 'transfer', prob: 1, params: { from: 'VOX', to: 'PP', where: 'small5', fraction: 0.3 } } }],
     },
     {
-      id: 'PACTO_PLENO_SALF', level: 3,
+      id: 'PACTO_PLENO_SALF', level: 3, requires: 'senate-pact',
       label: 'El pacto PP–Vox funciona al 100 % y SALF se hunde a favor de Vox y PP',
       detail: 'Consigna seguida por todos (Senado; por defecto 94 % y 86 %, Data 10). Hipótesis: el 50 % del voto de SALF va a Vox, el 30 % al PP y el resto se abstiene.',
       ops: [{ op: 'pact-share', share: 1 }, { op: 'move', from: 'SALF', to: { VOX: 0.5, PP: 0.3 } }],
@@ -127,10 +127,16 @@ export function activeLevers(level) {
 }
 
 // Encuesta y escenarios para un nivel, a partir de los oficiales.
+// Una palanca con `requires` solo se aplica si ese tipo de escenario está vigente (por
+// ejemplo, el seguimiento del pacto PP–Vox, si las fuentes lo dan por confirmado); si
+// no, se omite y se indica en `skipped`.
 export function levelInputs(level, poll, scenarios) {
   let p = { ...poll };
   let sc = scenarios.map((s) => (s.params ? { ...s, params: { ...s.params } } : { ...s }));
-  const levers = activeLevers(level);
+  const live = (kind) => scenarios.some((s) => s.kind === kind && s.prob > 0);
+  const all = activeLevers(level);
+  const levers = all.filter((l) => !l.requires || live(l.requires));
+  const skipped = all.filter((l) => !levers.includes(l)).map((l) => l.id);
   for (const l of levers) {
     for (const op of l.ops) {
       if (op.op === 'scenario') {
@@ -142,7 +148,7 @@ export function levelInputs(level, poll, scenarios) {
       }
     }
   }
-  return { poll: p, scenarios: sc, active: levers.map((l) => l.id) };
+  return { poll: p, scenarios: sc, active: levers.map((l) => l.id), skipped };
 }
 
 // Puntos de vuelco: primer nivel, desde el centro, en que un resultado pasa a ser más

@@ -1,9 +1,8 @@
 name: Actualizar y publicar
 
 on:
-  # Apagado hasta comprobar la primera publicación. Para activarlo, quitar el comentario.
-  # schedule:
-  #   - cron: '17 * * * *' # cada hora (minuto 17 para evitar la congestión de la hora en punto)
+  schedule:
+    - cron: '17 * * * *' # cada hora (minuto 17 para evitar la congestión de la hora en punto)
   push:
     branches: [main]
   workflow_dispatch:
@@ -12,6 +11,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 # Una sola ejecución a la vez: un cron no pisa a otro ni a un push.
 concurrency:
@@ -22,8 +22,8 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -39,6 +39,22 @@ jobs:
       # El motor debe seguir reproduciendo 2023 antes de publicar nada.
       - name: Tests del motor (2023)
         run: npx vitest run test/congreso-2023.test.js test/senado-2023.test.js test/escenarios-2023.test.js
+
+      # Candidaturas proclamadas en el BOE (≈2-nov): si las lee y cuadran, crea una
+      # tarjeta oficial con las listas reales del Senado; si no, abre un aviso.
+      - name: Vigilante del BOE
+        id: boe
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
+        run: node scripts/watch-boe.js
+      - name: Aviso si el BOE no cuadra
+        if: steps.boe.outputs.problemas == 'si'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Revisar las candidaturas proclamadas del BOE"
+          if [ -z "$(gh issue list --state open --search "$title in:title" --json number --jq '.[].number')" ]; then
+            gh issue create --title "$title" --body "El vigilante encontró la proclamación pero no la aplicó: ver \`problems\` en data/candidaturas-2026.json (ejecución ${{ github.run_id }})."
+          fi
 
       - name: Encuestas
         if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
@@ -72,7 +88,7 @@ jobs:
             echo "Sin cambios en /data"
           else
             git commit -m "Datos: actualización automática $(date -u +'%Y-%m-%d %H:%M') UTC"
-            git push
+            git pull --rebase -q && git push
           fi
 
       - name: Web
@@ -88,7 +104,7 @@ jobs:
             npx vite build --mode veda --outDir dist-veda && node scripts/check-veda.js dist-veda
           fi
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 

@@ -142,11 +142,16 @@ export function projectSenate(prep, projected, active) {
     const lists = {};
     for (const m of merges) {
       const p = m.params;
-      if (p.where === 'provincial4' && c.seats !== 4) continue;
-      if (p.except?.includes(c.prov)) continue;
-      // Exclusiones por comunidad o por circunscripción (p. ej. Senado de Progreso:
-      // ni Cataluña ni Canarias salvo La Gomera).
-      if (p.excludeCcaa?.includes(c.ccaa) && !p.includeIds?.includes(c.id)) continue;
+      if (p.ids) {
+        // Lista exacta de circunscripciones (candidaturas proclamadas en el BOE).
+        if (!p.ids.includes(c.id)) continue;
+      } else {
+        if (p.where === 'provincial4' && c.seats !== 4) continue;
+        if (p.except?.includes(c.prov)) continue;
+        // Exclusiones por comunidad o por circunscripción (p. ej. Senado de Progreso:
+        // ni Cataluña ni Canarias salvo La Gomera).
+        if (p.excludeCcaa?.includes(c.ccaa) && !p.includeIds?.includes(c.id)) continue;
+      }
       if (!p.from.some((f) => votes[f])) continue;
       mergeList(votes, lists, c, p);
     }
@@ -214,18 +219,20 @@ function pactLists(votes, lists, c, p) {
   const PP = votes.PP || 0;
   const VOX = votes.VOX || 0;
   const n = c.maxVotes;
-  if (p.voxWithdraws?.includes(c.prov) && VOX) {
+  // Provincia (prensa: las islas siguen a su provincia) o circunscripción exacta (BOE).
+  const at = (list) => list?.includes(c.prov) || list?.includes(c.id);
+  if (at(p.voxWithdraws) && VOX) {
     const ind = n >= 2 ? 1 : 0;
     addCandidates(lists, jointCandidates([
       { label: 'PP', votes: PP, share: sharePP, seats: n - ind },
       { label: 'PP', votes: VOX, share: shareVox, seats: ind },
     ], p.nonFollowers));
-  } else if (p.ppWithdraws?.includes(c.prov) && PP) {
+  } else if (at(p.ppWithdraws) && PP) {
     addCandidates(lists, jointCandidates([
       { label: 'VOX', votes: VOX, share: shareVox, seats: n },
       { label: 'VOX', votes: PP, share: sharePP, seats: 0 },
     ], p.nonFollowers));
-  } else if (p.voxSingle?.includes(c.prov) && VOX && PP) {
+  } else if (at(p.voxSingle) && VOX && PP) {
     lists.PP = Array.from({ length: n }, (_, i) => PP + (i < n - 1 ? VOX * shareVox : 0));
     lists.VOX = [VOX];
   } else {

@@ -26,6 +26,7 @@ for (const [key, src] of Object.entries(polls.sources)) {
     levels.push({
       level,
       active: input.active,
+      skipped: input.skipped,
       poll: Object.fromEntries(Object.entries(input.poll).map(([k, v]) => [k, Math.round(v * 100) / 100])),
       central: {
         congress: c.congress.national,
@@ -36,6 +37,15 @@ for (const [key, src] of Object.entries(polls.sources)) {
     });
     const b = c.congress.blocs;
     console.log(`${src.label.padEnd(32)} ${String(level).padStart(3)}  dcha ${b.derecha} inv ${b.investidura} junts ${b.junts} · P(dcha) ${(100 * mc.prob.mayoriaDerecha).toFixed(1)} % · Senado dcha ${c.senate.right}`);
+  }
+  // Un nivel que, en esta fuente, perjudica al lado que dice favorecer (D'Hondt puede
+  // hacerlo): P(mayoría de la derecha) se mueve al revés más de 1 punto respecto al
+  // nivel anterior hacia el centro.
+  for (const l of levels) {
+    if (!l.level) continue;
+    const prev = levels.find((x) => x.level === l.level - Math.sign(l.level));
+    const d = l.montecarlo.prob.mayoriaDerecha - prev.montecarlo.prob.mayoriaDerecha;
+    l.contrary = Math.sign(l.level) * d < -0.01;
   }
   sources[key] = { label: src.label, levels, tipping: tippingPoints(levels) };
   console.log('  vuelco:', JSON.stringify(sources[key].tipping));

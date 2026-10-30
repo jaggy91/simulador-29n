@@ -71,6 +71,20 @@ const mergeRange = bySource((k) => {
   return { eligible: eligible.length, min: d.slice(0, 3).reduce((x, y) => x + y, 0), max: d.slice(-3).reduce((x, y) => x + y, 0) };
 });
 
+// Voto de los nacionalizados (Ley de Nietos, hoy suspendido): a partir de qué
+// participación movería escaños, con el reparto del exterior en 2023 y con todo al PSOE
+// (colocado según el censo, no de forma óptima). La realista usa el 8,87 % de 2023.
+export const TURNOUTS = [0.0887, 0.15, 0.25, 0.4, 0.6, 0.8, 1];
+const exteriorScan = bySource((k) => Object.fromEntries([['cera2023', 'cera2023'], ['todoPSOE', { PSOE: 1 }]].map(([name, split]) => {
+  const ref = central(base.scenarios, k);
+  const at = TURNOUTS.map((turnout) => {
+    const sc = base.scenarios.map((s) => (s.id === 'VOTO_EXTERIOR' ? { ...s, prob: 1, params: { ...s.params, mode: 'realista', turnout, split } } : s));
+    const r = central(sc, k);
+    return { turnout, votes: Math.round(163020 * turnout), derecha: r.derecha - ref.derecha, senado: r.senado - ref.senado };
+  });
+  return [name, { at, firstMove: at.find((x) => x.derecha || x.senado)?.turnout ?? null }];
+})));
+
 // Ruido del Monte Carlo y Coalición Canaria (probabilidades, n simulaciones).
 const noise = bySource((k) => {
   const h = simulate(prep, base.polls[k], base.scenarios, { n });
@@ -78,7 +92,7 @@ const noise = bySource((k) => {
   return { historico: h.prob.mayoriaDerecha, video: v.prob.mayoriaDerecha, conCC: h.prob.mayoriaDerechaConCC };
 });
 
-writeJSON('sensitivity', { updated: new Date().toISOString(), latestPoll: polls.latestPoll, n, base: bySource((k) => central(base.scenarios, k)), stress, rows, mergeRange, noise });
+writeJSON("sensitivity", { updated: new Date().toISOString(), latestPoll: polls.latestPoll, n, base: bySource((k) => central(base.scenarios, k)), stress, rows, mergeRange, exteriorScan, noise });
 
 const fmt = (r) => `${r.derecha}/${r.senado}`;
 console.log('Base (derecha Congreso/Senado):', sources.map((k) => `${k} ${fmt(stress[k].base)}`).join(' · '));

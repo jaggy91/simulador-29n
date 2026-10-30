@@ -137,6 +137,8 @@ export function Spectrum({ spectrum, source, level, onLevel }) {
         <strong>{level === 0 ? 'Hoy: proyección oficial' : `${Math.abs(level)} ${Math.abs(level) === 1 ? 'paso' : 'pasos'} hacia la ${level < 0 ? 'izquierda' : 'derecha'}`}</strong>
         <span className="small ink-2">
           {level === 0 ? 'Sin escenarios añadidos.' : `${cur.active.length} ${cur.active.length === 1 ? 'escenario activo' : 'escenarios activos'} a favor de la ${level < 0 ? 'izquierda' : 'derecha'}.`}
+          {cur.skipped?.length ? ` ${cur.skipped.length === 1 ? 'Se omite 1 escenario que ya no está vigente' : `Se omiten ${cur.skipped.length} escenarios que ya no están vigentes`}.` : ''}
+          {cur.contrary ? ` Con esta fuente, este paso perjudica a la ${level < 0 ? 'izquierda' : 'derecha'} en lugar de favorecerla (D'Hondt).` : ''}
         </span>
       </div>
 

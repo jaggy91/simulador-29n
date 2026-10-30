@@ -7,6 +7,7 @@ import { Scenarios } from './components/Scenarios.jsx';
 import { SeatsInPlay, ProvinceTable, PollTable } from './components/Tables.jsx';
 import { Spectrum, tippingSummary } from './components/Spectrum.jsx';
 import { Sources } from './components/Sources.jsx';
+import { LiveResults } from './components/LiveResults.jsx';
 import { openNotice } from './components/Notice.jsx';
 const Methodology = lazy(() => import('./components/Methodology.jsx'));
 import { modelInputs } from '../engine/evidence.js';
@@ -94,6 +95,8 @@ export default function App() {
         setActiveSet(new Set(cards.filter((c) => c.defaultActive && c.toggleable).map((c) => c.id)));
       })
       .then(() => loadJSON('spectrum').then((spectrum) => setD((x) => ({ ...x, spectrum }))).catch(() => {}))
+      // Resultados provisionales: solo existen desde el cierre de las urnas del 29-N.
+      .then(() => loadJSON('results').then((results) => setD((x) => ({ ...x, results }))).catch(() => {}))
       .catch((e) => setError(e.message));
   }, []);
 
@@ -218,6 +221,7 @@ export default function App() {
         )}
 
         <div className={busy ? 'busy' : ''}>
+          {d.results?.escrutado > 0 && <LiveResults results={d.results} projection={r.central.congress} />}
           <Hero r={r} caption={`Resultado con las fuentes activas (${active.size})${ownPoll ? ' y tus porcentajes' : ''} · no es una predicción`} />
           <Chambers r={r} congressSub={`Resultado central con las fuentes activas (${ownPoll ? 'tus porcentajes' : inText(d.polls.sources[source].label)}). 350 escaños.`} />
 

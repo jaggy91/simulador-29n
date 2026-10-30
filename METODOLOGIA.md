@@ -24,7 +24,7 @@
   - El censo exterior del INE para el 29-N.
 - Contraste externo: el agregador de Demócrata (15 institutos) da PP 31,4 · PSOE 26,9 · Vox 18,8; nuestra media da 31,3 · 26,8 · 19,2.
 - Pendiente:
-  - La proclamación oficial de candidaturas en el BOE (≈2-nov). Fija dónde va Senado de Progreso y el detalle del pacto.
+  - La proclamación oficial de candidaturas en el BOE (≈2-nov). Fija dónde va Senado de Progreso y el detalle del pacto. Se aplica sola cuando salga (§4.5).
   - La actualización automática de noticias (fase F4).
 
 **¿"Si las elecciones fueran hoy", saldría esto?**
@@ -270,6 +270,14 @@ El seguimiento del socio solo se midió para el FA; el modelo lo aplica igual al
 - **El PP se retira en 3** (Gipuzkoa, Girona y Tarragona) y no pone independientes en las listas de Vox (El Español): los votantes del PP que no apoyan la lista de Vox no tienen candidato propio.
 - **Vox presenta un único candidato en 14 provincias:** los votantes de Vox que siguen la consigna dan sus otras 2 marcas a los dos primeros candidatos del PP.
 
+**Candidaturas proclamadas (BOE, automático).** `scripts/watch-boe.js` revisa cada hora el sumario del BOE (API de datos abiertos). Cuando aparecen las candidaturas proclamadas del Real Decreto 806/2026:
+1. lee las listas al Senado de cada una de las 60 circunscripciones (`lib/proclamacion.js`);
+2. comprueba que están todas, que ninguna lista lleva más candidatos que escaños y que los resultados son plausibles;
+3. si todo cuadra, crea una tarjeta **oficial** con las circunscripciones reales de Senado de Progreso (las que tienen una lista con ese nombre) y del pacto: Vox sin lista y PP con ella → retirada de Vox; al revés → retirada del PP; Vox con un solo candidato → candidato único. Al ser oficial, supera a la prensa en esos parámetros (§4.10), y el supuesto de las "3 que sobran" deja de serlo.
+4. Si algo no cuadra, no aplica nada, lo guarda en `data/candidaturas-2026.json` (`problems`) y el workflow abre un aviso.
+
+Probado con la proclamación de 2023 (BOE-A-2023-15066): lee las 59 circunscripciones de entonces, y en 58 el número de listas coincide con los resultados oficiales. Con ese BOE se niega a aplicar, como debe, porque falta Formentera (no existía como circunscripción) y no hay Senado de Progreso. La composición de las listas conjuntas (cuántos candidatos de cada partido) no se puede leer del BOE con seguridad y sigue siendo un supuesto.
+
 **Descartado por falta de base real**
 - *"Vox se retira casi en toda España"*: era una hipótesis de análisis; el pacto real del 26-oct la supera.
 - *Una "decena larga" de provincias sin lista del FA*: ninguna fuente lo sostiene; el FA y Maíllo lo desmintieron el 21-oct.
@@ -300,6 +308,8 @@ El Supremo mantiene suspendido el voto de los 163.020 nacionalizados (23-oct), a
 - En el Monte Carlo se recoloca en cada iteración, es decir, con información perfecta. Ningún electorado real se reparte así.
 
 Con los datos reales, el modo realista no mueve ningún escaño; el techo es solo una cota.
+
+**¿Es sólido ese cero?** (`data/sensitivity.json` → `exteriorScan`). Con el reparto del exterior de 2023, **ni con una participación del 100 %** (163.020 votos) se mueve un escaño, en ninguna fuente. Solo si votaran todos al PSOE (colocados según el censo, no de forma óptima) empezaría a moverse: −1 escaño para la derecha desde un 15–25 % de participación y hasta −4 con el 100 %. El Senado no se mueve en ningún caso. No se modela el crecimiento ordinario del censo exterior (+444.335 electores desde 2023), parte del cual son nacionalizados que ya pueden votar (§7).
 
 <!-- veda -->
 
@@ -362,6 +372,9 @@ El error provincial es independiente entre provincias: no hay un componente regi
 - **En la web:** tiene pestaña propia (`#espectro`). El fondo se tiñe del color del bloque hacia el que se avanza, hasta un 30 % en el extremo. La posición se indica también con texto, así que el color no es la única pista.
 - **Niveles:** 9, de −4 a +4. El nivel 0 es la proyección oficial.
 - **Cómo se acumulan:** cada nivel hacia un lado añade un escenario pensado a favor de ese bloque, del más plausible al menos plausible. Con D'Hondt, alguno puede no favorecerlo en todas las fuentes (ver el resultado, abajo). Cuando un nivel intensifica uno anterior (marcado como "sustituye"), el anterior se descarta.
+- **Palancas condicionadas:** las del pacto PP–Vox (nivel 3) solo se aplican si el pacto está vigente en las fuentes; si no, se omiten y la web lo indica.
+- **Pasos que no favorecen:** si en una fuente un paso perjudica al lado que dice favorecer (P(mayoría) se mueve al revés más de 1 punto), queda marcado (`contrary`) y la web lo avisa.
+- Las palancas en sí y sus intensidades (30 % de voto útil, 60 % de seguimiento, 50/30 % de SALF, −25 % de desmovilización) siguen fijadas a mano en `src/engine/spectrum.js`: son hipótesis de laboratorio.
 - **Retiradas de listas:** ya no son posibles tras el cierre de candidaturas. Se emulan con "voto útil": el partido sigue presentándose, pero una fracción de su voto pasa a otro.
 - **Por qué no hay nivel 5:** más allá del fallo completo de las encuestas de 2023, que es un dato real, no queda ningún escenario con base real que mueva más el resultado. El voto de los nacionalizados, con su participación y su reparto reales, no mueve ningún escaño (§4.7), y el modo techo es una cota teórica, no un escenario. Los niveles de intensidad son hipótesis de laboratorio; se apoyan en datos reales cuando existen (el error de 2023, la encuesta de seguimiento).
 
@@ -632,6 +645,13 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
   - **Comprobación diaria:** cada ejecución del workflow compila también la versión de veda y comprueba que no lleva archivos de encuestas ni nombres de empresas de sondeos (`scripts/check-veda.js`).
   - **Pendiente de revisión legal:** el repositorio de GitHub conserva, en su historial, los datos de encuestas anteriores a la veda.
 
+**Noche electoral** (`scripts/fetch-results.js`, workflow `results.yml`). Al terminar la veda (20:00 UTC del 29-N, 21:00 peninsulares), un workflow lee cada 5 minutos, hasta las 06:00 UTC del 30-N, el escrutinio provisional:
+- **Fuente:** el escrutinio provisional del Ministerio del Interior tal como lo publica **RTVE** en ficheros JSON (total nacional y 52 provincias). infoelectoral no responde fuera de España, y RTVE recibe los mismos datos por el canal de Interior para medios.
+- **Contraste:** el total nacional se compara con el que publica **Público**; la web dice si coinciden.
+- **En la web:** un bloque encima de todo con el porcentaje escrutado, la hora, el hemiciclo y los escaños frente a la proyección, con la advertencia de que no es el resultado oficial.
+- **Probado con 2023:** las 52 provincias, 350 escaños y el reparto real (PP 137, PSOE 121, Vox 33, Sumar 31…), coincidente con Público.
+- **Después:** el escrutinio definitivo lo publica la Junta Electoral Central en el BOE. La ruta de 2026 se detecta sola en la página de RTVE.
+
 **Aviso inicial en la web** (`src/app/components/Notice.jsx`): antes de entrar, el visitante lee qué es el simulador, su objetivo, cómo se hizo y de qué fuentes sale, y lo acepta marcando una casilla.
 - Indica que el proyecto se desarrolló con ayuda de inteligencia artificial (Claude, de Anthropic) para el código, la lectura de las fuentes oficiales y las comprobaciones.
 - Enlaza a este documento, que la web muestra en la sección **Metodología** (`#metodologia`). Se puede leer antes de aceptar el aviso.
@@ -650,6 +670,8 @@ npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
 npm run spectrum      # espectro izquierda ↔ derecha → data/spectrum.json
 npm run sensitivity   # prueba de estrés y §7 → data/sensitivity.json
+node scripts/watch-boe.js --dry   # candidaturas proclamadas del BOE (--date AAAA-MM-DD --decree 400/2023 para probar con 2023)
+node scripts/fetch-results.js --year 2023 --month 7   # lector de resultados, probado con 2023
 ```
 
 **Lista de comprobación**
@@ -719,3 +741,8 @@ npm run sensitivity   # prueba de estrés y §7 → data/sensitivity.json
 | 28-oct | Lista explícita de las 50 circunscripciones de Senado de Progreso; seguimiento del FV, Podemos en el bloque, `canVote`, σ_p y límites del backtest declarados como supuestos | Segunda auditoría |
 | 30-oct | Europeas 2024 desde los ficheros oficiales del Ministerio del Interior en lugar de Wikipedia | Fuente oficial. Mismas cifras con ±0,05 pp de redondeo; P(mayoría) varía una décima. infoelectoral solo responde desde España: la descarga es puntual y el ZIP queda en caché |
 | 30-oct | Wikipedia se mantiene como índice de encuestas, y cada encuesta se verifica automáticamente por otro canal (publicación original, sus gráficos o el RSS del medio); la tarjeta muestra el canal o "sin verificar" | Al sustituir Wikipedia por fuentes oficiales solo se hallaron errores en resultados ya cerrados (Congreso y Senado 2023) y desfase en los designados; en las encuestas comprobadas no hubo discrepancias. Así el sistema trabaja solo y se ve qué está confirmado |
+| 30-oct | Vigilante del BOE: las candidaturas proclamadas fijan solas las circunscripciones de Senado de Progreso y del pacto, mediante una tarjeta oficial; si algo no cuadra, aviso y no se aplica | Que el sistema funcione solo con el dato oficial en cuanto se publica |
+| 30-oct | Noche electoral: escrutinio provisional de Interior vía RTVE cada 5 minutos, contrastado con Público | infoelectoral no responde fuera de España; RTVE recibe el mismo dato por el canal para medios |
+| 30-oct | Voto de los nacionalizados: medido el punto de corte de participación | Comprobar si el "no mueve escaños" es sólido: lo es con el reparto de 2023 |
+| 30-oct | Espectro: las palancas del pacto solo se aplican si está vigente, y se marcan los pasos que no favorecen al lado que dicen | Que el laboratorio no se quede viejo con las noticias |
+| 30-oct | Cron horario activado; acciones de GitHub actualizadas (Node 20 retirado) | Funcionamiento autónomo |
