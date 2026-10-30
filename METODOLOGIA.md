@@ -38,9 +38,9 @@ Con la incertidumbre por defecto (5.000 simulaciones), contrastada con una sola 
 
 | Fuente | Central | Media MC | Intervalo 90 % | P(≥ 176) | P(≥ 176) con CC |
 |---|---|---|---|---|---|
-| Media de encuestas | 200 | 199,0 | **180–218** | **97,9 %** | 98,2 % |
-| CIS · estimación oficial | 155 | 154,1 | **131–175** | **4,6 %** | 5,0 % |
-| CIS · reestimaciones independientes | 187 | 182,9 | **163–202** | **74,0 %** | 76,4 % |
+| Media de encuestas | 200 | 199,0 | **180–218** | **98,0 %** | 98,2 % |
+| CIS · estimación oficial | 155 | 154,2 | **131–175** | **4,6 %** | 5,0 % |
+| CIS · reestimaciones independientes | 187 | 182,9 | **163–202** | **74,0 %** | 76,5 % |
 
 Las tres fuentes no coinciden. La estimación oficial del CIS da al PSOE 34 % y al PP 22,3 %, 12 puntos de diferencia que ninguna empresa privada recoge; las reestimaciones independientes de los mismos datos brutos dejan PP y PSOE empatados. Por eso se muestran por separado y no se promedian.
 
@@ -70,7 +70,7 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 | `data/congreso-2023.json` | Votos de cada candidatura por provincia, blancos, válidos y electos (52 circ.) | **BOE-A-2023-18907** (Junta Electoral Central, escrutinio general): tablas HTML de los Cuadros II y III y Cuadro I del PDF | `build-oficial-2023.js` | En cada provincia, suma de candidaturas = Cuadro I; candidaturas + blanco = válidos; escaños = total. Idéntico voto a voto a la versión anterior (Wikipedia) |
 | `data/senado-2023.json` | Votos de cada candidato y electos (59 circ.) | **BOE-A-2023-18907** (relación de candidatos electos y no electos, PDF), con la corrección **BOE-A-2023-19537** | `build-oficial-2023.js` | En cada circunscripción, electos = escaños; 208 en total; PP 120 |
 | `data/cera-voto-2023.json` | Voto de los residentes en el extranjero en 2023, por provincia y partido | **Junta Electoral Central** (resolución de 24-oct-2023, PDF de resultados por provincias) | `build-cera-voto-2023.js` | Se anotan en el propio archivo los descuadres del PDF oficial |
-| `data/europeas-2024.json` | % por provincia (1 decimal) | en.wikipedia, "Results of the 2024 European Parliament election in Spain" | `build-europeas.js` | 52 provincias, sin celdas vacías |
+| `data/europeas-2024.json` | % por provincia sobre válidos (2 decimales) | **Ministerio del Interior**, resultados oficiales (`07202406_TOTA.zip`, ficheros 03, 07 y 08) | `build-europeas.js`, `lib/interior.js` | En cada provincia, suma de candidaturas = total oficial. Coincide con la versión anterior (Wikipedia) con ±0,05 pp de redondeo |
 | `data/andaluzas-2026.json` | % por provincia, autonómicas del 17-may-2026 | en.wikipedia | `build-andaluzas.js` | 8 provincias |
 | `data/seats-2026.json` | Diputados por provincia | **BOE-A-2026-20742** (RD 806/2026), anexo | `build-seats.js` | 52 circ., 350. Cambios frente a 2023: Madrid 37→38, Cádiz 9→8 |
 | `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos | `build-designados.js` | Suma 58 |
@@ -93,7 +93,7 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
   - Solución: se usan las filas provinciales y los electores del INE, y cada descuadre queda anotado en `data/cera-voto-2023.json` → `notes`.
 - **infoelectoral.interior.gob.es, senado.es y BOJA:** se descargarán desde GitHub Actions.
 - **Datos que siguen saliendo de Wikipedia:**
-  - europeas 2024 y andaluzas 2026 (base territorial de Podemos, SALF y AA);
+  - andaluzas 2026 (base territorial de AA);
   - composición de los designados;
   - el índice de encuestas (cada encuesta enlaza a su publicación original).
 - **Tabla de designados de Wikipedia:** desfasada en 4 comunidades (§4.6).
@@ -508,7 +508,7 @@ Recalculado el 28-oct con el ruido que conserva la suma (§4.8) y con la columna
 
 | Partido | Media de encuestas | CIS oficial | CIS reestimado |
 |---|---|---|---|
-| PP | 129 [114–145] | 91 [76–105] | 118 [102–134] |
+| PP | 129 [114–146] | 91 [76–105] | 118 [102–134] |
 | PSOE | 108 [92–123] | 151 [133–171] | 119 [103–135] |
 | Vox | 68 [57–81] | 63 [51–75] | 65 [52–75] |
 | FA | 8 [4–13] | 7 [3–12] | 11 [6–17] |
@@ -516,8 +516,8 @@ Recalculado el 28-oct con el ruido que conserva la suma (§4.8) y con la columna
 | EH Bildu | 7 [2–11] | 8 [5–13] | 7 [2–11] |
 | Junts | 6 [2–9] | 4 [1–7] | 6 [2–9] |
 | PNV | 4 [1–7] | 2 [0–5] | 4 [1–7] |
-| **Derecha** | **199 [180–218] · P(≥176) 97,9 %** | **155 [131–175] · P(≥176) 4,6 %** | **183 [163–202] · P(≥176) 74,0 %** |
-| Derecha + CC, P(≥176) | 98,2 % | 5,0 % | 76,4 % |
+| **Derecha** | **199 [180–218] · P(≥176) 98,0 %** | **155 [131–175] · P(≥176) 4,6 %** | **183 [163–202] · P(≥176) 74,0 %** |
+| Derecha + CC, P(≥176) | 98,2 % | 5,0 % | 76,5 % |
 | Investidura sin Junts | 144 [124–163] | 190 [169–213] · P(≥176) 86,3 % | 160 [140–179] |
 | P(Junts decisivo) | 0,9 % | 5,7 % | 10,6 % |
 
@@ -529,8 +529,8 @@ Ningún partido sin dato en la encuesta (CUP, UPL, NC, Soria ¡Ya!, Existe) lleg
 |---|---|---|---|
 | Derecha, central | 163 | 84 | 140 |
 | Derecha, mediana [90 %] | 160 [135–172] | 87 [72–117] | 140 [106–163] |
-| P(mayoría absoluta, ≥134) | 95,8 % | 0,7 % | 62,3 % |
-| P(3/5, ≥161) | 49,2 % | 0 % | 8,8 % |
+| P(mayoría absoluta, ≥134) | 95,8 % | 0,7 % | 62,4 % |
+| P(3/5, ≥161) | 49,3 % | 0 % | 8,8 % |
 
 **Prueba de estrés** (proyección central con el error de la media de encuestas de 2023 a 33 días aplicado a hoy; `data/sensitivity.json` → `stress`)
 
@@ -573,8 +573,8 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 | Seguimiento de las listas conjuntas | Data 10: PP 94 %, Vox 86 %; PSOE 92 %, socio 95 % | 100 % (sin la tarjeta) | Senado 163 → 165 | 84 → 80 | 140 → 141 | Resultados del 29-N |
 | Circunscripciones de Senado de Progreso | Todas salvo Cataluña y Canarias (excepto La Gomera) (prensa del 17-oct) | las 60 | Senado 163 → 162 | 84 → 84 | 140 → 138 | **BOE, candidaturas proclamadas** |
 | Retirada de Vox en las islas | todas las de Canarias y Baleares (COPE, 26-oct) | — | dato; las 11 islas aportan 7 de los +16 del pacto con la media | | | **BOE, candidaturas proclamadas** |
-| Ruido del Monte Carlo | histórico (backtest, §5.3) | estrecho (`VIDEO_NOISE`) | P(mayoría, 2.000 sim.) 98,1 % → 99,6 % | 4,8 % → 1,6 % | 73,1 % → 80,5 % | Backtest (§5.3) |
-| Bloque de CC | investidura (votación del 16-nov-2023) | con la derecha (también votó a Feijóo) | P(mayoría) 97,9 % → 98,2 % | 4,6 % → 5,0 % | 74,0 % → 76,4 % | Votación de investidura tras el 29-N |
+| Ruido del Monte Carlo | histórico (backtest, §5.3) | estrecho (`VIDEO_NOISE`) | P(mayoría, 2.000 sim.) 98,1 % → 99,6 % | 4,8 % → 1,6 % | 73,0 % → 80,5 % | Backtest (§5.3) |
+| Bloque de CC | investidura (votación del 16-nov-2023) | con la derecha (también votó a Feijóo) | P(mayoría) 98,0 % → 98,2 % | 4,6 % → 5,0 % | 74,0 % → 76,5 % | Votación de investidura tras el 29-N |
 
 <!-- /veda -->
 
@@ -704,3 +704,4 @@ npm run sensitivity   # prueba de estrés y §7 → data/sensitivity.json
 | 28-oct | Las tarjetas capturadas automáticamente sin verificar (F4) entran inactivas | Un titular sin revisar no debe cambiar el resultado por defecto |
 | 28-oct | `check-veda` revisa también la empresa y los medios de las tarjetas `sondeo`; la metodología ya no los nombra fuera de los bloques de veda | Punto ciego: solo revisaba las empresas del índice de encuestas |
 | 28-oct | Lista explícita de las 50 circunscripciones de Senado de Progreso; seguimiento del FV, Podemos en el bloque, `canVote`, σ_p y límites del backtest declarados como supuestos | Segunda auditoría |
+| 30-oct | Europeas 2024 desde los ficheros oficiales del Ministerio del Interior en lugar de Wikipedia | Fuente oficial. Mismas cifras con ±0,05 pp de redondeo; P(mayoría) varía una décima. infoelectoral solo responde desde España: la descarga es puntual y el ZIP queda en caché |

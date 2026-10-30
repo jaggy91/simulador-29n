@@ -1,26 +1,43 @@
-// Genera data/europeas-2024.json: % por provincia de las europeas de 2024
-// (tabla "Summary of constituency results" de en.wikipedia). Se usa para dividir
-// el voto de Sumar 2023 entre Sumar y Podemos y como base de SALF.
+// Genera data/europeas-2024.json: % por provincia de las europeas de 2024, desde los
+// ficheros oficiales del Ministerio del Interior (07202406_TOTA.zip). Se usa para
+// dividir el voto de Sumar 2023 entre Sumar y Podemos y como base de SALF.
+// infoelectoral solo responde desde España: con el ZIP en .cache/interior no hace falta
+// volver a descargarlo.
 import fs from 'node:fs';
 import { PROVINCES } from './lib/provinces.js';
-import { fetchWikitext, extractTable, parseConstituencyGrid } from './lib/wiki.js';
-import { normalizeParty } from './lib/parties-map.js';
+import { interiorZip, zipUrl, candidaturas, totalesProvinciales, votosProvinciales } from './lib/interior.js';
 
-const byWiki = Object.fromEntries(PROVINCES.map((p) => [p.wiki, p]));
+// Siglas de 2024 → ids del modelo. Sumar concurrió con varias marcas territoriales.
+const MAP = [
+  [/^PP$/, 'PP'], [/^(PSOE|PSC)/, 'PSOE'], [/^VOX$/, 'VOX'], [/SUMAR/, 'SUMAR'],
+  [/^PODEMOS/, 'PODEMOS'], [/SE ACAB/, 'SALF'],
+];
 
-const text = await fetchWikitext('Results of the 2024 European Parliament election in Spain');
-const at = text.indexOf('Summary of constituency results in the 9 June 2024');
-const { rows } = parseConstituencyGrid(extractTable(text, text.lastIndexOf('{|', at)));
+const files = await interiorZip('07', '2024', '06');
+const cand = candidaturas(files);
+const tot = totalesProvinciales(files);
+const votos = votosProvinciales(files);
+const idOf = (c) => MAP.find(([re]) => re.test(cand[c]?.siglas || ''))?.[1];
 
-const out = rows
-  .filter((r) => byWiki[r.label]) // descarta filas de comunidades autónomas
-  .map((r) => ({
-    id: byWiki[r.label].id,
-    name: byWiki[r.label].name,
-    pct: Object.fromEntries(Object.entries(r.values).map(([k, v]) => [normalizeParty({ key: k }), v.pct])),
-  }));
+const out = PROVINCES.map((p) => {
+  const t = tot[p.id];
+  const v = votos[p.id];
+  if (!t || !v) throw new Error(`Sin datos de Interior para ${p.name}`);
+  const sum = Object.values(v).reduce((a, b) => a + b, 0);
+  if (sum !== t.candidaturas) throw new Error(`${p.name}: votos de candidaturas ${sum} ≠ total ${t.candidaturas}`);
+  const valid = t.candidaturas + t.blancos;
+  const acc = {};
+  for (const [c, n] of Object.entries(v)) {
+    const id = idOf(c);
+    if (id) acc[id] = (acc[id] || 0) + n;
+  }
+  return { id: p.id, name: p.name, valid, pct: Object.fromEntries(Object.entries(acc).map(([k, n]) => [k, Math.round((1e4 * n) / valid) / 100])) };
+});
 
-if (out.length !== 52) throw new Error(`Se esperaban 52 provincias y hay ${out.length}`);
-fs.writeFileSync('data/europeas-2024.json', JSON.stringify({ source: 'en.wikipedia (Results of the 2024 European Parliament election in Spain)', unit: '% sobre válidos, 1 decimal', provinces: out }, null, 1));
+fs.writeFileSync('data/europeas-2024.json', JSON.stringify({
+  source: `Ministerio del Interior, resultados oficiales (${zipUrl('07', '2024', '06')})`,
+  unit: '% sobre válidos (candidaturas + blanco), 2 decimales',
+  provinces: out,
+}, null, 1));
 for (const p of out.filter((p) => ['28', '08', '44'].includes(p.id))) console.log(p.name, JSON.stringify(p.pct));
 console.log('→ data/europeas-2024.json');

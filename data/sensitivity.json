@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T01:33:13.244Z",
+ "updated": "2026-10-30T04:39:15.785Z",
  "latestPoll": "2026-10-25",
  "n": 2000,
  "base": {
@@ -313,13 +313,13 @@
   },
   "cisOficial": {
    "historico": 0.048,
-   "video": 0.016,
+   "video": 0.0155,
    "conCC": 0.054
   },
   "cis": {
-   "historico": 0.7305,
+   "historico": 0.73,
    "video": 0.805,
-   "conCC": 0.7535
+   "conCC": 0.7555
   }
  }
 }

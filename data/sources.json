@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T02:01:48.917Z",
+ "updated": "2026-10-30T04:36:55.630Z",
  "impactN": 1000,
  "cards": [
   {
@@ -502,12 +502,12 @@
    "impact": {
     "media": {
      "derecha": 0.2,
-     "pMayoria": 0,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
      "derecha": -0.1,
-     "pMayoria": 0.001,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -546,13 +546,13 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.8,
+     "derecha": 0.7,
      "pMayoria": 0.004,
      "senado": 0
     },
     "cisOficial": {
      "derecha": -0.1,
-     "pMayoria": 0.001,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
@@ -639,7 +639,7 @@
     },
     "cis": {
      "derecha": 0.1,
-     "pMayoria": 0.004,
+     "pMayoria": 0.002,
      "senado": -1
     }
    }
@@ -711,8 +711,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
-     "pMayoria": 0.004,
+     "derecha": 0,
+     "pMayoria": 0.003,
      "senado": 0
     },
     "cisOficial": {
@@ -722,7 +722,7 @@
     },
     "cis": {
      "derecha": 0.3,
-     "pMayoria": 0.006,
+     "pMayoria": 0.005,
      "senado": 0
     }
    }
@@ -767,7 +767,7 @@
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": 0.004,
+     "pMayoria": 0.003,
      "senado": -1
     }
    }
@@ -921,7 +921,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     },
@@ -932,7 +932,7 @@
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": 0,
+     "pMayoria": -0.001,
      "senado": -1
     }
    }
@@ -976,7 +976,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0.1,
+     "derecha": 0,
      "pMayoria": 0.002,
      "senado": 0
     }
@@ -1020,7 +1020,7 @@
     },
     "cis": {
      "derecha": 0,
-     "pMayoria": 0.002,
+     "pMayoria": 0.001,
      "senado": -1
     }
    }
@@ -1048,8 +1048,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.2,
-     "pMayoria": 0.001,
+     "derecha": 0.1,
+     "pMayoria": 0,
      "senado": 0
     },
     "cisOficial": {
@@ -1182,7 +1182,7 @@
     },
     "cis": {
      "derecha": -1.1,
-     "pMayoria": -0.022,
+     "pMayoria": -0.021,
      "senado": -4
     }
    }
