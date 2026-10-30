@@ -59,13 +59,23 @@ async function feed([outlet, url]) {
   }
 }
 
+// NEWS_AI_MODEL admite varios modelos separados por comas: si uno falla por saturación
+// o porque el proveedor lo retira, se prueba el siguiente.
 async function classify(item, catalog) {
+  let last;
+  for (const model of MODEL.split(',').map((m) => m.trim()).filter(Boolean)) {
+    try { return await classifyWith(model, item, catalog); } catch (e) { last = e; }
+  }
+  throw last;
+}
+
+async function classifyWith(model, item, catalog) {
   const scenarios = catalog.filter((s) => s.kind !== 'base').map((s) => `- ${s.id}: ${s.label}. ${s.detail || ''}`).join('\n');
   const res = await fetch(AI_URL, {
     method: 'POST',
     headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: MODEL,
+      model,
       temperature: 0,
       response_format: { type: 'json_object' },
       messages: [
@@ -79,12 +89,12 @@ Si la noticia no cambia el estado de ninguno de esos escenarios, o trata de una 
       ],
     }),
   });
-  if (!res.ok) throw new Error(`IA ${res.status}`);
+  if (!res.ok) throw new Error(`IA ${res.status} (${model})`);
   const body = await res.text();
   let content;
   try { content = JSON.parse(body).choices[0].message.content; } catch { throw new Error(`respuesta no válida del proveedor: ${body.slice(0, 60)}`); }
   // Algunos modelos envuelven el JSON en texto: se toma el primer objeto.
-  return JSON.parse(content.match(/{[sS]*}/)?.[0] || 'null');
+  return JSON.parse(content.match(/\{[\s\S]*\}/)?.[0] || 'null');
 }
 
 if (!AI_URL || !TOKEN || !MODEL) { console.log('Sin proveedor de IA configurado (NEWS_AI_URL, NEWS_AI_KEY, NEWS_AI_MODEL): no se capturan noticias'); process.exit(0); }
