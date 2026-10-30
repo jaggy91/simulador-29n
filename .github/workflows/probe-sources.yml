@@ -1,0 +1,72 @@
+name: Prueba de fuentes
+
+# Solo a mano (pestaña Actions → "Prueba de fuentes" → Run workflow). Comprueba qué
+# fuentes responden desde GitHub Actions y que la cadena completa funciona aquí. No
+# guarda datos ni publica nada.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Fuentes oficiales y medios
+        run: |
+          probe() {
+            code=$(curl -s -o /tmp/body -w '%{http_code}' -m 30 -L -A 'Mozilla/5.0 (X11; Linux x86_64)' "$2" || echo "ERR")
+            printf '%-28s %-4s %8s bytes  %s\n' "$1" "$code" "$(wc -c </tmp/body 2>/dev/null || echo 0)" "$2" | tee -a "$GITHUB_STEP_SUMMARY"
+          }
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          probe "Interior: infoelectoral"    https://infoelectoral.interior.gob.es/
+          probe "Interior: ZIP Congreso 2023" https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/02202307_TOTA.zip
+          probe "Interior: ZIP europeas 2024" https://infoelectoral.interior.gob.es/estaticos/docxl/apliextr/07202406_TOTA.zip
+          probe "Interior: web"              https://www.interior.gob.es/
+          probe "Senado: web"                https://www.senado.es/
+          probe "Senado: datos abiertos"     https://www.senado.es/web/relacionesciudadanos/datosabiertos/index.html
+          probe "Junta de Andalucía"         https://www.juntadeandalucia.es/
+          probe "BOJA"                       https://www.juntadeandalucia.es/eboja.html
+          probe "Parlamento de Andalucía"    https://www.parlamentodeandalucia.es/
+          probe "BOE: API sumario"           https://www.boe.es/datosabiertos/api/boe/sumario/20261027
+          probe "Junta Electoral Central"    https://www.juntaelectoralcentral.es/
+          probe "CIS: PDF estimación 3582"   https://www.cis.es/documents/d/cis/3582_estimacion-pdf
+          probe "INE"                        https://www.ine.es/
+          probe "Wikipedia (índice)"         "https://en.wikipedia.org/w/index.php?title=Opinion_polling_for_the_2026_Spanish_general_election&action=raw"
+          probe "El País (40dB)"             https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html
+          probe "Artículo14 (Winston)"       https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html
+          probe "X (Ateneo, CIS)"            https://x.com/Ateneodeldato/status/2110338816569401583
+          probe "Electomanía"                https://electomania.es/
+          probe "Datawrapper (CSV)"          https://datawrapper.dwcdn.net/UgEA1/dataset.csv
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: GitHub Models (IA)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          code=$(curl -s -o /tmp/ai.json -w '%{http_code}' -m 60 https://models.github.ai/inference/chat/completions \
+            -H "Authorization: Bearer $GITHUB_TOKEN" -H 'Content-Type: application/json' \
+            -d '{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Responde solo: ok"}],"max_tokens":5}')
+          echo "GitHub Models: HTTP $code" | tee -a "$GITHUB_STEP_SUMMARY"
+          head -c 400 /tmp/ai.json; echo
+
+      # La cadena del workflow horario, sin guardar nada.
+      - name: Encuestas
+        run: node scripts/fetch-polls.js
+      - name: Simulación
+        run: node scripts/simulate.js --n 1000
+      - name: Espectro
+        run: node scripts/spectrum.js --n 500
+      - name: Sensibilidad
+        run: node scripts/sensitivity.js --n 500
+      - name: Cambios que habría guardado
+        run: git status --short data | tee -a "$GITHUB_STEP_SUMMARY"
