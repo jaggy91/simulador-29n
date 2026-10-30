@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T05:58:56.487Z",
+ "updated": "2026-10-30T07:03:34.433Z",
  "impactN": 1000,
  "cards": [
   {
@@ -803,7 +803,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": 0.1,
      "pMayoria": 0.003,
      "senado": 0
     },
@@ -1309,7 +1309,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-10-30T05:56:26.974Z"
+    "checked": "2026-10-30T07:01:38.484Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
