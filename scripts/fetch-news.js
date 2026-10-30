@@ -20,7 +20,7 @@ const TOKEN = process.env.NEWS_AI_KEY;
 const MODEL = process.env.NEWS_AI_MODEL;
 const UA = 'simulador-29n/1.0 (+https://github.com/jaggy91/simulador-29n)';
 const WINDOW_H = 72;
-const MAX_CALLS = 25;
+const MAX_CALLS = 10; // por ejecución horaria: dentro del cupo diario de los planes gratuitos
 const PROB = { rumor: 0.15, negociación: 0.5, confirmado: 1, descartado: 0 };
 const FEEDS = [
   ['El País', 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/portada'],
