@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T05:17:42.878Z",
+ "updated": "2026-10-30T06:00:47.822Z",
  "latestPoll": "2026-10-25",
  "n": 2000,
  "base": {
@@ -303,6 +303,296 @@
    "eligible": 50,
    "min": 0,
    "max": 5
+  }
+ },
+ "exteriorScan": {
+  "media": {
+   "cera2023": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": 0,
+      "senado": 0
+     }
+    ],
+    "firstMove": null
+   },
+   "todoPSOE": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": -1,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": -1,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": -3,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": -3,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": -4,
+      "senado": 0
+     }
+    ],
+    "firstMove": 0.25
+   }
+  },
+  "cisOficial": {
+   "cera2023": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": 0,
+      "senado": 0
+     }
+    ],
+    "firstMove": null
+   },
+   "todoPSOE": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": -2,
+      "senado": 0
+     }
+    ],
+    "firstMove": 1
+   }
+  },
+  "cis": {
+   "cera2023": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": 0,
+      "senado": 0
+     }
+    ],
+    "firstMove": null
+   },
+   "todoPSOE": {
+    "at": [
+     {
+      "turnout": 0.0887,
+      "votes": 14460,
+      "derecha": 0,
+      "senado": 0
+     },
+     {
+      "turnout": 0.15,
+      "votes": 24453,
+      "derecha": -1,
+      "senado": 0
+     },
+     {
+      "turnout": 0.25,
+      "votes": 40755,
+      "derecha": -1,
+      "senado": 0
+     },
+     {
+      "turnout": 0.4,
+      "votes": 65208,
+      "derecha": -2,
+      "senado": 0
+     },
+     {
+      "turnout": 0.6,
+      "votes": 97812,
+      "derecha": -2,
+      "senado": 0
+     },
+     {
+      "turnout": 0.8,
+      "votes": 130416,
+      "derecha": -3,
+      "senado": 0
+     },
+     {
+      "turnout": 1,
+      "votes": 163020,
+      "derecha": -4,
+      "senado": 0
+     }
+    ],
+    "firstMove": 0.15
+   }
   }
  },
  "noise": {

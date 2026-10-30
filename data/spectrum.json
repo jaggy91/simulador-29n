@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T05:16:35.838Z",
+ "updated": "2026-10-30T06:00:27.749Z",
  "latestPoll": "2026-10-25",
  "note": "Laboratorio: escenarios acumulativos favorables a cada bloque. No forma parte de la proyección oficial.",
  "maxLevel": 4,
@@ -48,6 +48,7 @@
    {
     "id": "PACTO_FLOJO",
     "level": 3,
+    "requires": "senate-pact",
     "label": "El pacto PP–Vox del Senado funciona mal: solo el 60 % de sus votantes sigue la consigna",
     "detail": "Afecta solo al Senado. Por defecto, 94 % de los votantes del PP y 86 % de los de Vox (encuesta Data 10).",
     "ops": [
@@ -115,6 +116,7 @@
    {
     "id": "PACTO_PLENO_SALF",
     "level": 3,
+    "requires": "senate-pact",
     "label": "El pacto PP–Vox funciona al 100 % y SALF se hunde a favor de Vox y PP",
     "detail": "Consigna seguida por todos (Senado; por defecto 94 % y 86 %, Data 10). Hipótesis: el 50 % del voto de SALF va a Vox, el 30 % al PP y el resto se abstiene.",
     "ops": [
@@ -162,6 +164,7 @@
       "PACTO_FLOJO",
       "ENC_PSOE_100"
      ],
+     "skipped": [],
      "poll": {
       "PP": 31.01,
       "PSOE": 32.07,
@@ -252,7 +255,8 @@
        "senadoMayoriaDerecha": 0.58,
        "senado35Derecha": 0.068
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -3,
@@ -261,6 +265,7 @@
       "UTIL_FA_PSOE",
       "PACTO_FLOJO"
      ],
+     "skipped": [],
      "poll": {
       "PP": 31.18,
       "PSOE": 28.88,
@@ -351,7 +356,8 @@
        "senadoMayoriaDerecha": 0.8125,
        "senado35Derecha": 0.1945
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -2,
@@ -359,6 +365,7 @@
       "ENC_PSOE_40",
       "UTIL_FA_PSOE"
      ],
+     "skipped": [],
      "poll": {
       "PP": 31.18,
       "PSOE": 28.88,
@@ -449,13 +456,15 @@
        "senadoMayoriaDerecha": 0.8845,
        "senado35Derecha": 0.3145
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -1,
      "active": [
       "ENC_PSOE_40"
      ],
+     "skipped": [],
      "poll": {
       "PP": 31.18,
       "PSOE": 28.88,
@@ -546,11 +555,13 @@
        "senadoMayoriaDerecha": 0.8845,
        "senado35Derecha": 0.3145
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 0,
      "active": [],
+     "skipped": [],
      "poll": {
       "PP": 31.3,
       "PSOE": 26.76,
@@ -648,6 +659,7 @@
      "active": [
       "ENC_DCHA_2"
      ],
+     "skipped": [],
      "poll": {
       "PP": 32.54,
       "PSOE": 25.48,
@@ -738,7 +750,8 @@
        "senadoMayoriaDerecha": 0.9935,
        "senado35Derecha": 0.7615
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 2,
@@ -746,6 +759,7 @@
       "ENC_DCHA_2",
       "UTIL_VOX_PP"
      ],
+     "skipped": [],
      "poll": {
       "PP": 32.54,
       "PSOE": 25.48,
@@ -836,7 +850,8 @@
        "senadoMayoriaDerecha": 0.9935,
        "senado35Derecha": 0.7615
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 3,
@@ -845,6 +860,7 @@
       "UTIL_VOX_PP",
       "PACTO_PLENO_SALF"
      ],
+     "skipped": [],
      "poll": {
       "PP": 33.22,
       "PSOE": 25.57,
@@ -935,7 +951,8 @@
        "senadoMayoriaDerecha": 0.998,
        "senado35Derecha": 0.84
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 4,
@@ -945,6 +962,7 @@
       "PACTO_PLENO_SALF",
       "DESMOV_IZQ"
      ],
+     "skipped": [],
      "poll": {
       "PP": 33.99,
       "PSOE": 26.16,
@@ -1036,7 +1054,8 @@
        "senadoMayoriaDerecha": 0.9995,
        "senado35Derecha": 0.8905
       }
-     }
+     },
+     "contrary": false
     }
    ],
    "tipping": {
@@ -1056,6 +1075,7 @@
       "PACTO_FLOJO",
       "ENC_PSOE_100"
      ],
+     "skipped": [],
      "poll": {
       "AA": 0.96,
       "PSOE": 39.31,
@@ -1143,7 +1163,8 @@
        "senadoMayoriaDerecha": 0,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -3,
@@ -1152,6 +1173,7 @@
       "UTIL_FA_PSOE",
       "PACTO_FLOJO"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.07,
       "PSOE": 36.12,
@@ -1239,7 +1261,8 @@
        "senadoMayoriaDerecha": 0.0005,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -2,
@@ -1247,6 +1270,7 @@
       "ENC_PSOE_40",
       "UTIL_FA_PSOE"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.07,
       "PSOE": 36.12,
@@ -1334,13 +1358,15 @@
        "senadoMayoriaDerecha": 0.003,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -1,
      "active": [
       "ENC_PSOE_40"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.07,
       "PSOE": 36.12,
@@ -1428,11 +1454,13 @@
        "senadoMayoriaDerecha": 0.003,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 0,
      "active": [],
+     "skipped": [],
      "poll": {
       "AA": 1.14,
       "PSOE": 34,
@@ -1528,6 +1556,7 @@
      "active": [
       "ENC_DCHA_2"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.14,
       "PSOE": 32.63,
@@ -1616,7 +1645,8 @@
        "senadoMayoriaDerecha": 0.048,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 2,
@@ -1624,6 +1654,7 @@
       "ENC_DCHA_2",
       "UTIL_VOX_PP"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.14,
       "PSOE": 32.63,
@@ -1712,7 +1743,8 @@
        "senadoMayoriaDerecha": 0.048,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 3,
@@ -1721,6 +1753,7 @@
       "UTIL_VOX_PP",
       "PACTO_PLENO_SALF"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.14,
       "PSOE": 32.74,
@@ -1809,7 +1842,8 @@
        "senadoMayoriaDerecha": 0.0805,
        "senado35Derecha": 0
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 4,
@@ -1819,6 +1853,7 @@
       "PACTO_PLENO_SALF",
       "DESMOV_IZQ"
      ],
+     "skipped": [],
      "poll": {
       "AA": 1.17,
       "PSOE": 33.53,
@@ -1907,7 +1942,8 @@
        "senadoMayoriaDerecha": 0.103,
        "senado35Derecha": 0.0015
       }
-     }
+     },
+     "contrary": false
     }
    ],
    "tipping": {
@@ -1927,6 +1963,7 @@
       "PACTO_FLOJO",
       "ENC_PSOE_100"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 1.98,
       "JUNTS": 1.25,
@@ -2017,7 +2054,8 @@
        "senadoMayoriaDerecha": 0.1115,
        "senado35Derecha": 0.002
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -3,
@@ -2026,6 +2064,7 @@
       "UTIL_FA_PSOE",
       "PACTO_FLOJO"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.19,
       "JUNTS": 1.39,
@@ -2116,7 +2155,8 @@
        "senadoMayoriaDerecha": 0.3105,
        "senado35Derecha": 0.012
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -2,
@@ -2124,6 +2164,7 @@
       "ENC_PSOE_40",
       "UTIL_FA_PSOE"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.19,
       "JUNTS": 1.39,
@@ -2214,13 +2255,15 @@
        "senadoMayoriaDerecha": 0.4385,
        "senado35Derecha": 0.0295
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": -1,
      "active": [
       "ENC_PSOE_40"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.19,
       "JUNTS": 1.39,
@@ -2311,11 +2354,13 @@
        "senadoMayoriaDerecha": 0.4385,
        "senado35Derecha": 0.0295
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 0,
      "active": [],
+     "skipped": [],
      "poll": {
       "ERC": 2.34,
       "JUNTS": 1.48,
@@ -2413,6 +2458,7 @@
      "active": [
       "ENC_DCHA_2"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.24,
       "JUNTS": 1.48,
@@ -2503,7 +2549,8 @@
        "senadoMayoriaDerecha": 0.8505,
        "senado35Derecha": 0.2675
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 2,
@@ -2511,6 +2558,7 @@
       "ENC_DCHA_2",
       "UTIL_VOX_PP"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.24,
       "JUNTS": 1.48,
@@ -2601,7 +2649,8 @@
        "senadoMayoriaDerecha": 0.8505,
        "senado35Derecha": 0.2675
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 3,
@@ -2610,6 +2659,7 @@
       "UTIL_VOX_PP",
       "PACTO_PLENO_SALF"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.24,
       "JUNTS": 1.49,
@@ -2700,7 +2750,8 @@
        "senadoMayoriaDerecha": 0.9135,
        "senado35Derecha": 0.3725
       }
-     }
+     },
+     "contrary": false
     },
     {
      "level": 4,
@@ -2710,6 +2761,7 @@
       "PACTO_PLENO_SALF",
       "DESMOV_IZQ"
      ],
+     "skipped": [],
      "poll": {
       "ERC": 2.31,
       "JUNTS": 1.53,
@@ -2800,7 +2852,8 @@
        "senadoMayoriaDerecha": 0.9505,
        "senado35Derecha": 0.4635
       }
-     }
+     },
+     "contrary": false
     }
    ],
    "tipping": {
