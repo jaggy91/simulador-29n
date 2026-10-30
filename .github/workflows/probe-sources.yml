@@ -43,6 +43,10 @@ jobs:
           probe "RTVE: resultados Teruel"    https://resultados-elecciones.rtve.es/datos/congreso/2023/7/resultados/aragon/teruel/2023-resultados-aragon-teruel.json
           probe "RTVE: Senado nacional"      https://resultados-elecciones.rtve.es/datos/senado/2023/7/resultados/2023-resultados.json
           probe "Público: resultados 2023"   https://www.publico.es/resultados-elecciones/generales/2023/
+          probe "Demócrata: encuestas"       https://www.democrata.es/elecciones-generales-espana/herramientas/encuestas
+          probe "Demócrata: robots.txt"      https://www.democrata.es/robots.txt
+          echo '--- robots.txt de Demócrata (User-agent: * y bots)' >> "$GITHUB_STEP_SUMMARY"
+          curl -s -m 30 -A 'Mozilla/5.0 (X11; Linux x86_64)' https://www.democrata.es/robots.txt | head -40 | tee -a "$GITHUB_STEP_SUMMARY"
           probe "Junta Electoral Central"    https://www.juntaelectoralcentral.es/
           probe "CIS: PDF estimación 3582"   https://www.cis.es/documents/d/cis/3582_estimacion-pdf
           probe "INE"                        https://www.ine.es/
