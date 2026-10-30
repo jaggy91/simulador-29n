@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-10-30T05:56:26.975Z",
+ "fetched": "2026-10-30T06:40:54.747Z",
  "latestPoll": "2026-10-25",
  "sources": {
   "media": {
@@ -578,7 +578,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-10-30T05:56:26.974Z"
+      "checked": "2026-10-30T06:40:54.737Z"
      }
     }
    ],
@@ -692,7 +692,8 @@
     "VOX": 20
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "PSOE|2026-10-25"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -716,7 +717,8 @@
     "SALF": 2.4
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-10-25"
   },
   {
    "firm": "NC Report/La Razón",
@@ -745,7 +747,8 @@
      "value": 6.6
     }
    ],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "NC Report/La Razón|2026-10-24"
   },
   {
    "firm": "Winston/Artículo14",
@@ -759,7 +762,8 @@
     "FA": 5.6
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "Winston/Artículo14|2026-10-23"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -783,7 +787,8 @@
     "SALF": 1.7
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-10-23"
   },
   {
    "firm": "Ateneo del Dato/elDiario.es",
@@ -805,7 +810,8 @@
      "value": 6.8
     }
    ],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "Ateneo del Dato/elDiario.es|2026-10-22"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -828,7 +834,8 @@
     "PODEMOS": 2.8
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-10-22"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -852,7 +859,8 @@
     "SALF": 1.7
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-10-17"
   },
   {
    "firm": "IMOP/El Confidencial",
@@ -881,7 +889,8 @@
      "value": 8.9
     }
    ],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "IMOP/El Confidencial|2026-10-16"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -904,7 +913,8 @@
     "PODEMOS": 2.8
    },
    "joint": [],
-   "table": "2026 (with Broad Front)"
+   "table": "2026 (with Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-10-14"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -935,7 +945,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-10-11"
   },
   {
    "firm": "Target Point/El Debate",
@@ -958,7 +969,8 @@
      "value": 6.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-10-09"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -989,7 +1001,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-10-09"
   },
   {
    "firm": "40dB/Prisa",
@@ -1012,7 +1025,8 @@
      "value": 5.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-10-08"
   },
   {
    "firm": "GESOP/Prensa Ibérica",
@@ -1037,7 +1051,8 @@
      "value": 8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GESOP/Prensa Ibérica|2026-10-08"
   },
   {
    "firm": "GAD3/Vocento",
@@ -1068,7 +1083,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GAD3/Vocento|2026-10-08"
   },
   {
    "firm": "Hamalgama Métrica/Vozpópuli",
@@ -1098,7 +1114,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Hamalgama Métrica/Vozpópuli|2026-10-08"
   },
   {
    "firm": "InvyMark/laSexta",
@@ -1125,7 +1142,8 @@
      "value": 6.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "InvyMark/laSexta|2026-10-08"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -1155,7 +1173,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-10-08"
   },
   {
    "firm": "IMOP/El Confidencial",
@@ -1186,7 +1205,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "IMOP/El Confidencial|2026-10-07"
   },
   {
    "firm": "DYM/Henneo",
@@ -1209,7 +1229,8 @@
      "value": 3.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-10-07"
   },
   {
    "firm": "CIS (Opina 360)",
@@ -1232,7 +1253,8 @@
      "value": 7.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Opina 360)|2026-10-06"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -1255,7 +1277,8 @@
      "value": 7.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-10-06"
   },
   {
    "firm": "CIS",
@@ -1285,7 +1308,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-10-06"
   },
   {
    "firm": "NC Report/La Razón",
@@ -1314,7 +1338,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-10-06"
   },
   {
    "firm": "SocioMétrica/PP",
@@ -1323,7 +1348,8 @@
    "url": "https://www.elmundo.es/espana/2026/10/06/6ac4d9a1fc6c83560c8b4586.html",
    "values": {},
    "joint": [],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/PP|2026-10-05"
   },
   {
    "firm": "PSOE",
@@ -1332,7 +1358,8 @@
    "url": "https://www.articulo14.es/politica/sanchez-decidio-convocar-con-sondeos-que-le-dan-ganador-y-dicen-que-el-53-ve-una-persecucion-judicial-al-psoe-20261006.html",
    "values": {},
    "joint": [],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "PSOE|2026-10-05"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -1363,7 +1390,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-10-03"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -1393,7 +1421,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-10-03"
   },
   {
    "firm": "Data10/Okdiario",
@@ -1424,7 +1453,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Data10/Okdiario|2026-10-02"
   },
   {
    "firm": "Winston/Artículo14",
@@ -1446,7 +1476,8 @@
      "value": 6.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Winston/Artículo14|2026-10-01"
   },
   {
    "firm": "Ateneo del Dato/elDiario.es",
@@ -1468,7 +1499,8 @@
      "value": 7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Ateneo del Dato/elDiario.es|2026-10-01"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -1499,7 +1531,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-10-01"
   },
   {
    "firm": "40dB/Prisa",
@@ -1522,7 +1555,8 @@
      "value": 5.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-09-28"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -1553,7 +1587,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-09-26"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -1584,7 +1619,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-09-25"
   },
   {
    "firm": "Celeste-Tel/Onda Cero",
@@ -1614,7 +1650,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Celeste-Tel/Onda Cero|2026-09-21"
   },
   {
    "firm": "DYM/Henneo",
@@ -1637,7 +1674,8 @@
      "value": 4.5
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-09-21"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -1668,7 +1706,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-09-18"
   },
   {
    "firm": "InvyMark/laSexta",
@@ -1691,7 +1730,8 @@
      "value": 6.1
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "InvyMark/laSexta|2026-09-11"
   },
   {
    "firm": "Target Point/El Debate",
@@ -1714,7 +1754,8 @@
      "value": 6.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-09-10"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -1745,7 +1786,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-09-10"
   },
   {
    "firm": "Hamalgama Métrica/Vozpópuli",
@@ -1775,7 +1817,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Hamalgama Métrica/Vozpópuli|2026-09-08"
   },
   {
    "firm": "CIS (Target Point)",
@@ -1798,7 +1841,8 @@
      "value": 6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Target Point)|2026-09-04"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -1821,7 +1865,8 @@
      "value": 6.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-09-04"
   },
   {
    "firm": "CIS",
@@ -1851,7 +1896,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-09-04"
   },
   {
    "firm": "NC Report/La Razón",
@@ -1880,7 +1926,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-09-03"
   },
   {
    "firm": "GAD3/ABC",
@@ -1911,7 +1958,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GAD3/ABC|2026-09-03"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -1942,7 +1990,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-09-03"
   },
   {
    "firm": "40dB/Prisa",
@@ -1965,7 +2014,8 @@
      "value": 5.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-09-02"
   },
   {
    "firm": "More in Common",
@@ -1988,7 +2038,8 @@
      "value": 6.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "More in Common|2026-08-28"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2019,7 +2070,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-08-28"
   },
   {
    "firm": "Data10/Okdiario",
@@ -2049,7 +2101,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Data10/Okdiario|2026-08-27"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -2080,7 +2133,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-08-26"
   },
   {
    "firm": "Cluster17/Agenda Pública",
@@ -2108,7 +2162,8 @@
      "value": 6.1
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Cluster17/Agenda Pública|2026-08-25"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2139,7 +2194,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-08-21"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2170,7 +2226,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-08-12"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2201,7 +2258,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-08-07"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -2232,7 +2290,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-08-06"
   },
   {
    "firm": "NC Report/La Razón",
@@ -2261,7 +2320,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-08-04"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2292,7 +2352,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-08-01"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2323,7 +2384,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-07-24"
   },
   {
    "firm": "DYM/Henneo",
@@ -2346,7 +2408,8 @@
      "value": 3.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-07-20"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -2377,7 +2440,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-07-20"
   },
   {
    "firm": "KeyData/Público",
@@ -2405,7 +2469,8 @@
      "value": 6.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "KeyData/Público|2026-07-17"
   },
   {
    "firm": "Target Point/El Debate",
@@ -2428,7 +2493,8 @@
      "value": 6.1
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-07-17"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2459,7 +2525,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-07-17"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2490,7 +2557,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-07-10"
   },
   {
    "firm": "ODEC/Mediaflows–UV",
@@ -2520,7 +2588,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "ODEC/Mediaflows–UV|2026-07-09"
   },
   {
    "firm": "GESOP/Prensa Ibérica",
@@ -2545,7 +2614,8 @@
      "value": 7.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GESOP/Prensa Ibérica|2026-07-09"
   },
   {
    "firm": "CIS (Sondaxe)",
@@ -2575,7 +2645,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Sondaxe)|2026-07-06"
   },
   {
    "firm": "CIS (Target Point)",
@@ -2603,7 +2674,8 @@
      "value": 7.4
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Target Point)|2026-07-06"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -2626,7 +2698,8 @@
      "value": 7.4
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-07-06"
   },
   {
    "firm": "CIS",
@@ -2656,7 +2729,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-07-06"
   },
   {
    "firm": "Hamalgama Métrica/Vozpópuli",
@@ -2686,7 +2760,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Hamalgama Métrica/Vozpópuli|2026-07-06"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -2717,7 +2792,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-07-04"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2748,7 +2824,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-07-03"
   },
   {
    "firm": "NC Report/La Razón",
@@ -2777,7 +2854,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-07-01"
   },
   {
    "firm": "CIS (Demócrata)",
@@ -2799,7 +2877,8 @@
      "value": 7.1
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Demócrata)|2026-06-30"
   },
   {
    "firm": "CIS (Demócrata)",
@@ -2821,7 +2900,8 @@
      "value": 7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Demócrata)|2026-06-30|2"
   },
   {
    "firm": "40dB/Prisa",
@@ -2844,7 +2924,8 @@
      "value": 5.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-06-29"
   },
   {
    "firm": "Ipsos/La Vanguardia",
@@ -2875,7 +2956,8 @@
     }
    ],
    "upn": 0,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Ipsos/La Vanguardia|2026-06-29"
   },
   {
    "firm": "More in Common",
@@ -2898,7 +2980,8 @@
      "value": 8.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "More in Common|2026-06-28"
   },
   {
    "firm": "InvyMark/laSexta",
@@ -2921,7 +3004,8 @@
      "value": 5.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "InvyMark/laSexta|2026-06-26"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2952,7 +3036,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-06-26"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -2983,7 +3068,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-06-19"
   },
   {
    "firm": "Target Point/El Debate",
@@ -3006,7 +3092,8 @@
      "value": 7.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-06-18"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3037,7 +3124,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-06-12"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -3068,7 +3156,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-06-11"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3099,7 +3188,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-06-05"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -3122,7 +3212,8 @@
      "value": 7.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-06-04"
   },
   {
    "firm": "CIS",
@@ -3152,7 +3243,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-06-04"
   },
   {
    "firm": "40dB/Prisa",
@@ -3175,7 +3267,8 @@
      "value": 6.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-06-01"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -3206,7 +3299,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-05-30"
   },
   {
    "firm": "InvyMark/laSexta",
@@ -3229,7 +3323,8 @@
      "value": 5.5
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "InvyMark/laSexta|2026-05-29"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3260,7 +3355,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-05-29"
   },
   {
    "firm": "Target Point/El Debate",
@@ -3283,7 +3379,8 @@
      "value": 5.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-05-28"
   },
   {
    "firm": "GAD3/ABC",
@@ -3314,7 +3411,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GAD3/ABC|2026-05-28"
   },
   {
    "firm": "NC Report/La Razón",
@@ -3343,7 +3441,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-05-27"
   },
   {
    "firm": "DYM/Henneo",
@@ -3366,7 +3465,8 @@
      "value": 5.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-05-22"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3397,7 +3497,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-05-22"
   },
   {
    "firm": "CIS (Target Point)",
@@ -3425,7 +3526,8 @@
      "value": 5.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Target Point)|2026-05-18"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -3448,7 +3550,8 @@
      "value": 6.4
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-05-18"
   },
   {
    "firm": "CIS",
@@ -3478,7 +3581,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-05-18"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3509,7 +3613,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-05-15"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3540,7 +3645,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-05-08"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3571,7 +3677,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-05-01"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -3601,7 +3708,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-04-29"
   },
   {
    "firm": "40dB/Prisa",
@@ -3624,7 +3732,8 @@
      "value": 5.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-04-27"
   },
   {
    "firm": "Ateneo del Dato",
@@ -3647,7 +3756,8 @@
      "value": 5.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Ateneo del Dato|2026-04-26"
   },
   {
    "firm": "More in Common",
@@ -3670,7 +3780,8 @@
      "value": 7.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "More in Common|2026-04-25"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3701,7 +3812,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-04-24"
   },
   {
    "firm": "KeyData/Público",
@@ -3729,7 +3841,8 @@
      "value": 6.5
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "KeyData/Público|2026-04-23"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -3759,7 +3872,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-04-18"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3790,7 +3904,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-04-17"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -3813,7 +3928,8 @@
      "value": 5.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-04-10"
   },
   {
    "firm": "CIS (Logoslab)",
@@ -3836,7 +3952,8 @@
      "value": 5.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Logoslab)|2026-04-10"
   },
   {
    "firm": "CIS",
@@ -3866,7 +3983,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-04-10"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3897,7 +4015,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-04-10"
   },
   {
    "firm": "NC Report/La Razón",
@@ -3926,7 +4045,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-04-09"
   },
   {
    "firm": "Ipsos/La Vanguardia",
@@ -3957,7 +4077,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Ipsos/La Vanguardia|2026-04-08"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -3988,7 +4109,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-04-03"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -4018,7 +4140,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-03-31"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4049,7 +4172,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-03-27"
   },
   {
    "firm": "Target Point/El Debate",
@@ -4072,7 +4196,8 @@
      "value": 6.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-03-26"
   },
   {
    "firm": "Sumar",
@@ -4094,7 +4219,8 @@
      "value": 6.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sumar|2026-03-25"
   },
   {
    "firm": "40dB/Prisa",
@@ -4117,7 +4243,8 @@
      "value": 5.8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-03-25"
   },
   {
    "firm": "DYM/Henneo",
@@ -4140,7 +4267,8 @@
      "value": 4.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-03-23"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -4170,7 +4298,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-03-21"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4201,7 +4330,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-03-20"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4232,7 +4362,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-03-13"
   },
   {
    "firm": "CIS (Target Point)",
@@ -4260,7 +4391,8 @@
      "value": 6.6
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Target Point)|2026-03-06"
   },
   {
    "firm": "CIS (Ateneo del Dato)",
@@ -4283,7 +4415,8 @@
      "value": 6.1
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Ateneo del Dato)|2026-03-06"
   },
   {
    "firm": "CIS (Logoslab)",
@@ -4306,7 +4439,8 @@
      "value": 6.5
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Logoslab)|2026-03-06"
   },
   {
    "firm": "CIS",
@@ -4336,7 +4470,8 @@
     }
    ],
    "upn": 0,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-03-06"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4367,7 +4502,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-03-06"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4398,7 +4534,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-03-04"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -4428,7 +4565,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-02-27"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4459,7 +4597,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-02-27"
   },
   {
    "firm": "40dB/Prisa",
@@ -4482,7 +4621,8 @@
      "value": 5.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-02-23"
   },
   {
    "firm": "Ateneo del Dato/elDiario.es",
@@ -4504,7 +4644,8 @@
      "value": 7.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Ateneo del Dato/elDiario.es|2026-02-22"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4535,7 +4676,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-02-20"
   },
   {
    "firm": "Target Point/El Debate",
@@ -4558,7 +4700,8 @@
      "value": 6.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-02-19"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -4581,7 +4724,8 @@
      "value": 7.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-02-13"
   },
   {
    "firm": "NC Report/La Razón",
@@ -4610,7 +4754,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-02-13"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4641,7 +4786,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-02-12"
   },
   {
    "firm": "Data10/Okdiario",
@@ -4671,7 +4817,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Data10/Okdiario|2026-02-10"
   },
   {
    "firm": "CIS (Logoslab)",
@@ -4694,7 +4841,8 @@
      "value": 6.4
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Logoslab)|2026-02-06"
   },
   {
    "firm": "CIS (Target Point)",
@@ -4722,7 +4870,8 @@
      "value": 6.7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Target Point)|2026-02-06"
   },
   {
    "firm": "CIS",
@@ -4752,7 +4901,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-02-06"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4783,7 +4933,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-02-06"
   },
   {
    "firm": "40dB/Prisa",
@@ -4806,7 +4957,8 @@
      "value": 6.4
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-02-02"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -4836,7 +4988,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Sigma Dos/El Mundo|2026-01-30"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4867,7 +5020,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-01-30"
   },
   {
    "firm": "DYM/Henneo",
@@ -4890,7 +5044,8 @@
      "value": 5
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-01-25"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -4921,7 +5076,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-01-23"
   },
   {
    "firm": "KeyData/Público",
@@ -4949,7 +5105,8 @@
      "value": 7.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "KeyData/Público|2026-01-22"
   },
   {
    "firm": "DYM/Henneo",
@@ -4972,7 +5129,8 @@
      "value": 5.2
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "DYM/Henneo|2026-01-18"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -5003,7 +5161,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-01-16"
   },
   {
    "firm": "Target Point/El Debate",
@@ -5026,7 +5185,8 @@
      "value": 8
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "Target Point/El Debate|2026-01-15"
   },
   {
    "firm": "GESOP/Prensa Ibérica",
@@ -5051,7 +5211,8 @@
      "value": 8.3
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "GESOP/Prensa Ibérica|2026-01-15"
   },
   {
    "firm": "SocioMétrica/El Español",
@@ -5081,7 +5242,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "SocioMétrica/El Español|2026-01-10"
   },
   {
    "firm": "CIS (Logoslab)",
@@ -5104,7 +5266,8 @@
      "value": 7
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS (Logoslab)|2026-01-10"
   },
   {
    "firm": "CIS",
@@ -5134,7 +5297,8 @@
     }
    ],
    "upn": 0.1,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "CIS|2026-01-10"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -5165,7 +5329,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-01-10"
   },
   {
    "firm": "NC Report/La Razón",
@@ -5194,7 +5359,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "NC Report/La Razón|2026-01-09"
   },
   {
    "firm": "40dB/Prisa",
@@ -5217,7 +5383,8 @@
      "value": 5.9
     }
    ],
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "40dB/Prisa|2026-01-05"
   },
   {
    "firm": "EM-Analytics/Electomanía",
@@ -5248,7 +5415,8 @@
     }
    ],
    "upn": 0.2,
-   "table": "2026 (before Broad Front)"
+   "table": "2026 (before Broad Front)",
+   "uid": "EM-Analytics/Electomanía|2026-01-03"
   }
  ]
 }

@@ -7,7 +7,7 @@ const num = (x, d = 0) => x.toLocaleString('es-ES', { maximumFractionDigits: d }
 const time = (t) => new Date(t).toLocaleString('es-ES', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' });
 const bloc = (seats, parties) => parties.reduce((a, p) => a + (seats[p] || 0), 0);
 
-export function LiveResults({ results, projection }) {
+export function LiveResults({ results, projection, frozen }) {
   const seats = Object.fromEntries(Object.entries(results.national).filter(([, v]) => v.seats).map(([k, v]) => [k, v.seats]));
   const rows = Object.entries(results.national)
     .filter(([k, v]) => v.seats || projection[k])
@@ -25,7 +25,7 @@ export function LiveResults({ results, projection }) {
       <div className="grid cols-2">
         <Hemicycle seats={seats} majority={MAJORITY} title="Congreso: escrutinio provisional" ariaLabel="Hemiciclo del Congreso con el escrutinio provisional" />
         <div className="table-wrap"><table>
-          <caption className="small ink-2">Escaños: escrutinio provisional frente a la proyección central con las fuentes activas</caption>
+          <caption className="small ink-2">Escaños: escrutinio provisional frente a {frozen ? 'la última proyección publicada antes de la veda' : 'la proyección central con las fuentes activas'}</caption>
           <thead><tr><th>Partido</th><th>Votos</th><th>%</th><th>Escaños</th><th>Proyección</th></tr></thead>
           <tbody>
             {rows.map(([k, v]) => (

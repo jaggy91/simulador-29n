@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # historial completo: la comparación final usa la proyección previa a la veda
       - uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -46,6 +48,15 @@ jobs:
         id: boe
         if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: node scripts/watch-boe.js
+      - name: Aviso si el escrutinio definitivo no se pudo leer
+        if: steps.boe.outputs.problemas_escrutinio == 'si'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Revisar el escrutinio definitivo del BOE"
+          if [ -z "$(gh issue list --state open --search "$title in:title" --json number --jq '.[].number')" ]; then
+            gh issue create --title "$title" --body "El vigilante encontró el escrutinio definitivo pero no pudo leerlo o compararlo (ejecución ${{ github.run_id }})."
+          fi
       - name: Aviso si el BOE no cuadra
         if: steps.boe.outputs.problemas == 'si'
         env:
@@ -56,9 +67,38 @@ jobs:
             gh issue create --title "$title" --body "El vigilante encontró la proclamación pero no la aplicó: ver \`problems\` en data/candidaturas-2026.json (ejecución ${{ github.run_id }})."
           fi
 
+      # Noticias de los RSS de medios clasificadas por IA (opción C: rumores y
+      # negociaciones con dos medios se activan solos; confirmado o descartado esperan
+      # revisión). Sin los secretos NEWS_AI_* el paso se salta.
+      - name: Noticias (IA)
+        id: news
+        if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
+        env:
+          NEWS_AI_URL: ${{ secrets.NEWS_AI_URL }}
+          NEWS_AI_KEY: ${{ secrets.NEWS_AI_KEY }}
+          NEWS_AI_MODEL: ${{ secrets.NEWS_AI_MODEL }}
+        run: node scripts/fetch-news.js
+      - name: Aviso de noticia pendiente de revisión
+        if: steps.news.outputs.revisar == 'si'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Noticia pendiente de revisión: ${{ steps.news.outputs.lista }}"
+          if [ -z "$(gh issue list --state open --search "${title:0:60} in:title" --json number --jq '.[].number')" ]; then
+            gh issue create --title "${title:0:200}" --body "La IA propone un cambio de estado fuerte (confirmado o descartado). La tarjeta está en data/news.json, inactiva. Para aprobarla, poner \"verified\": true; para rechazarla, borrarla (ejecución ${{ github.run_id }})."
+          fi
+
       - name: Encuestas
+        id: polls
         if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'
         run: node scripts/fetch-polls.js
+      # Si alguien cambia en Wikipedia las cifras de una encuesta que entra en las fuentes.
+      - name: Aviso de edición en Wikipedia
+        if: steps.polls.outputs.ediciones == 'si'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --title "Encuesta editada en Wikipedia ($(date -u +'%d-%m %H:%M') UTC)" --body "Una encuesta que entra en las fuentes ha cambiado de cifras en el índice. Detalle en data/poll-edits.json (ejecución ${{ github.run_id }})."
 
       - name: Simulación
         if: github.event_name != 'push' && steps.veda.outputs.activa != 'si'

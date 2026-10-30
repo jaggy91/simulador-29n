@@ -3,16 +3,24 @@
 //  - Congreso: Cuadro I (válidos, blancos…) del PDF; Cuadros II y III (votos y escaños
 //    de cada candidatura por circunscripción) de las tablas HTML.
 //  - Senado: relación de candidatos electos y no electos con sus votos (PDF).
-// Escribe data/congreso-2023.json y data/senado-2023.json (mismo formato que antes) y
-// compara con los datos anteriores. Uso: node scripts/build-oficial-2023.js
+// Escribe data/congreso-<año>.json y data/senado-<año>.json (mismo formato que antes) y
+// compara con los datos anteriores.
+// Uso: node scripts/build-oficial-2023.js                      (2023)
+//      node scripts/build-oficial-2023.js --boe BOE-A-… --year 2026   (escrutinio del 29-N)
 import fs from 'node:fs';
 import { PROVINCES, SENATE } from './lib/provinces.js';
 import { boeHtml, boePdf, htmlTables, pdfRows, provinceId, num } from './lib/boe.js';
 
-const BOE_ID = 'BOE-A-2023-18907';
-const SOURCE = `BOE ${BOE_ID} (Junta Electoral Central, escrutinio general), con la corrección BOE-A-2023-19537`;
+const arg = (k, d) => (process.argv.includes(k) ? process.argv[process.argv.indexOf(k) + 1] : d);
+const YEAR = arg('--year', '2023');
+const BOE_ID = arg('--boe', 'BOE-A-2023-18907');
+const SOURCE = `BOE ${BOE_ID} (Junta Electoral Central, escrutinio general)${YEAR === '2023' ? ', con la corrección BOE-A-2023-19537' : ''}`;
 // BOE-A-2023-19537: Senado, Madrid, «Don Santiago Llorente Gutiérrez … 1.007.32» → 1.007.322.
-const CORRECTIONS = [{ constituency: '28', candidate: 'Santiago Llorente Gutiérrez', votes: 1007322 }];
+const CORRECTIONS = YEAR === '2023' ? [{ constituency: '28', candidate: 'Santiago Llorente Gutiérrez', votes: 1007322 }] : [];
+// Desde 2026 Formentera elige su propio senador (Real Decreto 806/2026).
+const SENATE_LIST = YEAR >= '2026'
+  ? SENATE.flatMap((s) => (s.id === 'IBIZA' ? [{ ...s, name: 'Ibiza' }, { ...s, id: 'FORMENTERA', name: 'Formentera' }] : [s]))
+  : SENATE;
 
 // Candidaturas al Congreso por las siglas del BOE (último paréntesis del nombre).
 const CONGRESO_IDS = {
@@ -20,6 +28,8 @@ const CONGRESO_IDS = {
   'EH Bildu': 'BILDU', 'EAJ-PNV': 'PNV', BNG: 'BNG', CCa: 'CC', UPN: 'UPN', PACMA: 'PACMA',
   'CUP-PR': 'CUP', 'NC-bc': 'NC', EXISTE: 'EXISTE', UPL: 'UPL', GBAI: 'GBAI', XAV: 'XAV', 'SORIA ¡YA!': 'SY', SY: 'SY',
   'ADELANTE ANDALUCÍA': 'AA',
+  // Oferta de 2026 (siglas por confirmar con el BOE; las no reconocidas quedan como x:…).
+  FA: 'FA', 'FRENTE AMPLIO': 'FA', 'COMPROMÍS': 'FV', 'COMPROMÍS-FV': 'FV', PODEMOS: 'PODEMOS', SALF: 'SALF', AA: 'AA',
 };
 const congresoId = (header) => {
   // Algunas cabeceras terminan en punto: "Geroa Bai (GBAI)."
@@ -33,6 +43,7 @@ const SENADO_IDS = [
   [/^(PARTIDOPOPULAR|PARTITPOPULAR)/, 'PP'],
   [/PARTIDOSOCIALISTA|SOCIALISTES|PSOE/, 'PSOE'],
   [/^EIVISSAIFORMENTERAALSENAT/, 'PSOE'], // lista conjunta de izquierda encabezada por el PSOE
+  [/SENADODEPROGRESO/, 'PSOE'], // 2026: lista conjunta PSOE + FA, encabezada por el PSOE
   [/^VOX/, 'VOX'],
   [/SUMAR|SUMEM/, 'SUMAR'],
   [/ESQUERRAREPUBLICANA/, 'ERC'],
@@ -52,12 +63,18 @@ const SENADO_IDS = [
   [/UNITATPOPULAR/, 'CUP'],
   [/^PORAVILA/, 'XAV'],
   [/^SORIAYA/, 'SY'],
+  // Oferta de 2026, al final para no cambiar 2023 («COMPROMÍS-SUMAR» era Sumar).
+  [/FRENTEAMPLIO/, 'FA'],
+  [/COMPROMIS/, 'FV'],
+  [/^PODEMOS/, 'PODEMOS'],
+  [/SEACABOLAFIESTA/, 'SALF'],
 ];
 const squash = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]/g, '');
 const senadoId = (name) => (SENADO_IDS.find(([re]) => re.test(squash(name)))?.[1]) || `x:${name.replace(/\s+/g, ' ')}`;
 
 const ISLANDS = {
   MALLORCA: 'MALLORCA', MENORCA: 'MENORCA', 'EIVISSA - FORMENTERA': 'IBIZA', 'EIVISSA-FORMENTERA': 'IBIZA',
+  EIVISSA: 'IBIZA', IBIZA: 'IBIZA', FORMENTERA: 'FORMENTERA',
   'GRAN CANARIA': 'GCANARIA', LANZAROTE: 'LANZAROTE', FUERTEVENTURA: 'FUERTEV',
   TENERIFE: 'TENERIFE', 'LA PALMA': 'LAPALMA', 'LA GOMERA': 'GOMERA', 'EL HIERRO': 'HIERRO',
 };
@@ -153,7 +170,7 @@ for (const fix of CORRECTIONS) {
 const missing = cands.filter((c) => c.votes == null);
 if (missing.length) throw new Error(`Candidatos sin votos: ${missing.slice(0, 3).map((c) => c.candidate).join(', ')}`);
 
-const senado = SENATE.map((s) => {
+const senado = SENATE_LIST.map((s) => {
   const list = cands.filter((c) => c.constituency === s.id).map((c) => ({ ...c, party: senadoId(c.party.replace(/\s*-\s*/g, ' - ').replace(/\s+/g, ' ')) }));
   const won = list.filter((c) => c.elected);
   if (won.length !== s.seats) throw new Error(`${s.name}: ${won.length} electos, esperados ${s.seats}`);
@@ -174,8 +191,8 @@ const senado = SENATE.map((s) => {
 
 // --- Comparación con los datos anteriores y escritura -----------------------------
 const old = (f) => (fs.existsSync(`data/${f}.json`) ? JSON.parse(fs.readFileSync(`data/${f}.json`, 'utf8')) : null);
-const oldC = old('congreso-2023');
-const oldS = old('senado-2023');
+const oldC = old(`congreso-${YEAR}`);
+const oldS = old(`senado-${YEAR}`);
 if (oldC?.source && !oldC.source.startsWith('BOE')) {
   let diffs = 0;
   for (const p of congreso) {
@@ -197,6 +214,6 @@ if (oldS?.source && !oldS.source.startsWith('BOE')) {
 const nat = (list, k) => list.reduce((acc, p) => { for (const [x, n] of Object.entries(p[k])) acc[x] = (acc[x] || 0) + n; return acc; }, {});
 console.log('Congreso electos:', JSON.stringify(nat(congreso, 'elected')));
 console.log('Senado electos:', JSON.stringify(nat(senado, 'elected')), '· candidatos', cands.length);
-fs.writeFileSync('data/congreso-2023.json', JSON.stringify({ source: SOURCE, provinces: congreso }, null, 1));
-fs.writeFileSync('data/senado-2023.json', JSON.stringify({ source: SOURCE, constituencies: senado }, null, 1));
+fs.writeFileSync(`data/congreso-${YEAR}.json`, JSON.stringify({ source: SOURCE, provinces: congreso }, null, 1));
+fs.writeFileSync(`data/senado-${YEAR}.json`, JSON.stringify({ source: SOURCE, constituencies: senado }, null, 1));
 console.log('→ data/congreso-2023.json, data/senado-2023.json');

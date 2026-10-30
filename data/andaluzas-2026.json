@@ -1,93 +1,101 @@
 {
- "source": "en.wikipedia (2026 Andalusian regional election)",
- "unit": "% sobre válidos, 1 decimal",
+ "source": "Junta Electoral de Andalucía, BOJA núm. 108 (8-jun-2026), con la corrección del BOJA núm. 115 (17-jun-2026)",
+ "unit": "% sobre válidos (candidaturas + blanco), 2 decimales",
  "provinces": [
   {
    "id": "04",
    "name": "Almería",
+   "valid": 302997,
    "pct": {
-    "PP": 42.7,
+    "PP": 42.74,
     "PSOE": 21.7,
-    "VOX": 23.2,
-    "AA": 3.1,
-    "FA": 3.8
+    "VOX": 23.17,
+    "AA": 3.09,
+    "FA": 3.77
    }
   },
   {
    "id": "11",
    "name": "Cádiz",
+   "valid": 600974,
    "pct": {
-    "PP": 38.9,
+    "PP": 38.92,
     "PSOE": 20.2,
-    "VOX": 13,
-    "AA": 14.3,
+    "VOX": 13.03,
+    "AA": 14.35,
     "FA": 5.3
    }
   },
   {
    "id": "14",
    "name": "Córdoba",
+   "valid": 427632,
    "pct": {
-    "PP": 43.2,
-    "PSOE": 22.3,
-    "VOX": 12.6,
-    "AA": 8.3,
+    "PP": 43.22,
+    "PSOE": 22.27,
+    "VOX": 12.63,
+    "AA": 8.34,
     "FA": 8.8
    }
   },
   {
    "id": "18",
    "name": "Granada",
+   "valid": 480678,
    "pct": {
-    "PP": 42.4,
+    "PP": 42.38,
     "PSOE": 24.3,
-    "VOX": 15.1,
-    "AA": 6.8,
-    "FA": 6.5
+    "VOX": 15.09,
+    "AA": 6.83,
+    "FA": 6.45
    }
   },
   {
    "id": "21",
    "name": "Huelva",
+   "valid": 245371,
    "pct": {
-    "PP": 40.8,
-    "PSOE": 25.2,
-    "VOX": 14.9,
-    "AA": 8,
-    "FA": 5.6
+    "PP": 40.81,
+    "PSOE": 25.18,
+    "VOX": 14.86,
+    "AA": 8.02,
+    "FA": 5.58
    }
   },
   {
    "id": "23",
    "name": "Jaén",
+   "valid": 340174,
    "pct": {
-    "PP": 43.7,
+    "PP": 43.68,
     "PSOE": 27.3,
-    "VOX": 13.6,
-    "AA": 4.4,
-    "FA": 5.1
+    "VOX": 13.57,
+    "AA": 4.37,
+    "FA": 5.11
    }
   },
   {
    "id": "29",
    "name": "Málaga",
+   "valid": 754796,
    "pct": {
-    "PP": 44,
-    "PSOE": 20,
-    "VOX": 14.6,
-    "AA": 9.3,
-    "FA": 6
+    "PP": 44.03,
+    "PSOE": 20.04,
+    "VOX": 14.56,
+    "AA": 9.31,
+    "FA": 5.98
    }
   },
   {
    "id": "41",
    "name": "Sevilla",
+   "valid": 1045611,
    "pct": {
-    "PP": 39.4,
-    "PSOE": 24,
-    "VOX": 10.8,
-    "AA": 12.9,
-    "FA": 7.5
+    "PP": 39.38,
+    "PSOE": 23.95,
+    "VOX": 10.78,
+    "AA": 12.88,
+    "FA": 7.47
    }
   }
  ]

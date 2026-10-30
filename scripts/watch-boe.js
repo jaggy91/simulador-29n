@@ -7,8 +7,12 @@
 //     oficial, supera a la prensa en esos parámetros (§4.10).
 // Si algo no cuadra, no aplica nada: lo deja escrito en data/candidaturas-2026.json
 // (`problems`) para que el workflow abra un aviso.
+// Desde el 1-dic busca además el escrutinio definitivo de la Junta Electoral Central:
+// cuando sale, genera data/congreso-2026.json y senado-2026.json (build-oficial-2023.js)
+// y la comparación final con la proyección (compare-final.js).
 // Uso: node scripts/watch-boe.js [--decree 806/2026] [--from 2026-10-28] [--date AAAA-MM-DD] [--dry]
 import fs from 'node:fs';
+import { execSync } from 'node:child_process';
 import { boePdf } from './lib/boe.js';
 import { loadModelData, readJSON, writeJSON } from './lib/load-data.js';
 import { parseProclamacion, scenarioParams, problems } from './lib/proclamacion.js';
@@ -22,29 +26,62 @@ const OUT = 'data/candidaturas-2026.json';
 const CARD = 'boe-candidaturas-2026';
 const UA = 'simulador-29n/1.0 (+https://github.com/jaggy91/simulador-29n)';
 
-const prev = readJSON('candidaturas-2026', null);
-if (prev?.applied && !arg('--date')) {
-  console.log(`Ya aplicada: ${prev.boe} (${prev.date})`);
-  process.exit(0);
-}
-
 const ymd = (d) => d.toISOString().slice(0, 10).replace(/-/g, '');
 async function sumario(day) {
   const res = await fetch(`https://www.boe.es/datosabiertos/api/boe/sumario/${ymd(day)}`, { headers: { Accept: 'application/json', 'User-Agent': UA } });
   if (!res.ok) return null; // sin BOE ese día (domingos) o aún no publicado
   return (await res.json()).data;
 }
-function find(data) {
+const isProclamacion = (t) => /candidaturas proclamadas/i.test(t) && /Senado/.test(t) && t.includes(DECREE);
+const isEscrutinio = (t) => /resumen de los resultados de las elecciones al Congreso de los Diputados y al Senado/i.test(t) && t.includes(DECREE);
+function find(data, test = isProclamacion) {
   const items = [];
   const walk = (o) => {
     if (Array.isArray(o)) return o.forEach(walk);
     if (o && typeof o === 'object') {
-      if (o.identificador && /candidaturas proclamadas/i.test(o.titulo || '') && /Senado/.test(o.titulo) && o.titulo.includes(DECREE)) items.push(o);
+      if (o.identificador && test(o.titulo || '')) items.push(o);
       Object.values(o).forEach(walk);
     }
   };
   walk(data);
   return items[0] || null;
+}
+const flag = (k) => process.env.GITHUB_OUTPUT && fs.appendFileSync(process.env.GITHUB_OUTPUT, `${k}=si
+`);
+
+// --- Escrutinio definitivo (desde el 1-dic, hasta que se publique) -----------------
+const RESULTS_FROM = '2026-12-01';
+if (!arg('--date') && !DRY && new Date() >= new Date(`${RESULTS_FROM}T00:00:00Z`) && !fs.existsSync('data/congreso-2026.json')) {
+  const watch = readJSON('boe-watch', { checked: [] });
+  const today = new Date();
+  let found = null;
+  for (let d = new Date(`${RESULTS_FROM}T12:00:00Z`); d <= today && !found; d = new Date(d.getTime() + 864e5)) {
+    const day = d.toISOString().slice(0, 10);
+    if (watch.checked.includes(day)) continue;
+    const item = find(await sumario(d), isEscrutinio);
+    if (item) found = item;
+    else if ((today - d) / 864e5 > 2) watch.checked.push(day); // días cerrados sin nada
+  }
+  writeJSON('boe-watch', watch);
+  if (!found) console.log('BOE: aún no hay escrutinio definitivo');
+  else {
+    console.log(`BOE: escrutinio definitivo ${found.identificador}`);
+    try {
+      execSync(`node scripts/build-oficial-2023.js --boe ${found.identificador} --year 2026`, { stdio: 'inherit' });
+      execSync('node scripts/compare-final.js', { stdio: 'inherit' });
+    } catch (e) {
+      console.log(`No se pudo leer o comparar el escrutinio: ${e.message}`);
+      for (const f of ['congreso-2026', 'senado-2026']) fs.rmSync(`data/${f}.json`, { force: true });
+      flag('problemas_escrutinio');
+    }
+  }
+}
+
+// --- Candidaturas proclamadas -------------------------------------------------------
+const prev = readJSON('candidaturas-2026', null);
+if (prev?.applied && !arg('--date')) {
+  console.log(`Candidaturas ya aplicadas: ${prev.boe} (${prev.date})`);
+  process.exit(0);
 }
 
 const days = [];

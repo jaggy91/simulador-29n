@@ -71,9 +71,9 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
 | `data/senado-2023.json` | Votos de cada candidato y electos (59 circ.) | **BOE-A-2023-18907** (relación de candidatos electos y no electos, PDF), con la corrección **BOE-A-2023-19537** | `build-oficial-2023.js` | En cada circunscripción, electos = escaños; 208 en total; PP 120 |
 | `data/cera-voto-2023.json` | Voto de los residentes en el extranjero en 2023, por provincia y partido | **Junta Electoral Central** (resolución de 24-oct-2023, PDF de resultados por provincias) | `build-cera-voto-2023.js` | Se anotan en el propio archivo los descuadres del PDF oficial |
 | `data/europeas-2024.json` | % por provincia sobre válidos (2 decimales) | **Ministerio del Interior**, resultados oficiales (`07202406_TOTA.zip`, ficheros 03, 07 y 08) | `build-europeas.js`, `lib/interior.js` | En cada provincia, suma de candidaturas = total oficial. Coincide con la versión anterior (Wikipedia) con ±0,05 pp de redondeo |
-| `data/andaluzas-2026.json` | % por provincia, autonómicas del 17-may-2026 | en.wikipedia | `build-andaluzas.js` | 8 provincias |
+| `data/andaluzas-2026.json` | % por provincia sobre válidos, autonómicas del 17-may-2026 | **Junta Electoral de Andalucía**, BOJA núm. 108 (8-jun-2026) y corrección del BOJA núm. 115 | `build-andaluzas.js` | Escaños por provincia = total; candidaturas + blanco = válidos. Coincide con la versión anterior (Wikipedia) con ±0,05 pp de redondeo |
 | `data/seats-2026.json` | Diputados por provincia | **BOE-A-2026-20742** (RD 806/2026), anexo | `build-seats.js` | 52 circ., 350. Cambios frente a 2023: Madrid 37→38, Cádiz 9→8 |
-| `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos | `build-designados.js` | Suma 58 |
+| `data/senado-designados.json` | Senadores designados por comunidad | Tabla "Senate of Spain" (en.wikipedia) + resultados autonómicos. En las 4 comunidades estimadas, composición del parlamento contrastada con su fuente oficial (BOJA; webs de las Cortes de Aragón, las Cortes de Castilla y León y la Asamblea de Extremadura) | `build-designados.js` | Suma 58; falla si un parlamento estimado no cuadra con su fuente oficial |
 | `data/cera.json` | Electores CERA por provincia y por país, 2023 y 2026 | **INE**, Oficina del Censo Electoral, tablas 3 y 8 | `build-cera.js` | Los países suman el total de cada provincia. 2.325.310 → 2.769.645 |
 | `data/poll-checks.json` | Verificación de cada encuesta por otro canal (§4.1): estado, canal, cifras encontradas | Publicación original, gráficos, RSS | `fetch-polls.js`, `lib/verify-polls.js` | Test: cada tarjeta indica su índice y su comprobación |
 | `data/polls.json` | Encuestas 2026 y las tres fuentes de intención de voto (§4.1), cada encuesta con su enlace original | Índice: en.wikipedia, "Opinion polling for the 2026 Spanish general election". Estimación oficial: **PDF del CIS** (cis.es, estudio 3582) | `fetch-polls.js`, `lib/cis.js` | El PDF del CIS se lee por columnas; PP incluye UPN |
@@ -94,7 +94,6 @@ Es un modelo de **traslación votos → escaños**, no un modelo de comportamien
   - Solución: se usan las filas provinciales y los electores del INE, y cada descuadre queda anotado en `data/cera-voto-2023.json` → `notes`.
 - **infoelectoral.interior.gob.es, senado.es y BOJA:** se descargarán desde GitHub Actions.
 - **Datos que siguen saliendo de Wikipedia:**
-  - andaluzas 2026 (base territorial de AA);
   - composición de los designados;
   - el índice de encuestas (cada encuesta enlaza a su publicación original).
 - **Tabla de designados de Wikipedia:** desfasada en 4 comunidades (§4.6).
@@ -164,6 +163,7 @@ Las tres fuentes son tarjetas (§4.10): cada encuesta o estimación puede desact
 - **Resultado:** la tarjeta muestra "verificada en <canal>" con su enlace o "sin verificar: cifra tomada del índice". La cifra que entra en el modelo es la misma en los dos casos; la marca solo dice si se pudo confirmar.
 - **Solo canales abiertos:** si una web bloquea la lectura automática (403, `robots.txt`) no se insiste, y X no se usa. Una encuesta verificada no se vuelve a comprobar mientras no cambien sus cifras; las no verificadas se reintentan cada 24 horas.
 - La estimación oficial del CIS se lee directamente de su PDF: está verificada por construcción.
+- **Ediciones en Wikipedia** (`scripts/lib/poll-edits.js`, `data/poll-edits.json`): cada hora se compara el índice con la descarga anterior. Si cambian las cifras de una encuesta ya publicada, o desaparece, se registra con las ediciones de Wikipedia de ese intervalo (fecha, editor y comentario), la tarjeta lo indica durante 14 días y, si la encuesta entra en alguna fuente, se abre un aviso. Cada fila se identifica por empresa, fecha y orden, porque a veces hay dos estudios de la misma empresa el mismo día.
 
 <!-- veda -->
 
@@ -457,15 +457,17 @@ Efectos a 27-oct (modelo del 28-oct), derecha del Senado con media de encuestas 
 - Al cambiar tarjetas, el resultado se recalcula en el navegador con el mismo motor, y un aviso indica que no es el resultado por defecto.
 - "Qué pasaría si" aplica sus ajustes **sobre** las fuentes activas.
 
-**Captura automática (F4):** los titulares nuevos entrarán en `data/news.json` con `captured: 'auto'` y `verified: false`.
-- **Entrarán inactivos** y con la etiqueta "sin verificar": se ven y se pueden activar, pero no cambian el resultado por defecto hasta que alguien los revise y marque `verified: true` (`pendingReview` en `evidence.js`, con test).
-- Una fuente oficial o una noticia verificada posterior los supera.
+**Captura automática de noticias** (`scripts/fetch-news.js`). Cada hora lee los RSS de 10 medios de distinta línea editorial (lista en `scripts/fetch-news.js`), filtra los titulares que pueden tocar un escenario y una IA los clasifica:
+- **La IA solo puede decir escenario y estado** (rumor, negociación, confirmado, descartado), nunca cifras, y solo de escenarios que ya existen en el catálogo. Tiene que aportar una **cita literal** que aparezca en el texto del medio; si no aparece, se descarta.
+- **Activación (opción C):** un rumor o una negociación se activa solo si lo cuentan al menos **dos medios distintos**. Un "confirmado" o "descartado" queda **pendiente de revisión** (inactivo) y se abre un aviso: para aprobarlo se marca `verified: true`; para rechazarlo, se borra.
+- Si lo que propone coincide con el estado vigente del escenario, no se crea nada. Una tarjeta automática sin verificar nunca supera a una verificada (§ resolución, arriba).
+- **Proveedor de IA:** configurable, compatible con la API de OpenAI (secretos `NEWS_AI_URL`, `NEWS_AI_KEY`, `NEWS_AI_MODEL`). Sin ellos, el paso se salta y las noticias siguen siendo manuales. GitHub Models, previsto al principio, se retiró el 30-jul-2026.
 
 ---
 
 ## 5. Validación
 
-### 5.1 Reproducción exacta de 2023 (`npm test`, 61 tests en total)
+### 5.1 Reproducción exacta de 2023 (`npm test`, 64 tests en total)
 
 T1 y T5 se comparan con el resultado oficial. T2–T4 y T6–T8 son contrafactuales (por ejemplo, T6: PSOE y Sumar en lista conjunta al Senado, que en 2023 no existió) y reproducen simulaciones de un análisis externo sobre los votos oficiales de 2023: comprueban que el motor calcula igual que un cálculo independiente, pero no alimentan el modelo.
 
@@ -651,6 +653,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 - **En la web:** un bloque encima de todo con el porcentaje escrutado, la hora, el hemiciclo y los escaños frente a la proyección, con la advertencia de que no es el resultado oficial.
 - **Probado con 2023:** las 52 provincias, 350 escaños y el reparto real (PP 137, PSOE 121, Vox 33, Sumar 31…), coincidente con Público.
 - **Después:** el escrutinio definitivo lo publica la Junta Electoral Central en el BOE. La ruta de 2026 se detecta sola en la página de RTVE.
+- **Comparación final** (`scripts/compare-final.js`, `data/final-comparison.json`): el resultado frente a la **última proyección publicada antes de la veda**, que se toma del historial de git (`data/projection-final.json`) para que no la cambien las encuestas posteriores. Dice si el resultado cae dentro de los intervalos del 90 % de cada fuente y el error de cada encuesta por partido. La noche electoral se hace con el escrutinio provisional; desde el 1-dic, el vigilante del BOE busca el escrutinio definitivo, lo lee (`build-oficial-2023.js --year 2026`) y repite la comparación con él.
 
 **Aviso inicial en la web** (`src/app/components/Notice.jsx`): antes de entrar, el visitante lee qué es el simulador, su objetivo, cómo se hizo y de qué fuentes sale, y lo acepta marcando una casilla.
 - Indica que el proyecto se desarrolló con ayuda de inteligencia artificial (Claude, de Anthropic) para el código, la lectura de las fuentes oficiales y las comprobaciones.
@@ -664,7 +667,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 ```sh
 npm ci
 npm run data          # regenera la base (BOE, Junta Electoral Central, INE y, para europeas, andaluzas y designados, Wikipedia)
-npm test              # 61 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes, veda
+npm test              # 64 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes, veda
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
@@ -746,3 +749,7 @@ node scripts/fetch-results.js --year 2023 --month 7   # lector de resultados, pr
 | 30-oct | Voto de los nacionalizados: medido el punto de corte de participación | Comprobar si el "no mueve escaños" es sólido: lo es con el reparto de 2023 |
 | 30-oct | Espectro: las palancas del pacto solo se aplican si está vigente, y se marcan los pasos que no favorecen al lado que dicen | Que el laboratorio no se quede viejo con las noticias |
 | 30-oct | Cron horario activado; acciones de GitHub actualizadas (Node 20 retirado) | Funcionamiento autónomo |
+| 30-oct | Detección de ediciones en Wikipedia de encuestas ya publicadas, con aviso si afectan a las fuentes | Que un cambio en el índice no pase desapercibido |
+| 30-oct | Captura automática de noticias con IA, opción C (rumor o negociación con dos medios se activan solos; confirmado o descartado esperan revisión). Proveedor de IA configurable | GitHub Models, previsto al principio, se retiró el 30-jul-2026 |
+| 30-oct | Andaluzas 2026 desde el BOJA (Junta Electoral de Andalucía); parlamentos estimados de los designados contrastados con su fuente oficial | Fuente oficial; mismas cifras que Wikipedia |
+| 30-oct | Comparación final automática con la última proyección antes de la veda, provisional la noche electoral y definitiva con el BOE | Comprobar el modelo con el resultado real sin intervención |

@@ -110,7 +110,7 @@ async function verifyRow(row) {
   return { status: 'no verificada', channel: null, url: null, tried };
 }
 
-const keyOf = (row) => `${row.firm}|${row.date}`;
+const keyOf = (row) => row.uid ?? `${row.firm}|${row.date}`;
 const hashOf = (row) => JSON.stringify([row.values, row.joint]);
 
 // rows: filas del índice que entran en alguna fuente. Devuelve {clave: comprobación}.

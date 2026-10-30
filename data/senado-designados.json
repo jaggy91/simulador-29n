@@ -23,7 +23,8 @@
     "PSOE": 3,
     "VOX": 1
    },
-   "dhondtMatchesReal": null
+   "dhondtMatchesReal": null,
+   "parliamentOfficial": "Junta Electoral de Andalucía, BOJA núm. 108 (8-jun-2026)"
   },
   {
    "ccaa": "Aragón",
@@ -46,7 +47,8 @@
     "PP": 1,
     "PSOE": 1
    },
-   "dhondtMatchesReal": null
+   "dhondtMatchesReal": null,
+   "parliamentOfficial": "Cortes de Aragón, grupos parlamentarios (cortesaragon.es, 30-oct-2026)"
   },
   {
    "ccaa": "Asturias",
@@ -148,8 +150,8 @@
    "source": "real",
    "dhondt": {
     "PSOE": 1,
-    "PP": 1,
-    "CC": 1
+    "CC": 1,
+    "PP": 1
    },
    "dhondtMatchesReal": true
   },
@@ -193,7 +195,8 @@
     "PP": 2,
     "PSOE": 1
    },
-   "dhondtMatchesReal": null
+   "dhondtMatchesReal": null,
+   "parliamentOfficial": "Cortes de Castilla y León, composición (ccyl.es, 30-oct-2026)"
   },
   {
    "ccaa": "Castilla-La Mancha",
@@ -263,7 +266,8 @@
     "PP": 1,
     "PSOE": 1
    },
-   "dhondtMatchesReal": null
+   "dhondtMatchesReal": null,
+   "parliamentOfficial": "Asamblea de Extremadura, grupos (asambleaex.es, 30-oct-2026)"
   },
   {
    "ccaa": "Galicia",

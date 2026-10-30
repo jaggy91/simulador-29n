@@ -97,6 +97,8 @@ export default function App() {
       .then(() => loadJSON('spectrum').then((spectrum) => setD((x) => ({ ...x, spectrum }))).catch(() => {}))
       // Resultados provisionales: solo existen desde el cierre de las urnas del 29-N.
       .then(() => loadJSON('results').then((results) => setD((x) => ({ ...x, results }))).catch(() => {}))
+      // Última proyección antes de la veda, para comparar con el escrutinio.
+      .then(() => loadJSON('projection-final').then((projectionFinal) => setD((x) => ({ ...x, projectionFinal }))).catch(() => {}))
       .catch((e) => setError(e.message));
   }, []);
 
@@ -221,7 +223,7 @@ export default function App() {
         )}
 
         <div className={busy ? 'busy' : ''}>
-          {d.results?.escrutado > 0 && <LiveResults results={d.results} projection={r.central.congress} />}
+          {d.results?.escrutado > 0 && <LiveResults results={d.results} projection={d.projectionFinal?.results?.[source]?.central.congress || r.central.congress} frozen={Boolean(d.projectionFinal)} />}
           <Hero r={r} caption={`Resultado con las fuentes activas (${active.size})${ownPoll ? ' y tus porcentajes' : ''} · no es una predicción`} />
           <Chambers r={r} congressSub={`Resultado central con las fuentes activas (${ownPoll ? 'tus porcentajes' : inText(d.polls.sources[source].label)}). 350 escaños.`} />
 

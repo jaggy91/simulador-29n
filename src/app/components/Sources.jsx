@@ -21,6 +21,20 @@ function Effect({ impact }) {
 // De dónde sale la cifra de una encuesta: el índice (Wikipedia) y, si se pudo, el canal
 // en el que el sistema la comprobó por su cuenta.
 function Check({ c }) {
+  return (
+    <>
+      <CheckLine c={c} />
+      {c.edited && (
+        <p className="src-check">
+          <span className="ver no">editada en Wikipedia</span> {fmtDate(c.edited.detected)}: {c.edited.change}
+          {c.edited.revisions?.[0] ? ` (${c.edited.revisions[0].user}${c.edited.revisions[0].comment ? `: «${c.edited.revisions[0].comment.slice(0, 80)}»` : ''})` : ''}
+        </p>
+      )}
+    </>
+  );
+}
+
+function CheckLine({ c }) {
   const k = c.check;
   if (k?.status === 'verificada') {
     return (

@@ -13,6 +13,7 @@ import { fetchWikitext, extractTable } from './lib/wiki.js';
 import { parseTable, pollAverage, resolveJoint, average } from './lib/polls.js';
 import { cisEstimate } from './lib/cis.js';
 import { verifyPolls, publicCheck, checkKey } from './lib/verify-polls.js';
+import { withUids, detectEdits, describe } from './lib/poll-edits.js';
 
 const WINDOW_DAYS = 21;
 const HALF_LIFE_DAYS = 7;
@@ -22,11 +23,12 @@ const SECTIONS = ['=====2026 (with Broad Front)=====', '=====2026 (before Broad 
 const JOINT_COLUMNS = { SUMAR: ['FA', 'FV'] };
 
 const text = await fetchWikitext('Opinion polling for the 2026 Spanish general election', { cache: process.argv.includes('--cache') });
-const rows = SECTIONS.flatMap((title) => {
+const prev = fs.existsSync('data/polls.json') ? JSON.parse(fs.readFileSync('data/polls.json', 'utf8')) : null;
+const rows = withUids(SECTIONS.flatMap((title) => {
   const at = text.indexOf(title);
   if (at < 0) throw new Error(`No encuentro la sección ${title}`);
   return parseTable(extractTable(text, at), title, { year: 2026, jointColumns: JOINT_COLUMNS });
-});
+}));
 const latest = rows.reduce((d, r) => (r.date > d ? r.date : d), '');
 
 // --- Media de encuestas -----------------------------------------------------
@@ -66,6 +68,22 @@ withCheck(cisItems, cisRows);
 // La estimación oficial del CIS se lee directamente de su PDF: es la fuente original.
 cisOficialItems[0].index = INDEX;
 cisOficialItems[0].check = { status: 'verificada', channel: 'PDF oficial del CIS (cis.es)', url: est.url, checked: new Date().toISOString() };
+// --- Ediciones en Wikipedia de encuestas ya publicadas -----------------------------
+const edits = await detectEdits(rows, prev);
+const log = fs.existsSync('data/poll-edits.json') ? JSON.parse(fs.readFileSync('data/poll-edits.json', 'utf8')) : [];
+if (edits.length) fs.writeFileSync('data/poll-edits.json', JSON.stringify([...edits, ...log].slice(0, 200), null, 1));
+const recent = [...edits, ...log].filter((e) => (Date.now() - Date.parse(e.detected)) / 864e5 < 14);
+const markEdits = (items, rowsFor) => items.forEach((it, i) => {
+  const e = recent.find((x) => x.uid === rowsFor[i].uid);
+  if (e) it.edited = { detected: e.detected, change: describe(e), revisions: e.revisions.slice(0, 3) };
+});
+markEdits(mediaItems, used);
+markEdits(cisItems, cisRows);
+const inSources = new Set([...used, ...cisRows].map((r) => r.uid));
+const touching = edits.filter((e) => inSources.has(e.uid));
+for (const e of edits) console.log(`Edición en Wikipedia: ${e.firm} (${e.date}) ${describe(e)}${inSources.has(e.uid) ? ' — entra en las fuentes' : ''}`);
+if (touching.length && process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, 'ediciones=si\n');
+
 const nv = Object.values(checks).filter((c) => c.status === 'verificada').length;
 console.log(`Verificación: ${nv} de ${Object.keys(checks).length} encuestas verificadas por otro canal`);
 

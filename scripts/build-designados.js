@@ -7,6 +7,15 @@ import { fetchWikitext, extractTable, parseResultsTable } from './lib/wiki.js';
 import { normalizeParty } from './lib/parties-map.js';
 import { dhondt } from '../src/engine/dhondt.js';
 
+// Composición de los parlamentos estimados, contrastada con su fuente oficial (escaños
+// de los grupos mayores). Si no coincide, el script falla.
+const OFFICIAL = {
+  Andalucía: { source: 'Junta Electoral de Andalucía, BOJA núm. 108 (8-jun-2026)', seats: { PP: 53, PSOE: 28, VOX: 15, AA: 8, FA: 5 } },
+  Aragón: { source: 'Cortes de Aragón, grupos parlamentarios (cortesaragon.es, 30-oct-2026)', seats: { PP: 26, PSOE: 18, VOX: 14 } },
+  'Castilla y León': { source: 'Cortes de Castilla y León, composición (ccyl.es, 30-oct-2026)', seats: { PP: 33, PSOE: 30, VOX: 14 } },
+  Extremadura: { source: 'Asamblea de Extremadura, grupos (asambleaex.es, 30-oct-2026)', seats: { PP: 29, PSOE: 18, VOX: 11 } },
+};
+
 // Comunidad: designados (Wikipedia, "Senate of Spain") y última autonómica.
 const CCAA = [
   ['Andalucía', 'Andalusia', 9, '2026 Andalusian regional election'],
@@ -63,7 +72,9 @@ for (const [name, wiki, count, title] of CCAA) {
   // Donde no ha habido elecciones desde la tabla de Wikipedia, se usa el reparto real
   // (algunos parlamentos no siguen D'Hondt: País Vasco, C. Valenciana). Si no, la estimación.
   const designated = sameElection ? w.dist : estimate;
-  out.push({ ccaa: name, count, election: title, parliament: seats, designated, source: sameElection ? 'real' : "estimación D'Hondt", dhondt: estimate, dhondtMatchesReal: match });
+  const off = OFFICIAL[name];
+  if (off) for (const [p, n] of Object.entries(off.seats)) if (seats[p] !== n) throw new Error(`${name}: ${p} tiene ${seats[p]} escaños y la fuente oficial da ${n}`);
+  out.push({ ccaa: name, count, election: title, parliament: seats, designated, source: sameElection ? 'real' : "estimación D'Hondt", dhondt: estimate, dhondtMatchesReal: match, ...(off && { parliamentOfficial: off.source }) });
   console.log(`${name.padEnd(22)} ${String(count).padStart(2)}  ${JSON.stringify(designated).padEnd(42)} ${sameElection ? 'real' + (match ? '' : ` (D'Hondt daría ${JSON.stringify(estimate)})`) : "estimación D'Hondt · " + JSON.stringify(seats)}`);
 }
 

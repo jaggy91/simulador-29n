@@ -55,7 +55,9 @@ export function resolveEvidence(catalog, cards, active) {
 // están activas y las capturadas automáticamente sin verificar (F4): no cambian el
 // resultado por defecto hasta que alguien las revisa. Todas siguen visibles y se
 // pueden activar.
-export const pendingReview = (c) => c.captured === 'auto' && !c.verified;
+// Excepción (opción C): un rumor o una negociación que cuentan al menos dos medios se
+// activa solo (`autoActive`, lo decide scripts/fetch-news.js).
+export const pendingReview = (c) => c.captured === 'auto' && !c.verified && !c.autoActive;
 export function defaultActive(catalog, cards) {
   const all = new Set(cards.filter((c) => hasEffect(c) && !pendingReview(c)).map((c) => c.id));
   const { overriddenBy } = resolveEvidence(catalog, cards, all);

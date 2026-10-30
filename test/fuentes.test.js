@@ -125,3 +125,19 @@ describe('Verificación de encuestas por otro canal', async () => {
     }
   });
 });
+
+describe('Ediciones en Wikipedia y noticias automáticas', async () => {
+  const { withUids, describe: describeEdit } = await import('../scripts/lib/poll-edits.js');
+  it('dos estudios de la misma empresa y fecha tienen identificadores distintos', () => {
+    const r = withUids([{ firm: 'CIS (Demócrata)', date: '2026-06-30' }, { firm: 'CIS (Demócrata)', date: '2026-06-30' }, { firm: 'GAD3', date: '2026-10-08' }]);
+    expect(r.map((x) => x.uid)).toEqual(['CIS (Demócrata)|2026-06-30', 'CIS (Demócrata)|2026-06-30|2', 'GAD3|2026-10-08']);
+  });
+  it('describe el cambio de cifras de una encuesta editada', () => {
+    expect(describeEdit({ kind: 'cambio', before: { values: { PP: 33.3 }, sample: 1000 }, after: { values: { PP: 30.6 }, sample: 1000 } })).toBe('PP 33.3→30.6');
+  });
+  it('un rumor contado por dos medios se activa solo; uno fuerte sin revisar, no', () => {
+    const base = { type: 'noticia', date: '2026-11-05', verified: false, captured: 'auto', effects: [{ scenario: 'A', prob: 0.15, status: 'rumor' }] };
+    expect(defaultActive(catalog, [{ ...base, id: 'r', autoActive: true }]).has('r')).toBe(true);
+    expect(defaultActive(catalog, [{ ...base, id: 'c', autoActive: false, effects: [{ scenario: 'A', prob: 1, status: 'confirmado' }] }]).has('c')).toBe(false);
+  });
+});
