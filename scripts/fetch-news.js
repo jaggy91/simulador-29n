@@ -62,11 +62,11 @@ async function feed([outlet, url]) {
 // NEWS_AI_MODEL admite varios modelos separados por comas: si uno falla por saturación
 // o porque el proveedor lo retira, se prueba el siguiente.
 async function classify(item, catalog) {
-  let last;
+  const errors = [];
   for (const model of MODEL.split(',').map((m) => m.trim()).filter(Boolean)) {
-    try { return await classifyWith(model, item, catalog); } catch (e) { last = e; }
+    try { return await classifyWith(model, item, catalog); } catch (e) { errors.push(e.message); }
   }
-  throw last;
+  throw new Error(errors.join(' | '));
 }
 
 async function classifyWith(model, item, catalog) {
@@ -89,7 +89,7 @@ Si la noticia no cambia el estado de ninguno de esos escenarios, o trata de una 
       ],
     }),
   });
-  if (!res.ok) throw new Error(`IA ${res.status} (${model})`);
+  if (!res.ok) throw new Error(`IA ${res.status} (${model}): ${(await res.text()).slice(0, 160).replace(/\s+/g, ' ')}`);
   const body = await res.text();
   let content;
   try { content = JSON.parse(body).choices[0].message.content; } catch { throw new Error(`respuesta no válida del proveedor: ${body.slice(0, 60)}`); }
