@@ -334,6 +334,30 @@
    ],
    "toggleable": true,
    "defaultActive": false
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-rumor",
+   "type": "noticia",
+   "date": "2026-10-31",
+   "title": "El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (RTVE). Cita: «El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'»",
+   "outlet": "RTVE",
+   "sources": [
+    "https://www.rtve.es/noticias/20261030/supremo-da-tres-dias-a-partes-sobre-suspension-del-voto-hijos-nacionalizados-por-ley-nietos/17294210.shtml",
+    "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "rumor",
+     "prob": 0.15
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false
   }
  ]
 }

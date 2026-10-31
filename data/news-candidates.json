@@ -8,5 +8,25 @@
   "status": "negociación",
   "quote": "El Tribunal Supremo ha decidido dar tres días a las partes en el proceso de la 'ley de nietos' para que se pronuncien sobre la petición del partido Iustitia Europa de extender la suspensión cautelar del voto a los hijos de los nacionalizados por esa vía.",
   "at": "2026-10-31T09:37:17.924Z"
+ },
+ {
+  "outlet": "RTVE",
+  "title": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
+  "link": "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml",
+  "date": "2026-10-31T16:04:48.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "rumor",
+  "quote": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
+  "at": "2026-10-31T19:58:29.486Z"
+ },
+ {
+  "outlet": "RTVE",
+  "title": "El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'",
+  "link": "https://www.rtve.es/noticias/20261030/supremo-da-tres-dias-a-partes-sobre-suspension-del-voto-hijos-nacionalizados-por-ley-nietos/17294210.shtml",
+  "date": "2026-10-30T17:15:39.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "rumor",
+  "quote": "El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'",
+  "at": "2026-10-31T19:58:30.389Z"
  }
 ]
