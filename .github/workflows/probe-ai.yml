@@ -1,12 +1,12 @@
 name: Prueba de la IA
 
 # Solo a mano. Lista los modelos que ofrece el proveedor configurado (secretos NEWS_AI_*)
-# y hace una llamada de prueba. Nunca imprime la clave.
+# y prueba uno o varios (separados por comas). Nunca imprime la clave.
 on:
   workflow_dispatch:
     inputs:
       model:
-        description: 'Modelo para la llamada de prueba (vacío = NEWS_AI_MODEL)'
+        description: 'Modelos a probar, separados por comas (vacío = NEWS_AI_MODEL)'
         required: false
 
 permissions:
@@ -16,18 +16,17 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Modelos disponibles y llamada de prueba
+      - name: Modelos disponibles y llamadas de prueba
         env:
           URL: ${{ secrets.NEWS_AI_URL }}
           KEY: ${{ secrets.NEWS_AI_KEY }}
-          MODEL: ${{ inputs.model || secrets.NEWS_AI_MODEL }}
+          MODELS: ${{ inputs.model || secrets.NEWS_AI_MODEL }}
         run: |
           base="${URL%/chat/completions}"
           echo "== Modelos (filtrados: flash)"
           curl -s -m 30 "$base/models" -H "Authorization: Bearer $KEY" | grep -oE '"id": *"[^"]*"' | grep -i flash | head -30
-          if [ -n "$MODEL" ]; then
-            echo "== Prueba con $MODEL"
-            curl -s -m 60 "$URL" -H "Authorization: Bearer $KEY" -H 'Content-Type: application/json' \
-              -d "{\"model\":\"$MODEL\",\"response_format\":{\"type\":\"json_object\"},\"messages\":[{\"role\":\"user\",\"content\":\"Responde solo el JSON {\\\"ok\\\": true}\"}]}" | head -c 600
-            echo
-          fi
+          body='{"model":"MODEL","response_format":{"type":"json_object"},"messages":[{"role":"user","content":"Responde solo el JSON {\"ok\": true}"}]}'
+          for m in ${MODELS//,/ }; do
+            code=$(curl -s -o /tmp/r.json -w '%{http_code}' -m 60 "$URL" -H "Authorization: Bearer $KEY" -H 'Content-Type: application/json' -d "${body/MODEL/$m}")
+            echo "== $m -> HTTP $code: $(head -c 160 /tmp/r.json | tr -s ' \n' ' ')"
+          done
