@@ -1,5 +1,7 @@
 # Simulador 29-N
 
+**Web:** https://jaggy91.github.io/simulador-29n/
+
 Simulador del reparto de escaños (Congreso y Senado) de las elecciones generales del 29 de noviembre de 2026. Proyecta las encuestas provincia a provincia, aplica los escenarios de candidaturas (retiradas, listas conjuntas, pacto PP–Vox al Senado, voto exterior) y calcula probabilidades con Monte Carlo. Se actualiza solo cada hora con GitHub Actions y se publica en GitHub Pages.
 
 **Metodología auditable, validación y margen de error: [METODOLOGIA.md](METODOLOGIA.md)**, también legible en la propia web (sección «Metodología»).
