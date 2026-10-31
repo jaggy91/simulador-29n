@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-10-31T05:01:57.449Z",
+ "fetched": "2026-10-31T09:37:39.184Z",
  "latestPoll": "2026-10-25",
  "sources": {
   "media": {
@@ -51,7 +51,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "publicación original: faltan PP, FA, BILDU, AA, PODEMOS"
       ]
@@ -84,7 +84,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "publicación original: faltan PP, ERC, JUNTS, BILDU"
       ]
@@ -335,14 +335,19 @@
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
-      "status": "no verificada",
-      "channel": null,
-      "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
-      "tried": [
-       "publicación original: 403",
-       "RSS de elpais.com: el artículo ya no está en el feed"
-      ]
+      "status": "verificada",
+      "channel": "publicación original (elpais.com)",
+      "url": "https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html",
+      "checked": "2026-10-31T09:37:28.179Z",
+      "matched": [
+       "PP",
+       "PSOE",
+       "VOX",
+       "PODEMOS",
+       "SALF",
+       "FA+FV"
+      ],
+      "missing": []
      }
     },
     {
@@ -368,7 +373,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "publicación original: 406"
       ]
@@ -447,7 +452,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "publicación original: faltan ERC, BILDU, PODEMOS, SALF, FA+FV"
       ]
@@ -578,7 +583,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-10-31T05:01:57.448Z"
+      "checked": "2026-10-31T09:37:39.182Z"
      }
     }
    ],
@@ -628,7 +633,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
       ]
@@ -655,7 +660,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-10-30T05:04:39.353Z",
+      "checked": "2026-10-31T09:37:28.179Z",
       "tried": [
        "X no es un canal abierto"
       ]

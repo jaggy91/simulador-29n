@@ -311,6 +311,29 @@
    "effects": [],
    "toggleable": false,
    "defaultActive": false
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-negociación",
+   "type": "noticia",
+   "date": "2026-10-30",
+   "title": "El Supremo otorga tres días a las partes para opinar sobre la petición de suspender el voto a hijos de nacionalizados por la 'ley de nietos'",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → negociación, en 1 medio (20minutos). Cita: «El Tribunal Supremo ha decidido dar tres días a las partes en el proceso de la 'ley de nietos' para que se pronuncien sobre la petición del partido Iustitia Europa de extender la suspensión cautelar del voto a los hijos de los nacionalizados por esa vía.»",
+   "outlet": "20minutos",
+   "sources": [
+    "https://www.20minutos.es/nacional/supremo-otorga-tres-dias-las-partes-para-opinar-sobre-peticion-suspender-voto-hijos-nacionalizados-por-ley-nietos_7055661_0.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "negociación",
+     "prob": 0.5
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T05:04:30.121Z",
+ "updated": "2026-10-31T09:40:17.595Z",
  "impactN": 1000,
  "cards": [
   {
@@ -472,6 +472,47 @@
    "impact": null
   },
   {
+   "id": "auto-VOTO_EXTERIOR-negociación",
+   "type": "noticia",
+   "date": "2026-10-30",
+   "title": "El Supremo otorga tres días a las partes para opinar sobre la petición de suspender el voto a hijos de nacionalizados por la 'ley de nietos'",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → negociación, en 1 medio (20minutos). Cita: «El Tribunal Supremo ha decidido dar tres días a las partes en el proceso de la 'ley de nietos' para que se pronuncien sobre la petición del partido Iustitia Europa de extender la suspensión cautelar del voto a los hijos de los nacionalizados por esa vía.»",
+   "outlet": "20minutos",
+   "sources": [
+    "https://www.20minutos.es/nacional/supremo-otorga-tres-dias-las-partes-para-opinar-sobre-peticion-suspender-voto-hijos-nacionalizados-por-ley-nietos_7055661_0.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "negociación",
+     "prob": 0.5
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
    "id": "encuesta:SocioMétrica/El Español|2026-10-25",
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-25",
@@ -499,7 +540,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "publicación original: faltan PP, FA, BILDU, AA, PODEMOS"
     ]
@@ -554,7 +595,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "publicación original: faltan PP, ERC, JUNTS, BILDU"
     ]
@@ -959,14 +1000,19 @@
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
-    "status": "no verificada",
-    "channel": null,
-    "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
-    "tried": [
-     "publicación original: 403",
-     "RSS de elpais.com: el artículo ya no está en el feed"
-    ]
+    "status": "verificada",
+    "channel": "publicación original (elpais.com)",
+    "url": "https://elpais.com/espana/2026-10-09/el-pp-y-vox-mantienen-la-mayoria-absoluta-tras-el-adelanto-electoral.html",
+    "checked": "2026-10-31T09:37:28.179Z",
+    "matched": [
+     "PP",
+     "PSOE",
+     "VOX",
+     "PODEMOS",
+     "SALF",
+     "FA+FV"
+    ],
+    "missing": []
    },
    "type": "encuesta",
    "source": "media",
@@ -1014,7 +1060,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "publicación original: 406"
     ]
@@ -1137,7 +1183,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "publicación original: faltan ERC, BILDU, PODEMOS, SALF, FA+FV"
     ]
@@ -1309,7 +1355,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-10-31T05:01:57.448Z"
+    "checked": "2026-10-31T09:37:39.182Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1355,7 +1401,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
     ]
@@ -1404,7 +1450,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-10-30T05:04:39.353Z",
+    "checked": "2026-10-31T09:37:28.179Z",
     "tried": [
      "X no es un canal abierto"
     ]
