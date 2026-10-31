@@ -461,7 +461,7 @@ Efectos a 27-oct (modelo del 28-oct), derecha del Senado con media de encuestas 
 - **La IA solo puede decir escenario y estado** (rumor, negociación, confirmado, descartado), nunca cifras, y solo de escenarios que ya existen en el catálogo. Tiene que aportar una **cita literal** que aparezca en el texto del medio; si no aparece, se descarta.
 - **Activación (opción C):** un rumor o una negociación se activa solo si lo cuentan al menos **dos medios distintos**. Un "confirmado" o "descartado" queda **pendiente de revisión** (inactivo) y se abre un aviso: para aprobarlo se marca `verified: true`; para rechazarlo, se borra.
 - Si lo que propone coincide con el estado vigente del escenario, no se crea nada. Una tarjeta automática sin verificar nunca supera a una verificada (§ resolución, arriba).
-- **Proveedor de IA:** configurable, compatible con la API de OpenAI (secretos `NEWS_AI_URL`, `NEWS_AI_KEY`, `NEWS_AI_MODEL`). Sin ellos, el paso se salta y las noticias siguen siendo manuales. GitHub Models, previsto al principio, se retiró el 30-jul-2026.
+- **Proveedor de IA:** configurable, compatible con la API de OpenAI (secretos `NEWS_AI_URL`, `NEWS_AI_KEY`, `NEWS_AI_MODEL`). Sin ellos, el paso se salta y las noticias siguen siendo manuales. Configurado desde el 31-oct: **Gemini** (Google, plan gratuito), con varios modelos Flash en orden de respaldo por si uno está saturado. Una autoprueba (workflow "Prueba de la IA") comprueba que detecta un caso positivo y descarta uno negativo. GitHub Models, previsto al principio, se retiró el 30-jul-2026.
 
 ---
 
@@ -647,7 +647,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
   - **Comprobación diaria:** cada ejecución del workflow compila también la versión de veda y comprueba que no lleva archivos de encuestas ni nombres de empresas de sondeos (`scripts/check-veda.js`).
   - **Pendiente de revisión legal:** el repositorio de GitHub conserva, en su historial, los datos de encuestas anteriores a la veda.
 
-**Noche electoral** (`scripts/fetch-results.js`, workflow `results.yml`). Al terminar la veda (20:00 UTC del 29-N, 21:00 peninsulares), un workflow lee cada 5 minutos, hasta las 06:00 UTC del 30-N, el escrutinio provisional:
+**Noche electoral** (`scripts/fetch-results.js`, workflow `results.yml`). Al terminar la veda (20:00 UTC del 29-N, 21:00 peninsulares), se lee cada 5 minutos, hasta las 06:00 UTC del 30-N, el escrutinio provisional. GitHub retrasa o se salta a veces las ejecuciones programadas, así que no se depende de un cron cada 5 minutos: basta con que arranque una ejecución (hay un intento cada hora), que se queda leyendo en bucle y publica la web cada vez que cambia algo:
 - **Fuente:** el escrutinio provisional del Ministerio del Interior tal como lo publica **RTVE** en ficheros JSON (total nacional y 52 provincias). infoelectoral no responde fuera de España, y RTVE recibe los mismos datos por el canal de Interior para medios.
 - **Contraste:** el total nacional se compara con el que publica **Público**; la web dice si coinciden.
 - **En la web:** un bloque encima de todo con el porcentaje escrutado, la hora, el hemiciclo y los escaños frente a la proyección, con la advertencia de que no es el resultado oficial.
@@ -753,3 +753,4 @@ node scripts/fetch-results.js --year 2023 --month 7   # lector de resultados, pr
 | 30-oct | Captura automática de noticias con IA, opción C (rumor o negociación con dos medios se activan solos; confirmado o descartado esperan revisión). Proveedor de IA configurable | GitHub Models, previsto al principio, se retiró el 30-jul-2026 |
 | 30-oct | Andaluzas 2026 desde el BOJA (Junta Electoral de Andalucía); parlamentos estimados de los designados contrastados con su fuente oficial | Fuente oficial; mismas cifras que Wikipedia |
 | 30-oct | Comparación final automática con la última proyección antes de la veda, provisional la noche electoral y definitiva con el BOE | Comprobar el modelo con el resultado real sin intervención |
+| 31-oct | IA de noticias: Gemini con modelos Flash de respaldo y autoprueba; noche electoral en bucle dentro de una sola ejecución | Los Flash más nuevos estaban saturados; GitHub no garantiza los crons cada 5 minutos |
