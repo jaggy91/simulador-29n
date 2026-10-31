@@ -30,3 +30,15 @@ jobs:
             code=$(curl -s -o /tmp/r.json -w '%{http_code}' -m 60 "$URL" -H "Authorization: Bearer $KEY" -H 'Content-Type: application/json' -d "${body/MODEL/$m}")
             echo "== $m -> HTTP $code: $(head -c 160 /tmp/r.json | tr -s ' \n' ' ')"
           done
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Autoprueba del clasificador de noticias
+        env:
+          NEWS_AI_URL: ${{ secrets.NEWS_AI_URL }}
+          NEWS_AI_KEY: ${{ secrets.NEWS_AI_KEY }}
+          NEWS_AI_MODEL: ${{ secrets.NEWS_AI_MODEL }}
+        run: node scripts/fetch-news.js --selftest

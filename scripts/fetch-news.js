@@ -99,6 +99,18 @@ Si la noticia no cambia el estado de ninguno de esos escenarios, o trata de una 
 
 if (!AI_URL || !TOKEN || !MODEL) { console.log('Sin proveedor de IA configurado (NEWS_AI_URL, NEWS_AI_KEY, NEWS_AI_MODEL): no se capturan noticias'); process.exit(0); }
 const catalog = readJSON('scenarios').scenarios;
+// Autoprueba (--selftest): un titular que debe detectar y otro que no. No escribe nada.
+if (process.argv.includes('--selftest')) {
+  const cases = [
+    { expect: 'TERUEL_sin_FA_CHA → descartado', outlet: 'Prueba', title: 'El Frente Amplio rectifica y presentará candidatura al Congreso por Teruel', body: 'El Frente Amplio rectifica y presentará candidatura al Congreso por Teruel tras el acuerdo alcanzado con CHA, que finalmente concurrirá en una lista conjunta en la provincia.' },
+    { expect: 'no relevante', outlet: 'Prueba', title: 'El Gobierno aprueba el decreto de ayudas al campo', body: 'El Consejo de Ministros ha aprobado este martes un decreto de ayudas a los agricultores afectados por la sequía.' },
+  ];
+  for (const c of cases) {
+    const r = await classify(c, catalog);
+    console.log(`Autoprueba (espera ${c.expect}): ${JSON.stringify(r)}`);
+  }
+  process.exit(0);
+}
 const news = readJSON('news');
 const seen = readJSON('news-seen', {});
 const found = readJSON('news-candidates', []);
