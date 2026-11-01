@@ -505,5 +505,58 @@
    "senado-progreso",
    "teruel-cha-fa"
   ]
+ },
+ {
+  "t": "2026-11-01T18:57:10.927Z",
+  "latestPoll": "2026-10-30",
+  "media": {
+   "derecha": 197.2,
+   "investidura": 145.5,
+   "pMayoriaDerecha": 0.9696,
+   "pJunts": 0.0108,
+   "pSenado35": 0.42
+  },
+  "cisOficial": {
+   "derecha": 154,
+   "investidura": 189.8,
+   "pMayoriaDerecha": 0.0446,
+   "pJunts": 0.0574,
+   "pSenado35": 0
+  },
+  "cis": {
+   "derecha": 182.9,
+   "investidura": 159.5,
+   "pMayoriaDerecha": 0.7396,
+   "pJunts": 0.0968,
+   "pSenado35": 0.09
+  },
+  "scenarios": {
+   "PODEMOS_SEPARADO": 1,
+   "SENADO_PROGRESO": 1,
+   "TERUEL_sin_FA_CHA": 1,
+   "FA_retira_pequenas": 0,
+   "PACTO_PP_VOX_SENADO": 1,
+   "VOTO_EXTERIOR": 0
+  },
+  "sources": [
+   "cis-oficial:3582",
+   "cis:CIS (Ateneo del Dato)|2026-10-06",
+   "cis:CIS (Opina 360)|2026-10-06",
+   "data10-seguimiento-listas",
+   "encuesta:Ateneo del Dato/elDiario.es|2026-10-22",
+   "encuesta:EM-Analytics/Electomanía|2026-10-30",
+   "encuesta:IMOP/El Confidencial|2026-10-16",
+   "encuesta:NC Report/La Razón|2026-10-24",
+   "encuesta:Sigma Dos/El Mundo|2026-10-22",
+   "encuesta:SocioMétrica/El Español|2026-10-25",
+   "encuesta:Sondaxe/La Voz de Galicia|2026-10-28",
+   "encuesta:Target Point/El Debate|2026-10-09",
+   "encuesta:The Objective|2026-10-27",
+   "encuesta:Winston/Artículo14|2026-10-23",
+   "fa-51-de-52",
+   "pacto-pp-vox-senado",
+   "senado-progreso",
+   "teruel-cha-fa"
+  ]
  }
 ]

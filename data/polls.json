@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-01T13:19:30.217Z",
+ "fetched": "2026-11-01T18:55:22.889Z",
  "latestPoll": "2026-10-30",
  "sources": {
   "media": {
@@ -9,6 +9,7 @@
    "polls": [
     "EM-Analytics/Electomanía (2026-10-30)",
     "Sondaxe/La Voz de Galicia (2026-10-28)",
+    "The Objective (2026-10-27)",
     "SocioMétrica/El Español (2026-10-25)",
     "NC Report/La Razón (2026-10-24)",
     "Winston/Artículo14 (2026-10-23)",
@@ -24,7 +25,7 @@
      "date": "2026-10-30",
      "sample": 1527,
      "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-     "weight": 0.2029,
+     "weight": 0.1765,
      "values": {
       "PP": 31.5,
       "PSOE": 25.8,
@@ -70,7 +71,7 @@
      "date": "2026-10-28",
      "sample": 1200,
      "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-     "weight": 0.1476,
+     "weight": 0.1284,
      "values": {
       "PP": 29.2,
       "PSOE": 26.9,
@@ -99,12 +100,45 @@
      }
     },
     {
+     "id": "encuesta:The Objective|2026-10-27",
+     "firm": "The Objective",
+     "date": "2026-10-27",
+     "sample": 1500,
+     "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
+     "weight": 0.13,
+     "values": {
+      "PP": 28.1,
+      "PSOE": 29.6,
+      "VOX": 20.2,
+      "PODEMOS": 1.9,
+      "SALF": 1.1,
+      "FA": 5.27,
+      "FV": 0.93
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "verificada",
+      "channel": "publicación original (theobjective.com)",
+      "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
+      "checked": "2026-11-01T18:55:21.682Z",
+      "matched": [
+       "PP",
+       "PSOE",
+       "VOX",
+       "PODEMOS",
+       "SALF",
+       "FA+FV"
+      ],
+      "missing": []
+     }
+    },
+    {
      "id": "encuesta:SocioMétrica/El Español|2026-10-25",
      "firm": "SocioMétrica/El Español",
      "date": "2026-10-25",
      "sample": 3223,
      "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
-     "weight": 0.1734,
+     "weight": 0.1508,
      "values": {
       "PP": 32.4,
       "PSOE": 27,
@@ -138,7 +172,7 @@
      "date": "2026-10-24",
      "sample": 1000,
      "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
-     "weight": 0.0907,
+     "weight": 0.0789,
      "values": {
       "PP": 33.1,
       "PSOE": 25.8,
@@ -171,7 +205,7 @@
      "date": "2026-10-23",
      "sample": 1200,
      "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-     "weight": 0.0899,
+     "weight": 0.0782,
      "values": {
       "PP": 29.4,
       "PSOE": 27.1,
@@ -199,7 +233,7 @@
      "date": "2026-10-22",
      "sample": 2000,
      "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-     "weight": 0.1052,
+     "weight": 0.0915,
      "values": {
       "PP": 31.1,
       "PSOE": 27.6,
@@ -230,7 +264,7 @@
      "date": "2026-10-22",
      "sample": 3122,
      "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
-     "weight": 0.1288,
+     "weight": 0.1121,
      "values": {
       "PP": 30.6,
       "PSOE": 26.1,
@@ -273,7 +307,7 @@
      "date": "2026-10-16",
      "sample": 1000,
      "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-     "weight": 0.0411,
+     "weight": 0.0357,
      "values": {
       "PP": 28.5,
       "PSOE": 27.1,
@@ -318,7 +352,7 @@
      "date": "2026-10-09",
      "sample": 1002,
      "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
-     "weight": 0.0205,
+     "weight": 0.0179,
      "values": {
       "PP": 32,
       "PSOE": 25.9,
@@ -347,11 +381,11 @@
     }
    ],
    "values": {
-    "PP": 31,
-    "PSOE": 26.57,
-    "VOX": 19.25,
-    "FA": 6.07,
-    "FV": 1.07,
+    "PP": 30.62,
+    "PSOE": 26.96,
+    "VOX": 19.38,
+    "FA": 5.96,
+    "FV": 1.05,
     "ERC": 2.39,
     "JUNTS": 1.4,
     "BILDU": 1.34,
@@ -359,8 +393,8 @@
     "BNG": 0.92,
     "CC": 0.37,
     "AA": 1.28,
-    "PODEMOS": 2.18,
-    "SALF": 2
+    "PODEMOS": 2.14,
+    "SALF": 1.82
    }
   },
   "cisOficial": {
@@ -397,7 +431,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-01T13:19:30.216Z"
+      "checked": "2026-11-01T18:55:22.790Z"
      }
     }
    ],
@@ -557,7 +591,7 @@
    "uid": "Sondaxe/La Voz de Galicia|2026-10-28"
   },
   {
-   "firm": "Vox",
+   "firm": "The Objective",
    "date": "2026-10-27",
    "sample": 1500,
    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
@@ -578,7 +612,7 @@
     }
    ],
    "table": "2026 (with Broad Front)",
-   "uid": "Vox|2026-10-27"
+   "uid": "The Objective|2026-10-27"
   },
   {
    "firm": "PSOE",

@@ -1,0 +1,36 @@
+[
+ {
+  "uid": "Vox|2026-10-27",
+  "firm": "Vox",
+  "date": "2026-10-27",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 28.1,
+    "PSOE": 29.6,
+    "VOX": 20.2,
+    "PODEMOS": 1.9,
+    "SALF": 1.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.2
+    }
+   ],
+   "sample": 1500
+  },
+  "detected": "2026-11-01T18:55:22.889Z",
+  "since": "2026-11-01T13:19:30.217Z",
+  "revisions": [
+   {
+    "at": "2026-11-01T13:22:47Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   }
+  ]
+ }
+]

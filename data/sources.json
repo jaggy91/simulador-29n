@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T13:20:49.884Z",
+ "updated": "2026-11-01T18:57:10.926Z",
  "impactN": 1000,
  "cards": [
   {
@@ -114,7 +114,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -4
+     "senado": -6
     },
     "cisOficial": {
      "derecha": 0,
@@ -292,7 +292,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -1
+     "senado": -2
     },
     "cisOficial": {
      "derecha": 0,
@@ -496,7 +496,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     },
@@ -538,7 +538,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     },
@@ -560,7 +560,7 @@
    "date": "2026-10-30",
    "sample": 1527,
    "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-   "weight": 0.2029,
+   "weight": 0.1765,
    "values": {
     "PP": 31.5,
     "PSOE": 25.8,
@@ -606,9 +606,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.9,
-     "pMayoria": 0.004,
-     "senado": 1
+     "derecha": 1.3,
+     "pMayoria": 0.015,
+     "senado": 2
     },
     "cisOficial": {
      "derecha": 0.1,
@@ -628,7 +628,7 @@
    "date": "2026-10-28",
    "sample": 1200,
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-   "weight": 0.1476,
+   "weight": 0.1284,
    "values": {
     "PP": 29.2,
     "PSOE": 26.9,
@@ -662,9 +662,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -1.2,
-     "pMayoria": -0.004,
-     "senado": -2
+     "derecha": -0.7,
+     "pMayoria": -0.003,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": -0.2,
@@ -679,12 +679,67 @@
    }
   },
   {
+   "id": "encuesta:The Objective|2026-10-27",
+   "firm": "The Objective",
+   "date": "2026-10-27",
+   "sample": 1500,
+   "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
+   "weight": 0.13,
+   "values": {
+    "PP": 28.1,
+    "PSOE": 29.6,
+    "VOX": 20.2,
+    "PODEMOS": 1.9,
+    "SALF": 1.1,
+    "FA": 5.27,
+    "FV": 0.93
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "verificada",
+    "channel": "publicación original (theobjective.com)",
+    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
+    "checked": "2026-11-01T18:55:21.682Z",
+    "matched": [
+     "PP",
+     "PSOE",
+     "VOX",
+     "PODEMOS",
+     "SALF",
+     "FA+FV"
+    ],
+    "missing": []
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -1.2,
+     "pMayoria": -0.004,
+     "senado": -2
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
    "id": "encuesta:SocioMétrica/El Español|2026-10-25",
    "firm": "SocioMétrica/El Español",
    "date": "2026-10-25",
    "sample": 3223,
    "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
-   "weight": 0.1734,
+   "weight": 0.1508,
    "values": {
     "PP": 32.4,
     "PSOE": 27,
@@ -718,9 +773,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.3,
-     "pMayoria": 0.003,
-     "senado": 2
+     "derecha": 0.6,
+     "pMayoria": 0.005,
+     "senado": 1
     },
     "cisOficial": {
      "derecha": 0,
@@ -740,7 +795,7 @@
    "date": "2026-10-24",
    "sample": 1000,
    "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
-   "weight": 0.0907,
+   "weight": 0.0789,
    "values": {
     "PP": 33.1,
     "PSOE": 25.8,
@@ -773,9 +828,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.6,
-     "pMayoria": 0.004,
-     "senado": 2
+     "derecha": 0.8,
+     "pMayoria": 0.007,
+     "senado": 1
     },
     "cisOficial": {
      "derecha": 0,
@@ -795,7 +850,7 @@
    "date": "2026-10-23",
    "sample": 1200,
    "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-   "weight": 0.0899,
+   "weight": 0.0782,
    "values": {
     "PP": 29.4,
     "PSOE": 27.1,
@@ -823,8 +878,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.5,
-     "pMayoria": -0.002,
+     "derecha": -0.2,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -845,7 +900,7 @@
    "date": "2026-10-22",
    "sample": 2000,
    "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-   "weight": 0.1052,
+   "weight": 0.0915,
    "values": {
     "PP": 31.1,
     "PSOE": 27.6,
@@ -876,8 +931,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.2,
-     "pMayoria": -0.001,
+     "derecha": 0.1,
+     "pMayoria": 0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -898,7 +953,7 @@
    "date": "2026-10-22",
    "sample": 3122,
    "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
-   "weight": 0.1288,
+   "weight": 0.1121,
    "values": {
     "PP": 30.6,
     "PSOE": 26.1,
@@ -941,9 +996,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
-     "pMayoria": 0.001,
-     "senado": 1
+     "derecha": 0.4,
+     "pMayoria": 0.005,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -963,7 +1018,7 @@
    "date": "2026-10-16",
    "sample": 1000,
    "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-   "weight": 0.0411,
+   "weight": 0.0357,
    "values": {
     "PP": 28.5,
     "PSOE": 27.1,
@@ -1008,8 +1063,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.4,
-     "pMayoria": -0.002,
+     "derecha": -0.2,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -1030,7 +1085,7 @@
    "date": "2026-10-09",
    "sample": 1002,
    "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
-   "weight": 0.0205,
+   "weight": 0.0179,
    "values": {
     "PP": 32,
     "PSOE": 25.9,
@@ -1063,9 +1118,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": 0.1,
      "pMayoria": 0,
-     "senado": 1
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1106,7 +1161,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-01T13:19:30.216Z"
+    "checked": "2026-11-01T18:55:22.790Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1120,9 +1175,9 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -44.6,
-     "pMayoria": -0.934,
-     "senado": -79
+     "derecha": -43.4,
+     "pMayoria": -0.93,
+     "senado": -77
     },
     "cis": {
      "derecha": 0,

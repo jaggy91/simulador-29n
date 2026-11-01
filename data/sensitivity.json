@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-01T13:21:55.552Z",
+ "updated": "2026-11-01T18:58:36.322Z",
  "latestPoll": "2026-10-30",
  "n": 2000,
  "base": {
   "media": {
-   "derecha": 198,
-   "investidura": 144,
-   "senado": 163
+   "derecha": 197,
+   "investidura": 146,
+   "senado": 161
   },
   "cisOficial": {
    "derecha": 155,
@@ -22,14 +22,14 @@
  "stress": {
   "media": {
    "base": {
-    "derecha": 198,
-    "investidura": 144,
-    "senado": 163
+    "derecha": 197,
+    "investidura": 146,
+    "senado": 161
    },
    "error2023": {
-    "derecha": 189,
-    "investidura": 156,
-    "senado": 146
+    "derecha": 187,
+    "investidura": 158,
+    "senado": 139
    }
   },
   "cisOficial": {
@@ -67,9 +67,9 @@
      "value": 0.5,
      "result": {
       "media": {
-       "derecha": 199,
-       "investidura": 143,
-       "senado": 162
+       "derecha": 198,
+       "investidura": 145,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -87,9 +87,9 @@
      "value": 1,
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 163
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 162
       },
       "cisOficial": {
        "derecha": 155,
@@ -114,9 +114,9 @@
      "value": 0,
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 163
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -134,9 +134,9 @@
      "value": 1,
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 163
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -161,9 +161,9 @@
      "value": "proporcional",
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 162
+       "derecha": 197,
+       "investidura": 145,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 150,
@@ -188,8 +188,8 @@
      "value": "abstencion",
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
+       "derecha": 197,
+       "investidura": 146,
        "senado": 164
       },
       "cisOficial": {
@@ -215,9 +215,9 @@
      "value": 0,
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 163
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -242,9 +242,9 @@
      "value": "100 %",
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 164
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 163
       },
       "cisOficial": {
        "derecha": 155,
@@ -269,9 +269,9 @@
      "value": "las 60",
      "result": {
       "media": {
-       "derecha": 198,
-       "investidura": 144,
-       "senado": 161
+       "derecha": 197,
+       "investidura": 146,
+       "senado": 159
       },
       "cisOficial": {
        "derecha": 155,
@@ -371,35 +371,35 @@
      {
       "turnout": 0.25,
       "votes": 40755,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.4,
       "votes": 65208,
-      "derecha": -1,
+      "derecha": -3,
       "senado": 0
      },
      {
       "turnout": 0.6,
       "votes": 97812,
-      "derecha": -2,
+      "derecha": -4,
       "senado": 0
      },
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": -3,
+      "derecha": -5,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": -3,
+      "derecha": -6,
       "senado": 0
      }
     ],
-    "firstMove": 0.4
+    "firstMove": 0.25
    }
   },
   "cisOficial": {
@@ -597,9 +597,9 @@
  },
  "noise": {
   "media": {
-   "historico": 0.978,
-   "video": 0.9965,
-   "conCC": 0.982
+   "historico": 0.9735,
+   "video": 0.994,
+   "conCC": 0.977
   },
   "cisOficial": {
    "historico": 0.0465,
