@@ -336,6 +336,27 @@
      "prob": 0.15
     }
    ]
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-confirmado",
+   "type": "noticia",
+   "date": "2026-10-31",
+   "title": "El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (infoLibre). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
+   "outlet": "infoLibre",
+   "sources": [
+    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "confirmado",
+     "prob": 1
+    }
+   ]
   }
  ]
 }

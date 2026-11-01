@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-01T18:55:22.889Z",
+ "fetched": "2026-11-01T22:47:54.899Z",
  "latestPoll": "2026-10-30",
  "sources": {
   "media": {
@@ -431,7 +431,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-01T18:55:22.790Z"
+      "checked": "2026-11-01T22:47:54.897Z"
      }
     }
    ],

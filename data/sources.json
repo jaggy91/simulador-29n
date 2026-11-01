@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T18:57:10.926Z",
+ "updated": "2026-11-01T22:50:18.782Z",
  "impactN": 1000,
  "cards": [
   {
@@ -531,6 +531,47 @@
      "scenario": "VOTO_EXTERIOR",
      "status": "rumor",
      "prob": 0.15
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.1,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-confirmado",
+   "type": "noticia",
+   "date": "2026-10-31",
+   "title": "El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (infoLibre). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
+   "outlet": "infoLibre",
+   "sources": [
+    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "confirmado",
+     "prob": 1
     }
    ],
    "toggleable": true,
@@ -1161,7 +1202,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-01T18:55:22.790Z"
+    "checked": "2026-11-01T22:47:54.897Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
