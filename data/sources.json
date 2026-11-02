@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T02:31:01.514Z",
+ "updated": "2026-11-02T11:02:33.898Z",
  "impactN": 1000,
  "cards": [
   {
@@ -114,7 +114,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -6
+     "senado": -4
     },
     "cisOficial": {
      "derecha": 0,
@@ -164,7 +164,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     }
@@ -241,7 +241,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 16
+     "senado": 17
     },
     "cisOficial": {
      "derecha": 0,
@@ -292,7 +292,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -2
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -496,7 +496,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     },
@@ -538,7 +538,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     },
@@ -579,7 +579,184 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:SocioMétrica/El Español|2026-11-01",
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-11-01",
+   "sample": 4893,
+   "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html",
+   "weight": 0.1934,
+   "values": {
+    "PP": 32.7,
+    "PSOE": 26.6,
+    "VOX": 19.1,
+    "FA": 5.2,
+    "FV": 0.9,
+    "ERC": 2.5,
+    "JUNTS": 1.4,
+    "BILDU": 1.4,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.5,
+    "AA": 1.4,
+    "PODEMOS": 1.7,
+    "SALF": 2.5
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-02T10:59:48.189Z",
+    "tried": [
+     "publicación original: faltan PP, FA, PODEMOS"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.7,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": -0.2,
+     "pMayoria": -0.003,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:Sigma Dos/El Mundo|2026-10-30",
+   "firm": "Sigma Dos/El Mundo",
+   "date": "2026-10-30",
+   "sample": 2505,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
+   "weight": 0.145,
+   "values": {
+    "PP": 31.1,
+    "PSOE": 24.6,
+    "VOX": 19.3,
+    "FA": 7.1,
+    "FV": 0.9,
+    "ERC": 3,
+    "JUNTS": 1.1,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1.4,
+    "PODEMOS": 1.9
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "verificada",
+    "channel": "publicación original (elmundo.es)",
+    "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
+    "checked": "2026-11-02T10:59:48.189Z",
+    "matched": [
+     "PP",
+     "PSOE",
+     "VOX",
+     "FA",
+     "BNG",
+     "AA",
+     "PODEMOS"
+    ],
+    "missing": [
+     "ERC",
+     "JUNTS",
+     "BILDU"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.1,
+     "pMayoria": -0.002,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": -0.2,
+     "pMayoria": -0.004,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:Target Point/El Debate|2026-10-30",
+   "firm": "Target Point/El Debate",
+   "date": "2026-10-30",
+   "sample": 1024,
+   "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
+   "weight": 0.0927,
+   "values": {
+    "PP": 31.8,
+    "PSOE": 25.5,
+    "VOX": 19.9,
+    "PODEMOS": 2.4,
+    "SALF": 2.6,
+    "FA": 5.64,
+    "FV": 0.96
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "verificada",
+    "channel": "gráfico Datawrapper de la publicación original (eldebate.com)",
+    "url": "https://datawrapper.dwcdn.net/PsxzP/1/",
+    "checked": "2026-11-02T10:59:48.189Z",
+    "matched": [
+     "PP",
+     "PSOE",
+     "VOX",
+     "PODEMOS",
+     "SALF",
+     "FA+FV"
+    ],
+    "missing": []
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.5,
      "pMayoria": 0,
      "senado": 0
     },
@@ -601,7 +778,7 @@
    "date": "2026-10-30",
    "sample": 1527,
    "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-   "weight": 0.1765,
+   "weight": 0.1132,
    "values": {
     "PP": 31.5,
     "PSOE": 25.8,
@@ -647,19 +824,74 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 1.3,
-     "pMayoria": 0.015,
-     "senado": 2
+     "derecha": 0.3,
+     "pMayoria": 0,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0.1,
-     "pMayoria": 0.002,
+     "pMayoria": 0.001,
      "senado": 0
     },
     "cis": {
+     "derecha": 0.2,
+     "pMayoria": 0.011,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:NC Report/La Razón|2026-10-29",
+   "firm": "NC Report/La Razón",
+   "date": "2026-10-29",
+   "sample": 1000,
+   "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
+   "weight": 0.083,
+   "values": {
+    "PP": 33,
+    "PSOE": 25.6,
+    "VOX": 19.3,
+    "ERC": 2,
+    "JUNTS": 1.8,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 1.2,
+    "PODEMOS": 2.4,
+    "FA": 5.9,
+    "FV": 1
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-02T10:59:48.189Z",
+    "tried": [
+     "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
      "derecha": 0.5,
-     "pMayoria": 0.021,
-     "senado": -1
+     "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0.003,
+     "senado": 0
     }
    }
   },
@@ -669,7 +901,7 @@
    "date": "2026-10-28",
    "sample": 1200,
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-   "weight": 0.1284,
+   "weight": 0.0823,
    "values": {
     "PP": 29.2,
     "PSOE": 26.9,
@@ -683,8 +915,8 @@
     "AA": 2,
     "PODEMOS": 2,
     "SALF": 2.4,
-    "FA": 6.12,
-    "FV": 1.08
+    "FA": 6.16,
+    "FV": 1.04
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -703,19 +935,74 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.7,
-     "pMayoria": -0.003,
+     "derecha": -0.8,
+     "pMayoria": -0.005,
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -0.2,
-     "pMayoria": -0.003,
+     "derecha": -0.1,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cis": {
      "derecha": -0.2,
-     "pMayoria": -0.005,
-     "senado": -1
+     "pMayoria": -0.007,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:Hamalgama Métrica/Vozpópuli|2026-10-28",
+   "firm": "Hamalgama Métrica/Vozpópuli",
+   "date": "2026-10-28",
+   "sample": 1000,
+   "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
+   "weight": 0.0752,
+   "values": {
+    "PP": 32.4,
+    "PSOE": 26.4,
+    "VOX": 19.9,
+    "ERC": 1.9,
+    "JUNTS": 1.7,
+    "BILDU": 1.3,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "AA": 1.1,
+    "PODEMOS": 2.2,
+    "SALF": 1.8,
+    "FA": 4.62,
+    "FV": 0.78
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-02T10:59:48.189Z",
+    "tried": [
+     "publicación original: faltan PP, ERC, PODEMOS"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.6,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0.1,
+     "pMayoria": 0.008,
+     "senado": 0
     }
    }
   },
@@ -725,15 +1012,15 @@
    "date": "2026-10-27",
    "sample": 1500,
    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-   "weight": 0.13,
+   "weight": 0.0834,
    "values": {
     "PP": 28.1,
     "PSOE": 29.6,
     "VOX": 20.2,
     "PODEMOS": 1.9,
     "SALF": 1.1,
-    "FA": 5.27,
-    "FV": 0.93
+    "FA": 5.3,
+    "FV": 0.9
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -758,130 +1045,19 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -1.2,
-     "pMayoria": -0.004,
-     "senado": -2
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:SocioMétrica/El Español|2026-10-25",
-   "firm": "SocioMétrica/El Español",
-   "date": "2026-10-25",
-   "sample": 3223,
-   "url": "https://www.elespanol.com/espana/politica/20261025/izquierda-no-remonta-sanchez-gana-escanos-costa-frente-podemos-sondeo-noche/1003744434105_0.html",
-   "weight": 0.1508,
-   "values": {
-    "PP": 32.4,
-    "PSOE": 27,
-    "VOX": 18.6,
-    "FA": 5.2,
-    "FV": 0.9,
-    "ERC": 2.6,
-    "JUNTS": 1.7,
-    "BILDU": 1.3,
-    "PNV": 0.8,
-    "BNG": 0.9,
-    "CC": 0.4,
-    "AA": 1.2,
-    "PODEMOS": 1.8,
-    "SALF": 2.4
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "no verificada",
-    "channel": null,
-    "url": null,
-    "checked": "2026-11-01T13:19:21.309Z",
-    "tried": [
-     "publicación original: faltan PP, FA, BILDU, AA, PODEMOS"
-    ]
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.6,
-     "pMayoria": 0.005,
-     "senado": 1
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": -0.2,
-     "pMayoria": -0.007,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:NC Report/La Razón|2026-10-24",
-   "firm": "NC Report/La Razón",
-   "date": "2026-10-24",
-   "sample": 1000,
-   "url": "https://www.larazon.es/espana/18-votantes-socialistas-apoyan-hoy-vox_202610266adea62a3eef771e1ac8d43d.html",
-   "weight": 0.0789,
-   "values": {
-    "PP": 33.1,
-    "PSOE": 25.8,
-    "VOX": 19,
-    "ERC": 2,
-    "JUNTS": 1.8,
-    "BILDU": 1.4,
-    "PNV": 0.9,
-    "BNG": 0.8,
-    "CC": 0.4,
-    "AA": 1.3,
-    "PODEMOS": 2.6,
-    "FA": 5.61,
-    "FV": 0.99
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "no verificada",
-    "channel": null,
-    "url": null,
-    "checked": "2026-11-01T13:19:21.309Z",
-    "tried": [
-     "publicación original: faltan PP, ERC, JUNTS, BILDU"
-    ]
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.8,
-     "pMayoria": 0.007,
-     "senado": 1
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0.005,
+     "derecha": -1.1,
+     "pMayoria": -0.006,
      "senado": -1
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
     }
    }
   },
@@ -891,7 +1067,7 @@
    "date": "2026-10-23",
    "sample": 1200,
    "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-   "weight": 0.0782,
+   "weight": 0.0502,
    "values": {
     "PP": 29.4,
     "PSOE": 27.1,
@@ -919,8 +1095,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.2,
-     "pMayoria": -0.001,
+     "derecha": -0.3,
+     "pMayoria": -0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -941,14 +1117,14 @@
    "date": "2026-10-22",
    "sample": 2000,
    "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-   "weight": 0.0915,
+   "weight": 0.0587,
    "values": {
     "PP": 31.1,
     "PSOE": 27.6,
     "VOX": 19.8,
     "PODEMOS": 2.7,
-    "FA": 5.78,
-    "FV": 1.02
+    "FA": 5.82,
+    "FV": 0.98
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -972,8 +1148,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
-     "pMayoria": 0.001,
+     "derecha": -0.2,
+     "pMayoria": -0.003,
      "senado": 0
     },
     "cisOficial": {
@@ -984,71 +1160,6 @@
     "cis": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:Sigma Dos/El Mundo|2026-10-22",
-   "firm": "Sigma Dos/El Mundo",
-   "date": "2026-10-22",
-   "sample": 3122,
-   "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
-   "weight": 0.1121,
-   "values": {
-    "PP": 30.6,
-    "PSOE": 26.1,
-    "VOX": 19.9,
-    "FA": 7.4,
-    "FV": 0.8,
-    "ERC": 2.5,
-    "JUNTS": 1.2,
-    "BILDU": 1.2,
-    "PNV": 0.9,
-    "BNG": 0.9,
-    "CC": 0.4,
-    "AA": 1,
-    "PODEMOS": 2.8
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "verificada",
-    "channel": "datos de gráficos de la publicación original (elmundo.es)",
-    "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
-    "checked": "2026-10-30T05:04:39.353Z",
-    "matched": [
-     "PP",
-     "PSOE",
-     "VOX",
-     "ERC",
-     "JUNTS",
-     "BILDU",
-     "PODEMOS"
-    ],
-    "missing": [
-     "FA",
-     "AA"
-    ]
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.4,
-     "pMayoria": 0.005,
-     "senado": 0
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0.001,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0.3,
-     "pMayoria": 0.006,
      "senado": 0
     }
    }
@@ -1059,7 +1170,7 @@
    "date": "2026-10-16",
    "sample": 1000,
    "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-   "weight": 0.0357,
+   "weight": 0.0229,
    "values": {
     "PP": 28.5,
     "PSOE": 27.1,
@@ -1072,8 +1183,8 @@
     "CC": 0.6,
     "PODEMOS": 1.9,
     "SALF": 1.2,
-    "FA": 7.56,
-    "FV": 1.34
+    "FA": 7.61,
+    "FV": 1.29
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -1104,8 +1215,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.2,
-     "pMayoria": -0.001,
+     "derecha": -0.3,
+     "pMayoria": -0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -1114,63 +1225,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
-     "pMayoria": 0.002,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:Target Point/El Debate|2026-10-09",
-   "firm": "Target Point/El Debate",
-   "date": "2026-10-09",
-   "sample": 1002,
-   "url": "https://www.eldebate.com/espana/20261011/izquierda-apenas-reacciona-adelanto-frente-derecha-le-saca-casi-15-puntos_468080.html",
-   "weight": 0.0179,
-   "values": {
-    "PP": 32,
-    "PSOE": 25.9,
-    "VOX": 18.7,
-    "PODEMOS": 3.4,
-    "SALF": 1.3,
-    "FA": 5.86,
-    "FV": 1.04
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "verificada",
-    "channel": "gráfico Datawrapper de la publicación original (eldebate.com)",
-    "url": "https://datawrapper.dwcdn.net/V2UFE/2/",
-    "checked": "2026-10-30T05:04:39.353Z",
-    "matched": [
-     "PP",
-     "PSOE",
-     "VOX",
-     "PODEMOS",
-     "SALF",
-     "FA+FV"
-    ],
-    "missing": []
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.1,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
+     "derecha": -0.1,
+     "pMayoria": -0.002,
      "senado": 0
     }
    }
@@ -1194,15 +1250,15 @@
     "BNG": 0.9,
     "PNV": 0.6,
     "CC": 0.2,
-    "FA": 5.18,
-    "FV": 0.92
+    "FA": 5.22,
+    "FV": 0.88
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-02T02:29:36.521Z"
+    "checked": "2026-11-02T11:00:00.019Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1216,9 +1272,9 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -43.4,
-     "pMayoria": -0.93,
-     "senado": -77
+     "derecha": -46.5,
+     "pMayoria": -0.938,
+     "senado": -81
     },
     "cis": {
      "derecha": 0,
@@ -1240,8 +1296,8 @@
     "VOX": 17.8,
     "PODEMOS": 3.5,
     "SALF": 1.6,
-    "FA": 6.2,
-    "FV": 1.1
+    "FA": 6.24,
+    "FV": 1.06
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -1270,9 +1326,9 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 1.2,
-     "pMayoria": 0.037,
-     "senado": -1
+     "derecha": 1.1,
+     "pMayoria": 0.041,
+     "senado": 0
     }
    }
   },
@@ -1289,8 +1345,8 @@
     "VOX": 17.5,
     "PODEMOS": 3,
     "SALF": 2.4,
-    "FA": 6.71,
-    "FV": 1.19
+    "FA": 6.76,
+    "FV": 1.14
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -1320,7 +1376,7 @@
     },
     "cis": {
      "derecha": -1.1,
-     "pMayoria": -0.017,
+     "pMayoria": -0.022,
      "senado": -5
     }
    }

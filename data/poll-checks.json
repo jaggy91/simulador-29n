@@ -1,4 +1,53 @@
 {
+ "SocioMétrica/El Español|2026-11-01": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, FA, PODEMOS"
+  ],
+  "hash": "[{\"PP\":32.7,\"PSOE\":26.6,\"VOX\":19.1,\"FA\":5.2,\"FV\":0.9,\"ERC\":2.5,\"JUNTS\":1.4,\"BILDU\":1.4,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.5,\"AA\":1.4,\"PODEMOS\":1.7,\"SALF\":2.5},[]]",
+  "checked": "2026-11-02T10:59:48.189Z"
+ },
+ "Sigma Dos/El Mundo|2026-10-30": {
+  "status": "verificada",
+  "channel": "publicación original (elmundo.es)",
+  "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "FA",
+   "BNG",
+   "AA",
+   "PODEMOS"
+  ],
+  "missing": [
+   "ERC",
+   "JUNTS",
+   "BILDU"
+  ],
+  "hash": "[{\"PP\":31.1,\"PSOE\":24.6,\"VOX\":19.3,\"FA\":7.1,\"FV\":0.9,\"ERC\":3,\"JUNTS\":1.1,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":1,\"CC\":0.4,\"AA\":1.4,\"PODEMOS\":1.9},[]]",
+  "checked": "2026-11-02T10:59:48.189Z"
+ },
+ "Target Point/El Debate|2026-10-30": {
+  "status": "verificada",
+  "channel": "gráfico Datawrapper de la publicación original (eldebate.com)",
+  "url": "https://datawrapper.dwcdn.net/PsxzP/1/",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "SALF",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":31.8,\"PSOE\":25.5,\"VOX\":19.9,\"PODEMOS\":2.4,\"SALF\":2.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.6}]]",
+  "checked": "2026-11-02T10:59:48.189Z"
+ },
  "EM-Analytics/Electomanía|2026-10-30": {
   "status": "verificada",
   "channel": "publicación original (electomania.es)",
@@ -22,6 +71,16 @@
   "hash": "[{\"PP\":31.5,\"PSOE\":25.8,\"VOX\":19.2,\"FA\":6.2,\"FV\":1.4,\"ERC\":2.2,\"JUNTS\":1.2,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":1,\"CC\":0.3,\"AA\":1,\"PODEMOS\":1.7,\"SALF\":1.6},[]]",
   "checked": "2026-11-01T13:19:21.309Z"
  },
+ "NC Report/La Razón|2026-10-29": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
+  ],
+  "hash": "[{\"PP\":33,\"PSOE\":25.6,\"VOX\":19.3,\"ERC\":2,\"JUNTS\":1.8,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.4,\"AA\":1.2,\"PODEMOS\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.9}]]",
+  "checked": "2026-11-02T10:59:48.189Z"
+ },
  "Sondaxe/La Voz de Galicia|2026-10-28": {
   "status": "no verificada",
   "channel": null,
@@ -31,6 +90,16 @@
   ],
   "hash": "[{\"PP\":29.2,\"PSOE\":26.9,\"VOX\":19.2,\"ERC\":2.6,\"JUNTS\":1.3,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.9,\"CC\":0.3,\"AA\":2,\"PODEMOS\":2,\"SALF\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.2}]]",
   "checked": "2026-11-01T13:19:21.309Z"
+ },
+ "Hamalgama Métrica/Vozpópuli|2026-10-28": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, ERC, PODEMOS"
+  ],
+  "hash": "[{\"PP\":32.4,\"PSOE\":26.4,\"VOX\":19.9,\"ERC\":1.9,\"JUNTS\":1.7,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":0.8,\"AA\":1.1,\"PODEMOS\":2.2,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":5.4}]]",
+  "checked": "2026-11-02T10:59:48.189Z"
  },
  "The Objective|2026-10-27": {
   "status": "verificada",
@@ -48,26 +117,6 @@
   "missing": [],
   "hash": "[{\"PP\":28.1,\"PSOE\":29.6,\"VOX\":20.2,\"PODEMOS\":1.9,\"SALF\":1.1},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.2}]]",
   "checked": "2026-11-01T18:55:21.682Z"
- },
- "SocioMétrica/El Español|2026-10-25": {
-  "status": "no verificada",
-  "channel": null,
-  "url": null,
-  "tried": [
-   "publicación original: faltan PP, FA, BILDU, AA, PODEMOS"
-  ],
-  "hash": "[{\"PP\":32.4,\"PSOE\":27,\"VOX\":18.6,\"FA\":5.2,\"FV\":0.9,\"ERC\":2.6,\"JUNTS\":1.7,\"BILDU\":1.3,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.4,\"AA\":1.2,\"PODEMOS\":1.8,\"SALF\":2.4},[]]",
-  "checked": "2026-11-01T13:19:21.309Z"
- },
- "NC Report/La Razón|2026-10-24": {
-  "status": "no verificada",
-  "channel": null,
-  "url": null,
-  "tried": [
-   "publicación original: faltan PP, ERC, JUNTS, BILDU"
-  ],
-  "hash": "[{\"PP\":33.1,\"PSOE\":25.8,\"VOX\":19,\"ERC\":2,\"JUNTS\":1.8,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.4,\"AA\":1.3,\"PODEMOS\":2.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.6}]]",
-  "checked": "2026-11-01T13:19:21.309Z"
  },
  "Winston/Artículo14|2026-10-23": {
   "status": "verificada",
@@ -100,27 +149,6 @@
   "hash": "[{\"PP\":31.1,\"PSOE\":27.6,\"VOX\":19.8,\"PODEMOS\":2.7},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.8}]]",
   "checked": "2026-10-30T05:04:39.353Z"
  },
- "Sigma Dos/El Mundo|2026-10-22": {
-  "status": "verificada",
-  "channel": "datos de gráficos de la publicación original (elmundo.es)",
-  "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
-  "ok": true,
-  "matched": [
-   "PP",
-   "PSOE",
-   "VOX",
-   "ERC",
-   "JUNTS",
-   "BILDU",
-   "PODEMOS"
-  ],
-  "missing": [
-   "FA",
-   "AA"
-  ],
-  "hash": "[{\"PP\":30.6,\"PSOE\":26.1,\"VOX\":19.9,\"FA\":7.4,\"FV\":0.8,\"ERC\":2.5,\"JUNTS\":1.2,\"BILDU\":1.2,\"PNV\":0.9,\"BNG\":0.9,\"CC\":0.4,\"AA\":1,\"PODEMOS\":2.8},[]]",
-  "checked": "2026-10-30T05:04:39.353Z"
- },
  "IMOP/El Confidencial|2026-10-16": {
   "status": "verificada",
   "channel": "publicación original (elconfidencial.com)",
@@ -142,23 +170,6 @@
    "ERC"
   ],
   "hash": "[{\"PP\":28.5,\"PSOE\":27.1,\"VOX\":20,\"ERC\":2.2,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":1,\"BNG\":1.1,\"CC\":0.6,\"PODEMOS\":1.9,\"SALF\":1.2},[{\"parties\":[\"FA\",\"FV\"],\"value\":8.9}]]",
-  "checked": "2026-10-30T05:04:39.353Z"
- },
- "Target Point/El Debate|2026-10-09": {
-  "status": "verificada",
-  "channel": "gráfico Datawrapper de la publicación original (eldebate.com)",
-  "url": "https://datawrapper.dwcdn.net/V2UFE/2/",
-  "ok": true,
-  "matched": [
-   "PP",
-   "PSOE",
-   "VOX",
-   "PODEMOS",
-   "SALF",
-   "FA+FV"
-  ],
-  "missing": [],
-  "hash": "[{\"PP\":32,\"PSOE\":25.9,\"VOX\":18.7,\"PODEMOS\":3.4,\"SALF\":1.3},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.9}]]",
   "checked": "2026-10-30T05:04:39.353Z"
  },
  "CIS (Opina 360)|2026-10-06": {
