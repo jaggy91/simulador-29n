@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T11:02:33.898Z",
+ "updated": "2026-11-02T20:48:06.435Z",
  "impactN": 1000,
  "cards": [
   {
@@ -164,7 +164,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     }
@@ -472,55 +472,13 @@
    "impact": null
   },
   {
-   "id": "auto-VOTO_EXTERIOR-negociación",
-   "type": "noticia",
-   "date": "2026-10-30",
-   "title": "El Supremo otorga tres días a las partes para opinar sobre la petición de suspender el voto a hijos de nacionalizados por la 'ley de nietos'",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → negociación, en 1 medio (20minutos). Cita: «El Tribunal Supremo ha decidido dar tres días a las partes en el proceso de la 'ley de nietos' para que se pronuncien sobre la petición del partido Iustitia Europa de extender la suspensión cautelar del voto a los hijos de los nacionalizados por esa vía.»",
-   "outlet": "20minutos",
-   "sources": [
-    "https://www.20minutos.es/nacional/supremo-otorga-tres-dias-las-partes-para-opinar-sobre-peticion-suspender-voto-hijos-nacionalizados-por-ley-nietos_7055661_0.html"
-   ],
-   "verified": false,
-   "captured": "auto",
-   "autoActive": false,
-   "effects": [
-    {
-     "scenario": "VOTO_EXTERIOR",
-     "status": "negociación",
-     "prob": 0.5
-    }
-   ],
-   "toggleable": true,
-   "defaultActive": false,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
    "id": "auto-VOTO_EXTERIOR-rumor",
    "type": "noticia",
    "date": "2026-10-31",
-   "title": "El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (RTVE). Cita: «El Supremo da tres días a las partes sobre la suspensión del voto de los hijos de nacionalizados por la 'ley de nietos'»",
+   "title": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (RTVE). Cita: «Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio»",
    "outlet": "RTVE",
    "sources": [
-    "https://www.rtve.es/noticias/20261030/supremo-da-tres-dias-a-partes-sobre-suspension-del-voto-hijos-nacionalizados-por-ley-nietos/17294210.shtml",
     "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml"
    ],
    "verified": false,
@@ -662,7 +620,7 @@
     "PP": 31.1,
     "PSOE": 24.6,
     "VOX": 19.3,
-    "FA": 7.1,
+    "FA": 7.5,
     "FV": 0.9,
     "ERC": 3,
     "JUNTS": 1.1,
@@ -676,22 +634,43 @@
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
     "status": "verificada",
-    "channel": "publicación original (elmundo.es)",
+    "channel": "datos de gráficos de la publicación original (elmundo.es)",
     "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-    "checked": "2026-11-02T10:59:48.189Z",
+    "checked": "2026-11-02T20:46:08.065Z",
     "matched": [
      "PP",
      "PSOE",
      "VOX",
-     "FA",
-     "BNG",
+     "ERC",
+     "JUNTS",
      "AA",
      "PODEMOS"
     ],
     "missing": [
-     "ERC",
-     "JUNTS",
-     "BILDU"
+     "FA",
+     "BILDU",
+     "BNG"
+    ]
+   },
+   "edited": {
+    "detected": "2026-11-02T20:46:14.061Z",
+    "change": "FA 7.1→7.5",
+    "revisions": [
+     {
+      "at": "2026-11-02T17:20:27Z",
+      "user": "Impru20",
+      "comment": "/* 2026 (with Broad Front) */"
+     },
+     {
+      "at": "2026-11-02T15:26:26Z",
+      "user": "Blue-Haired Lawyer",
+      "comment": "/* 2026 (with Broad Front) */ template syntax fix"
+     },
+     {
+      "at": "2026-11-02T13:51:45Z",
+      "user": "Impru20",
+      "comment": "/* 2026 (with Broad Front) */"
+     }
     ]
    },
    "type": "encuesta",
@@ -701,7 +680,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.1,
+     "derecha": 0,
      "pMayoria": -0.002,
      "senado": 0
     },
@@ -730,8 +709,8 @@
     "VOX": 19.9,
     "PODEMOS": 2.4,
     "SALF": 2.6,
-    "FA": 5.64,
-    "FV": 0.96
+    "FA": 5.65,
+    "FV": 0.95
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -825,7 +804,7 @@
    "impact": {
     "media": {
      "derecha": 0.3,
-     "pMayoria": 0,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -834,7 +813,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0.2,
+     "derecha": 0.3,
      "pMayoria": 0.011,
      "senado": 0
     }
@@ -859,8 +838,8 @@
     "CC": 0.4,
     "AA": 1.2,
     "PODEMOS": 2.4,
-    "FA": 5.9,
-    "FV": 1
+    "FA": 5.91,
+    "FV": 0.99
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -923,7 +902,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-01T13:19:21.309Z",
+    "checked": "2026-11-02T20:46:08.065Z",
     "tried": [
      "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
     ]
@@ -936,7 +915,7 @@
    "impact": {
     "media": {
      "derecha": -0.8,
-     "pMayoria": -0.005,
+     "pMayoria": -0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -1019,8 +998,8 @@
     "VOX": 20.2,
     "PODEMOS": 1.9,
     "SALF": 1.1,
-    "FA": 5.3,
-    "FV": 0.9
+    "FA": 5.31,
+    "FV": 0.89
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -1046,7 +1025,7 @@
    "impact": {
     "media": {
      "derecha": -1.1,
-     "pMayoria": -0.006,
+     "pMayoria": -0.005,
      "senado": -1
     },
     "cisOficial": {
@@ -1183,8 +1162,8 @@
     "CC": 0.6,
     "PODEMOS": 1.9,
     "SALF": 1.2,
-    "FA": 7.61,
-    "FV": 1.29
+    "FA": 7.62,
+    "FV": 1.28
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
@@ -1216,7 +1195,7 @@
    "impact": {
     "media": {
      "derecha": -0.3,
-     "pMayoria": -0.004,
+     "pMayoria": -0.003,
      "senado": 0
     },
     "cisOficial": {
@@ -1258,7 +1237,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-02T11:00:00.019Z"
+    "checked": "2026-11-02T20:46:13.895Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1272,7 +1251,7 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -46.5,
+     "derecha": -46.4,
      "pMayoria": -0.938,
      "senado": -81
     },
@@ -1296,15 +1275,15 @@
     "VOX": 17.8,
     "PODEMOS": 3.5,
     "SALF": 1.6,
-    "FA": 6.24,
-    "FV": 1.06
+    "FA": 6.25,
+    "FV": 1.05
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-01T13:19:21.309Z",
+    "checked": "2026-11-02T20:46:08.065Z",
     "tried": [
      "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
     ]
@@ -1353,7 +1332,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-01T13:19:21.309Z",
+    "checked": "2026-11-02T20:46:08.065Z",
     "tried": [
      "X no es un canal abierto"
     ]
@@ -1376,8 +1355,8 @@
     },
     "cis": {
      "derecha": -1.1,
-     "pMayoria": -0.022,
-     "senado": -5
+     "pMayoria": -0.023,
+     "senado": -4
     }
    }
   }

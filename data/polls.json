@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-02T11:00:00.022Z",
+ "fetched": "2026-11-02T20:46:14.062Z",
  "latestPoll": "2026-11-01",
  "sources": {
   "media": {
@@ -65,7 +65,7 @@
       "PP": 31.1,
       "PSOE": 24.6,
       "VOX": 19.3,
-      "FA": 7.1,
+      "FA": 7.5,
       "FV": 0.9,
       "ERC": 3,
       "JUNTS": 1.1,
@@ -79,22 +79,43 @@
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "verificada",
-      "channel": "publicación original (elmundo.es)",
+      "channel": "datos de gráficos de la publicación original (elmundo.es)",
       "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-      "checked": "2026-11-02T10:59:48.189Z",
+      "checked": "2026-11-02T20:46:08.065Z",
       "matched": [
        "PP",
        "PSOE",
        "VOX",
-       "FA",
-       "BNG",
+       "ERC",
+       "JUNTS",
        "AA",
        "PODEMOS"
       ],
       "missing": [
-       "ERC",
-       "JUNTS",
-       "BILDU"
+       "FA",
+       "BILDU",
+       "BNG"
+      ]
+     },
+     "edited": {
+      "detected": "2026-11-02T20:46:14.061Z",
+      "change": "FA 7.1→7.5",
+      "revisions": [
+       {
+        "at": "2026-11-02T17:20:27Z",
+        "user": "Impru20",
+        "comment": "/* 2026 (with Broad Front) */"
+       },
+       {
+        "at": "2026-11-02T15:26:26Z",
+        "user": "Blue-Haired Lawyer",
+        "comment": "/* 2026 (with Broad Front) */ template syntax fix"
+       },
+       {
+        "at": "2026-11-02T13:51:45Z",
+        "user": "Impru20",
+        "comment": "/* 2026 (with Broad Front) */"
+       }
       ]
      }
     },
@@ -111,8 +132,8 @@
       "VOX": 19.9,
       "PODEMOS": 2.4,
       "SALF": 2.6,
-      "FA": 5.64,
-      "FV": 0.96
+      "FA": 5.65,
+      "FV": 0.95
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -196,8 +217,8 @@
       "CC": 0.4,
       "AA": 1.2,
       "PODEMOS": 2.4,
-      "FA": 5.9,
-      "FV": 1
+      "FA": 5.91,
+      "FV": 0.99
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -238,7 +259,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-01T13:19:21.309Z",
+      "checked": "2026-11-02T20:46:08.065Z",
       "tried": [
        "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
       ]
@@ -290,8 +311,8 @@
       "VOX": 20.2,
       "PODEMOS": 1.9,
       "SALF": 1.1,
-      "FA": 5.3,
-      "FV": 0.9
+      "FA": 5.31,
+      "FV": 0.89
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -388,8 +409,8 @@
       "CC": 0.6,
       "PODEMOS": 1.9,
       "SALF": 1.2,
-      "FA": 7.61,
-      "FV": 1.29
+      "FA": 7.62,
+      "FV": 1.28
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -419,7 +440,7 @@
     "PP": 31.22,
     "PSOE": 26.39,
     "VOX": 19.46,
-    "FA": 5.84,
+    "FA": 5.9,
     "FV": 0.99,
     "ERC": 2.43,
     "JUNTS": 1.37,
@@ -466,7 +487,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-02T11:00:00.019Z"
+      "checked": "2026-11-02T20:46:13.895Z"
      }
     }
    ],
@@ -508,15 +529,15 @@
       "VOX": 17.8,
       "PODEMOS": 3.5,
       "SALF": 1.6,
-      "FA": 6.24,
-      "FV": 1.06
+      "FA": 6.25,
+      "FV": 1.05
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-01T13:19:21.309Z",
+      "checked": "2026-11-02T20:46:08.065Z",
       "tried": [
        "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
       ]
@@ -543,7 +564,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-01T13:19:21.309Z",
+      "checked": "2026-11-02T20:46:08.065Z",
       "tried": [
        "X no es un canal abierto"
       ]
@@ -563,7 +584,7 @@
     "VOX": 17.65,
     "PODEMOS": 3.25,
     "SALF": 2,
-    "FA": 6.5,
+    "FA": 6.51,
     "FV": 1.1
    }
   }
@@ -603,7 +624,7 @@
     "PP": 31.1,
     "PSOE": 24.6,
     "VOX": 19.3,
-    "FA": 7.1,
+    "FA": 7.5,
     "FV": 0.9,
     "ERC": 3,
     "JUNTS": 1.1,

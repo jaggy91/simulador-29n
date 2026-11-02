@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T11:04:25.961Z",
+ "updated": "2026-11-02T20:49:31.616Z",
  "latestPoll": "2026-11-01",
  "n": 2000,
  "base": {
@@ -69,7 +69,7 @@
       "media": {
        "derecha": 200,
        "investidura": 142,
-       "senado": 165
+       "senado": 164
       },
       "cisOficial": {
        "derecha": 155,
@@ -599,7 +599,7 @@
   "media": {
    "historico": 0.984,
    "video": 0.997,
-   "conCC": 0.9885
+   "conCC": 0.988
   },
   "cisOficial": {
    "historico": 0.0445,
@@ -607,9 +607,9 @@
    "conCC": 0.048
   },
   "cis": {
-   "historico": 0.7265,
-   "video": 0.7945,
-   "conCC": 0.7555
+   "historico": 0.725,
+   "video": 0.794,
+   "conCC": 0.755
   }
  }
 }
