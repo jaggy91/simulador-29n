@@ -313,38 +313,13 @@
    "defaultActive": false
   },
   {
-   "id": "auto-VOTO_EXTERIOR-rumor",
-   "type": "noticia",
-   "date": "2026-11-03",
-   "title": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 2 medios (RTVE, Europa Press). Cita: «Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio»",
-   "outlet": "RTVE / Europa Press",
-   "sources": [
-    "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml",
-    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html"
-   ],
-   "verified": false,
-   "captured": "auto",
-   "autoActive": true,
-   "effects": [
-    {
-     "scenario": "VOTO_EXTERIOR",
-     "status": "rumor",
-     "prob": 0.15
-    }
-   ],
-   "toggleable": true,
-   "defaultActive": true
-  },
-  {
    "id": "auto-VOTO_EXTERIOR-confirmado",
    "type": "noticia",
    "date": "2026-11-03",
-   "title": "El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 2 medios (infoLibre, El País). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
-   "outlet": "infoLibre / El País",
+   "title": "El Gobierno advierte de que suspender el voto de los hijos de los nacionalizados por la ‘ley de nietos’ condicionaría el escrutinio del 29-N",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (El País). Cita: «Extender la suspensión del derecho al voto a los hijos de los nacionalizados por la ley de nietos pondría en riesgo el cumplimiento de los trámites legales para el 29-N e incluso podría afectar al escrutinio.»",
+   "outlet": "El País",
    "sources": [
-    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html",
     "https://elpais.com/espana/elecciones-generales/2026-11-03/el-gobierno-advierte-de-que-suspender-el-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos-condicionaria-el-escrutinio-del-29-n.html"
    ],
    "verified": false,

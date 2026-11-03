@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T10:52:20.927Z",
+ "updated": "2026-11-03T18:27:50.116Z",
  "impactN": 1000,
  "cards": [
   {
@@ -164,7 +164,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     }
@@ -241,7 +241,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 17
+     "senado": 18
     },
     "cisOficial": {
      "derecha": 0,
@@ -472,56 +472,13 @@
    "impact": null
   },
   {
-   "id": "auto-VOTO_EXTERIOR-rumor",
-   "type": "noticia",
-   "date": "2026-11-03",
-   "title": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 2 medios (RTVE, Europa Press). Cita: «Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio»",
-   "outlet": "RTVE / Europa Press",
-   "sources": [
-    "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml",
-    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html"
-   ],
-   "verified": false,
-   "captured": "auto",
-   "autoActive": true,
-   "effects": [
-    {
-     "scenario": "VOTO_EXTERIOR",
-     "status": "rumor",
-     "prob": 0.15
-    }
-   ],
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
    "id": "auto-VOTO_EXTERIOR-confirmado",
    "type": "noticia",
    "date": "2026-11-03",
-   "title": "El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 2 medios (infoLibre, El País). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
-   "outlet": "infoLibre / El País",
+   "title": "El Gobierno advierte de que suspender el voto de los hijos de los nacionalizados por la ‘ley de nietos’ condicionaría el escrutinio del 29-N",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (El País). Cita: «Extender la suspensión del derecho al voto a los hijos de los nacionalizados por la ley de nietos pondría en riesgo el cumplimiento de los trámites legales para el 29-N e incluso podría afectar al escrutinio.»",
+   "outlet": "El País",
    "sources": [
-    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html",
     "https://elpais.com/espana/elecciones-generales/2026-11-03/el-gobierno-advierte-de-que-suspender-el-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos-condicionaria-el-escrutinio-del-29-n.html"
    ],
    "verified": false,
@@ -536,7 +493,7 @@
    ],
    "toggleable": true,
    "defaultActive": false,
-   "overriddenBy": "auto-VOTO_EXTERIOR-rumor",
+   "overriddenBy": null,
    "impact": {
     "media": {
      "derecha": 0,
@@ -561,7 +518,7 @@
    "date": "2026-11-01",
    "sample": 4893,
    "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html",
-   "weight": 0.1934,
+   "weight": 0.1786,
    "values": {
     "PP": 32.7,
     "PSOE": 26.6,
@@ -583,7 +540,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T10:59:48.189Z",
+    "checked": "2026-11-03T18:26:28.297Z",
     "tried": [
      "publicación original: faltan PP, FA, PODEMOS"
     ]
@@ -596,8 +553,8 @@
    "impact": {
     "media": {
      "derecha": 0.7,
-     "pMayoria": 0,
-     "senado": 0
+     "pMayoria": 0.005,
+     "senado": 1
     },
     "cisOficial": {
      "derecha": 0,
@@ -617,7 +574,7 @@
    "date": "2026-10-30",
    "sample": 2505,
    "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-   "weight": 0.145,
+   "weight": 0.1339,
    "values": {
     "PP": 31.1,
     "PSOE": 24.6,
@@ -682,9 +639,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
-     "pMayoria": -0.002,
-     "senado": 0
+     "derecha": 0.1,
+     "pMayoria": 0.003,
+     "senado": 2
     },
     "cisOficial": {
      "derecha": 0,
@@ -704,7 +661,7 @@
    "date": "2026-10-30",
    "sample": 1024,
    "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
-   "weight": 0.0927,
+   "weight": 0.0856,
    "values": {
     "PP": 31.8,
     "PSOE": 25.5,
@@ -738,7 +695,7 @@
    "impact": {
     "media": {
      "derecha": 0.5,
-     "pMayoria": 0,
+     "pMayoria": 0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -759,7 +716,7 @@
    "date": "2026-10-30",
    "sample": 1527,
    "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-   "weight": 0.1132,
+   "weight": 0.1045,
    "values": {
     "PP": 31.5,
     "PSOE": 25.8,
@@ -806,7 +763,7 @@
    "impact": {
     "media": {
      "derecha": 0.3,
-     "pMayoria": -0.001,
+     "pMayoria": 0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -827,7 +784,7 @@
    "date": "2026-10-29",
    "sample": 1000,
    "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
-   "weight": 0.083,
+   "weight": 0.0766,
    "values": {
     "PP": 33,
     "PSOE": 25.6,
@@ -848,7 +805,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T10:59:48.189Z",
+    "checked": "2026-11-03T18:26:28.297Z",
     "tried": [
      "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
     ]
@@ -861,7 +818,7 @@
    "impact": {
     "media": {
      "derecha": 0.5,
-     "pMayoria": -0.001,
+     "pMayoria": 0.003,
      "senado": 0
     },
     "cisOficial": {
@@ -882,7 +839,7 @@
    "date": "2026-10-28",
    "sample": 1200,
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-   "weight": 0.0823,
+   "weight": 0.076,
    "values": {
     "PP": 29.2,
     "PSOE": 26.9,
@@ -916,8 +873,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.8,
-     "pMayoria": -0.004,
+     "derecha": -0.7,
+     "pMayoria": -0.002,
      "senado": 0
     },
     "cisOficial": {
@@ -938,7 +895,7 @@
    "date": "2026-10-28",
    "sample": 1000,
    "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
-   "weight": 0.0752,
+   "weight": 0.0694,
    "values": {
     "PP": 32.4,
     "PSOE": 26.4,
@@ -959,7 +916,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T10:59:48.189Z",
+    "checked": "2026-11-03T18:26:28.297Z",
     "tried": [
      "publicación original: faltan PP, ERC, PODEMOS"
     ]
@@ -972,7 +929,7 @@
    "impact": {
     "media": {
      "derecha": 0.6,
-     "pMayoria": 0,
+     "pMayoria": 0.004,
      "senado": 0
     },
     "cisOficial": {
@@ -993,7 +950,7 @@
    "date": "2026-10-27",
    "sample": 1500,
    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-   "weight": 0.0834,
+   "weight": 0.077,
    "values": {
     "PP": 28.1,
     "PSOE": 29.6,
@@ -1026,9 +983,58 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -1.1,
-     "pMayoria": -0.005,
-     "senado": -1
+     "derecha": -1,
+     "pMayoria": -0.003,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:More in Common|2026-10-25",
+   "firm": "More in Common",
+   "date": "2026-10-25",
+   "sample": 2210,
+   "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
+   "weight": 0.0767,
+   "values": {
+    "PP": 28.3,
+    "PSOE": 27.6,
+    "VOX": 20.8,
+    "PODEMOS": 2.6,
+    "SALF": 2.4,
+    "FA": 6.68,
+    "FV": 1.12
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-03T18:26:28.297Z",
+    "tried": [
+     "publicación original: 403"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.7,
+     "pMayoria": 0.001,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1048,7 +1054,7 @@
    "date": "2026-10-23",
    "sample": 1200,
    "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-   "weight": 0.0502,
+   "weight": 0.0463,
    "values": {
     "PP": 29.4,
     "PSOE": 27.1,
@@ -1077,7 +1083,7 @@
    "impact": {
     "media": {
      "derecha": -0.3,
-     "pMayoria": -0.004,
+     "pMayoria": -0.002,
      "senado": 0
     },
     "cisOficial": {
@@ -1098,7 +1104,7 @@
    "date": "2026-10-22",
    "sample": 2000,
    "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-   "weight": 0.0587,
+   "weight": 0.0542,
    "values": {
     "PP": 31.1,
     "PSOE": 27.6,
@@ -1130,7 +1136,7 @@
    "impact": {
     "media": {
      "derecha": -0.2,
-     "pMayoria": -0.003,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -1151,7 +1157,7 @@
    "date": "2026-10-16",
    "sample": 1000,
    "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-   "weight": 0.0229,
+   "weight": 0.0211,
    "values": {
     "PP": 28.5,
     "PSOE": 27.1,
@@ -1197,7 +1203,7 @@
    "impact": {
     "media": {
      "derecha": -0.3,
-     "pMayoria": -0.003,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -1239,7 +1245,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-03T10:49:53.769Z"
+    "checked": "2026-11-03T18:26:34.576Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1253,8 +1259,8 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -46.4,
-     "pMayoria": -0.938,
+     "derecha": -45.7,
+     "pMayoria": -0.939,
      "senado": -81
     },
     "cis": {

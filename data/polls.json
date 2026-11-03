@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-03T10:49:53.771Z",
+ "fetched": "2026-11-03T18:26:34.577Z",
  "latestPoll": "2026-11-01",
  "sources": {
   "media": {
@@ -15,6 +15,7 @@
     "Sondaxe/La Voz de Galicia (2026-10-28)",
     "Hamalgama Métrica/Vozpópuli (2026-10-28)",
     "The Objective (2026-10-27)",
+    "More in Common (2026-10-25)",
     "Winston/Artículo14 (2026-10-23)",
     "Ateneo del Dato/elDiario.es (2026-10-22)",
     "IMOP/El Confidencial (2026-10-16)"
@@ -26,7 +27,7 @@
      "date": "2026-11-01",
      "sample": 4893,
      "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html",
-     "weight": 0.1934,
+     "weight": 0.1786,
      "values": {
       "PP": 32.7,
       "PSOE": 26.6,
@@ -48,7 +49,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-02T10:59:48.189Z",
+      "checked": "2026-11-03T18:26:28.297Z",
       "tried": [
        "publicación original: faltan PP, FA, PODEMOS"
       ]
@@ -60,7 +61,7 @@
      "date": "2026-10-30",
      "sample": 2505,
      "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-     "weight": 0.145,
+     "weight": 0.1339,
      "values": {
       "PP": 31.1,
       "PSOE": 24.6,
@@ -125,7 +126,7 @@
      "date": "2026-10-30",
      "sample": 1024,
      "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
-     "weight": 0.0927,
+     "weight": 0.0856,
      "values": {
       "PP": 31.8,
       "PSOE": 25.5,
@@ -158,7 +159,7 @@
      "date": "2026-10-30",
      "sample": 1527,
      "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-     "weight": 0.1132,
+     "weight": 0.1045,
      "values": {
       "PP": 31.5,
       "PSOE": 25.8,
@@ -204,7 +205,7 @@
      "date": "2026-10-29",
      "sample": 1000,
      "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
-     "weight": 0.083,
+     "weight": 0.0766,
      "values": {
       "PP": 33,
       "PSOE": 25.6,
@@ -225,7 +226,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-02T10:59:48.189Z",
+      "checked": "2026-11-03T18:26:28.297Z",
       "tried": [
        "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
       ]
@@ -237,7 +238,7 @@
      "date": "2026-10-28",
      "sample": 1200,
      "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-     "weight": 0.0823,
+     "weight": 0.076,
      "values": {
       "PP": 29.2,
       "PSOE": 26.9,
@@ -271,7 +272,7 @@
      "date": "2026-10-28",
      "sample": 1000,
      "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
-     "weight": 0.0752,
+     "weight": 0.0694,
      "values": {
       "PP": 32.4,
       "PSOE": 26.4,
@@ -292,7 +293,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-02T10:59:48.189Z",
+      "checked": "2026-11-03T18:26:28.297Z",
       "tried": [
        "publicación original: faltan PP, ERC, PODEMOS"
       ]
@@ -304,7 +305,7 @@
      "date": "2026-10-27",
      "sample": 1500,
      "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-     "weight": 0.0834,
+     "weight": 0.077,
      "values": {
       "PP": 28.1,
       "PSOE": 29.6,
@@ -332,12 +333,39 @@
      }
     },
     {
+     "id": "encuesta:More in Common|2026-10-25",
+     "firm": "More in Common",
+     "date": "2026-10-25",
+     "sample": 2210,
+     "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
+     "weight": 0.0767,
+     "values": {
+      "PP": 28.3,
+      "PSOE": 27.6,
+      "VOX": 20.8,
+      "PODEMOS": 2.6,
+      "SALF": 2.4,
+      "FA": 6.68,
+      "FV": 1.12
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "no verificada",
+      "channel": null,
+      "url": null,
+      "checked": "2026-11-03T18:26:28.297Z",
+      "tried": [
+       "publicación original: 403"
+      ]
+     }
+    },
+    {
      "id": "encuesta:Winston/Artículo14|2026-10-23",
      "firm": "Winston/Artículo14",
      "date": "2026-10-23",
      "sample": 1200,
      "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-     "weight": 0.0502,
+     "weight": 0.0463,
      "values": {
       "PP": 29.4,
       "PSOE": 27.1,
@@ -365,7 +393,7 @@
      "date": "2026-10-22",
      "sample": 2000,
      "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-     "weight": 0.0587,
+     "weight": 0.0542,
      "values": {
       "PP": 31.1,
       "PSOE": 27.6,
@@ -396,7 +424,7 @@
      "date": "2026-10-16",
      "sample": 1000,
      "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-     "weight": 0.0229,
+     "weight": 0.0211,
      "values": {
       "PP": 28.5,
       "PSOE": 27.1,
@@ -437,11 +465,11 @@
     }
    ],
    "values": {
-    "PP": 31.22,
-    "PSOE": 26.39,
-    "VOX": 19.46,
-    "FA": 5.9,
-    "FV": 0.99,
+    "PP": 31,
+    "PSOE": 26.48,
+    "VOX": 19.56,
+    "FA": 5.96,
+    "FV": 1,
     "ERC": 2.43,
     "JUNTS": 1.37,
     "BILDU": 1.37,
@@ -449,8 +477,8 @@
     "BNG": 0.92,
     "CC": 0.41,
     "AA": 1.35,
-    "PODEMOS": 2.01,
-    "SALF": 2.05
+    "PODEMOS": 2.06,
+    "SALF": 2.09
    }
   },
   "cisOficial": {
@@ -487,7 +515,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-03T10:49:53.769Z"
+      "checked": "2026-11-03T18:26:34.576Z"
      }
     }
    ],
@@ -816,6 +844,30 @@
    "joint": [],
    "table": "2026 (with Broad Front)",
    "uid": "PSOE|2026-10-25"
+  },
+  {
+   "firm": "More in Common",
+   "date": "2026-10-25",
+   "sample": 2210,
+   "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
+   "values": {
+    "PP": 28.3,
+    "PSOE": 27.6,
+    "VOX": 20.8,
+    "PODEMOS": 2.6,
+    "SALF": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.8
+    }
+   ],
+   "table": "2026 (with Broad Front)",
+   "uid": "More in Common|2026-10-25"
   },
   {
    "firm": "SocioMétrica/El Español",
