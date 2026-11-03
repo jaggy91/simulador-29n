@@ -48,5 +48,25 @@
   "status": "confirmado",
   "quote": "pesa sobre la alianza un pacto con los socialistas en el Senado para optimizar las opciones progresistas en la cámara.",
   "at": "2026-11-02T10:59:37.262Z"
+ },
+ {
+  "outlet": "El País",
+  "title": "El Gobierno advierte de que suspender el voto de los hijos de los nacionalizados por la ‘ley de nietos’ condicionaría el escrutinio del 29-N",
+  "link": "https://elpais.com/espana/elecciones-generales/2026-11-03/el-gobierno-advierte-de-que-suspender-el-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos-condicionaria-el-escrutinio-del-29-n.html",
+  "date": "2026-11-03T08:00:11.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "confirmado",
+  "quote": "Extender la suspensión del derecho al voto a los hijos de los nacionalizados por la ley de nietos pondría en riesgo el cumplimiento de los trámites legales para el 29-N e incluso podría afectar al escrutinio.",
+  "at": "2026-11-03T10:49:31.248Z"
+ },
+ {
+  "outlet": "Europa Press",
+  "title": "El Gobierno respalda que los hijos de los nacionalizados puedan votar y advierte de \"inseguridad\" si se impide",
+  "link": "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html",
+  "date": "2026-11-03T10:35:39.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "rumor",
+  "quote": "El Gobierno se ha opuesto a la petición de Vox e Iustitia Europa para que el Tribunal Supremo amplíe la suspensión del voto en las elecciones generales del próximo 29 de noviembre a los hijos de los nacionalizados por la 'ley de nietos'",
+  "at": "2026-11-03T10:49:46.232Z"
  }
 ]

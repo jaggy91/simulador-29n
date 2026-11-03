@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:55:38.684Z",
+ "updated": "2026-11-03T10:52:20.927Z",
  "impactN": 1000,
  "cards": [
   {
@@ -164,7 +164,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     }
@@ -474,16 +474,17 @@
   {
    "id": "auto-VOTO_EXTERIOR-rumor",
    "type": "noticia",
-   "date": "2026-10-31",
+   "date": "2026-11-03",
    "title": "Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (RTVE). Cita: «Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio»",
-   "outlet": "RTVE",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 2 medios (RTVE, Europa Press). Cita: «Vox pide suspender el voto a los hijos de los nacionalizados por la 'ley de nietos' si los padres no acreditan el exilio»",
+   "outlet": "RTVE / Europa Press",
    "sources": [
-    "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml"
+    "https://www.rtve.es/noticias/20261031/vox-pide-suspender-voto-a-hijos-nacionalizados-por-ley-nietos-si-padres-no-acreditan-exilio/17294980.shtml",
+    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html"
    ],
    "verified": false,
    "captured": "auto",
-   "autoActive": false,
+   "autoActive": true,
    "effects": [
     {
      "scenario": "VOTO_EXTERIOR",
@@ -492,7 +493,7 @@
     }
    ],
    "toggleable": true,
-   "defaultActive": false,
+   "defaultActive": true,
    "overriddenBy": null,
    "impact": {
     "media": {
@@ -515,12 +516,13 @@
   {
    "id": "auto-VOTO_EXTERIOR-confirmado",
    "type": "noticia",
-   "date": "2026-10-31",
+   "date": "2026-11-03",
    "title": "El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (infoLibre). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
-   "outlet": "infoLibre",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 2 medios (infoLibre, El País). Cita: «El TS añade dudas al censo del 29N y rechaza suspender a los electores de la 'ley de nietos' residentes en España»",
+   "outlet": "infoLibre / El País",
    "sources": [
-    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html"
+    "https://www.infolibre.es/politica/ts-anade-dudas-censo-29n-rechaza-suspender-electores-ley-nietos-residentes-espana_1_2239322.html",
+    "https://elpais.com/espana/elecciones-generales/2026-11-03/el-gobierno-advierte-de-que-suspender-el-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos-condicionaria-el-escrutinio-del-29-n.html"
    ],
    "verified": false,
    "captured": "auto",
@@ -534,7 +536,7 @@
    ],
    "toggleable": true,
    "defaultActive": false,
-   "overriddenBy": null,
+   "overriddenBy": "auto-VOTO_EXTERIOR-rumor",
    "impact": {
     "media": {
      "derecha": 0,
@@ -1237,7 +1239,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-03T02:54:18.502Z"
+    "checked": "2026-11-03T10:49:53.769Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
