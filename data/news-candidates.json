@@ -78,5 +78,15 @@
   "status": "confirmado",
   "quote": "Tellado ha verbalizado as&iacute; la consecuencia l&oacute;gica del acuerdo que cerraron el PP y Vox para el Senado.",
   "at": "2026-11-03T18:25:45.570Z"
+ },
+ {
+  "outlet": "20minutos",
+  "title": "La Abogacía del Estado se opone a suspender el voto de los hijos de nacionalizados por la 'ley de nietos'",
+  "link": "https://www.20minutos.es/nacional/abogacia-estado-se-opone-suspender-voto-los-hijos-nacionalizados-por-ley-nietos_7056812_0.html",
+  "date": "2026-11-03T18:36:13.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "rumor",
+  "quote": "Vox e Iustitia Europa han pedido al Supremo que suspenda cautelarmente el derecho al voto de los hijos e hijas de quienes previamente accedieron a la nacionalidad española a través de la conocida como 'ley de nietos' , cuyo derecho al voto se encuentra actualmente suspendido por decisión del alto tribunal.",
+  "at": "2026-11-04T06:16:22.435Z"
  }
 ]

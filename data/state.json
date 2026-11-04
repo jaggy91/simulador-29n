@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T00:03:14.926Z",
+ "updated": "2026-11-04T06:17:51.185Z",
  "latestPoll": "2026-11-01",
  "scenarios": [
   {
@@ -40,9 +40,9 @@
   {
    "id": "VOTO_EXTERIOR",
    "label": "Voto de los nacionalizados por la Ley de Nietos",
-   "status": "hipotético",
-   "prob": 0,
-   "appliedBy": null
+   "status": "rumor",
+   "prob": 0.15,
+   "appliedBy": "auto-VOTO_EXTERIOR-rumor"
   }
  ],
  "results": {
@@ -534,7 +534,8 @@
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
      "TERUEL_sin_FA_CHA": 1,
-     "PACTO_PP_VOX_SENADO": 1
+     "PACTO_PP_VOX_SENADO": 1,
+     "VOTO_EXTERIOR": 0.1486
     }
    },
    "seatsInPlay": [
@@ -1228,7 +1229,8 @@
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
      "TERUEL_sin_FA_CHA": 1,
-     "PACTO_PP_VOX_SENADO": 1
+     "PACTO_PP_VOX_SENADO": 1,
+     "VOTO_EXTERIOR": 0.1486
     }
    },
    "seatsInPlay": [
@@ -1933,7 +1935,7 @@
      }
     },
     "prob": {
-     "mayoriaDerecha": 0.7304,
+     "mayoriaDerecha": 0.7306,
      "mayoriaDerechaConCC": 0.7606,
      "juntsDecisivo": 0.0936,
      "investiduraSola": 0.0914,
@@ -1944,7 +1946,8 @@
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
      "TERUEL_sin_FA_CHA": 1,
-     "PACTO_PP_VOX_SENADO": 1
+     "PACTO_PP_VOX_SENADO": 1,
+     "VOTO_EXTERIOR": 0.1486
     }
    },
    "seatsInPlay": [
