@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T14:42:00.962Z",
+ "updated": "2026-11-04T21:23:14.561Z",
  "latestPoll": "2026-11-01",
  "note": "Laboratorio: escenarios acumulativos favorables a cada bloque. No forma parte de la proyección oficial.",
  "maxLevel": 4,
@@ -234,7 +234,7 @@
         "p95": 206
        },
        "investidura": {
-        "mean": 158.3,
+        "mean": 158.4,
         "p05": 139,
         "p50": 159,
         "p95": 177
@@ -548,10 +548,10 @@
       },
       "prob": {
        "mayoriaDerecha": 0.951,
-       "mayoriaDerechaConCC": 0.9605,
-       "juntsDecisivo": 0.017,
+       "mayoriaDerechaConCC": 0.961,
+       "juntsDecisivo": 0.0165,
        "investiduraSola": 0.011,
-       "investiduraConJunts": 0.028,
+       "investiduraConJunts": 0.0275,
        "senadoMayoriaDerecha": 0.8835,
        "senado35Derecha": 0.3155
       }
@@ -723,7 +723,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 208.7,
+        "mean": 208.6,
         "p05": 190,
         "p50": 208,
         "p95": 229
@@ -1241,7 +1241,7 @@
        "investidura": {
         "mean": 197.2,
         "p05": 175,
-        "p50": 198,
+        "p50": 197,
         "p95": 220
        },
        "senadoDerecha": {
@@ -1338,7 +1338,7 @@
        "investidura": {
         "mean": 197.2,
         "p05": 175,
-        "p50": 198,
+        "p50": 197,
         "p95": 220
        },
        "senadoDerecha": {
@@ -1817,7 +1817,7 @@
         "mean": 167.5,
         "p05": 146,
         "p50": 167,
-        "p95": 187
+        "p95": 188
        },
        "investidura": {
         "mean": 176.2,
@@ -1935,8 +1935,8 @@
       "prob": {
        "mayoriaDerecha": 0.3105,
        "mayoriaDerechaConCC": 0.3165,
-       "juntsDecisivo": 0.138,
-       "investiduraSola": 0.4405,
+       "juntsDecisivo": 0.139,
+       "investiduraSola": 0.4395,
        "investiduraConJunts": 0.5785,
        "senadoMayoriaDerecha": 0.1025,
        "senado35Derecha": 0.0015
@@ -2542,8 +2542,8 @@
       "prob": {
        "mayoriaDerecha": 0.9135,
        "mayoriaDerechaConCC": 0.9285,
-       "juntsDecisivo": 0.0265,
-       "investiduraSola": 0.0185,
+       "juntsDecisivo": 0.027,
+       "investiduraSola": 0.018,
        "investiduraConJunts": 0.045,
        "senadoMayoriaDerecha": 0.849,
        "senado35Derecha": 0.267
@@ -2642,8 +2642,8 @@
       "prob": {
        "mayoriaDerecha": 0.9145,
        "mayoriaDerechaConCC": 0.9285,
-       "juntsDecisivo": 0.027,
-       "investiduraSola": 0.018,
+       "juntsDecisivo": 0.0275,
+       "investiduraSola": 0.0175,
        "investiduraConJunts": 0.045,
        "senadoMayoriaDerecha": 0.849,
        "senado35Derecha": 0.267

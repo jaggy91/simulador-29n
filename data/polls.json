@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-04T14:38:58.458Z",
+ "fetched": "2026-11-04T21:20:04.493Z",
  "latestPoll": "2026-11-01",
  "sources": {
   "media": {
@@ -49,7 +49,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-03T18:26:28.297Z",
+      "checked": "2026-11-04T21:19:59.123Z",
       "tried": [
        "publicación original: faltan PP, FA, PODEMOS"
       ]
@@ -226,7 +226,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-03T18:26:28.297Z",
+      "checked": "2026-11-04T21:19:59.123Z",
       "tried": [
        "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
       ]
@@ -293,7 +293,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-03T18:26:28.297Z",
+      "checked": "2026-11-04T21:19:59.123Z",
       "tried": [
        "publicación original: faltan PP, ERC, PODEMOS"
       ]
@@ -353,7 +353,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-03T18:26:28.297Z",
+      "checked": "2026-11-04T21:19:59.123Z",
       "tried": [
        "publicación original: 403"
       ]
@@ -515,7 +515,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-04T14:38:58.457Z"
+      "checked": "2026-11-04T21:20:04.492Z"
      }
     }
    ],
