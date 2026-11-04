@@ -13,7 +13,7 @@ Desarrollado con ayuda de inteligencia artificial (Claude, de Anthropic). Al ent
 ```sh
 npm ci
 npm run dev        # web en local (lee ./data)
-npm test           # 64 tests: reproduce 2023, contraste con un análisis externo, el modelo 2026, el espectro, las fuentes y la veda
+npm test           # 58 tests: reproduce 2023, contraste con un análisis externo, el modelo 2026, el espectro y las fuentes
 npm run polls      # encuestas: media (índice de Wikipedia), estimación oficial del CIS (PDF de cis.es) y reestimaciones del CIS
 npm run simulate   # resultado con las fuentes activas + efecto de cada tarjeta → data/state.json, data/sources.json, data/history.json
 npm run data       # regenera los datos base: 2023 del BOE, voto exterior de la JEC, escaños del BOE, censo del INE; europeas 2024 de Interior; andaluzas del BOJA; designados (Wikipedia, con los parlamentos estimados contrastados con su fuente oficial)

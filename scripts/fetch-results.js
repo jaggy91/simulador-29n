@@ -3,19 +3,20 @@
 // (resultados-elecciones.rtve.es), con el total nacional contrastado con Público.
 // infoelectoral no responde fuera de España; RTVE recibe los mismos datos por el canal
 // de Interior para medios. El escrutinio definitivo llega después en el BOE.
-// Escribe data/results.json. No hace nada durante la veda.
+// Escribe data/results.json. No hace nada antes del cierre de las urnas.
 // Uso: node scripts/fetch-results.js [--year 2026] [--month 11]
 import fs from 'node:fs';
-import { inVeda } from '../src/veda.js';
 
+// Cierre de las últimas urnas del 29-N (Canarias, 20:00 locales).
+const POLLS_CLOSE = '2026-11-29T20:00:00Z';
 const arg = (k, d) => (process.argv.includes(k) ? process.argv[process.argv.indexOf(k) + 1] : d);
 const YEAR = arg('--year', '2026');
 const UA = 'simulador-29n/1.0 (+https://github.com/jaggy91/simulador-29n)';
 const BASE = 'https://resultados-elecciones.rtve.es';
 const SLUGS = JSON.parse(fs.readFileSync('data/rtve-provincias.json', 'utf8')).provinces;
 
-if (YEAR === '2026' && inVeda()) {
-  console.log('Veda electoral: no se publican resultados hasta el cierre de las urnas');
+if (YEAR === '2026' && Date.now() < Date.parse(POLLS_CLOSE)) {
+  console.log('No se publican resultados hasta el cierre de las urnas');
   process.exit(0);
 }
 

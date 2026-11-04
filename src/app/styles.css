@@ -345,8 +345,6 @@ body:has(dialog.notice[open]) { overflow: hidden; }
 .pe-foot { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; margin-top: 10px; }
 .pe-error { color: var(--warn-ink); background: var(--warn-bg); padding: 2px 8px; border-radius: 6px; }
 
-/* Veda electoral */
-.banner.veda { border: 1px solid color-mix(in srgb, var(--warn-ink) 35%, transparent); }
 /* Los desplegables con opciones largas no deben ensanchar la tarjeta en el móvil. */
 .scn, .control { min-width: 0; grid-template-columns: minmax(0, 1fr); }
 select { max-width: 100%; }

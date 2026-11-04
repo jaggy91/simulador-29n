@@ -12,7 +12,6 @@
 
 ## 0. Respuestas directas
 
-<!-- veda -->
 
 **¿Está actualizado?**
 - Sí, a fecha del corte:
@@ -51,7 +50,6 @@ Coalición Canaria (1 escaño) votó en 2023 tanto a Feijóo (29-sep) como a Sá
 - CIS reestimado: bajaría a **171**, sin mayoría, y la investidura sin Junts subiría a 173: ninguna de las dos llegaría a 176 sola.
 - CIS oficial: el fallo de 2023 se midió sobre las empresas privadas; aplicarlo a la estimación del CIS es solo ilustrativo (derecha 155 → 140).
 
-<!-- /veda -->
 
 ---
 
@@ -165,7 +163,6 @@ Las tres fuentes son tarjetas (§4.10): cada encuesta o estimación puede desact
 - La estimación oficial del CIS se lee directamente de su PDF: está verificada por construcción.
 - **Ediciones en Wikipedia** (`scripts/lib/poll-edits.js`, `data/poll-edits.json`): cada hora se compara el índice con la descarga anterior. Si cambian las cifras de una encuesta ya publicada, o desaparece, se registra con las ediciones de Wikipedia de ese intervalo (fecha, editor y comentario), la tarjeta lo indica durante 14 días y, si la encuesta entra en alguna fuente, se abre un aviso. Cada fila se identifica por empresa, fecha y orden, porque a veces hay dos estudios de la misma empresa el mismo día.
 
-<!-- veda -->
 
 **Entradas actuales** (% sobre voto válido)
 
@@ -175,7 +172,6 @@ Las tres fuentes son tarjetas (§4.10): cada encuesta o estimación puede desact
 | CIS oficial | 22,30 | 34,00 | 17,10 | 5,23 | 0,87 | 3,10 | 1,80 | 3,00 | 1,10 | 1,60 | 0,60 | 0,90 | 0,20 | (media) |
 | CIS reest. | 28,15 | 28,30 | 17,65 | 6,51 | 1,09 | 3,25 | 2,00 | (de la media) | | | | | | |
 
-<!-- /veda -->
 
 ### 4.2 Proyección provincial (swing proporcional con IPF)
 
@@ -251,13 +247,11 @@ El estado y la probabilidad de cada escenario los fija la tarjeta que manda (§4
 | **Pacto PP–Vox al Senado** | confirmado | 1 | Prensa del 26-oct | Ver detalle abajo. Seguimiento: la encuesta de seguimiento (abajo) |
 | Voto exterior extra | hipotético | 0 | Supremo (23-oct): voto suspendido | Solo como "qué pasaría si" (§4.7) |
 
-**Seguimiento de las listas conjuntas.** Una encuesta publicada el 21-oct (no se publica la muestra; tarjeta marcada `sondeo` y "sin verificar"; empresa y medio en la tarjeta, que no se muestra durante la veda). Es el único dato publicado sobre cuántos votantes de cada partido apoyarían una lista conjunta al Senado. Si se desactiva, el seguimiento vuelve al 100 % mecánico. Qué hace quien no la apoya es un supuesto (§4.4, §7).
+**Seguimiento de las listas conjuntas.** Una encuesta publicada el 21-oct (no se publica la muestra; tarjeta marcada `sondeo` y "sin verificar"; empresa y medio en la tarjeta). Es el único dato publicado sobre cuántos votantes de cada partido apoyarían una lista conjunta al Senado. Si se desactiva, el seguimiento vuelve al 100 % mecánico. Qué hace quien no la apoya es un supuesto (§4.4, §7).
 
-<!-- veda -->
 
 Valores: apoyarían la lista conjunta el 94 % de los votantes del PP y el 86 % de los de Vox; el 92 % de los del PSOE y el 95 % de los de su socio.
 
-<!-- /veda -->
 
 **Circunscripciones de Senado de Progreso en el modelo (50).** Las 43 provinciales de 4 senadores fuera de Cataluña: Álava, Albacete, Alicante, Almería, Asturias, Ávila, Badajoz, Bizkaia, Burgos, Cáceres, Cádiz, Cantabria, Castellón, Ciudad Real, Córdoba, A Coruña, Cuenca, Gipuzkoa, Granada, Guadalajara, Huelva, Huesca, Jaén, León, Lugo, Madrid, Málaga, Murcia, Navarra, Ourense, Palencia, Pontevedra, La Rioja, Salamanca, Segovia, Sevilla, Soria, Teruel, Toledo, Valencia, Valladolid, Zamora y Zaragoza. Además, Ceuta y Melilla (2 senadores), Mallorca (3), Menorca, Ibiza, Formentera y La Gomera (1). Las fuentes hablan de 47: sobran 3 de estas, sin saber cuáles. En Baleares el acuerdo es con Més (prensa del 17-oct). En el resto de Canarias, el FA va con Podemos y fuera de la lista conjunta, y su voto no tiene seguimiento.
 
@@ -311,7 +305,6 @@ Con los datos reales, el modo realista no mueve ningún escaño; el techo es sol
 
 **¿Es sólido ese cero?** (`data/sensitivity.json` → `exteriorScan`). Con el reparto del exterior de 2023, **ni con una participación del 100 %** (163.020 votos) se mueve un escaño, en ninguna fuente. Solo si votaran todos al PSOE (colocados según el censo, no de forma óptima) empezaría a moverse: −1 escaño para la derecha desde un 15–25 % de participación y hasta −4 con el 100 %. El Senado no se mueve en ningún caso. No se modela el crecimiento ordinario del censo exterior (+444.335 electores desde 2023), parte del cual son nacionalizados que ya pueden votar (§7).
 
-<!-- veda -->
 
 **Resultado** (proyección central, derecha en el Congreso)
 
@@ -321,7 +314,6 @@ Con los datos reales, el modo realista no mueve ningún escaño; el techo es sol
 | CIS oficial | 155 | 155 | 149 |
 | CIS reestimado | 187 | 187 | 183 |
 
-<!-- /veda -->
 
 ### 4.8 Monte Carlo
 
@@ -399,13 +391,10 @@ El error provincial es independiente entre provincias: no hay un componente regi
 
 Se usan probabilidades y no la proyección central porque, con D'Hondt, **la central salta a escalones**: varios escaños se ganan por muy pocos votos.
 
-<!-- veda -->
 
 Ejemplo, CIS reestimado a 27-oct: la central da 187 a la derecha y la media del Monte Carlo 182,6. Al trasladar 2 puntos (nivel +1), la central solo sube 2 escaños mientras P(mayoría) pasa del 73 % al 92 %.
 
-<!-- /veda -->
 
-<!-- veda -->
 
 **Resultado a 27-oct** (modelo del 28-oct)
 - **Media de encuestas:** ni en el nivel −4 pierde la derecha la mayoría (P = 81 %; central 190).
@@ -414,7 +403,6 @@ Ejemplo, CIS reestimado a 27-oct: la central da 187 a la derecha y la media del 
   - Hasta el nivel −3 la derecha conserva la mayoría por poco (P = 54 %).
   - En el nivel −4 la pierde (P = 29 %), y la investidura suma 176 sola (P = 50 %) y con Junts (P = 64 %).
 
-<!-- /veda -->
 
 ### 4.10 Fuentes como tarjetas
 
@@ -442,7 +430,6 @@ Ejemplo, CIS reestimado a 27-oct: la central da 187 a la derecha y la media del 
 - la derecha del Senado (proyección central);
 - P(mayoría).
 
-<!-- veda -->
 
 Efectos a 27-oct (modelo del 28-oct), derecha del Senado con media de encuestas / CIS oficial / CIS reestimado:
 - Pacto PP–Vox: +16 / +6 / +23.
@@ -451,7 +438,6 @@ Efectos a 27-oct (modelo del 28-oct), derecha del Senado con media de encuestas 
 - Seguimiento de Data 10: −2 / +4 / −1. Con las listas por candidato, quien no apoya una lista conjunta sigue votando a los de su partido; el efecto depende de qué candidatos quedan en el filo en cada circunscripción.
 - Cada encuesta de la media: entre −0,5 y +0,8 escaños de la derecha en el Congreso.
 
-<!-- /veda -->
 
 **En la web:**
 - Al cambiar tarjetas, el resultado se recalcula en el navegador con el mismo motor, y un aviso indica que no es el resultado por defecto.
@@ -486,7 +472,6 @@ T1 y T5 se comparan con el resultado oficial. T2–T4 y T6–T8 son contrafactua
 
 Registro histórico, 26-oct: el modelo, ejecutado **con los supuestos de aquel análisis** (seguimiento del 85 %, trasvases del 70 %, 37.000 votos exteriores), reproducía sus cifras de 2026. Solo comprueba que el motor es coherente con un cálculo independiente. Esos supuestos ya no se usan: las cifras vigentes, con datos reales, están en §0 y §6.
 
-<!-- veda -->
 
 | Caso | Análisis externo | Modelo (26-oct) |
 |---|---|---|
@@ -496,7 +481,6 @@ Registro histórico, 26-oct: el modelo, ejecutado **con los supuestos de aquel a
 | +37.000 votos exteriores (techo) | derecha −7/−8 | −7,5 |
 | Tormenta perfecta (CIS) | derecha ~175 · investidura ~170 | 171 · 169 |
 
-<!-- /veda -->
 
 ### 5.3 Backtest 2019 → 2023
 
@@ -530,7 +514,6 @@ Recalculado el 28-oct con el ruido que conserva la suma (§4.8) y con la columna
 
 ## 6. Resultados actuales con su incertidumbre (27-oct, modelo del 28-oct)
 
-<!-- veda -->
 
 **Congreso**, Monte Carlo (5.000 simulaciones, `HISTORICAL_NOISE`). Mediana [percentil 5–95]:
 
@@ -568,7 +551,6 @@ Ningún partido sin dato en la encuesta (CUP, UPL, NC, Soria ¡Ya!, Existe) lleg
 | CIS reestimado | 187 → **171** | 155 → 173 | 140 → 116 |
 | CIS oficial (ilustrativo) | 155 → 140 | 189 → 206 | 84 → 73 |
 
-<!-- /veda -->
 
 ---
 
@@ -578,7 +560,6 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 
 **Supuestos sin dato publicado.** Son los únicos parámetros que no salen de una fuente. Cada uno se declara en `scenarios.json` → `assumptions` (o en el código, si es de la reasignación o de la proyección) y la web lo muestra como "Supuesto". Efecto sobre la proyección central, derecha en el Congreso / en el Senado:
 
-<!-- veda -->
 
 | Supuesto | Valor usado | Alternativa probada | Media de encuestas | CIS oficial | CIS reestimado | Cómo se verifica |
 |---|---|---|---|---|---|---|
@@ -590,11 +571,9 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 | Voto del FA en Teruel que va al PSOE | 50 % (neutro) | 0 % / 100 % | 0 | 0 | 0 | — |
 | Voto del FA que va al PSOE si se retirara de las pequeñas | 50 % (neutro) | ajustable | solo "qué pasaría si" | | | — |
 
-<!-- /veda -->
 
 **Parámetros con dato y su sensibilidad**
 
-<!-- veda -->
 
 | Parámetro | Valor (fuente) | Alternativa | Media de encuestas | CIS oficial | CIS reestimado | Cómo se verifica |
 |---|---|---|---|---|---|---|
@@ -604,7 +583,6 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 | Ruido del Monte Carlo | histórico (backtest, §5.3) | estrecho (`VIDEO_NOISE`) | P(mayoría, 2.000 sim.) 98,1 % → 99,6 % | 4,8 % → 1,6 % | 73,0 % → 80,5 % | Backtest (§5.3) |
 | Bloque de CC | investidura (votación del 16-nov-2023) | con la derecha (también votó a Feijóo) | P(mayoría) 98,0 % → 98,2 % | 4,6 % → 5,0 % | 74,0 % → 76,5 % | Votación de investidura tras el 29-N |
 
-<!-- /veda -->
 
 **Supuestos sin dato, declarados pero no cuantificados**
 - **Seguimiento del FV:** la encuesta de seguimiento solo da el dato del FA; se aplica también al FV.
@@ -637,15 +615,8 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 - **No es una predicción del voto.** Hereda el error de las encuestas, que en 2023 fue de varios puntos en un partido.
 - **No modela campaña, debates, participación diferencial ni voto útil**, más allá de lo que recojan las encuestas.
 - **No incluye el voto exterior extra en la proyección oficial** (probabilidad 0). Solo aparece en "qué pasaría si".
-- **Veda electoral (LOREG, art. 69.7):** en los cinco días anteriores a la votación no se pueden publicar, difundir ni reproducir sondeos. Del 24-nov a las 00:00 (hora peninsular) al cierre de las últimas urnas el 29-N: las 20:00 en Canarias, que son las 21:00 peninsulares, la web pasa a una versión sin encuestas (`src/veda.js`, `src/app/Veda.jsx`):
-  - Simulador con los porcentajes que escribe el usuario. De partida, el resultado real de las generales de 2023 con el voto de Sumar repartido según la oferta de 2026; SALF, que no se presentó, en 0 % (`data/veda.json`, generado por `scripts/veda.js`).
-  - Noticias y escenarios sin sondeos: las tarjetas marcadas `sondeo` quedan fuera y sus parámetros vuelven al valor mecánico, ajustable.
-  - Metodología sin los bloques con cifras de encuestas (marcados en este archivo con un comentario HTML `veda`).
-  - Sin proyección, espectro, evolución ni tarjetas de encuestas.
-  - **Servidor:** desde 4 horas antes del inicio, GitHub Actions deja de descargar encuestas y de guardar datos, y publica la versión de veda (`vite build --mode veda`). Esa versión solo lleva los datos de `VEDA_FILES` y la metodología ya recortada en el código.
-  - **Navegador:** cambia solo a la hora de inicio, aunque la página esté abierta, por si el despliegue se retrasa. Se puede probar con `?veda` en la dirección.
-  - **Comprobación diaria:** cada ejecución del workflow compila también la versión de veda y comprueba que no lleva archivos de encuestas ni nombres de empresas de sondeos (`scripts/check-veda.js`).
-  - **Pendiente de revisión legal:** el repositorio de GitHub conserva, en su historial, los datos de encuestas anteriores a la veda.
+- **Veda electoral (LOREG, art. 69.7):** en los cinco días anteriores a la votación no se pueden publicar, difundir ni reproducir sondeos. Del 24-nov a las 00:00 (hora peninsular) al cierre de las últimas urnas el 29-N (las 20:00 en Canarias, que son las 21:00 peninsulares), la web se retira a mano y las actualizaciones se detienen. Vuelve al cierre de las urnas.
+  - **Pendiente de revisión legal:** el repositorio de GitHub conserva los datos de encuestas anteriores a la veda.
 
 **Noche electoral** (`scripts/fetch-results.js`, workflow `results.yml`). Al terminar la veda (20:00 UTC del 29-N, 21:00 peninsulares), se lee cada 5 minutos, hasta las 06:00 UTC del 30-N, el escrutinio provisional. GitHub retrasa o se salta a veces las ejecuciones programadas, así que no se depende de un cron cada 5 minutos: basta con que arranque una ejecución (hay un intento cada hora), que se queda leyendo en bucle y publica la web cada vez que cambia algo:
 - **Fuente:** el escrutinio provisional del Ministerio del Interior tal como lo publica **RTVE** en ficheros JSON (total nacional y 52 provincias). infoelectoral no responde fuera de España, y RTVE recibe los mismos datos por el canal de Interior para medios.
@@ -667,7 +638,7 @@ Todas las cifras de esta sección salen de `node scripts/sensitivity.js` (`data/
 ```sh
 npm ci
 npm run data          # regenera la base (BOE, Junta Electoral Central, INE y, para europeas, andaluzas y designados, Wikipedia)
-npm test              # 64 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes, veda
+npm test              # 58 tests: reproducción de 2023, escenarios, proyección, Monte Carlo, espectro, fuentes
 npm run polls         # encuestas → data/polls.json
 npm run simulate      # → data/state.json, data/history.json (semilla fija)
 node scripts/backtest-2023.js --n 2000   # → data/backtest-2023.json
@@ -754,3 +725,4 @@ node scripts/fetch-results.js --year 2023 --month 7   # lector de resultados, pr
 | 30-oct | Andaluzas 2026 desde el BOJA (Junta Electoral de Andalucía); parlamentos estimados de los designados contrastados con su fuente oficial | Fuente oficial; mismas cifras que Wikipedia |
 | 30-oct | Comparación final automática con la última proyección antes de la veda, provisional la noche electoral y definitiva con el BOE | Comprobar el modelo con el resultado real sin intervención |
 | 31-oct | IA de noticias: Gemini con modelos Flash de respaldo y autoprueba; noche electoral en bucle dentro de una sola ejecución | Los Flash más nuevos estaban saturados; GitHub no garantiza los crons cada 5 minutos |
+| 3-nov | Se elimina la versión automática de veda y `check-veda`; la web se retira a mano durante la veda | Un falso positivo (The Objective, empresa de sondeos y también medio citado) bloqueaba la publicación desde el 1-nov |

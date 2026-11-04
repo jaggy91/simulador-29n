@@ -2,25 +2,26 @@
 // la veda. Comprueba si el resultado cae dentro de los intervalos del Monte Carlo y mide
 // el error de cada fuente de encuestas.
 //  - Proyección: data/projection-final.json. Si no existe, se toma del historial de git
-//    el data/state.json vigente al empezar la veda (src/veda.js) y se guarda.
+//    el data/state.json vigente al empezar la veda (VEDA_START) y se guarda.
 //  - Resultado: el escrutinio definitivo (data/congreso-2026.json y senado-2026.json,
 //    del BOE) o, con --provisional, el escrutinio provisional (data/results.json).
 // Escribe data/final-comparison.json. Uso: node scripts/compare-final.js [--provisional]
 import fs from 'node:fs';
 import { execSync } from 'node:child_process';
-import { VEDA } from '../src/veda.js';
 import { BLOCS } from '../src/engine/blocs.js';
 
+// Inicio de la veda legal (LOREG, art. 69.7): 00:00 del 24-nov, hora peninsular.
+const VEDA_START = '2026-11-23T23:00:00Z';
 const PROVISIONAL = process.argv.includes('--provisional');
 const read = (f) => JSON.parse(fs.readFileSync(`data/${f}.json`, 'utf8'));
 const sum = (o, ks) => ks.reduce((a, k) => a + (o[k] || 0), 0);
 
 export function snapshot() {
   if (fs.existsSync('data/projection-final.json')) return read('projection-final');
-  const commit = execSync(`git log -1 --before="${VEDA.start}" --format=%H -- data/state.json`).toString().trim();
+  const commit = execSync(`git log -1 --before="${VEDA_START}" --format=%H -- data/state.json`).toString().trim();
   if (!commit) throw new Error('No hay ningún data/state.json anterior a la veda en el historial');
   const state = JSON.parse(execSync(`git show ${commit}:data/state.json`, { maxBuffer: 64e6 }).toString());
-  const snap = { commit, takenBefore: VEDA.start, ...state };
+  const snap = { commit, takenBefore: VEDA_START, ...state };
   fs.writeFileSync('data/projection-final.json', JSON.stringify(snap, null, 1));
   console.log(`Proyección previa a la veda: commit ${commit.slice(0, 7)} (${state.updated})`);
   return snap;

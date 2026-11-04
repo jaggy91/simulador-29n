@@ -1,7 +1,6 @@
 // Prueba de estrés y análisis de sensibilidad de METODOLOGIA.md (§0, §6 y §7), para que
 // cada cifra se pueda reproducir. Parte de las fuentes activas por defecto y cambia un
-// solo supuesto o parámetro cada vez. Escribe data/sensitivity.json (usa encuestas: no
-// se publica durante la veda).
+// solo supuesto o parámetro cada vez. Escribe data/sensitivity.json.
 // Uso: node scripts/sensitivity.js [--n 2000]
 import { loadModelData, writeJSON } from './lib/load-data.js';
 import { loadInputs } from './lib/inputs.js';

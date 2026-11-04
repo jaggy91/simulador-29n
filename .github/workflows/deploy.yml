@@ -24,10 +24,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: ¿Veda electoral?
-        id: veda
-        run: echo "activa=$(node scripts/veda.js --estado)" >> "$GITHUB_OUTPUT"
-      - run: npx vite build ${{ steps.veda.outputs.activa == 'si' && '--mode veda' || '' }}
+      - run: npx vite build
       - uses: actions/upload-pages-artifact@v4
         with:
           path: dist

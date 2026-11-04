@@ -2,7 +2,6 @@ node_modules/
 dist/
 .cache/
 .env
-dist-veda/
 PROMPT-AUDITORIA.md
 # Material de trabajo local (no se publica)
 transcripcion-reparto-escanos.md
