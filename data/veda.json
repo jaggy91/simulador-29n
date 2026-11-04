@@ -334,6 +334,29 @@
    ],
    "toggleable": true,
    "defaultActive": false
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-rumor",
+   "type": "noticia",
+   "date": "2026-11-03",
+   "title": "El Gobierno respalda que los hijos de los nacionalizados puedan votar y advierte de \"inseguridad\" si se impide",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (Europa Press). Cita: «El Gobierno se ha opuesto a la petición de Vox e Iustitia Europa para que el Tribunal Supremo amplíe la suspensión del voto en las elecciones generales del próximo 29 de noviembre a los hijos de los nacionalizados por la 'ley de nietos'»",
+   "outlet": "Europa Press",
+   "sources": [
+    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "rumor",
+     "prob": 0.15
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false
   }
  ]
 }

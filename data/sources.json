@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T18:27:50.116Z",
+ "updated": "2026-11-04T00:03:14.924Z",
  "impactN": 1000,
  "cards": [
   {
@@ -513,6 +513,47 @@
    }
   },
   {
+   "id": "auto-VOTO_EXTERIOR-rumor",
+   "type": "noticia",
+   "date": "2026-11-03",
+   "title": "El Gobierno respalda que los hijos de los nacionalizados puedan votar y advierte de \"inseguridad\" si se impide",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (Europa Press). Cita: «El Gobierno se ha opuesto a la petición de Vox e Iustitia Europa para que el Tribunal Supremo amplíe la suspensión del voto en las elecciones generales del próximo 29 de noviembre a los hijos de los nacionalizados por la 'ley de nietos'»",
+   "outlet": "Europa Press",
+   "sources": [
+    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "rumor",
+     "prob": 0.15
+    }
+   ],
+   "toggleable": true,
+   "defaultActive": false,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
    "id": "encuesta:SocioMétrica/El Español|2026-11-01",
    "firm": "SocioMétrica/El Español",
    "date": "2026-11-01",
@@ -861,7 +902,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T20:46:08.065Z",
+    "checked": "2026-11-04T00:01:10.513Z",
     "tried": [
      "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
     ]
@@ -1245,7 +1286,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-03T18:26:34.576Z"
+    "checked": "2026-11-04T00:01:15.055Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1291,7 +1332,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T20:46:08.065Z",
+    "checked": "2026-11-04T00:01:10.513Z",
     "tried": [
      "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
     ]
@@ -1340,7 +1381,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-02T20:46:08.065Z",
+    "checked": "2026-11-04T00:01:10.513Z",
     "tried": [
      "X no es un canal abierto"
     ]
