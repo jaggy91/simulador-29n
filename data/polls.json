@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-05T10:52:26.059Z",
+ "fetched": "2026-11-05T18:44:30.092Z",
  "latestPoll": "2026-11-01",
  "sources": {
   "media": {
@@ -14,7 +14,7 @@
     "NC Report/La Razón (2026-10-29)",
     "Sondaxe/La Voz de Galicia (2026-10-28)",
     "Hamalgama Métrica/Vozpópuli (2026-10-28)",
-    "The Objective (2026-10-27)",
+    "Vox/The Objective (2026-10-27)",
     "More in Common (2026-10-25)",
     "Winston/Artículo14 (2026-10-23)",
     "Ateneo del Dato/elDiario.es (2026-10-22)",
@@ -300,8 +300,8 @@
      }
     },
     {
-     "id": "encuesta:The Objective|2026-10-27",
-     "firm": "The Objective",
+     "id": "encuesta:Vox/The Objective|2026-10-27",
+     "firm": "Vox/The Objective",
      "date": "2026-10-27",
      "sample": 1500,
      "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
@@ -320,7 +320,7 @@
       "status": "verificada",
       "channel": "publicación original (theobjective.com)",
       "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-      "checked": "2026-11-01T18:55:21.682Z",
+      "checked": "2026-11-05T18:44:28.864Z",
       "matched": [
        "PP",
        "PSOE",
@@ -515,7 +515,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-05T10:52:26.057Z"
+      "checked": "2026-11-05T18:44:30.047Z"
      }
     }
    ],
@@ -808,7 +808,7 @@
    "uid": "Hamalgama Métrica/Vozpópuli|2026-10-28"
   },
   {
-   "firm": "The Objective",
+   "firm": "Vox/The Objective",
    "date": "2026-10-27",
    "sample": 1500,
    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
@@ -829,7 +829,7 @@
     }
    ],
    "table": "2026 (with Broad Front)",
-   "uid": "The Objective|2026-10-27"
+   "uid": "Vox/The Objective|2026-10-27"
   },
   {
    "firm": "PSOE",
