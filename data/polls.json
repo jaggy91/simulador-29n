@@ -1,12 +1,13 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-05T18:44:30.092Z",
- "latestPoll": "2026-11-01",
+ "fetched": "2026-11-06T00:15:13.251Z",
+ "latestPoll": "2026-11-04",
  "sources": {
   "media": {
    "label": "Media de encuestas",
    "method": "última encuesta por empresa, 21 días, peso recencia (vida media 7 d) × √muestra; sin CIS ni encuestas de partido",
    "polls": [
+    "SW Demoscopia/La Séptima (2026-11-04)",
     "SocioMétrica/El Español (2026-11-01)",
     "Sigma Dos/El Mundo (2026-10-30)",
     "Target Point/El Debate (2026-10-30)",
@@ -22,12 +23,38 @@
    ],
    "items": [
     {
+     "id": "encuesta:SW Demoscopia/La Séptima|2026-11-04",
+     "firm": "SW Demoscopia/La Séptima",
+     "date": "2026-11-04",
+     "sample": 3500,
+     "url": "https://x.com/la_septima_tv/status/2118437907077709868?s=19",
+     "weight": 0.1938,
+     "values": {
+      "PP": 29.1,
+      "PSOE": 29.8,
+      "VOX": 16,
+      "PODEMOS": 1.3,
+      "FA": 4.28,
+      "FV": 0.72
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "no verificada",
+      "channel": null,
+      "url": null,
+      "checked": "2026-11-06T00:15:07.966Z",
+      "tried": [
+       "X no es un canal abierto"
+      ]
+     }
+    },
+    {
      "id": "encuesta:SocioMétrica/El Español|2026-11-01",
      "firm": "SocioMétrica/El Español",
      "date": "2026-11-01",
      "sample": 4893,
      "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html",
-     "weight": 0.1786,
+     "weight": 0.144,
      "values": {
       "PP": 32.7,
       "PSOE": 26.6,
@@ -49,7 +76,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-04T21:19:59.123Z",
+      "checked": "2026-11-06T00:15:07.966Z",
       "tried": [
        "publicación original: faltan PP, FA, PODEMOS"
       ]
@@ -61,7 +88,7 @@
      "date": "2026-10-30",
      "sample": 2505,
      "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-     "weight": 0.1339,
+     "weight": 0.1079,
      "values": {
       "PP": 31.1,
       "PSOE": 24.6,
@@ -126,7 +153,7 @@
      "date": "2026-10-30",
      "sample": 1024,
      "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
-     "weight": 0.0856,
+     "weight": 0.069,
      "values": {
       "PP": 31.8,
       "PSOE": 25.5,
@@ -159,7 +186,7 @@
      "date": "2026-10-30",
      "sample": 1527,
      "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/",
-     "weight": 0.1045,
+     "weight": 0.0843,
      "values": {
       "PP": 31.5,
       "PSOE": 25.8,
@@ -205,7 +232,7 @@
      "date": "2026-10-29",
      "sample": 1000,
      "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
-     "weight": 0.0766,
+     "weight": 0.0618,
      "values": {
       "PP": 33,
       "PSOE": 25.6,
@@ -226,7 +253,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-04T21:19:59.123Z",
+      "checked": "2026-11-06T00:15:07.966Z",
       "tried": [
        "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
       ]
@@ -238,7 +265,7 @@
      "date": "2026-10-28",
      "sample": 1200,
      "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm",
-     "weight": 0.076,
+     "weight": 0.0613,
      "values": {
       "PP": 29.2,
       "PSOE": 26.9,
@@ -272,7 +299,7 @@
      "date": "2026-10-28",
      "sample": 1000,
      "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
-     "weight": 0.0694,
+     "weight": 0.0559,
      "values": {
       "PP": 32.4,
       "PSOE": 26.4,
@@ -293,7 +320,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-04T21:19:59.123Z",
+      "checked": "2026-11-06T00:15:07.966Z",
       "tried": [
        "publicación original: faltan PP, ERC, PODEMOS"
       ]
@@ -305,7 +332,7 @@
      "date": "2026-10-27",
      "sample": 1500,
      "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-     "weight": 0.077,
+     "weight": 0.0621,
      "values": {
       "PP": 28.1,
       "PSOE": 29.6,
@@ -338,7 +365,7 @@
      "date": "2026-10-25",
      "sample": 2210,
      "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
-     "weight": 0.0767,
+     "weight": 0.0618,
      "values": {
       "PP": 28.3,
       "PSOE": 27.6,
@@ -353,7 +380,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-04T21:19:59.123Z",
+      "checked": "2026-11-06T00:15:07.966Z",
       "tried": [
        "publicación original: 403"
       ]
@@ -365,7 +392,7 @@
      "date": "2026-10-23",
      "sample": 1200,
      "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-     "weight": 0.0463,
+     "weight": 0.0374,
      "values": {
       "PP": 29.4,
       "PSOE": 27.1,
@@ -393,7 +420,7 @@
      "date": "2026-10-22",
      "sample": 2000,
      "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-     "weight": 0.0542,
+     "weight": 0.0437,
      "values": {
       "PP": 31.1,
       "PSOE": 27.6,
@@ -424,7 +451,7 @@
      "date": "2026-10-16",
      "sample": 1000,
      "url": "https://www.elconfidencial.com/espana/2026-10-23/encuesta-imop-elecciones-29n-bloque-psoe-frente-amplio_4450302/",
-     "weight": 0.0211,
+     "weight": 0.0171,
      "values": {
       "PP": 28.5,
       "PSOE": 27.1,
@@ -465,11 +492,12 @@
     }
    ],
    "values": {
-    "PP": 31,
-    "PSOE": 26.48,
-    "VOX": 19.56,
-    "FA": 5.96,
-    "FV": 1,
+    "PP": 30.63,
+    "PSOE": 27.13,
+    "VOX": 18.87,
+    "PODEMOS": 1.9,
+    "FA": 5.64,
+    "FV": 0.94,
     "ERC": 2.43,
     "JUNTS": 1.37,
     "BILDU": 1.37,
@@ -477,7 +505,6 @@
     "BNG": 0.92,
     "CC": 0.41,
     "AA": 1.35,
-    "PODEMOS": 2.06,
     "SALF": 2.09
    }
   },
@@ -515,7 +542,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-05T18:44:30.047Z"
+      "checked": "2026-11-06T00:15:13.249Z"
      }
     }
    ],
@@ -619,6 +646,71 @@
  },
  "rows": [
   {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-11-04",
+   "sample": 3500,
+   "url": "https://x.com/la_septima_tv/status/2118437907077709868?s=19",
+   "values": {
+    "PP": 29.1,
+    "PSOE": 29.8,
+    "VOX": 16,
+    "PODEMOS": 1.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-11-04"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-11-03",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 30.6,
+    "PSOE": 27.6,
+    "VOX": 17.1
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-11-03"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-11-02",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 25.1,
+    "PSOE": 28.6,
+    "VOX": 18.5
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-11-02"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-11-01",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 27.7,
+    "PSOE": 23.8,
+    "VOX": 20.2
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-11-01"
+  },
+  {
    "firm": "SocioMétrica/El Español",
    "date": "2026-11-01",
    "sample": 4893,
@@ -642,6 +734,34 @@
    "joint": [],
    "table": "2026 (with Broad Front)",
    "uid": "SocioMétrica/El Español|2026-11-01"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-10-31",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 26.9,
+    "PSOE": 28.9,
+    "VOX": 22.1
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-10-31"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-10-30",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 28.4,
+    "PSOE": 28.9,
+    "VOX": 16.5
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-10-30"
   },
   {
    "firm": "Sigma Dos/El Mundo",
@@ -715,6 +835,20 @@
    "joint": [],
    "table": "2026 (with Broad Front)",
    "uid": "EM-Analytics/Electomanía|2026-10-30"
+  },
+  {
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-10-29",
+   "sample": null,
+   "url": null,
+   "values": {
+    "PP": 33.3,
+    "PSOE": 26.6,
+    "VOX": 18.2
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "SW Demoscopia/La Séptima|2026-10-29"
   },
   {
    "firm": "NC Report/La Razón",
