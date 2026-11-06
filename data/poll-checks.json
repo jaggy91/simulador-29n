@@ -1,13 +1,19 @@
 {
- "SW Demoscopia/La Séptima|2026-11-04": {
-  "status": "no verificada",
-  "channel": null,
-  "url": null,
-  "tried": [
-   "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, SALF, FA+FV"
+ "SW Demoscopia/La Séptima|2026-11-05": {
+  "status": "verificada",
+  "channel": "publicación original (electografica.com)",
+  "url": "https://www.electografica.com/2026/11/encuesta-sw-demoscopia-261106.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "FA+FV"
   ],
-  "hash": "[{\"PP\":28.8,\"PSOE\":30.9,\"VOX\":17,\"ERC\":2.6,\"JUNTS\":1.2,\"BILDU\":1.4,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.4,\"AA\":1.4,\"PODEMOS\":1.2,\"SALF\":2},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.6}]]",
-  "checked": "2026-11-06T15:01:10.059Z"
+  "missing": [],
+  "hash": "[{\"PP\":28.5,\"PSOE\":31,\"VOX\":17.2,\"PODEMOS\":1.2},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.6}]]",
+  "checked": "2026-11-06T20:53:24.091Z"
  },
  "Celeste-Tel/Onda Cero|2026-11-03": {
   "status": "no verificada",
