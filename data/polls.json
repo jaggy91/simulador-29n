@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-06T00:15:13.251Z",
+ "fetched": "2026-11-06T06:48:25.326Z",
  "latestPoll": "2026-11-04",
  "sources": {
   "media": {
@@ -287,7 +287,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-05T02:26:09.202Z",
+      "checked": "2026-11-06T06:48:21.162Z",
       "tried": [
        "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
       ]
@@ -542,7 +542,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-06T00:15:13.249Z"
+      "checked": "2026-11-06T06:48:25.324Z"
      }
     }
    ],
@@ -592,7 +592,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-05T02:26:09.202Z",
+      "checked": "2026-11-06T06:48:21.162Z",
       "tried": [
        "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
       ]
@@ -619,7 +619,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-05T02:26:09.202Z",
+      "checked": "2026-11-06T06:48:21.162Z",
       "tried": [
        "X no es un canal abierto"
       ]

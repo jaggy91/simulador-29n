@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T00:17:56.649Z",
+ "updated": "2026-11-06T06:50:49.728Z",
  "impactN": 1000,
  "cards": [
   {
@@ -164,7 +164,7 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.1,
+     "derecha": 0,
      "pMayoria": 0,
      "senado": 0
     }
@@ -493,48 +493,6 @@
    ],
    "toggleable": true,
    "defaultActive": false,
-   "overriddenBy": "auto-VOTO_EXTERIOR-rumor",
-   "impact": {
-    "media": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "auto-VOTO_EXTERIOR-rumor",
-   "type": "noticia",
-   "date": "2026-11-03",
-   "title": "El Gobierno respalda que los hijos de los nacionalizados puedan votar y advierte de \"inseguridad\" si se impide",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 2 medios (Europa Press, 20minutos). Cita: «El Gobierno se ha opuesto a la petición de Vox e Iustitia Europa para que el Tribunal Supremo amplíe la suspensión del voto en las elecciones generales del próximo 29 de noviembre a los hijos de los nacionalizados por la 'ley de nietos'»",
-   "outlet": "Europa Press / 20minutos",
-   "sources": [
-    "https://www.europapress.es/nacional/noticia-gobierno-respalda-hijos-nacionalizados-puedan-votar-advierte-inseguridad-si-impide-20261103113539.html",
-    "https://www.20minutos.es/nacional/abogacia-estado-se-opone-suspender-voto-los-hijos-nacionalizados-por-ley-nietos_7056812_0.html"
-   ],
-   "verified": false,
-   "captured": "auto",
-   "autoActive": true,
-   "effects": [
-    {
-     "scenario": "VOTO_EXTERIOR",
-     "status": "rumor",
-     "prob": 0.15
-    }
-   ],
-   "toggleable": true,
-   "defaultActive": true,
    "overriddenBy": null,
    "impact": {
     "media": {
@@ -951,7 +909,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-05T02:26:09.202Z",
+    "checked": "2026-11-06T06:48:21.162Z",
     "tried": [
      "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
     ]
@@ -1335,7 +1293,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-06T00:15:13.249Z"
+    "checked": "2026-11-06T06:48:25.324Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1381,7 +1339,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-05T02:26:09.202Z",
+    "checked": "2026-11-06T06:48:21.162Z",
     "tried": [
      "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
     ]
@@ -1430,7 +1388,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-05T02:26:09.202Z",
+    "checked": "2026-11-06T06:48:21.162Z",
     "tried": [
      "X no es un canal abierto"
     ]
