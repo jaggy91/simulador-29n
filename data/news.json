@@ -295,14 +295,14 @@
    "effects": []
   },
   {
-   "id": "auto-VOTO_EXTERIOR-confirmado",
+   "id": "auto-VOTO_EXTERIOR-rumor",
    "type": "noticia",
    "date": "2026-11-03",
-   "title": "El Gobierno advierte de que suspender el voto de los hijos de los nacionalizados por la ‘ley de nietos’ condicionaría el escrutinio del 29-N",
-   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 1 medio (El País). Cita: «Extender la suspensión del derecho al voto a los hijos de los nacionalizados por la ley de nietos pondría en riesgo el cumplimiento de los trámites legales para el 29-N e incluso podría afectar al escrutinio.»",
-   "outlet": "El País",
+   "title": "La Abogacía del Estado se opone a suspender el voto de los hijos de nacionalizados por la 'ley de nietos'",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → rumor, en 1 medio (20minutos). Cita: «Vox e Iustitia Europa han pedido al Supremo que suspenda cautelarmente el derecho al voto de los hijos e hijas de quienes previamente accedieron a la nacionalidad española a través de la conocida como 'ley de nietos' , cuyo derecho al voto se encuentra actualmente suspendido por decisión del alto tribunal.»",
+   "outlet": "20minutos",
    "sources": [
-    "https://elpais.com/espana/elecciones-generales/2026-11-03/el-gobierno-advierte-de-que-suspender-el-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos-condicionaria-el-escrutinio-del-29-n.html"
+    "https://www.20minutos.es/nacional/abogacia-estado-se-opone-suspender-voto-los-hijos-nacionalizados-por-ley-nietos_7056812_0.html"
    ],
    "verified": false,
    "captured": "auto",
@@ -310,8 +310,8 @@
    "effects": [
     {
      "scenario": "VOTO_EXTERIOR",
-     "status": "confirmado",
-     "prob": 1
+     "status": "rumor",
+     "prob": 0.15
     }
    ]
   }

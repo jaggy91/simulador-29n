@@ -1,5 +1,418 @@
 [
  {
+  "uid": "SW Demoscopia/La Séptima|2026-11-04",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-11-04",
+  "kind": "cambio",
+  "before": {
+   "values": {
+    "PP": 29.1,
+    "PSOE": 29.8,
+    "VOX": 16,
+    "PODEMOS": 1.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "sample": 3500
+  },
+  "after": {
+   "values": {
+    "PP": 28.8,
+    "PSOE": 30.9,
+    "VOX": 17,
+    "ERC": 2.6,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.4,
+    "PODEMOS": 1.2,
+    "SALF": 2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "sample": 3500
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-11-03",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-11-03",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 30.6,
+    "PSOE": 27.6,
+    "VOX": 17.1
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-11-02",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-11-02",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 25.1,
+    "PSOE": 28.6,
+    "VOX": 18.5
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-11-01",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-11-01",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 27.7,
+    "PSOE": 23.8,
+    "VOX": 20.2
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-10-31",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-10-31",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 26.9,
+    "PSOE": 28.9,
+    "VOX": 22.1
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-10-30",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-10-30",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 28.4,
+    "PSOE": 28.9,
+    "VOX": 16.5
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
+  "uid": "SW Demoscopia/La Séptima|2026-10-29",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-10-29",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 33.3,
+    "PSOE": 26.6,
+    "VOX": 18.2
+   },
+   "joint": [],
+   "sample": null
+  },
+  "detected": "2026-11-06T15:01:13.183Z",
+  "since": "2026-11-06T06:48:25.326Z",
+  "revisions": [
+   {
+    "at": "2026-11-06T14:46:19Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T14:43:01Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Remove Electográfica's source as it does not yet account for the updated full report"
+   },
+   {
+    "at": "2026-11-06T14:25:39Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-06T13:25:10Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:23:11Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-06T13:14:07Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ La Séptima just uploaded this. It looks like, indeed, the daily numbers (including the PSOE 29,8%-PP 29,1%-etc. figures) corresponded *just* to the 300 daily interviews (page 8); the seat projection is calculated over a sample size starting on 26 October and ending on 4 November. It also provides further data on Leadership figures and Preferred gov. All daily 300-sample daily figures are obviously definitively excluded now"
+   },
+   {
+    "at": "2026-11-06T12:02:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */ Checked some info online, it looks like these daily figures could correspond *just* to the 300 daily tracking polls rather than unique daily estimations calculated from an average of several days (which is what past precedent allows). Only the seat projection here would have a 3,500 sample size. This would explain the sudden daily variations and why % did not exactly align with seats. I'm leaving the seat projection while removing the % figures until further updates"
+   }
+  ]
+ },
+ {
   "uid": "The Objective|2026-10-27",
   "firm": "The Objective",
   "date": "2026-10-27",
