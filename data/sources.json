@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T18:48:41.606Z",
+ "updated": "2026-11-07T22:46:14.447Z",
  "impactN": 1000,
  "cards": [
   {
@@ -1332,7 +1332,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-07T18:46:16.096Z"
+    "checked": "2026-11-07T22:44:21.667Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
