@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-06T20:55:50.363Z",
+ "updated": "2026-11-07T00:59:41.343Z",
  "latestPoll": "2026-11-05",
  "n": 2000,
  "base": {
   "media": {
    "derecha": 193,
-   "investidura": 150,
+   "investidura": 149,
    "senado": 159
   },
   "cisOficial": {
@@ -23,7 +23,7 @@
   "media": {
    "base": {
     "derecha": 193,
-    "investidura": 150,
+    "investidura": 149,
     "senado": 159
    },
    "error2023": {
@@ -39,7 +39,7 @@
     "senado": 84
    },
    "error2023": {
-    "derecha": 140,
+    "derecha": 139,
     "investidura": 206,
     "senado": 73
    }
@@ -51,7 +51,7 @@
     "senado": 140
    },
    "error2023": {
-    "derecha": 172,
+    "derecha": 171,
     "investidura": 173,
     "senado": 116
    }
@@ -78,8 +78,8 @@
       },
       "cis": {
        "derecha": 186,
-       "investidura": 157,
-       "senado": 143
+       "investidura": 156,
+       "senado": 144
       }
      }
     },
@@ -115,7 +115,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 159
       },
       "cisOficial": {
@@ -135,7 +135,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 159
       },
       "cisOficial": {
@@ -162,7 +162,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 159
       },
       "cisOficial": {
@@ -189,7 +189,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 164
       },
       "cisOficial": {
@@ -216,7 +216,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 159
       },
       "cisOficial": {
@@ -243,7 +243,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 157
       },
       "cisOficial": {
@@ -270,7 +270,7 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
+       "investidura": 149,
        "senado": 157
       },
       "cisOficial": {
@@ -557,7 +557,7 @@
      {
       "turnout": 0.15,
       "votes": 24453,
-      "derecha": -2,
+      "derecha": -1,
       "senado": 0
      },
      {
@@ -597,18 +597,18 @@
  },
  "noise": {
   "media": {
-   "historico": 0.96,
-   "video": 0.991,
-   "conCC": 0.9675
+   "historico": 0.9565,
+   "video": 0.9915,
+   "conCC": 0.9665
   },
   "cisOficial": {
-   "historico": 0.0445,
-   "video": 0.014,
-   "conCC": 0.0485
+   "historico": 0.044,
+   "video": 0.0135,
+   "conCC": 0.047
   },
   "cis": {
-   "historico": 0.729,
-   "video": 0.7995,
+   "historico": 0.7295,
+   "video": 0.7965,
    "conCC": 0.7585
   }
  }

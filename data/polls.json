@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-06T20:53:25.410Z",
+ "fetched": "2026-11-07T00:56:14.981Z",
  "latestPoll": "2026-11-05",
  "sources": {
   "media": {
@@ -27,31 +27,50 @@
      "id": "encuesta:SW Demoscopia/La Séptima|2026-11-05",
      "firm": "SW Demoscopia/La Séptima",
      "date": "2026-11-05",
-     "sample": 3500,
-     "url": "https://www.electografica.com/2026/11/encuesta-sw-demoscopia-261106.html",
+     "sample": 4000,
+     "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQGg7xbSrdGpkg/feedshare-document-pdf-analyzed/B4EaGw8W1yIgAc-/0/1793969976552?e=1795046400&v=beta&t=8IpctmM2_0m4UDTAj-75v3nzr5JpthVu4MZSqSdDO0I",
      "weight": 0.19,
      "values": {
       "PP": 28.5,
       "PSOE": 31,
       "VOX": 17.2,
+      "ERC": 2.6,
+      "JUNTS": 1.2,
+      "BILDU": 1.3,
+      "PNV": 0.8,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1.5,
       "PODEMOS": 1.2,
+      "SALF": 2,
       "FA": 6.5,
       "FV": 1.1
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
-      "status": "verificada",
-      "channel": "publicación original (electografica.com)",
-      "url": "https://www.electografica.com/2026/11/encuesta-sw-demoscopia-261106.html",
-      "checked": "2026-11-06T20:53:24.091Z",
-      "matched": [
-       "PP",
-       "PSOE",
-       "VOX",
-       "PODEMOS",
-       "FA+FV"
-      ],
-      "missing": []
+      "status": "no verificada",
+      "channel": null,
+      "url": null,
+      "checked": "2026-11-07T00:56:07.421Z",
+      "tried": [
+       "publicación original: faltan PP, PSOE, VOX, JUNTS, BILDU, AA, PODEMOS"
+      ]
+     },
+     "edited": {
+      "detected": "2026-11-07T00:56:14.979Z",
+      "change": "ERC —→2.6, JUNTS —→1.2, BILDU —→1.3, PNV —→0.8, BNG —→0.9, CC —→0.4, AA —→1.5, SALF —→2, muestra 3500→4000",
+      "revisions": [
+       {
+        "at": "2026-11-06T21:58:14Z",
+        "user": "Impru20",
+        "comment": "/* Preferred government */"
+       },
+       {
+        "at": "2026-11-06T21:56:25Z",
+        "user": "Impru20",
+        "comment": "/* 2026 (with Broad Front) */"
+       }
+      ]
      }
     },
     {
@@ -116,7 +135,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-06T00:15:07.966Z",
+      "checked": "2026-11-07T00:56:07.421Z",
       "tried": [
        "publicación original: faltan PP, FA, PODEMOS"
       ]
@@ -293,7 +312,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-06T00:15:07.966Z",
+      "checked": "2026-11-07T00:56:07.421Z",
       "tried": [
        "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
       ]
@@ -360,7 +379,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-06T00:15:07.966Z",
+      "checked": "2026-11-07T00:56:07.421Z",
       "tried": [
        "publicación original: faltan PP, ERC, PODEMOS"
       ]
@@ -420,7 +439,7 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-06T00:15:07.966Z",
+      "checked": "2026-11-07T00:56:07.421Z",
       "tried": [
        "publicación original: 403"
       ]
@@ -535,17 +554,17 @@
     "PP": 30.6,
     "PSOE": 27.27,
     "VOX": 19.08,
-    "PODEMOS": 1.87,
-    "FA": 6.14,
-    "FV": 1.04,
-    "ERC": 2.4,
-    "JUNTS": 1.39,
-    "BILDU": 1.37,
-    "PNV": 0.88,
+    "ERC": 2.45,
+    "JUNTS": 1.34,
+    "BILDU": 1.35,
+    "PNV": 0.86,
     "BNG": 0.9,
     "CC": 0.42,
-    "AA": 1.32,
-    "SALF": 2.01
+    "AA": 1.37,
+    "PODEMOS": 1.87,
+    "SALF": 2.01,
+    "FA": 6.14,
+    "FV": 1.04
    }
   },
   "cisOficial": {
@@ -582,12 +601,12 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-06T20:53:25.408Z"
+      "checked": "2026-11-07T00:56:14.828Z"
      }
     }
    ],
    "values": {
-    "AA": 1.32,
+    "AA": 1.37,
     "PSOE": 34,
     "PP": 22.3,
     "VOX": 17.1,
@@ -667,13 +686,13 @@
     }
    ],
    "values": {
-    "ERC": 2.4,
-    "JUNTS": 1.39,
-    "BILDU": 1.37,
-    "PNV": 0.88,
+    "ERC": 2.45,
+    "JUNTS": 1.34,
+    "BILDU": 1.35,
+    "PNV": 0.86,
     "BNG": 0.9,
     "CC": 0.42,
-    "AA": 1.32,
+    "AA": 1.37,
     "PP": 28.15,
     "PSOE": 28.3,
     "VOX": 17.65,
@@ -688,13 +707,21 @@
   {
    "firm": "SW Demoscopia/La Séptima",
    "date": "2026-11-05",
-   "sample": 3500,
-   "url": "https://www.electografica.com/2026/11/encuesta-sw-demoscopia-261106.html",
+   "sample": 4000,
+   "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQGg7xbSrdGpkg/feedshare-document-pdf-analyzed/B4EaGw8W1yIgAc-/0/1793969976552?e=1795046400&v=beta&t=8IpctmM2_0m4UDTAj-75v3nzr5JpthVu4MZSqSdDO0I",
    "values": {
     "PP": 28.5,
     "PSOE": 31,
     "VOX": 17.2,
-    "PODEMOS": 1.2
+    "ERC": 2.6,
+    "JUNTS": 1.2,
+    "BILDU": 1.3,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.5,
+    "PODEMOS": 1.2,
+    "SALF": 2
    },
    "joint": [
     {
