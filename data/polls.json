@@ -1,6 +1,6 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-07T13:59:36.999Z",
+ "fetched": "2026-11-07T18:46:16.098Z",
  "latestPoll": "2026-11-05",
  "sources": {
   "media": {
@@ -101,9 +101,9 @@
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-06T15:01:10.059Z",
+      "checked": "2026-11-07T18:46:14.976Z",
       "tried": [
-       "publicación original: 429"
+       "publicación original: faltan PP, FA, SALF"
       ]
      }
     },
@@ -601,7 +601,7 @@
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-07T13:59:36.997Z"
+      "checked": "2026-11-07T18:46:16.096Z"
      }
     }
    ],

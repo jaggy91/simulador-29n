@@ -14,10 +14,10 @@
   "channel": null,
   "url": null,
   "tried": [
-   "publicación original: 429"
+   "publicación original: faltan PP, FA, SALF"
   ],
   "hash": "[{\"PP\":31.8,\"PSOE\":25.7,\"VOX\":19.2,\"FA\":6.8,\"FV\":1.2,\"ERC\":2.2,\"JUNTS\":1.5,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.5,\"AA\":1.2,\"PODEMOS\":1.9,\"SALF\":1.6},[]]",
-  "checked": "2026-11-06T15:01:10.059Z"
+  "checked": "2026-11-07T18:46:14.976Z"
  },
  "SocioMétrica/El Español|2026-11-01": {
   "status": "no verificada",
