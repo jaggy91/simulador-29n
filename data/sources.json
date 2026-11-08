@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T02:30:41.504Z",
+ "updated": "2026-11-08T10:19:22.071Z",
  "impactN": 1000,
  "cards": [
   {
@@ -948,7 +948,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-07T07:08:00.550Z",
+    "checked": "2026-11-08T10:16:53.243Z",
     "tried": [
      "publicación original: faltan ERC, JUNTS, BILDU, AA, PODEMOS, SALF"
     ]
@@ -1332,7 +1332,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-08T02:28:46.533Z"
+    "checked": "2026-11-08T10:16:56.684Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1378,7 +1378,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-07T07:08:00.550Z",
+    "checked": "2026-11-08T10:16:53.243Z",
     "tried": [
      "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
     ]
@@ -1427,7 +1427,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-07T07:08:00.550Z",
+    "checked": "2026-11-08T10:16:53.243Z",
     "tried": [
      "X no es un canal abierto"
     ]
