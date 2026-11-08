@@ -54,6 +54,22 @@
   "hash": "[{\"PP\":28.8,\"PSOE\":30.8,\"VOX\":17.2,\"ERC\":2.5,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.4,\"AA\":1.5,\"PODEMOS\":1.8,\"SALF\":2.1},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.7}]]",
   "checked": "2026-11-08T16:42:27.535Z"
  },
+ "Ateneo del Dato/elDiario.es|2026-11-05": {
+  "status": "verificada",
+  "channel": "datos de gráficos de la publicación original (eldiario.es)",
+  "url": "https://www.eldiario.es/politica/psoe-crece-dimision-oscar-puente-pp-vox-mantienen-mayoria-absoluta_1_13643551.html",
+  "ok": true,
+  "matched": [
+   "PP",
+   "PSOE",
+   "VOX",
+   "PODEMOS",
+   "FA+FV"
+  ],
+  "missing": [],
+  "hash": "[{\"PP\":31.5,\"PSOE\":28.6,\"VOX\":18.6,\"PODEMOS\":1.5},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.1}]]",
+  "checked": "2026-11-08T21:09:20.193Z"
+ },
  "Sondaxe/La Voz de Galicia|2026-11-04": {
   "status": "no verificada",
   "channel": null,
@@ -72,7 +88,7 @@
    "publicación original: faltan PP, FA, SALF"
   ],
   "hash": "[{\"PP\":31.8,\"PSOE\":25.7,\"VOX\":19.2,\"FA\":6.8,\"FV\":1.2,\"ERC\":2.2,\"JUNTS\":1.5,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.5,\"AA\":1.2,\"PODEMOS\":1.9,\"SALF\":1.6},[]]",
-  "checked": "2026-11-07T18:46:14.976Z"
+  "checked": "2026-11-08T21:09:20.193Z"
  },
  "SocioMétrica/El Español|2026-11-01": {
   "status": "no verificada",
@@ -183,22 +199,6 @@
   ],
   "missing": [],
   "hash": "[{\"PP\":29.4,\"PSOE\":27.1,\"VOX\":19.2,\"FA\":5.6},[]]",
-  "checked": "2026-10-30T05:04:39.353Z"
- },
- "Ateneo del Dato/elDiario.es|2026-10-22": {
-  "status": "verificada",
-  "channel": "publicación original (eldiario.es)",
-  "url": "https://www.eldiario.es/politica/bloque-izquierdas-recorta-distancias-pp-vox-mantienen-mayoria-absoluta_1_13611052.html",
-  "ok": true,
-  "matched": [
-   "PP",
-   "PSOE",
-   "VOX",
-   "PODEMOS",
-   "FA+FV"
-  ],
-  "missing": [],
-  "hash": "[{\"PP\":31.1,\"PSOE\":27.6,\"VOX\":19.8,\"PODEMOS\":2.7},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.8}]]",
   "checked": "2026-10-30T05:04:39.353Z"
  },
  "CIS (Opina 360)|2026-10-06": {
