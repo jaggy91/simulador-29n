@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-08T10:21:10.636Z",
- "latestPoll": "2026-11-05",
+ "updated": "2026-11-08T16:46:47.553Z",
+ "latestPoll": "2026-11-06",
  "n": 2000,
  "base": {
   "media": {
-   "derecha": 193,
-   "investidura": 149,
-   "senado": 159
+   "derecha": 194,
+   "investidura": 148,
+   "senado": 160
   },
   "cisOficial": {
    "derecha": 155,
@@ -14,7 +14,7 @@
    "senado": 84
   },
   "cis": {
-   "derecha": 187,
+   "derecha": 186,
    "investidura": 156,
    "senado": 140
   }
@@ -22,14 +22,14 @@
  "stress": {
   "media": {
    "base": {
-    "derecha": 193,
-    "investidura": 149,
-    "senado": 159
+    "derecha": 194,
+    "investidura": 148,
+    "senado": 160
    },
    "error2023": {
-    "derecha": 185,
-    "investidura": 160,
-    "senado": 136
+    "derecha": 187,
+    "investidura": 159,
+    "senado": 137
    }
   },
   "cisOficial": {
@@ -46,13 +46,13 @@
   },
   "cis": {
    "base": {
-    "derecha": 187,
+    "derecha": 186,
     "investidura": 156,
     "senado": 140
    },
    "error2023": {
-    "derecha": 171,
-    "investidura": 173,
+    "derecha": 170,
+    "investidura": 174,
     "senado": 116
    }
   }
@@ -67,9 +67,9 @@
      "value": 0.5,
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 160
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -88,16 +88,16 @@
      "result": {
       "media": {
        "derecha": 193,
-       "investidura": 150,
-       "senado": 160
+       "investidura": 149,
+       "senado": 159
       },
       "cisOficial": {
-       "derecha": 154,
-       "investidura": 189,
-       "senado": 82
+       "derecha": 155,
+       "investidura": 188,
+       "senado": 84
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 140
       }
@@ -114,9 +114,9 @@
      "value": 0,
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 159
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 160
       },
       "cisOficial": {
        "derecha": 155,
@@ -124,7 +124,7 @@
        "senado": 84
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 140
       }
@@ -134,9 +134,9 @@
      "value": 1,
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 159
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 160
       },
       "cisOficial": {
        "derecha": 155,
@@ -144,7 +144,7 @@
        "senado": 84
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 140
       }
@@ -161,9 +161,9 @@
      "value": "proporcional",
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 159
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 160
       },
       "cisOficial": {
        "derecha": 150,
@@ -171,7 +171,7 @@
        "senado": 80
       },
       "cis": {
-       "derecha": 185,
+       "derecha": 184,
        "investidura": 155,
        "senado": 140
       }
@@ -188,8 +188,8 @@
      "value": "abstencion",
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
+       "derecha": 194,
+       "investidura": 148,
        "senado": 164
       },
       "cisOficial": {
@@ -198,7 +198,7 @@
        "senado": 88
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 148
       }
@@ -215,9 +215,9 @@
      "value": 0,
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 159
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 160
       },
       "cisOficial": {
        "derecha": 155,
@@ -225,7 +225,7 @@
        "senado": 78
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 136
       }
@@ -242,9 +242,9 @@
      "value": "100 %",
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 157
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 159
       },
       "cisOficial": {
        "derecha": 155,
@@ -252,9 +252,9 @@
        "senado": 80
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
-       "senado": 141
+       "senado": 140
       }
      }
     }
@@ -269,9 +269,9 @@
      "value": "las 60",
      "result": {
       "media": {
-       "derecha": 193,
-       "investidura": 149,
-       "senado": 157
+       "derecha": 194,
+       "investidura": 148,
+       "senado": 158
       },
       "cisOficial": {
        "derecha": 155,
@@ -279,7 +279,7 @@
        "senado": 84
       },
       "cis": {
-       "derecha": 187,
+       "derecha": 186,
        "investidura": 156,
        "senado": 138
       }
@@ -336,42 +336,42 @@
      {
       "turnout": 0.6,
       "votes": 97812,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      }
     ],
-    "firstMove": null
+    "firstMove": 0.6
    },
    "todoPSOE": {
     "at": [
      {
       "turnout": 0.0887,
       "votes": 14460,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.15,
       "votes": 24453,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.25,
       "votes": 40755,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
@@ -383,7 +383,7 @@
      {
       "turnout": 0.6,
       "votes": 97812,
-      "derecha": -1,
+      "derecha": -2,
       "senado": 0
      },
      {
@@ -395,11 +395,11 @@
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": -2,
+      "derecha": -3,
       "senado": 0
      }
     ],
-    "firstMove": 0.4
+    "firstMove": 0.0887
    }
   },
   "cisOficial": {
@@ -491,7 +491,7 @@
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": -2,
+      "derecha": -1,
       "senado": 0
      }
     ],
@@ -557,7 +557,7 @@
      {
       "turnout": 0.15,
       "votes": 24453,
-      "derecha": -1,
+      "derecha": 0,
       "senado": 0
      },
      {
@@ -591,25 +591,25 @@
       "senado": 0
      }
     ],
-    "firstMove": 0.15
+    "firstMove": 0.25
    }
   }
  },
  "noise": {
   "media": {
-   "historico": 0.9565,
-   "video": 0.9915,
-   "conCC": 0.9665
+   "historico": 0.9555,
+   "video": 0.992,
+   "conCC": 0.966
   },
   "cisOficial": {
    "historico": 0.044,
-   "video": 0.0135,
-   "conCC": 0.047
+   "video": 0.0125,
+   "conCC": 0.0465
   },
   "cis": {
-   "historico": 0.7295,
-   "video": 0.7965,
-   "conCC": 0.7585
+   "historico": 0.7225,
+   "video": 0.786,
+   "conCC": 0.7545
   }
  }
 }
