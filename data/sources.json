@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T21:10:47.273Z",
+ "updated": "2026-11-09T00:55:58.196Z",
  "impactN": 1000,
  "cards": [
   {
@@ -114,7 +114,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": -7
+     "senado": -6
     },
     "cisOficial": {
      "derecha": 0,
@@ -241,7 +241,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 17
+     "senado": 16
     },
     "cisOficial": {
      "derecha": 0,
@@ -292,7 +292,7 @@
     "media": {
      "derecha": 0,
      "pMayoria": 0,
-     "senado": 1
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -472,12 +472,164 @@
    "impact": null
   },
   {
+   "id": "encuesta:40dB/Prisa|2026-11-09",
+   "firm": "40dB/Prisa",
+   "date": "2026-11-09",
+   "sample": null,
+   "url": "https://elpais.com/hemeroteca/portadas-papel/el-pais/2026-11-09/",
+   "weight": 0.0881,
+   "values": {
+    "PP": 31.9,
+    "PSOE": 29.9,
+    "VOX": 18,
+    "PODEMOS": 1.2,
+    "FA": 4.25,
+    "FV": 0.75
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-09T00:53:12.711Z",
+    "tried": [
+     "publicación original: faltan PP, PSOE, VOX, PODEMOS, FA+FV",
+     "RSS de elpais.com: el artículo ya no está en el feed"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -0.3,
+     "pMayoria": -0.004,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:SocioMétrica/El Español|2026-11-08",
+   "firm": "SocioMétrica/El Español",
+   "date": "2026-11-08",
+   "sample": 5460,
+   "url": "https://www.elespanol.com/espana/politica/20261108/pp-vox-suman-escanos-sanchez-recupera-perdio-urda-dimision-puente-sondeo-noche/1003744450645_0.html",
+   "weight": 0.1382,
+   "values": {
+    "PP": 32.3,
+    "PSOE": 27.7,
+    "VOX": 18.9,
+    "FA": 5,
+    "FV": 0.9,
+    "ERC": 2.4,
+    "JUNTS": 1.4,
+    "BILDU": 1.6,
+    "PNV": 0.8,
+    "BNG": 1,
+    "CC": 0.5,
+    "AA": 1.7,
+    "PODEMOS": 1.2,
+    "SALF": 2.2
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-09T00:53:12.711Z",
+    "tried": [
+     "publicación original: faltan PP, FA"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.3,
+     "pMayoria": 0.002,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": -0.1,
+     "pMayoria": -0.001,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": -0.2,
+     "pMayoria": -0.001,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:SW Demoscopia/La Séptima|2026-11-07",
+   "firm": "SW Demoscopia/La Séptima",
+   "date": "2026-11-07",
+   "sample": null,
+   "url": "https://x.com/la_septima_tv/status/2119526756952494143",
+   "weight": 0.0723,
+   "values": {
+    "PP": 28.7,
+    "PSOE": 31,
+    "VOX": 17.3,
+    "FA": 6.46,
+    "FV": 1.14
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-09T00:53:12.711Z",
+    "tried": [
+     "X no es un canal abierto"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": -1.5,
+     "pMayoria": -0.006,
+     "senado": -1
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    }
+   }
+  },
+  {
    "id": "encuesta:IMOP/El Confidencial|2026-11-06",
    "firm": "IMOP/El Confidencial",
    "date": "2026-11-06",
    "sample": 1000,
    "url": "https://www.elconfidencial.com/espana/2026-11-08/derecha-recupera-seis-escanos-izquierda-castigo-psoe-urda-cbtr_4460900/",
-   "weight": 0.0873,
+   "weight": 0.0655,
    "values": {
     "PP": 29.8,
     "PSOE": 25.9,
@@ -523,8 +675,8 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
-     "pMayoria": -0.006,
+     "derecha": -0.2,
+     "pMayoria": -0.001,
      "senado": 0
     },
     "cisOficial": {
@@ -533,8 +685,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.3,
-     "pMayoria": -0.013,
+     "derecha": -0.2,
+     "pMayoria": -0.002,
      "senado": 0
     }
    }
@@ -545,7 +697,7 @@
    "date": "2026-11-06",
    "sample": 1860,
    "url": "https://electomania.es/electopanel-8-nov-el-bipartidismo-cede-terreno-vox-sube-en-escanos-y-eh-bildu-se-distancia-del-pnv/",
-   "weight": 0.1191,
+   "weight": 0.0893,
    "values": {
     "PP": 31.1,
     "PSOE": 25.3,
@@ -590,53 +742,52 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 1.1,
-     "pMayoria": 0.01,
-     "senado": 1
+     "derecha": 0.8,
+     "pMayoria": 0.007,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0.1,
-     "pMayoria": 0.001,
+     "pMayoria": 0,
      "senado": 0
     },
     "cis": {
-     "derecha": 0.4,
-     "pMayoria": 0.009,
+     "derecha": 0.5,
+     "pMayoria": 0.02,
      "senado": 0
     }
    }
   },
   {
-   "id": "encuesta:SW Demoscopia/La Séptima|2026-11-06",
-   "firm": "SW Demoscopia/La Séptima",
+   "id": "encuesta:Sigma Dos/El Mundo|2026-11-06",
+   "firm": "Sigma Dos/El Mundo",
    "date": "2026-11-06",
-   "sample": 4500,
-   "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQFZ9M82yro8Iw/feedshare-document-pdf-analyzed/B4EaG33yQBJgAY-/0/1794086218465?e=1795046400&v=beta&t=uNJl1bSK3Zmv5CVdrgdgbmkjbm9Bt4Fz_MHtKH6S8dw",
-   "weight": 0.1512,
+   "sample": 4172,
+   "url": "https://www.elmundo.es/espana/encuestas/2026/11/08/6af066bee85eceae5a8b4598.html",
+   "weight": 0.1134,
    "values": {
-    "PP": 28.8,
-    "PSOE": 30.8,
-    "VOX": 17.2,
-    "ERC": 2.5,
+    "PP": 31,
+    "PSOE": 25.2,
+    "VOX": 19.4,
+    "FA": 6.9,
+    "FV": 1.2,
+    "ERC": 2.9,
     "JUNTS": 1.2,
     "BILDU": 1.3,
-    "PNV": 0.8,
-    "BNG": 0.9,
+    "PNV": 0.9,
+    "BNG": 1,
     "CC": 0.4,
-    "AA": 1.5,
-    "PODEMOS": 1.8,
-    "SALF": 2.1,
-    "FA": 6.54,
-    "FV": 1.16
+    "AA": 1.6,
+    "PODEMOS": 1.6
    },
    "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
    "check": {
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-08T16:42:27.535Z",
+    "checked": "2026-11-09T00:53:12.711Z",
     "tried": [
-     "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, SALF, FA+FV"
+     "publicación original: faltan FV, ERC, JUNTS, BILDU, BNG, AA, PODEMOS"
     ]
    },
    "type": "encuesta",
@@ -646,9 +797,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -3.1,
-     "pMayoria": -0.026,
-     "senado": -2
+     "derecha": 0.4,
+     "pMayoria": 0,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -656,8 +807,55 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0.2,
-     "pMayoria": 0.006,
+     "derecha": -0.1,
+     "pMayoria": 0.001,
+     "senado": 0
+    }
+   }
+  },
+  {
+   "id": "encuesta:GAD3/ABC|2026-11-05",
+   "firm": "GAD3/ABC",
+   "date": "2026-11-05",
+   "sample": 1502,
+   "url": "https://x.com/abc_es/status/2119566963483750605",
+   "weight": 0.0727,
+   "values": {
+    "PP": 31.9,
+    "PSOE": 25.9,
+    "VOX": 18.6,
+    "FA": 6.37,
+    "FV": 1.13
+   },
+   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+   "check": {
+    "status": "no verificada",
+    "channel": null,
+    "url": null,
+    "checked": "2026-11-09T00:53:12.711Z",
+    "tried": [
+     "X no es un canal abierto"
+    ]
+   },
+   "type": "encuesta",
+   "source": "media",
+   "toggleable": true,
+   "defaultActive": true,
+   "overriddenBy": null,
+   "impact": {
+    "media": {
+     "derecha": 0.3,
+     "pMayoria": 0.002,
+     "senado": 0
+    },
+    "cisOficial": {
+     "derecha": 0,
+     "pMayoria": 0,
+     "senado": 0
+    },
+    "cis": {
+     "derecha": 0,
+     "pMayoria": 0,
      "senado": 0
     }
    }
@@ -668,7 +866,7 @@
    "date": "2026-11-05",
    "sample": 2000,
    "url": "https://www.eldiario.es/politica/psoe-crece-dimision-oscar-puente-pp-vox-mantienen-mayoria-absoluta_1_13643551.html",
-   "weight": 0.1118,
+   "weight": 0.0838,
    "values": {
     "PP": 31.5,
     "PSOE": 28.6,
@@ -699,7 +897,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.1,
+     "derecha": -0.2,
      "pMayoria": -0.001,
      "senado": 0
     },
@@ -721,7 +919,7 @@
    "date": "2026-11-04",
    "sample": 1200,
    "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/06/feijoo-adelanta-pedro-sanchez-candidato-preferido-gobernar/00031793992905957222982.htm",
-   "weight": 0.0785,
+   "weight": 0.0588,
    "values": {
     "PP": 29.7,
     "PSOE": 27.3,
@@ -755,9 +953,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.7,
-     "pMayoria": -0.01,
-     "senado": -1
+     "derecha": -0.6,
+     "pMayoria": -0.003,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": -0.1,
@@ -765,8 +963,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": -0.3,
-     "pMayoria": -0.01,
+     "derecha": -0.2,
+     "pMayoria": -0.007,
      "senado": 0
     }
    }
@@ -777,7 +975,7 @@
    "date": "2026-11-03",
    "sample": 1100,
    "url": "https://www.ondacero.es/elecciones/generales/encuestas-vox-lograrian-absolutisima-segun-celeste-tel_202611066aedd355ea8d8979977bbe63.html",
-   "weight": 0.068,
+   "weight": 0.051,
    "values": {
     "PP": 31.8,
     "PSOE": 25.7,
@@ -812,8 +1010,8 @@
    "impact": {
     "media": {
      "derecha": 0.4,
-     "pMayoria": 0.001,
-     "senado": 1
+     "pMayoria": 0.004,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -821,151 +1019,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:SocioMétrica/El Español|2026-11-01",
-   "firm": "SocioMétrica/El Español",
-   "date": "2026-11-01",
-   "sample": 4893,
-   "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html",
-   "weight": 0.0922,
-   "values": {
-    "PP": 32.7,
-    "PSOE": 26.6,
-    "VOX": 19.1,
-    "FA": 5.2,
-    "FV": 0.9,
-    "ERC": 2.5,
-    "JUNTS": 1.4,
-    "BILDU": 1.4,
-    "PNV": 0.8,
-    "BNG": 0.9,
-    "CC": 0.5,
-    "AA": 1.4,
-    "PODEMOS": 1.7,
-    "SALF": 2.5
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "no verificada",
-    "channel": null,
-    "url": null,
-    "checked": "2026-11-08T02:28:39.275Z",
-    "tried": [
-     "publicación original: faltan PP, FA, PODEMOS"
-    ]
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.8,
-     "pMayoria": 0.007,
-     "senado": 1
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": 0,
-     "pMayoria": -0.001,
-     "senado": 0
-    }
-   }
-  },
-  {
-   "id": "encuesta:Sigma Dos/El Mundo|2026-10-30",
-   "firm": "Sigma Dos/El Mundo",
-   "date": "2026-10-30",
-   "sample": 2505,
-   "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-   "weight": 0.0691,
-   "values": {
-    "PP": 31.1,
-    "PSOE": 24.6,
-    "VOX": 19.3,
-    "FA": 7.5,
-    "FV": 0.9,
-    "ERC": 3,
-    "JUNTS": 1.1,
-    "BILDU": 1.3,
-    "PNV": 0.9,
-    "BNG": 1,
-    "CC": 0.4,
-    "AA": 1.4,
-    "PODEMOS": 1.9
-   },
-   "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-   "check": {
-    "status": "verificada",
-    "channel": "datos de gráficos de la publicación original (elmundo.es)",
-    "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-    "checked": "2026-11-02T20:46:08.065Z",
-    "matched": [
-     "PP",
-     "PSOE",
-     "VOX",
-     "ERC",
-     "JUNTS",
-     "AA",
-     "PODEMOS"
-    ],
-    "missing": [
-     "FA",
-     "BILDU",
-     "BNG"
-    ]
-   },
-   "edited": {
-    "detected": "2026-11-02T20:46:14.061Z",
-    "change": "FA 7.1→7.5",
-    "revisions": [
-     {
-      "at": "2026-11-02T17:20:27Z",
-      "user": "Impru20",
-      "comment": "/* 2026 (with Broad Front) */"
-     },
-     {
-      "at": "2026-11-02T15:26:26Z",
-      "user": "Blue-Haired Lawyer",
-      "comment": "/* 2026 (with Broad Front) */ template syntax fix"
-     },
-     {
-      "at": "2026-11-02T13:51:45Z",
-      "user": "Impru20",
-      "comment": "/* 2026 (with Broad Front) */"
-     }
-    ]
-   },
-   "type": "encuesta",
-   "source": "media",
-   "toggleable": true,
-   "defaultActive": true,
-   "overriddenBy": null,
-   "impact": {
-    "media": {
-     "derecha": 0.3,
-     "pMayoria": 0.001,
-     "senado": 1
-    },
-    "cisOficial": {
-     "derecha": 0,
-     "pMayoria": 0,
-     "senado": 0
-    },
-    "cis": {
-     "derecha": -0.1,
-     "pMayoria": -0.003,
+     "derecha": 0.2,
+     "pMayoria": 0.006,
      "senado": 0
     }
    }
@@ -976,7 +1031,7 @@
    "date": "2026-10-30",
    "sample": 1024,
    "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
-   "weight": 0.0442,
+   "weight": 0.0331,
    "values": {
     "PP": 31.8,
     "PSOE": 25.5,
@@ -1009,9 +1064,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.5,
-     "pMayoria": 0.006,
-     "senado": 1
+     "derecha": 0.3,
+     "pMayoria": 0.001,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1031,7 +1086,7 @@
    "date": "2026-10-29",
    "sample": 1000,
    "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
-   "weight": 0.0395,
+   "weight": 0.0296,
    "values": {
     "PP": 33,
     "PSOE": 25.6,
@@ -1064,9 +1119,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.4,
-     "pMayoria": 0.006,
-     "senado": 1
+     "derecha": 0.3,
+     "pMayoria": 0.005,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1074,8 +1129,8 @@
      "senado": 0
     },
     "cis": {
-     "derecha": 0,
-     "pMayoria": 0.001,
+     "derecha": 0.1,
+     "pMayoria": 0.003,
      "senado": 0
     }
    }
@@ -1086,7 +1141,7 @@
    "date": "2026-10-28",
    "sample": 1000,
    "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
-   "weight": 0.0358,
+   "weight": 0.0268,
    "values": {
     "PP": 32.4,
     "PSOE": 26.4,
@@ -1119,9 +1174,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0.4,
-     "pMayoria": 0.004,
-     "senado": 1
+     "derecha": 0.3,
+     "pMayoria": 0.005,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1130,7 +1185,7 @@
     },
     "cis": {
      "derecha": 0.1,
-     "pMayoria": 0.001,
+     "pMayoria": 0.005,
      "senado": 0
     }
    }
@@ -1141,7 +1196,7 @@
    "date": "2026-10-27",
    "sample": 1500,
    "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-   "weight": 0.0397,
+   "weight": 0.0298,
    "values": {
     "PP": 28.1,
     "PSOE": 29.6,
@@ -1174,9 +1229,9 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": -0.4,
-     "pMayoria": -0.005,
-     "senado": -1
+     "derecha": -0.3,
+     "pMayoria": 0.001,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1196,7 +1251,7 @@
    "date": "2026-10-25",
    "sample": 2210,
    "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
-   "weight": 0.0396,
+   "weight": 0.0297,
    "values": {
     "PP": 28.3,
     "PSOE": 27.6,
@@ -1224,8 +1279,8 @@
    "impact": {
     "media": {
      "derecha": -0.2,
-     "pMayoria": -0.004,
-     "senado": -1
+     "pMayoria": 0.001,
+     "senado": 0
     },
     "cisOficial": {
      "derecha": 0,
@@ -1245,7 +1300,7 @@
    "date": "2026-10-23",
    "sample": 1200,
    "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-   "weight": 0.0239,
+   "weight": 0.0179,
    "values": {
     "PP": 29.4,
     "PSOE": 27.1,
@@ -1273,7 +1328,7 @@
    "overriddenBy": null,
    "impact": {
     "media": {
-     "derecha": 0,
+     "derecha": -0.1,
      "pMayoria": 0,
      "senado": 0
     },
@@ -1316,7 +1371,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-08T21:09:23.195Z"
+    "checked": "2026-11-09T00:53:24.703Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
@@ -1330,9 +1385,9 @@
      "senado": 0
     },
     "cisOficial": {
-     "derecha": -41.7,
-     "pMayoria": -0.91,
-     "senado": -76
+     "derecha": -42.6,
+     "pMayoria": -0.926,
+     "senado": -77
     },
     "cis": {
      "derecha": 0,
@@ -1385,7 +1440,7 @@
     },
     "cis": {
      "derecha": 1.2,
-     "pMayoria": 0.038,
+     "pMayoria": 0.043,
      "senado": 0
     }
    }
@@ -1434,7 +1489,7 @@
     },
     "cis": {
      "derecha": -1.1,
-     "pMayoria": -0.021,
+     "pMayoria": -0.025,
      "senado": -5
     }
    }

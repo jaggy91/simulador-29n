@@ -1,4 +1,35 @@
 {
+ "40dB/Prisa|2026-11-09": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, PSOE, VOX, PODEMOS, FA+FV",
+   "RSS de elpais.com: el artículo ya no está en el feed"
+  ],
+  "hash": "[{\"PP\":31.9,\"PSOE\":29.9,\"VOX\":18,\"PODEMOS\":1.2},[{\"parties\":[\"FA\",\"FV\"],\"value\":5}]]",
+  "checked": "2026-11-09T00:53:12.711Z"
+ },
+ "SocioMétrica/El Español|2026-11-08": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "publicación original: faltan PP, FA"
+  ],
+  "hash": "[{\"PP\":32.3,\"PSOE\":27.7,\"VOX\":18.9,\"FA\":5,\"FV\":0.9,\"ERC\":2.4,\"JUNTS\":1.4,\"BILDU\":1.6,\"PNV\":0.8,\"BNG\":1,\"CC\":0.5,\"AA\":1.7,\"PODEMOS\":1.2,\"SALF\":2.2},[]]",
+  "checked": "2026-11-09T00:53:12.711Z"
+ },
+ "SW Demoscopia/La Séptima|2026-11-07": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "X no es un canal abierto"
+  ],
+  "hash": "[{\"PP\":28.7,\"PSOE\":31,\"VOX\":17.3},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.6}]]",
+  "checked": "2026-11-09T00:53:12.711Z"
+ },
  "IMOP/El Confidencial|2026-11-06": {
   "status": "verificada",
   "channel": "publicación original (elconfidencial.com)",
@@ -44,15 +75,25 @@
   "hash": "[{\"PP\":31.1,\"PSOE\":25.3,\"VOX\":19.2,\"FA\":6.1,\"FV\":1.5,\"ERC\":2.2,\"JUNTS\":1.2,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.9,\"CC\":0.3,\"AA\":1,\"PODEMOS\":1.8,\"SALF\":1.9},[]]",
   "checked": "2026-11-08T16:42:27.535Z"
  },
- "SW Demoscopia/La Séptima|2026-11-06": {
+ "Sigma Dos/El Mundo|2026-11-06": {
   "status": "no verificada",
   "channel": null,
   "url": null,
   "tried": [
-   "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, SALF, FA+FV"
+   "publicación original: faltan FV, ERC, JUNTS, BILDU, BNG, AA, PODEMOS"
   ],
-  "hash": "[{\"PP\":28.8,\"PSOE\":30.8,\"VOX\":17.2,\"ERC\":2.5,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.4,\"AA\":1.5,\"PODEMOS\":1.8,\"SALF\":2.1},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.7}]]",
-  "checked": "2026-11-08T16:42:27.535Z"
+  "hash": "[{\"PP\":31,\"PSOE\":25.2,\"VOX\":19.4,\"FA\":6.9,\"FV\":1.2,\"ERC\":2.9,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":1,\"CC\":0.4,\"AA\":1.6,\"PODEMOS\":1.6},[]]",
+  "checked": "2026-11-09T00:53:12.711Z"
+ },
+ "GAD3/ABC|2026-11-05": {
+  "status": "no verificada",
+  "channel": null,
+  "url": null,
+  "tried": [
+   "X no es un canal abierto"
+  ],
+  "hash": "[{\"PP\":31.9,\"PSOE\":25.9,\"VOX\":18.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.5}]]",
+  "checked": "2026-11-09T00:53:12.711Z"
  },
  "Ateneo del Dato/elDiario.es|2026-11-05": {
   "status": "verificada",
@@ -89,38 +130,6 @@
   ],
   "hash": "[{\"PP\":31.8,\"PSOE\":25.7,\"VOX\":19.2,\"FA\":6.8,\"FV\":1.2,\"ERC\":2.2,\"JUNTS\":1.5,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.5,\"AA\":1.2,\"PODEMOS\":1.9,\"SALF\":1.6},[]]",
   "checked": "2026-11-08T21:09:20.193Z"
- },
- "SocioMétrica/El Español|2026-11-01": {
-  "status": "no verificada",
-  "channel": null,
-  "url": null,
-  "tried": [
-   "publicación original: faltan PP, FA, PODEMOS"
-  ],
-  "hash": "[{\"PP\":32.7,\"PSOE\":26.6,\"VOX\":19.1,\"FA\":5.2,\"FV\":0.9,\"ERC\":2.5,\"JUNTS\":1.4,\"BILDU\":1.4,\"PNV\":0.8,\"BNG\":0.9,\"CC\":0.5,\"AA\":1.4,\"PODEMOS\":1.7,\"SALF\":2.5},[]]",
-  "checked": "2026-11-08T02:28:39.275Z"
- },
- "Sigma Dos/El Mundo|2026-10-30": {
-  "status": "verificada",
-  "channel": "datos de gráficos de la publicación original (elmundo.es)",
-  "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html",
-  "ok": true,
-  "matched": [
-   "PP",
-   "PSOE",
-   "VOX",
-   "ERC",
-   "JUNTS",
-   "AA",
-   "PODEMOS"
-  ],
-  "missing": [
-   "FA",
-   "BILDU",
-   "BNG"
-  ],
-  "hash": "[{\"PP\":31.1,\"PSOE\":24.6,\"VOX\":19.3,\"FA\":7.5,\"FV\":0.9,\"ERC\":3,\"JUNTS\":1.1,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":1,\"CC\":0.4,\"AA\":1.4,\"PODEMOS\":1.9},[]]",
-  "checked": "2026-11-02T20:46:08.065Z"
  },
  "Target Point/El Debate|2026-10-30": {
   "status": "verificada",
