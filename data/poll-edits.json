@@ -1,5 +1,413 @@
 [
  {
+  "uid": "SW Demoscopia/La Séptima|2026-11-07",
+  "firm": "SW Demoscopia/La Séptima",
+  "date": "2026-11-07",
+  "kind": "cambio",
+  "before": {
+   "values": {
+    "PP": 28.7,
+    "PSOE": 31,
+    "VOX": 17.3
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "sample": null
+  },
+  "after": {
+   "values": {
+    "PP": 28.7,
+    "PSOE": 31,
+    "VOX": 17.3,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.4,
+    "PODEMOS": 1.7,
+    "SALF": 2.1
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.6
+    }
+   ],
+   "sample": 5000
+  },
+  "detected": "2026-11-09T18:48:38.884Z",
+  "since": "2026-11-09T07:56:58.430Z",
+  "revisions": [
+   {
+    "at": "2026-11-09T17:41:06Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T15:45:53Z",
+    "user": "Impru20",
+    "comment": "/* Hypothetical scenarios */"
+   },
+   {
+    "at": "2026-11-09T15:33:07Z",
+    "user": "Impru20",
+    "comment": "Moved"
+   },
+   {
+    "at": "2026-11-09T14:54:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T11:13:32Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T10:45:22Z",
+    "user": "Impru20",
+    "comment": "/* Voting intention estimates */"
+   },
+   {
+    "at": "2026-11-09T10:18:10Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T10:13:58Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T10:04:53Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T10:03:37Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T09:59:13Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:45:35Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:41:33Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:39:36Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T09:38:02Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T09:35:10Z",
+    "user": "Impru20",
+    "comment": "Undid 2 revisions from [[Special:Diff/1384648159|1384648159]] until [[Special:Diff/1384648320|1384648320]] Excuse me, why are you doing this? Singling out a single pollster (and not any other) based on what, exactly? No explanation is given and there seems to be no credible reason for doing this other than not liking the results, but this is not our job to interpret"
+   },
+   {
+    "at": "2026-11-09T09:33:06Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:31:21Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:30:04Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T09:29:27Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   }
+  ]
+ },
+ {
+  "uid": "40dB/Prisa|2026-11-09",
+  "firm": "40dB/Prisa",
+  "date": "2026-11-09",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 31.9,
+    "PSOE": 29.9,
+    "VOX": 18,
+    "PODEMOS": 1.2
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 5
+    }
+   ],
+   "sample": null
+  },
+  "detected": "2026-11-09T18:48:38.884Z",
+  "since": "2026-11-09T07:56:58.430Z",
+  "revisions": [
+   {
+    "at": "2026-11-09T17:41:06Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T15:45:53Z",
+    "user": "Impru20",
+    "comment": "/* Hypothetical scenarios */"
+   },
+   {
+    "at": "2026-11-09T15:33:07Z",
+    "user": "Impru20",
+    "comment": "Moved"
+   },
+   {
+    "at": "2026-11-09T14:54:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T11:13:32Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T10:45:22Z",
+    "user": "Impru20",
+    "comment": "/* Voting intention estimates */"
+   },
+   {
+    "at": "2026-11-09T10:18:10Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T10:13:58Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T10:04:53Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T10:03:37Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T09:59:13Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:45:35Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:41:33Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:39:36Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T09:38:02Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T09:35:10Z",
+    "user": "Impru20",
+    "comment": "Undid 2 revisions from [[Special:Diff/1384648159|1384648159]] until [[Special:Diff/1384648320|1384648320]] Excuse me, why are you doing this? Singling out a single pollster (and not any other) based on what, exactly? No explanation is given and there seems to be no credible reason for doing this other than not liking the results, but this is not our job to interpret"
+   },
+   {
+    "at": "2026-11-09T09:33:06Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:31:21Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:30:04Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T09:29:27Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   }
+  ]
+ },
+ {
+  "uid": "GAD3/ABC|2026-11-05",
+  "firm": "GAD3/ABC",
+  "date": "2026-11-05",
+  "kind": "eliminada",
+  "before": {
+   "values": {
+    "PP": 31.9,
+    "PSOE": 25.9,
+    "VOX": 18.6
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 7.5
+    }
+   ],
+   "sample": 1502
+  },
+  "detected": "2026-11-09T18:48:38.884Z",
+  "since": "2026-11-09T07:56:58.430Z",
+  "revisions": [
+   {
+    "at": "2026-11-09T17:41:06Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T15:45:53Z",
+    "user": "Impru20",
+    "comment": "/* Hypothetical scenarios */"
+   },
+   {
+    "at": "2026-11-09T15:33:07Z",
+    "user": "Impru20",
+    "comment": "Moved"
+   },
+   {
+    "at": "2026-11-09T14:54:34Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T11:13:32Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T10:45:22Z",
+    "user": "Impru20",
+    "comment": "/* Voting intention estimates */"
+   },
+   {
+    "at": "2026-11-09T10:18:10Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T10:13:58Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T10:04:53Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T10:03:37Z",
+    "user": "Impru20",
+    "comment": "/* Victory likelihood */"
+   },
+   {
+    "at": "2026-11-09T09:59:13Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:45:35Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:41:33Z",
+    "user": "Impru20",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:39:36Z",
+    "user": "Impru20",
+    "comment": "/* Preferred government */"
+   },
+   {
+    "at": "2026-11-09T09:38:02Z",
+    "user": "Impru20",
+    "comment": "/* Voting preferences */"
+   },
+   {
+    "at": "2026-11-09T09:35:10Z",
+    "user": "Impru20",
+    "comment": "Undid 2 revisions from [[Special:Diff/1384648159|1384648159]] until [[Special:Diff/1384648320|1384648320]] Excuse me, why are you doing this? Singling out a single pollster (and not any other) based on what, exactly? No explanation is given and there seems to be no credible reason for doing this other than not liking the results, but this is not our job to interpret"
+   },
+   {
+    "at": "2026-11-09T09:33:06Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:31:21Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   },
+   {
+    "at": "2026-11-09T09:30:04Z",
+    "user": "Impru20",
+    "comment": ""
+   },
+   {
+    "at": "2026-11-09T09:29:27Z",
+    "user": "Mentoss74",
+    "comment": "/* 2026 (with Broad Front) */"
+   }
+  ]
+ },
+ {
   "uid": "SW Demoscopia/La Séptima|2026-11-05",
   "firm": "SW Demoscopia/La Séptima",
   "date": "2026-11-05",

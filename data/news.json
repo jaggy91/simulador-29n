@@ -293,6 +293,28 @@
    "verified": true,
    "captured": "manual",
    "effects": []
+  },
+  {
+   "id": "auto-VOTO_EXTERIOR-confirmado",
+   "type": "noticia",
+   "date": "2026-11-09",
+   "title": "El Supremo descarta suspender el voto a los hijos de los nacionalizados por la 'ley de nietos'",
+   "detail": "Captura automática (IA): Voto de los nacionalizados por la Ley de Nietos → confirmado, en 2 medios (El País, Europa Press). Cita: «El Supremo descarta suspender el voto a los hijos de los nacionalizados por la 'ley de nietos'»",
+   "outlet": "El País / Europa Press",
+   "sources": [
+    "https://www.europapress.es/nacional/noticia-supremo-descarta-suspender-voto-hijos-nacionalizados-ley-nietos-20261109135924.html",
+    "https://elpais.com/espana/elecciones-generales/2026-11-09/el-supremo-rechaza-suspender-tambien-el-derecho-al-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos.html"
+   ],
+   "verified": false,
+   "captured": "auto",
+   "autoActive": false,
+   "effects": [
+    {
+     "scenario": "VOTO_EXTERIOR",
+     "status": "confirmado",
+     "prob": 1
+    }
+   ]
   }
  ]
 }

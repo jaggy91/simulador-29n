@@ -88,5 +88,25 @@
   "status": "rumor",
   "quote": "Vox e Iustitia Europa han pedido al Supremo que suspenda cautelarmente el derecho al voto de los hijos e hijas de quienes previamente accedieron a la nacionalidad española a través de la conocida como 'ley de nietos' , cuyo derecho al voto se encuentra actualmente suspendido por decisión del alto tribunal.",
   "at": "2026-11-04T06:16:22.435Z"
+ },
+ {
+  "outlet": "El País",
+  "title": "El Supremo rechaza suspender también el voto de los hijos de los nacionalizados por la ‘ley de nietos’",
+  "link": "https://elpais.com/espana/elecciones-generales/2026-11-09/el-supremo-rechaza-suspender-tambien-el-derecho-al-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos.html",
+  "date": "2026-11-09T17:48:23.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "confirmado",
+  "quote": "Los hijos de los españoles nacionalizados por la ley de nietos que vivan en el extranjero podrán votar el 29-N.",
+  "at": "2026-11-09T18:47:01.768Z"
+ },
+ {
+  "outlet": "Europa Press",
+  "title": "El Supremo descarta suspender el voto a los hijos de los nacionalizados por la 'ley de nietos'",
+  "link": "https://www.europapress.es/nacional/noticia-supremo-descarta-suspender-voto-hijos-nacionalizados-ley-nietos-20261109135924.html",
+  "date": "2026-11-09T12:59:24.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "confirmado",
+  "quote": "El Supremo descarta suspender el voto a los hijos de los nacionalizados por la 'ley de nietos'",
+  "at": "2026-11-09T18:48:21.398Z"
  }
 ]

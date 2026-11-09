@@ -1,24 +1,25 @@
 {
  "source": "en.wikipedia: Opinion polling for the 2026 Spanish general election",
- "fetched": "2026-11-09T07:56:58.430Z",
- "latestPoll": "2026-11-09",
+ "fetched": "2026-11-09T18:48:38.886Z",
+ "latestPoll": "2026-11-08",
  "sources": {
   "media": {
    "label": "Media de encuestas",
    "method": "última encuesta por empresa, 21 días, peso recencia (vida media 7 d) × √muestra; sin CIS ni encuestas de partido",
    "polls": [
-    "40dB/Prisa (2026-11-09)",
     "SocioMétrica/El Español (2026-11-08)",
     "SW Demoscopia/La Séptima (2026-11-07)",
     "IMOP/El Confidencial (2026-11-06)",
     "EM-Analytics/Electomanía (2026-11-06)",
     "Sigma Dos/El Mundo (2026-11-06)",
-    "GAD3/ABC (2026-11-05)",
+    "GAD3/Vocento (2026-11-05)",
     "Ateneo del Dato/elDiario.es (2026-11-05)",
+    "NC Report/La Razón (2026-11-05)",
+    "40dB/Prisa (2026-11-04)",
     "Sondaxe/La Voz de Galicia (2026-11-04)",
+    "Data10/Okdiario (2026-11-03)",
     "Celeste-Tel/Onda Cero (2026-11-03)",
     "Target Point/El Debate (2026-10-30)",
-    "NC Report/La Razón (2026-10-29)",
     "Hamalgama Métrica/Vozpópuli (2026-10-28)",
     "Vox/The Objective (2026-10-27)",
     "More in Common (2026-10-25)",
@@ -26,39 +27,12 @@
    ],
    "items": [
     {
-     "id": "encuesta:40dB/Prisa|2026-11-09",
-     "firm": "40dB/Prisa",
-     "date": "2026-11-09",
-     "sample": null,
-     "url": "https://elpais.com/hemeroteca/portadas-papel/el-pais/2026-11-09/",
-     "weight": 0.0881,
-     "values": {
-      "PP": 31.9,
-      "PSOE": 29.9,
-      "VOX": 18,
-      "PODEMOS": 1.2,
-      "FA": 4.25,
-      "FV": 0.75
-     },
-     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-     "check": {
-      "status": "no verificada",
-      "channel": null,
-      "url": null,
-      "checked": "2026-11-09T00:53:12.711Z",
-      "tried": [
-       "publicación original: faltan PP, PSOE, VOX, PODEMOS, FA+FV",
-       "RSS de elpais.com: el artículo ya no está en el feed"
-      ]
-     }
-    },
-    {
      "id": "encuesta:SocioMétrica/El Español|2026-11-08",
      "firm": "SocioMétrica/El Español",
      "date": "2026-11-08",
      "sample": 5460,
      "url": "https://www.elespanol.com/espana/politica/20261108/pp-vox-suman-escanos-sanchez-recupera-perdio-urda-dimision-puente-sondeo-noche/1003744450645_0.html",
-     "weight": 0.1382,
+     "weight": 0.1223,
      "values": {
       "PP": 32.3,
       "PSOE": 27.7,
@@ -90,24 +64,54 @@
      "id": "encuesta:SW Demoscopia/La Séptima|2026-11-07",
      "firm": "SW Demoscopia/La Séptima",
      "date": "2026-11-07",
-     "sample": null,
-     "url": "https://x.com/la_septima_tv/status/2119526756952494143",
-     "weight": 0.0723,
+     "sample": 5000,
+     "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQGAE9qXXNttEQ/feedshare-document-sanitized-pdf/B4EaG_aoLXHoA8-/0/1794212792551?e=1794823200&v=beta&t=63_bT02P4exvR_s9mCewipYNPF26SQ8LoMo_P7sSiOA",
+     "weight": 0.1108,
      "values": {
       "PP": 28.7,
       "PSOE": 31,
       "VOX": 17.3,
-      "FA": 6.46,
-      "FV": 1.14
+      "ERC": 2.5,
+      "JUNTS": 1.2,
+      "BILDU": 1.4,
+      "PNV": 0.8,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1.4,
+      "PODEMOS": 1.7,
+      "SALF": 2.1,
+      "FA": 6.4,
+      "FV": 1.2
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-09T00:53:12.711Z",
+      "checked": "2026-11-09T18:48:25.556Z",
       "tried": [
-       "X no es un canal abierto"
+       "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, SALF, FA+FV"
+      ]
+     },
+     "edited": {
+      "detected": "2026-11-09T18:48:38.884Z",
+      "change": "ERC —→2.5, JUNTS —→1.2, BILDU —→1.4, PNV —→0.8, BNG —→0.9, CC —→0.4, AA —→1.4, PODEMOS —→1.7, SALF —→2.1, muestra —→5000",
+      "revisions": [
+       {
+        "at": "2026-11-09T17:41:06Z",
+        "user": "Impru20",
+        "comment": ""
+       },
+       {
+        "at": "2026-11-09T15:45:53Z",
+        "user": "Impru20",
+        "comment": "/* Hypothetical scenarios */"
+       },
+       {
+        "at": "2026-11-09T15:33:07Z",
+        "user": "Impru20",
+        "comment": "Moved"
+       }
       ]
      }
     },
@@ -117,7 +121,7 @@
      "date": "2026-11-06",
      "sample": 1000,
      "url": "https://www.elconfidencial.com/espana/2026-11-08/derecha-recupera-seis-escanos-izquierda-castigo-psoe-urda-cbtr_4460900/",
-     "weight": 0.0655,
+     "weight": 0.0579,
      "values": {
       "PP": 29.8,
       "PSOE": 25.9,
@@ -131,8 +135,8 @@
       "AA": 1.8,
       "PODEMOS": 1.2,
       "SALF": 1.7,
-      "FA": 6.88,
-      "FV": 1.22
+      "FA": 6.83,
+      "FV": 1.27
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -163,7 +167,7 @@
      "date": "2026-11-06",
      "sample": 1860,
      "url": "https://electomania.es/electopanel-8-nov-el-bipartidismo-cede-terreno-vox-sube-en-escanos-y-eh-bildu-se-distancia-del-pnv/",
-     "weight": 0.0893,
+     "weight": 0.079,
      "values": {
       "PP": 31.1,
       "PSOE": 25.3,
@@ -208,7 +212,7 @@
      "date": "2026-11-06",
      "sample": 4172,
      "url": "https://www.elmundo.es/espana/encuestas/2026/11/08/6af066bee85eceae5a8b4598.html",
-     "weight": 0.1134,
+     "weight": 0.1003,
      "values": {
       "PP": 31,
       "PSOE": 25.2,
@@ -236,27 +240,48 @@
      }
     },
     {
-     "id": "encuesta:GAD3/ABC|2026-11-05",
-     "firm": "GAD3/ABC",
+     "id": "encuesta:GAD3/Vocento|2026-11-05",
+     "firm": "GAD3/Vocento",
      "date": "2026-11-05",
      "sample": 1502,
-     "url": "https://x.com/abc_es/status/2119566963483750605",
-     "weight": 0.0727,
+     "url": "https://www.abc.es/espana/accidente-urda-apenas-altera-bloques-29n-derecha-20261108023004-nt.html",
+     "weight": 0.0643,
      "values": {
       "PP": 31.9,
       "PSOE": 25.9,
       "VOX": 18.6,
-      "FA": 6.37,
-      "FV": 1.13
+      "FA": 6,
+      "FV": 1.5,
+      "ERC": 2.7,
+      "JUNTS": 1.4,
+      "BILDU": 1.5,
+      "PNV": 0.9,
+      "BNG": 0.9,
+      "CC": 0.4,
+      "AA": 1.6,
+      "PODEMOS": 1.4,
+      "SALF": 1.3
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
-      "status": "no verificada",
-      "channel": null,
-      "url": null,
-      "checked": "2026-11-09T00:53:12.711Z",
-      "tried": [
-       "X no es un canal abierto"
+      "status": "verificada",
+      "channel": "datos de gráficos de la publicación original (abc.es)",
+      "url": "https://www.abc.es/espana/accidente-urda-apenas-altera-bloques-29n-derecha-20261108023004-nt.html",
+      "checked": "2026-11-09T18:48:25.556Z",
+      "matched": [
+       "PP",
+       "PSOE",
+       "VOX",
+       "FV",
+       "ERC",
+       "JUNTS",
+       "BILDU",
+       "AA",
+       "PODEMOS"
+      ],
+      "missing": [
+       "FA",
+       "SALF"
       ]
      }
     },
@@ -266,14 +291,14 @@
      "date": "2026-11-05",
      "sample": 2000,
      "url": "https://www.eldiario.es/politica/psoe-crece-dimision-oscar-puente-pp-vox-mantienen-mayoria-absoluta_1_13643551.html",
-     "weight": 0.0838,
+     "weight": 0.0742,
      "values": {
       "PP": 31.5,
       "PSOE": 28.6,
       "VOX": 18.6,
       "PODEMOS": 1.5,
-      "FA": 5.18,
-      "FV": 0.92
+      "FA": 5.14,
+      "FV": 0.96
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -292,12 +317,73 @@
      }
     },
     {
+     "id": "encuesta:NC Report/La Razón|2026-11-05",
+     "firm": "NC Report/La Razón",
+     "date": "2026-11-05",
+     "sample": 1000,
+     "url": "https://www.larazon.es/espana/gana-7-puntos-psoe-que-cae-100-escanos_202611096af1319903bbf30bb045239e.html",
+     "weight": 0.0525,
+     "values": {
+      "PP": 33,
+      "PSOE": 25.6,
+      "VOX": 19.3,
+      "ERC": 2,
+      "JUNTS": 1.8,
+      "BILDU": 1.4,
+      "PNV": 0.9,
+      "BNG": 0.8,
+      "CC": 0.4,
+      "AA": 1.2,
+      "PODEMOS": 2.4,
+      "FA": 5.81,
+      "FV": 1.09
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "no verificada",
+      "channel": null,
+      "url": null,
+      "checked": "2026-11-09T18:48:25.556Z",
+      "tried": [
+       "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
+      ]
+     }
+    },
+    {
+     "id": "encuesta:40dB/Prisa|2026-11-04",
+     "firm": "40dB/Prisa",
+     "date": "2026-11-04",
+     "sample": 2000,
+     "url": "https://elpais.com/espana/elecciones-generales/2026-11-09/el-bloque-de-la-derecha-mantiene-su-ventaja-pero-el-psoe-se-acerca-al-pp.html",
+     "weight": 0.0672,
+     "values": {
+      "PP": 31.9,
+      "PSOE": 29.9,
+      "VOX": 18,
+      "FA": 3.9,
+      "FV": 1.1,
+      "PODEMOS": 1.2,
+      "SALF": 2
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "no verificada",
+      "channel": null,
+      "url": null,
+      "checked": "2026-11-09T18:48:25.556Z",
+      "tried": [
+       "publicación original: 403",
+       "RSS de elpais.com: faltan PP, PSOE, VOX, FA, FV, PODEMOS, SALF"
+      ]
+     }
+    },
+    {
      "id": "encuesta:Sondaxe/La Voz de Galicia|2026-11-04",
      "firm": "Sondaxe/La Voz de Galicia",
      "date": "2026-11-04",
      "sample": 1200,
      "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/06/feijoo-adelanta-pedro-sanchez-candidato-preferido-gobernar/00031793992905957222982.htm",
-     "weight": 0.0588,
+     "weight": 0.0521,
      "values": {
       "PP": 29.7,
       "PSOE": 27.3,
@@ -311,17 +397,63 @@
       "AA": 2.3,
       "PODEMOS": 2.2,
       "SALF": 1.6,
-      "FA": 6.03,
-      "FV": 1.07
+      "FA": 5.98,
+      "FV": 1.12
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-08T16:42:27.535Z",
+      "checked": "2026-11-09T18:48:25.556Z",
       "tried": [
-       "publicación original: faltan JUNTS, BILDU, PODEMOS, SALF"
+       "publicación original: 404"
+      ]
+     }
+    },
+    {
+     "id": "encuesta:Data10/Okdiario|2026-11-03",
+     "firm": "Data10/Okdiario",
+     "date": "2026-11-03",
+     "sample": 1500,
+     "url": "https://okdiario.com/espana/psoe-paga-tragedia-urda-hunde-hasta-97-escanos-mientras-pp-vox-suman-203-20728358",
+     "weight": 0.0527,
+     "values": {
+      "PP": 32.4,
+      "PSOE": 24.7,
+      "VOX": 19.8,
+      "ERC": 2.3,
+      "JUNTS": 1.5,
+      "BILDU": 1.3,
+      "PNV": 0.7,
+      "BNG": 1,
+      "CC": 0.4,
+      "AA": 1.3,
+      "PODEMOS": 3.1,
+      "SALF": 1.5,
+      "FA": 5.81,
+      "FV": 1.09
+     },
+     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
+     "check": {
+      "status": "verificada",
+      "channel": "datos de gráficos de la publicación original (okdiario.com)",
+      "url": "https://okdiario.com/espana/psoe-paga-tragedia-urda-hunde-hasta-97-escanos-mientras-pp-vox-suman-203-20728358",
+      "checked": "2026-11-09T18:48:25.556Z",
+      "matched": [
+       "PP",
+       "PSOE",
+       "VOX",
+       "JUNTS",
+       "BILDU",
+       "BNG",
+       "AA",
+       "PODEMOS",
+       "SALF",
+       "FA+FV"
+      ],
+      "missing": [
+       "ERC"
       ]
      }
     },
@@ -331,7 +463,7 @@
      "date": "2026-11-03",
      "sample": 1100,
      "url": "https://www.ondacero.es/elecciones/generales/encuestas-vox-lograrian-absolutisima-segun-celeste-tel_202611066aedd355ea8d8979977bbe63.html",
-     "weight": 0.051,
+     "weight": 0.0451,
      "values": {
       "PP": 31.8,
       "PSOE": 25.7,
@@ -365,15 +497,15 @@
      "date": "2026-10-30",
      "sample": 1024,
      "url": "http://eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html",
-     "weight": 0.0331,
+     "weight": 0.0293,
      "values": {
       "PP": 31.8,
       "PSOE": 25.5,
       "VOX": 19.9,
       "PODEMOS": 2.4,
       "SALF": 2.6,
-      "FA": 5.61,
-      "FV": 0.99
+      "FA": 5.56,
+      "FV": 1.04
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -393,45 +525,12 @@
      }
     },
     {
-     "id": "encuesta:NC Report/La Razón|2026-10-29",
-     "firm": "NC Report/La Razón",
-     "date": "2026-10-29",
-     "sample": 1000,
-     "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html",
-     "weight": 0.0296,
-     "values": {
-      "PP": 33,
-      "PSOE": 25.6,
-      "VOX": 19.3,
-      "ERC": 2,
-      "JUNTS": 1.8,
-      "BILDU": 1.4,
-      "PNV": 0.9,
-      "BNG": 0.8,
-      "CC": 0.4,
-      "AA": 1.2,
-      "PODEMOS": 2.4,
-      "FA": 5.86,
-      "FV": 1.04
-     },
-     "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
-     "check": {
-      "status": "no verificada",
-      "channel": null,
-      "url": null,
-      "checked": "2026-11-09T07:56:54.569Z",
-      "tried": [
-       "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
-      ]
-     }
-    },
-    {
      "id": "encuesta:Hamalgama Métrica/Vozpópuli|2026-10-28",
      "firm": "Hamalgama Métrica/Vozpópuli",
      "date": "2026-10-28",
      "sample": 1000,
      "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html",
-     "weight": 0.0268,
+     "weight": 0.0238,
      "values": {
       "PP": 32.4,
       "PSOE": 26.4,
@@ -444,8 +543,8 @@
       "AA": 1.1,
       "PODEMOS": 2.2,
       "SALF": 1.8,
-      "FA": 4.59,
-      "FV": 0.81
+      "FA": 4.55,
+      "FV": 0.85
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -464,15 +563,15 @@
      "date": "2026-10-27",
      "sample": 1500,
      "url": "https://theobjective.com/espana/2026-11-01/sondeo-vox-71-escanos/",
-     "weight": 0.0298,
+     "weight": 0.0264,
      "values": {
       "PP": 28.1,
       "PSOE": 29.6,
       "VOX": 20.2,
       "PODEMOS": 1.9,
       "SALF": 1.1,
-      "FA": 5.27,
-      "FV": 0.93
+      "FA": 5.22,
+      "FV": 0.98
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -497,15 +596,15 @@
      "date": "2026-10-25",
      "sample": 2210,
      "url": "https://moreincommones.substack.com/p/rumbo-al-29n-una-radiografia-de-la",
-     "weight": 0.0297,
+     "weight": 0.0262,
      "values": {
       "PP": 28.3,
       "PSOE": 27.6,
       "VOX": 20.8,
       "PODEMOS": 2.6,
       "SALF": 2.4,
-      "FA": 6.63,
-      "FV": 1.17
+      "FA": 6.57,
+      "FV": 1.23
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
@@ -524,7 +623,7 @@
      "date": "2026-10-23",
      "sample": 1200,
      "url": "https://www.articulo14.es/politica/encuesta-articulo14-el-psoe-se-coloca-6-escanos-del-pp-que-mantiene-una-mayoria-de-190-escanos-con-vox-20261026.html",
-     "weight": 0.0179,
+     "weight": 0.0159,
      "values": {
       "PP": 29.4,
       "PSOE": 27.1,
@@ -548,20 +647,20 @@
     }
    ],
    "values": {
-    "PP": 31.02,
-    "PSOE": 27.21,
-    "VOX": 18.98,
-    "PODEMOS": 1.66,
-    "FA": 5.84,
-    "FV": 1.07,
-    "ERC": 2.48,
-    "JUNTS": 1.35,
-    "BILDU": 1.46,
+    "PP": 31.03,
+    "PSOE": 27.18,
+    "VOX": 18.96,
+    "FA": 5.82,
+    "FV": 1.15,
+    "ERC": 2.47,
+    "JUNTS": 1.36,
+    "BILDU": 1.44,
     "PNV": 0.83,
-    "BNG": 0.97,
-    "CC": 0.44,
-    "AA": 1.55,
-    "SALF": 1.91
+    "BNG": 0.95,
+    "CC": 0.43,
+    "AA": 1.5,
+    "PODEMOS": 1.75,
+    "SALF": 1.87
    }
   },
   "cisOficial": {
@@ -590,20 +689,20 @@
       "BNG": 0.9,
       "PNV": 0.6,
       "CC": 0.2,
-      "FA": 5.18,
-      "FV": 0.92
+      "FA": 5.14,
+      "FV": 0.96
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "verificada",
       "channel": "PDF oficial del CIS (cis.es)",
       "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-      "checked": "2026-11-09T07:56:58.427Z"
+      "checked": "2026-11-09T18:48:38.706Z"
      }
     }
    ],
    "values": {
-    "AA": 1.55,
+    "AA": 1.5,
     "PSOE": 34,
     "PP": 22.3,
     "VOX": 17.1,
@@ -615,8 +714,8 @@
     "BNG": 0.9,
     "PNV": 0.6,
     "CC": 0.2,
-    "FA": 5.18,
-    "FV": 0.92
+    "FA": 5.14,
+    "FV": 0.96
    }
   },
   "cis": {
@@ -640,15 +739,15 @@
       "VOX": 17.8,
       "PODEMOS": 3.5,
       "SALF": 1.6,
-      "FA": 6.2,
-      "FV": 1.1
+      "FA": 6.15,
+      "FV": 1.15
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-08T10:16:53.243Z",
+      "checked": "2026-11-09T18:48:25.556Z",
       "tried": [
        "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
       ]
@@ -667,15 +766,15 @@
       "VOX": 17.5,
       "PODEMOS": 3,
       "SALF": 2.4,
-      "FA": 6.71,
-      "FV": 1.19
+      "FA": 6.66,
+      "FV": 1.24
      },
      "index": "Wikipedia: Opinion polling for the 2026 Spanish general election",
      "check": {
       "status": "no verificada",
       "channel": null,
       "url": null,
-      "checked": "2026-11-08T10:16:53.243Z",
+      "checked": "2026-11-09T18:48:25.556Z",
       "tried": [
        "X no es un canal abierto"
       ]
@@ -683,47 +782,24 @@
     }
    ],
    "values": {
-    "ERC": 2.48,
-    "JUNTS": 1.35,
-    "BILDU": 1.46,
+    "ERC": 2.47,
+    "JUNTS": 1.36,
+    "BILDU": 1.44,
     "PNV": 0.83,
-    "BNG": 0.97,
-    "CC": 0.44,
-    "AA": 1.55,
+    "BNG": 0.95,
+    "CC": 0.43,
+    "AA": 1.5,
     "PP": 28.15,
     "PSOE": 28.3,
     "VOX": 17.65,
     "PODEMOS": 3.25,
     "SALF": 2,
-    "FA": 6.46,
-    "FV": 1.15
+    "FA": 6.41,
+    "FV": 1.19
    }
   }
  },
  "rows": [
-  {
-   "firm": "40dB/Prisa",
-   "date": "2026-11-09",
-   "sample": null,
-   "url": "https://elpais.com/hemeroteca/portadas-papel/el-pais/2026-11-09/",
-   "values": {
-    "PP": 31.9,
-    "PSOE": 29.9,
-    "VOX": 18,
-    "PODEMOS": 1.2
-   },
-   "joint": [
-    {
-     "parties": [
-      "FA",
-      "FV"
-     ],
-     "value": 5
-    }
-   ],
-   "table": "2026 (with Broad Front)",
-   "uid": "40dB/Prisa|2026-11-09"
-  },
   {
    "firm": "SocioMétrica/El Español",
    "date": "2026-11-08",
@@ -752,12 +828,21 @@
   {
    "firm": "SW Demoscopia/La Séptima",
    "date": "2026-11-07",
-   "sample": null,
-   "url": "https://x.com/la_septima_tv/status/2119526756952494143",
+   "sample": 5000,
+   "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQGAE9qXXNttEQ/feedshare-document-sanitized-pdf/B4EaG_aoLXHoA8-/0/1794212792551?e=1794823200&v=beta&t=63_bT02P4exvR_s9mCewipYNPF26SQ8LoMo_P7sSiOA",
    "values": {
     "PP": 28.7,
     "PSOE": 31,
-    "VOX": 17.3
+    "VOX": 17.3,
+    "ERC": 2.5,
+    "JUNTS": 1.2,
+    "BILDU": 1.4,
+    "PNV": 0.8,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.4,
+    "PODEMOS": 1.7,
+    "SALF": 2.1
    },
    "joint": [
     {
@@ -883,26 +968,29 @@
    "uid": "SW Demoscopia/La Séptima|2026-11-06"
   },
   {
-   "firm": "GAD3/ABC",
+   "firm": "GAD3/Vocento",
    "date": "2026-11-05",
    "sample": 1502,
-   "url": "https://x.com/abc_es/status/2119566963483750605",
+   "url": "https://www.abc.es/espana/accidente-urda-apenas-altera-bloques-29n-derecha-20261108023004-nt.html",
    "values": {
     "PP": 31.9,
     "PSOE": 25.9,
-    "VOX": 18.6
+    "VOX": 18.6,
+    "FA": 6,
+    "FV": 1.5,
+    "ERC": 2.7,
+    "JUNTS": 1.4,
+    "BILDU": 1.5,
+    "PNV": 0.9,
+    "BNG": 0.9,
+    "CC": 0.4,
+    "AA": 1.6,
+    "PODEMOS": 1.4,
+    "SALF": 1.3
    },
-   "joint": [
-    {
-     "parties": [
-      "FA",
-      "FV"
-     ],
-     "value": 7.5
-    }
-   ],
+   "joint": [],
    "table": "2026 (with Broad Front)",
-   "uid": "GAD3/ABC|2026-11-05"
+   "uid": "GAD3/Vocento|2026-11-05"
   },
   {
    "firm": "Ateneo del Dato/elDiario.es",
@@ -926,6 +1014,36 @@
    ],
    "table": "2026 (with Broad Front)",
    "uid": "Ateneo del Dato/elDiario.es|2026-11-05"
+  },
+  {
+   "firm": "NC Report/La Razón",
+   "date": "2026-11-05",
+   "sample": 1000,
+   "url": "https://www.larazon.es/espana/gana-7-puntos-psoe-que-cae-100-escanos_202611096af1319903bbf30bb045239e.html",
+   "values": {
+    "PP": 33,
+    "PSOE": 25.6,
+    "VOX": 19.3,
+    "ERC": 2,
+    "JUNTS": 1.8,
+    "BILDU": 1.4,
+    "PNV": 0.9,
+    "BNG": 0.8,
+    "CC": 0.4,
+    "AA": 1.2,
+    "PODEMOS": 2.4
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (with Broad Front)",
+   "uid": "NC Report/La Razón|2026-11-05"
   },
   {
    "firm": "SW Demoscopia/La Séptima",
@@ -957,6 +1075,24 @@
    ],
    "table": "2026 (with Broad Front)",
    "uid": "SW Demoscopia/La Séptima|2026-11-05"
+  },
+  {
+   "firm": "40dB/Prisa",
+   "date": "2026-11-04",
+   "sample": 2000,
+   "url": "https://elpais.com/espana/elecciones-generales/2026-11-09/el-bloque-de-la-derecha-mantiene-su-ventaja-pero-el-psoe-se-acerca-al-pp.html",
+   "values": {
+    "PP": 31.9,
+    "PSOE": 29.9,
+    "VOX": 18,
+    "FA": 3.9,
+    "FV": 1.1,
+    "PODEMOS": 1.2,
+    "SALF": 2
+   },
+   "joint": [],
+   "table": "2026 (with Broad Front)",
+   "uid": "40dB/Prisa|2026-11-04"
   },
   {
    "firm": "Sondaxe/La Voz de Galicia",
@@ -1019,6 +1155,37 @@
    ],
    "table": "2026 (with Broad Front)",
    "uid": "SW Demoscopia/La Séptima|2026-11-04"
+  },
+  {
+   "firm": "Data10/Okdiario",
+   "date": "2026-11-03",
+   "sample": 1500,
+   "url": "https://okdiario.com/espana/psoe-paga-tragedia-urda-hunde-hasta-97-escanos-mientras-pp-vox-suman-203-20728358",
+   "values": {
+    "PP": 32.4,
+    "PSOE": 24.7,
+    "VOX": 19.8,
+    "ERC": 2.3,
+    "JUNTS": 1.5,
+    "BILDU": 1.3,
+    "PNV": 0.7,
+    "BNG": 1,
+    "CC": 0.4,
+    "AA": 1.3,
+    "PODEMOS": 3.1,
+    "SALF": 1.5
+   },
+   "joint": [
+    {
+     "parties": [
+      "FA",
+      "FV"
+     ],
+     "value": 6.9
+    }
+   ],
+   "table": "2026 (with Broad Front)",
+   "uid": "Data10/Okdiario|2026-11-03"
   },
   {
    "firm": "Celeste-Tel/Onda Cero",
