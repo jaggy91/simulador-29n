@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-10T17:53:29.349Z",
- "latestPoll": "2026-11-08",
+ "updated": "2026-11-10T23:22:09.607Z",
+ "latestPoll": "2026-11-09",
  "n": 2000,
  "base": {
   "media": {
@@ -27,9 +27,9 @@
     "senado": 161
    },
    "error2023": {
-    "derecha": 188,
-    "investidura": 157,
-    "senado": 143
+    "derecha": 187,
+    "investidura": 158,
+    "senado": 141
    }
   },
   "cisOficial": {
@@ -89,7 +89,7 @@
       "media": {
        "derecha": 195,
        "investidura": 147,
-       "senado": 162
+       "senado": 161
       },
       "cisOficial": {
        "derecha": 155,
@@ -342,17 +342,17 @@
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": 1,
+      "derecha": 0,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": 1,
+      "derecha": 0,
       "senado": 0
      }
     ],
-    "firstMove": 0.8
+    "firstMove": null
    },
    "todoPSOE": {
     "at": [
@@ -365,7 +365,7 @@
      {
       "turnout": 0.15,
       "votes": 24453,
-      "derecha": 0,
+      "derecha": -1,
       "senado": 0
      },
      {
@@ -383,23 +383,23 @@
      {
       "turnout": 0.6,
       "votes": 97812,
-      "derecha": -1,
+      "derecha": -3,
       "senado": 0
      },
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": -2,
+      "derecha": -3,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": -3,
+      "derecha": -4,
       "senado": 0
      }
     ],
-    "firstMove": 0.25
+    "firstMove": 0.15
    }
   },
   "cisOficial": {
@@ -597,9 +597,9 @@
  },
  "noise": {
   "media": {
-   "historico": 0.9645,
+   "historico": 0.963,
    "video": 0.993,
-   "conCC": 0.973
+   "conCC": 0.9725
   },
   "cisOficial": {
    "historico": 0.0445,
