@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T18:51:58.466Z",
+ "updated": "2026-11-10T02:08:32.338Z",
  "latestPoll": "2026-11-08",
  "note": "Laboratorio: escenarios acumulativos favorables a cada bloque. No forma parte de la proyección oficial.",
  "maxLevel": 4,
@@ -166,26 +166,27 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 30.74,
-      "PSOE": 32.49,
-      "VOX": 17.1,
-      "FA": 4.97,
+      "PP": 30.69,
+      "PSOE": 32.55,
+      "VOX": 17.08,
+      "FA": 4.98,
       "FV": 0.96,
       "ERC": 2.06,
-      "JUNTS": 1.13,
-      "BILDU": 1.2,
+      "JUNTS": 1.16,
+      "BILDU": 1.21,
       "PNV": 0.69,
-      "BNG": 0.79,
+      "BNG": 0.8,
       "CC": 0.36,
-      "AA": 1.25,
+      "AA": 1.27,
       "PODEMOS": 1.46,
-      "SALF": 1.56
+      "SALF": 1.52
      },
      "central": {
       "congress": {
        "PP": 123,
-       "PSOE": 135,
-       "VOX": 60,
+       "PSOE": 136,
+       "VOX": 58,
+       "AA": 2,
        "BNG": 2,
        "ERC": 8,
        "JUNTS": 4,
@@ -194,12 +195,11 @@
        "FA": 4,
        "UPN": 1,
        "CC": 1,
-       "AA": 1,
        "FV": 2
       },
       "blocs": {
-       "derecha": 184,
-       "investidura": 161,
+       "derecha": 182,
+       "investidura": 162,
        "junts": 4
       },
       "senate": {
@@ -227,32 +227,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 183.2,
-        "p05": 164,
+        "mean": 182.7,
+        "p05": 163,
         "p50": 183,
         "p95": 202
        },
        "investidura": {
-        "mean": 161.3,
+        "mean": 161.6,
         "p05": 142,
-        "p50": 161,
-        "p95": 180
+        "p50": 162,
+        "p95": 181
        },
        "senadoDerecha": {
-        "mean": 132,
+        "mean": 131.4,
         "p05": 98,
-        "p50": 134,
-        "p95": 160
+        "p50": 133,
+        "p95": 159
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.736,
-       "mayoriaDerechaConCC": 0.763,
-       "juntsDecisivo": 0.0775,
-       "investiduraSola": 0.1085,
-       "investiduraConJunts": 0.186,
-       "senadoMayoriaDerecha": 0.504,
-       "senado35Derecha": 0.0395
+       "mayoriaDerecha": 0.7265,
+       "mayoriaDerechaConCC": 0.7535,
+       "juntsDecisivo": 0.0825,
+       "investiduraSola": 0.1135,
+       "investiduraConJunts": 0.196,
+       "senadoMayoriaDerecha": 0.4925,
+       "senado35Derecha": 0.0355
       }
      },
      "contrary": false
@@ -266,20 +266,20 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 30.91,
-      "PSOE": 29.3,
-      "VOX": 18.22,
-      "FA": 5.48,
+      "PP": 30.86,
+      "PSOE": 29.36,
+      "VOX": 18.2,
+      "FA": 5.49,
       "FV": 1.07,
       "ERC": 2.3,
-      "JUNTS": 1.27,
-      "BILDU": 1.34,
+      "JUNTS": 1.3,
+      "BILDU": 1.35,
       "PNV": 0.77,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.4,
+      "AA": 1.42,
       "PODEMOS": 1.63,
-      "SALF": 1.74
+      "SALF": 1.71
      },
      "central": {
       "congress": {
@@ -328,32 +328,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 190.7,
-        "p05": 172,
-        "p50": 191,
-        "p95": 210
+        "mean": 190.2,
+        "p05": 171,
+        "p50": 190,
+        "p95": 209
        },
        "investidura": {
-        "mean": 152.5,
-        "p05": 133,
-        "p50": 152,
-        "p95": 171
+        "mean": 152.8,
+        "p05": 134,
+        "p50": 153,
+        "p95": 172
        },
        "senadoDerecha": {
-        "mean": 143.6,
+        "mean": 143.1,
         "p05": 113,
-        "p50": 147,
+        "p50": 146,
         "p95": 164
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9,
-       "mayoriaDerechaConCC": 0.913,
-       "juntsDecisivo": 0.037,
-       "investiduraSola": 0.0215,
-       "investiduraConJunts": 0.0585,
-       "senadoMayoriaDerecha": 0.7525,
-       "senado35Derecha": 0.1405
+       "mayoriaDerecha": 0.893,
+       "mayoriaDerechaConCC": 0.9065,
+       "juntsDecisivo": 0.0415,
+       "investiduraSola": 0.0245,
+       "investiduraConJunts": 0.066,
+       "senadoMayoriaDerecha": 0.746,
+       "senado35Derecha": 0.13
       }
      },
      "contrary": false
@@ -366,20 +366,20 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 30.91,
-      "PSOE": 29.3,
-      "VOX": 18.22,
-      "FA": 5.48,
+      "PP": 30.86,
+      "PSOE": 29.36,
+      "VOX": 18.2,
+      "FA": 5.49,
       "FV": 1.07,
       "ERC": 2.3,
-      "JUNTS": 1.27,
-      "BILDU": 1.34,
+      "JUNTS": 1.3,
+      "BILDU": 1.35,
       "PNV": 0.77,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.4,
+      "AA": 1.42,
       "PODEMOS": 1.63,
-      "SALF": 1.74
+      "SALF": 1.71
      },
      "central": {
       "congress": {
@@ -428,32 +428,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 190.7,
-        "p05": 172,
-        "p50": 191,
-        "p95": 210
+        "mean": 190.2,
+        "p05": 171,
+        "p50": 190,
+        "p95": 209
        },
        "investidura": {
-        "mean": 152.5,
-        "p05": 133,
-        "p50": 152,
-        "p95": 171
+        "mean": 152.8,
+        "p05": 134,
+        "p50": 153,
+        "p95": 172
        },
        "senadoDerecha": {
-        "mean": 149,
+        "mean": 148.5,
         "p05": 120,
-        "p50": 152,
+        "p50": 151,
         "p95": 168
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9,
-       "mayoriaDerechaConCC": 0.913,
-       "juntsDecisivo": 0.037,
-       "investiduraSola": 0.0215,
-       "investiduraConJunts": 0.0585,
-       "senadoMayoriaDerecha": 0.8385,
-       "senado35Derecha": 0.2585
+       "mayoriaDerecha": 0.893,
+       "mayoriaDerechaConCC": 0.9065,
+       "juntsDecisivo": 0.0415,
+       "investiduraSola": 0.0245,
+       "investiduraConJunts": 0.066,
+       "senadoMayoriaDerecha": 0.832,
+       "senado35Derecha": 0.2475
       }
      },
      "contrary": false
@@ -465,20 +465,20 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 30.91,
-      "PSOE": 29.3,
-      "VOX": 18.22,
-      "FA": 5.48,
+      "PP": 30.86,
+      "PSOE": 29.36,
+      "VOX": 18.2,
+      "FA": 5.49,
       "FV": 1.07,
       "ERC": 2.3,
-      "JUNTS": 1.27,
-      "BILDU": 1.34,
+      "JUNTS": 1.3,
+      "BILDU": 1.35,
       "PNV": 0.77,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.4,
+      "AA": 1.42,
       "PODEMOS": 1.63,
-      "SALF": 1.74
+      "SALF": 1.71
      },
      "central": {
       "congress": {
@@ -527,32 +527,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 191.5,
+        "mean": 191,
         "p05": 172,
-        "p50": 192,
-        "p95": 211
+        "p50": 191,
+        "p95": 210
        },
        "investidura": {
-        "mean": 151.7,
-        "p05": 132,
+        "mean": 152,
+        "p05": 133,
         "p50": 152,
-        "p95": 170
+        "p95": 171
        },
        "senadoDerecha": {
-        "mean": 149,
+        "mean": 148.5,
         "p05": 120,
-        "p50": 152,
+        "p50": 151,
         "p95": 168
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9115,
-       "mayoriaDerechaConCC": 0.926,
-       "juntsDecisivo": 0.0295,
-       "investiduraSola": 0.0185,
-       "investiduraConJunts": 0.048,
-       "senadoMayoriaDerecha": 0.8385,
-       "senado35Derecha": 0.2585
+       "mayoriaDerecha": 0.903,
+       "mayoriaDerechaConCC": 0.9195,
+       "juntsDecisivo": 0.035,
+       "investiduraSola": 0.02,
+       "investiduraConJunts": 0.055,
+       "senadoMayoriaDerecha": 0.832,
+       "senado35Derecha": 0.2475
       }
      },
      "contrary": false
@@ -562,20 +562,20 @@
      "active": [],
      "skipped": [],
      "poll": {
-      "PP": 31.03,
-      "PSOE": 27.18,
-      "VOX": 18.96,
-      "FA": 5.82,
+      "PP": 30.98,
+      "PSOE": 27.24,
+      "VOX": 18.94,
+      "FA": 5.83,
       "FV": 1.15,
       "ERC": 2.47,
-      "JUNTS": 1.36,
-      "BILDU": 1.44,
+      "JUNTS": 1.39,
+      "BILDU": 1.45,
       "PNV": 0.83,
-      "BNG": 0.95,
+      "BNG": 0.96,
       "CC": 0.43,
-      "AA": 1.5,
+      "AA": 1.52,
       "PODEMOS": 1.75,
-      "SALF": 1.87
+      "SALF": 1.83
      },
      "central": {
       "congress": {
@@ -624,32 +624,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 196.2,
-        "p05": 178,
+        "mean": 195.7,
+        "p05": 177,
         "p50": 196,
-        "p95": 216
+        "p95": 215
        },
        "investidura": {
-        "mean": 146.1,
+        "mean": 146.4,
         "p05": 127,
-        "p50": 146,
+        "p50": 147,
         "p95": 165
        },
        "senadoDerecha": {
-        "mean": 155.2,
-        "p05": 131,
+        "mean": 154.7,
+        "p05": 130,
         "p50": 158,
-        "p95": 171
+        "p95": 170
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9675,
-       "mayoriaDerechaConCC": 0.9735,
-       "juntsDecisivo": 0.008,
+       "mayoriaDerecha": 0.965,
+       "mayoriaDerechaConCC": 0.972,
+       "juntsDecisivo": 0.009,
        "investiduraSola": 0.007,
-       "investiduraConJunts": 0.015,
-       "senadoMayoriaDerecha": 0.9305,
-       "senado35Derecha": 0.4075
+       "investiduraConJunts": 0.016,
+       "senadoMayoriaDerecha": 0.9255,
+       "senado35Derecha": 0.3915
       }
      }
     },
@@ -660,30 +660,30 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 32.27,
-      "PSOE": 25.89,
-      "VOX": 19.72,
-      "FA": 5.54,
+      "PP": 32.22,
+      "PSOE": 25.95,
+      "VOX": 19.7,
+      "FA": 5.55,
       "FV": 1.1,
       "ERC": 2.35,
-      "JUNTS": 1.36,
-      "BILDU": 1.37,
+      "JUNTS": 1.39,
+      "BILDU": 1.38,
       "PNV": 0.79,
-      "BNG": 0.9,
+      "BNG": 0.91,
       "CC": 0.41,
-      "AA": 1.5,
+      "AA": 1.52,
       "PODEMOS": 1.67,
-      "SALF": 1.87
+      "SALF": 1.83
      },
      "central": {
       "congress": {
-       "PP": 134,
+       "PP": 133,
        "PSOE": 104,
        "VOX": 69,
        "AA": 3,
        "BNG": 2,
        "ERC": 9,
-       "JUNTS": 5,
+       "JUNTS": 6,
        "BILDU": 7,
        "PNV": 3,
        "PODEMOS": 1,
@@ -693,9 +693,9 @@
        "FV": 3
       },
       "blocs": {
-       "derecha": 204,
+       "derecha": 203,
        "investidura": 138,
-       "junts": 5
+       "junts": 6
       },
       "senate": {
        "total": {
@@ -722,32 +722,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 205.2,
+        "mean": 204.7,
         "p05": 186,
-        "p50": 205,
+        "p50": 204,
         "p95": 225
        },
        "investidura": {
-        "mean": 137.2,
-        "p05": 117,
+        "mean": 137.5,
+        "p05": 118,
         "p50": 138,
         "p95": 156
        },
        "senadoDerecha": {
-        "mean": 163.1,
-        "p05": 145,
+        "mean": 162.8,
+        "p05": 144,
         "p50": 165,
         "p95": 175
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9945,
-       "mayoriaDerechaConCC": 0.9965,
-       "juntsDecisivo": 0.0015,
+       "mayoriaDerecha": 0.994,
+       "mayoriaDerechaConCC": 0.9945,
+       "juntsDecisivo": 0.003,
        "investiduraSola": 0.001,
-       "investiduraConJunts": 0.0025,
-       "senadoMayoriaDerecha": 0.9885,
-       "senado35Derecha": 0.685
+       "investiduraConJunts": 0.004,
+       "senadoMayoriaDerecha": 0.9875,
+       "senado35Derecha": 0.67
       }
      },
      "contrary": false
@@ -760,30 +760,30 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 32.27,
-      "PSOE": 25.89,
-      "VOX": 19.72,
-      "FA": 5.54,
+      "PP": 32.22,
+      "PSOE": 25.95,
+      "VOX": 19.7,
+      "FA": 5.55,
       "FV": 1.1,
       "ERC": 2.35,
-      "JUNTS": 1.36,
-      "BILDU": 1.37,
+      "JUNTS": 1.39,
+      "BILDU": 1.38,
       "PNV": 0.79,
-      "BNG": 0.9,
+      "BNG": 0.91,
       "CC": 0.41,
-      "AA": 1.5,
+      "AA": 1.52,
       "PODEMOS": 1.67,
-      "SALF": 1.87
+      "SALF": 1.83
      },
      "central": {
       "congress": {
        "PP": 146,
-       "PSOE": 103,
+       "PSOE": 102,
        "VOX": 58,
        "AA": 3,
        "BNG": 2,
        "ERC": 9,
-       "JUNTS": 5,
+       "JUNTS": 6,
        "BILDU": 7,
        "PNV": 3,
        "PODEMOS": 1,
@@ -794,8 +794,8 @@
       },
       "blocs": {
        "derecha": 205,
-       "investidura": 137,
-       "junts": 5
+       "investidura": 136,
+       "junts": 6
       },
       "senate": {
        "total": {
@@ -822,32 +822,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 206.1,
+        "mean": 205.6,
         "p05": 186,
         "p50": 206,
-        "p95": 226
+        "p95": 225
        },
        "investidura": {
-        "mean": 136.2,
+        "mean": 136.5,
         "p05": 117,
         "p50": 136,
         "p95": 156
        },
        "senadoDerecha": {
-        "mean": 163.1,
-        "p05": 145,
+        "mean": 162.8,
+        "p05": 144,
         "p50": 165,
         "p95": 175
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.9955,
-       "mayoriaDerechaConCC": 0.9965,
-       "juntsDecisivo": 0.0015,
+       "mayoriaDerecha": 0.995,
+       "mayoriaDerechaConCC": 0.995,
+       "juntsDecisivo": 0.002,
        "investiduraSola": 0.001,
-       "investiduraConJunts": 0.0025,
-       "senadoMayoriaDerecha": 0.9885,
-       "senado35Derecha": 0.685
+       "investiduraConJunts": 0.003,
+       "senadoMayoriaDerecha": 0.9875,
+       "senado35Derecha": 0.67
       }
      },
      "contrary": false
@@ -861,30 +861,30 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 32.94,
-      "PSOE": 25.97,
-      "VOX": 20.72,
-      "FA": 5.56,
+      "PP": 32.88,
+      "PSOE": 26.03,
+      "VOX": 20.68,
+      "FA": 5.57,
       "FV": 1.1,
       "ERC": 2.36,
-      "JUNTS": 1.36,
-      "BILDU": 1.38,
+      "JUNTS": 1.39,
+      "BILDU": 1.39,
       "PNV": 0.79,
-      "BNG": 0.91,
+      "BNG": 0.92,
       "CC": 0.41,
-      "AA": 1.51,
+      "AA": 1.52,
       "PODEMOS": 1.67,
       "SALF": 0.05
      },
      "central": {
       "congress": {
        "PP": 147,
-       "PSOE": 100,
+       "PSOE": 99,
        "VOX": 60,
        "AA": 3,
        "BNG": 2,
        "ERC": 9,
-       "JUNTS": 5,
+       "JUNTS": 6,
        "BILDU": 7,
        "PNV": 3,
        "PODEMOS": 1,
@@ -895,8 +895,8 @@
       },
       "blocs": {
        "derecha": 208,
-       "investidura": 134,
-       "junts": 5
+       "investidura": 133,
+       "junts": 6
       },
       "senate": {
        "total": {
@@ -923,32 +923,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 209,
-        "p05": 190,
-        "p50": 209,
-        "p95": 228
+        "mean": 208.4,
+        "p05": 189,
+        "p50": 208,
+        "p95": 227
        },
        "investidura": {
-        "mean": 133.6,
-        "p05": 114,
+        "mean": 134,
+        "p05": 115,
         "p50": 134,
         "p95": 153
        },
        "senadoDerecha": {
-        "mean": 165.7,
+        "mean": 165.3,
         "p05": 149,
         "p50": 167,
         "p95": 177
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.998,
-       "mayoriaDerechaConCC": 0.9985,
-       "juntsDecisivo": 0.0005,
-       "investiduraSola": 0.0005,
+       "mayoriaDerecha": 0.9975,
+       "mayoriaDerechaConCC": 0.998,
+       "juntsDecisivo": 0,
+       "investiduraSola": 0.001,
        "investiduraConJunts": 0.001,
        "senadoMayoriaDerecha": 0.9955,
-       "senado35Derecha": 0.7795
+       "senado35Derecha": 0.7675
       }
      },
      "contrary": false
@@ -963,30 +963,30 @@
      ],
      "skipped": [],
      "poll": {
-      "PP": 33.67,
-      "PSOE": 26.54,
-      "VOX": 21.18,
-      "FA": 4.26,
+      "PP": 33.6,
+      "PSOE": 26.6,
+      "VOX": 21.14,
+      "FA": 4.27,
       "FV": 0.84,
       "ERC": 2.41,
-      "JUNTS": 1.39,
-      "BILDU": 1.41,
+      "JUNTS": 1.43,
+      "BILDU": 1.42,
       "PNV": 0.81,
-      "BNG": 0.93,
+      "BNG": 0.94,
       "CC": 0.42,
-      "AA": 1.54,
+      "AA": 1.56,
       "PODEMOS": 1.28,
       "SALF": 0.05
      },
      "central": {
       "congress": {
        "PP": 149,
-       "PSOE": 104,
+       "PSOE": 103,
        "VOX": 62,
        "AA": 3,
        "BNG": 2,
        "ERC": 9,
-       "JUNTS": 5,
+       "JUNTS": 6,
        "BILDU": 7,
        "PNV": 3,
        "FA": 3,
@@ -996,17 +996,17 @@
       },
       "blocs": {
        "derecha": 212,
-       "investidura": 130,
-       "junts": 5
+       "investidura": 129,
+       "junts": 6
       },
       "senate": {
        "total": {
         "PSOE": 77,
-        "PP": 160,
-        "VOX": 10,
-        "ERC": 3,
+        "FA": 3,
+        "PP": 159,
+        "VOX": 9,
+        "ERC": 4,
         "BILDU": 5,
-        "FA": 2,
         "ASG": 1,
         "AHI": 1,
         "PNV": 1,
@@ -1016,7 +1016,7 @@
         "GBAI": 1,
         "FV": 1
        },
-       "right": 170,
+       "right": 168,
        "size": 267,
        "majority": 134,
        "threeFifths": 161
@@ -1025,19 +1025,19 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 211.7,
-        "p05": 193,
-        "p50": 212,
+        "mean": 211.1,
+        "p05": 192,
+        "p50": 211,
         "p95": 230
        },
        "investidura": {
-        "mean": 130.7,
-        "p05": 112,
+        "mean": 131.1,
+        "p05": 113,
         "p50": 131,
         "p95": 150
        },
        "senadoDerecha": {
-        "mean": 167.5,
+        "mean": 167.2,
         "p05": 153,
         "p50": 168,
         "p95": 179
@@ -1050,7 +1050,7 @@
        "investiduraSola": 0.0005,
        "investiduraConJunts": 0.001,
        "senadoMayoriaDerecha": 0.998,
-       "senado35Derecha": 0.8475
+       "senado35Derecha": 0.8375
       }
      },
      "contrary": false
@@ -1075,11 +1075,11 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.27,
+      "AA": 1.28,
       "PSOE": 39.31,
       "PP": 22.01,
       "VOX": 15.24,
-      "PODEMOS": 2.61,
+      "PODEMOS": 2.62,
       "ERC": 2.53,
       "SALF": 1.52,
       "BILDU": 1.35,
@@ -1134,7 +1134,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 137.8,
+        "mean": 137.7,
         "p05": 116,
         "p50": 137,
         "p95": 161
@@ -1155,8 +1155,8 @@
       "prob": {
        "mayoriaDerecha": 0.0015,
        "mayoriaDerechaConCC": 0.0015,
-       "juntsDecisivo": 0.0045,
-       "investiduraSola": 0.99,
+       "juntsDecisivo": 0.005,
+       "investiduraSola": 0.9895,
        "investiduraConJunts": 0.9945,
        "senadoMayoriaDerecha": 0,
        "senado35Derecha": 0
@@ -1173,7 +1173,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.41,
+      "AA": 1.42,
       "PSOE": 36.12,
       "PP": 22.18,
       "VOX": 16.36,
@@ -1252,9 +1252,9 @@
       },
       "prob": {
        "mayoriaDerecha": 0.014,
-       "mayoriaDerechaConCC": 0.0145,
-       "juntsDecisivo": 0.0315,
-       "investiduraSola": 0.937,
+       "mayoriaDerechaConCC": 0.014,
+       "juntsDecisivo": 0.032,
+       "investiduraSola": 0.9365,
        "investiduraConJunts": 0.9685,
        "senadoMayoriaDerecha": 0.0005,
        "senado35Derecha": 0
@@ -1270,7 +1270,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.41,
+      "AA": 1.42,
       "PSOE": 36.12,
       "PP": 22.18,
       "VOX": 16.36,
@@ -1349,9 +1349,9 @@
       },
       "prob": {
        "mayoriaDerecha": 0.014,
-       "mayoriaDerechaConCC": 0.0145,
-       "juntsDecisivo": 0.0315,
-       "investiduraSola": 0.937,
+       "mayoriaDerechaConCC": 0.014,
+       "juntsDecisivo": 0.032,
+       "investiduraSola": 0.9365,
        "investiduraConJunts": 0.9685,
        "senadoMayoriaDerecha": 0.003,
        "senado35Derecha": 0
@@ -1366,7 +1366,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.41,
+      "AA": 1.42,
       "PSOE": 36.12,
       "PP": 22.18,
       "VOX": 16.36,
@@ -1425,7 +1425,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 147.9,
+        "mean": 147.8,
         "p05": 125,
         "p50": 147,
         "p95": 170
@@ -1444,11 +1444,11 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.0175,
+       "mayoriaDerecha": 0.017,
        "mayoriaDerechaConCC": 0.0175,
-       "juntsDecisivo": 0.035,
+       "juntsDecisivo": 0.0345,
        "investiduraSola": 0.928,
-       "investiduraConJunts": 0.963,
+       "investiduraConJunts": 0.9625,
        "senadoMayoriaDerecha": 0.003,
        "senado35Derecha": 0
       }
@@ -1460,7 +1460,7 @@
      "active": [],
      "skipped": [],
      "poll": {
-      "AA": 1.5,
+      "AA": 1.52,
       "PSOE": 34,
       "PP": 22.3,
       "VOX": 17.1,
@@ -1539,11 +1539,11 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.0445,
-       "mayoriaDerechaConCC": 0.0475,
+       "mayoriaDerecha": 0.044,
+       "mayoriaDerechaConCC": 0.0465,
        "juntsDecisivo": 0.0585,
-       "investiduraSola": 0.848,
-       "investiduraConJunts": 0.9065,
+       "investiduraSola": 0.8475,
+       "investiduraConJunts": 0.906,
        "senadoMayoriaDerecha": 0.0095,
        "senado35Derecha": 0
       }
@@ -1556,7 +1556,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.5,
+      "AA": 1.52,
       "PSOE": 32.63,
       "PP": 23.43,
       "VOX": 17.97,
@@ -1622,7 +1622,7 @@
         "p95": 183
        },
        "investidura": {
-        "mean": 179.2,
+        "mean": 179.1,
         "p05": 159,
         "p50": 179,
         "p95": 202
@@ -1635,11 +1635,11 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.1765,
-       "mayoriaDerechaConCC": 0.1805,
-       "juntsDecisivo": 0.121,
-       "investiduraSola": 0.605,
-       "investiduraConJunts": 0.726,
+       "mayoriaDerecha": 0.176,
+       "mayoriaDerechaConCC": 0.1795,
+       "juntsDecisivo": 0.1225,
+       "investiduraSola": 0.6025,
+       "investiduraConJunts": 0.725,
        "senadoMayoriaDerecha": 0.049,
        "senado35Derecha": 0
       }
@@ -1654,7 +1654,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.5,
+      "AA": 1.52,
       "PSOE": 32.63,
       "PP": 23.43,
       "VOX": 17.97,
@@ -1733,11 +1733,11 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.1805,
-       "mayoriaDerechaConCC": 0.1845,
-       "juntsDecisivo": 0.1105,
-       "investiduraSola": 0.617,
-       "investiduraConJunts": 0.7275,
+       "mayoriaDerecha": 0.18,
+       "mayoriaDerechaConCC": 0.1835,
+       "juntsDecisivo": 0.1085,
+       "investiduraSola": 0.616,
+       "investiduraConJunts": 0.7245,
        "senadoMayoriaDerecha": 0.049,
        "senado35Derecha": 0
       }
@@ -1753,7 +1753,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.51,
+      "AA": 1.53,
       "PSOE": 32.74,
       "PP": 24.05,
       "VOX": 18.93,
@@ -1819,7 +1819,7 @@
         "p95": 187
        },
        "investidura": {
-        "mean": 176,
+        "mean": 175.9,
         "p05": 156,
         "p50": 176,
         "p95": 198
@@ -1832,10 +1832,10 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.2495,
-       "mayoriaDerechaConCC": 0.2555,
-       "juntsDecisivo": 0.135,
-       "investiduraSola": 0.508,
+       "mayoriaDerecha": 0.248,
+       "mayoriaDerechaConCC": 0.2545,
+       "juntsDecisivo": 0.1355,
+       "investiduraSola": 0.5075,
        "investiduraConJunts": 0.643,
        "senadoMayoriaDerecha": 0.0825,
        "senado35Derecha": 0.0005
@@ -1853,7 +1853,7 @@
      ],
      "skipped": [],
      "poll": {
-      "AA": 1.54,
+      "AA": 1.56,
       "PSOE": 33.53,
       "PP": 24.64,
       "VOX": 19.39,
@@ -1932,11 +1932,11 @@
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.3025,
-       "mayoriaDerechaConCC": 0.309,
-       "juntsDecisivo": 0.137,
-       "investiduraSola": 0.438,
-       "investiduraConJunts": 0.575,
+       "mayoriaDerecha": 0.3015,
+       "mayoriaDerechaConCC": 0.3085,
+       "juntsDecisivo": 0.1375,
+       "investiduraSola": 0.4365,
+       "investiduraConJunts": 0.574,
        "senadoMayoriaDerecha": 0.1045,
        "senado35Derecha": 0.0025
       }
@@ -1964,16 +1964,16 @@
      "skipped": [],
      "poll": {
       "ERC": 2.1,
-      "JUNTS": 1.16,
-      "BILDU": 1.22,
+      "JUNTS": 1.18,
+      "BILDU": 1.23,
       "PNV": 0.71,
-      "BNG": 0.81,
+      "BNG": 0.82,
       "CC": 0.37,
-      "AA": 1.28,
+      "AA": 1.29,
       "PP": 27.86,
       "PSOE": 33.61,
       "VOX": 15.79,
-      "PODEMOS": 2.76,
+      "PODEMOS": 2.77,
       "SALF": 1.7,
       "FA": 5.56,
       "FV": 1.01
@@ -1982,8 +1982,8 @@
       "congress": {
        "PP": 114,
        "PSOE": 142,
-       "VOX": 54,
-       "AA": 2,
+       "VOX": 53,
+       "AA": 3,
        "BNG": 2,
        "ERC": 8,
        "JUNTS": 4,
@@ -1996,7 +1996,7 @@
        "FV": 3
       },
       "blocs": {
-       "derecha": 169,
+       "derecha": 168,
        "investidura": 175,
        "junts": 4
       },
@@ -2025,7 +2025,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 167.8,
+        "mean": 167.6,
         "p05": 147,
         "p50": 168,
         "p95": 187
@@ -2037,18 +2037,18 @@
         "p95": 197
        },
        "senadoDerecha": {
-        "mean": 108.9,
+        "mean": 108.8,
         "p05": 81,
         "p50": 108,
         "p95": 141
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.266,
-       "mayoriaDerechaConCC": 0.2915,
-       "juntsDecisivo": 0.13,
-       "investiduraSola": 0.5065,
-       "investiduraConJunts": 0.6365,
+       "mayoriaDerecha": 0.26,
+       "mayoriaDerechaConCC": 0.286,
+       "juntsDecisivo": 0.132,
+       "investiduraSola": 0.5055,
+       "investiduraConJunts": 0.6375,
        "senadoMayoriaDerecha": 0.1115,
        "senado35Derecha": 0.001
       }
@@ -2065,12 +2065,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.32,
-      "JUNTS": 1.28,
-      "BILDU": 1.35,
+      "JUNTS": 1.31,
+      "BILDU": 1.36,
       "PNV": 0.78,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.41,
+      "AA": 1.43,
       "PP": 28.03,
       "PSOE": 30.42,
       "VOX": 16.91,
@@ -2081,8 +2081,8 @@
      },
      "central": {
       "congress": {
-       "PP": 113,
-       "PSOE": 130,
+       "PP": 112,
+       "PSOE": 131,
        "VOX": 63,
        "AA": 3,
        "BNG": 2,
@@ -2097,8 +2097,8 @@
        "FV": 3
       },
       "blocs": {
-       "derecha": 177,
-       "investidura": 165,
+       "derecha": 176,
+       "investidura": 166,
        "junts": 5
       },
       "senate": {
@@ -2107,9 +2107,9 @@
         "FA": 9,
         "BILDU": 6,
         "PP": 120,
-        "ERC": 4,
-        "VOX": 5,
+        "ERC": 5,
         "FV": 2,
+        "VOX": 4,
         "AHI": 1,
         "PNV": 1,
         "CC": 1,
@@ -2117,7 +2117,7 @@
         "BNG": 1,
         "GBAI": 1
        },
-       "right": 125,
+       "right": 124,
        "size": 267,
        "majority": 134,
        "threeFifths": 161
@@ -2126,32 +2126,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 175.8,
+        "mean": 175.6,
         "p05": 156,
         "p50": 176,
         "p95": 195
        },
        "investidura": {
-        "mean": 167.1,
+        "mean": 167,
         "p05": 148,
         "p50": 167,
         "p95": 187
        },
        "senadoDerecha": {
-        "mean": 122.2,
+        "mean": 122.1,
         "p05": 90,
         "p50": 123,
         "p95": 153
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.521,
-       "mayoriaDerechaConCC": 0.5495,
-       "juntsDecisivo": 0.1305,
-       "investiduraSola": 0.244,
-       "investiduraConJunts": 0.3745,
-       "senadoMayoriaDerecha": 0.3135,
-       "senado35Derecha": 0.0115
+       "mayoriaDerecha": 0.518,
+       "mayoriaDerechaConCC": 0.547,
+       "juntsDecisivo": 0.1315,
+       "investiduraSola": 0.245,
+       "investiduraConJunts": 0.3765,
+       "senadoMayoriaDerecha": 0.3125,
+       "senado35Derecha": 0.011
       }
      },
      "contrary": false
@@ -2165,12 +2165,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.32,
-      "JUNTS": 1.28,
-      "BILDU": 1.35,
+      "JUNTS": 1.31,
+      "BILDU": 1.36,
       "PNV": 0.78,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.41,
+      "AA": 1.43,
       "PP": 28.03,
       "PSOE": 30.42,
       "VOX": 16.91,
@@ -2181,8 +2181,8 @@
      },
      "central": {
       "congress": {
-       "PP": 113,
-       "PSOE": 130,
+       "PP": 112,
+       "PSOE": 131,
        "VOX": 63,
        "AA": 3,
        "BNG": 2,
@@ -2197,8 +2197,8 @@
        "FV": 3
       },
       "blocs": {
-       "derecha": 177,
-       "investidura": 165,
+       "derecha": 176,
+       "investidura": 166,
        "junts": 5
       },
       "senate": {
@@ -2226,32 +2226,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 175.8,
+        "mean": 175.6,
         "p05": 156,
         "p50": 176,
         "p95": 195
        },
        "investidura": {
-        "mean": 167.1,
+        "mean": 167,
         "p05": 148,
         "p50": 167,
         "p95": 187
        },
        "senadoDerecha": {
-        "mean": 128.8,
-        "p05": 97,
+        "mean": 128.7,
+        "p05": 96,
         "p50": 130,
         "p95": 158
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.521,
-       "mayoriaDerechaConCC": 0.5495,
-       "juntsDecisivo": 0.1305,
-       "investiduraSola": 0.244,
-       "investiduraConJunts": 0.3745,
-       "senadoMayoriaDerecha": 0.434,
-       "senado35Derecha": 0.0285
+       "mayoriaDerecha": 0.518,
+       "mayoriaDerechaConCC": 0.547,
+       "juntsDecisivo": 0.1315,
+       "investiduraSola": 0.245,
+       "investiduraConJunts": 0.3765,
+       "senadoMayoriaDerecha": 0.433,
+       "senado35Derecha": 0.0275
       }
      },
      "contrary": false
@@ -2264,12 +2264,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.32,
-      "JUNTS": 1.28,
-      "BILDU": 1.35,
+      "JUNTS": 1.31,
+      "BILDU": 1.36,
       "PNV": 0.78,
-      "BNG": 0.89,
+      "BNG": 0.9,
       "CC": 0.4,
-      "AA": 1.41,
+      "AA": 1.43,
       "PP": 28.03,
       "PSOE": 30.42,
       "VOX": 16.91,
@@ -2325,32 +2325,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 176.8,
+        "mean": 176.6,
         "p05": 157,
         "p50": 177,
         "p95": 196
        },
        "investidura": {
-        "mean": 166.1,
+        "mean": 166,
         "p05": 147,
         "p50": 166,
         "p95": 186
        },
        "senadoDerecha": {
-        "mean": 128.8,
-        "p05": 97,
+        "mean": 128.7,
+        "p05": 96,
         "p50": 130,
         "p95": 158
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.5525,
-       "mayoriaDerechaConCC": 0.5795,
-       "juntsDecisivo": 0.1235,
-       "investiduraSola": 0.219,
-       "investiduraConJunts": 0.3425,
-       "senadoMayoriaDerecha": 0.434,
-       "senado35Derecha": 0.0285
+       "mayoriaDerecha": 0.5475,
+       "mayoriaDerechaConCC": 0.575,
+       "juntsDecisivo": 0.126,
+       "investiduraSola": 0.2185,
+       "investiduraConJunts": 0.3445,
+       "senadoMayoriaDerecha": 0.433,
+       "senado35Derecha": 0.0275
       }
      },
      "contrary": false
@@ -2361,12 +2361,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.47,
-      "JUNTS": 1.36,
-      "BILDU": 1.44,
+      "JUNTS": 1.39,
+      "BILDU": 1.45,
       "PNV": 0.83,
-      "BNG": 0.95,
+      "BNG": 0.96,
       "CC": 0.43,
-      "AA": 1.5,
+      "AA": 1.52,
       "PP": 28.15,
       "PSOE": 28.3,
       "VOX": 17.65,
@@ -2422,7 +2422,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 181.9,
+        "mean": 181.7,
         "p05": 162,
         "p50": 182,
         "p95": 201
@@ -2434,20 +2434,20 @@
         "p95": 180
        },
        "senadoDerecha": {
-        "mean": 137.5,
+        "mean": 137.4,
         "p05": 106,
         "p50": 140,
         "p95": 162
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.713,
-       "mayoriaDerechaConCC": 0.746,
-       "juntsDecisivo": 0.104,
-       "investiduraSola": 0.0925,
-       "investiduraConJunts": 0.1965,
-       "senadoMayoriaDerecha": 0.612,
-       "senado35Derecha": 0.076
+       "mayoriaDerecha": 0.7055,
+       "mayoriaDerechaConCC": 0.7395,
+       "juntsDecisivo": 0.107,
+       "investiduraSola": 0.093,
+       "investiduraConJunts": 0.2,
+       "senadoMayoriaDerecha": 0.6105,
+       "senado35Derecha": 0.0745
       }
      }
     },
@@ -2459,12 +2459,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.36,
-      "JUNTS": 1.36,
-      "BILDU": 1.38,
+      "JUNTS": 1.39,
+      "BILDU": 1.39,
       "PNV": 0.79,
-      "BNG": 0.91,
+      "BNG": 0.92,
       "CC": 0.41,
-      "AA": 1.5,
+      "AA": 1.52,
       "PP": 29.38,
       "PSOE": 27.05,
       "VOX": 18.42,
@@ -2520,32 +2520,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 190.9,
+        "mean": 190.7,
         "p05": 172,
         "p50": 191,
         "p95": 210
        },
        "investidura": {
-        "mean": 151.2,
+        "mean": 151.1,
         "p05": 132,
         "p50": 151,
         "p95": 170
        },
        "senadoDerecha": {
-        "mean": 149.6,
+        "mean": 149.5,
         "p05": 122,
         "p50": 152,
         "p95": 168
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.907,
-       "mayoriaDerechaConCC": 0.925,
-       "juntsDecisivo": 0.0275,
+       "mayoriaDerecha": 0.905,
+       "mayoriaDerechaConCC": 0.9245,
+       "juntsDecisivo": 0.029,
        "investiduraSola": 0.0175,
-       "investiduraConJunts": 0.045,
-       "senadoMayoriaDerecha": 0.8485,
-       "senado35Derecha": 0.2655
+       "investiduraConJunts": 0.0465,
+       "senadoMayoriaDerecha": 0.8465,
+       "senado35Derecha": 0.262
       }
      },
      "contrary": false
@@ -2559,12 +2559,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.36,
-      "JUNTS": 1.36,
-      "BILDU": 1.38,
+      "JUNTS": 1.39,
+      "BILDU": 1.39,
       "PNV": 0.79,
-      "BNG": 0.91,
+      "BNG": 0.92,
       "CC": 0.41,
-      "AA": 1.5,
+      "AA": 1.52,
       "PP": 29.38,
       "PSOE": 27.05,
       "VOX": 18.42,
@@ -2620,7 +2620,7 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 191.4,
+        "mean": 191.2,
         "p05": 172,
         "p50": 191,
         "p95": 211
@@ -2632,20 +2632,20 @@
         "p95": 170
        },
        "senadoDerecha": {
-        "mean": 149.6,
+        "mean": 149.5,
         "p05": 122,
         "p50": 152,
         "p95": 168
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.906,
-       "mayoriaDerechaConCC": 0.923,
-       "juntsDecisivo": 0.027,
+       "mayoriaDerecha": 0.904,
+       "mayoriaDerechaConCC": 0.9205,
+       "juntsDecisivo": 0.0295,
        "investiduraSola": 0.0185,
-       "investiduraConJunts": 0.0455,
-       "senadoMayoriaDerecha": 0.8485,
-       "senado35Derecha": 0.2655
+       "investiduraConJunts": 0.048,
+       "senadoMayoriaDerecha": 0.8465,
+       "senado35Derecha": 0.262
       }
      },
      "contrary": false
@@ -2660,12 +2660,12 @@
      "skipped": [],
      "poll": {
       "ERC": 2.37,
-      "JUNTS": 1.36,
-      "BILDU": 1.38,
+      "JUNTS": 1.4,
+      "BILDU": 1.39,
       "PNV": 0.8,
-      "BNG": 0.91,
+      "BNG": 0.92,
       "CC": 0.41,
-      "AA": 1.51,
+      "AA": 1.53,
       "PP": 30.09,
       "PSOE": 27.15,
       "VOX": 19.49,
@@ -2721,32 +2721,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 194.9,
+        "mean": 194.7,
         "p05": 176,
         "p50": 195,
         "p95": 214
        },
        "investidura": {
         "mean": 147.5,
-        "p05": 129,
+        "p05": 128,
         "p50": 147,
-        "p95": 167
+        "p95": 166
        },
        "senadoDerecha": {
         "mean": 153.6,
         "p05": 128,
         "p50": 156,
-        "p95": 171
+        "p95": 170
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.954,
-       "mayoriaDerechaConCC": 0.963,
+       "mayoriaDerecha": 0.9525,
+       "mayoriaDerechaConCC": 0.9625,
        "juntsDecisivo": 0.0125,
        "investiduraSola": 0.0085,
        "investiduraConJunts": 0.021,
-       "senadoMayoriaDerecha": 0.913,
-       "senado35Derecha": 0.3695
+       "senadoMayoriaDerecha": 0.911,
+       "senado35Derecha": 0.3655
       }
      },
      "contrary": false
@@ -2762,15 +2762,15 @@
      "skipped": [],
      "poll": {
       "ERC": 2.44,
-      "JUNTS": 1.4,
-      "BILDU": 1.42,
+      "JUNTS": 1.43,
+      "BILDU": 1.43,
       "PNV": 0.82,
-      "BNG": 0.94,
+      "BNG": 0.95,
       "CC": 0.42,
-      "AA": 1.55,
+      "AA": 1.57,
       "PP": 30.93,
       "PSOE": 27.91,
-      "VOX": 20.04,
+      "VOX": 20.03,
       "PODEMOS": 2.4,
       "SALF": 0.05,
       "FA": 4.74,
@@ -2823,32 +2823,32 @@
      "montecarlo": {
       "blocs": {
        "derecha": {
-        "mean": 198.2,
+        "mean": 198.1,
         "p05": 179,
         "p50": 198,
         "p95": 217
        },
        "investidura": {
-        "mean": 143.9,
+        "mean": 143.8,
         "p05": 125,
         "p50": 144,
-        "p95": 163
+        "p95": 162
        },
        "senadoDerecha": {
-        "mean": 156.8,
-        "p05": 134,
+        "mean": 156.7,
+        "p05": 133,
         "p50": 159,
         "p95": 172
        }
       },
       "prob": {
-       "mayoriaDerecha": 0.979,
-       "mayoriaDerechaConCC": 0.982,
+       "mayoriaDerecha": 0.978,
+       "mayoriaDerechaConCC": 0.9815,
        "juntsDecisivo": 0.0105,
        "investiduraSola": 0.002,
        "investiduraConJunts": 0.0125,
-       "senadoMayoriaDerecha": 0.95,
-       "senado35Derecha": 0.4605
+       "senadoMayoriaDerecha": 0.9495,
+       "senado35Derecha": 0.4575
       }
      },
      "contrary": false

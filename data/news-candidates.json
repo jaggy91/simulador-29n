@@ -108,5 +108,25 @@
   "status": "confirmado",
   "quote": "El Supremo descarta suspender el voto a los hijos de los nacionalizados por la 'ley de nietos'",
   "at": "2026-11-09T18:48:21.398Z"
+ },
+ {
+  "outlet": "El Mundo",
+  "title": "El voto útil no compra todas las conciencias en Teruel: \"Yo no votaré al PSOE\"",
+  "link": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/09/6af1f5cde4d4d8c61f8b4579.html",
+  "date": "2026-11-09T21:42:24.000Z",
+  "scenario": "TERUEL_sin_FA_CHA",
+  "status": "confirmado",
+  "quote": "Chunta tomó la decisión de no concurrir con ningún candidato en la provincia en la provincia para \"evitar la dispersión del voto\".",
+  "at": "2026-11-10T02:05:45.242Z"
+ },
+ {
+  "outlet": "El Mundo",
+  "title": "El Supremo rechaza suspender el voto a los casi 190.000 hijos de los nacionalizados por la 'ley de nietos': \"Se nos ha pedido a una semana de la campaña\"",
+  "link": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/09/6af1c361e9cf4ab4658b4571.html",
+  "date": "2026-11-09T15:08:42.000Z",
+  "scenario": "VOTO_EXTERIOR",
+  "status": "confirmado",
+  "quote": "El Supremo rechaza suspender el voto a los casi 190.000 hijos de los nacionalizados por la 'ley de nietos'",
+  "at": "2026-11-10T02:05:46.043Z"
  }
 ]
