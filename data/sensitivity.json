@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T02:08:44.178Z",
+ "updated": "2026-11-10T09:53:41.825Z",
  "latestPoll": "2026-11-08",
  "n": 2000,
  "base": {
@@ -27,9 +27,9 @@
     "senado": 161
    },
    "error2023": {
-    "derecha": 186,
-    "investidura": 158,
-    "senado": 141
+    "derecha": 188,
+    "investidura": 157,
+    "senado": 143
    }
   },
   "cisOficial": {
@@ -51,7 +51,7 @@
     "senado": 140
    },
    "error2023": {
-    "derecha": 169,
+    "derecha": 170,
     "investidura": 174,
     "senado": 115
    }
@@ -89,7 +89,7 @@
       "media": {
        "derecha": 195,
        "investidura": 147,
-       "senado": 161
+       "senado": 162
       },
       "cisOficial": {
        "derecha": 155,
@@ -342,17 +342,17 @@
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": 0,
+      "derecha": 1,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": 0,
+      "derecha": 1,
       "senado": 0
      }
     ],
-    "firstMove": null
+    "firstMove": 0.8
    },
    "todoPSOE": {
     "at": [
@@ -365,7 +365,7 @@
      {
       "turnout": 0.15,
       "votes": 24453,
-      "derecha": -1,
+      "derecha": 0,
       "senado": 0
      },
      {
@@ -377,29 +377,29 @@
      {
       "turnout": 0.4,
       "votes": 65208,
-      "derecha": -2,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.6,
       "votes": 97812,
-      "derecha": -3,
+      "derecha": -1,
       "senado": 0
      },
      {
       "turnout": 0.8,
       "votes": 130416,
-      "derecha": -3,
+      "derecha": -2,
       "senado": 0
      },
      {
       "turnout": 1,
       "votes": 163020,
-      "derecha": -4,
+      "derecha": -3,
       "senado": 0
      }
     ],
-    "firstMove": 0.15
+    "firstMove": 0.25
    }
   },
   "cisOficial": {
@@ -597,19 +597,19 @@
  },
  "noise": {
   "media": {
-   "historico": 0.965,
-   "video": 0.992,
-   "conCC": 0.972
+   "historico": 0.9645,
+   "video": 0.993,
+   "conCC": 0.973
   },
   "cisOficial": {
-   "historico": 0.044,
-   "video": 0.012,
-   "conCC": 0.0465
+   "historico": 0.0445,
+   "video": 0.0125,
+   "conCC": 0.0475
   },
   "cis": {
-   "historico": 0.7055,
-   "video": 0.773,
-   "conCC": 0.7395
+   "historico": 0.709,
+   "video": 0.7735,
+   "conCC": 0.7405
   }
  }
 }
