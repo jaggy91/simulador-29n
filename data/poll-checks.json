@@ -1,13 +1,13 @@
 {
- "SW Demoscopia/La Séptima|2026-11-09": {
+ "SW Demoscopia/La Séptima|2026-11-10": {
   "status": "no verificada",
   "channel": null,
   "url": null,
   "tried": [
-   "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, FA+FV"
+   "publicación original: faltan PP, PSOE, VOX, JUNTS, PODEMOS, FA+FV"
   ],
-  "hash": "[{\"PP\":28.5,\"PSOE\":31.2,\"VOX\":17.5,\"ERC\":2.6,\"JUNTS\":1.3,\"BILDU\":1.4,\"PNV\":0.8,\"BNG\":1,\"CC\":0.4,\"AA\":1.4,\"PODEMOS\":1.7,\"SALF\":2},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.5}]]",
-  "checked": "2026-11-10T23:18:14.329Z"
+  "hash": "[{\"PP\":28.3,\"PSOE\":31.4,\"VOX\":17.5,\"ERC\":2.7,\"JUNTS\":1.2,\"BILDU\":1.4,\"PNV\":0.8,\"BNG\":1,\"CC\":0.4,\"AA\":1.4,\"PODEMOS\":1.7,\"SALF\":2},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.4}]]",
+  "checked": "2026-11-11T21:28:03.995Z"
  },
  "SocioMétrica/El Español|2026-11-08": {
   "status": "no verificada",

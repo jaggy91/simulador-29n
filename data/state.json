@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-11T14:20:23.595Z",
- "latestPoll": "2026-11-09",
+ "updated": "2026-11-11T21:30:55.401Z",
+ "latestPoll": "2026-11-10",
  "scenarios": [
   {
    "id": "PODEMOS_SEPARADO",
@@ -49,11 +49,11 @@
   "media": {
    "label": "Media de encuestas",
    "poll": {
-    "PP": 31.06,
-    "PSOE": 27.3,
-    "VOX": 18.93,
-    "ERC": 2.49,
-    "JUNTS": 1.37,
+    "PP": 31,
+    "PSOE": 27.38,
+    "VOX": 18.91,
+    "ERC": 2.51,
+    "JUNTS": 1.35,
     "BILDU": 1.44,
     "PNV": 0.83,
     "BNG": 0.97,
@@ -62,12 +62,12 @@
     "PODEMOS": 1.75,
     "SALF": 1.76,
     "FA": 5.76,
-    "FV": 1.14
+    "FV": 1.13
    },
    "central": {
     "congress": {
-     "PP": 128,
-     "PSOE": 113,
+     "PP": 126,
+     "PSOE": 115,
      "VOX": 66,
      "AA": 3,
      "BNG": 2,
@@ -82,8 +82,8 @@
      "FV": 3
     },
     "blocs": {
-     "derecha": 195,
-     "investidura": 147,
+     "derecha": 193,
+     "investidura": 149,
      "junts": 5
     },
     "senate": {
@@ -144,8 +144,8 @@
       "VOX": 1
      },
      "15": {
-      "PP": 5,
-      "PSOE": 2,
+      "PP": 4,
+      "PSOE": 3,
       "BNG": 1
      },
      "16": {
@@ -348,8 +348,8 @@
       "VOX": 1
      },
      "03": {
-      "PP": 5,
-      "PSOE": 3,
+      "PP": 4,
+      "PSOE": 4,
       "VOX": 3,
       "FV": 1
      },
@@ -391,20 +391,20 @@
    "montecarlo": {
     "n": 5000,
     "seats": {
-     "PP": 127.8,
-     "PSOE": 110.1,
-     "VOX": 67.2,
+     "PP": 127.5,
+     "PSOE": 110.5,
+     "VOX": 67.1,
      "AA": 2.6,
      "BNG": 3.2,
-     "ERC": 9.7,
-     "JUNTS": 5.1,
+     "ERC": 9.8,
+     "JUNTS": 5,
      "BILDU": 7.3,
      "PNV": 3.5,
      "PODEMOS": 0.8,
      "FA": 7.8,
      "UPN": 1,
      "CC": 1.2,
-     "FV": 2.8,
+     "FV": 2.7,
      "CUP": 0,
      "NC": 0,
      "EXISTE": 0,
@@ -413,19 +413,19 @@
     },
     "seatIntervals": {
      "PP": {
-      "mean": 127.8,
+      "mean": 127.5,
       "p05": 112,
-      "p50": 128,
+      "p50": 127,
       "p95": 144
      },
      "PSOE": {
-      "mean": 110.1,
-      "p05": 94,
-      "p50": 110,
+      "mean": 110.5,
+      "p05": 95,
+      "p50": 111,
       "p95": 126
      },
      "VOX": {
-      "mean": 67.2,
+      "mean": 67.1,
       "p05": 56,
       "p50": 67,
       "p95": 79
@@ -443,14 +443,14 @@
       "p95": 6
      },
      "ERC": {
-      "mean": 9.7,
+      "mean": 9.8,
       "p05": 6,
       "p50": 9,
       "p95": 14
      },
      "JUNTS": {
-      "mean": 5.1,
-      "p05": 2,
+      "mean": 5,
+      "p05": 1,
       "p50": 5,
       "p95": 8
      },
@@ -491,7 +491,7 @@
       "p95": 3
      },
      "FV": {
-      "mean": 2.8,
+      "mean": 2.7,
       "p05": 1,
       "p50": 3,
       "p95": 5
@@ -499,32 +499,32 @@
     },
     "blocs": {
      "derecha": {
-      "mean": 195.9,
+      "mean": 195.6,
       "p05": 177,
-      "p50": 196,
+      "p50": 195,
       "p95": 215
      },
      "investidura": {
-      "mean": 146.3,
-      "p05": 127,
-      "p50": 146,
+      "mean": 146.7,
+      "p05": 128,
+      "p50": 147,
       "p95": 165
      },
      "senadoDerecha": {
-      "mean": 155,
+      "mean": 154.6,
       "p05": 130,
-      "p50": 158,
-      "p95": 171
+      "p50": 157,
+      "p95": 170
      }
     },
     "prob": {
-     "mayoriaDerecha": 0.9638,
-     "mayoriaDerechaConCC": 0.9712,
-     "juntsDecisivo": 0.0114,
-     "investiduraSola": 0.0072,
-     "investiduraConJunts": 0.0186,
-     "senadoMayoriaDerecha": 0.9288,
-     "senado35Derecha": 0.4056
+     "mayoriaDerecha": 0.9604,
+     "mayoriaDerechaConCC": 0.9696,
+     "juntsDecisivo": 0.012,
+     "investiduraSola": 0.0076,
+     "investiduraConJunts": 0.0196,
+     "senadoMayoriaDerecha": 0.924,
+     "senado35Derecha": 0.393
     },
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
@@ -539,8 +539,8 @@
      "seats": 8,
      "gains": "FA",
      "loses": "PSOE",
-     "need": 51,
-     "pctOfValid": 0.009618939125317803
+     "need": 182,
+     "pctOfValid": 0.03432628072862246
     },
     {
      "id": "51",
@@ -548,8 +548,17 @@
      "seats": 1,
      "gains": "VOX",
      "loses": "PP",
-     "need": 194,
-     "pctOfValid": 0.5400590167585324
+     "need": 183,
+     "pctOfValid": 0.5094229323831528
+    },
+    {
+     "id": "15",
+     "name": "A Coruña",
+     "seats": 8,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 200,
+     "pctOfValid": 0.0289328410892636
     },
     {
      "id": "34",
@@ -557,8 +566,17 @@
      "seats": 3,
      "gains": "PP",
      "loses": "VOX",
-     "need": 299,
-     "pctOfValid": 0.2963946906690193
+     "need": 333,
+     "pctOfValid": 0.33009516256938937
+    },
+    {
+     "id": "03",
+     "name": "Alicante",
+     "seats": 12,
+     "gains": "PP",
+     "loses": "PSOE",
+     "need": 338,
+     "pctOfValid": 0.03545827725225627
     },
     {
      "id": "26",
@@ -566,8 +584,8 @@
      "seats": 4,
      "gains": "VOX",
      "loses": "PSOE",
-     "need": 533,
-     "pctOfValid": 0.29438405797101447
+     "need": 652,
+     "pctOfValid": 0.3601115683079727
     },
     {
      "id": "49",
@@ -575,26 +593,8 @@
      "seats": 3,
      "gains": "VOX",
      "loses": "PP",
-     "need": 693,
-     "pctOfValid": 0.6489371664013485
-    },
-    {
-     "id": "15",
-     "name": "A Coruña",
-     "seats": 8,
-     "gains": "PSOE",
-     "loses": "PP",
-     "need": 725,
-     "pctOfValid": 0.10488154894858055
-    },
-    {
-     "id": "03",
-     "name": "Alicante",
-     "seats": 12,
-     "gains": "PSOE",
-     "loses": "PP",
-     "need": 1021,
-     "pctOfValid": 0.10710917477678594
+     "need": 673,
+     "pctOfValid": 0.6302029197216994
     },
     {
      "id": "40",
@@ -602,8 +602,8 @@
      "seats": 3,
      "gains": "PP",
      "loses": "VOX",
-     "need": 1113,
-     "pctOfValid": 1.2033343063799422
+     "need": 1145,
+     "pctOfValid": 1.2379181352303934
     },
     {
      "id": "25",
@@ -611,26 +611,8 @@
      "seats": 4,
      "gains": "PP",
      "loses": "PSOE",
-     "need": 1244,
-     "pctOfValid": 0.6588913253037574
-    },
-    {
-     "id": "43",
-     "name": "Tarragona",
-     "seats": 6,
-     "gains": "JUNTS",
-     "loses": "PSOE",
-     "need": 1285,
-     "pctOfValid": 0.3377472651670863
-    },
-    {
-     "id": "01",
-     "name": "Álava",
-     "seats": 4,
-     "gains": "PNV",
-     "loses": "PSOE",
-     "need": 1875,
-     "pctOfValid": 1.083946606235439
+     "need": 1372,
+     "pctOfValid": 0.7266795195017055
     },
     {
      "id": "38",
@@ -638,8 +620,8 @@
      "seats": 7,
      "gains": "PSOE",
      "loses": "FA",
-     "need": 2157,
-     "pctOfValid": 0.41211861832313385
+     "need": 1692,
+     "pctOfValid": 0.32327462676301216
     },
     {
      "id": "04",
@@ -647,8 +629,26 @@
      "seats": 6,
      "gains": "PSOE",
      "loses": "PP",
-     "need": 2244,
-     "pctOfValid": 0.6344610756433673
+     "need": 1834,
+     "pctOfValid": 0.5185405092101729
+    },
+    {
+     "id": "43",
+     "name": "Tarragona",
+     "seats": 6,
+     "gains": "JUNTS",
+     "loses": "PSOE",
+     "need": 1901,
+     "pctOfValid": 0.49965305521678793
+    },
+    {
+     "id": "01",
+     "name": "Álava",
+     "seats": 4,
+     "gains": "PNV",
+     "loses": "PSOE",
+     "need": 1923,
+     "pctOfValid": 1.1116956393550663
     },
     {
      "id": "33",
@@ -656,8 +656,8 @@
      "seats": 7,
      "gains": "VOX",
      "loses": "PSOE",
-     "need": 2739,
-     "pctOfValid": 0.44419937886687805
+     "need": 3253,
+     "pctOfValid": 0.5275577142949814
     },
     {
      "id": "27",
@@ -665,8 +665,8 @@
      "seats": 4,
      "gains": "BNG",
      "loses": "PP",
-     "need": 3698,
-     "pctOfValid": 1.832117041462919
+     "need": 3636,
+     "pctOfValid": 1.8014090228990993
     },
     {
      "id": "22",
@@ -674,8 +674,8 @@
      "seats": 3,
      "gains": "PP",
      "loses": "VOX",
-     "need": 3907,
-     "pctOfValid": 3.112998581741112
+     "need": 3941,
+     "pctOfValid": 3.140088920051631
     },
     {
      "id": "42",
@@ -683,8 +683,8 @@
      "seats": 2,
      "gains": "SY",
      "loses": "PSOE",
-     "need": 4022,
-     "pctOfValid": 7.683050297044834
+     "need": 4061,
+     "pctOfValid": 7.757550287493553
     },
     {
      "id": "32",
@@ -692,8 +692,8 @@
      "seats": 4,
      "gains": "BNG",
      "loses": "PP",
-     "need": 4681,
-     "pctOfValid": 2.4683220577611618
+     "need": 4623,
+     "pctOfValid": 2.4377511310785587
     },
     {
      "id": "44",
@@ -701,8 +701,8 @@
      "seats": 3,
      "gains": "EXISTE",
      "loses": "VOX",
-     "need": 4927,
-     "pctOfValid": 6.29817586828414
+     "need": 4907,
+     "pctOfValid": 6.272369362920544
     },
     {
      "id": "17",
@@ -710,8 +710,8 @@
      "seats": 6,
      "gains": "ERC",
      "loses": "PP",
-     "need": 5632,
-     "pctOfValid": 1.7065167000475716
+     "need": 4966,
+     "pctOfValid": 1.5047208115675033
     },
     {
      "id": "10",
@@ -719,17 +719,8 @@
      "seats": 4,
      "gains": "PSOE",
      "loses": "PP",
-     "need": 5657,
-     "pctOfValid": 2.323938165251435
-    },
-    {
-     "id": "52",
-     "name": "Melilla",
-     "seats": 1,
-     "gains": "VOX",
-     "loses": "PP",
-     "need": 6066,
-     "pctOfValid": 20.951196767174388
+     "need": 5233,
+     "pctOfValid": 2.1497557749267737
     },
     {
      "id": "36",
@@ -737,8 +728,17 @@
      "seats": 7,
      "gains": "PSOE",
      "loses": "PP",
-     "need": 6170,
-     "pctOfValid": 1.0527608953074505
+     "need": 5357,
+     "pctOfValid": 0.9140421582110231
+    },
+    {
+     "id": "52",
+     "name": "Melilla",
+     "seats": 1,
+     "gains": "VOX",
+     "loses": "PP",
+     "need": 6051,
+     "pctOfValid": 20.900110527770103
     },
     {
      "id": "05",
@@ -746,17 +746,17 @@
      "seats": 3,
      "gains": "PP",
      "loses": "PSOE",
-     "need": 6466,
-     "pctOfValid": 6.335488928081521
+     "need": 6691,
+     "pctOfValid": 6.5560117187117255
     },
     {
-     "id": "28",
-     "name": "Madrid",
-     "seats": 38,
+     "id": "20",
+     "name": "Gipuzkoa",
+     "seats": 6,
      "gains": "PP",
-     "loses": "PSOE",
-     "need": 7030,
-     "pctOfValid": 0.18542594290938316
+     "loses": "BILDU",
+     "need": 8197,
+     "pctOfValid": 2.1462104213086723
     }
    ]
   },
@@ -1457,8 +1457,8 @@
   "cis": {
    "label": "CIS · reestimaciones independientes",
    "poll": {
-    "ERC": 2.49,
-    "JUNTS": 1.37,
+    "ERC": 2.51,
+    "JUNTS": 1.35,
     "BILDU": 1.44,
     "PNV": 0.83,
     "BNG": 0.97,
@@ -1805,8 +1805,8 @@
      "FA": 10.6,
      "AA": 2.7,
      "BNG": 3.4,
-     "ERC": 9.9,
-     "JUNTS": 5.2,
+     "ERC": 10,
+     "JUNTS": 5.1,
      "BILDU": 7.5,
      "PNV": 3.7,
      "PODEMOS": 2.4,
@@ -1857,13 +1857,13 @@
       "p95": 6
      },
      "ERC": {
-      "mean": 9.9,
+      "mean": 10,
       "p05": 7,
-      "p50": 9,
+      "p50": 10,
       "p95": 14
      },
      "JUNTS": {
-      "mean": 5.2,
+      "mean": 5.1,
       "p05": 2,
       "p50": 5,
       "p95": 8
@@ -1913,7 +1913,7 @@
       "p95": 201
      },
      "investidura": {
-      "mean": 159.9,
+      "mean": 160,
       "p05": 141,
       "p50": 160,
       "p95": 180
@@ -1926,13 +1926,13 @@
      }
     },
     "prob": {
-     "mayoriaDerecha": 0.7148,
-     "mayoriaDerechaConCC": 0.747,
-     "juntsDecisivo": 0.0986,
-     "investiduraSola": 0.0928,
-     "investiduraConJunts": 0.1914,
-     "senadoMayoriaDerecha": 0.6222,
-     "senado35Derecha": 0.0848
+     "mayoriaDerecha": 0.7146,
+     "mayoriaDerechaConCC": 0.7468,
+     "juntsDecisivo": 0.0972,
+     "investiduraSola": 0.093,
+     "investiduraConJunts": 0.1902,
+     "senadoMayoriaDerecha": 0.622,
+     "senado35Derecha": 0.0836
     },
     "scenarioFrequency": {
      "SENADO_PROGRESO": 1,
@@ -1948,7 +1948,7 @@
      "gains": "PSOE",
      "loses": "PP",
      "need": 81,
-     "pctOfValid": 0.010649305231438326
+     "pctOfValid": 0.01064929123050588
     },
     {
      "id": "49",
@@ -1965,8 +1965,8 @@
      "seats": 1,
      "gains": "PP",
      "loses": "VOX",
-     "need": 125,
-     "pctOfValid": 0.34795679768399956
+     "need": 124,
+     "pctOfValid": 0.3451635351426583
     },
     {
      "id": "29",
@@ -1974,8 +1974,8 @@
      "seats": 11,
      "gains": "FA",
      "loses": "VOX",
-     "need": 241,
-     "pctOfValid": 0.026186942169235016
+     "need": 240,
+     "pctOfValid": 0.02607828265815935
     },
     {
      "id": "27",
@@ -1987,22 +1987,22 @@
      "pctOfValid": 0.2828945412748586
     },
     {
+     "id": "17",
+     "name": "Girona",
+     "seats": 6,
+     "gains": "ERC",
+     "loses": "PSOE",
+     "need": 794,
+     "pctOfValid": 0.24058491829505893
+    },
+    {
      "id": "38",
      "name": "Santa Cruz de Tenerife",
      "seats": 7,
      "gains": "PSOE",
      "loses": "PP",
      "need": 989,
-     "pctOfValid": 0.18895934794695382
-    },
-    {
-     "id": "17",
-     "name": "Girona",
-     "seats": 6,
-     "gains": "PP",
-     "loses": "PSOE",
-     "need": 1255,
-     "pctOfValid": 0.3802696126704017
+     "pctOfValid": 0.1889589869199876
     },
     {
      "id": "34",
@@ -2020,7 +2020,7 @@
      "gains": "PNV",
      "loses": "PSOE",
      "need": 1307,
-     "pctOfValid": 0.7555786796161406
+     "pctOfValid": 0.7555830476531833
     },
     {
      "id": "08",
@@ -2029,7 +2029,7 @@
      "gains": "PSOE",
      "loses": "FA",
      "need": 1723,
-     "pctOfValid": 0.0628090328356729
+     "pctOfValid": 0.0628090786276344
     },
     {
      "id": "32",
@@ -2055,8 +2055,8 @@
      "seats": 6,
      "gains": "JUNTS",
      "loses": "PSOE",
-     "need": 2305,
-     "pctOfValid": 0.6058391858362421
+     "need": 2845,
+     "pctOfValid": 0.7477750734633156
     },
     {
      "id": "26",
@@ -2082,8 +2082,8 @@
      "seats": 4,
      "gains": "PSOE",
      "loses": "PP",
-     "need": 4026,
-     "pctOfValid": 1.4063302326068807
+     "need": 4025,
+     "pctOfValid": 1.4059809205769238
     },
     {
      "id": "14",
@@ -2101,7 +2101,7 @@
      "gains": "BNG",
      "loses": "PSOE",
      "need": 4538,
-     "pctOfValid": 0.6564871140172585
+     "pctOfValid": 0.6564861643153911
     },
     {
      "id": "25",
@@ -2109,8 +2109,8 @@
      "seats": 4,
      "gains": "PP",
      "loses": "PSOE",
-     "need": 4546,
-     "pctOfValid": 2.407800723505453
+     "need": 4550,
+     "pctOfValid": 2.4099193339088893
     },
     {
      "id": "42",
@@ -2163,8 +2163,8 @@
      "seats": 10,
      "gains": "PSOE",
      "loses": "VOX",
-     "need": 6601,
-     "pctOfValid": 0.8283077726162781
+     "need": 6599,
+     "pctOfValid": 0.8280568082858384
     }
    ]
   }
