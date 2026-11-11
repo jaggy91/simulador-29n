@@ -27,7 +27,7 @@
    "publicación original: faltan PP, PSOE, VOX, PODEMOS, FA+FV"
   ],
   "hash": "[{\"PP\":33.1,\"PSOE\":27.3,\"VOX\":18.6,\"PODEMOS\":1.9,\"SALF\":0.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":5.6}]]",
-  "checked": "2026-11-10T09:48:56.267Z"
+  "checked": "2026-11-11T14:18:43.215Z"
  },
  "IMOP/El Confidencial|2026-11-06": {
   "status": "verificada",
@@ -220,7 +220,7 @@
    "publicación original: faltan PP, ERC, PODEMOS"
   ],
   "hash": "[{\"PP\":32.4,\"PSOE\":26.4,\"VOX\":19.9,\"ERC\":1.9,\"JUNTS\":1.7,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":0.8,\"AA\":1.1,\"PODEMOS\":2.2,\"SALF\":1.8},[{\"parties\":[\"FA\",\"FV\"],\"value\":5.4}]]",
-  "checked": "2026-11-10T09:48:56.267Z"
+  "checked": "2026-11-11T14:18:43.215Z"
  },
  "Vox/The Objective|2026-10-27": {
   "status": "verificada",
@@ -247,7 +247,7 @@
    "publicación original: 403"
   ],
   "hash": "[{\"PP\":28.3,\"PSOE\":27.6,\"VOX\":20.8,\"PODEMOS\":2.6,\"SALF\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.8}]]",
-  "checked": "2026-11-10T09:48:56.267Z"
+  "checked": "2026-11-11T14:18:43.215Z"
  },
  "Winston/Artículo14|2026-10-23": {
   "status": "verificada",
