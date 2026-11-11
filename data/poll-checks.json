@@ -17,7 +17,7 @@
    "publicación original: faltan PP, FA"
   ],
   "hash": "[{\"PP\":32.3,\"PSOE\":27.7,\"VOX\":18.9,\"FA\":5,\"FV\":0.9,\"ERC\":2.4,\"JUNTS\":1.4,\"BILDU\":1.6,\"PNV\":0.8,\"BNG\":1,\"CC\":0.5,\"AA\":1.7,\"PODEMOS\":1.2,\"SALF\":2.2},[]]",
-  "checked": "2026-11-10T02:05:52.364Z"
+  "checked": "2026-11-11T06:12:06.909Z"
  },
  "DYM/Henneo|2026-11-06": {
   "status": "no verificada",
@@ -82,7 +82,7 @@
    "publicación original: faltan FV, ERC, JUNTS, BILDU, BNG, AA, PODEMOS"
   ],
   "hash": "[{\"PP\":31,\"PSOE\":25.2,\"VOX\":19.4,\"FA\":6.9,\"FV\":1.2,\"ERC\":2.9,\"JUNTS\":1.2,\"BILDU\":1.3,\"PNV\":0.9,\"BNG\":1,\"CC\":0.4,\"AA\":1.6,\"PODEMOS\":1.6},[]]",
-  "checked": "2026-11-10T02:05:52.364Z"
+  "checked": "2026-11-11T06:12:06.909Z"
  },
  "GAD3/Vocento|2026-11-05": {
   "status": "verificada",
@@ -193,7 +193,7 @@
    "publicación original: faltan PP, FA, SALF"
   ],
   "hash": "[{\"PP\":31.8,\"PSOE\":25.7,\"VOX\":19.2,\"FA\":6.8,\"FV\":1.2,\"ERC\":2.2,\"JUNTS\":1.5,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.5,\"AA\":1.2,\"PODEMOS\":1.9,\"SALF\":1.6},[]]",
-  "checked": "2026-11-10T02:05:52.364Z"
+  "checked": "2026-11-11T06:12:06.909Z"
  },
  "Target Point/El Debate|2026-10-30": {
   "status": "verificada",
