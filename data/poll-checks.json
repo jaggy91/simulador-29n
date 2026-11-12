@@ -131,7 +131,7 @@
    "publicación original: faltan PP, ERC, JUNTS, BILDU, AA"
   ],
   "hash": "[{\"PP\":33,\"PSOE\":25.6,\"VOX\":19.3,\"ERC\":2,\"JUNTS\":1.8,\"BILDU\":1.4,\"PNV\":0.9,\"BNG\":0.8,\"CC\":0.4,\"AA\":1.2,\"PODEMOS\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":6.9}]]",
-  "checked": "2026-11-10T23:18:14.329Z"
+  "checked": "2026-11-12T02:57:41.592Z"
  },
  "40dB/Prisa|2026-11-04": {
   "status": "verificada",
@@ -157,10 +157,10 @@
   "channel": null,
   "url": null,
   "tried": [
-   "publicación original: 404"
+   "publicación original: faltan PP, PSOE, VOX, ERC, JUNTS, BILDU, AA, PODEMOS, SALF, FA+FV"
   ],
   "hash": "[{\"PP\":29.7,\"PSOE\":27.3,\"VOX\":18.6,\"ERC\":2.9,\"JUNTS\":1.4,\"BILDU\":1.5,\"PNV\":0.7,\"BNG\":0.9,\"CC\":0.5,\"AA\":2.3,\"PODEMOS\":2.2,\"SALF\":1.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.1}]]",
-  "checked": "2026-11-10T23:18:14.329Z"
+  "checked": "2026-11-12T02:57:41.592Z"
  },
  "Data10/Okdiario|2026-11-03": {
   "status": "verificada",
@@ -272,7 +272,7 @@
    "publicación original: faltan PP, PSOE, VOX, PODEMOS, SALF, FA+FV"
   ],
   "hash": "[{\"PP\":28,\"PSOE\":28,\"VOX\":17.8,\"PODEMOS\":3.5,\"SALF\":1.6},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.3}]]",
-  "checked": "2026-11-10T23:18:14.329Z"
+  "checked": "2026-11-12T02:57:41.592Z"
  },
  "CIS (Ateneo del Dato)|2026-10-06": {
   "status": "no verificada",
@@ -282,6 +282,6 @@
    "X no es un canal abierto"
   ],
   "hash": "[{\"PP\":28.3,\"PSOE\":28.6,\"VOX\":17.5,\"PODEMOS\":3,\"SALF\":2.4},[{\"parties\":[\"FA\",\"FV\"],\"value\":7.9}]]",
-  "checked": "2026-11-10T23:18:14.329Z"
+  "checked": "2026-11-12T02:57:41.592Z"
  }
 }
