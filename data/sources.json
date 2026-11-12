@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T03:00:38.793Z",
+ "updated": "2026-11-12T11:15:49.054Z",
  "impactN": 1000,
  "cards": [
   {
@@ -599,7 +599,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-11T06:12:06.909Z",
+    "checked": "2026-11-12T11:12:49.377Z",
     "tried": [
      "publicación original: faltan PP, FA"
     ]
@@ -838,7 +838,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-11T06:12:06.909Z",
+    "checked": "2026-11-12T11:12:49.377Z",
     "tried": [
      "publicación original: faltan FV, ERC, JUNTS, BILDU, BNG, AA, PODEMOS"
     ]
@@ -1251,7 +1251,7 @@
     "status": "no verificada",
     "channel": null,
     "url": null,
-    "checked": "2026-11-11T06:12:06.909Z",
+    "checked": "2026-11-12T11:12:49.377Z",
     "tried": [
      "publicación original: faltan PP, FA, SALF"
     ]
@@ -1570,7 +1570,7 @@
     "status": "verificada",
     "channel": "PDF oficial del CIS (cis.es)",
     "url": "https://www.cis.es/documents/d/cis/3582_estimacion-pdf",
-    "checked": "2026-11-12T02:57:47.472Z"
+    "checked": "2026-11-12T11:13:00.420Z"
    },
    "type": "cis-oficial",
    "source": "cisOficial",
